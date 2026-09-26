@@ -292,3 +292,11 @@ body { animation: page-in 0.35s ease; }
   .site-nav nav a { font-size: 0.86rem; }
   table.hot100 th, table.hot100 td { padding: 0.55rem 0.6rem; }
 }
+
+/* ---------- autopsy entries ---------- */
+
+figure { margin: 1.75rem 0; }
+figure img { max-width: 100%; height: auto; border-radius: 10px; display: block; }
+figcaption { font-size: 0.92rem; color: var(--secondary); margin-top: 0.6rem; }
+p.kicker { text-transform: uppercase; letter-spacing: 0.08em; font-size: 0.85rem; color: var(--secondary); margin-bottom: 0.5rem; }
+p.note { font-size: 0.95rem; color: var(--secondary); border-left: 3px solid var(--accent, #888); padding-left: 0.9rem; }
