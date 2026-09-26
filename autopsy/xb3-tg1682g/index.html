@@ -177,16 +177,16 @@
           <td><a href="https://www.ti.com/lit/ds/symlink/tps54328.pdf">TI datasheet (PDF)</a></td>
         </tr>
         <tr>
-          <td><strong>Samsung K4B2G1646B-HCK0</strong> ×2</td>
-          <td>Memory — the box's short-term workspace.</td>
-          <td><span class="badge b-mixed">Mixed</span> This unit's boot log reports 256&nbsp;MB; public records list two 256&nbsp;MB chips for the family.</td>
+          <td><strong>Memory: 256&nbsp;MB DRAM</strong><br><span class="partno">Samsung K4B2G1646B family</span></td>
+          <td>The box's short-term workspace.</td>
+          <td><span class="badge b-confirmed">Confirmed</span> This unit's boot log reports <span class="partno">DRAM: 256&nbsp;MB</span>. Public records list two 256&nbsp;MB Samsung chips for the family — this 2017 board reports 256&nbsp;MB.</td>
           <td><a href="https://www.nyang-tech.com/datasheet/2440506746/Samsung/K4B2G1646B-HCH9.pdf">Family datasheet (PDF)</a></td>
         </tr>
         <tr>
-          <td><strong>Storage</strong><br><span class="partno">Spansion S34ML01G200TFI00?</span></td>
-          <td>Where the box's software lives when the power is off.</td>
-          <td><span class="badge b-mixed">Open question</span> This unit's boot log loads its software from eMMC (~231&nbsp;MB usable); public records list a 128&nbsp;MB raw NAND chip instead. We're still reconciling this.</td>
-          <td><a href="https://pccomponents.com/datasheets/SPANS-S34ML01G200TFI00.pdf">NAND datasheet (PDF)</a></td>
+          <td><strong>Storage: eMMC</strong><br><span class="partno">MMC256 · 231.3&nbsp;MB</span></td>
+          <td>Where the box's software lives when the power is off. The system boots straight off it (<span class="partno">root=/dev/mmcblk0p5</span>).</td>
+          <td><span class="badge b-confirmed">Confirmed</span> This unit's boot log names the eMMC and its exact size — and reports <span class="partno">Flash: 0&nbsp;kB</span>, meaning no raw flash chip. Public records list a 128&nbsp;MB raw NAND chip for the family; this 2017 board uses eMMC instead.</td>
+          <td><a href="https://pccomponents.com/datasheets/SPANS-S34ML01G200TFI00.pdf">Family NAND datasheet (PDF)</a></td>
         </tr>
         <tr>
           <td><strong>DSP Group DCX81</strong></td>
@@ -204,6 +204,7 @@
     <p>That little J3 header is a <strong>serial console</strong> — the chip's way of narrating what it's doing as it wakes up. We connected a listener to it (a Glasgow Interface Explorer, if you're curious) and captured the whole startup, read-only. Think of it like pressing your ear to the wall: we could hear everything, but we never knocked.</p>
     <p>What it told us: the chip introduces itself as Intel's Puma 6, revision "Cat Mountain D0." Then a starter program called U-Boot (version 1.2.0) runs, identifies the board as <strong>"harborpark-mg"</strong> — Arris's internal codename — and loads the main software, a Linux system (version 3.12.14), from the box's built-in flash storage into memory. Start to finish, no pauses, no login prompt. The whole thing is over in seconds.</p>
     <p>Why does this matter? Because now anyone can know what software their gateway runs at boot. The box narrates its own startup — you just have to listen.</p>
+    <p>Two details worth lingering on. First, the kernel was built on <strong>July 24, 2020</strong> — three years after this board was manufactured. Comcast kept pushing software to these boxes long after they left the factory. Second, the log reports <strong>Flash: 0&nbsp;kB</strong> and boots from eMMC instead — settling a question in the public hardware records, which list a raw NAND chip for this model family. This board doesn't have one. That's the kind of thing you only learn by listening to the actual hardware.</p>
   </section>
 
   <section>
@@ -229,7 +230,7 @@
       <li><strong>Model:</strong> Arris TG1682G (sold as the Xfinity XB3 xFi Wireless Gateway)</li>
       <li><strong>FCC ID:</strong> UIDTG1682</li>
       <li><strong>Main chip:</strong> Intel Puma 6 ("Cat Mountain D0")</li>
-      <li><strong>Memory:</strong> 256&nbsp;MB RAM, ~231&nbsp;MB flash storage</li>
+      <li><strong>Memory:</strong> 256&nbsp;MB RAM, 231.3&nbsp;MB eMMC storage (per this unit's boot log)</li>
       <li><strong>Software at boot:</strong> U-Boot 1.2.0 → Linux 3.12.14 (ARM)</li>
       <li><strong>Board:</strong> TG1682_CD, ARCT04129 REV G — built fall 2017</li>
       <li><strong>Deployed:</strong> 10M customers with xFi-compatible gateways at the May 2017 xFi launch, per Comcast (XB3 + XB6 combined — not XB3s alone)</li>
