@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Autopsy 001: The Xfinity XB3 (Arris TG1682G) — BareBoard</title>
+<meta name="description" content="BareBoard Autopsy 001: a plain-English teardown of the Arris TG1682G, the Xfinity XB3 gateway in ten million American homes. Board photos, boot log, and the story the plastic tells.">
+<meta name="theme-color" content="#fbfbfc">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%231d1d1f'/%3E%3Ctext x='32' y='45' font-family='system-ui,-apple-system,sans-serif' font-size='36' font-weight='700' fill='white' text-anchor='middle'%3EB%3C/text%3E%3C/svg%3E">
+<link rel="stylesheet" href="/style.css">
+</head>
+<body>
+<header class="site-nav">
+  <div class="nav-inner">
+    <a class="brand" href="/">BareBoard</a>
+    <nav>
+      <a href="/about.html">About</a>
+      <a href="/autopsy/">Autopsy</a>
+      <a href="/hot-100.html">Hot 100</a>
+      <a href="/most-wanted.html">Most Wanted</a>
+      <a href="/support.html">Support</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <p class="kicker">The Autopsy Report · Device #001</p>
+  <h1>The Xfinity XB3</h1>
+  <p class="lede">Millions of these boxes sat in American homes. We opened one and read its whole life story — from the plastic it was born in to the first words it says when it wakes up.</p>
+
+  <section>
+    <h2>What is this thing?</h2>
+    <p>The XB3 is the box Comcast handed to millions of internet customers. Its real name is the <strong>Arris TG1682G</strong>, and one box does three jobs: it's a <strong>cable modem</strong> (it talks to Comcast through the coax cable in your wall), a <strong>router</strong> (it shares that connection with your home), and a <strong>Wi-Fi access point</strong> (the wireless part). It also has two phone jacks, because Comcast sold home phone service through the same box.</p>
+    <p>If you had Xfinity internet in the late 2010s, there is a good chance this exact box — tall, black, with a single glowing strip on the front — was sitting in your living room. When Comcast launched xFi in May 2017, they said <strong>10 million customers</strong> already had compatible gateways — mostly this box.</p>
+  </section>
+
+  <section>
+    <h2>Whose box is this?</h2>
+    <p>This one is ours — a prepaid unit, owned outright, opened on our own bench. That matters, because most XB3s in the wild were <em>rented</em>, which legally makes them Comcast's property. We don't open other people's property. Everything in this report comes from our own unit plus public records. Nothing here applies to anyone else's rented gateway, and nothing here bypasses anyone's ISP controls.</p>
+    <p>The unit arrived already opened and missing a few small parts — so this is an as-found autopsy, dust and all. We photographed it exactly as it came to us before cleaning anything.</p>
+  </section>
+
+  <section>
+    <h2>A short history</h2>
+    <p>The chip inside this box has a backstory. In 2010, Intel bought Texas Instruments' cable-modem business and turned TI's Puma 5 into the Atom-based <strong>Puma 6</strong> — the silicon at the heart of the XB3. On September 14, 2015, Arris announced the TG1682G for Comcast: a DOCSIS 3.0 gateway with 24 downstream channels, phone lines, and dual-band Wi-Fi.</p>
+    <p>Then the Puma 6 turned out to be defective. In December 2016, users and The Register exposed severe lag spikes under certain traffic — enough to ruin gaming and video calls — and two firmware fixes never fully cured it. A class-action lawsuit followed in March 2017, and Intel eventually issued it a formal security ID (CVE-2017-5693) in August 2018.</p>
+    <p>None of that stopped the rollout. On May 8, 2017, Comcast launched <strong>Xfinity xFi</strong> and rebranded the XB3 the "xFi Wireless Gateway" — available day one to 10 million customers with compatible hardware (that number covered the XB3 and its successor, the XB6, together). The successors kept marching: the XB6 in 2017, the Wi-Fi 6 XB7 in 2020, the Wi-Fi 6E XB8 in 2022. Arris itself was bought by CommScope for $7.4 billion in April 2019.</p>
+    <p>Today the XB3 is retired from Comcast's rental front line — but it lives on as the free gateway for prepaid Xfinity NOW service. Millions of these boxes got a second life instead of a landfill. Old hardware doesn't disappear. It just changes hands.</p>
+  </section>
+
+  <section>
+    <h2>The outside</h2>
+    <p>The enclosure is a tall black tower, vented on the sides, with a single light strip on the front and a WPS button on top. Around the back: two USB ports, two phone jacks, four Ethernet jacks, the coax connector where the cable signal comes in, and the power inlet.</p>
+    <figure>
+      <img src="img/rear-ports.jpg" alt="Rear panel of the XB3: two USB ports, two phone jacks, four Ethernet jacks, coax connector, and power inlet">
+      <figcaption>The back of the box — every way in and out, on one panel.</figcaption>
+    </figure>
+    <figure>
+      <img src="img/top-wps.jpg" alt="Top of the XB3 with the WPS button">
+      <figcaption>The top: one button (WPS, for connecting Wi-Fi devices without typing a password) and a lot of ventilation. This box runs warm.</figcaption>
+    </figure>
+    <figure>
+      <img src="img/board-in-chassis.jpg" alt="The main board sitting in the lower half of the chassis">
+      <figcaption>The board in the lower shell, as found — before we lifted it out.</figcaption>
+    </figure>
+  </section>
+
+  <section>
+    <h2>Reading the plastic</h2>
+    <p>Here's something most teardowns skip: the plastic shell tells you when and where it was born. Molded into the inside of the side panel we found <strong>"TG1682 KD#5"</strong> — the model, stamped at the factory — plus the molder's marks and a material code.</p>
+    <figure>
+      <img src="img/mold-marks.jpg" alt="Molded markings inside the side panel: TG1682 KD#5 and manufacturer codes">
+      <figcaption>The shell's birth certificate, molded into the plastic.</figcaption>
+    </figure>
+    <p>Next to the markings sit four little clock-face stamps. These are date wheels: the mold operator sets an arrow on each one, and every shell that comes out of the mold carries the date it was made. Reading ours: year <strong>2017</strong>, month <strong>October</strong>, day <strong>26</strong>.</p>
+    <figure>
+      <img src="img/date-dials.jpg" alt="Four injection-mold date wheels reading October 26, 2017">
+      <figcaption>October 26, 2017 — the day this shell was molded.</figcaption>
+    </figure>
+    <p>The board agrees with the shell: its date code reads <strong>1746</strong> — the 46th week of 2017. The little yellow network transformers are stamped 1741. Every date on this unit points at the same few weeks in the fall of 2017, right in the middle of the xFi rollout. The evidence is consistent, which is exactly what you want to see.</p>
+  </section>
+
+  <section>
+    <h2>The board</h2>
+    <p>One circuit board runs the whole show. Top and bottom, straight down:</p>
+    <figure>
+      <img src="img/board-top.jpg" alt="Top of the XB3 main board: Puma 6 SoC, Wi-Fi shield cans, tuner can, Ethernet magnetics">
+      <figcaption>The top of the board. Serial number blacked out — the raw photo stays private.</figcaption>
+    </figure>
+    <figure>
+      <img src="img/board-bottom.jpg" alt="Bottom of the XB3 main board: ARCT04129 REV G">
+      <figcaption>The bottom: part number ARCT04129 REV G, week-46-2017 date code.</figcaption>
+    </figure>
+    <p>Here's what's on it, in plain English:</p>
+    <ul>
+      <li><strong>The brain (center).</strong> The green square with the silver middle is the Intel Puma 6 — the chip that runs everything. It's what's called a system-on-a-chip: processor, cable-modem hardware, and network hardware all on one piece of silicon.</li>
+      <li><strong>The radios (two silver cans, left).</strong> Wi-Fi lives under these metal shields — one for the 2.4&nbsp;GHz band, one for 5&nbsp;GHz. The shields keep the radio noise in and everything else out. We left them on: they're soldered down, and what's under them wasn't worth risking the board over.</li>
+      <li><strong>The cable tuner (big silver can, bottom right).</strong> This is where the coax cable's signal enters and gets decoded. The round metal connector poking out the back is the F-connector — the same kind on the back of a TV.</li>
+      <li><strong>The yellow boxes (bottom left).</strong> Ethernet magnetics — little transformers, one per network jack. They electrically isolate your home network from the box, so a power surge on one side doesn't fry the other. Stamped 1741: made in the 41st week of 2017.</li>
+      <li><strong>The power section (right side).</strong> Wall power comes in and gets converted down to the voltages the chips need. The yellow-wrapped block is a transformer; the big cylinders are capacitors smoothing the power out.</li>
+      <li><strong>The phone jacks (TEL1, TEL2).</strong> For Comcast's home phone service — the box converts your internet connection into a dial tone.</li>
+      <li><strong>The USB ports.</strong> Two of them. On paper for storage or printers; in practice, mostly decorative on ISP firmware.</li>
+      <li><strong>The LEDs.</strong> Printed right on the board: PWR, US/DS (upstream/downstream cable signal), ONLINE, 2.4G, 5G, TEL1, TEL2, BTY (battery — the box supports a backup battery), MOCA (a home-networking standard that runs over coax).</li>
+      <li><strong>The spring clips (left edge).</strong> Labeled FIXED CONTACT and MOVING CONTACT — these press against the internal antennas built into the shell when the box is closed.</li>
+      <li><strong>J3 (near the brain).</strong> A small 4-pin header with nothing plugged into it. This is the debug port — more on it below.</li>
+      <li><strong>J4.</strong> Another header we identified as a JTAG debug port. Mapped, never used. Some doors you note and don't open.</li>
+    </ul>
+    <p class="note">Chip inventory from the FCC filing is done: 1 part confirmed (the TPS54328 Wi-Fi power chip), 7 more identified as likely — including the Puma 6 itself, two Atheros Wi-Fi radios, and a Broadcom Ethernet switch — with datasheet links where public ones exist. The big chips (Intel, Qualcomm, Broadcom) never got public datasheets, so we've linked the closest reference documents instead. One open question: our boot notes say the software loads from eMMC, but the hardware databases list raw NAND flash — we're reconciling that before it goes in the table.</p>
+  </section>
+
+  <section>
+    <h2>Listening to it boot</h2>
+    <p>That little J3 header is a <strong>serial console</strong> — the chip's way of narrating what it's doing as it wakes up. We connected a listener to it (a Glasgow Interface Explorer, if you're curious) and captured the whole startup, read-only. Think of it like pressing your ear to the wall: we could hear everything, but we never knocked.</p>
+    <p>What it told us: the chip introduces itself as Intel's Puma 6, revision "Cat Mountain D0." Then a starter program called U-Boot (version 1.2.0) runs, identifies the board as <strong>"harborpark-mg"</strong> — Arris's internal codename — and loads the main software, a Linux system (version 3.12.14), from the box's built-in flash storage into memory. Start to finish, no pauses, no login prompt. The whole thing is over in seconds.</p>
+    <p>Why does this matter? Because now anyone can know what software their gateway runs at boot. The box narrates its own startup — you just have to listen.</p>
+  </section>
+
+  <section>
+    <h2>What we found</h2>
+    <p><strong>Bridge mode doesn't silence the radios.</strong> The XB3 has a "bridge mode" that's supposed to turn it into a plain modem and let your own router do the rest. We put our unit in bridge mode — and it kept broadcasting hidden Wi-Fi networks anyway, with no software switch to turn them off. If you run one of these next to your real router, its invisible networks can interfere with your visible ones. Physical separation is the honest fix.</p>
+    <p><strong>Someone else found a hardware answer.</strong> A third-party writeup documents a reversible hardware mod: an 8-pin power chip on the board (a TPS54328) feeds the Wi-Fi radios, and grounding its enable pin shuts the radios off while the modem and wired network keep working. We did <em>not</em> perform this mod — it's documented here as reference, because it explains the interference problem, not as instructions and not as something we did.</p>
+  </section>
+
+  <section>
+    <h2>What we didn't do</h2>
+    <ul>
+      <li>We never got a login prompt or shell from the debug port. Listening only.</li>
+      <li>We never used the JTAG header.</li>
+      <li>We never extracted, modified, or shared the box's firmware.</li>
+      <li>We never modified the Wi-Fi power circuitry.</li>
+      <li>The one invasive thing we ever did to this unit, back when it was in service: we cut one pin on a chip (U415, pin 8) to force a factory reset, because the admin password was unknown. That was our own box, and it worked.</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>By the numbers</h2>
+    <ul>
+      <li><strong>Model:</strong> Arris TG1682G (sold as the Xfinity XB3 xFi Wireless Gateway)</li>
+      <li><strong>FCC ID:</strong> UIDTG1682</li>
+      <li><strong>Main chip:</strong> Intel Puma 6 ("Cat Mountain D0")</li>
+      <li><strong>Memory:</strong> 256&nbsp;MB RAM, ~231&nbsp;MB flash storage</li>
+      <li><strong>Software at boot:</strong> U-Boot 1.2.0 → Linux 3.12.14 (ARM)</li>
+      <li><strong>Board:</strong> TG1682_CD, ARCT04129 REV G — built fall 2017</li>
+      <li><strong>Deployed:</strong> 10M customers with xFi-compatible gateways at the May 2017 xFi launch, per Comcast (XB3 + XB6 combined — not XB3s alone)</li>
+      <li><strong>Networking:</strong> DOCSIS 3.0 cable modem, 2.4/5&nbsp;GHz Wi-Fi, 4× Gigabit Ethernet, 2× USB, 2× phone lines, MoCA, Bluetooth</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>Sources &amp; confidence</h2>
+    <ul>
+      <li>Boot details (Puma 6 banner, U-Boot/Linux versions, "harborpark-mg"): captured from this unit's debug port. High confidence.</li>
+      <li>Board and shell dates (1746, 1741, Oct 26 2017): read off this unit's own markings. High confidence.</li>
+      <li>Deployment figure (10M+): Comcast's statement at the 2017 xFi launch. High confidence in the attribution.</li>
+      <li>Wi-Fi power mod: third-party writeup, researched — not performed. Documented as reference only.</li>
+      <li>Anything not listed here is unknown until the bench says otherwise. We'll say so, out loud, when that's the case.</li>
+    </ul>
+    <p class="note">Serial numbers, Wi-Fi passwords, and QR codes are blacked out of every published photo. Raw originals stay private.</p>
+  </section>
+
+  <footer>
+    <p>BareBoard &mdash; a free educational resource. Device #001 of the Hot 100.</p>
+    <nav>
+      <a href="/autopsy/">All autopsies</a>
+      <a href="/">Home</a>
+    </nav>
+  </footer>
+</main>
+</body>
+</html>
