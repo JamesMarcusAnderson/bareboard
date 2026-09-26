@@ -42,10 +42,19 @@
 
   <section>
     <h2>A short history</h2>
-    <p>The chip inside this box has a backstory. In 2010, Intel bought Texas Instruments' cable-modem business and turned TI's Puma 5 into the Atom-based <strong>Puma 6</strong> — the silicon at the heart of the XB3. On September 14, 2015, Arris announced the TG1682G for Comcast: a DOCSIS 3.0 gateway with 24 downstream channels, phone lines, and dual-band Wi-Fi.</p>
-    <p>Then the Puma 6 turned out to be defective. In December 2016, users and The Register exposed severe lag spikes under certain traffic — enough to ruin gaming and video calls — and two firmware fixes never fully cured it. A class-action lawsuit followed in March 2017, and Intel eventually issued it a formal security ID (CVE-2017-5693) in August 2018.</p>
-    <p>None of that stopped the rollout. On May 8, 2017, Comcast launched <strong>Xfinity xFi</strong> and rebranded the XB3 the "xFi Wireless Gateway" — available day one to 10 million customers with compatible hardware (that number covered the XB3 and its successor, the XB6, together). The successors kept marching: the XB6 in 2017, the Wi-Fi 6 XB7 in 2020, the Wi-Fi 6E XB8 in 2022. Arris itself was bought by CommScope for $7.4 billion in April 2019.</p>
-    <p>Today the XB3 is retired from Comcast's rental front line — but it lives on as the free gateway for prepaid Xfinity NOW service. Millions of these boxes got a second life instead of a landfill. Old hardware doesn't disappear. It just changes hands.</p>
+    <p>The chip inside this box has a backstory — fraud, lawsuits, and all. One note first: "XB3" was Comcast's <em>service tier</em>, not one box. Arris made this one; Cisco made another (the DPC3941B). Same tier, different hardware.</p>
+    <ol class="timeline">
+      <li><span class="when">2010</span>Intel buys Texas Instruments' cable-modem business. TI's Puma chips become Intel's — and the Atom-based Puma 6 at the heart of this box is born from that deal. <span class="src"><a href="https://www.intc.com/news-events/press-releases/detail/736/intel-to-acquire-texas-instruments-cable-modem-unit">Intel press release</a></span></li>
+      <li><span class="when">September 2015</span>Arris announces the TG1682G for Comcast. It ships as the XB3: a DOCSIS 3.0 gateway with 24 downstream channels, two phone lines, and dual-band Wi-Fi. <span class="src"><a href="https://telecomlead.com/broadcasting/comcast-deploys-arris-groups-tg1682-docsis-3-0-gateway-63962">TelecomLead</a></span></li>
+      <li><span class="when">December 2016</span>The Puma 6 defect goes public. Users and The Register document severe lag spikes under certain traffic — enough to ruin gaming and video calls — and two firmware fixes never fully cure it. <span class="src"><a href="https://www.theregister.com/security/2018/08/14/intel-finally-emits-puma-1gbps-modem-fixes-just-as-new-ping-of-death-bug-emerges/745738?web_view=true">The Register</a></span></li>
+      <li><span class="when">March 2017</span>A class-action lawsuit is filed against Arris over the defective chip. <span class="src"><a href="https://www.theregister.com/on-prem/2017/04/11/intels-buggy-puma-6-chipset-earns-arris-a-gigabit-modem-lawsuit/662674">The Register</a></span></li>
+      <li><span class="when">May 2017</span>Comcast launches Xfinity xFi and renames the XB3 the "xFi Wireless Gateway" — day one, 10 million customers have compatible hardware. That number covers the XB3 and its successor the XB6 <em>together</em>, not XB3s alone. <span class="src"><a href="https://corporate.comcast.com/stories/local/georgia/comcast-introduces-xfinity-xfi-a-new-way-to-personalize-manage-and-control-your-home-wi-fi-experience">Comcast</a> · <a href="https://techcrunch.com/2017/05/08/comcast-invests-in-mesh-router-maker-plume-launches-xfinity-xfi-for-managing-your-homes-wireless-network/432">TechCrunch</a></span></li>
+      <li><span class="when">2017</span>The XB6 arrives — Comcast's DOCSIS 3.1 successor to the XB3. <span class="src"><a href="https://www.nasdaq.com/articles/comcast-initiates-nationwide-rollout-of-docsis-3.1-gateway-2017-12-11">Nasdaq</a></span></li>
+      <li><span class="when">August 2018</span>Intel finally issues a formal advisory and CVE-2017-5693 for the Puma flaw — a flaw The Register notes dates back to the chip's Texas Instruments days. <span class="src"><a href="https://www.theregister.com/security/2018/08/14/intel-finally-emits-puma-1gbps-modem-fixes-just-as-new-ping-of-death-bug-emerges/745738?web_view=true">The Register</a></span></li>
+      <li><span class="when">April 2019</span>CommScope buys Arris for $7.4 billion. <span class="src"><a href="https://www.sec.gov/Archives/edgar/data/1517228/000119312519097421/d693740dex991.htm">SEC filing</a></span></li>
+      <li><span class="when">2020 – 2022</span>The XB7 (Wi-Fi 6) and XB8 (Wi-Fi 6E) take over the lineup. <span class="src"><a href="https://www.lightreading.com/cable-technology/comcast-tests-2-5-gig-gateway">Light Reading</a> · <a href="https://www.stocktitan.net/news/CMCSA/comcast-launches-new-wi-fi-6e-gateway-its-most-powerful-wi-fi-device-nk0ukka3qsrd.html">Comcast</a></span></li>
+      <li><span class="when">Today</span>Retired from Comcast's rental front line — reborn as the free gateway for prepaid Xfinity NOW service. Millions of boxes, second life instead of landfill. <span class="src"><a href="https://gist.github.com/pmarks-net/af40dba69272806c1ec9cbe71429d2e7">Independent teardown</a></span></li>
+    </ol>
   </section>
 
   <section>
@@ -91,6 +100,27 @@
       <img src="img/board-bottom.jpg" alt="Bottom of the XB3 main board: ARCT04129 REV G">
       <figcaption>The bottom: part number ARCT04129 REV G, week-46-2017 date code.</figcaption>
     </figure>
+    <h3>A guided tour</h3>
+    <p>Seven landmarks on the top of the board. The numbers match the list below it.</p>
+    <div class="diagram">
+      <img src="img/board-top.jpg" alt="Annotated top view of the XB3 main board with numbered markers">
+      <span class="marker" style="left:50.4%;top:46.5%">1</span>
+      <span class="marker" style="left:24.7%;top:31.4%">2</span>
+      <span class="marker" style="left:24.0%;top:47.0%">3</span>
+      <span class="marker" style="left:66.0%;top:87.5%">4</span>
+      <span class="marker" style="left:20.5%;top:61.8%">5</span>
+      <span class="marker" style="left:13.0%;top:94.0%">6</span>
+      <span class="marker" style="left:22.8%;top:93.6%">7</span>
+    </div>
+    <ol class="anatomy">
+      <li><span class="n">1</span><span><strong>The brain</strong> — the Intel Puma 6 processor. Everything in the box runs through this chip.</span></li>
+      <li><span class="n">2</span><span><strong>2.4&nbsp;GHz Wi-Fi radio</strong> — sealed under a soldered metal shield.</span></li>
+      <li><span class="n">3</span><span><strong>5&nbsp;GHz Wi-Fi radio</strong> — same, second shield. We left both shields on: prying them off risks the board, and what we needed was already public.</span></li>
+      <li><span class="n">4</span><span><strong>Cable tuner</strong> — where the coax signal lands and gets decoded into internet.</span></li>
+      <li><span class="n">5</span><span><strong>Ethernet magnetics</strong> — small transformers that electrically isolate each network jack.</span></li>
+      <li><span class="n">6</span><span><strong>USB ports</strong> — two of them; mostly decorative on ISP firmware.</span></li>
+      <li><span class="n">7</span><span><strong>Network jacks</strong> — four gigabit Ethernet ports for wired devices.</span></li>
+    </ol>
     <p>Here's what's on it, in plain English:</p>
     <ul>
       <li><strong>The brain (center).</strong> The green square with the silver middle is the Intel Puma 6 — the chip that runs everything. It's what's called a system-on-a-chip: processor, cable-modem hardware, and network hardware all on one piece of silicon.</li>
@@ -105,8 +135,69 @@
       <li><strong>J3 (near the brain).</strong> A small 4-pin header with nothing plugged into it. This is the debug port — more on it below.</li>
       <li><strong>J4.</strong> Another header we identified as a JTAG debug port. Mapped, never used. Some doors you note and don't open.</li>
     </ul>
-    <p class="note">Chip inventory from the FCC filing is done: 1 part confirmed (the TPS54328 Wi-Fi power chip), 7 more identified as likely — including the Puma 6 itself, two Atheros Wi-Fi radios, and a Broadcom Ethernet switch — with datasheet links where public ones exist. The big chips (Intel, Qualcomm, Broadcom) never got public datasheets, so we've linked the closest reference documents instead. One open question: our boot notes say the software loads from eMMC, but the hardware databases list raw NAND flash — we're reconciling that before it goes in the table.</p>
   </section>
+
+  <section>
+    <h2>Under the microscope: the chips</h2>
+    <p>What's on the board, what each part does, and how sure we are. <strong>Confirmed</strong> means we saw it ourselves or measured it on this board family. <strong>Likely</strong> means public hardware records agree on it, but the chip sits under a soldered shield we chose not to remove. Every row links somewhere you can read more.</p>
+    <div class="table-scroll">
+    <table class="chips">
+      <thead>
+        <tr><th>Chip</th><th>What it does</th><th>How we know</th><th>Dig deeper</th></tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><strong>Intel Puma 6</strong><br><span class="partno">DHCE2652</span></td>
+          <td>The main processor. Runs the modem, the router, the phone lines — all of it.</td>
+          <td><span class="badge b-confirmed">Confirmed</span> This unit's boot log names the Puma 6 family outright; the exact model number comes from public hardware records.</td>
+          <td><a href="https://wikidevi.wi-cat.ru/Arris_TG1682G">Hardware database entry</a></td>
+        </tr>
+        <tr>
+          <td><strong>Qualcomm Atheros AR9381</strong></td>
+          <td>The 2.4&nbsp;GHz Wi-Fi radio.</td>
+          <td><span class="badge b-likely">Likely</span> Public records for this model agree; the chip itself is under a soldered shield.</td>
+          <td><a href="https://techinfodepot.shoutwiki.com/wiki/Arris_TG1682G">Hardware database entry</a></td>
+        </tr>
+        <tr>
+          <td><strong>Qualcomm Atheros QCA9880</strong></td>
+          <td>The 5&nbsp;GHz Wi-Fi radio — the fast one.</td>
+          <td><span class="badge b-likely">Likely</span> Same basis as above.</td>
+          <td><a href="https://www.fccpdf.com/NHP/NHPCLM30001300/3172088.pdf">Reference module manual (FCC)</a></td>
+        </tr>
+        <tr>
+          <td><strong>Broadcom BCM53124S</strong></td>
+          <td>The switch chip behind the four Ethernet jacks.</td>
+          <td><span class="badge b-likely">Likely</span> Public records for this model agree.</td>
+          <td><a href="https://www.ic7300.com/files/32/bcm53124skmmlg.pdf">Datasheet (PDF)</a></td>
+        </tr>
+        <tr>
+          <td><strong>Texas Instruments TPS54328</strong></td>
+          <td>A power regulator that feeds the Wi-Fi radios.</td>
+          <td><span class="badge b-confirmed">Confirmed</span> Read off a same-family board by an independent teardown, with measurements.</td>
+          <td><a href="https://www.ti.com/lit/ds/symlink/tps54328.pdf">TI datasheet (PDF)</a></td>
+        </tr>
+        <tr>
+          <td><strong>Samsung K4B2G1646B-HCK0</strong> ×2</td>
+          <td>Memory — the box's short-term workspace.</td>
+          <td><span class="badge b-mixed">Mixed</span> This unit's boot log reports 256&nbsp;MB; public records list two 256&nbsp;MB chips for the family.</td>
+          <td><a href="https://www.nyang-tech.com/datasheet/2440506746/Samsung/K4B2G1646B-HCH9.pdf">Family datasheet (PDF)</a></td>
+        </tr>
+        <tr>
+          <td><strong>Storage</strong><br><span class="partno">Spansion S34ML01G200TFI00?</span></td>
+          <td>Where the box's software lives when the power is off.</td>
+          <td><span class="badge b-mixed">Open question</span> This unit's boot log loads its software from eMMC (~231&nbsp;MB usable); public records list a 128&nbsp;MB raw NAND chip instead. We're still reconciling this.</td>
+          <td><a href="https://pccomponents.com/datasheets/SPANS-S34ML01G200TFI00.pdf">NAND datasheet (PDF)</a></td>
+        </tr>
+        <tr>
+          <td><strong>DSP Group DCX81</strong></td>
+          <td>The phone chip behind the two TEL jacks.</td>
+          <td><span class="badge b-likely">Likely</span> Public records quote the full package marking.</td>
+          <td><a href="https://drivers.synaptics.com/sites/default/files/2022-08/synaptics-DCX81-product-brief.pdf">Product brief (PDF)</a></td>
+        </tr>
+      </tbody>
+    </table>
+    </div>
+    <p>Still unidentified in public records: the cable tuner, the MoCA chip, the phone-line analog parts, the power-supply controller, and whatever the <strong>BTY</strong> LED on the silkscreen actually connects to. The big vendors (Intel, Qualcomm, Broadcom) never released public datasheets for these chips — that's a documentation gap in the industry, not a gap in the research. The FCC filing for this box is public: <a href="https://fccid.io/UIDTG1682">filing page</a> and <a href="https://fccpdf.com/UID/UIDTG1682/2271050.pdf">internal photos (2014)</a> — note those photos predate our 2017 board by three years, so we treat them as architecture evidence, not gospel.</p>
 
   <section>
     <h2>Listening to it boot</h2>
@@ -142,8 +233,25 @@
       <li><strong>Software at boot:</strong> U-Boot 1.2.0 → Linux 3.12.14 (ARM)</li>
       <li><strong>Board:</strong> TG1682_CD, ARCT04129 REV G — built fall 2017</li>
       <li><strong>Deployed:</strong> 10M customers with xFi-compatible gateways at the May 2017 xFi launch, per Comcast (XB3 + XB6 combined — not XB3s alone)</li>
-      <li><strong>Networking:</strong> DOCSIS 3.0 cable modem, 2.4/5&nbsp;GHz Wi-Fi, 4× Gigabit Ethernet, 2× USB, 2× phone lines, MoCA, Bluetooth</li>
+      <li><strong>Networking:</strong> DOCSIS 3.0 cable modem, 2.4/5&nbsp;GHz Wi-Fi, 4× Gigabit Ethernet, 2× USB, 2× phone lines, MoCA. A BTY LED is printed on the board — what it connects to is unverified.</li>
     </ul>
+  </section>
+
+  <section>
+    <h2>Words to know</h2>
+    <p>Every term this page uses, in plain English. No prior knowledge required.</p>
+    <dl class="glossary">
+      <div><dt>System on a chip (SoC)</dt><dd>The whole computer — processor, modem hardware, network hardware — on one piece of silicon.</dd></div>
+      <div><dt>Boot log</dt><dd>The text a device prints as it starts up. Engineers read it to see what's inside without opening anything.</dd></div>
+      <div><dt>UART / serial console</dt><dd>A simple port that lets you watch a device narrate its own startup, line by line.</dd></div>
+      <div><dt>Firmware</dt><dd>The software baked into the device — the part that runs before anything else.</dd></div>
+      <div><dt>DOCSIS</dt><dd>The standard cable modems use to talk to the cable company. 3.0 is the generation in this box.</dd></div>
+      <div><dt>Flash storage</dt><dd>The chip that holds the device's software when the power is off.</dd></div>
+      <div><dt>Buck regulator</dt><dd>A chip that steps wall voltage down to the smaller voltages the chips can actually use.</dd></div>
+      <div><dt>RF shield</dt><dd>A soldered metal can that keeps radio signals from leaking in or out of the sensitive parts.</dd></div>
+      <div><dt>JTAG</dt><dd>A deep debug port wired straight into the chip — powerful, and easy to break things with.</dd></div>
+      <div><dt>Bridge mode</dt><dd>A setting that's supposed to turn the box into a plain modem, handing all the routing work to your own router.</dd></div>
+    </dl>
   </section>
 
   <section>
@@ -156,6 +264,7 @@
       <li>Anything not listed here is unknown until the bench says otherwise. We'll say so, out loud, when that's the case.</li>
     </ul>
     <p class="note">Serial numbers, Wi-Fi passwords, and QR codes are blacked out of every published photo. Raw originals stay private.</p>
+    <p class="note"><strong>Legal note.</strong> BareBoard is an educational project. Everything on this page is our own work on our own hardware — our photos, our measurements, our boot logs. We don't publish, host, or distribute firmware, keys, passwords, or credentials. Product names and trademarks belong to their respective owners and appear here only to identify the hardware. If you believe anything here infringes your rights, contact us and we'll address it promptly.</p>
   </section>
 
   <footer>
