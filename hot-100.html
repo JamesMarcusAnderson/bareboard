@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>The BareBoard Hot 100 &mdash; Free Hardware Education</title>
+<meta name="description" content="The 100 most popular consumer electronic devices in the world, ever. The master teardown-target universe for BareBoard.">
+<link rel="stylesheet" href="/style.css">
+<style>
+table.hot100 { width: 100%; border-collapse: collapse; margin: 1em 0 2em; font-size: 0.92em; }
+table.hot100 th, table.hot100 td { text-align: left; padding: 0.45em 0.6em; border-bottom: 1px solid #333; vertical-align: top; }
+table.hot100 th { color: #888; font-weight: normal; text-transform: uppercase; font-size: 0.8em; letter-spacing: 0.05em; }
+.src, .proxy { color: #777; font-size: 0.85em; }
+.conf { font-family: monospace; }
+.gapnote { color: #999; font-size: 0.88em; border-left: 2px solid #444; padding-left: 0.8em; margin: 0 0 2.5em; }
+.lede { font-size: 1.05em; max-width: 42em; }
+</style>
+</head>
+<body>
+<nav>
+  <a href="/">BareBoard</a>
+  <a href="/about.html">About</a>
+  <a href="/autopsy/">The Autopsy Report</a>
+  <a href="/hot-100.html">Hot 100</a>
+  <a href="https://github.com/jamesmarcusanderson">GitHub</a>
+</nav>
+
+<h1>The BareBoard Hot 100</h1>
+<p class="lede">The 100 most popular consumer electronic devices in the world, ever &mdash; the master
+teardown-target universe for BareBoard. This is phase one: the raw list. No ranking formula,
+no teardown scoring yet. The safety and legal review of what we can and cannot tear down
+comes next, and nothing goes on the bench until it clears.</p>
+
+<h2>The data gap</h2>
+<p class="lede">The single most important result of this research: <strong>per-model all-time sales figures
+are systematically undisclosed across the industry.</strong> The only verified all-time IoT figure
+anywhere is Amazon&rsquo;s May 2023 disclosure of 500M+ Alexa-enabled devices &mdash; ecosystem-wide,
+never per-model. Console makers publish hardware totals; nearly everyone else publishes nothing.
+The industry&rsquo;s most-installed devices are also its least-counted. That asymmetry is the
+BareBoard thesis in numbers.</p>
+<p class="lede"><strong>Confidence grades:</strong> <span class="conf">A</span> = manufacturer disclosure/filing &middot;
+<span class="conf">B</span> = credible analyst/press &middot; <span class="conf">C</span> = proxy/estimate.
+<em>Undisclosed</em> means no public figure exists &mdash; the proxy is labeled and is never a sales figure.</p>
+
+<h2>Phones</h2>
+<table class="hot100"><tr><th>Device</th><th>Era</th><th>Units sold</th><th>Conf.</th><th>Still in use</th></tr>
+<tr><td>Nokia 1100</td><td>2003</td><td><strong>250M</strong> <span class="src">(Wikipedia citing Nokia-era press reports (250M milestone), 2008)</span></td><td class="conf">B</td><td>medium — thousands of eBay listings, active collector/repair market despite 2G sunsets</td></tr>
+<tr><td>Nokia 1110 / 1110i</td><td>2005</td><td><strong>250M</strong> <span class="src">(Wikipedia citing press reports, not dated)</span></td><td class="conf">B</td><td>medium — heavy second-hand circulation in developing markets, collector demand</td></tr>
+<tr><td>iPhone 6 / 6 Plus</td><td>2014</td><td><strong>222.4M</strong> <span class="src">(AppleInsider/analyst estimates via Wikipedia, not dated)</span></td><td class="conf">B</td><td>high — massive refurb/second-hand market, huge iFixit repair ecosystem</td></tr>
+<tr><td>Nokia 105 series (2013/2015 variants)</td><td>2013-present</td><td><strong>200M</strong> <span class="src">(Wikipedia (List of best-selling mobile phones), not dated)</span></td><td class="conf">B</td><td>high — still manufactured and sold new worldwide as the default ultra-budget phone</td></tr>
+<tr><td>iPhone 6S / 6S Plus</td><td>2015</td><td><strong>174.5M</strong> <span class="src">(analyst estimates via Wikipedia, not dated)</span></td><td class="conf">B</td><td>high — still usable on iOS 15, very cheap refurbished</td></tr>
+<tr><td>iPhone 5s</td><td>2013</td><td><strong>165M</strong> <span class="src">(Omdia via Visual Capitalist, 2023)</span></td><td class="conf">B</td><td>medium — vintage status, cheap used, active repair guides</td></tr>
+<tr><td>Nokia 3210</td><td>1999</td><td><strong>161M</strong> <span class="src">(Omdia via Visual Capitalist, 2023)</span></td><td class="conf">B</td><td>medium — strong collector/nostalgia market, 2017-era attention spillover</td></tr>
+<tr><td>iPhone 11 / 11 Pro / 11 Pro Max</td><td>2019</td><td><strong>159M</strong> <span class="src">(Omdia via Visual Capitalist, 2023)</span></td><td class="conf">B</td><td>high — millions still in daily use, dominant used-iPhone listing</td></tr>
+<tr><td>Nokia 1200</td><td>2007</td><td><strong>150M</strong> <span class="src">(Omdia via Visual Capitalist, 2023)</span></td><td class="conf">B</td><td>medium — ubiquitous in developing-market second-hand trade</td></tr>
+<tr><td>Nokia 5230</td><td>2009</td><td><strong>150M</strong> <span class="src">(Omdia via Visual Capitalist, 2023)</span></td><td class="conf">B</td><td>medium — cheap used, Symbian modding community interest</td></tr>
+</table>
+<p class="gapnote"><strong>Data gaps (Phones):</strong> Apple has never disclosed per-model lifetime sales (and stopped reporting unit sales entirely in 2018), so every iPhone figure above is analyst-derived — none earns an A. Samsung never confirmed a lifetime Galaxy S4 total; the oft-quoted 80M was a 2013 RBC analyst shipment forecast, while retrospective estimates land around 70M, which I used and labeled honestly. Nokia-era feature-phone figures (1100, 1110, 3210, 1200, etc.) trace to decade-old press statements that can&#x27;t be re-verified against filings, and modern midrange giants like the Samsung Galaxy A-series have no credible all-time total</p>
+<h2>Game Consoles</h2>
+<table class="hot100"><tr><th>Device</th><th>Era</th><th>Units sold</th><th>Conf.</th><th>Still in use</th></tr>
+<tr><td>PlayStation 2 (SCPH-30000 through 90000)</td><td>2000</td><td><strong>160M</strong> <span class="src">(Sony official PlayStation history page, 2024-11)</span></td><td class="conf">A</td><td>high — massive used market, active modding community</td></tr>
+<tr><td>Nintendo Switch (original, Lite, OLED)</td><td>2017</td><td><strong>155.9M</strong> <span class="src">(Nintendo FY2026 financial results (IR), 2026-05-08)</span></td><td class="conf">A</td><td>high — current/legacy hybrid, huge active base</td></tr>
+<tr><td>Nintendo DS / DS Lite</td><td>2004</td><td><strong>154M</strong> <span class="src">(Nintendo IR lifetime hardware, 2016)</span></td><td class="conf">A</td><td>high — huge used market, active flash-cart homebrew scene</td></tr>
+<tr><td>Game Boy / Game Boy Color</td><td>1989-2003</td><td><strong>118.7M</strong> <span class="src">(Nintendo IR lifetime hardware, 2016)</span></td><td class="conf">A</td><td>high — enormous retro collector base, modded units everywhere</td></tr>
+<tr><td>PlayStation 4 (CUH-1000 through CUH-2200)</td><td>2013</td><td><strong>117M</strong> <span class="src">(Sony official PlayStation history page, 2024-11)</span></td><td class="conf">A</td><td>high — still actively used, huge used market</td></tr>
+<tr><td>PlayStation (PS1, SCPH-1000 through 9000)</td><td>1994</td><td><strong>102M</strong> <span class="src">(Sony official PlayStation history page, 2024-11)</span></td><td class="conf">A</td><td>medium — strong retro collector market, cheap used</td></tr>
+<tr><td>Nintendo Wii</td><td>2006</td><td><strong>101.6M</strong> <span class="src">(Nintendo IR lifetime hardware, 2016)</span></td><td class="conf">A</td><td>high — huge homebrew scene, extremely cheap used</td></tr>
+<tr><td>PlayStation 5 (CFI-1000 through CFI-2000)</td><td>2020</td><td><strong>93.6M</strong> <span class="src">(Sony earnings disclosure (via VideoCardz), 2026-05)</span></td><td class="conf">B</td><td>high — current generation, dominant active base</td></tr>
+<tr><td>PlayStation 3 (CECHA through CECH-4300)</td><td>2006</td><td><strong>87M</strong> <span class="src">(Sony official PlayStation history page, 2016)</span></td><td class="conf">A</td><td>medium — active homebrew community, cheap used fat/slim units</td></tr>
+<tr><td>Xbox 360 (Xenon through Corona)</td><td>2005</td><td><strong>84M</strong> <span class="src">(Microsoft E3 2014 announcement, 2014-06-09)</span></td><td class="conf">A</td><td>medium — large installed base, active modding scene</td></tr>
+</table>
+<p class="gapnote"><strong>Data gaps (Game Consoles):</strong> Microsoft has not disclosed Xbox One or Xbox Series X|S hardware units since stopping console reporting in 2014, so those are excluded (no honest A/B figure exists; credible analyst proxies put Xbox One around ~58M and Series X|S around ~28-33M, labeled estimates only). Sony never published a final closed lifetime total for the PSP — the last official shipment record is 76.4M (widely cited press figure is ~80M+; a former Sony exec later stated 82.5M units produced, which is a production figure, not sold-through). Minor source discrepancy on Game Boy/Color: some older press cites 119.69M, but N</p>
+<h2>Smart Home / IoT</h2>
+<table class="hot100"><tr><th>Device</th><th>Era</th><th>Units sold</th><th>Conf.</th><th>Still in use</th></tr>
+<tr><td>Google Chromecast 2nd gen (2015)</td><td>2015</td><td><strong>100M</strong> <span class="src">(Google (official blog + hardware event, reported by 9to5Google / Android Headlines), 2024-08-06)</span></td><td class="conf">A</td><td>high — Google still ships software/security updates to existing Chromecasts post-discontinuation; 100M-line installed base remains plugged into TVs</td></tr>
+<tr><td>Google Home Mini (2017)</td><td>2017</td><td><strong>6.4M</strong> <span class="src">(Google via Engadget, 2018-01-06)</span></td><td class="conf">A</td><td>high — eBay UK shows ~1,000 sold on a single Home Mini listing; Home Assistant community keeps it relevant as a Google Assistant cast target</td></tr>
+<tr><td>Wyze Cam v2 (2018)</td><td>2018</td><td><strong>1.5M</strong> <span class="src">(Wyze Labs via Pulse2 / GeekWire funding coverage, 2019-02-06)</span></td><td class="conf">A</td><td>high — massive install base at $20 price point; huge Home Assistant / custom-firmware (wz_mini_hacks) community still active</td></tr>
+<tr><td>Amazon Echo 2nd gen (2017)</td><td>2017</td><td><em>undisclosed</em> <span class="proxy">undisclosed</span></td><td class="conf">C</td><td>high — iFixit repair presence plus continuous eBay sold listings years after discontinuation</td></tr>
+<tr><td>Amazon Echo Dot 3rd gen (2018)</td><td>2018</td><td><em>undisclosed</em> <span class="proxy">undisclosed</span></td><td class="conf">C</td><td>high — heavy eBay resale (single listings with 1,227+ and 75+ sold units; strong refurbished trade) and active iFixit repair community</td></tr>
+<tr><td>Google Nest Mini 2nd gen (2019)</td><td>2019</td><td><em>undisclosed</em> <span class="proxy">undisclosed</span></td><td class="conf">C</td><td>high — eBay UK Smart Speakers best-seller list + ongoing Google Assistant integration</td></tr>
+<tr><td>ITEAD Sonoff Basic R2 (2018; original Basic 2016)</td><td>2018</td><td><em>undisclosed</em> <span class="proxy">undisclosed</span></td><td class="conf">C</td><td>high — Tasmota / ESPurna community flagship device; still sold new and cloned everywhere</td></tr>
+<tr><td>Nest Learning Thermostat 3rd gen (2015)</td><td>2015</td><td><em>undisclosed</em> <span class="proxy">undisclosed</span></td><td class="conf">C</td><td>high — thermostats live on walls 10+ years; 3rd gen units still installed everywhere, strong eBay resale and iFixit presence</td></tr>
+<tr><td>Philips Hue Bridge v2 (2015, square model)</td><td>2015</td><td><em>undisclosed</em> <span class="proxy">undisclosed</span></td><td class="conf">C</td><td>high — millions of bridges remain installed and firmware-supported (v2 bridge got the Matter update; eBay resale steady)</td></tr>
+<tr><td>TP-Link Kasa HS100 v1 (2016)</td><td>2016</td><td><em>undisclosed</em> <span class="proxy">undisclosed</span></td><td class="conf">C</td><td>high — eBay Smart Plugs best-seller list; still supported by Kasa app ecosystem</td></tr>
+</table>
+<p class="gapnote"><strong>Data gaps (Smart Home / IoT):</strong> The IoT sales data landscape is almost entirely opaque at the model level. The only all-time manufacturer disclosures on record are ecosystem-wide, never per-model: Amazon&#x27;s 100M+ Alexa devices (Jan 2019) and 500M+ (May 2023), Google&#x27;s 100M+ Chromecasts across all generations (Aug 2024), Google&#x27;s ~6.4M Home devices through 2017, and Wyze&#x27;s 1.5M cams+Pans (Feb 2019). Model-specific figures for Echo Dot 3rd gen, Home Mini, Kasa HS100, Wemo Mini, Hue Bridge, Nest Thermostat, Ring Doorbell, ecobee3, August, and Sonoff simply do not exist in public. Substitutes: (1) analyst model-level shipment sna</p>
+<h2>Networking Gear</h2>
+<table class="hot100"><tr><th>Device</th><th>Era</th><th>Units sold</th><th>Conf.</th><th>Still in use</th></tr>
+<tr><td>Linksys WRT54G (all revisions, incl. WRT54GL)</td><td>2002–2016</td><td><strong>31M</strong> <span class="src">(Linksys Global Product Manager Vince La Duca, quoted in Digital Trends, 2016)</span></td><td class="conf">A</td><td>high — still traded on used markets; OpenWrt/DD-WRT were literally built for this device and the community remains active</td></tr>
+<tr><td>Arris TG1682G / Xfinity XB3 (xFi Wireless Gateway)</td><td>2015–2019</td><td><strong>10M</strong> <span class="src">(Comcast via ibtimes.sg: &#x27;over 10 million existing users of XB3 Gateway&#x27; at the 2017 xFi platform launch, 2020 (citing 2017 launch))</span></td><td class="conf">A</td><td>high — Comcast-leased gateways stay deployed 5+ years; XB3 units remain in service</td></tr>
+<tr><td>ASUS RT-AC68U (AC1900)</td><td>2013–present</td><td><em>undisclosed</em> <span class="proxy">undisclosed</span></td><td class="conf">B</td><td>high — still sold new; AiMesh keeps older units deployed; Asuswrt-Merlin community</td></tr>
+<tr><td>D-Link DIR-615 (all hardware revisions)</td><td>2008–2017</td><td><em>undisclosed</em> <span class="proxy">undisclosed</span></td><td class="conf">C</td><td>medium — cheap enough to linger as APs/extenders; DD-WRT/OpenWrt staple revisions (E1, E4)</td></tr>
+<tr><td>Google Wifi (2016) / Nest Wifi (2019)</td><td>2016–present</td><td><em>undisclosed</em> <span class="proxy">undisclosed</span></td><td class="conf">B</td><td>high — 3-pack launch sold out repeatedly in 2016-17; original hardware received 15 firmware updates; Nest Wifi line continues</td></tr>
+<tr><td>Motorola SURFboard SB6141 (ARRIS)</td><td>2011–present</td><td><em>undisclosed</em> <span class="proxy">undisclosed</span></td><td class="conf">B</td><td>high — DOCSIS 3.0 modem still on approved lists; Amazon Best Sellers in Computer Networking Modems</td></tr>
+<tr><td>NETGEAR Nighthawk R7000 (AC1900)</td><td>2013–present</td><td><em>undisclosed</em> <span class="proxy">undisclosed</span></td><td class="conf">B</td><td>high — still sold new on Amazon; huge OpenWrt/DD-WRT user base</td></tr>
+<tr><td>TP-Link Archer C7 (AC1750)</td><td>2013–present</td><td><em>undisclosed</em> <span class="proxy">undisclosed</span></td><td class="conf">B</td><td>high — V1-V3 EOL, but V4/V5/V5.8 supported; still common in homes</td></tr>
+<tr><td>TP-Link TL-WR841N (N300)</td><td>2009–present</td><td><em>undisclosed</em> <span class="proxy">undisclosed</span></td><td class="conf">B</td><td>high — legendary reliability keeps 8-10-year-old units running; dominant in developing markets</td></tr>
+<tr><td>Verizon Fios Quantum Gateway G1100</td><td>2014–present</td><td><em>undisclosed</em> <span class="proxy">operator deployment statement</span></td><td class="conf">B</td><td>high — default Verizon Fios CPE for a decade; still in customer homes</td></tr>
+</table>
+<p class="gapnote"><strong>Data gaps (Networking Gear):</strong> No verified per-model sales totals exist for the retail modem/router winners (SB6141, R7000, RT-AC68U, Archer C7) — vendors rarely disclose them, so honest proxies only (best-seller rankings, review counts, used-market volume). For ISP gateways the best verifiable unit counts are operator deployment statements (XB3: 10M+ at 2017 xFi launch; G1100: &#x27;millions&#x27; per Tenable 2019), not retail sales figures. The 31M WRT54G figure is from Linksys&#x27;s product manager via tech press, with one outlet printing &#x27;3.1M&#x27; (flagged discrepancy in the record).</p>
+<h2>Media Streamers</h2>
+<table class="hot100"><tr><th>Device</th><th>Era</th><th>Units sold</th><th>Conf.</th><th>Still in use</th></tr>
+<tr><td>Amazon Fire TV Stick 2nd gen (2016)</td><td>2016</td><td><em>undisclosed</em> <span class="proxy">per-generation breakdown undisclosed</span></td><td class="conf">B</td><td>medium; still running on many TVs</td></tr>
+<tr><td>Amazon Fire TV Stick 4K (2018)</td><td>2018</td><td><em>undisclosed</em> <span class="proxy">per-generation breakdown undisclosed</span></td><td class="conf">B</td><td>high; huge installed base, still supported</td></tr>
+<tr><td>Apple TV 4K 1st gen (2017)</td><td>2017</td><td><em>undisclosed</em> <span class="proxy">undisclosed; Apple stopped reporting Apple TV unit figures after 2016</span></td><td class="conf">C</td><td>high; current-enough, tvOS still updated</td></tr>
+<tr><td>Apple TV HD / 4th gen (2015)</td><td>2015</td><td><em>undisclosed</em> <span class="proxy">per-generation breakdown undisclosed</span></td><td class="conf">C</td><td>medium; still sold new until 2022, long support tail</td></tr>
+<tr><td>Comcast Xfinity X1 DVR (XG1v1) (2012)</td><td>2012</td><td><em>undisclosed</em> <span class="proxy">Comcast reports X1 homes, not box units</span></td><td class="conf">B</td><td>medium; X1 still in service though Comcast migrating to Xumo IPTV</td></tr>
+<tr><td>Google Chromecast Ultra (2016)</td><td>2016</td><td><em>undisclosed</em> <span class="proxy">per-generation breakdown undisclosed</span></td><td class="conf">B</td><td>medium; still functions, Stadia-era legacy</td></tr>
+<tr><td>Google Chromecast with Google TV 4K (2020)</td><td>2020</td><td><em>undisclosed</em> <span class="proxy">per-generation breakdown undisclosed</span></td><td class="conf">B</td><td>high; current-gen until Google TV Streamer (2024)</td></tr>
+<tr><td>Nvidia Shield TV (2017 refresh)</td><td>2017</td><td><em>undisclosed</em> <span class="proxy">undisclosed; Nvidia has never disclosed Shield unit sales</span></td><td class="conf">C</td><td>high; Shield Experience updates through 2024, devoted user base</td></tr>
+<tr><td>Roku Streaming Stick+ (3810X) (2017)</td><td>2017</td><td><em>undisclosed</em> <span class="proxy">Roku does not disclose model-level sales</span></td><td class="conf">C</td><td>high; among Roku&#x27;s best-selling sticks, still widely plugged in</td></tr>
+<tr><td>Roku Ultra (4660X) (2016)</td><td>2016</td><td><em>undisclosed</em> <span class="proxy">Roku does not disclose model-level sales</span></td><td class="conf">C</td><td>medium; flagship of its era, still supported</td></tr>
+</table>
+<p class="gapnote"><strong>Data gaps (Media Streamers):</strong> No manufacturer discloses per-generation streamer sales — all per-model numbers here are line-total proxies (Google 100M+, Amazon 200M+, Roku 100M+ households) with confidence B/C, so per-generation ranking should lean on still-in-use and teardown-fit instead. Apple stopped reporting Apple TV figures after 2016 (~25M), Nvidia Shield sales are entirely undisclosed, and Sky Q (2.5M homes in Apr 2018, 3.6M customers Jul 2018) was dropped as a candidate since its volume trails TiVo&#x27;s peak and Comcast X1&#x27;s footprint — keep it in reserve for the ISP-box expansion tier.</p>
+<h2>Wearables</h2>
+<table class="hot100"><tr><th>Device</th><th>Era</th><th>Units sold</th><th>Conf.</th><th>Still in use</th></tr>
+<tr><td>Xiaomi Mi Band 3</td><td>2018</td><td><strong>23.3M</strong> <span class="src">(YomiTech, Jun 2019)</span></td><td class="conf">B</td><td>medium — huge installed base, aging batteries</td></tr>
+<tr><td>AirPods (2nd generation)</td><td>2019</td><td><em>undisclosed</em> <span class="proxy">undisclosed</span></td><td class="conf">B</td><td>high — ubiquitous, cheap used, still paired everywhere</td></tr>
+<tr><td>AirPods Pro (1st generation)</td><td>2019</td><td><em>undisclosed</em> <span class="proxy">undisclosed</span></td><td class="conf">B</td><td>high — widely worn despite crackling service program</td></tr>
+<tr><td>Apple Watch Series 3</td><td>2017</td><td><em>undisclosed</em> <span class="proxy">undisclosed</span></td><td class="conf">B</td><td>low — dropped from watchOS 9, Apple lists it vintage/obsolete</td></tr>
+<tr><td>Fitbit Charge 2</td><td>2016</td><td><em>undisclosed</em> <span class="proxy">undisclosed</span></td><td class="conf">B</td><td>medium — battery aging, but some still worn</td></tr>
+<tr><td>Fitbit Inspire HR</td><td>2019</td><td><em>undisclosed</em> <span class="proxy">undisclosed</span></td><td class="conf">B</td><td>medium — still functional, modest active base</td></tr>
+<tr><td>Huawei Watch GT 2</td><td>2019</td><td><em>undisclosed</em> <span class="proxy">undisclosed</span></td><td class="conf">B</td><td>high — 2-week battery life keeps huge installed base alive</td></tr>
+<tr><td>Samsung Galaxy Watch 4</td><td>2021</td><td><em>undisclosed</em> <span class="proxy">undisclosed</span></td><td class="conf">C</td><td>high — large Android base, still on shelves used</td></tr>
+<tr><td>Xiaomi Mi Band 4</td><td>2019</td><td><em>undisclosed</em> <span class="proxy">undisclosed</span></td><td class="conf">B</td><td>medium — still very common on wrists</td></tr>
+<tr><td>Xiaomi Mi Smart Band 6</td><td>2021</td><td><em>undisclosed</em> <span class="proxy">undisclosed</span></td><td class="conf">B</td><td>medium — 2021 device, still commonly worn</td></tr>
+</table>
+<p class="gapnote"><strong>Data gaps (Wearables):</strong> Apple and Samsung never disclose per-model unit sales — Apple stopped breaking out Watch units in 2018 and Samsung never did, so 8 of 14 entries honestly use &#x27;undisclosed&#x27; with an analyst or company milestone proxy. Per-generation figures are equally scarce for Xiaomi and Fitbit, who report only series totals or launch-week milestones. Weakest single figure: Mi Band 3&#x27;s 23.3M (one tech blog, June 2019) — confidence B, not A.</p>
+<h2>PCs &amp; Single-Board Computers</h2>
+<table class="hot100"><tr><th>Device</th><th>Era</th><th>Units sold</th><th>Conf.</th><th>Still in use</th></tr>
+<tr><td>Lenovo ThinkPad (entire line)</td><td>1992–present</td><td><strong>200M</strong> <span class="src">(Lenovo StoryHub (30th anniversary post), 2022)</span></td><td class="conf">A</td><td>high — world&#x27;s best-known business laptop; enormous refurbished fleet</td></tr>
+<tr><td>Raspberry Pi (all generations)</td><td>2012–present</td><td><strong>75M</strong> <span class="src">(Raspberry Pi Holdings FY 2025 results (investegate.co.uk company announcement), 2026 (FY2025 results))</span></td><td class="conf">A</td><td>high — still the default SBC for education, hobby, and embedded industry</td></tr>
+<tr><td>Raspberry Pi 3 range (3B / 3A+ / 3B+)</td><td>2016–2018</td><td><strong>23M</strong> <span class="src">(Tom&#x27;s Hardware, citing CEO Eben Upton, Mar 2024)</span></td><td class="conf">A</td><td>high — still widely deployed in embedded and hobby projects</td></tr>
+<tr><td>Commodore 64</td><td>1982–1994</td><td><strong>12.5M</strong> <span class="src">(Guinness World Records (best-selling desktop computer of all time), record current; estimate cited 2020s)</span></td><td class="conf">A</td><td>low — enthusiast/collector use only; fully obsolete platform</td></tr>
+<tr><td>Arduino Uno (ATmega328P boards)</td><td>2010–present</td><td><strong>10M</strong> <span class="src">(CNX Software reporting Arduino&#x27;s own announcement (UNO Mini Limited Edition launch), Nov 2021)</span></td><td class="conf">A</td><td>high — still the default starter microcontroller board worldwide</td></tr>
+<tr><td>Apple II (all models)</td><td>1977–1993</td><td><strong>6M</strong> <span class="src">(Wikipedia (cited figure), 2026)</span></td><td class="conf">A</td><td>low — collector/hobbyist only</td></tr>
+<tr><td>Sinclair ZX Spectrum</td><td>1982–1992</td><td><strong>5M</strong> <span class="src">(Wikipedia (cited figure), 2026)</span></td><td class="conf">B</td><td>low — enthusiast/collector use only</td></tr>
+<tr><td>Apple MacBook (all laptop lines)</td><td>2006–present</td><td><em>undisclosed</em> <span class="proxy">undisclosed</span></td><td class="conf">C</td><td>high — MacBooks dominate premium laptop installed base; long software support cycles</td></tr>
+<tr><td>Dell Inspiron (consumer line)</td><td>1997–present</td><td><em>undisclosed</em> <span class="proxy">undisclosed</span></td><td class="conf">C</td><td>high — one of the most common consumer laptops in the wild</td></tr>
+<tr><td>Lenovo ThinkPad T-series (T420/T430 era)</td><td>2011–2012</td><td><em>undisclosed</em> <span class="proxy">undisclosed</span></td><td class="conf">C</td><td>high — huge refurbished fleet; beloved hackable last-good-keyboard generation</td></tr>
+</table>
+<p class="gapnote"><strong>Data gaps (PCs &amp; Single-Board Computers):</strong> Per-model laptop sales are essentially never disclosed — ThinkPad, MacBook, iMac, Inspiron, and Pavilion figures above are honest line-level claims or declared &#x27;undisclosed&#x27;; the strongest verified all-time figure in this category is ThinkPad&#x27;s 200M (Lenovo, 2022), followed by Raspberry Pi&#x27;s 75M+ (FY2025). Arduino Uno 10M is from Arduino&#x27;s own November 2021 announcement (via CNX Software); Pi 3 range 23M via CEO Eben Upton (Tom&#x27;s Hardware, Mar 2024). Retro figures (Commodore 64 12.5M, ZX Spectrum 5M, Apple II ~6M) rest on Wikipedia/Guinness-cited estimates, not manufacturer audits.</p>
+<h2>E-Readers &amp; Tablets</h2>
+<table class="hot100"><tr><th>Device</th><th>Era</th><th>Units sold</th><th>Conf.</th><th>Still in use</th></tr>
+<tr><td>Apple iPad 2 (2011)</td><td>2011</td><td><strong>55M</strong> <span class="src">(Apple earnings FY2011–FY2014, derived 2026-09-26 from 2011–2014 Apple earnings)</span></td><td class="conf">B</td><td>medium — millions deployed in schools/enterprise; capped at iOS 9 so web use is fading</td></tr>
+<tr><td>Apple iPad mini (1st generation, 2012)</td><td>2012</td><td><strong>45M</strong> <span class="src">(KGI/Ming-Chi Kuo estimates via MacRumors/AppleInsider/PhoneArena, extrapolated 2026-09-26; Kuo notes 2012-11 to 2013-08)</span></td><td class="conf">C</td><td>medium — A5/iOS 9 cap limits modern use, but huge installed base lingers as readers/kiosk units</td></tr>
+<tr><td>Apple iPad (1st generation, 2010)</td><td>2010</td><td><strong>15M</strong> <span class="src">(Apple (Steve Jobs) at iPad 2 launch event: &#x27;Nearly 15 million iPads sold in 2010 — more than every tablet PC ever sold&#x27;, 2011-03-02)</span></td><td class="conf">A</td><td>low — capped at iOS 5.1.1; mostly retired after 16 years</td></tr>
+<tr><td>Google Nexus 7 (2012, Asus)</td><td>2012</td><td><strong>4.7M</strong> <span class="src">(Benedict Evans estimate, reported by Digital Trends/BGR, 2013-02)</span></td><td class="conf">B</td><td>low — Tegra 3 / Android 5.1 cap; hobbyist devices only</td></tr>
+<tr><td>Amazon Kindle Fire HD 7-inch (2012)</td><td>2012</td><td><strong>4.5M</strong> <span class="src">(KGI/Ming-Chi Kuo via AppleInsider/Mobile&amp;Apps, 2012-11)</span></td><td class="conf">C</td><td>low — 14-year-old budget tablet; retired in practice</td></tr>
+<tr><td>Google Nexus 7 (2013, Asus)</td><td>2013</td><td><strong>3.8M</strong> <span class="src">(Wikipedia &#x27;Nexus 7 (2013)&#x27; infobox: &#x27;Units sold: 3.5 million to 4 million (Late 2013)&#x27;, as stated late 2013)</span></td><td class="conf">B</td><td>medium — unofficial LineageOS/Android 11 support keeps a hobbyist base alive</td></tr>
+<tr><td>Barnes &amp; Noble Nook Tablet (2011)</td><td>2011</td><td><strong>3M</strong> <span class="src">(Good e-Reader history of the Nook line: the Nook Tablet &#x27;did go on to sell over 3 million units in Q3 and Q4 of 2011&#x27;, covering 2011-10 to 2011-12)</span></td><td class="conf">B</td><td>low — 15-year-old Android tablet; retired in practice</td></tr>
+<tr><td>Amazon Kindle Fire (1st generation, 2011)</td><td>2011</td><td><strong>2M</strong> <span class="src">(eDataSource CEO Carter Nicholas via CNET, reported by PocketGamer: ~850K direct from Amazon.com by late Nov 2011, &#x27;as many as 2 million or more&#x27; across all channels by Dec 2011, 2011-12)</span></td><td class="conf">B</td><td>low — 2011 Android 2.3 tablet; effectively retired</td></tr>
+<tr><td>Amazon Kindle Paperwhite 1st generation (2012)</td><td>2012</td><td><em>undisclosed</em> <span class="proxy">undisclosed</span></td><td class="conf">C</td><td>high — e-ink Kindles routinely serve 10+ years; 2012 Paperwhites still common used</td></tr>
+<tr><td>Apple iPad 6th generation (2018)</td><td>2018</td><td><em>undisclosed</em> <span class="proxy">undisclosed</span></td><td class="conf">C</td><td>high — A10 + iPadOS 17 support; still the most common school-issued iPad in the wild</td></tr>
+</table>
+<p class="gapnote"><strong>Data gaps (E-Readers &amp; Tablets):</strong> Amazon has never disclosed Kindle unit sales as a matter of company policy, so all six Kindle/Fire figures are analyst estimates or &#x27;best-selling&#x27; claims, not hard numbers; Apple disclosed iPad units quarterly through FY2018 but never per-model, so every iPad generation figure above is derived or analyst-sourced (grade B/C) — with the iPad 1&#x27;s ~15M being the only Apple-stated number. Samsung, Kobo, and Barnes &amp; Noble likewise never published per-model volumes, so Galaxy Tab, Kobo, and Nook entries rest on company-level or teardown-analyst proxies.</p>
+<h2>Cameras &amp; Drones</h2>
+<table class="hot100"><tr><th>Device</th><th>Era</th><th>Units sold</th><th>Conf.</th><th>Still in use</th></tr>
+<tr><td>GoPro Hero 5 Black</td><td>2016</td><td><strong>4M</strong> <span class="src">(GoPro press release &#x27;HERO5 Black Is Best Selling GoPro, Ever&#x27;, Aug 2018)</span></td><td class="conf">A</td><td>medium — huge used market, still the default cheap-mod GoPro</td></tr>
+<tr><td>Arlo Pro 2 (2017)</td><td>2017</td><td><em>undisclosed</em> <span class="proxy">undisclosed</span></td><td class="conf">C</td><td>medium — free 7-day cloud plan made these stick around for years</td></tr>
+<tr><td>DJI Mavic Pro</td><td>2016</td><td><em>undisclosed</em> <span class="proxy">undisclosed</span></td><td class="conf">B</td><td>medium — large second-hand fleet, still flown regularly</td></tr>
+<tr><td>DJI Mini 2</td><td>2020</td><td><em>undisclosed</em> <span class="proxy">undisclosed</span></td><td class="conf">C</td><td>high — sub-250g class keeps it legally relevant; heavily flown</td></tr>
+<tr><td>DJI Phantom 4</td><td>2016</td><td><em>undisclosed</em> <span class="proxy">undisclosed</span></td><td class="conf">B</td><td>medium — big used fleet, popular for parts/rebuilds</td></tr>
+<tr><td>GoPro Hero 7 Black</td><td>2018</td><td><em>undisclosed</em> <span class="proxy">undisclosed</span></td><td class="conf">B</td><td>high — first with HyperSmooth, still widely used and resold</td></tr>
+<tr><td>Google Nest Cam (Indoor, wired, 2015)</td><td>2015</td><td><em>undisclosed</em> <span class="proxy">undisclosed</span></td><td class="conf">C</td><td>medium — many remain on walls despite legacy app support ending for some models</td></tr>
+<tr><td>Nextbase 522GW (2019)</td><td>2019</td><td><em>undisclosed</em> <span class="proxy">undisclosed</span></td><td class="conf">C</td><td>high — flagship QHD dash cam of its era, still mounted in millions of cars</td></tr>
+<tr><td>Ring Video Doorbell 2 (2017)</td><td>2017</td><td><em>undisclosed</em> <span class="proxy">undisclosed</span></td><td class="conf">C</td><td>medium — huge installed base at front doors, being replaced by newer gens</td></tr>
+<tr><td>Wyze Cam v3 (2020)</td><td>2020</td><td><em>undisclosed</em> <span class="proxy">undisclosed</span></td><td class="conf">B</td><td>high — Wyze&#x27;s best-known outdoor cam, still widely deployed</td></tr>
+</table>
+<p class="gapnote"><strong>Data gaps (Cameras &amp; Drones):</strong> No vendor except GoPro discloses per-model unit figures — DJI, Ring, Nest, Arlo, and all dash-cam makers keep model-level sales secret, so 10 of 14 records rest on market-share or brand-level proxies (confidence B/C). Classic DSLRs/mirrorless were deliberately excluded per the brief. Wyze carries the only verified CVE facts in this category (CVE-2019-9564, CVE-2019-12266, CVE-2023-6324 — Bitdefender-disclosed).</p>
+<h2>Other</h2>
+<table class="hot100"><tr><th>Device</th><th>Era</th><th>Units sold</th><th>Conf.</th><th>Still in use</th></tr>
+<tr><td>Epson EcoTank line (2010–present; e.g. ET-2850)</td><td>2010–present</td><td><strong>60M</strong> <span class="src">(Epson press release, 2021-11)</span></td><td class="conf">B</td><td>high — ink-tank printers run for years; Epson #1 ink-tank vendor (62%+ global share)</td></tr>
+<tr><td>Tile tracker line (2013–present; e.g. Tile Mate 2022)</td><td>2013–present</td><td><strong>45M</strong> <span class="src">(Life360 CEO Chris Hulls acquisition blog, 2021-11)</span></td><td class="conf">B</td><td>medium — AirTag competition shrank share but Life360 keeps the installed base active</td></tr>
+<tr><td>Samsung QLED TV line (2017–present)</td><td>2017–present</td><td><strong>40M</strong> <span class="src">(Samsung Newsroom, citing Omdia, 2024-03-13)</span></td><td class="conf">B</td><td>high — Samsung #1 TV brand 19 straight years; Tizen fleet still dominant</td></tr>
+<tr><td>TCL TV line (incl. Roku TV models)</td><td>2014–present</td><td><strong>29M</strong> <span class="src">(TCL Industries 2024 annual report (tcl.com), 2024)</span></td><td class="conf">B</td><td>high — world #2 TV brand in 2024; budget sets stay in service for years</td></tr>
+<tr><td>Meta Quest 2 (2020)</td><td>2020–2024</td><td><strong>20M</strong> <span class="src">(Meta VP of VR Mark Rabkin, internal presentation reported by The Verge, 2023-03)</span></td><td class="conf">B</td><td>medium — discontinued 2024 but 20M units in the wild; cheap used</td></tr>
+<tr><td>Amazon Echo Show line (2017–present)</td><td>2017–present</td><td><em>undisclosed</em> <span class="proxy">undisclosed</span></td><td class="conf">C</td><td>high — kitchens/bedrooms everywhere; Alexa support ongoing</td></tr>
+<tr><td>Amazon Kindle Paperwhite (11th gen, 2021)</td><td>2021–present</td><td><em>undisclosed</em> <span class="proxy">undisclosed</span></td><td class="conf">C</td><td>high — e-ink readers last a decade; Paperwhite the most common model in the wild</td></tr>
+<tr><td>Apple AirTag (1st gen, 2021)</td><td>2021–present</td><td><em>undisclosed</em> <span class="proxy">undisclosed</span></td><td class="conf">C</td><td>high — ~1B-device Find My network; replaceable CR2032 keeps units alive indefinitely</td></tr>
+<tr><td>Google Nest Hub (2nd gen, 2021)</td><td>2021–present</td><td><em>undisclosed</em> <span class="proxy">undisclosed</span></td><td class="conf">C</td><td>high — still Google&#x27;s current hub; sleep-sensing model with long support</td></tr>
+<tr><td>Logitech Unifying Receiver (2009–present)</td><td>2009–present</td><td><em>undisclosed</em> <span class="proxy">undisclosed</span></td><td class="conf">C</td><td>high — designed to stay plugged in forever; many never firmware-patched</td></tr>
+</table>
+<p class="gapnote"><strong>Data gaps (Other):</strong> Per-model unit figures are simply not published by Amazon (Echo Show, Kindle), Apple (AirTag), DJI, HP, Brother, or Sonos — so 7 of 15 entries carry verified line/brand-level context instead of model numbers, all clearly labeled as proxies. TV makers disclose annual brand shipments and line milestones (Samsung QLED 40M, TCL 29M/yr, LG OLED 3.18M in 2024) but never per-model, so the TV entries are line-level by necessity. The strongest verified per-model numbers are Raspberry Pi 3B/3B+ (23M, CEO-stated), Tile (45M+, acquirer-stated), and Epson EcoTank (60M+, company-stated); Quest 2&#x27;s ~20M rest</p>
+<hr>
+<p class="lede">Compiled 2026-09-26 from manufacturer disclosures, filings, credible analyst and press
+reporting. Every figure carries its source and confidence grade. Corrections welcome &mdash;
+verified corrections only.</p>
+<footer>BareBoard &mdash; a free educational resource. Text and findings published under open terms; nothing here is for sale.</footer>
+</body>
+</html>
