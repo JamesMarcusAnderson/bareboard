@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>The Autopsy Report — BareBoard</title>
+<meta name="description" content="The Autopsy Report: device-by-device hardware analysis from BareBoard.">
+<link rel="stylesheet" href="/style.css">
+</head>
+<body>
+<nav>
+  <a href="/">BareBoard</a>
+  <a href="/about.html">About</a>
+  <a href="/autopsy/">The Autopsy Report</a>
+  <a href="https://github.com/jamesmarcusanderson">GitHub</a>
+</nav>
+
+<h1>The Autopsy Report</h1>
+<p class="framing" style="margin-bottom:1.5rem;">We can&rsquo;t open their hardware, so we open our findings.</p>
+<p>Device-by-device hardware analysis, published free. Each report is built from our own bench work &mdash; verified findings only, uncertainty dated and marked.</p>
+
+<div class="device">
+  <span class="tag">Device #001</span>
+  <h3>Xfinity XB3</h3>
+  <p class="status">Status: draft &mdash; full report in preparation.</p>
+  <ul>
+    <li><strong>J3 UART:</strong> unpopulated 4-pin header located next to the main SoC. Boot log captured read-only &mdash; no console access was ever obtained.</li>
+    <li><strong>Wi-Fi-disable mod:</strong> a published third-party hardware writeup (TPS54328 regulator enable line) documented as reference for radio interference. Not performed on our unit.</li>
+    <li><strong>Bridge mode:</strong> unit placed in bridge mode via the admin panel and paired with an Apple AirPort Time Capsule as the actual router.</li>
+    <li>This is <strong>not</strong> a power-optimization project &mdash; the Wi-Fi work was about eliminating radio interference, full stop.</li>
+    <li>No firmware was extracted, modified, or redistributed. All work performed on a personally owned, pre-paid unit.</li>
+  </ul>
+</div>
+
+<p>More devices to follow. The bench is never empty for long.</p>
+
+<hr>
+<footer>BareBoard &mdash; a free educational resource.</footer>
+</body>
+</html>
