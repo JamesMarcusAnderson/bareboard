@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Autopsy 040: The Verizon FiOS Quantum Gateway G1100 &mdash; BareBoard</title>
+<meta name="description" content="BareBoard Autopsy 040: the Verizon FiOS Quantum Gateway G1100 — the ISP gateway with Wi-Fi, MoCA, and a 900 MHz radio inside. A public-records teardown.">
+<meta name="theme-color" content="#fbfbfc">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%231d1d1f'/%3E%3Ctext x='32' y='45' font-family='system-ui,-apple-system,sans-serif' font-size='36' font-weight='700' fill='white' text-anchor='middle'%3EB%3C/text%3E%3C/svg%3E">
+<link rel="stylesheet" href="/style.css">
+</head>
+<body>
+<header class="site-nav">
+  <div class="nav-inner">
+    <a class="brand" href="/">BareBoard</a>
+    <nav>
+      <a href="/about.html">About</a>
+      <a href="/autopsy/">Autopsy</a>
+      <a href="/hot-100.html">Hot 100</a>
+      <a href="/most-wanted.html">Most Wanted</a>
+      <a href="/support.html">Support</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <p class="kicker">The Autopsy Report &middot; Device #040</p>
+  <h1>The Verizon FiOS Quantum Gateway G1100</h1>
+  <p class="lede">The gateway that came with the fiber &mdash; Wi-Fi, MoCA, and a quiet 900&nbsp;MHz radio, all in the box Verizon handed you.</p>
+
+  <section>
+    <h2>What is this thing?</h2>
+    <p>The <strong>Verizon FiOS Quantum Gateway G1100</strong> is an ISP-provided residential gateway &mdash; the box Verizon gave FiOS customers with their fiber install. It's a triple-play device: dual-band 802.11ac Wi-Fi, four gigabit Ethernet ports, and <strong>MoCA</strong> (Multimedia over Coax Alliance) networking over the home's existing coax &mdash; for both WAN (from the ONT) and LAN (to set-top boxes). It also carries a <strong>900&nbsp;MHz-class radio</strong> (908.4&ndash;916.0&nbsp;MHz in the filing) alongside its Wi-Fi bands. <span class="src"><a href="https://fccpdf.com/2ABTE/2ABTEG1100/2229462.pdf">G1100 user manual</a></span> <span class="src"><a href="https://fccid.io/2ABTEG1100">FCC filing</a></span></p>
+    <p>Who made it? The public record is thin on the OEM: the authorization is <strong>FCC ID 2ABTEG1100</strong>, granted in 2014, with changes in 2016. We do not name a manufacturer or a chipset in this report &mdash; the evidence isn't there, and we don't fill gaps with guesses. <span class="src"><a href="https://fccid.io/2ABTEG1100">FCC filing</a></span></p>
+  </section>
+
+  <section>
+    <h2>Not on our bench (yet)</h2>
+    <p><strong>This device is not on our bench.</strong> We have never owned, opened, photographed, measured, or powered on the FiOS G1100. Everything in this report comes from <strong>public records</strong>: government filings, manufacturer documents, manuals, and credible public teardowns and hardware databases. Where a fact would require holding the hardware in our hands &mdash; our own photos, our measurements, our boot logs, the exact board revision of a future unit &mdash; we say so, out loud, and mark it unknown. Nothing here is presented as first-hand BareBoard evidence.</p>
+<p>That constraint is also the point: you can learn a remarkable amount about a device without ever touching it, because the public record is deep. What follows is everything the record could tell us &mdash; and an honest map of where the record runs out.</p>
+  </section>
+
+  <section>
+    <h2>A short history</h2>
+    <ol class="timeline">
+      <li><span class="when">2014-03-31</span>The FCC grants equipment authorization <strong>2ABTEG1100</strong> for the FiOS Quantum Gateway &mdash; dual-band Wi-Fi plus the 908.4&ndash;916.0&nbsp;MHz radio and MoCA. <span class="src"><a href="https://fccid.io/2ABTEG1100">FCC filing</a></span></li>
+      <li><span class="when">2014&ndash;2015</span>The G1100 ships as Verizon's flagship FiOS gateway: 802.11b/g/n/ac, IPv4/IPv6, MoCA WAN/LAN, four gigabit LAN ports, 12&nbsp;V/3&nbsp;A power. <span class="src"><a href="https://fccpdf.com/2ABTE/2ABTEG1100/2229462.pdf">G1100 user manual</a></span></li>
+      <li><span class="when">2016</span>Changes to the authorization are filed; the gateway continues as the standard FiOS install through the mid-2010s. <span class="src"><a href="https://fccid.io/2ABTEG1100">FCC filing</a></span></li>
+      </ol>
+  </section>
+
+  <section>
+    <h2>The outside</h2>
+    <p>A tall black tower &mdash; roughly 1.87 &times; 10 &times; 7.4 inches, 1.56&nbsp;lb &mdash; with a single front status LED and a clean, vented shell. The rear carries four gigabit LAN ports, one gigabit WAN/Internet port, coax (MoCA), two USB ports, power, and the reset button. <span class="src"><a href="https://fccpdf.com/2ABTE/2ABTEG1100/2229462.pdf">G1100 user manual</a></span></p>
+    <figure>
+      <img src="img/device.jpg" alt="Placeholder card — Verizon FiOS Quantum Gateway G1100 not yet on our bench">
+      <figcaption>Placeholder: this device isn't on our bench yet. When it is, this card becomes a real photograph.</figcaption>
+    </figure>
+    <p>Designed to stand next to the TV and be ignored &mdash; which, for ISP equipment, is the highest compliment.</p>
+  </section>
+
+  <section>
+    <h2>The board</h2>
+    <p>Here's the honest version: <strong>we don't know what's on this board.</strong> No verified public source names the G1100's SoC, its radio chips, or its memory &mdash; and this report does not guess. The manual confirms the feature set (802.11b/g/n/ac, IPv4/IPv6, MoCA WAN/LAN) and the physical facts (dimensions, weight, 12&nbsp;V/3&nbsp;A power); the filing confirms the radio bands and conducted powers. The silicon inside remains a blank in the public record. <span class="src"><a href="https://fccpdf.com/2ABTE/2ABTEG1100/2229462.pdf">G1100 user manual</a></span> <span class="src"><a href="https://fccid.io/2ABTEG1100">FCC filing</a></span></p>
+    <p>That blank is itself worth stating: for a device installed in millions of homes, the public hardware record is remarkably thin. If a unit ever reaches our bench, the chip table below gets written from silicon instead of left empty.</p>
+  </section>
+
+  <section>
+    <h2>Under the microscope: the chips</h2>
+    <p>No verified chip identities exist in the public record for the G1100. Rather than invent a table, we say so &mdash; and list what the record does confirm.</p>
+    <div class="table-scroll">
+        <table class="chips">
+        <thead><tr><th>Chip</th><th>What it does</th><th>How we know</th><th>Dig deeper</th></tr></thead>
+        <tbody>
+        <tr><td><strong>Main SoC</strong><br><span class="partno">unidentified</span></td><td>Unknown &mdash; no verified public source names it.</td><td><span class="badge b-unknown">Unknown</span> Not named in any public source we could verify. Bench work required.</td><td><a href="https://fccid.io/2ABTEG1100">FCC filing</a></td></tr>
+        <tr><td><strong>Radio chips</strong><br><span class="partno">unidentified</span></td><td>Unknown &mdash; no verified public source names them.</td><td><span class="badge b-unknown">Unknown</span> Not named in any public source we could verify. Bench work required.</td><td><a href="https://fccid.io/2ABTEG1100">FCC filing</a></td></tr>
+        <tr><td><strong>Flash / RAM</strong><br><span class="partno">unidentified</span></td><td>Unknown &mdash; no verified public source names them.</td><td><span class="badge b-unknown">Unknown</span> Not named in any public source we could verify. Bench work required.</td><td><a href="https://fccid.io/2ABTEG1100">FCC filing</a></td></tr>
+        </tbody>
+        </table>
+        </div>
+    <p>We considered leaving this table out entirely; we kept it because an explicit &ldquo;unknown&rdquo; is more honest than silence. Everything else on this page that can be sourced, is.</p>
+  </section>
+
+  <section id="fcc">
+    <h2>The government's file on this box</h2>
+    <p>The government's file on this gateway is public under <strong>FCC ID 2ABTEG1100</strong>, granted <strong>March 31, 2014</strong>, with changes filed in 2016. <span class="src"><a href="https://fccid.io/2ABTEG1100">FCC filing</a></span></p>
+    <ul>
+      <li><strong>Bands:</strong> the filing covers 908.4&ndash;916.0&nbsp;MHz plus the standard 2.4&nbsp;GHz and 5&nbsp;GHz Wi-Fi bands &mdash; that sub-GHz radio is the G1100's most unusual public fact.</li>
+      <li><strong>Lab power figures (each tied to its own grant):</strong> ~371&nbsp;mW and ~357&nbsp;mW entries in the main filings, with DFS-band entries of ~70/~63/~97&nbsp;mW &mdash; we don't blend grants into a single number.</li>
+      <li><strong>Manual:</strong> the user manual in the filing record confirms the feature set and physical specs (below).</li>
+    </ul>
+    <p>Browse it yourself: <span class="src"><a href="https://fccid.io/2ABTEG1100">filing page</a></span> — the manual: <span class="src"><a href="https://fccpdf.com/2ABTE/2ABTEG1100/2229462.pdf">user manual (mirror)</a></span></p>
+  </section>
+
+  <section>
+    <h2>Service, recovery, and debug modes</h2>
+    <p>We listen, we don't knock: this section documents only that service or recovery modes <em>exist</em> in the public record, and what kind of thing they are &mdash; never how to defeat a lock.</p>
+    <p>The user manual documents a <strong>reset button</strong> that restores factory defaults when held for at least three seconds &mdash; the standard manufacturer-documented recovery path. <span class="src"><a href="https://manuals.plus/wp-content/uploads/2022/02/fios-quantum-gateway-router-g1100-manual-optimized.pdf">G1100 manual (reset)</a></span> Existence and purpose only; no procedure beyond the manual's own description.</p>
+    <p>We found <strong>no public record of a serial console, bootloader recovery mode, or other debug interface</strong> for the G1100. Unknown until a bench says otherwise.</p>
+  </section>
+
+  <section>
+    <h2>What the public record shows</h2>
+    <p><strong>The 900&nbsp;MHz radio is the story.</strong> Most gateways in this batch are Wi-Fi plus Ethernet; the G1100's filing adds 908.4&ndash;916.0&nbsp;MHz &mdash; sub-GHz spectrum typically used for IoT and home-automation traffic. It's the most unusual radio in the Hot 100 networking batch, and it's public record.</p>
+    <p><strong>MoCA is the quiet backbone.</strong> The gateway's coax networking &mdash; WAN from the ONT, LAN to set-top boxes &mdash; is a whole second network most owners never knew they had. The manual documents it plainly; the house's coax was doing double duty.</p>
+    <p><strong>Thin records are a finding, not a failure.</strong> Millions of these shipped, yet no verified public source names the silicon. ISP-supplied gear often has the thinnest public hardware record &mdash; the customer never chose it, so nobody wrote it up. That asymmetry is worth noticing.</p>
+  </section>
+
+  <section>
+    <h2>What we didn't do</h2>
+    <ul>
+      <li>We never had a unit, so we took no photographs and no measurements.</li>
+      <li>We never opened an enclosure or lifted an RF shield.</li>
+      <li>We never captured a boot log or probed a debug port.</li>
+      <li>We never extracted, modified, redistributed, or ran the device's firmware.</li>
+      <li>We never defeated a lock, bypassed authentication, or recovered credentials or keys &mdash; and we publish none.</li>
+      <li>We never tested an exploit or a vulnerability against any device.</li>
+      <li>Anything below marked <strong>Unknown</strong> stays unknown until a unit reaches our bench.</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>By the numbers</h2>
+    <ul>
+      <li><strong>Device:</strong> Verizon FiOS Quantum Gateway G1100</li>
+      <li><strong>Era:</strong> 2014&ndash;late 2010s</li>
+      <li><strong>FCC ID:</strong> 2ABTEG1100 (granted 2014-03-31; changes 2016)</li>
+      <li><strong>Wireless:</strong> 802.11b/g/n/ac dual-band + 908.4&ndash;916.0&nbsp;MHz radio + MoCA over coax</li>
+      <li><strong>Conducted power (per grant):</strong> ~371&nbsp;mW / ~357&nbsp;mW (main filings); ~70/~63/~97&nbsp;mW (DFS entries)</li>
+      <li><strong>Ports:</strong> 4&times; gigabit LAN, 1&times; gigabit WAN, coax (MoCA), 2&times; USB</li>
+      <li><strong>Size / weight:</strong> ~1.87 &times; 10 &times; 7.4 in; 1.56&nbsp;lb</li>
+      <li><strong>Power:</strong> 12&nbsp;V / 3&nbsp;A</li>
+      <li><strong>Silicon:</strong> Unidentified in the public record</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>Words to know</h2>
+    <p>Every term this page uses, in plain English. No prior knowledge required.</p>
+    <dl class="glossary">
+      <div><dt>Residential gateway</dt><dd>One box that connects your home network to the internet and shares it &mdash; modem, router, and Wi-Fi access point combined.</dd></div>
+      <div><dt>MoCA</dt><dd>Multimedia over Coax Alliance &mdash; networking over the coax cables already in the walls, used here for both the fiber uplink and the TV boxes.</dd></div>
+      <div><dt>ONT</dt><dd>Optical network terminal &mdash; the fiber box on the wall where Verizon's fiber becomes your home's signal.</dd></div>
+      <div><dt>Sub-GHz radio</dt><dd>A radio below 1&nbsp;GHz (here, ~900&nbsp;MHz) &mdash; longer range and better wall penetration than Wi-Fi, typically for IoT devices.</dd></div>
+      <div><dt>DFS</dt><dd>Dynamic frequency selection &mdash; 5&nbsp;GHz channels shared with radar, where the router must listen before transmitting.</dd></div>
+      <div><dt>IPv6</dt><dd>The newer internet addressing standard, supported alongside IPv4 on this gateway.</dd></div>
+      <div><dt>FCC ID</dt><dd>The ID the FCC assigns to each approved wireless product. Punch it into fccid.io and the whole public filing comes up.</dd></div>
+    </dl>
+  </section>
+
+  <section>
+    <h2>Sources &amp; confidence</h2>
+    <ul>
+      <li>FCC equipment authorization 2ABTEG1100 (grant 2014-03-31, changes 2016; bands incl. 908.4&ndash;916.0&nbsp;MHz; conducted powers ~371/~357&nbsp;mW and DFS ~70/~63/~97&nbsp;mW per grant): primary evidence. High confidence.</li>
+      <li>Feature set (802.11b/g/n/ac, IPv4/IPv6, MoCA WAN/LAN, 4&times; gigabit LAN), dimensions (1.87&times;10&times;7.4&nbsp;in), weight (1.56&nbsp;lb), power (12&nbsp;V/3&nbsp;A): the G1100 user manual in the filing record. High confidence.</li>
+      <li>Reset button restores factory defaults (hold &ge;3&nbsp;s): the user manual. High confidence in the existence claim.</li>
+      <li>No verified public source names the SoC, radio chips, or memory &mdash; no OEM named; stated as an explicit gap. No manufacturer-published debug/recovery documentation located.</li>
+    </ul>
+    <p class="note">Anything not listed here is unknown until the bench says otherwise. We'll say so, out loud, when that's the case.</p>
+    <p class="note"><strong>Legal note.</strong> BareBoard is an educational project. This page is built entirely from public records &mdash; government filings, manufacturer documents, and published third-party research &mdash; about hardware we have never possessed. We don't publish, host, or distribute firmware, keys, passwords, or credentials, and nothing here is instructions for defeating a lock or an authentication check. Product names and trademarks belong to their respective owners and appear here only to identify the hardware. If you believe anything here infringes your rights, contact us and we'll address it promptly.</p>
+  </section>
+
+  <footer>
+    <p>BareBoard &mdash; a free educational resource. Device #040 of the Hot 100.</p>
+    <nav>
+      <a href="/autopsy/">All autopsies</a>
+      <a href="/">Home</a>
+    </nav>
+  </footer>
+</main>
+</body>
+</html>
