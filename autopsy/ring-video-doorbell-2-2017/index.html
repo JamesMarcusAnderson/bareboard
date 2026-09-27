@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Autopsy 089: Ring Video Doorbell 2 &mdash; BareBoard</title>
+<meta name="description" content="A public-records autopsy of the Ring Video Doorbell 2 (2017) — 1080p doorbell with swappable battery. FCC ID 2AEUPBHARG041.">
+<meta name="theme-color" content="#fbfbfc">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%231d1d1f'/%3E%3Ctext x='32' y='45' font-family='system-ui,-apple-system,sans-serif' font-size='36' font-weight='700' fill='white' text-anchor='middle'%3EB%3C/text%3E%3C/svg%3E">
+<link rel="stylesheet" href="/style.css">
+</head>
+<body>
+<header class="site-nav">
+  <div class="nav-inner">
+    <a class="brand" href="/">BareBoard</a>
+    <nav>
+      <a href="/about.html">About</a>
+      <a href="/autopsy/">Autopsy</a>
+      <a href="/hot-100.html">Hot 100</a>
+      <a href="/most-wanted.html">Most Wanted</a>
+      <a href="/support.html">Support</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <p class="kicker">The Autopsy Report &middot; Device #089</p>
+  <h1>Ring Video Doorbell 2</h1>
+  <p class="lede">The Video Doorbell 2 is the Ring that went mainstream: launched in June 2017, it doubled the original's resolution to 1080p and added a removable, rechargeable battery pack — the feature that let anyone with a doorframe, but no doorbell wiring, join the video-doorbell era. This report covers hardware revision 041, the launch hardware — not the later 042 or 043 revisions.</p>
+
+  <section>
+    <h2>What is this thing?</h2>
+<p>The Ring Video Doorbell 2 is a smart video doorbell: <strong>1080p HD video</strong> (up from 720p on the original), a <strong>160° field of view</strong>, two-way audio, and motion detection — powered either by existing doorbell wiring (8–24 VAC) or by its <strong>removable rechargeable battery pack</strong>. <span class="src"><a href="https://techcrunch.com/2017/06/19/rings-new-video-doorbell-gets-1080p-video-and-a-swappable-battery-pack">TechCrunch</a></span></p>
+    <p>It launched at $199 and talked to home Wi-Fi on 2.4 GHz 802.11 b/g/n. <span class="src"><a href="https://www.macrumors.com/2017/06/19/ring-video-doorbell-2/">MacRumors</a></span></p>
+  </section>
+  <section>
+    <h2>Whose box is this?</h2>
+<p>This one isn't on our bench &mdash; yet. Nothing here comes from a BareBoard teardown: no disassembly, no boot logs, no bench measurements, no firmware in our hands. Everything below is built from public records &mdash; the government's FCC filing, the manufacturer's own documents, and contemporary press &mdash; read carefully and cited line by line. That's the deal with these reports: when a fact can't be verified from a public record, we say so, out loud.</p>
+    <p>The moment this hardware crosses our bench, this report gets a second act: our own photos, our own measurements, and anything the public record got wrong gets corrected.</p>
+  </section>
+  <section>
+    <h2>A short history</h2>
+<p>Ring announced the Video Doorbell 2 on <strong>June 19, 2017</strong>. <span class="src"><a href="https://techcrunch.com/2017/06/19/rings-new-video-doorbell-gets-1080p-video-and-a-swappable-battery-pack">TechCrunch</a></span> The pitch was simple: everything the original did, sharper, plus the swappable battery that freed it from doorbell wiring entirely. <span class="src"><a href="https://9to5toys.com/2017/06/19/ring-video-doorbell-2-announcement/">9to5Toys</a></span> It became Ring's volume seller and the template for the doorbell wars that followed.</p>
+    <p>Revision discipline matters here: this report is about hardware revision <strong>041</strong> — the launch hardware. Later revisions <strong>BHARG042</strong> and <strong>BHARG043</strong> have their own filings and, in the 043's case, their own public internal photos. <span class="src"><a href="https://fccpdf.com/2AEUP/2AEUPBHARG043/4151544.pdf">FCC internal photos — BHARG043 (later revision, NOT this device)</a></span> Those belong to different reports; they don't get mixed into this one.</p>
+  </section>
+  <section>
+    <h2>The outside</h2>
+<figure>
+      <img src="img/device.jpg" alt="Ring Video Doorbell 2">
+      <figcaption>Ring Video Doorbell 2. <strong>Image placeholder:</strong> a verified free product photo is on our Most Wanted list — no exact free photo exists yet. When the unit reaches our bench, this becomes a real BareBoard photograph.</figcaption>
+    </figure>
+    <p>The Doorbell 2 is a slim rectangular unit with the camera lens and PIR motion sensor up top, the backlit doorbell button below, and the battery pack sliding out from the bottom. Contemporary coverage notes the swappable battery as the headline physical feature — charge one pack while the other runs the door. <span class="src"><a href="https://techcrunch.com/2017/06/19/rings-new-video-doorbell-gets-1080p-video-and-a-swappable-battery-pack">TechCrunch</a></span></p>
+  </section>
+  <section>
+    <h2>Reading the plastic</h2>
+<p>Mold marks, date wheels, material codes &mdash; the shell's birth certificate. This is bench-only evidence: without the physical unit in our hands, there's nothing honest to read here. What the enclosure looks like is described above from public photos; what's <em>molded into it</em> awaits the bench.</p>
+  </section>
+  <section>
+    <h2>The board</h2>
+<p>No internal-photograph exhibit for revision 041 has been verified in open research — the public internal photos that exist belong to the later <strong>043</strong> revision and are explicitly excluded from this report. <span class="src"><a href="https://fccpdf.com/2AEUP/2AEUPBHARG043/4151544.pdf">FCC exhibit — BHARG043 only</a></span> So the 041 board layout is <strong>unknown</strong>: the public record supports the functional blocks (1080p imaging, 2.4 GHz Wi-Fi, PIR motion sensing, battery power management) and nothing finer.</p>
+  </section>
+  <section>
+    <h2>Under the microscope: the chips</h2>
+<p><strong>Unknown.</strong> Without a verified board photograph or bill of materials for revision 041, naming chips would be fabrication — and borrowing the 043's component list would be worse than guessing, because it would look like evidence. This section waits for a donor unit of the actual 041 hardware.</p>
+  </section>
+  <section>
+    <h2>The government's file on this box</h2>
+<p>The FCC equipment authorization is <strong>FCC ID 2AEUPBHARG041</strong>, grantee <strong>Ring LLC</strong>. <span class="src"><a href="https://fccid.io/2AEUPBHARG041">fccid.io filing</a></span> The filing's grant is recorded as April 26, 2017. This is revision 041 — the BHARG042 and BHARG043 filings are separate authorizations for separate hardware.</p>
+  </section>
+  <section>
+    <h2>Listening in</h2>
+<p>We have no boot log for this device &mdash; no unit on the bench means nothing to listen to. But the posture is worth stating up front, because it governs everything BareBoard ever does with a live device.</p>
+    <p><strong>We listen, we don't knock.</strong> A serial console is a place to watch a device narrate its own startup, not a place to log in, change things, or break past anything the manufacturer locked. On our bench we attach read-only: power and ground, one receive wire, and silence on the transmit line. We never use JTAG or SWD debug headers to take control, never extract or modify firmware, never hunt for credentials, and never publish anything that would let someone else bypass a lock or defeat authentication.</p>
+    <p>When this device arrives, the first question will be: where does it talk, and does it talk to us unprompted? Until then, that question stays open.</p>
+  </section>
+  <section>
+    <h2>What we found</h2>
+<ul>
+      <li>The Video Doorbell 2 (revision 041) launched June 19, 2017 at $199: 1080p, 160° view, swappable battery.</li>
+      <li>Public internal photos exist only for the later 043 revision — they're excluded here on purpose.</li>
+      <li>The 041 board and chip list are undocumented in public records and await the bench.</li>
+    </ul>
+  </section>
+  <section>
+    <h2>What we didn't do</h2>
+    <ul>
+      <li>We never opened a unit, attached to a debug port, or powered one up for this report.</li>
+      <li>We never extracted, modified, or shared any firmware or software.</li>
+      <li>We never published or used any credentials, keys, or bypass techniques.</li>
+      <li>No boot logs, no bench measurements, and no photos of our own — because there is no unit of ours to photograph. The device photo above is credited in its caption.</li>
+    </ul>
+  </section>
+  <section>
+    <h2>By the numbers</h2>
+    <ul>
+      <li><strong>Launch:</strong> June 19, 2017</li>
+      <li><strong>Revision:</strong> 041 (launch hardware)</li>
+      <li><strong>Video:</strong> 1080p HD, 160° field of view</li>
+      <li><strong>Power:</strong> Removable rechargeable battery or 8–24 VAC wiring</li>
+      <li><strong>Wi-Fi:</strong> 802.11 b/g/n, 2.4 GHz</li>
+      <li><strong>Price at launch:</strong> $199</li>
+      <li><strong>FCC ID:</strong> 2AEUPBHARG041</li>
+      <li><strong>Bench status:</strong> Not yet on our bench</li>
+    </ul>
+  </section>
+  <section>
+    <h2>Words to know</h2>
+    <dl class="glossary">
+      <div><dt>PIR sensor</dt><dd>Passive infrared motion sensor — detects body heat moving across its field of view; what wakes the doorbell up.</dd></div>
+      <div><dt>Hardware revision</dt><dd>A version of the physical product; later revisions can change chips and layout while keeping the same name.</dd></div>
+      <div><dt>FCC ID</dt><dd>The identifier the U.S. Federal Communications Commission assigns to authorized radio equipment; the filing is public.</dd></div>
+    </dl>
+  </section>
+  <section>
+    <h2>Sources & confidence</h2>
+    <ul>
+      <li>Ring's new video doorbell gets 1080p video and a swappable battery pack — TechCrunch, Jun 2017 <span class="src"><a href="https://techcrunch.com/2017/06/19/rings-new-video-doorbell-gets-1080p-video-and-a-swappable-battery-pack">link</a></span> — <span class='badge confirmed'>Confirmed</span></li>
+      <li>Ring Video Doorbell 2 announcement — 9to5Toys, Jun 2017 <span class="src"><a href="https://9to5toys.com/2017/06/19/ring-video-doorbell-2-announcement/">link</a></span> — <span class='badge confirmed'>Confirmed</span></li>
+      <li>Ring announces Video Doorbell 2 — MacRumors, Jun 2017 <span class="src"><a href="https://www.macrumors.com/2017/06/19/ring-video-doorbell-2/">link</a></span> — <span class='badge confirmed'>Confirmed</span></li>
+      <li>FCC filing 2AEUPBHARG041 (grantee: Ring LLC; grant recorded 2017-04-26) — fccid.io <span class="src"><a href="https://fccid.io/2AEUPBHARG041">link</a></span> — <span class='badge likely'>Likely</span></li>
+      <li>FCC internal photos for BHARG043 (later revision — excluded from this report) <span class="src"><a href="https://fccpdf.com/2AEUP/2AEUPBHARG043/4151544.pdf">link</a></span> — <span class='badge confirmed'>Confirmed</span></li>
+      <li>Internal hardware of revision 041 (board layout, chip list) — no verified public exhibit found — <span class='badge unknown'>Unknown</span></li>
+    </ul>
+<p class="note"><strong>Legal note.</strong> BareBoard is an educational project. Everything on this page is derived from public records &mdash; our own bench work begins only when hardware arrives. We don't publish, host, or distribute firmware, keys, passwords, or credentials, and nothing here bypasses a lock, defeats authentication, or extracts software from a device. Product names and trademarks belong to their respective owners and appear here only to identify the hardware. If you believe anything here infringes your rights, contact us and we'll address it promptly.</p>
+  </section>
+
+  <footer>
+    <p>BareBoard &mdash; a free educational resource. Device #089 of the Hot 100.</p>
+    <nav>
+      <a href="/autopsy/">All autopsies</a>
+      <a href="/">Home</a>
+    </nav>
+  </footer>
+</main>
+</body>
+</html>
