@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Autopsy 030: The Philips Hue Bridge v2 (2015) — BareBoard</title>
+<meta name="description" content="BareBoard Autopsy 030: a plain-English hardware autopsy of the 2015 square Philips Hue Bridge 2.0 (FCC ID O3M324131201801) — the box that taught light bulbs to talk to Siri. Public records edition: not yet on our bench; thin sources.">
+<meta name="theme-color" content="#fbfbfc">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%231d1d1f'/%3E%3Ctext x='32' y='45' font-family='system-ui,-apple-system,sans-serif' font-size='36' font-weight='700' fill='white' text-anchor='middle'%3EB%3C/text%3E%3C/svg%3E">
+<link rel="stylesheet" href="/style.css">
+</head>
+<body>
+<header class="site-nav">
+  <div class="nav-inner">
+    <a class="brand" href="/">BareBoard</a>
+    <nav>
+      <a href="/about.html">About</a>
+      <a href="/autopsy/">Autopsy</a>
+      <a href="/hot-100.html">Hot 100</a>
+      <a href="/most-wanted.html">Most Wanted</a>
+      <a href="/support.html">Support</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <p class="kicker">The Autopsy Report · Device #030</p>
+  <h1>The Hue Bridge, Second Generation</h1>
+  <p class="lede">The square little box that made light bulbs answer to Siri — and the reason every Hue bulb you own still phones home through it. Public-records edition: we haven't opened one yet, and the silicon is still unverified.</p>
+
+  <section>
+    <h2>What is this thing?</h2>
+    <p>The Philips Hue Bridge 2.0 is the <strong>hub of the Hue lighting system</strong>: a small square box that plugs into your router over Ethernet and speaks Zigbee to your Hue bulbs, translating between your phone (or Siri, or Alexa) and the lights. Without it, the bulbs are just bulbs. The 2.0 replaced the original round bridge with a square one "like the Apple TV" and added Apple HomeKit support — which the old bridge couldn't do, for hardware reasons. <span class="src"><a href="https://www.macrumors.com/2015/10/05/philips-hue-bridge-with-homekit/">MacRumors</a></span> <span class="src"><a href="https://techcrunch.com/2015/10/05/philips-launches-new-hue-bridge-2-0-with-homekit-compatibility/">TechCrunch</a></span></p>
+    <p>The model number is <strong>3241312018</strong>, filed with the FCC under ID <strong>O3M324131201801</strong> — note the first character is the letter <strong>O</strong>, not a zero. <span class="src"><a href="https://fccid.io/O3M324131201801">FCC filing</a></span></p>
+  </section>
+
+  <section>
+    <h2>Whose box is this?</h2>
+    <p><strong>Not ours — not yet.</strong> No unit of this device is on our bench. We haven't bought one, opened one, photographed one's insides, or listened to one boot. Everything on this page comes from public records: launch coverage, the product manual, an archived OpenWrt forum thread, and a freely-licensed stock photo credited below. When a unit lands on our bench, this report gets a second edition with our own photos, measurements, and boot log.</p>
+  </section>
+
+  <section>
+    <h2>A short history</h2>
+    <ol class="timeline">
+      <li><span class="when">2012</span>Philips launches Hue with the original round bridge — the product that makes smart lighting mainstream. <span class="src"><a href="https://www.macrumors.com/2015/10/05/philips-hue-bridge-with-homekit/">MacRumors</a></span></li>
+      <li><span class="when">October 5, 2015</span>Philips announces the Hue Bridge 2.0: square design, HomeKit support, $60 standalone (existing owners get a $20 discount). On sale in the US and Canada October 6. <span class="src"><a href="https://www.macrumors.com/2015/10/05/philips-hue-bridge-with-homekit/">MacRumors</a></span> <span class="src"><a href="https://techcrunch.com/2015/10/05/philips-launches-new-hue-bridge-2-0-with-homekit-compatibility/">TechCrunch</a></span></li>
+      <li><span class="when">2016</span>Community hardware hackers document the board on the OpenWrt forums — including the existence of a serial console, discussed below. <span class="src"><a href="https://forum.archive.openwrt.org/viewtopic.php?id=66346">Archived OpenWrt forum thread</a></span></li>
+      <li><span class="when">2020</span>Signify ends software updates and online services for the original round v1 bridge — the square v2 keeps going. <span class="src"><a href="https://engadget.com/2020/03/07/philips-hue-bridge-v1-support-ending/">Engadget</a></span></li>
+    </ol>
+  </section>
+
+  <section>
+    <h2>The outside</h2>
+    <p>A small white square with rounded corners: Ethernet and power on the back, three status LEDs on top, a large round <strong>link button</strong> in the center for pairing new bulbs, and a small <strong>reset button</strong> on the rear. It can lie flat or hang on a wall. <span class="src"><a href="https://manuals.plus/m/978bcc3c312b980ecec408dc7e75e204d16476c31d8e49f474b0a44c11057549.pdf">Product specification (manuals.plus)</a></span></p>
+    <figure>
+      <img src="img/device.jpg" alt="Philips Hue Bridge second generation, square model">
+      <figcaption>Stock photo: the square Hue Bridge (Gen 2). Photo: <a href="https://commons.wikimedia.org/wiki/File:Philips_Hue_bridge_Gen_2.jpg">Harborsparrow</a>, <a href="https://creativecommons.org/publicdomain/zero/1.0/deed.en">CC0</a> (public domain dedication), via Wikimedia Commons. Our own photos arrive when a unit reaches our bench.</figcaption>
+    </figure>
+  </section>
+
+  <section>
+    <h2>The board</h2>
+    <p>We haven't held this board ourselves, and the public record here is thinner than we'd like. What's documented in public sources: the bridge is a <strong>Linux-based</strong> device with an Ethernet port for the home network and a Zigbee radio for the bulbs, plus the link button, reset button, and status LEDs described above. An archived OpenWrt forum thread from the community's hardware exploration documents the board's layout and notes the existence of a serial (UART) console on the board. <span class="src"><a href="https://manuals.plus/m/978bcc3c312b980ecec408dc7e75e204d16476c31d8e49f474b0a44c11057549.pdf">Product specification (manuals.plus)</a></span> <span class="src"><a href="https://forum.archive.openwrt.org/viewtopic.php?id=66346">Archived OpenWrt forum thread</a></span></p>
+    <p>So we say it plainly: <strong>no chip table appears on this page.</strong> No public source we've reviewed names the exact application processor, Zigbee radio, or memory on the v2 board with board-level evidence, so none are named here. The chip table goes in when a unit reaches our bench.</p>
+    <p>A note on that OpenWrt thread: it lives in the archive because the community explored this hardware deeply — including techniques we will never document here. We cite it only for the <strong>existence</strong> of the serial console, which is a hardware fact. How to use such a console against a device is not something BareBoard publishes, for this or any hardware.</p>
+  </section>
+
+  <section>
+    <h2>Under the microscope: the chips</h2>
+    <p>There is no chip table on this page — and that's deliberate. What the public record does establish about the v2 bridge hardware:</p>
+    <ul>
+      <li><strong>FCC ID O3M324131201801</strong> (letter O, not zero), model 3241312018, grantee Philips (China) Investment Co., Ltd. <span class="src"><a href="https://fccid.io/O3M324131201801">FCC filing</a></span></li>
+      <li><strong>Ethernet + Zigbee</strong> architecture — wired to the router, wireless to the bulbs — with a Linux-derived software stack. <span class="src"><a href="https://manuals.plus/m/978bcc3c312b980ecec408dc7e75e204d16476c31d8e49f474b0a44c11057549.pdf">Product specification (manuals.plus)</a></span></li>
+      <li><strong>A serial (UART) console exists on the board</strong>, per community hardware documentation. Existence and location only — no procedures, per our policy. <span class="src"><a href="https://forum.archive.openwrt.org/viewtopic.php?id=66346">Archived OpenWrt forum thread</a></span></li>
+    </ul>
+    <p>The moment exact-model silicon evidence exists, the chip table goes in with sources attached.</p>
+  </section>
+
+  <section id="fcc">
+    <h2>The government's file on this box</h2>
+    <p>The v2 bridge's FCC filing sits under <strong>FCC ID: O3M324131201801</strong>. An honest note on method: the FCC's mirror page for this ID blocked our automated lookup, and the internal-photo exhibit for this filing isn't directly verifiable from public mirrors — so we treat the internal photos as <strong>unverified</strong> and claim nothing about the board from the filing. The ID, model number, and grantee above are the documented public record. <span class="src"><a href="https://fccid.io/O3M324131201801">FCC filing</a></span></p>
+  </section>
+
+  <section>
+    <h2>Listening to it boot</h2>
+    <p>We haven't — there is no unit on our bench, so there is no boot log, no serial capture, nothing. That section gets written the day one arrives.</p>
+    <p>Our rule for debug ports, whenever we do meet this hardware: <strong>we listen, we don't knock.</strong> Community records say a serial console exists on this board; if our future unit confirms it, we'll connect a read-only listener and record what the device volunteers about its own startup — and publish that. We won't use it to break in, dump firmware, bypass authentication, or defeat anything. Existence is a hardware fact; exploitation is not our beat.</p>
+  </section>
+
+  <section>
+    <h2>What we found</h2>
+    <p><strong>HomeKit was a hardware feature, not a software update.</strong> The whole reason the v2 bridge exists is that the v1 bridge physically couldn't do HomeKit — Philips said so outright, and discounted the new bridge for existing owners. When a company tells you the old hardware can't learn the new trick, believe the silicon, not the marketing. <span class="src"><a href="https://techcrunch.com/2015/10/05/philips-launches-new-hue-bridge-2-0-with-homekit-compatibility/">TechCrunch</a></span></p>
+    <p><strong>The v1 bridge's 2020 end-of-support is the quiet warning on this page.</strong> When Signify cut software updates and online services for the original round bridge, v1 owners lost remote access and voice-assistant control — a reminder that a cloud-tethered hub is a subscription you paid for once. The v2 survived that cull, which is why it's the one worth documenting. <span class="src"><a href="https://engadget.com/2020/03/07/philips-hue-bridge-v1-support-ending/">Engadget</a></span></p>
+  </section>
+
+  <section>
+    <h2>What we didn't do</h2>
+    <ul>
+      <li>This device is <strong>not on our bench</strong>. We have not disassembled one.</li>
+      <li>We captured <strong>no boot log</strong> and ran <strong>no bench tests</strong>.</li>
+      <li>We have not <strong>touched, extracted, modified, or shared</strong> this device's firmware.</li>
+      <li>We have not probed any debug interface on it — and we publish no bypass, extraction, or credential techniques for this or any device.</li>
+      <li>We did not name chip identities the public record doesn't support.</li>
+      <li>The product photo above is a freely-licensed stock image, credited in its caption — not our photography.</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>By the numbers</h2>
+    <ul>
+      <li><strong>Model:</strong> Philips Hue Bridge 2.0 (2015, square model), 3241312018</li>
+      <li><strong>FCC ID:</strong> O3M324131201801 (first character is the letter O)</li>
+      <li><strong>Architecture:</strong> Ethernet uplink + Zigbee to bulbs; Linux-derived stack</li>
+      <li><strong>Controls:</strong> Center link button, rear reset button, 3 status LEDs</li>
+      <li><strong>Launched:</strong> October 5, 2015, at $60; on sale October 6 ($20 discount for v1 owners)</li>
+      <li><strong>Exact silicon:</strong> Unverified in public sources — awaits the bench</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>Words to know</h2>
+    <p>Every term this page uses, in plain English. No prior knowledge required.</p>
+    <dl class="glossary">
+      <div><dt>Hub / bridge</dt><dd>A box that translates between your home network and gadgets that speak a different wireless language — here, Zigbee.</dd></div>
+      <div><dt>Zigbee</dt><dd>A low-power wireless standard built for smart-home gadgets — light bulbs, sensors, locks — that sip battery and form mesh networks.</dd></div>
+      <div><dt>HomeKit</dt><dd>Apple's smart-home framework — the reason this bridge lets Siri control your lights.</dd></div>
+      <div><dt>UART / serial console</dt><dd>A simple port that lets you watch a device narrate its own startup, line by line.</dd></div>
+      <div><dt>Boot log</dt><dd>The text a device prints as it starts up. Engineers read it to see what's inside without opening anything.</dd></div>
+      <div><dt>Firmware</dt><dd>The software baked into the device — the part that runs before anything else.</dd></div>
+      <div><dt>FCC</dt><dd>The Federal Communications Commission — the U.S. agency that regulates anything that transmits radio. Every wireless gadget sold here has to pass its tests first.</dd></div>
+      <div><dt>FCC ID</dt><dd>The ID the FCC assigns to each approved wireless product. The first few characters are the company's grantee code; the rest is the maker's model code. Punch it into fccid.io and the whole public filing comes up.</dd></div>
+    </dl>
+  </section>
+
+  <section>
+    <h2>Sources &amp; confidence</h2>
+    <ul>
+      <li>Launch details (date, price, availability, HomeKit reasoning): contemporaneous launch coverage. High confidence.</li>
+      <li>Physical description (ports, buttons, LEDs): product specification document. High confidence.</li>
+      <li>UART existence: archived community hardware thread. Medium confidence — existence only, no procedures published.</li>
+      <li>FCC ID, model, grantee: the public filing record. High confidence. Internal-photo exhibit: <strong>unverified</strong> — mirror pages blocked lookup.</li>
+      <li>Exact chip markings: <strong>unverified</strong> — no public source reviewed names them, so none are named here. This is the page's known gap.</li>
+      <li>Anything not listed here is unknown until the bench says otherwise. We'll say so, out loud, when that's the case.</li>
+    </ul>
+    <p class="note"><strong>Public-records edition — thin sources.</strong> This device is not on our bench. No disassembly, no boot log, no bench testing, and no firmware touched, extracted, modified, or shared. The stock photo is freely licensed and credited in its caption.</p>
+    <p class="note"><strong>Legal note.</strong> BareBoard is an educational project. Everything on this page is assembled from public records and freely-licensed photography credited in its caption. We don't publish, host, or distribute firmware, keys, passwords, or credentials. Product names and trademarks belong to their respective owners and appear here only to identify the hardware. If you believe anything here infringes your rights, contact us and we'll address it promptly.</p>
+  </section>
+
+  <footer>
+    <p>BareBoard &mdash; a free educational resource. Device #030 of the Hot 100.</p>
+    <nav>
+      <a href="/autopsy/">All autopsies</a>
+      <a href="/">Home</a>
+    </nav>
+  </footer>
+</main>
+</body>
+</html>
