@@ -197,7 +197,22 @@
       </tbody>
     </table>
     </div>
-    <p>Still unidentified in public records: the cable tuner, the MoCA chip, the phone-line analog parts, the power-supply controller, and whatever the <strong>BTY</strong> LED on the silkscreen actually connects to. The big vendors (Intel, Qualcomm, Broadcom) never released public datasheets for these chips — that's a documentation gap in the industry, not a gap in the research. The FCC filing for this box is public: <a href="https://fccid.io/UIDTG1682">filing page</a> and <a href="https://fccpdf.com/UID/UIDTG1682/2271050.pdf">internal photos (2014)</a> — note those photos predate our 2017 board by three years, so we treat them as architecture evidence, not gospel.</p>
+    <p>Still unidentified in public records: the cable tuner, the MoCA chip, the phone-line analog parts, the power-supply controller, and whatever the <strong>BTY</strong> LED on the silkscreen actually connects to. The big vendors (Intel, Qualcomm, Broadcom) never released public datasheets for these chips — that's a documentation gap in the industry, not a gap in the research. The FCC filing for this box is public, and it gets its own section below: <a href="#fcc">the government's file on this box</a>.</p>
+
+  </section>
+
+  <section id="fcc">
+    <h2>The government's file on this box</h2>
+    <p>Before Arris could sell a single TG1682G in the United States, it had to convince the Federal Communications Commission — the agency that regulates anything that transmits radio — that this box wouldn't drown out other wireless signals. The result is a second autopsy, performed by the government: photos of the inside and outside of the box, lab test reports, antenna datasheets, the user manual, even where the ID label goes. All of it is public, filed under this box's <strong>FCC ID: UIDTG1682</strong> (registered by ARRIS; "UID" is the FCC's code for the company, "TG1682" the model). The original filings are dated May 19, 2014, with a follow-up change filing on September 10, 2015.</p>
+    <p>What's in the file:</p>
+    <ul>
+      <li><strong>Internal and external photos</strong> — the earliest public pictures of this hardware's insides, kept under short-term confidentiality until November 1, 2014. Three years older than our 2017 unit, so we treat them as architecture evidence, not gospel.</li>
+      <li><strong>Test reports</strong> — measurements of what the radios actually transmit: the 2.4&nbsp;GHz radio up to about a watt (971&nbsp;mW), the 5&nbsp;GHz radio up to about three-quarters of a watt (783&nbsp;mW). Boring to read, useful as independent confirmation of what's in the box.</li>
+      <li><strong>The user guide, antenna datasheets, and label paperwork.</strong></li>
+      <li><strong>What's missing.</strong> The schematics, the block diagram, and the "theory of operation" are listed in the filing but permanently confidential — Arris asked the FCC to keep those private, and it agreed. That's the trade this system makes: public photos, private blueprints.</li>
+    </ul>
+    <p>Browse the file yourself: <a href="https://fccid.io/UIDTG1682">filing page</a> · <a href="https://fccpdf.com/UID/UIDTG1682/2271050.pdf">internal photos (2014)</a></p>
+  </section>
 
   <section>
     <h2>Listening to it boot</h2>
@@ -252,6 +267,8 @@
       <div><dt>RF shield</dt><dd>A soldered metal can that keeps radio signals from leaking in or out of the sensitive parts.</dd></div>
       <div><dt>JTAG</dt><dd>A deep debug port wired straight into the chip — powerful, and easy to break things with.</dd></div>
       <div><dt>Bridge mode</dt><dd>A setting that's supposed to turn the box into a plain modem, handing all the routing work to your own router.</dd></div>
+      <div><dt>FCC</dt><dd>The Federal Communications Commission — the U.S. agency that regulates anything that transmits radio. Every wireless gadget sold here has to pass its tests first.</dd></div>
+      <div><dt>FCC ID</dt><dd>The ID the FCC assigns to each approved wireless product. The first few characters are the company's grantee code; the rest is the maker's model code. Punch it into fccid.io and the whole public filing comes up.</dd></div>
     </dl>
   </section>
 
