@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Autopsy 026: The Echo Dot 3rd gen (2018) — BareBoard</title>
+<meta name="description" content="BareBoard Autopsy 026: a plain-English hardware autopsy of the 2018 third-generation Amazon Echo Dot (model D9N29T) — the fabric hockey puck that outsold everything. Public records edition: not yet on our bench.">
+<meta name="theme-color" content="#fbfbfc">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%231d1d1f'/%3E%3Ctext x='32' y='45' font-family='system-ui,-apple-system,sans-serif' font-size='36' font-weight='700' fill='white' text-anchor='middle'%3EB%3C/text%3E%3C/svg%3E">
+<link rel="stylesheet" href="/style.css">
+</head>
+<body>
+<header class="site-nav">
+  <div class="nav-inner">
+    <a class="brand" href="/">BareBoard</a>
+    <nav>
+      <a href="/about.html">About</a>
+      <a href="/autopsy/">Autopsy</a>
+      <a href="/hot-100.html">Hot 100</a>
+      <a href="/most-wanted.html">Most Wanted</a>
+      <a href="/support.html">Support</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <p class="kicker">The Autopsy Report · Device #026</p>
+  <h1>The Echo Dot, Third Generation</h1>
+  <p class="lede">The best-selling smart speaker on Earth got a fabric jacket and a real speaker in 2018 — and a MediaTek heart. Public-records edition: we haven't opened one yet.</p>
+
+  <section>
+    <h2>What is this thing?</h2>
+    <p>The third-generation Echo Dot is Amazon's <strong>compact smart speaker</strong>: a fabric-covered puck with Alexa inside, four far-field microphones, and — new for this generation — a proper 1.6-inch speaker that EDN's teardown found audibly better than the buzzy little driver in the older Dots. It was the entry point to Alexa for millions of households. <span class="src"><a href="https://www.edn.com/teardown-amazon-echo-dot-gets-improved-sonic-performance/">EDN teardown</a></span></p>
+    <p>The original 2018 model is <strong>D9N29T</strong>, filed with the FCC under ID <strong>2AOAG-3668</strong> (grantee: Moxham L.L.C., another Amazon filing entity). A later hardware revision, model C78MP8, carries a different FCC ID (2ARIW-2778) — this page covers the 2018 original only. <span class="src"><a href="https://fccid.io/2AOAG-3668">FCC filing</a></span></p>
+  </section>
+
+  <section>
+    <h2>Whose box is this?</h2>
+    <p><strong>Not ours — not yet.</strong> No unit of this device is on our bench. We haven't bought one, opened one, photographed one's insides, or listened to one boot. Everything on this page comes from public records: the iFixit and EDN teardowns, the FCC filing, launch coverage, and a freely-licensed stock photo credited below. When a unit lands on our bench, this report gets a second edition with our own photos, measurements, and boot log.</p>
+  </section>
+
+  <section>
+    <h2>A short history</h2>
+    <ol class="timeline">
+      <li><span class="when">March 2016</span>Amazon launches the original Echo Dot — a tiny puck that brought Alexa to any speaker for $89.99. <span class="src"><a href="https://www.techadvisor.com/article/731236/amazon-echo-dot-2018-release-date-price-features.html">Tech Advisor</a></span></li>
+      <li><span class="when">September 20, 2018</span>Amazon unveils the third-generation Dot: fabric cover, bigger speaker, new colors — still $49.99. It goes on sale October 11. <span class="src"><a href="https://www.techadvisor.com/article/731236/amazon-echo-dot-2018-release-date-price-features.html">Tech Advisor</a></span></li>
+      <li><span class="when">September 2018</span>The FCC original-equipment filing for 2AOAG-3668 is submitted, covering model D9N29T. <span class="src"><a href="https://fccid.io/2AOAG-3668">FCC filing</a></span></li>
+      <li><span class="when">Late 2018</span>iFixit and EDN publish teardowns, identifying the MediaTek silicon inside. <span class="src"><a href="https://www.ifixit.com/Teardown/Amazon+Echo+Dot+3rd+Generation+Teardown/138560">iFixit teardown</a></span> <span class="src"><a href="https://www.edn.com/teardown-amazon-echo-dot-gets-improved-sonic-performance/">EDN teardown</a></span></li>
+      <li><span class="when">March 2019</span>The FCC filing's internal photos and manuals go public after confidentiality expires. <span class="src"><a href="https://fccid.io/2AOAG-3668">FCC filing</a></span></li>
+    </ol>
+  </section>
+
+  <section>
+    <h2>The outside</h2>
+    <p>A fabric-wrapped puck, slightly larger than its predecessor, with the light ring moved to the edge, four buttons on top (volume, mic mute, action), a 3.5&nbsp;mm audio output, and a micro-USB power port on the back. The fabric — charcoal, heather gray, or sandstone — was the whole visual story: the Dot stopped looking like a gadget and started looking like furniture. <span class="src"><a href="https://www.ifixit.com/Teardown/Amazon+Echo+Dot+3rd+Generation+Teardown/138560">iFixit teardown</a></span></p>
+    <figure>
+      <img src="img/device.jpg" alt="Amazon Echo Dot third-generation smart speaker">
+      <figcaption>Stock photo: the third-generation Echo Dot. Photo: <a href="https://commons.wikimedia.org/wiki/File:Echo_Dot_%283rd_Gen%29_01.jpg">Samuel Wiki</a>, <a href="https://creativecommons.org/publicdomain/zero/1.0/deed.en">CC0</a> (public domain dedication), via Wikimedia Commons. Our own photos arrive when a unit reaches our bench.</figcaption>
+    </figure>
+  </section>
+
+  <section>
+    <h2>The board</h2>
+    <p>We haven't held this board ourselves, so this is the teardowns' account, not ours. The iFixit and EDN teardowns show a <strong>single main board</strong> built around a MediaTek application processor with a companion MediaTek Wi-Fi/Bluetooth combo chip, plus memory and the audio stage driving the new larger speaker. EDN's teardown notes the improved sonic performance as the generation's headline change — the speaker went from an afterthought to the point. <span class="src"><a href="https://www.ifixit.com/Teardown/Amazon+Echo+Dot+3rd+Generation+Teardown/138560">iFixit teardown</a></span> <span class="src"><a href="https://www.edn.com/teardown-amazon-echo-dot-gets-improved-sonic-performance/">EDN teardown</a></span></p>
+    <p>One honest wrinkle: teardowns observed <strong>multiple memory configurations</strong> across units, so no single memory part number should be treated as universal for this model. The table below sticks to the silicon the teardowns agree on. <span class="src"><a href="https://www.ifixit.com/Teardown/Amazon+Echo+Dot+3rd+Generation+Teardown/138560">iFixit teardown</a></span></p>
+  </section>
+
+  <section>
+    <h2>Under the microscope: the chips</h2>
+    <p>What's on the board according to published teardowns, what each part does, and how sure we are. <strong>Confirmed</strong> means a primary source (the manufacturer, the FCC, or our own bench) verifies it. <strong>Likely</strong> means public hardware records agree on it, but we haven't verified it ourselves. Every row links somewhere you can read more.</p>
+    <div class="table-scroll">
+    <table class="chips">
+      <thead>
+        <tr><th>Chip</th><th>What it does</th><th>How we know</th><th>Dig deeper</th></tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><strong>MediaTek MT8516</strong></td>
+          <td>The main processor — runs Alexa and the whole Dot.</td>
+          <td><span class="badge b-likely">Likely</span> Named by both the iFixit and EDN teardowns.</td>
+          <td><a href="https://www.ifixit.com/Teardown/Amazon+Echo+Dot+3rd+Generation+Teardown/138560">iFixit teardown</a></td>
+        </tr>
+        <tr>
+          <td><strong>MediaTek MT7658</strong></td>
+          <td>The Wi-Fi/Bluetooth combo radio.</td>
+          <td><span class="badge b-likely">Likely</span> Named by published teardowns.</td>
+          <td><a href="https://www.edn.com/teardown-amazon-echo-dot-gets-improved-sonic-performance/">EDN teardown</a></td>
+        </tr>
+        <tr>
+          <td><strong>Memory</strong><br><span class="partno">multiple configurations observed</span></td>
+          <td>The Dot's RAM and flash storage.</td>
+          <td><span class="badge b-likely">Likely</span> Present on every unit; teardowns report varying part numbers, so no single marking is claimed here.</td>
+          <td><a href="https://www.ifixit.com/Teardown/Amazon+Echo+Dot+3rd+Generation+Teardown/138560">iFixit teardown</a></td>
+        </tr>
+      </tbody>
+    </table>
+    </div>
+    <p>Datasheet note: MediaTek does not publish public datasheets for the MT8516 or MT7658 — that's a documentation gap in the industry, not in the research. The identifications above come from board markings photographed in public teardowns.</p>
+  </section>
+
+  <section id="fcc">
+    <h2>The government's file on this box</h2>
+    <p>The 2018 Dot's FCC filing sits under <strong>FCC ID: 2AOAG-3668</strong>, with the original-equipment applications dated <strong>September 20, 2018</strong> — the same day Amazon unveiled the device. The internal and external photos and the user manual went public on <strong>March 19, 2019</strong>, after confidentiality expired. <span class="src"><a href="https://fccid.io/2AOAG-3668">FCC filing</a></span></p>
+    <p>What's in the file:</p>
+    <ul>
+      <li><strong>Internal and external photos</strong> — the earliest public pictures of this hardware's insides, public since March 2019.</li>
+      <li><strong>Test reports</strong> — the lab measurements, including maximum listed outputs around 234&nbsp;mW at 2.4&nbsp;GHz and about 139&nbsp;mW in part of the 5&nbsp;GHz band. Independent confirmation of the radios.</li>
+      <li><strong>The user manual and label paperwork.</strong></li>
+      <li><strong>What's missing.</strong> The schematics and operational description are listed but not publicly available — permanently confidential. Public photos, private blueprints.</li>
+    </ul>
+    <p>Browse the file yourself: <a href="https://fccid.io/2AOAG-3668">filing page</a></p>
+  </section>
+
+  <section>
+    <h2>Listening to it boot</h2>
+    <p>We haven't — there is no unit on our bench, so there is no boot log, no serial capture, nothing. That section gets written the day one arrives.</p>
+    <p>Our rule for debug ports, whenever we do meet this hardware: <strong>we listen, we don't knock.</strong> If the board exposes a serial console, we'll connect a read-only listener and record what the device volunteers about its own startup — and publish that. We won't use it to break in, dump firmware, or bypass anything. Whether this board exposes a console is currently unknown — it awaits the bench.</p>
+  </section>
+
+  <section>
+    <h2>What we found</h2>
+    <p><strong>Amazon bet the Dot on MediaTek.</strong> Both the application processor and the wireless combo chip are MediaTek parts — a clean single-vendor platform for the highest-volume smart speaker in the world. If you're studying how to build a voice assistant at scale, this is the bill of materials to study. <span class="src"><a href="https://www.ifixit.com/Teardown/Amazon+Echo+Dot+3rd+Generation+Teardown/138560">iFixit teardown</a></span></p>
+    <p><strong>Don't universalize the memory.</strong> Teardowns found different memory configurations across units of the same model — a normal cost-optimization move, but it means any single teardown's memory marking is revision evidence, not gospel. <span class="src"><a href="https://www.ifixit.com/Teardown/Amazon+Echo+Dot+3rd+Generation+Teardown/138560">iFixit teardown</a></span></p>
+  </section>
+
+  <section>
+    <h2>What we didn't do</h2>
+    <ul>
+      <li>This device is <strong>not on our bench</strong>. We have not disassembled one.</li>
+      <li>We captured <strong>no boot log</strong> and ran <strong>no bench tests</strong>.</li>
+      <li>We have not <strong>touched, extracted, modified, or shared</strong> this device's firmware.</li>
+      <li>We have not probed any debug interface on it.</li>
+      <li>We did not name a universal memory part — configurations vary across units.</li>
+      <li>The product photo above is a freely-licensed stock image, credited in its caption — not our photography.</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>By the numbers</h2>
+    <ul>
+      <li><strong>Model:</strong> Amazon Echo Dot 3rd gen (2018), D9N29T</li>
+      <li><strong>FCC ID:</strong> 2AOAG-3668 (original filing September 20, 2018)</li>
+      <li><strong>Main chip:</strong> MediaTek MT8516 (quad-core ARM, voice-assistant platform)</li>
+      <li><strong>Radio:</strong> MediaTek MT7658 Wi-Fi/Bluetooth combo</li>
+      <li><strong>Memory:</strong> Multiple configurations observed — no single universal part</li>
+      <li><strong>Launched:</strong> September 20, 2018, at $49.99; on sale October 11</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>Words to know</h2>
+    <p>Every term this page uses, in plain English. No prior knowledge required.</p>
+    <dl class="glossary">
+      <div><dt>Smart speaker</dt><dd>A speaker with a voice assistant built in — it listens for a wake word, then answers, plays music, or controls your home.</dd></div>
+      <div><dt>System on a chip (SoC)</dt><dd>The whole computer — processor and friends — on one piece of silicon.</dd></div>
+      <div><dt>Combo radio</dt><dd>One chip that handles two wireless standards — here, Wi-Fi and Bluetooth together.</dd></div>
+      <div><dt>Far-field microphones</dt><dd>A ring of microphones designed to hear your voice from across the room, even with music playing.</dd></div>
+      <div><dt>Boot log</dt><dd>The text a device prints as it starts up. Engineers read it to see what's inside without opening anything.</dd></div>
+      <div><dt>UART / serial console</dt><dd>A simple port that lets you watch a device narrate its own startup, line by line.</dd></div>
+      <div><dt>Firmware</dt><dd>The software baked into the device — the part that runs before anything else.</dd></div>
+      <div><dt>FCC</dt><dd>The Federal Communications Commission — the U.S. agency that regulates anything that transmits radio. Every wireless gadget sold here has to pass its tests first.</dd></div>
+      <div><dt>FCC ID</dt><dd>The ID the FCC assigns to each approved wireless product. The first few characters are the company's grantee code; the rest is the maker's model code. Punch it into fccid.io and the whole public filing comes up.</dd></div>
+    </dl>
+  </section>
+
+  <section>
+    <h2>Sources &amp; confidence</h2>
+    <ul>
+      <li>Launch details (date, price, availability): contemporaneous launch coverage. High confidence.</li>
+      <li>Chip identities (MT8516, MT7658): two published teardowns agree. Medium-high confidence; still <span class="badge b-likely">Likely</span> until our bench confirms.</li>
+      <li>Memory variation: reported across teardowns — treated as revision evidence. Medium confidence.</li>
+      <li>FCC details (filing date, photo release, power levels): the public filing at fccid.io, reviewed September 2026. High confidence.</li>
+      <li>Revision distinction (D9N29T vs C78MP8): public filing records. High confidence.</li>
+      <li>Anything not listed here is unknown until the bench says otherwise. We'll say so, out loud, when that's the case.</li>
+    </ul>
+    <p class="note"><strong>Public-records edition.</strong> This device is not on our bench. No disassembly, no boot log, no bench testing, and no firmware touched, extracted, modified, or shared. The stock photo is freely licensed and credited in its caption.</p>
+    <p class="note"><strong>Legal note.</strong> BareBoard is an educational project. Everything on this page is assembled from public records and freely-licensed photography credited in its caption. We don't publish, host, or distribute firmware, keys, passwords, or credentials. Product names and trademarks belong to their respective owners and appear here only to identify the hardware. If you believe anything here infringes your rights, contact us and we'll address it promptly.</p>
+  </section>
+
+  <footer>
+    <p>BareBoard &mdash; a free educational resource. Device #026 of the Hot 100.</p>
+    <nav>
+      <a href="/autopsy/">All autopsies</a>
+      <a href="/">Home</a>
+    </nav>
+  </footer>
+</main>
+</body>
+</html>
