@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Autopsy 013: The Nintendo Switch — BareBoard</title>
+<meta name="description" content="BareBoard Autopsy 013: a plain-English hardware report on the Nintendo Switch (original, Lite, OLED) — FCC filing BKEHAC001, Tegra X1 silicon, and the maintenance mode Nintendo built in.">
+<meta name="theme-color" content="#fbfbfc">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%231d1d1f'/%3E%3Ctext x='32' y='45' font-family='system-ui,-apple-system,sans-serif' font-size='36' font-weight='700' fill='white' text-anchor='middle'%3EB%3C/text%3E%3C/svg%3E">
+<link rel="stylesheet" href="/style.css">
+</head>
+<body>
+<header class="site-nav">
+  <div class="nav-inner">
+    <a class="brand" href="/">BareBoard</a>
+    <nav>
+      <a href="/about.html">About</a>
+      <a href="/autopsy/">Autopsy</a>
+      <a href="/hot-100.html">Hot 100</a>
+      <a href="/most-wanted.html">Most Wanted</a>
+      <a href="/support.html">Support</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <p class="kicker">The Autopsy Report · Device #013</p>
+  <h1>The Nintendo Switch</h1>
+  <p class="lede">The console that refused to pick a side — handheld and home console in one body. We haven't opened one yet, so this report is built from the public record: Nintendo's own FCC filing, independent teardowns, and the silicon inside.</p>
+
+  <section>
+    <h2>What is this thing?</h2>
+    <p>The <strong>Nintendo Switch</strong> is Nintendo's hybrid game console: slide it into its dock and it plays on your TV; lift it out and the same game continues on the built-in screen. The original model launched March 3, 2017; the handheld-only <strong>Switch Lite</strong> followed on September 20, 2019; and the <strong>Switch OLED</strong> — bigger, brighter screen, more storage — on October 8, 2021. <span class="src"><a href="https://en.wikipedia.org/wiki/Nintendo_Switch">Wikipedia</a></span></p>
+    <p>Inside the original: an <strong>NVIDIA Tegra X1</strong> chip (a phone-and-tablet-class processor Nintendo aimed at the TV), 4&nbsp;GB of memory, and 32&nbsp;GB of storage — 64&nbsp;GB on the OLED. <span class="src"><a href="https://en.wikipedia.org/wiki/Nintendo_Switch">Wikipedia</a></span> This report covers the family as a whole, but be precise about paperwork: the FCC filing described below was granted for the <strong>original HAC-001</strong> model — a later 2019 filing extends it to the revised HAC-001(-01). The Lite (HDH-001) and OLED (HEG-001) are separate models with their own paperwork; don't assume this filing covers them. <span class="src"><a href="https://fccid.io/BKEHAC001/Letter/02-FCC-Request-for-Confidentiality-Letter-4349943">FCC filing</a></span></p>
+  </section>
+
+  <section>
+    <h2>Not yet on our bench</h2>
+    <p>No unit of ours has been opened for this report. Everything below comes from public records: Nintendo's FCC filing, independent teardowns, and published specifications. The public-record facts are as complete as we could make them; what awaits the bench is everything that requires <em>our hands on our hardware</em> — our own photos, our own measurements, and confirmation of exactly which board revision our future unit carries. When a Switch lands on the bench, the thin spots below are exactly where we'll start.</p>
+  </section>
+
+  <section>
+    <h2>A short history</h2>
+    <ol class="timeline">
+      <li><span class="when">March 3, 2017</span>Nintendo launches the original Switch worldwide. The hybrid concept — one device, TV and handheld — is an instant hit and rescues Nintendo from the Wii U years. <span class="src"><a href="https://en.wikipedia.org/wiki/Nintendo_Switch">Wikipedia</a></span></li>
+      <li><span class="when">2017</span>The original HAC-001 clears the FCC as a game console under ID <strong>BKEHAC001</strong> — Nintendo Co., Ltd. as the applicant, with 2.4/5&nbsp;GHz Wi-Fi and Bluetooth documented in the filing. <span class="src"><a href="https://fccid.io/BKEHAC001/Letter/02-FCC-Request-for-Confidentiality-Letter-4349943">FCC filing</a></span> <span class="src"><a href="https://www.perfectly-nintendo.com/nintendo-switch-details-fcc-filing/">Filing details</a></span></li>
+      <li><span class="when">July 2019</span>Nintendo files a Class II permissive change covering the revised <strong>HAC-001(-01)</strong> — the quieter, longer-battery-life revision of the original model. Application dated July 9, 2019. <span class="src"><a href="https://fccid.io/BKEHAC001/Letter/02-FCC-Request-for-Confidentiality-Letter-4349943">FCC filing</a></span></li>
+      <li><span class="when">September 20, 2019</span>The <strong>Switch Lite</strong> launches — handheld-only, no detachable controllers, no TV dock. A different machine for a different job. <span class="src"><a href="https://en.wikipedia.org/wiki/Nintendo_Switch">Wikipedia</a></span></li>
+      <li><span class="when">October 8, 2021</span>The <strong>Switch OLED</strong> launches with a larger OLED display and 64&nbsp;GB of storage. Same Tegra X1 heart. <span class="src"><a href="https://en.wikipedia.org/wiki/Nintendo_Switch">Wikipedia</a></span></li>
+    </ol>
+  </section>
+
+  <section>
+    <h2>The outside</h2>
+    <p>A black tablet with rails on either side, where the two Joy-Con controllers slide on and click. Under the kickstand hides the microSD slot; the dock adds TV output, charging, and a wired-LAN adapter on the OLED model. The photo shows the original model — the one this report's FCC filing actually covers.</p>
+    <figure>
+      <img src="img/device.jpg" alt="An original-model Nintendo Switch standing in its dock with red and blue Joy-Con controllers attached">
+      <figcaption>An original-model Nintendo Switch with Joy-Con controllers attached. Photo: "Nintendo-Switch-wJoyCons-BlRd-Standing-FL.jpg" by Evan-Amos, public domain, via Wikimedia Commons. Shown for identification; our own unit photos will replace it once one reaches the bench.</figcaption>
+    </figure>
+  </section>
+
+  <section>
+    <h2>The board</h2>
+    <p>The Switch's main board is dominated by the NVIDIA SoC under a heat spreader and heat pipe — a tablet-style thermal design, because the Tegra X1 was born for mobile devices. The FCC's internal-photo exhibit for the original HAC-001 shows the board layout as Nintendo submitted it, and public teardowns document the memory packages flanking the SoC, the Broadcom wireless chip, and the Realtek audio codec. <span class="src"><a href="https://fccid.io/BKEHAC001/Letter/02-FCC-Request-for-Confidentiality-Letter-4349943">FCC filing</a></span> Our future unit's exact board revision and date codes await the bench.</p>
+  </section>
+
+  <section>
+    <h2>Under the microscope: the chips</h2>
+    <p>What's on the board, what each part does, and how sure we are. <strong>Confirmed</strong> means primary evidence only — an FCC exhibit, a manufacturer manual or datasheet, or an official announcement. <strong>Likely</strong> means corroborated secondary or public-teardown evidence. Markings below come from public teardowns of original-model boards; the Lite and OLED boards differ.</p>
+    <div class="table-scroll">
+    <table class="chips">
+      <thead>
+        <tr><th>Chip</th><th>What it does</th><th>How we know</th><th>Dig deeper</th></tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><strong>NVIDIA ODNX02-A2</strong><br><span class="partno">Tegra X1 SoC</span></td>
+          <td>The whole computer on one chip: ARM CPU cores plus NVIDIA graphics.</td>
+          <td><span class="badge b-likely">Likely</span> Chip marking documented in public teardowns of original-model boards.</td>
+          <td><a href="https://en.wikipedia.org/wiki/Nintendo_Switch">Technical overview</a></td>
+        </tr>
+        <tr>
+          <td><strong>Samsung K4F6E304HB-MGCH</strong><br><span class="partno">LPDDR4</span></td>
+          <td>System memory — 4&nbsp;GB total across the packages.</td>
+          <td><span class="badge b-likely">Likely</span> Marking documented in public teardowns. No public Samsung datasheet found for this mobile part.</td>
+          <td>No public datasheet found</td>
+        </tr>
+        <tr>
+          <td><strong>Broadcom/Cypress BCM4356</strong></td>
+          <td>Wi-Fi and Bluetooth radio — the chip behind the FCC filing's wireless tests.</td>
+          <td><span class="badge b-likely">Likely</span> Marking documented in public teardowns. No public datasheet — Broadcom/Cypress keep wireless datasheets closed.</td>
+          <td>No public datasheet found</td>
+        </tr>
+        <tr>
+          <td><strong>Realtek ALC5639</strong></td>
+          <td>Audio codec — converts digital audio to the headphone jack and speakers.</td>
+          <td><span class="badge b-likely">Likely</span> Marking documented in public teardowns. No public Realtek datasheet found.</td>
+          <td>No public datasheet found</td>
+        </tr>
+      </tbody>
+    </table>
+    </div>
+    <p>None of the four chipmakers publish public datasheets for these parts — that's a documentation gap in the industry, not in the research. Also awaiting the bench: which revision's memory and wireless chips our future unit carries, and whether its board matches the FCC exhibit's layout.</p>
+  </section>
+
+  <section>
+    <h2>The government's file on this box</h2>
+    <p>The original Switch's FCC record is unusually complete. Filed under <strong>FCC ID BKEHAC001</strong> by <strong>Nintendo Co., Ltd.</strong>, equipment class "Game Console," model <strong>HAC-001(-01)</strong> — it includes test reports (2.4/5&nbsp;GHz Wi-Fi, Bluetooth, radiated emissions), setup photos, and <strong>internal photos</strong> of the board as submitted. The 2019 Class II permissive change (application July 9, 2019) extended the authorization to the revised HAC-001(-01). <span class="src"><a href="https://fccid.io/BKEHAC001/Letter/02-FCC-Request-for-Confidentiality-Letter-4349943">FCC filing</a></span></p>
+    <p>Two cautions. First, this filing represents the <strong>original model only</strong> — the Lite and OLED have their own model codes (HDH-001, HEG-001) and their own paperwork. Second, the internal photos show Nintendo's certification sample; production boards drifted across the Switch's long life, and ours — whenever it arrives — will be its own evidence. Browse the filing: <a href="https://fccid.io/BKEHAC001/Letter/02-FCC-Request-for-Confidentiality-Letter-4349943">BKEHAC001 on fccid.io</a>.</p>
+  </section>
+
+  <section>
+    <h2>Debug and service modes</h2>
+    <p>Nintendo built a public recovery path into the Switch and documented how to reach it. With the console powered off, hold the <strong>volume-up and volume-down buttons together</strong>, then press the power button and keep holding the volume buttons until the <strong>Maintenance Mode</strong> menu appears. From there you can apply a system update or initialize the console — including an option that resets the system without deleting save data. <span class="src"><a href="https://www.tomsguide.com/gaming/nintendo/nintendo-releases-fix-for-switch-boot-up-error-heres-how-to-install-the-update">Nintendo's published steps</a></span> This is a legitimate, manufacturer-published recovery procedure — the kind of thing we document, not the kind we defeat. We haven't tested it on our own hardware, because we don't have any yet.</p>
+  </section>
+
+  <section>
+    <h2>What public records show</h2>
+    <p>The public record gives us the Switch family's full biography: three models and their dates, the Tegra X1 architecture, the memory and storage configurations, a complete FCC filing for the original model with internal photos, and a manufacturer-published maintenance mode. What it does <em>not</em> give us is anything that only exists inside a specific unit — board revision, date codes, or how component choices drifted across production. That's the bench's job.</p>
+  </section>
+
+  <section>
+    <h2>What we haven't done</h2>
+    <ul>
+      <li>We haven't opened, photographed, or measured a Switch of our own.</li>
+      <li>We haven't confirmed which model or board revision our future unit will be.</li>
+      <li>We haven't tested Maintenance Mode on our own hardware.</li>
+      <li>We haven't verified the chip markings against a physical board.</li>
+      <li>The photo above is a freely licensed stock image, credited in full — not our hardware.</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>By the numbers</h2>
+    <ul>
+      <li><strong>Models:</strong> original HAC-001 (2017), Lite HDH-001 (2019), OLED HEG-001 (2021)</li>
+      <li><strong>FCC ID:</strong> BKEHAC001 (Nintendo Co., Ltd.) — original model; 2019 permissive change covers HAC-001(-01)</li>
+      <li><strong>SoC:</strong> NVIDIA Tegra X1 (ODNX02-A2)</li>
+      <li><strong>Memory:</strong> 4&nbsp;GB LPDDR4</li>
+      <li><strong>Storage:</strong> 32&nbsp;GB (original/Lite), 64&nbsp;GB (OLED), plus microSD</li>
+      <li><strong>Wireless:</strong> 2.4/5&nbsp;GHz Wi-Fi, Bluetooth (BCM4356)</li>
+      <li><strong>Launched:</strong> March 3, 2017 (original); September 20, 2019 (Lite); October 8, 2021 (OLED)</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>Words to know</h2>
+    <p>Every term this page uses, in plain English. No prior knowledge required.</p>
+    <dl class="glossary">
+      <div><dt>SoC (system on a chip)</dt><dd>The whole computer — processor, graphics, and more — on one piece of silicon. The Tegra X1 is the Switch's SoC.</dd></div>
+      <div><dt>Tegra X1</dt><dd>NVIDIA's mobile chip family, originally built for tablets and cars. Nintendo aimed it at the TV.</dd></div>
+      <div><dt>LPDDR4</dt><dd>Low-power memory of the kind phones use — fast, and sips battery.</dd></div>
+      <div><dt>Maintenance Mode</dt><dd>The Switch's built-in recovery screen: update the system or reset it, reached with the volume buttons at power-on.</dd></div>
+      <div><dt>Class II permissive change</dt><dd>An FCC paperwork update that extends an existing approval to a modified version of a device — no new ID needed.</dd></div>
+      <div><dt>FCC ID</dt><dd>The ID the FCC assigns to each approved wireless product. The first few characters are the company's grantee code; the rest is the maker's model code. Punch it into fccid.io and the whole public filing comes up.</dd></div>
+    </dl>
+  </section>
+
+  <section>
+    <h2>Sources &amp; confidence</h2>
+    <ul>
+      <li>FCC ID BKEHAC001, grantee Nintendo Co., Ltd., model HAC-001(-01), 2019-07-09 permissive change: the FCC filing record itself. High confidence.</li>
+      <li>Chip markings (Tegra X1 ODNX02-A2, Samsung LPDDR4, BCM4356, ALC5639): public teardowns with photographs. Medium-high confidence; board revisions differ.</li>
+      <li>Model dates, memory/storage configurations, hybrid concept: published technical overviews. High confidence in the facts, medium in any single source.</li>
+      <li>Maintenance Mode procedure: Nintendo's published instructions as reported. High confidence in the procedure's existence; untested by us.</li>
+      <li>Anything not listed here is unknown until the bench says otherwise. We'll say so, out loud, when that's the case.</li>
+    </ul>
+    <p class="note">We publish no firmware, serials, keys, or private data. This report uses only public records plus a freely licensed stock photo.</p>
+    <p class="note"><strong>Legal note.</strong> BareBoard is an educational project. We don't publish, host, or distribute firmware, keys, passwords, or credentials. Product names and trademarks belong to their respective owners and appear here only to identify the hardware. If you believe anything here infringes your rights, contact us and we'll address it promptly.</p>
+  </section>
+
+  <footer>
+    <p>BareBoard &mdash; a free educational resource. Device #013 of the Hot 100.</p>
+    <nav>
+      <a href="/autopsy/">All autopsies</a>
+      <a href="/">Home</a>
+    </nav>
+  </footer>
+</main>
+</body>
+</html>
