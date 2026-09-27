@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Autopsy 091: Epson EcoTank line (2010–present) — ET-2850 &mdash; BareBoard</title>
+<meta name="description" content="A public-records autopsy of the Epson EcoTank ET-2850 (2021) — cartridge-free ink-tank printing. FCC ID BKMFBJ26H006 covers its WLAN module.">
+<meta name="theme-color" content="#fbfbfc">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%231d1d1f'/%3E%3Ctext x='32' y='45' font-family='system-ui,-apple-system,sans-serif' font-size='36' font-weight='700' fill='white' text-anchor='middle'%3EB%3C/text%3E%3C/svg%3E">
+<link rel="stylesheet" href="/style.css">
+</head>
+<body>
+<header class="site-nav">
+  <div class="nav-inner">
+    <a class="brand" href="/">BareBoard</a>
+    <nav>
+      <a href="/about.html">About</a>
+      <a href="/autopsy/">Autopsy</a>
+      <a href="/hot-100.html">Hot 100</a>
+      <a href="/most-wanted.html">Most Wanted</a>
+      <a href="/support.html">Support</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <p class="kicker">The Autopsy Report &middot; Device #091</p>
+  <h1>Epson EcoTank line: the ET-2850</h1>
+  <p class="lede">The EcoTank is the printer that stopped selling ink by the thimble: since 2010, Epson's cartridge-free line has used refillable ink tanks instead of disposable cartridges. The ET-2850 — a wireless all-in-one from 2021 — is our example unit. One important scope note: the FCC filing for this device covers its Wi-Fi module, not the whole printer, and the autopsy respects that boundary.</p>
+
+  <section>
+    <h2>What is this thing?</h2>
+<p>The Epson EcoTank ET-2850 is a wireless all-in-one inkjet printer — print, scan, copy — from Epson's EcoTank line. Instead of cartridges it uses four refillable ink tanks (black, cyan, magenta, yellow) that you fill from bottles. <span class="src"><a href="https://c7s72z8de5v5-http.sessions.sandoq.cua-eval.cf.aws.metafb.cloud/cdn/shop/files/EPET2850.pdf?v=1559742837285631709">Newspower — ET-2850 brochure (PDF)</a></span> It prints at up to 4800 × 1200 dpi, around 10.5 pages per minute in black, and connects over 802.11 b/g/n Wi-Fi or USB. <span class="src"><a href="https://www.laptopmag.com/reviews/epson-ecotank-et-2850-all-in-one-printer">Laptop Mag</a></span></p>
+  </section>
+  <section>
+    <h2>Whose box is this?</h2>
+<p>This one isn't on our bench &mdash; yet. Nothing here comes from a BareBoard teardown: no disassembly, no boot logs, no bench measurements, no firmware in our hands. Everything below is built from public records &mdash; the government's FCC filing, the manufacturer's own documents, and contemporary press &mdash; read carefully and cited line by line. That's the deal with these reports: when a fact can't be verified from a public record, we say so, out loud.</p>
+    <p>The moment this hardware crosses our bench, this report gets a second act: our own photos, our own measurements, and anything the public record got wrong gets corrected.</p>
+  </section>
+  <section>
+    <h2>A short history</h2>
+<p>Epson launched the EcoTank line in <strong>2010</strong>, betting that customers would rather buy ink by the bottle than by the cartridge. <span class="src"><a href="https://9meters.com/technology/pc/latest-about-epson-ecotank-et-2850">9Meters</a></span> The bet paid off enormously: by 2020 Epson had shipped its <strong>50 millionth</strong> ink-tank printer. <span class="src"><a href="https://archive.therecycler.com/2020/10/07/epson-ships-50-millionth-ink-tank-printer/">The Recycler</a></span></p>
+    <p>The <strong>ET-2850</strong> is a 2021-era example of the line — a mid-range wireless all-in-one that reviewers note for its low running costs and its unhurried print speeds. <span class="src"><a href="https://www.laptopmag.com/reviews/epson-ecotank-et-2850-all-in-one-printer">Laptop Mag</a></span> It's the example unit for this report; the line itself spans dozens of models across a decade and a half.</p>
+  </section>
+  <section>
+    <h2>The outside</h2>
+<figure>
+      <img src="img/device.jpg" alt="Epson EcoTank ET-2850 printer">
+      <figcaption>Epson EcoTank ET-2850. <strong>Image placeholder:</strong> a verified free product photo is on our Most Wanted list — no exact free photo exists yet. When the unit reaches our bench, this becomes a real BareBoard photograph.</figcaption>
+    </figure>
+    <p>The ET-2850 is a compact black all-in-one: flatbed scanner on top, paper output at the front, and the four ink tanks visible behind a window on the right side — the EcoTank's signature. The product brochure documents the layout and the tank system in full. <span class="src"><a href="https://c7s72z8de5v5-http.sessions.sandoq.cua-eval.cf.aws.metafb.cloud/cdn/shop/files/EPET2850.pdf?v=1559742837285631709">Newspower — ET-2850 brochure (PDF)</a></span></p>
+  </section>
+  <section>
+    <h2>Reading the plastic</h2>
+<p>Mold marks, date wheels, material codes &mdash; the shell's birth certificate. This is bench-only evidence: without the physical unit in our hands, there's nothing honest to read here. What the enclosure looks like is described above from public photos; what's <em>molded into it</em> awaits the bench.</p>
+  </section>
+  <section>
+    <h2>The board</h2>
+<p>Here's the scope boundary, stated plainly: the FCC filing for this printer — <strong>FCC ID BKMFBJ26H006</strong> — covers the <strong>J26H006 WLAN module</strong>, not the printer as a whole. <span class="src"><a href="https://fccid.io/BKMFBJ26H006">fccid.io filing</a></span> The internal-construction photos in the filing are module-level only: the Wi-Fi radio board, its shielding, and its antenna — not the main logic board, not the print engine.</p>
+    <p>So this section describes what the filing actually authorizes: a self-contained 802.11 b/g/n module that Epson integrates into the ET-2850 (and sibling models). The printer's main board is outside the public record we've reached and awaits the bench.</p>
+  </section>
+  <section>
+    <h2>Under the microscope: the chips</h2>
+<p><strong>Unknown at the printer level.</strong> The WLAN module's own silicon isn't legibly documented in the public records we've reached, and the printer's main-board chips — the print engine controller, the scanner pipeline — are entirely outside the FCC filing's scope. Naming any of them would be invention. A donor ET-2850 on the bench would open both the module and the main board.</p>
+  </section>
+  <section>
+    <h2>The government's file on this box</h2>
+<p>The FCC equipment authorization is <strong>FCC ID BKMFBJ26H006</strong>, grantee <strong>Seiko Epson Corporation</strong>, covering the <strong>J26H006 WLAN module</strong> used in the ET-2850. <span class="src"><a href="https://fccid.io/BKMFBJ26H006">fccid.io filing</a></span> Read the filing for what it is — a radio module authorization — and don't mistake it for a teardown of the printer.</p>
+  </section>
+  <section>
+    <h2>Listening in</h2>
+<p>We have no boot log for this device &mdash; no unit on the bench means nothing to listen to. But the posture is worth stating up front, because it governs everything BareBoard ever does with a live device.</p>
+    <p><strong>We listen, we don't knock.</strong> A serial console is a place to watch a device narrate its own startup, not a place to log in, change things, or break past anything the manufacturer locked. On our bench we attach read-only: power and ground, one receive wire, and silence on the transmit line. We never use JTAG or SWD debug headers to take control, never extract or modify firmware, never hunt for credentials, and never publish anything that would let someone else bypass a lock or defeat authentication.</p>
+    <p>When this device arrives, the first question will be: where does it talk, and does it talk to us unprompted? Until then, that question stays open.</p>
+  </section>
+  <section>
+    <h2>What we found</h2>
+<ul>
+      <li>The EcoTank line launched in 2010; Epson shipped its 50 millionth ink-tank printer in 2020.</li>
+      <li>The ET-2850 is a 2021-era wireless all-in-one example: refillable tanks, 4800 × 1200 dpi, Wi-Fi b/g/n.</li>
+      <li>The FCC filing covers only the J26H006 WLAN module — the printer's main board is undocumented in public records.</li>
+    </ul>
+  </section>
+  <section>
+    <h2>What we didn't do</h2>
+    <ul>
+      <li>We never opened a unit, attached to a debug port, or powered one up for this report.</li>
+      <li>We never extracted, modified, or shared any firmware or software.</li>
+      <li>We never published or used any credentials, keys, or bypass techniques.</li>
+      <li>No boot logs, no bench measurements, and no photos of our own — because there is no unit of ours to photograph. The device photo above is credited in its caption.</li>
+    </ul>
+  </section>
+  <section>
+    <h2>By the numbers</h2>
+    <ul>
+      <li><strong>Line launch:</strong> 2010</li>
+      <li><strong>Milestone:</strong> 50 millionth ink-tank printer shipped (2020)</li>
+      <li><strong>Example unit:</strong> ET-2850 (2021-era)</li>
+      <li><strong>Print:</strong> Up to 4800 × 1200 dpi; ~10.5 ppm black</li>
+      <li><strong>Connectivity:</strong> 802.11 b/g/n Wi-Fi, USB</li>
+      <li><strong>FCC ID:</strong> BKMFBJ26H006 (J26H006 WLAN module)</li>
+      <li><strong>Bench status:</strong> Not yet on our bench</li>
+    </ul>
+  </section>
+  <section>
+    <h2>Words to know</h2>
+    <dl class="glossary">
+      <div><dt>EcoTank</dt><dd>Epson's cartridge-free printer line: refillable ink tanks filled from bottles instead of disposable cartridges.</dd></div>
+      <div><dt>WLAN module</dt><dd>A self-contained Wi-Fi radio board; the only part of this printer the FCC filing covers.</dd></div>
+      <div><dt>All-in-one</dt><dd>A printer that also scans and copies.</dd></div>
+    </dl>
+  </section>
+  <section>
+    <h2>Sources & confidence</h2>
+    <ul>
+      <li>ET-2850 product brochure (specs, tank system) — Newspower/Epson (PDF) <span class="src"><a href="https://c7s72z8de5v5-http.sessions.sandoq.cua-eval.cf.aws.metafb.cloud/cdn/shop/files/EPET2850.pdf?v=1559742837285631709">link</a></span> — <span class='badge confirmed'>Confirmed</span></li>
+      <li>Epson EcoTank ET-2850 overview — 9Meters <span class="src"><a href="https://9meters.com/technology/pc/latest-about-epson-ecotank-et-2850">link</a></span> — <span class='badge likely'>Likely</span></li>
+      <li>Epson ships 50 millionth ink tank printer — The Recycler, Oct 2020 <span class="src"><a href="https://archive.therecycler.com/2020/10/07/epson-ships-50-millionth-ink-tank-printer/">link</a></span> — <span class='badge confirmed'>Confirmed</span></li>
+      <li>Epson EcoTank ET-2850 review — Laptop Mag <span class="src"><a href="https://www.laptopmag.com/reviews/epson-ecotank-et-2850-all-in-one-printer">link</a></span> — <span class='badge likely'>Likely</span></li>
+      <li>FCC filing BKMFBJ26H006 (grantee: Seiko Epson Corporation; J26H006 WLAN module) — fccid.io <span class="src"><a href="https://fccid.io/BKMFBJ26H006">link</a></span> — <span class='badge confirmed'>Confirmed</span></li>
+      <li>Printer main-board hardware (chips, layout) — outside the filing's scope; no verified public record — <span class='badge unknown'>Unknown</span></li>
+    </ul>
+<p class="note"><strong>Legal note.</strong> BareBoard is an educational project. Everything on this page is derived from public records &mdash; our own bench work begins only when hardware arrives. We don't publish, host, or distribute firmware, keys, passwords, or credentials, and nothing here bypasses a lock, defeats authentication, or extracts software from a device. Product names and trademarks belong to their respective owners and appear here only to identify the hardware. If you believe anything here infringes your rights, contact us and we'll address it promptly.</p>
+  </section>
+
+  <footer>
+    <p>BareBoard &mdash; a free educational resource. Device #091 of the Hot 100.</p>
+    <nav>
+      <a href="/autopsy/">All autopsies</a>
+      <a href="/">Home</a>
+    </nav>
+  </footer>
+</main>
+</body>
+</html>
