@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Autopsy 061: ThinkPad (entire line) &mdash; BareBoard</title>
+<meta name="description" content="BareBoard Autopsy 061: not one device but a whole lineage — the ThinkPad line from IBM&#x27;s 1992 debut through Lenovo&#x27;s present day, and why a line-wide autopsy is impossible.">
+<meta name="theme-color" content="#fbfbfc">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%231d1d1f'/%3E%3Ctext x='32' y='45' font-family='system-ui,-apple-system,sans-serif' font-size='36' font-weight='700' fill='white' text-anchor='middle'%3EB%3C/text%3E%3C/svg%3E">
+<link rel="stylesheet" href="/style.css">
+</head>
+<body>
+<header class="site-nav">
+  <div class="nav-inner">
+    <a class="brand" href="/">BareBoard</a>
+    <nav>
+      <a href="/about.html">About</a>
+      <a href="/autopsy/">Autopsy</a>
+      <a href="/hot-100.html">Hot 100</a>
+      <a href="/most-wanted.html">Most Wanted</a>
+      <a href="/support.html">Support</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <p class="kicker">The Autopsy Report &middot; Device #061</p>
+  <h1>ThinkPad (entire line)</h1>
+  <p class="lede">Thirty-plus years, hundreds of models, one black box with a red nub. The ThinkPad is a lineage, not a device — and this report explains exactly what a line-wide autopsy can and can't say.</p>
+
+<section>
+    <h2>What is this thing?</h2>
+    <p>The <strong>ThinkPad</strong> isn't a device — it's a <strong>line of business laptops</strong> spanning more than three decades. The signatures: the black, boxy magnesium-and-plastic chassis, the red <strong>TrackPoint</strong> nub in the middle of the keyboard, and a reputation for keyboards people actually like. The name traces back to IBM's &ldquo;THINK&rdquo; slogan — the story goes that the first ThinkPad was a paper notebook stamped with it. <span class="src"><a href="https://en.wikipedia.org/wiki/ThinkPad">Wikipedia</a> &middot; <a href="http://brokensecrets.com/2011/06/23/the-first-ibm-thinkpad-was-a-paper-notebook/">Broken Secrets</a></span></p>
+    <p>This report is deliberately different from the other 99: there is no single board to autopsy, no single FCC ID, no single chipset. What follows is the honest line-level story — plus exactly what a real board autopsy would require.</p>
+  </section>
+
+<section>
+    <h2>Not yet on our bench</h2>
+    <p>Straightforward honesty first: <strong>BareBoard has not possessed, disassembled, tested, booted, or touched the firmware of this unit.</strong> We don't have one on the bench yet. Everything below is built from public records — FCC filings, manufacturer material, datasheets, manuals, and published teardowns — with every claim linked to its source and graded for confidence. When a fact genuinely requires our hands on hardware (boot logs, our own photos, exact board revision of a future unit), we say so out loud.</p>
+    <p>That framing is what makes publishing now legitimate: this is a public-records autopsy, and it will grow into a bench autopsy the day a unit lands on our desk.</p>
+  </section>
+
+<section>
+    <h2>A short history</h2>
+    <ol class="timeline">
+      <li><span class="when">October 5, 1992</span>IBM launches the ThinkPad line — the 700, 700C, and 700T — with the TrackPoint already in place. <span class="src"><a href="https://en.wikipedia.org/wiki/ThinkPad">Wikipedia</a></span></li>
+      <li><span class="when">1992&ndash;2004</span>The IBM era: the line grows through the 600, T, X, and R series, cementing the black-box design language. <span class="src"><a href="https://en.wikipedia.org/wiki/ThinkPad">Wikipedia</a></span></li>
+      <li><span class="when">2005</span>Lenovo acquires IBM's Personal Computing Division; the ThinkPad becomes a Lenovo brand. <span class="src"><a href="https://en.wikipedia.org/wiki/ThinkPad">Wikipedia</a></span></li>
+      <li><span class="when">2005&ndash;present</span>The Lenovo era: X1 Carbon, P-series workstations, and the modern lineup — with Lenovo's own UEFI diagnostics (invoked with F10 on current models) replacing some of the old IBM tooling. <span class="src"><a href="https://download.lenovo.com/manual/thinkpad_x9_15/user_guide/en/Diagnostics_tool.html">Lenovo user guide</a></span></li>
+    </ol>
+  </section>
+
+<section>
+    <h2>The outside</h2>
+    <p>Across the decades, the constants: matte black, squared-off corners, the red TrackPoint, and (on most models) the three-button arrangement above the touchpad. Everything else — ports, hinges, materials — changes by series and year. <span class="src"><a href="https://en.wikipedia.org/wiki/ThinkPad">Wikipedia</a></span></p>
+    <figure>
+      <img src="img/device.jpg" alt="An IBM ThinkPad laptop from the early era of the line">
+      <figcaption>An early IBM-era ThinkPad — the lineage's roots. <em>Photo: <a href="https://commons.wikimedia.org/wiki/File:IBM_Thinkpad_R51.jpg">Andr&eacute; Karwath (Aka)</a>, CC BY-SA 4.0, via Wikimedia Commons.</em></figcaption>
+    </figure>
+  </section>
+
+<section>
+    <h2>The board</h2>
+    <p>There is no &ldquo;the&rdquo; board. A 1992 ThinkPad 700C and a 2026 ThinkPad X1 share a name, a color, and a pointing stick — and essentially nothing else electrically. Across the line you'll find Intel and AMD processors, dozens of chipsets, soldered and socketed RAM, spinning disks through NVMe — but <strong>no line-wide board, chipset, memory, or storage configuration exists to document</strong>. A meaningful board autopsy requires one exact machine type and model (the seven-character code on the bottom sticker), and this report doesn't have one on the bench.</p>
+    <p>What is line-wide and verifiable: the <strong>TrackPoint</strong> (a strain-gauge pointing stick, present since 1992), the <strong>ThinkLight</strong> keyboard light on many classic models, and the <strong>docking connectors</strong> that ran through generations of the line. <span class="src"><a href="https://en.wikipedia.org/wiki/ThinkPad">Wikipedia</a></span></p>
+  </section>
+
+<section>
+    <h2>Under the microscope: the chips</h2>
+    <p>There is no chip table for a product line. <span class="badge b-confirmed">Confirmed</span> and <span class="badge b-likely">Likely</span> both require a specific device — and &ldquo;every ThinkPad ever&rdquo; is not one. Naming any chip here as &ldquo;the ThinkPad's&rdquo; would be fabrication. When a single machine type lands on our bench, it gets its own full autopsy with its own chip table.</p>
+    <p>What the historical record does support at line level: the line has shipped with processors from <strong>IBM, Intel, and AMD</strong> across its life, and wireless radios whose FCC IDs belong to the <strong>exact machine type and installed radio</strong> — never to the line as a whole. <span class="src"><a href="https://en.wikipedia.org/wiki/ThinkPad">Wikipedia</a></span></p>
+  </section>
+
+<section>
+    <h2>The government's file on this device</h2>
+    <p>There is no line-wide FCC ID. Every ThinkPad's wireless authorization is tied to its <strong>exact machine type and the installed radio module</strong> — the FCC grants live on the radio, not on the brand. If you want the government's file, read the seven-character machine type off the bottom sticker and look that up; that's the real unit of analysis, and it's how we'll do it when a specific machine reaches the bench.</p>
+  </section>
+
+<section>
+    <h2>Debug &amp; service modes</h2>
+    <p>Our posture: <strong>we listen, we don't knock.</strong> Only publicly documented, user-facing service behavior.</p>
+    <p><strong>UEFI diagnostics (current Lenovo models).</strong> On current ThinkPads, Lenovo documents a built-in diagnostics tool invoked by pressing <strong>F10</strong> during boot — it tests memory, storage, and other hardware without an OS. That's ordinary, vendor-documented, user-facing service functionality. We don't imply every ThinkPad ever made uses it — the tooling has changed across the line's history. <span class="src"><a href="https://download.lenovo.com/manual/thinkpad_x9_15/user_guide/en/Diagnostics_tool.html">Lenovo user guide</a></span></p>
+    <p><strong>What we don't do:</strong> no BIOS-password bypass, no Computrace/anti-theft defeat, no supervisor-password removal, no firmware extraction. Those are locks, and we don't pick locks.</p>
+  </section>
+
+<section>
+    <h2>What the public record says</h2>
+    <p><strong>A lineage, not a specimen.</strong> The honest finding of a line-wide autopsy is that the interesting questions — which board, which chips, which radios — only have answers per machine. The line-level story is industrial design, the TrackPoint, the IBM-to-Lenovo handoff, and three decades of business-laptop continuity. <span class="src"><a href="https://en.wikipedia.org/wiki/ThinkPad">Wikipedia</a></span></p>
+    <p><strong>The most-wanted list starts here.</strong> If you own a specific ThinkPad and want its board autopsied, the machine type on the bottom sticker is the ticket — that's the unit we'd put on the bench.</p>
+  </section>
+
+<section>
+    <h2>What we didn't do</h2>
+    <ul>
+      <li>We have not possessed, disassembled, tested, or booted this device.</li>
+      <li>We have not extracted, modified, shared, or reverse-engineered its firmware.</li>
+      <li>We document only publicly verified interfaces and user-facing modes — read-only, no lock bypass, no authentication defeat, no credential or key material.</li>
+      <li>Anything below marked as unknown stays unknown until the bench says otherwise.</li>
+    </ul>
+  </section>
+
+<section>
+    <h2>By the numbers</h2>
+    <ul>
+      <li><strong>Line launched:</strong> October 5, 1992 (IBM) · Lenovo era from 2005</li>
+      <li><strong>Maker:</strong> IBM 1992&ndash;2004 · Lenovo 2005&ndash;present</li>
+      <li><strong>Line-wide FCC ID:</strong> none exists — authorizations are per machine type and radio</li>
+      <li><strong>Line-wide chipset:</strong> none exists — varies by model and year</li>
+      <li><strong>Constants:</strong> black chassis, red TrackPoint, business focus</li>
+    </ul>
+  </section>
+
+<section>
+    <h2>Words to know</h2>
+    <p>Every term this page uses, in plain English. No prior knowledge required.</p>
+    <dl class="glossary">
+      <div><dt>Machine type</dt><dd>The seven-character code on a ThinkPad's bottom sticker — the exact model identity. This is what FCC filings and parts lists key on.</dd></div>
+      <div><dt>TrackPoint</dt><dd>The red nub between the G, H, and B keys — a strain-gauge pointing stick, a ThinkPad signature since 1992.</dd></div>
+      <div><dt>UEFI diagnostics</dt><dd>Built-in hardware tests that run before the operating system loads — Lenovo documents them for current models.</dd></div>
+      <div><dt>FCC ID</dt><dd>The ID the FCC assigns to each approved wireless product. For ThinkPads it belongs to the specific machine and radio, not the line.</dd></div>
+    </dl>
+  </section>
+
+<section>
+    <h2>Sources &amp; confidence</h2>
+    <ul>
+      <li>Line launch October 5 1992, IBM era, Lenovo acquisition 2005, design language, TrackPoint: Wikipedia's ThinkPad article — <strong>Likely</strong>.</li>
+      <li>Name's link to IBM's THINK paper notepads: Broken Secrets — <strong>Likely</strong>.</li>
+      <li>F10 UEFI diagnostics on current models: Lenovo's own user guide — <strong>Confirmed</strong> as vendor documentation for those models; not implied for the whole line.</li>
+      <li>No line-wide FCC ID, board, chipset, or service mode: a structural fact of how the line and the FCC work — stated as such, not as a gap in our research.</li>
+      <li>Anything not listed here is unknown until the bench says otherwise. We'll say so, out loud, when that's the case.</li>
+    </ul>
+<p class="note">Serial numbers and QR codes are blacked out of every published photo. Raw originals stay private.</p>
+    <p class="note"><strong>Legal note.</strong> BareBoard is an educational project. Everything on this page comes from public records — FCC filings, manufacturer material, datasheets, and published teardowns — plus our own analysis of those records. We don't publish, host, or distribute firmware, keys, passwords, or credentials. Product names and trademarks belong to their respective owners and appear here only to identify the hardware. If you believe anything here infringes your rights, contact us and we'll address it promptly.</p>
+  </section>
+
+  <footer>
+    <p>BareBoard &mdash; a free educational resource. Device #061 of the Hot 100.</p>
+    <nav>
+      <a href="/autopsy/">All autopsies</a>
+      <a href="/">Home</a>
+    </nav>
+  </footer>
+</main>
+</body>
+</html>
