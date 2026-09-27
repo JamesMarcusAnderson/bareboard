@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Autopsy 073: The original iPad (2010) &mdash; BareBoard</title>
+<meta name="description" content="BareBoard Autopsy 073: a plain-English, public-records teardown of the 2010 iPad — Apple A4, Broadcom radios, and FCC ID BCG-E2381A.">
+<meta name="theme-color" content="#fbfbfc">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%231d1d1f'/%3E%3Ctext x='32' y='45' font-family='system-ui,-apple-system,sans-serif' font-size='36' font-weight='700' fill='white' text-anchor='middle'%3EB%3C/text%3E%3C/svg%3E">
+<link rel="stylesheet" href="/style.css">
+</head>
+<body>
+<header class="site-nav">
+  <div class="nav-inner">
+    <a class="brand" href="/">BareBoard</a>
+    <nav>
+      <a href="/about.html">About</a>
+      <a href="/autopsy/">Autopsy</a>
+      <a href="/hot-100.html">Hot 100</a>
+      <a href="/most-wanted.html">Most Wanted</a>
+      <a href="/support.html">Support</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <p class="kicker">The Autopsy Report &middot; Device #073</p>
+  <h1>The original iPad (2010)</h1>
+  <p class="lede">The one that started it all: Apple's A4, a 9.7-inch screen, and a board full of first-generation choices.</p>
+
+  <section>
+    <h2>What is this thing?</h2>
+    <p>The first-generation <strong>iPad</strong> is the tablet Apple announced on January 27, 2010 and released on April 3, 2010, starting at $499. <span class="src"><a href="https://en.wikipedia.org/wiki/IPad_(1st_generation)">Wikipedia</a></span> It created the modern tablet category more or less single-handedly: a 9.7-inch multitouch screen running a stretched-out iPhone OS.</p>
+    <p>Inside, it's a milestone twice over: the <strong>Apple A4</strong> was Apple's first own-designed system-on-a-chip, and the board around it is a snapshot of Apple's 2010 supply chain — Samsung and Toshiba flash, Broadcom radios and touch controllers. <span class="src"><a href="https://www.macrumors.com/2010/04/02/fcc-ipad-images-reveal-broadcom-chip-apple-a4-toshiba-flash-memory/">MacRumors</a></span> <span class="src"><a href="https://www.eetimes.com/inside-the-ipad-samsung-broadcom-snag-multiple-wins/?_ga">EE Times</a></span> </p>
+  </section>
+
+  <section>
+    <h2>Not yet on our bench</h2>
+    <p>This device is <strong>not on our bench</strong>. We don't own one, we haven't opened one, and we haven't powered one on. Everything on this page comes from public records: government filings, published teardowns by repair shops and journalists, and manufacturer documents. That's a legitimate way to learn a device's story &mdash; and it's also a limited one. There are no BareBoard photos, measurements, boot logs, or firmware notes here, because we haven't earned them yet.</p>
+    <p>When a unit of the original iPad does reach our bench, this page gets a second edition: our own board photography, our own measurements, and whatever the device tells us when it wakes up. Until then, what follows is the public record, carefully sourced, with the gaps labeled as gaps.</p>
+  </section>
+
+  <section>
+    <h2>A short history</h2>
+    <ol class="timeline">
+      <li><span class="when">January 27, 2010</span>Steve Jobs announces the iPad on stage in San Francisco. <span class="src"><a href="https://en.wikipedia.org/wiki/IPad_(1st_generation)">Wikipedia</a></span></li>
+      <li><span class="when">April 2, 2010</span>The FCC's internal photos surface a day before launch: reporting confirms the Apple A4, Broadcom chips, and Toshiba flash. <span class="src"><a href="https://appleinsider.com/articles/10/04/02/apple_ipad_internal_hardware_revealed_in_pictures_by_fcc">AppleInsider</a></span> · <span class="src"><a href="https://www.macrumors.com/2010/04/02/fcc-ipad-images-reveal-broadcom-chip-apple-a4-toshiba-flash-memory/">MacRumors</a></span></li>
+      <li><span class="when">April 3, 2010</span>The Wi-Fi iPad goes on sale in the US. <span class="src"><a href="https://en.wikipedia.org/wiki/IPad_(1st_generation)">Wikipedia</a></span></li>
+      <li><span class="when">April 2010</span>iFixit's teardown documents the A4 in detail (archived copy of their A4 teardown). <span class="src"><a href="https://infocon.org/skills/iFixit%20-%20Repair/iFixit%20manuals/Apple%20A4%20Teardown.pdf">iFixit (archived PDF)</a></span></li>
+      <li><span class="when">2011</span>The iPad 2 replaces it, doubling down on the formula with the A5. <span class="src"><a href="https://en.wikipedia.org/wiki/IPad_(1st_generation)">Wikipedia</a></span></li>
+    </ol>
+  </section>
+
+  <section>
+    <h2>The outside</h2>
+    <p>A 9.7-inch, 1024×768 multitouch display in an aluminum unibody with a thick black bezel by modern standards. <span class="src"><a href="https://en.wikipedia.org/wiki/IPad_(1st_generation)">Wikipedia</a></span> One home button, a 30-pin dock connector on the bottom edge, and — on the 3G model — a black plastic window in the back for the cellular antenna.</p>
+    <p>The stock photo below shows the original iPad next to its much smaller 2012 sibling: same design language, very different footprint.</p>
+    <figure>
+      <img src="img/device.jpg" alt="The original iPad (bottom) next to the iPad mini (top), both showing Wikipedia">
+      <figcaption>A first-generation iPad running iBooks — the 9.7-inch slate that started the modern tablet era. Photo: Evan-Amos, public domain, via Wikimedia Commons.</figcaption>
+    </figure>
+  </section>
+
+  <section>
+    <h2>The board</h2>
+    <p>Contemporary reporting on the FCC's internal photos describes a single logic board with the A4 at its center, Broadcom radio and touch chips nearby, and Toshiba (or Samsung, depending on the unit) NAND flash providing storage. <span class="src"><a href="https://appleinsider.com/articles/10/04/02/apple_ipad_internal_hardware_revealed_in_pictures_by_fcc">AppleInsider</a></span> <span class="src"><a href="https://www.macrumors.com/2010/04/02/fcc-ipad-images-reveal-broadcom-chip-apple-a4-toshiba-flash-memory/">MacRumors</a></span> </p>
+    <p>iFixit's archived A4 teardown walks the board chip by chip, confirming 256&nbsp;MB of RAM stacked with the processor and the Broadcom touch-controller pair. <span class="src"><a href="https://infocon.org/skills/iFixit%20-%20Repair/iFixit%20manuals/Apple%20A4%20Teardown.pdf">iFixit (archived PDF)</a></span> We have not photographed the board ourselves.</p>
+  </section>
+
+  <section>
+    <h2>Under the microscope: the chips</h2>
+    <p>What's on the board, what each part does, and how sure we are &mdash; all from public teardown records, since we haven't seen the board ourselves. <strong>Likely</strong> means the public hardware record agrees on it. <strong>Confirmed</strong> is reserved for primary sources we could verify directly, like the government's own filing. Every row links somewhere you can read more.</p>
+    <div class="table-scroll">
+    <table class="chips">
+      <thead>
+        <tr><th>Chip</th><th>What it does</th><th>How we know</th><th>Dig deeper</th></tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><strong>Apple A4</strong></td>
+          <td>Apple's first own-designed SoC — one ARM Cortex-A8 core plus graphics.</td>
+          <td><span class="badge b-likely">Likely</span> Confirmed by FCC internal photos and every 2010 teardown.</td>
+          <td><a href="https://www.engadget.com/2010-04-06-apples-a4-system-on-chip-gets-decoupled-from-ipad-investigated.html">Engadget on the A4</a></td>
+        </tr>
+        <tr>
+          <td><strong>256 MB RAM</strong></td>
+          <td>Working memory, packaged with the A4.</td>
+          <td><span class="badge b-likely">Likely</span> Documented in iFixit’s archived A4 teardown.</td>
+          <td><a href="https://infocon.org/skills/iFixit%20-%20Repair/iFixit%20manuals/Apple%20A4%20Teardown.pdf">iFixit (archived PDF)</a></td>
+        </tr>
+        <tr>
+          <td><strong>Toshiba / Samsung NAND</strong><br><span class="partno">16–64 GB by model</span></td>
+          <td>Flash storage; vendor varies by unit and capacity.</td>
+          <td><span class="badge b-likely">Likely</span> Toshiba flash in FCC-photo reporting; Samsung wins noted by EE Times.</td>
+          <td><a href="https://www.macrumors.com/2010/04/02/fcc-ipad-images-reveal-broadcom-chip-apple-a4-toshiba-flash-memory/">MacRumors</a></td>
+        </tr>
+        <tr>
+          <td><strong>Broadcom BCM5973</strong></td>
+          <td>Touchscreen controller.</td>
+          <td><span class="badge b-likely">Likely</span> Identified in 2010 teardown chip lists.</td>
+          <td><a href="https://www.eetimes.com/inside-the-ipad-samsung-broadcom-snag-multiple-wins/?_ga">EE Times</a></td>
+        </tr>
+        <tr>
+          <td><strong>Broadcom BCM5974</strong></td>
+          <td>Second touchscreen controller (the 9.7-inch panel needs two).</td>
+          <td><span class="badge b-likely">Likely</span> Identified in 2010 teardown chip lists.</td>
+          <td><a href="https://www.eetimes.com/inside-the-ipad-samsung-broadcom-snag-multiple-wins/?_ga">EE Times</a></td>
+        </tr>
+        <tr>
+          <td><strong>Broadcom BCM4329</strong></td>
+          <td>Wi-Fi plus Bluetooth combo radio.</td>
+          <td><span class="badge b-likely">Likely</span> Confirmed in FCC-photo reporting at launch.</td>
+          <td><a href="https://www.macrumors.com/2010/04/02/fcc-ipad-images-reveal-broadcom-chip-apple-a4-toshiba-flash-memory/">MacRumors</a></td>
+        </tr>
+      </tbody>
+    </table>
+    </div>
+    <p>Not in the public chip lists: the power-management IC and the display driver. Note the NAND vendor genuinely varies — teardowns found Toshiba in some units and Samsung in others, so any single chip list is a snapshot, not the whole population.</p>
+  </section>
+
+  <section id="fcc">
+    <h2>The government's file on this device</h2>
+    <p>The Wi-Fi iPad went through the FCC as <strong>BCG-E2381A</strong>. Contemporary reporting describes the FCC's internal photos leaking the A4, the Broadcom chips, and Toshiba flash a full day before the iPad went on sale. <span class="src"><a href="https://appleinsider.com/articles/10/04/02/apple_ipad_internal_hardware_revealed_in_pictures_by_fcc">AppleInsider</a></span> <span class="badge b-likely">Likely</span> — the FCC's own index page refused our connection during research, so the filing details here come from launch-day reporting rather than the primary source.</p>
+    <p>We report no grant dates or transmit powers for this filing rather than guess at them. The direct filing page is worth a visit if your network cooperates: <span class="src"><a href="https://fccid.io/BCG-E2381A">filing page</a></span>.</p>
+  </section>
+
+  <section>
+    <h2>Debug and service modes</h2>
+    <p>Apple publicly documents <strong>recovery mode</strong> for iPads that won't update or restore — the support article walks through connecting to a computer and restoring the device. <span class="src"><a href="https://support.apple.com/en-us/HT201263">Apple Support</a></span> Below that sits <strong>DFU mode</strong>, a deeper restore state described in public repair references.</p>
+    <p>We have not put any iPad into either mode. They are listed here because they are publicly documented — not because we've used them.</p>
+    <p>Our posture on all of the above: we describe what's publicly documented, and we don't go knocking. No device has been probed, reflashed, or opened on our bench &mdash; there is nothing here but reading.</p>
+  </section>
+
+  <section>
+    <h2>What public records show</h2>
+    <p><strong>The A4 was the real story.</strong> Before the iPad, Apple bought its mobile chips; the A4 — designed in-house after the P.A. Semi acquisition — made Apple a chip company. Engadget's 2010 investigation walks through how unusual that was. <span class="src"><a href="https://www.engadget.com/2010-04-06-apples-a4-system-on-chip-gets-decoupled-from-ipad-investigated.html">Engadget</a></span></p>
+    <p><strong>Broadcom owned the radios and the touch.</strong> With the Wi-Fi/BT combo and both touch controllers, Broadcom was the biggest third-party winner on the board — a position it would hold across several iPad generations. <span class="src"><a href="https://www.eetimes.com/inside-the-ipad-samsung-broadcom-snag-multiple-wins/?_ga">EE Times</a></span></p>
+  </section>
+
+  <section>
+    <h2>What we haven't done</h2>
+    <ul>
+      <li>We have not opened an original iPad, photographed its board, or measured anything on it.</li>
+      <li>We have not captured a boot log or entered recovery/DFU mode on this model.</li>
+      <li>We have not verified which NAND vendor a given unit carries — teardowns found both Toshiba and Samsung.</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>By the numbers</h2>
+    <ul>
+      <li><strong>Model:</strong> iPad (1st generation), Wi-Fi <span class="src"><a href="https://en.wikipedia.org/wiki/IPad_(1st_generation)">Wikipedia</a></span></li>
+      <li><strong>FCC ID:</strong> BCG-E2381A <span class="src"><a href="https://appleinsider.com/articles/10/04/02/apple_ipad_internal_hardware_revealed_in_pictures_by_fcc">AppleInsider</a></span></li>
+      <li><strong>Main chip:</strong> Apple A4 <span class="src"><a href="https://www.engadget.com/2010-04-06-apples-a4-system-on-chip-gets-decoupled-from-ipad-investigated.html">Engadget</a></span></li>
+      <li><strong>Memory:</strong> 256 MB RAM <span class="src"><a href="https://infocon.org/skills/iFixit%20-%20Repair/iFixit%20manuals/Apple%20A4%20Teardown.pdf">iFixit (archived PDF)</a></span></li>
+      <li><strong>Display:</strong> 9.7 in, 1024×768 multitouch <span class="src"><a href="https://en.wikipedia.org/wiki/IPad_(1st_generation)">Wikipedia</a></span></li>
+      <li><strong>Storage:</strong> 16/32/64 GB <span class="src"><a href="https://en.wikipedia.org/wiki/IPad_(1st_generation)">Wikipedia</a></span></li>
+      <li><strong>Released:</strong> April 3, 2010, from $499 <span class="src"><a href="https://en.wikipedia.org/wiki/IPad_(1st_generation)">Wikipedia</a></span></li>
+      <li><strong>Wireless:</strong> Wi-Fi b/g/n, Bluetooth <span class="src"><a href="https://en.wikipedia.org/wiki/IPad_(1st_generation)">Wikipedia</a></span></li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>Words to know</h2>
+    <p>Every term this page uses, in plain English. No prior knowledge required.</p>
+    <dl class="glossary">
+      <div><dt>System on a chip (SoC)</dt><dd>The whole computer — processor, graphics, and memory interfaces — on one piece of silicon. The A4 was Apple's first.</dd></div>
+      <div><dt>NAND flash</dt><dd>The chip that holds the operating system and user data when the power is off.</dd></div>
+      <div><dt>Touchscreen controller</dt><dd>The chip that turns finger touches on the glass into coordinates the processor understands.</dd></div>
+      <div><dt>FCC ID</dt><dd>The ID the FCC assigns to each approved wireless product. Punch it into fccid.io and the whole public filing comes up.</dd></div>
+      <div><dt>Recovery mode</dt><dd>A state Apple documents for restoring an iPad whose software won't boot — it reloads the OS from a computer.</dd></div>
+      <div><dt>DFU mode</dt><dd>Device Firmware Update: an even deeper restore state that talks to the bootloader before iOS loads.</dd></div>
+    </dl>
+  </section>
+
+  <section>
+    <h2>Sources &amp; confidence</h2>
+    <ul>
+      <li>Chip identities: launch-day reporting on the FCC's internal photos (AppleInsider, MacRumors), iFixit's archived A4 teardown, and EE Times' supplier analysis. Marked Likely throughout — we haven't seen the board ourselves.</li>
+      <li>FCC ID and internal-photo details: launch-day reporting, since the FCC index page was unreachable during research. Treated as Likely, not Confirmed.</li>
+      <li>Release date, price, and display specs: the device's encyclopedia entry, cross-checked against launch coverage.</li>
+      <li>Anything not listed here is unknown until the bench says otherwise. We'll say so, out loud, when that's the case.</li>
+    </ul>
