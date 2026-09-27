@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Autopsy 074: The Nexus 7 (2012) &mdash; BareBoard</title>
+<meta name="description" content="BareBoard Autopsy 074: a plain-English, public-records teardown of the 2012 Nexus 7 — Tegra 3, FCC filing MSQME370T, and the iFixit chip list.">
+<meta name="theme-color" content="#fbfbfc">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%231d1d1f'/%3E%3Ctext x='32' y='45' font-family='system-ui,-apple-system,sans-serif' font-size='36' font-weight='700' fill='white' text-anchor='middle'%3EB%3C/text%3E%3C/svg%3E">
+<link rel="stylesheet" href="/style.css">
+</head>
+<body>
+<header class="site-nav">
+  <div class="nav-inner">
+    <a class="brand" href="/">BareBoard</a>
+    <nav>
+      <a href="/about.html">About</a>
+      <a href="/autopsy/">Autopsy</a>
+      <a href="/hot-100.html">Hot 100</a>
+      <a href="/most-wanted.html">Most Wanted</a>
+      <a href="/support.html">Support</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <p class="kicker">The Autopsy Report &middot; Device #074</p>
+  <h1>The Nexus 7 (2012)</h1>
+  <p class="lede">Google and ASUS built the $199 tablet that made cheap good — a Tegra 3, a great screen, and an unlockable bootloader.</p>
+
+  <section>
+    <h2>What is this thing?</h2>
+    <p>The <strong>Nexus 7 (2012)</strong> is the 7-inch tablet Google co-developed with ASUS, announced at Google I/O in June 2012 and released on July 13, 2012, starting at $199 for 8&nbsp;GB. <span class="src"><a href="https://en.wikipedia.org/wiki/Nexus_7_(2012)">Wikipedia</a></span> It was the first device to ship with Android 4.1 Jelly Bean, and it reset expectations for what a cheap tablet could be.</p>
+    <p>Inside is an <strong>NVIDIA Tegra 3</strong> — a quad-core chip better known from phones — with 1&nbsp;GB of RAM, NFC, and GPS: a spec sheet that embarrassed tablets costing twice as much. <span class="src"><a href="https://www.ifixit.com/Teardown/Nexus+7+Teardown/9623">iFixit teardown</a></span> </p>
+  </section>
+
+  <section>
+    <h2>Not yet on our bench</h2>
+    <p>This device is <strong>not on our bench</strong>. We don't own one, we haven't opened one, and we haven't powered one on. Everything on this page comes from public records: government filings, published teardowns by repair shops and journalists, and manufacturer documents. That's a legitimate way to learn a device's story &mdash; and it's also a limited one. There are no BareBoard photos, measurements, boot logs, or firmware notes here, because we haven't earned them yet.</p>
+    <p>When a unit of the Nexus 7 (2012) does reach our bench, this page gets a second edition: our own board photography, our own measurements, and whatever the device tells us when it wakes up. Until then, what follows is the public record, carefully sourced, with the gaps labeled as gaps.</p>
+  </section>
+
+  <section>
+    <h2>A short history</h2>
+    <ol class="timeline">
+      <li><span class="when">May 30, 2012</span>The FCC grants the Wi-Fi model's equipment authorization (FCC ID MSQME370T), registered to ASUSTeK — a month before the public announcement. <span class="src"><a href="https://fccid.io/MSQME370T">FCC filing</a></span></li>
+      <li><span class="when">June 27, 2012</span>Google announces the Nexus 7 at Google I/O. <span class="src"><a href="https://en.wikipedia.org/wiki/Nexus_7_(2012)">Wikipedia</a></span></li>
+      <li><span class="when">July 10, 2012</span>The FCC filing's internal photos and user manual become public after short-term confidentiality expires. <span class="src"><a href="https://fccid.io/MSQME370T">FCC filing</a></span></li>
+      <li><span class="when">July 13, 2012</span>The Nexus 7 goes on sale at $199. <span class="src"><a href="https://en.wikipedia.org/wiki/Nexus_7_(2012)">Wikipedia</a></span></li>
+      <li><span class="when">July 2012</span>iFixit tears it down and scores it 7 out of 10 for repairability — easy to open, standard screws, modular parts. <span class="src"><a href="https://www.ifixit.com/Teardown/Nexus+7+Teardown/9623">iFixit teardown</a></span> · <span class="src"><a href="https://www.techspot.com/news/49248-googles-nexus-7-tablet-gets-ifixit-teardown-scores-well-on-repairability-scale.html">TechSpot</a></span></li>
+    </ol>
+  </section>
+
+  <section>
+    <h2>The outside</h2>
+    <p>A 7-inch, 1280×800 IPS display in a soft-touch plastic body — no aluminum here, and that was the point: every dollar went into the screen and the chip. <span class="src"><a href="https://en.wikipedia.org/wiki/Nexus_7_(2012)">Wikipedia</a></span> The back carries the Nexus logo and a subtle dimpled texture.</p>
+    <p>The launch render below is Google's own press image for the device — full credit in the caption.</p>
+    <figure>
+      <img src="img/device.jpg" alt="Google's press render of the 2012 Nexus 7, front view">
+      <figcaption>Google's own press render of the Nexus 7. Image: developers.android.com, CC BY 2.5, via Wikimedia Commons.</figcaption>
+    </figure>
+  </section>
+
+  <section>
+    <h2>The board</h2>
+    <p>iFixit's teardown describes a single main board with the Tegra 3 under a heat spreader, the Hynix memory and Kingston flash nearby, and the AzureWave Wi-Fi module on its own small board. <span class="src"><a href="https://www.ifixit.com/Teardown/Nexus+7+Teardown/9623">iFixit teardown</a></span> Tweaktown's coverage of the teardown notes the straightforward, repair-friendly layout. <span class="src"><a href="https://www.tweaktown.com/news/24782/ifixit_teardown_the_google_nexus_7/index.html">TweakTown</a></span> </p>
+    <p>The FCC's internal photos (public since July 10, 2012) show the same arrangement, with the NFC antenna trace visible on the back cover. <span class="src"><a href="https://fccid.io/MSQME370T">FCC filing</a></span> We have not photographed the board ourselves.</p>
+  </section>
+
+  <section>
+    <h2>Under the microscope: the chips</h2>
+    <p>What's on the board, what each part does, and how sure we are &mdash; all from public teardown records, since we haven't seen the board ourselves. <strong>Likely</strong> means the public hardware record agrees on it. <strong>Confirmed</strong> is reserved for primary sources we could verify directly, like the government's own filing. Every row links somewhere you can read more.</p>
+    <div class="table-scroll">
+    <table class="chips">
+      <thead>
+        <tr><th>Chip</th><th>What it does</th><th>How we know</th><th>Dig deeper</th></tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><strong>NVIDIA T30L Tegra 3</strong></td>
+          <td>The main processor — four ARM Cortex-A9 cores plus a low-power companion core.</td>
+          <td><span class="badge b-likely">Likely</span> Identified by iFixit and every launch teardown.</td>
+          <td><a href="https://www.ifixit.com/Teardown/Nexus+7+Teardown/9623">iFixit teardown</a></td>
+        </tr>
+        <tr>
+          <td><strong>Hynix H5TC2G83CFR</strong><br><span class="partno">1 GB DDR3</span></td>
+          <td>Working memory.</td>
+          <td><span class="badge b-likely">Likely</span> Read off the board by iFixit.</td>
+          <td><a href="https://www.ifixit.com/News/2850/google-nexus-7-teardown">iFixit news</a></td>
+        </tr>
+        <tr>
+          <td><strong>Kingston KE44B-26BN</strong><br><span class="partno">8 GB flash</span></td>
+          <td>Storage for Android and user data.</td>
+          <td><span class="badge b-likely">Likely</span> Identified in teardown chip lists.</td>
+          <td><a href="https://www.ifixit.com/Teardown/Nexus+7+Teardown/9623">iFixit teardown</a></td>
+        </tr>
+        <tr>
+          <td><strong>AzureWave AW-NH665</strong></td>
+          <td>The Wi-Fi module.</td>
+          <td><span class="badge b-likely">Likely</span> Module-level ID from teardown photos.</td>
+          <td><a href="https://www.tweaktown.com/news/24782/ifixit_teardown_the_google_nexus_7/index.html">TweakTown</a></td>
+        </tr>
+        <tr>
+          <td><strong>Broadcom BCM4751</strong></td>
+          <td>GPS receiver.</td>
+          <td><span class="badge b-likely">Likely</span> Identified in teardown chip lists.</td>
+          <td><a href="https://www.ifixit.com/Teardown/Nexus+7+Teardown/9623">iFixit teardown</a></td>
+        </tr>
+        <tr>
+          <td><strong>NXP 65N04</strong></td>
+          <td>NFC controller — the tap-to-share radio.</td>
+          <td><span class="badge b-likely">Likely</span> Identified in teardown chip lists.</td>
+          <td><a href="https://www.ifixit.com/News/2850/google-nexus-7-teardown">iFixit news</a></td>
+        </tr>
+        <tr>
+          <td><strong>InvenSense MPU-6050</strong></td>
+          <td>Accelerometer plus gyroscope — knows which way is up.</td>
+          <td><span class="badge b-likely">Likely</span> Identified in teardown chip lists.</td>
+          <td><a href="https://www.ifixit.com/Teardown/Nexus+7+Teardown/9623">iFixit teardown</a></td>
+        </tr>
+        <tr>
+          <td><strong>Maxim MAX77612A</strong></td>
+          <td>Power management — makes the voltages everything else needs.</td>
+          <td><span class="badge b-likely">Likely</span> Identified in teardown chip lists.</td>
+          <td><a href="https://www.ifixit.com/News/2850/google-nexus-7-teardown">iFixit news</a></td>
+        </tr>
+        <tr>
+          <td><strong>Hydis HV070WX2</strong></td>
+          <td>The 7-inch 1280×800 display panel.</td>
+          <td><span class="badge b-likely">Likely</span> Panel marking read in teardowns.</td>
+          <td><a href="https://www.ifixit.com/Teardown/Nexus+7+Teardown/9623">iFixit teardown</a></td>
+        </tr>
+      </tbody>
+    </table>
+    </div>
+    <p>Not in the public chip lists: the touchscreen controller and the audio codec. Google published factory images and kernel sources for this device (it's a Nexus), which is more than most tablets of the era ever got.</p>
+  </section>
+
+  <section id="fcc">
+    <h2>The government's file on this device</h2>
+    <p>The Wi-Fi Nexus 7 went through the FCC as <strong>MSQME370T</strong>, registered to <strong>ASUSTeK Computer Inc.</strong> The grant is dated <strong>May 30, 2012</strong>; internal photos and the user manual became public on <strong>July 10, 2012</strong>. <span class="src"><a href="https://fccid.io/MSQME370T">FCC filing</a></span> <span class="badge b-confirmed">Confirmed</span> — straight from the filing index.</p>
+    <p>The filing lists Bluetooth at 12.6&nbsp;mW and Wi-Fi at 154.5&nbsp;mW. It also covers the <strong>NFC radio at 13.56&nbsp;MHz</strong> — listed with no output power, as short-range NFC filings typically are. <span class="src"><a href="https://fccid.io/MSQME370T">FCC filing</a></span> The schematics, block diagram, and operational description show no public availability date — they stayed confidential.</p>
+  </section>
+
+  <section>
+    <h2>Debug and service modes</h2>
+    <p>Google publicly documents the <strong>fastboot</strong> workflow for Nexus devices: the factory-images page describes flashing official system images with fastboot commands, which requires the bootloader mode the device ships with. <span class="src"><a href="https://developers.google.com/android/images">Google factory images</a></span> The bootloader on Nexus hardware is unlockable by design — that was the whole point of the Nexus line.</p>
+    <p>We have not unlocked, flashed, or fastbooted any Nexus 7. The mode is listed because Google documents the workflow — not because we've run it.</p>
+    <p>Our posture on all of the above: we describe what's publicly documented, and we don't go knocking. No device has been probed, reflashed, or opened on our bench &mdash; there is nothing here but reading.</p>
+  </section>
+
+  <section>
+    <h2>What public records show</h2>
+    <p><strong>Repairability was a feature.</strong> iFixit gave the Nexus 7 a 7/10: the back comes off with standard tools, the battery isn't buried under everything, and parts are modular. For a $199 tablet in 2012, that was remarkable. <span class="src"><a href="https://www.techspot.com/news/49248-googles-nexus-7-tablet-gets-ifixit-teardown-scores-well-on-repairability-scale.html">TechSpot</a></span></p>
+    <p><strong>The FCC filing is unusually readable.</strong> Grant dates, photos, manual, and power figures are all public; only the deep engineering documents (schematics, block diagram) stayed confidential. That's about as transparent as these filings get. <span class="src"><a href="https://fccid.io/MSQME370T">FCC filing</a></span></p>
+  </section>
+
+  <section>
+    <h2>What we haven't done</h2>
+    <ul>
+      <li>We have not opened a 2012 Nexus 7, photographed its board, or measured anything on it.</li>
+      <li>We have not captured a boot log or entered fastboot mode on this model.</li>
+      <li>We have not verified the touchscreen controller or audio codec, which the public teardowns don't name.</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>By the numbers</h2>
+    <ul>
+      <li><strong>Model:</strong> Nexus 7 (2012), Wi-Fi; co-developed by Google and ASUS <span class="src"><a href="https://en.wikipedia.org/wiki/Nexus_7_(2012)">Wikipedia</a></span></li>
+      <li><strong>FCC ID:</strong> MSQME370T (ASUSTeK) <span class="src"><a href="https://fccid.io/MSQME370T">FCC filing</a></span></li>
+      <li><strong>Main chip:</strong> NVIDIA Tegra 3 (T30L) <span class="src"><a href="https://www.ifixit.com/Teardown/Nexus+7+Teardown/9623">iFixit teardown</a></span></li>
+      <li><strong>Memory:</strong> 1 GB DDR3 <span class="src"><a href="https://www.ifixit.com/News/2850/google-nexus-7-teardown">iFixit news</a></span></li>
+      <li><strong>Display:</strong> 7 in, 1280×800 IPS (Hydis panel) <span class="src"><a href="https://en.wikipedia.org/wiki/Nexus_7_(2012)">Wikipedia</a></span> <span class="src"><a href="https://www.ifixit.com/Teardown/Nexus+7+Teardown/9623">iFixit teardown</a></span></li>
+      <li><strong>Storage:</strong> 8/16/32 GB <span class="src"><a href="https://en.wikipedia.org/wiki/Nexus_7_(2012)">Wikipedia</a></span></li>
+      <li><strong>Released:</strong> July 13, 2012, from $199 <span class="src"><a href="https://en.wikipedia.org/wiki/Nexus_7_(2012)">Wikipedia</a></span></li>
+      <li><strong>Wireless:</strong> Wi-Fi b/g/n, Bluetooth, NFC, GPS <span class="src"><a href="https://en.wikipedia.org/wiki/Nexus_7_(2012)">Wikipedia</a></span></li>
+      <li><strong>Repairability:</strong> 7/10 <span class="src"><a href="https://www.techspot.com/news/49248-googles-nexus-7-tablet-gets-ifixit-teardown-scores-well-on-repairability-scale.html">TechSpot</a></span></li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>Words to know</h2>
+    <p>Every term this page uses, in plain English. No prior knowledge required.</p>
+    <dl class="glossary">
+      <div><dt>Bootloader</dt><dd>The first program that runs when a device powers on — it decides whether to start Android or wait for instructions.</dd></div>
+      <div><dt>Fastboot</dt><dd>A mode on Nexus devices for talking to the bootloader over USB: Google documents it for flashing official system images.</dd></div>
+      <div><dt>NFC</dt><dd>Near-field communication — the short-range radio used for tap-to-share and mobile payments.</dd></div>
+      <div><dt>PMIC</dt><dd>Power-management IC: the chip that makes all the different voltages the board needs from the battery.</dd></div>
+      <div><dt>FCC ID</dt><dd>The ID the FCC assigns to each approved wireless product. Punch it into fccid.io and the whole public filing comes up.</dd></div>
+      <div><dt>Repairability score</dt><dd>iFixit's 1-to-10 rating of how fixable a device is. 10 is a dream; 1 is glued shut.</dd></div>
+    </dl>
+  </section>
+
+  <section>
+    <h2>Sources &amp; confidence</h2>
+    <ul>
+      <li>Chip identities: iFixit's 2012 teardown and its contemporary news write-up, plus TweakTown and TechSpot coverage. Marked Likely throughout — we haven't seen the board ourselves.</li>
+      <li>FCC ID, grant dates, confidentiality dates, and transmit powers: the FCC filing index for MSQME370T — a primary source. High confidence.</li>
+      <li>Release date, price, and launch specs: the device's encyclopedia entry, cross-checked against launch coverage.</li>
+      <li>Fastboot workflow: Google's own factory-images documentation.</li>
+      <li>Anything not listed here is unknown until the bench says otherwise. We'll say so, out loud, when that's the case.</li>
+    </ul>
