@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Autopsy 012: The PlayStation 2 — BareBoard</title>
+<meta name="description" content="BareBoard Autopsy 012: a plain-English hardware report on the PlayStation 2 (SCPH-30000 through 90000), the best-selling game console ever made. Public records, board anatomy, and what's still on our bench list.">
+<meta name="theme-color" content="#fbfbfc">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%231d1d1f'/%3E%3Ctext x='32' y='45' font-family='system-ui,-apple-system,sans-serif' font-size='36' font-weight='700' fill='white' text-anchor='middle'%3EB%3C/text%3E%3C/svg%3E">
+<link rel="stylesheet" href="/style.css">
+</head>
+<body>
+<header class="site-nav">
+  <div class="nav-inner">
+    <a class="brand" href="/">BareBoard</a>
+    <nav>
+      <a href="/about.html">About</a>
+      <a href="/autopsy/">Autopsy</a>
+      <a href="/hot-100.html">Hot 100</a>
+      <a href="/most-wanted.html">Most Wanted</a>
+      <a href="/support.html">Support</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <p class="kicker">The Autopsy Report · Device #012</p>
+  <h1>The PlayStation 2</h1>
+  <p class="lede">The best-selling game console ever made — over 160 million of them. We haven't opened one yet, so this report is built from the public record: government filings, teardowns, and the silicon Sony bragged about.</p>
+
+  <section>
+    <h2>What is this thing?</h2>
+    <p>The <strong>PlayStation 2</strong> is Sony's sixth-generation home game console and the best-selling game console in history, with more than <strong>160 million units</strong> sold. <span class="src"><a href="https://en.wikipedia.org/wiki/PlayStation_2">Wikipedia</a></span> It launched in Japan on March 4, 2000, reached North America that October, and stayed in production for thirteen years — one of the longest hardware runs the industry has ever seen.</p>
+    <p>This report covers the full family, from the chunky launch units (<strong>SCPH-30000</strong> series) through the slim redesign (<strong>SCPH-70000</strong> series, 2004) to the final slimline models (<strong>SCPH-90000</strong> series). Under the hood: a custom CPU Sony called the <strong>Emotion Engine</strong> (about 295&nbsp;MHz), a custom graphics chip called the <strong>Graphics Synthesizer</strong>, 32&nbsp;MB of fast Rambus memory, and — the thing that quietly won the format war — a built-in <strong>DVD player</strong> at a time when standalone DVD players cost as much as the console. <span class="src"><a href="https://en.wikipedia.org/wiki/PlayStation_2">Wikipedia</a></span></p>
+  </section>
+
+  <section>
+    <h2>Not yet on our bench</h2>
+    <p>No unit of ours has been opened for this report. Everything below comes from public records: the manufacturers' own documents, independent teardowns, and the government paperwork. The public-record facts are as complete as we could make them; what awaits the bench is everything that requires <em>our hands on our hardware</em> — our own photos, our own measurements, a boot log, and confirmation of exactly which board revision our future unit carries. When a PS2 lands on the bench, the thin spots below are exactly where we'll start.</p>
+  </section>
+
+  <section>
+    <h2>A short history</h2>
+    <ol class="timeline">
+      <li><span class="when">March 4, 2000</span>Sony launches the PlayStation 2 in Japan; North America follows on October 26. The SCPH-30000 series launch units are the "fat" models — deep, heavy, with an expansion bay for an optional hard drive. <span class="src"><a href="https://en.wikipedia.org/wiki/PlayStation_2">Wikipedia</a></span></li>
+      <li><span class="when">2000 – 2001</span>The PS2 doubles as the cheapest DVD player on the market, and DVD becomes the excuse millions of households use to buy one. The console and the movie format pull each other into the mainstream. <span class="src"><a href="https://en.wikipedia.org/wiki/PlayStation_2">Wikipedia</a></span></li>
+      <li><span class="when">2004</span>The slimline redesign arrives (SCPH-70000 series): dramatically smaller, quieter, with the power supply moved outside the box and the network adapter built in. Inside, Sony and Toshiba merge the Emotion Engine and Graphics Synthesizer onto a single chip. <span class="src"><a href="https://www.techrepublic.com/pictures/cracking-open-sonys-playstation-2-slim-case/">TechRepublic teardown</a></span></li>
+      <li><span class="when">2007</span>The final SCPH-90000 slimline series ships — the last revision of the hardware. <span class="src"><a href="https://en.wikipedia.org/wiki/PlayStation_2">Wikipedia</a></span></li>
+      <li><span class="when">2013</span>Sony discontinues the PlayStation 2 after thirteen years, ending the best-selling console run in history at over 160 million units. <span class="src"><a href="https://en.wikipedia.org/wiki/PlayStation_2">Wikipedia</a></span></li>
+    </ol>
+  </section>
+
+  <section>
+    <h2>The outside</h2>
+    <p>The launch PS2 is a deep blue-black monolith, meant to stand vertically or lie flat, with a disc tray that slides out of the front. The slimline is the same idea at a quarter of the size. What the photo can't show: over the years the power supply moved from inside to outside, the fan got quieter, and the expansion bay vanished.</p>
+    <figure>
+      <img src="img/device.jpg" alt="A launch-era PlayStation 2 console with its controller">
+      <figcaption>A launch-era PlayStation 2 with its DualShock 2 controller. Photo: "Sony-PlayStation-2-30001-wController-L.jpg" by Evan-Amos, public domain, via Wikimedia Commons. Shown for identification; our own unit photos will replace it once one reaches the bench.</figcaption>
+    </figure>
+  </section>
+
+  <section>
+    <h2>The board</h2>
+    <p>Inside every PS2 is a single main board carrying the two custom chips that made the machine famous. On the original "fat" boards the <strong>Emotion Engine</strong> (CPU) and <strong>Graphics Synthesizer</strong> (GPU) sit as separate packages; public teardowns of the slim boards show them merged into one chip, a consolidation Sony and Toshiba made to shrink the design. <span class="src"><a href="https://www.techrepublic.com/pictures/cracking-open-sonys-playstation-2-slim-case/">TechRepublic teardown</a></span> Around them: two Rambus memory chips totaling 32&nbsp;MB, the optical-drive controller, and — on the slim — an integrated network section. The exact board revision, date codes, and silkscreen of our future unit are unknown until we open one ourselves.</p>
+  </section>
+
+  <section>
+    <h2>Under the microscope: the chips</h2>
+    <p>What's on the board, what each part does, and how sure we are. <strong>Confirmed</strong> means primary evidence only — an FCC exhibit, a manufacturer manual or datasheet, or an official announcement. <strong>Likely</strong> means corroborated secondary or public-teardown evidence. Board revisions differ across the SCPH range, so markings below are representative, not universal.</p>
+    <div class="table-scroll">
+    <table class="chips">
+      <thead>
+        <tr><th>Chip</th><th>What it does</th><th>How we know</th><th>Dig deeper</th></tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><strong>Emotion Engine</strong><br><span class="partno">~294.9 MHz, 128-bit</span></td>
+          <td>The CPU. Sony and Toshiba's custom design — the "heart" of the PS2.</td>
+          <td><span class="badge b-likely">Likely</span> Named and photographed in public teardowns; clock speed per the technical literature.</td>
+          <td><a href="https://www.techrepublic.com/pictures/cracking-open-sonys-playstation-2-slim-case/">Teardown (slim board)</a></td>
+        </tr>
+        <tr>
+          <td><strong>Graphics Synthesizer</strong></td>
+          <td>The GPU. Handles 2D/3D graphics with 4&nbsp;MB of dedicated video memory.</td>
+          <td><span class="badge b-likely">Likely</span> Same basis as above.</td>
+          <td><a href="https://en.wikipedia.org/wiki/PlayStation_2">Technical overview</a></td>
+        </tr>
+        <tr>
+          <td><strong>RDRAM, 32&nbsp;MB</strong><br><span class="partno">two 128-Mbit chips</span></td>
+          <td>The system's main memory — fast Rambus DRAM, the same family used in early Pentiums 4.</td>
+          <td><span class="badge b-likely">Likely</span> Teardowns show the two RDRAM packages; Samsung and Hynix markings vary by revision.</td>
+          <td><a href="https://www.techrepublic.com/pictures/cracking-open-sonys-playstation-2-slim-case/">Teardown (memory chips)</a></td>
+        </tr>
+        <tr>
+          <td><strong>4&nbsp;MB embedded DRAM</strong></td>
+          <td>Video memory sitting inside the Graphics Synthesizer package.</td>
+          <td><span class="badge b-likely">Likely</span> Per the published technical specifications.</td>
+          <td><a href="https://en.wikipedia.org/wiki/PlayStation_2">Technical overview</a></td>
+        </tr>
+      </tbody>
+    </table>
+    </div>
+    <p>Sony never published public datasheets for the Emotion Engine or the Graphics Synthesizer — custom console silicon almost never gets one. That's a documentation gap in the industry, not in the research. Also unverified for a specific unit until the bench: which revision's memory chips (Samsung vs. Hynix RDRAM), the optical-drive controller part number, and the network section on slim boards.</p>
+  </section>
+
+  <section>
+    <h2>The government's file on this box</h2>
+    <p>There isn't one — and the reason is instructive. The FCC's equipment-authorization system exists to keep radio transmitters from interfering with each other. The launch PS2 has <strong>no radio transmitter</strong>: no Wi-Fi, no Bluetooth (the slim's network port is wired Ethernet). So Sony certified the console under a <strong>Declaration of Conformity</strong> instead — a self-certification path for devices that don't intentionally radiate. No console-level FCC ID was ever issued, and no internal-photo filing exists. <span class="src"><a href="https://en.wikipedia.org/wiki/PlayStation_2">Background</a></span></p>
+    <p>One trap to avoid: you may see the FCC ID <strong>VCUAT8P51A1607</strong> floating around in PS2 discussions. That's a third-party <em>wireless controller</em>, not the console — it tells you nothing about the box itself, and we excluded it. Absence of a filing here is normal, not suspicious: it means exactly what the rules say it means.</p>
+  </section>
+
+  <section>
+    <h2>Debug and service modes</h2>
+    <p>Sony never published a public recovery or service menu for the PlayStation 2. There is no button combination, in any official Sony documentation we could find, that boots a PS2 into a diagnostic or recovery screen the way later consoles do. (Repair communities have their own board-level techniques, but those are outside the scope of public documentation — and outside this report.) Until we have a unit on the bench, we can't say what, if anything, the hardware quietly offers.</p>
+  </section>
+
+  <section>
+    <h2>What public records show</h2>
+    <p>Taken together, the public record gives us the PS2's full biography: launch and discontinuation dates, the Emotion Engine / Graphics Synthesizer architecture, the memory configuration, the slim redesign's chip consolidation, and the regulatory posture (Declaration of Conformity, no console-level FCC ID). What it does <em>not</em> give us is anything that only exists inside a specific unit — board revision, date codes, serials, or how a thirteen-year production run drifted in component choices. That's the bench's job.</p>
+  </section>
+
+  <section>
+    <h2>What we haven't done</h2>
+    <ul>
+      <li>We haven't opened, photographed, or measured a PS2 of our own.</li>
+      <li>We haven't captured a boot log or confirmed any debug port.</li>
+      <li>We haven't verified which board revision our future unit will carry.</li>
+      <li>We haven't tested any service procedure.</li>
+      <li>The photo above is a freely licensed stock image, credited in full — not our hardware.</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>By the numbers</h2>
+    <ul>
+      <li><strong>Model range:</strong> SCPH-30000 through SCPH-90000 (launch "fat" through final slimline)</li>
+      <li><strong>FCC ID:</strong> none at console level — Declaration of Conformity (no radio transmitter)</li>
+      <li><strong>CPU:</strong> Emotion Engine, ~294.9&nbsp;MHz, 128-bit</li>
+      <li><strong>GPU:</strong> Graphics Synthesizer, with 4&nbsp;MB embedded DRAM</li>
+      <li><strong>Memory:</strong> 32&nbsp;MB RDRAM</li>
+      <li><strong>Media:</strong> DVD-ROM / CD-ROM</li>
+      <li><strong>Launched:</strong> March 4, 2000 (Japan); October 26, 2000 (North America)</li>
+      <li><strong>Discontinued:</strong> 2013 — 13 years in production</li>
+      <li><strong>Units sold:</strong> over 160 million — the best-selling game console ever</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>Words to know</h2>
+    <p>Every term this page uses, in plain English. No prior knowledge required.</p>
+    <dl class="glossary">
+      <div><dt>Emotion Engine</dt><dd>Sony and Toshiba's custom CPU for the PS2. The name was marketing; the chip was real — a 128-bit design running at about 295&nbsp;MHz.</dd></div>
+      <div><dt>Graphics Synthesizer</dt><dd>The PS2's custom graphics chip, with 4&nbsp;MB of video memory built right into the package.</dd></div>
+      <div><dt>RDRAM</dt><dd>Rambus DRAM — a fast, expensive memory technology of the early 2000s, also used in some Pentium 4 PCs.</dd></div>
+      <div><dt>Declaration of Conformity</dt><dd>The FCC's self-certification path for electronic devices that don't intentionally transmit radio signals. No FCC ID is issued.</dd></div>
+      <div><dt>FCC ID</dt><dd>The ID the FCC assigns to each approved wireless product. Punch it into fccid.io and the whole public filing comes up. Devices with no radio don't get one.</dd></div>
+      <div><dt>Slimline</dt><dd>The redesigned, much smaller PS2 (2004 onward), which merged the two main chips onto one piece of silicon.</dd></div>
+    </dl>
+  </section>
+
+  <section>
+    <h2>Sources &amp; confidence</h2>
+    <ul>
+      <li>Launch dates, discontinuation, sales figures, CPU/GPU/memory specifications: published technical overviews (secondary). Medium-high confidence; consistent across sources.</li>
+      <li>Chip identities (Emotion Engine, Graphics Synthesizer, RDRAM): public teardowns with photographs. Medium-high confidence; markings vary by board revision.</li>
+      <li>Regulatory posture (Declaration of Conformity, no console-level FCC ID; VCUAT8P51A1607 is a controller, not the console): researched; no contrary filing found. Medium confidence — framed as "no filing found," not proof of absence.</li>
+      <li>No public datasheets exist for the custom Sony silicon. Stated as an industry documentation gap.</li>
+      <li>Anything not listed here is unknown until the bench says otherwise. We'll say so, out loud, when that's the case.</li>
+    </ul>
+    <p class="note">We publish no firmware, serials, keys, or private data. This report uses only public records plus a freely licensed stock photo.</p>
+    <p class="note"><strong>Legal note.</strong> BareBoard is an educational project. We don't publish, host, or distribute firmware, keys, passwords, or credentials. Product names and trademarks belong to their respective owners and appear here only to identify the hardware. If you believe anything here infringes your rights, contact us and we'll address it promptly.</p>
+  </section>
+
+  <footer>
+    <p>BareBoard &mdash; a free educational resource. Device #012 of the Hot 100.</p>
+    <nav>
+      <a href="/autopsy/">All autopsies</a>
+      <a href="/">Home</a>
+    </nav>
+  </footer>
+</main>
+</body>
+</html>
