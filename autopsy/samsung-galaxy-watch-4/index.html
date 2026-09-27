@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Autopsy 058: Samsung Galaxy Watch 4 &mdash; BareBoard</title>
+<meta name="description" content="BareBoard Autopsy 058: a public-records teardown of the Samsung Galaxy Watch 4 (SM-R880) — Exynos W920, AFE4500 biosensor, FCC filing, and an iFixit teardown.">
+<meta name="theme-color" content="#fbfbfc">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%231d1d1f'/%3E%3Ctext x='32' y='45' font-family='system-ui,-apple-system,sans-serif' font-size='36' font-weight='700' fill='white' text-anchor='middle'%3EB%3C/text%3E%3C/svg%3E">
+<link rel="stylesheet" href="/style.css">
+</head>
+<body>
+<header class="site-nav">
+  <div class="nav-inner">
+    <a class="brand" href="/">BareBoard</a>
+    <nav>
+      <a href="/about.html">About</a>
+      <a href="/autopsy/">Autopsy</a>
+      <a href="/hot-100.html">Hot 100</a>
+      <a href="/most-wanted.html">Most Wanted</a>
+      <a href="/support.html">Support</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <p class="kicker">The Autopsy Report &middot; Device #058</p>
+  <h1>Samsung Galaxy Watch 4</h1>
+  <p class="lede">Samsung's first Wear OS watch in years hides an Exynos W920, a dedicated biosensing chip, and — refreshingly — a teardown that tells us what's actually in there.</p>
+
+<section>
+    <h2>What is this thing?</h2>
+    <p>The <strong>Samsung Galaxy Watch 4</strong> is Samsung's 2021 smartwatch — the first Galaxy Watch to run <strong>Wear OS</strong> (Google's platform) instead of Samsung's own Tizen. The Wi-Fi model is <strong>SM-R880</strong> (FCC ID <strong>A3LSMR880</strong>). It packs an <strong>Exynos W920</strong> chip, <strong>16&nbsp;GB</strong> of storage, and a dedicated optical biosensor for heart-rate and SpO2 readings. <span class="src"><a href="https://www.ifixit.com/Teardown/Samsung+Galaxy+Watch4+and+Watch4+Classic+Teardown/144595">iFixit teardown</a> &middot; <a href="https://www.wareable.com/smartwatches/samsung-galaxy-watch-4-wear-os-lte-nfc-8468">Wareable</a></span></p>
+  </section>
+
+<section>
+    <h2>Not yet on our bench</h2>
+    <p>Straightforward honesty first: <strong>BareBoard has not possessed, disassembled, tested, booted, or touched the firmware of this unit.</strong> We don't have one on the bench yet. Everything below is built from public records — FCC filings, manufacturer material, datasheets, manuals, and published teardowns — with every claim linked to its source and graded for confidence. When a fact genuinely requires our hands on hardware (boot logs, our own photos, exact board revision of a future unit), we say so out loud.</p>
+    <p>That framing is what makes publishing now legitimate: this is a public-records autopsy, and it will grow into a bench autopsy the day a unit lands on our desk.</p>
+  </section>
+
+<section>
+    <h2>A short history</h2>
+    <ol class="timeline">
+      <li><span class="when">June 2021</span>The Galaxy Watch 4 gains FCC certification ahead of launch — Wi-Fi and LTE models both. <span class="src"><a href="https://www.sammobile.com/news/galaxy-watch-4-and-galaxy-watch-active-4-gain-fcc-certification-ahead-of-launch/">SamMobile</a> &middot; <a href="https://www.androidheadlines.com/2021/06/galaxy-watch-4-lte-wi-fi-models-get-fcc-certified.html">AndroidHeadlines</a> &middot; <a href="https://www.gsmarena.com/samsung_galaxy_watch4_certified_in_fcc_listing_-news-49582.php">GSMArena</a></span></li>
+      <li><span class="when">August 2021</span>Samsung launches the Watch 4 on Wear OS. <span class="src"><a href="https://www.wareable.com/smartwatches/samsung-galaxy-watch-4-wear-os-lte-nfc-8468">Wareable</a></span></li>
+      <li><span class="when">September 2021</span>iFixit's teardown: the Exynos W920 package (with what appears to be 1.5&nbsp;GB of LPDDR4 stacked on it), a TI AFE4500-family biosensor, and no external service hatch — unlike the Watch 3. <span class="src"><a href="https://www.ifixit.com/Teardown/Samsung+Galaxy+Watch4+and+Watch4+Classic+Teardown/144595">iFixit teardown</a> &middot; <a href="https://androidcommunity.com/samsung-galaxy-watch4-watch4-classic-teardown-shown-off-20210914/">AndroidCommunity</a></span></li>
+    </ol>
+  </section>
+
+<section>
+    <h2>The outside</h2>
+    <p>Round AMOLED display in an aluminum case, rotating-touch bezel (the Classic keeps the physical one), and a sensor array on the back. Unlike the Galaxy Watch 3, there's <strong>no external service hatch</strong> — the back is sealed. <span class="src"><a href="https://www.ifixit.com/Teardown/Samsung+Galaxy+Watch4+and+Watch4+Classic+Teardown/144595">iFixit teardown</a></span></p>
+    <figure>
+      <img src="img/device.jpg" alt="Samsung Galaxy Watch 4 showing a recovery mode screen">
+      <figcaption>The watch on a display stand, screen off — this is the Classic variant with the physical rotating bezel. <em>Photo: <a href="https://commons.wikimedia.org/wiki/File:Samsung_Galaxy_Watch_4.jpg">Dancingpolishcow</a>, CC BY-SA 4.0, via Wikimedia Commons.</em></figcaption>
+    </figure>
+  </section>
+
+<section>
+    <h2>The board</h2>
+    <p>iFixit's teardown finds a dense single board: a <strong>Samsung package combining the Exynos W920 with what appears to be 1.5&nbsp;GB of LPDDR4</strong> stacked on top (iFixit's wording — they flag the identification as uncertain), a <strong>TI AFE4500S/AFE4500-family</strong> optical biosensing chip, a <strong>Broadcom BCM43013</strong> for Wi-Fi/Bluetooth, a <strong>Shannon 915</strong> IF IC, and a <strong>Qualcomm Atheros QPA5580</strong> that iFixit also flags as uncertain. Storage is <strong>16&nbsp;GB</strong> at the product level. <span class="src"><a href="https://www.ifixit.com/Teardown/Samsung+Galaxy+Watch4+and+Watch4+Classic+Teardown/144595">iFixit teardown</a></span></p>
+  </section>
+
+<section>
+    <h2>Under the microscope: the chips</h2>
+    <p>What's inside, what each part does, and how sure we are. <span class="badge b-confirmed">Confirmed</span> means a primary source. <span class="badge b-likely">Likely</span> means well-corroborated public records. We keep iFixit's own uncertainty flags — where they hedge, we hedge.</p>
+    <div class="table-scroll">
+    <table class="chips">
+      <thead>
+        <tr><th>Chip</th><th>What it does</th><th>How we know</th><th>Dig deeper</th></tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><strong>Samsung Exynos W920</strong><br><span class="partno">with apparently 1.5&nbsp;GB LPDDR4 stacked on-package</span></td>
+          <td>The main application processor — runs Wear OS.</td>
+          <td><span class="badge b-likely">Likely</span> Identified in the iFixit teardown; the stacked-RAM identification is iFixit's own uncertain reading, kept as-is. <span class="src"><a href="https://www.ifixit.com/Teardown/Samsung+Galaxy+Watch4+and+Watch4+Classic+Teardown/144595">iFixit teardown</a></span></td>
+          <td>No public datasheet was found — Samsung does not publish datasheets for the W920.</td>
+        </tr>
+        <tr>
+          <td><strong>TI AFE4500S</strong><br><span class="partno">AFE4500 family</span></td>
+          <td>Optical biosensing: heart-rate and SpO2 measurement.</td>
+          <td><span class="badge b-likely">Likely</span> Identified in the iFixit teardown. <span class="src"><a href="https://www.ifixit.com/Teardown/Samsung+Galaxy+Watch4+and+Watch4+Classic+Teardown/144595">iFixit teardown</a></span></td>
+          <td><a href="https://pdf.htelec.com/pdf/1/afe4500.pdf">AFE4500 datasheet (mirror)</a></td>
+        </tr>
+        <tr>
+          <td><strong>Broadcom BCM43013</strong></td>
+          <td>Wi-Fi and Bluetooth connectivity.</td>
+          <td><span class="badge b-likely">Likely</span> Identified in the iFixit teardown. <span class="src"><a href="https://www.ifixit.com/Teardown/Samsung+Galaxy+Watch4+and+Watch4+Classic+Teardown/144595">iFixit teardown</a></span></td>
+          <td>No public datasheet located for this marking.</td>
+        </tr>
+        <tr>
+          <td><strong>Shannon 915</strong><br><span class="partno">IF IC</span></td>
+          <td>Intermediate-frequency processing for the cellular radio path.</td>
+          <td><span class="badge b-likely">Likely</span> Identified in the iFixit teardown. <span class="src"><a href="https://www.ifixit.com/Teardown/Samsung+Galaxy+Watch4+and+Watch4+Classic+Teardown/144595">iFixit teardown</a></span></td>
+          <td>No public datasheet located for this marking.</td>
+        </tr>
+        <tr>
+          <td><strong>Qualcomm Atheros QPA5580</strong> <em>(uncertain)</em></td>
+          <td>RF front-end role per the teardown's reading.</td>
+          <td><span class="badge b-likely">Likely</span> iFixit flags this identification as uncertain — we keep the flag. <span class="src"><a href="https://www.ifixit.com/Teardown/Samsung+Galaxy+Watch4+and+Watch4+Classic+Teardown/144595">iFixit teardown</a></span></td>
+          <td>No public datasheet located for this marking.</td>
+        </tr>
+      </tbody>
+    </table>
+    </div>
+  </section>
+
+<section>
+    <h2>The government's file on this device</h2>
+    <p>Samsung's FCC filing for <strong>A3LSMR880</strong> (the Wi-Fi SM-R880) was certified in <strong>June 2021</strong> ahead of launch, alongside the LTE variants. Our research slice notes the filing carries only test-setup photos — <strong>no public internal-photo exhibit</strong> — and the filing page itself was unreachable in this pass, so the board story above rests on the iFixit teardown. <span class="src"><a href="https://www.sammobile.com/news/galaxy-watch-4-and-galaxy-watch-active-4-gain-fcc-certification-ahead-of-launch/">SamMobile</a> &middot; <a href="https://www.readwrite.com/galaxy-watch-4-receives-fcc-certification/">ReadWrite</a></span></p>
+  </section>
+
+<section>
+    <h2>Debug &amp; service modes</h2>
+    <p>Our posture: <strong>we listen, we don't knock.</strong> Only publicly verified interfaces — read-only, nothing that defeats locks.</p>
+    <p><strong>User-facing service only.</strong> Unpairing and factory reset run through the watch's own settings and the paired phone's companion app — ordinary, documented, user-level operations. We document nothing beyond that: no bootloader-unlock or flashing instructions belong here.</p>
+    <p><strong>No public serial console or JTAG header</strong> is documented for this watch in the sources we checked, and the sealed back means there's no service hatch to open anyway. <span class="src"><a href="https://www.ifixit.com/Teardown/Samsung+Galaxy+Watch4+and+Watch4+Classic+Teardown/144595">iFixit teardown</a></span></p>
+  </section>
+
+<section>
+    <h2>What the public record says</h2>
+    <p><strong>The Wear OS pivot, in silicon.</strong> The Watch 4's board tells the platform story: a Samsung application processor, a TI biosensor doing the health work, and Broadcom handling the radios. <span class="src"><a href="https://www.ifixit.com/Teardown/Samsung+Galaxy+Watch4+and+Watch4+Classic+Teardown/144595">iFixit teardown</a> &middot; <a href="https://www.wareable.com/smartwatches/samsung-galaxy-watch-4-wear-os-lte-nfc-8468">Wareable</a></span></p>
+    <p><strong>Sealed tighter than its predecessor.</strong> iFixit notes the missing service hatch — a small regression in repairability versus the Watch 3. <span class="src"><a href="https://androidcommunity.com/samsung-galaxy-watch4-watch4-classic-teardown-shown-off-20210914/">AndroidCommunity</a></span></p>
+  </section>
+
+<section>
+    <h2>What we didn't do</h2>
+    <ul>
+      <li>We have not possessed, disassembled, tested, or booted this device.</li>
+      <li>We have not extracted, modified, shared, or reverse-engineered its firmware.</li>
+      <li>We document only publicly verified interfaces and user-facing modes — read-only, no lock bypass, no authentication defeat, no credential or key material.</li>
+      <li>Anything below marked as unknown stays unknown until the bench says otherwise.</li>
+    </ul>
+  </section>
+
+<section>
+    <h2>By the numbers</h2>
+    <ul>
+      <li><strong>Model:</strong> SM-R880 Wi-Fi (FCC ID A3LSMR880)</li>
+      <li><strong>Chips:</strong> Exynos W920 (+ apparent 1.5&nbsp;GB LPDDR4) · TI AFE4500S · Broadcom BCM43013 · Shannon 915 · QPA5580 (uncertain)</li>
+      <li><strong>Storage:</strong> 16&nbsp;GB (product level)</li>
+      <li><strong>OS:</strong> Wear OS (first Galaxy Watch on it)</li>
+      <li><strong>FCC:</strong> certified June 2021 · launched August 2021</li>
+    </ul>
+  </section>
+
+<section>
+    <h2>Words to know</h2>
+    <p>Every term this page uses, in plain English. No prior knowledge required.</p>
+    <dl class="glossary">
+      <div><dt>Wear OS</dt><dd>Google's smartwatch operating system — what the Watch 4 runs instead of Samsung's Tizen.</dd></div>
+      <div><dt>Exynos W920</dt><dd>Samsung's chip for wearables: the watch's main processor.</dd></div>
+      <div><dt>Biosensor</dt><dd>A chip plus optics that measures body signals — heart rate, blood oxygen — from the wrist.</dd></div>
+      <div><dt>LPDDR4</dt><dd>Low-power RAM — the working memory stacked on top of the main chip.</dd></div>
+      <div><dt>FCC ID</dt><dd>The ID the FCC assigns to each approved wireless product. Punch it into fccid.io and the whole public filing comes up.</dd></div>
+    </dl>
+  </section>
+
+<section>
+    <h2>Sources &amp; confidence</h2>
+    <ul>
+      <li>FCC certification June 2021 (A3LSMR880, SM-R880 Wi-Fi): SamMobile, AndroidHeadlines, GSMArena, ReadWrite — <strong>Likely</strong>. The filing page itself was unreachable in this pass.</li>
+      <li>Exynos W920, stacked LPDDR4, AFE4500S, BCM43013, Shannon 915, QPA5580 (uncertain), no service hatch: iFixit teardown via iFixit/AndroidCommunity — <strong>Likely</strong>, with iFixit's own uncertainty flags preserved.</li>
+      <li>16 GB storage, Wear OS, August 2021 launch: product coverage — <strong>Likely</strong>.</li>
+      <li>AFE4500 datasheet: mirrored PDF — family reference, graded accordingly.</li>
+      <li>Anything not listed here is unknown until the bench says otherwise. We'll say so, out loud, when that's the case.</li>
+    </ul>
+<p class="note">Serial numbers and QR codes are blacked out of every published photo. Raw originals stay private.</p>
+    <p class="note"><strong>Legal note.</strong> BareBoard is an educational project. Everything on this page comes from public records — FCC filings, manufacturer material, datasheets, and published teardowns — plus our own analysis of those records. We don't publish, host, or distribute firmware, keys, passwords, or credentials. Product names and trademarks belong to their respective owners and appear here only to identify the hardware. If you believe anything here infringes your rights, contact us and we'll address it promptly.</p>
+  </section>
+
+  <footer>
+    <p>BareBoard &mdash; a free educational resource. Device #058 of the Hot 100.</p>
+    <nav>
+      <a href="/autopsy/">All autopsies</a>
+      <a href="/">Home</a>
+    </nav>
+  </footer>
+</main>
+</body>
+</html>
