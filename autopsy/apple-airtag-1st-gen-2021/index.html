@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Autopsy 098: The Apple AirTag (2021) — BareBoard</title>
+<meta name="description" content="BareBoard Autopsy 098: a public-records teardown of the Apple AirTag — U1 ultra-wideband, Nordic BLE, and the most-documented tracker board in this batch.">
+<meta name="theme-color" content="#fbfbfc">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%231d1d1f'/%3E%3Ctext x='32' y='45' font-family='system-ui,-apple-system,sans-serif' font-size='36' font-weight='700' fill='white' text-anchor='middle'%3EB%3C/text%3E%3C/svg%3E">
+<link rel="stylesheet" href="/style.css">
+</head>
+<body>
+<header class="site-nav">
+  <div class="nav-inner">
+    <a class="brand" href="/">BareBoard</a>
+    <nav>
+      <a href="/about.html">About</a>
+      <a href="/autopsy/">Autopsy</a>
+      <a href="/hot-100.html">Hot 100</a>
+      <a href="/most-wanted.html">Most Wanted</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <p class="kicker">The Autopsy Report · Device #098</p>
+  <h1>The Apple AirTag (2021)</h1>
+  <p class="lede">Apple's answer to the Tile: a coin-sized tracker with ultra-wideband precision finding, a Nordic Bluetooth chip, and a user-replaceable battery. We haven't opened one — but this is the best-documented board in the batch.</p>
+
+  <section>
+    <h2>What is this thing?</h2>
+    <p>The <strong>AirTag</strong>, model <span class="partno">A2187</span>, is Apple's item tracker: attach it to keys or luggage, and the Find My network — hundreds of millions of Apple devices — relays its location back to you. Its party trick is <strong>ultra-wideband</strong>: with a U1-equipped iPhone, the app points you to the tag with directional precision, not just "it's nearby." A user-replaceable CR2032 coin cell powers it. <span class="src"><a href="https://www.ifixit.com/News/50145/airtag-teardown-part-one-yeah-this-tracks%20">iFixit teardown</a></span> <span class="src"><a href="https://github.com/adamcatley/adamcatley.github.io/blob/master/docs/AirTag.md">Independent AirTag documentation</a></span></p>
+  </section>
+
+  <section>
+    <h2>Not yet on our bench</h2>
+    <p>We don't own an AirTag, so nothing here comes from our hands: no disassembly, no board photos, no measurements. Everything below is built from public records — the FCC certification filing, iFixit's teardown, and independent technical documentation — with each claim linked to its source. When a unit lands on our bench, we'll verify the hardware firsthand and update this page.</p>
+  </section>
+
+  <section>
+    <h2>A short history</h2>
+    <ol class="timeline">
+      <li><span class="when">August – November 2019</span>Apple's "Tracking Tag," model A2187, goes through FCC radio testing. <span class="src"><a href="https://fccpdf.com/BCG/BCGA2187/5130981.pdf">FCC RF exposure report</a></span></li>
+      <li><span class="when">June 15, 2019</span>Apple's confidentiality letter for the filing requests permanent secrecy for block diagrams, schematics, technical descriptions, and antenna details. <span class="src"><a href="https://fccpdf.com/BCG/BCGA2187/5130975.pdf">FCC confidentiality letter</a></span></li>
+      <li><span class="when">September 8, 2020</span>The FCC test report (12791034-E1V2) is issued. <span class="src"><a href="https://fccpdf.com/BCG/BCGA2187/5130965.pdf">FCC test report</a></span></li>
+      <li><span class="when">April 2021</span>Apple announces the AirTag; it goes on sale the same month with the U1 chip and Precision Finding. <span class="src"><a href="https://www.ifixit.com/News/50145/airtag-teardown-part-one-yeah-this-tracks%20">iFixit teardown</a></span></li>
+    </ol>
+  </section>
+
+  <section>
+    <h2>The outside</h2>
+    <p>A stainless-steel-and-plastic coin, 31.9&nbsp;mm across, with no holes, no buttons, and no charging port — the back twists off to swap the CR2032. The speaker plays the find-me tone through the housing itself. <span class="src"><a href="https://www.ifixit.com/News/50145/airtag-teardown-part-one-yeah-this-tracks%20">iFixit teardown</a></span></p>
+    <figure>
+      <img src="img/device.jpg" alt="An Apple AirTag in a leather key ring next to keys">
+      <figcaption>AirTag in a leather key ring. Photo: Wikimedia Commons, CC BY 2.0.</figcaption>
+    </figure>
+  </section>
+
+  <section>
+    <h2>The board</h2>
+    <p>iFixit's teardown found a dense little round board: Apple's U1 ultra-wideband chip beside a Nordic nRF52832 handling Bluetooth, GigaDevice flash, and a small constellation of power and audio parts — a buck converter, a load switch, an op-amp, and a digital audio amplifier driving the speaker. Independent documentation of the AirTag's radios records ultra-wideband operation on <strong>channels 5 and 9</strong> (6.5 and 8&nbsp;GHz) with 500&nbsp;MHz of bandwidth. <span class="src"><a href="https://www.ifixit.com/News/50145/airtag-teardown-part-one-yeah-this-tracks%20">iFixit teardown</a></span> <span class="src"><a href="https://github.com/adamcatley/adamcatley.github.io/blob/master/docs/AirTag.md">Independent AirTag documentation</a></span> <span class="src"><a href="https://www.edn.com/teardown-apple-airtag/">EDN teardown</a></span></p>
+    <p>The FCC filing's schematics and block diagram are permanently confidential — Apple sealed the design documents while the teardowns mapped the silicon. <span class="src"><a href="https://fccpdf.com/BCG/BCGA2187/5130975.pdf">FCC confidentiality letter</a></span></p>
+  </section>
+
+  <section>
+    <h2>Under the microscope: the chips</h2>
+    <p>What's on the board, what each part does, and how sure we are. <strong>Confirmed</strong> means a primary source (FCC exhibit or manufacturer document). <strong>Likely</strong> means well-corroborated public records.</p>
+    <div class="table-scroll">
+    <table class="chips">
+      <thead>
+        <tr><th>Chip</th><th>What it does</th><th>How we know</th><th>Dig deeper</th></tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><strong>Apple U1</strong></td>
+          <td>Ultra-wideband radio — the precision-finding engine that measures distance and direction to your iPhone.</td>
+          <td><span class="badge b-likely">Likely</span> Identified in iFixit's teardown and corroborated by independent radio documentation (UWB ch. 5/9).</td>
+          <td><a href="https://www.ifixit.com/News/50145/airtag-teardown-part-one-yeah-this-tracks%20">iFixit teardown</a></td>
+        </tr>
+        <tr>
+          <td><strong>Nordic nRF52832</strong></td>
+          <td>Bluetooth Low Energy SoC — the tag's everyday radio and main controller (64&nbsp;MHz Cortex-M4, 512&nbsp;KB flash, 64&nbsp;KB RAM per Nordic's product data).</td>
+          <td><span class="badge b-likely">Likely</span> Identified in iFixit's teardown; specs from Nordic via distributor product page.</td>
+          <td><a href="https://www.mouser.com/en/ProductDetail/Nordic-Semiconductor/NRF52832-QFAA-R7?qs=4OAmtnimR16jAzs3W9owrg%3D%3D">Nordic product data (Mouser)</a></td>
+        </tr>
+        <tr>
+          <td><strong>GigaDevice GD25LE32D</strong><br><span class="partno">32&nbsp;Mbit SPI flash</span></td>
+          <td>External flash storage for firmware and data.</td>
+          <td><span class="badge b-likely">Likely</span> Identified in iFixit's teardown.</td>
+          <td><a href="https://www.ifixit.com/News/50145/airtag-teardown-part-one-yeah-this-tracks%20">iFixit teardown</a></td>
+        </tr>
+        <tr>
+          <td><strong>Maxim MAX98357B</strong></td>
+          <td>Digital audio amplifier — drives the find-me speaker.</td>
+          <td><span class="badge b-likely">Likely</span> Identified in iFixit's teardown.</td>
+          <td><a href="https://www.ifixit.com/News/50145/airtag-teardown-part-one-yeah-this-tracks%20">iFixit teardown</a></td>
+        </tr>
+        <tr>
+          <td><strong>TI TLV9001</strong> · <strong>onsemi FPF2487</strong> · <strong>TI TPS62746</strong></td>
+          <td>Op-amp, load switch, and buck converter — the power and signal-conditioning support crew.</td>
+          <td><span class="badge b-likely">Likely</span> Identified in iFixit's teardown.</td>
+          <td><a href="https://www.ifixit.com/News/50145/airtag-teardown-part-one-yeah-this-tracks%20">iFixit teardown</a></td>
+        </tr>
+      </tbody>
+    </table>
+    </div>
+  </section>
+
+  <section id="fcc">
+    <h2>The government's file on this tag</h2>
+    <p>The AirTag carries <strong>FCC ID BCGA2187</strong>, grantee Apple Inc., model <span class="partno">A2187</span>, described as a tracking tag. Radio testing ran <strong>August 5 through November 4, 2019</strong>; the test report was issued September 8, 2020. Apple's June 15, 2019 confidentiality letter keeps the block diagrams, schematics, technical descriptions/specifications, and antenna gain/location permanently confidential, while the photos and user manual took 180-day short-term confidentiality. We could not verify the exact grant date from the exhibits we reviewed, so we don't state one. <span class="src"><a href="https://fccpdf.com/BCG/BCGA2187/5130981.pdf">FCC RF exposure report</a></span> <span class="src"><a href="https://fccpdf.com/BCG/BCGA2187/5130965.pdf">FCC test report</a></span> <span class="src"><a href="https://fccpdf.com/BCG/BCGA2187/5130975.pdf">FCC confidentiality letter</a></span></p>
+  </section>
+
+  <section>
+    <h2>Debug and service modes</h2>
+    <p>Public teardowns document the board's layout read-only; we publish no instructions for disabling the speaker, defeating anti-stalking alerts, or accessing debug interfaces — those would be modifications with real safety consequences for others, and they're outside this project's scope. Our posture throughout: <strong>we listen, we don't knock.</strong> If a bench unit ever reveals a diagnostic interface, we'll document it read-only — never bypasses, never credential or key extraction.</p>
+  </section>
+
+  <section>
+    <h2>What public records show</h2>
+    <ul>
+      <li>Two radios, two jobs: Bluetooth for the crowd-sourced Find My network, ultra-wideband for the last few meters of precision. The board's whole architecture follows from that split. <span class="src"><a href="https://www.ifixit.com/News/50145/airtag-teardown-part-one-yeah-this-tracks%20">iFixit teardown</a></span></li>
+      <li>The UWB channels are documented in the open: channels 5 and 9 at 6.5/8&nbsp;GHz with 500&nbsp;MHz bandwidth — the wide channel is what makes the ranging precise. <span class="src"><a href="https://github.com/adamcatley/adamcatley.github.io/blob/master/docs/AirTag.md">Independent AirTag documentation</a></span></li>
+      <li>Apple's filing predates the announcement by nearly two years — the hardware was certified long before the product existed publicly. <span class="src"><a href="https://fccpdf.com/BCG/BCGA2187/5130981.pdf">FCC RF exposure report</a></span></li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>What we haven't done</h2>
+    <ul>
+      <li>No disassembly — we don't own a unit.</li>
+      <li>No board-level verification of any chip identity in the table above.</li>
+      <li>No radio measurements (BLE or UWB) of our own.</li>
+      <li>No firmware observation, and no modification or bypass of any kind.</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>By the numbers</h2>
+    <ul>
+      <li><strong>Model:</strong> A2187 (AirTag) · <strong>FCC ID:</strong> BCGA2187 · <strong>Grantee:</strong> Apple Inc.</li>
+      <li><strong>Radios:</strong> Bluetooth LE (Nordic nRF52832) + ultra-wideband (Apple U1; ch. 5/9, 6.5/8&nbsp;GHz, 500&nbsp;MHz BW)</li>
+      <li><strong>Flash:</strong> 32&nbsp;Mbit SPI (GigaDevice GD25LE32D) · <strong>Battery:</strong> user-replaceable CR2032</li>
+      <li><strong>FCC testing:</strong> Aug 5 – Nov 4, 2019 · <strong>Announced:</strong> April 2021</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>Words to know</h2>
+    <p>Every term this page uses, in plain English. No prior knowledge required.</p>
+    <dl class="glossary">
+      <div><dt>Ultra-wideband (UWB)</dt><dd>A short-range radio that measures distance by timing how long signals take to travel — accurate to centimeters, which is why your phone can point at the tag.</dd></div>
+      <div><dt>Precision Finding</dt><dd>Apple's name for the UWB-guided "it's 3 feet to your left" interface on U1-equipped iPhones.</dd></div>
+      <div><dt>Find My network</dt><dd>Apple's crowd-sourced location system: nearby Apple devices anonymously relay a tag's Bluetooth beacon to its owner.</dd></div>
+      <div><dt>Bluetooth Low Energy (BLE)</dt><dd>A power-sipping flavor of Bluetooth for small devices that mostly sleep and occasionally chirp.</dd></div>
+      <div><dt>Buck converter</dt><dd>A power-supply circuit that steps voltage down efficiently — the board's way of sipping the coin cell gently.</dd></div>
+      <div><dt>Load switch</dt><dd>A chip that switches power to parts of the board on and off — how the tag sleeps most of the time.</dd></div>
+      <div><dt>FCC</dt><dd>The Federal Communications Commission — the U.S. agency that regulates anything that transmits radio. Every wireless gadget sold here has to pass its tests first.</dd></div>
+      <div><dt>FCC ID</dt><dd>The ID the FCC assigns to each approved wireless product. Punch it into fccid.io and the whole public filing comes up.</dd></div>
+    </dl>
+  </section>
+
+  <section>
+    <h2>Sources &amp; confidence</h2>
+    <ul>
+      <li>FCC ID, grantee, model, testing dates, confidentiality scope: FCC exhibits. <strong>Confirmed</strong> (primary source).</li>
+      <li>Chip identities (U1, nRF52832, GD25LE32D, MAX98357B, TLV9001, FPF2487, TPS62746), board description, CR2032: iFixit teardown. <strong>Likely</strong> (published teardown; unconfirmed by us).</li>
+      <li>Board corroboration: EDN teardown. <strong>Likely</strong>.</li>
+      <li>UWB channels/bandwidth: independent technical documentation. <strong>Likely</strong>.</li>
+      <li>nRF52832 specs: Nordic product data via distributor. <strong>Confirmed</strong> for the chip's specs.</li>
+      <li>Device photo: Wikimedia Commons, CC BY 2.0.</li>
+      <li>Anything not listed here is unknown until the bench says otherwise. We'll say so, out loud, when that's the case.</li>
+    </ul>
+    <p class="note"><strong>Legal note.</strong> BareBoard is an educational project. This report is built entirely from public records — we own no AirTag hardware and performed no testing. We don't publish, host, or distribute firmware, keys, passwords, or credentials, and we publish no instructions for modifying, silencing, or bypassing any safety feature. Product names and trademarks belong to their respective owners and appear here only to identify the hardware. If you believe anything here infringes your rights, contact us and we'll address it promptly.</p>
+  </section>
+
+  <footer>
+    <p>BareBoard &mdash; a free educational resource. Device #098 of the Hot 100.</p>
+    <nav>
+      <a href="/autopsy/">All autopsies</a>
+      <a href="/">Home</a>
+    </nav>
+  </footer>
+</main>
+</body>
+</html>
