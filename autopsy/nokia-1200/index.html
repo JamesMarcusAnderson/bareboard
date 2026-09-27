@@ -1,0 +1,180 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Nokia 1200 (RH-99 / RH-100) Autopsy Report — BareBoard</title>
+<meta name="description" content="BareBoard Autopsy Report: Nokia 1200. FCC ID QTLRH-100, UPPCosto platform from Nokia's own service schematics, and what we have not yet done.">
+<link rel="canonical" href="https://bareboard.org/autopsy/nokia-1200/">
+<meta property="og:title" content="Nokia 1200 — BareBoard Autopsy Report">
+<meta property="og:description" content="The 2007 ultrabasic, documented from its FCC filing and Nokia's own service schematics. Not yet on our bench.">
+<meta property="og:image" content="https://bareboard.org/autopsy/nokia-1200/img/device.jpg">
+<meta property="og:type" content="article">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"TechArticle","headline":"Nokia 1200 Autopsy Report","author":{"@type":"Organization","name":"BareBoard"},"about":{"@type":"Product","name":"Nokia 1200","manufacturer":{"@type":"Organization","name":"Nokia"}},"datePublished":"2026-09-27"}
+</script>
+<link rel="stylesheet" href="/style.css">
+<style>
+.hero{background:#101014;border:1px solid #2a2a30;border-radius:14px;padding:1.4rem 1.4rem 1.1rem;margin:0 0 1.4rem}
+.kicker{color:#8e8e96;text-transform:uppercase;letter-spacing:.14em;font-size:.78rem;margin:0 0 .5rem}
+h1{margin:.1rem 0 .5rem;font-size:2rem;line-height:1.15}
+.lede{color:#c9c9d1;font-size:1.08rem;line-height:1.65;margin:.4rem 0 0}
+.badge{display:inline-block;font-size:.72rem;font-weight:700;letter-spacing:.06em;text-transform:uppercase;border-radius:999px;padding:.18rem .6rem;margin-left:.5rem;vertical-align:middle}
+.badge.confirmed{background:#1c4d2e;color:#b8f0c9;border:1px solid #2e7d4f}
+.badge.likely{background:#4d3f1c;color:#f0dcae;border:1px solid #8a7135}
+.badge.unknown{background:#3a3a40;color:#b9b9c0;border:1px solid #55555c}
+.src{font-size:.78rem;color:#8e8e96;white-space:nowrap}
+.src a{color:#7ea6ff}
+figure{margin:1.2rem 0}
+figure img{max-width:100%;height:auto;border-radius:10px;border:1px solid #2a2a30;display:block}
+figcaption{font-size:.85rem;color:#9a9aa2;margin-top:.5rem;line-height:1.5}
+h2{margin-top:2rem}
+h3{margin-top:1.4rem}
+table{width:100%;border-collapse:collapse;font-size:.92rem}
+th,td{text-align:left;padding:.55rem .6rem;border-bottom:1px solid #2a2a30;vertical-align:top}
+th{color:#c9c9d1}
+.table-scroll{overflow-x:auto;border:1px solid #2a2a30;border-radius:10px}
+.timeline{list-style:none;margin:0;padding:0}
+.timeline li{padding:.6rem 0 .6rem 1.2rem;border-left:2px solid #3a3a42;position:relative;margin-left:.4rem}
+.timeline li::before{content:"";position:absolute;left:-7px;top:.95rem;width:12px;height:12px;border-radius:50%;background:#8e8e96}
+.timeline b{color:#ececf1}
+.note{background:#141419;border:1px solid #3a3a42;border-left:4px solid #7ea6ff;border-radius:8px;padding:.9rem 1.1rem;margin:1.2rem 0;line-height:1.6}
+.note.warn{border-left-color:#e0a63c}
+.chips{display:flex;flex-wrap:wrap;gap:.4rem;margin:.6rem 0}
+.chips span{background:#1c1c21;border:1px solid #33333a;border-radius:999px;padding:.25rem .7rem;font-size:.82rem;color:#c9c9d1}
+.glossary td:first-child{white-space:nowrap;font-weight:600;color:#ececf1}
+ul.findings li{margin:.45rem 0;line-height:1.6}
+.diagram{background:#101014;border:1px solid #2a2a30;border-radius:10px;padding:1rem 1.2rem;margin:1rem 0;font-size:.92rem;line-height:1.7}
+.diagram .marker{display:inline-block;background:#2a2a32;border:1px solid #4a4a55;border-radius:6px;padding:.05rem .5rem;margin:.15rem .2rem;font-family:ui-monospace,monospace;font-size:.85rem}
+.anatomy{columns:2;column-gap:2rem;font-size:.92rem}
+.anatomy li{break-inside:avoid;margin:.35rem 0;line-height:1.55}
+@media(max-width:640px){.anatomy{columns:1}}
+footer.report-foot{margin-top:2.5rem;padding-top:1.2rem;border-top:1px solid #2a2a30;color:#8e8e96;font-size:.85rem}
+</style>
+</head>
+<body>
+<header>
+<nav><a href="/">BareBoard</a> · <a href="/autopsy/">Autopsy Reports</a> · <a href="/hot-100.html">Hot 100</a></nav>
+</header>
+<main>
+<article>
+<div class="hero">
+<p class="kicker">BareBoard Autopsy Report · Mobile Phones</p>
+<h1>Nokia 1200 <span class="badge confirmed">Confirmed</span></h1>
+<p class="lede">The 2007 ultrabasic — announced May 3, 2007 <span class="src"><a href="https://www.globenewswire.com/news-release/2007/05/03/1848262/0/en/Nokia-answers-needs-of-entry-market-with-innovative-sharing-features.html">GlobeNewswire / Nokia</a></span> — with an FCC filing we can cite: <b>QTLRH-100</b>, granted to Nokia Corporation on May 25, 2007 for the U.S. 1200b (RH-100) <span class="badge confirmed">Confirmed</span>. Nokia's own leaked service schematics name the <b>UPPCOSTO_V1.3A_PROD_UMC12A</b> baseband design <span class="badge confirmed">Confirmed</span> <span class="src"><a href="https://retrolib.info/_books/%d0%ad%d0%bb%d0%b5%d0%ba%d1%82%d1%80%d0%be%d0%bd%d0%b8%d0%ba%d0%b0/%d0%a1%d0%b5%d1%80%d0%b2%d0%b8%d1%81-%d0%bc%d0%b0%d0%bd%d1%83%d0%b0%d0%bb%d1%8b/%d0%9c%d0%be%d0%b1%d0%b8%d0%bb%d1%8c%d0%bd%d1%8b%d0%b5%20%d1%82%d0%b5%d0%bb%d0%b5%d1%84%d0%be%d0%bd%d1%8b/nokia/nokia_1200_rh-99,_rh-100_service_schematics_v1.0.pdf">Nokia 1200 service schematics v1.0 (PDF)</a></span>. We have never owned, opened, booted, probed, tested, or disassembled a Nokia 1200.</p>
+</div>
+
+<figure>
+<img src="img/device.jpg" alt="Placeholder card: Nokia 1200 photo coming — not yet on our bench" width="1200" height="800">
+<figcaption>Placeholder card. No freely-licensed photograph of the Nokia 1200 could be verified, so this card stands in until a unit reaches our bench and we photograph it ourselves. This is not our photograph — no unit of this device has ever been on the BareBoard bench.</figcaption>
+</figure>
+
+<h2>What is this thing?</h2>
+<p>The Nokia 1200 is a dual-band GSM candybar from Nokia's ultrabasic line, announced May 3, 2007 as an entry-market phone with call-time-sharing features <span class="src"><a href="https://www.globenewswire.com/news-release/2007/05/03/1848262/0/en/Nokia-answers-needs-of-entry-market-with-innovative-sharing-features.html">GlobeNewswire / Nokia</a></span>. The global variant (RH-99) uses GSM 900/1800; the U.S. <b>1200b (RH-100)</b> uses GSM 850/1900 <span class="badge confirmed">Confirmed</span> <span class="src"><a href="https://retrolib.info/_books/%d0%ad%d0%bb%d0%b5%d0%ba%d1%82%d1%80%d0%be%d0%bd%d0%b8%d0%ba%d0%b0/%d0%a1%d0%b5%d1%80%d0%b2%d0%b8%d1%81-%d0%bc%d0%b0%d0%bd%d1%83%d0%b0%d0%bb%d1%8b/%d0%9c%d0%be%d0%b1%d0%b8%d0%bb%d1%8c%d0%bd%d1%8b%d0%b5%20%d1%82%d0%b5%d0%bb%d0%b5%d1%84%d0%be%d0%bd%d1%8b/nokia/nokia_1200_rh-99,_rh-100_service_schematics_v1.0.pdf">Nokia 1200 service schematics v1.0 (PDF)</a></span>. It carries a monochrome 96×68 display, a flashlight, and a dust-resistant keypad in the same spirit as the 1110 <span class="src"><a href="https://lpcwiki.miraheze.org/wiki/Nokia_1200">LPCWiki — Nokia 1200</a></span>.</p>
+
+<div class="note">
+<strong>Not yet on our bench.</strong> BareBoard has never possessed, opened, booted, probed, tested, or disassembled a Nokia 1200. The FCC grant and the schematic part string below are primary evidence; everything else is assembled from public documentation. Our own board photographs, date codes, and measurements all await the bench.
+</div>
+
+<h2>Timeline</h2>
+<ul class="timeline">
+<li><b>2007-05-03</b> — Nokia announces the 1200 for entry markets <span class="badge confirmed">Confirmed</span> <span class="src"><a href="https://www.globenewswire.com/news-release/2007/05/03/1848262/0/en/Nokia-answers-needs-of-entry-market-with-innovative-sharing-features.html">GlobeNewswire / Nokia</a></span>.</li>
+<li><b>2007-05-25</b> — FCC grants QTLRH-100 to Nokia Corporation for the 1200b/RH-100 <span class="badge confirmed">Confirmed</span>.</li>
+<li><b>2007-09</b> — 1200 released <span class="src"><a href="https://lpcwiki.miraheze.org/wiki/Nokia_1200">LPCWiki — Nokia 1200</a></span>.</li>
+<li><b>2026-09-27</b> — This report published from public records; no unit on our bench.</li>
+</ul>
+
+<h2>Outside</h2>
+<div class="diagram">
+<span class="marker">A</span> Monochrome 96×68 display <span class="src"><a href="https://lpcwiki.miraheze.org/wiki/Nokia_1200">LPCWiki — Nokia 1200</a></span><br>
+<span class="marker">B</span> Two softkeys + Navi-key cluster<br>
+<span class="marker">C</span> Dust-resistant one-piece keymat<br>
+<span class="marker">D</span> Flashlight<br>
+<span class="marker">E</span> Removable rear cover; BL-5C-class battery underneath
+</div>
+<p>Approximately 102 × 44.1 × 17.5 mm at 80 g <span class="src"><a href="https://lpcwiki.miraheze.org/wiki/Nokia_1200">LPCWiki — Nokia 1200</a></span>.</p>
+
+<h2>Board</h2>
+<p>The 1200 is a BB4.1/DCT4-derived design: Nokia's own service schematics (v1.0, covering RH-99 and RH-100) explicitly label the baseband design <b>UPPCOSTO_V1.3A_PROD_UMC12A</b> — a UPPCosto (ARM7TDMI) implementation <span class="badge confirmed">Confirmed</span> <span class="src"><a href="https://retrolib.info/_books/%d0%ad%d0%bb%d0%b5%d0%ba%d1%82%d1%80%d0%be%d0%bd%d0%b8%d0%ba%d0%b0/%d0%a1%d0%b5%d1%80%d0%b2%d0%b8%d1%81-%d0%bc%d0%b0%d0%bd%d1%83%d0%b0%d0%bb%d1%8b/%d0%9c%d0%be%d0%b1%d0%b8%d0%bb%d1%8c%d0%bd%d1%8b%d0%b5%20%d1%82%d0%b5%d0%bb%d0%b5%d1%84%d0%be%d0%bd%d1%8b/nokia/nokia_1200_rh-99,_rh-100_service_schematics_v1.0.pdf">Nokia 1200 service schematics v1.0 (PDF)</a></span>. Public documentation describes 4 MB of flash and 256 KB of RAM with a Nokia Easy Flash II service connector <span class="badge likely">Likely</span> <span class="src"><a href="https://lpcwiki.miraheze.org/wiki/Nokia_1200">LPCWiki — Nokia 1200</a></span> <span class="src"><a href="https://lpcwiki.miraheze.org/wiki/Nokia_Easy_Flash">LPCWiki — Nokia Easy Flash</a></span>.</p>
+<div class="note warn"><strong>What we don't know without the bench:</strong> the flash die part number and manufacturer, RF front-end markings, the exact populated PCB revision of a real unit, and component date codes. The schematics describe the design; a physical unit remains unverified.</div>
+
+<h2>Chips</h2>
+<div class="table-scroll"><table>
+<tr><th>Ref</th><th>Marking / identity</th><th>Role</th><th>Confidence</th><th>Dig deeper</th></tr>
+<tr><td>BB</td><td>UPPCosto (ARM7TDMI) — design string UPPCOSTO_V1.3A_PROD_UMC12A</td><td>Baseband processor</td><td><span class="badge confirmed">Confirmed</span></td><td><a href="https://retrolib.info/_books/%d0%ad%d0%bb%d0%b5%d0%ba%d1%82%d1%80%d0%be%d0%bd%d0%b8%d0%ba%d0%b0/%d0%a1%d0%b5%d1%80%d0%b2%d0%b8%d1%81-%d0%bc%d0%b0%d0%bd%d1%83%d0%b0%d0%bb%d1%8b/%d0%9c%d0%be%d0%b1%d0%b8%d0%bb%d1%8c%d0%bd%d1%8b%d0%b5%20%d1%82%d0%b5%d0%bb%d0%b5%d1%84%d0%be%d0%bd%d1%8b/nokia/nokia_1200_rh-99,_rh-100_service_schematics_v1.0.pdf">Nokia 1200 service schematics v1.0 (PDF)</a> — no public datasheet located</td></tr>
+<tr><td>Flash</td><td>4 MB (exact die marking unknown)</td><td>Firmware + user storage</td><td><span class="badge likely">Likely</span></td><td><a href="https://lpcwiki.miraheze.org/wiki/Nokia_1200">LPCWiki — Nokia 1200</a>; die-level identity awaits the bench — no public datasheet claimed</td></tr>
+<tr><td>RAM</td><td>256 KB</td><td>Working memory</td><td><span class="badge likely">Likely</span></td><td><a href="https://lpcwiki.miraheze.org/wiki/Nokia_1200">LPCWiki — Nokia 1200</a>; packaging unknown — no public datasheet claimed</td></tr>
+<tr><td>Svc</td><td>Easy Flash II connector</td><td>Factory flashing / service interface</td><td><span class="badge likely">Likely</span></td><td><a href="https://lpcwiki.miraheze.org/wiki/Nokia_Easy_Flash">LPCWiki — Nokia Easy Flash</a> — described at high level only</td></tr>
+</table></div>
+
+<h2 id="fcc">FCC</h2>
+<p><b>FCC ID QTLRH-100</b> — granted to <b>Nokia Corporation</b> on <b>May 25, 2007</b> <span class="badge confirmed">Confirmed</span>. The grant covers the <b>1200b (type RH-100)</b>, the U.S. dual-band GSM 850/1900 variant <span class="badge confirmed">Confirmed</span>. Scope discipline: this filing names the RH-100 specifically; we do not extend its test data to the global RH-99 without separate evidence.</p>
+
+<h2>Debug / service modes</h2>
+<p>The 1200 carries a Nokia Easy Flash II service connector for factory flashing and diagnostics <span class="src"><a href="https://lpcwiki.miraheze.org/wiki/Nokia_Easy_Flash">LPCWiki — Nokia Easy Flash</a></span>. We mention it only at this high level — its existence as a documented service interface. We have never connected to one, we publish no pinout, no baud rate, no procedure, and no instructions for defeating any lock or protection. We listen; we don't knock.</p>
+
+<h2>Public findings &amp; what we didn't do</h2>
+<ul class="findings">
+<li>✅ Cited the primary FCC grant (QTLRH-100, 2007-05-25) scoped to the 1200b/RH-100.</li>
+<li>✅ Quoted Nokia's own schematic design string (UPPCOSTO_V1.3A_PROD_UMC12A) <span class="src"><a href="https://retrolib.info/_books/%d0%ad%d0%bb%d0%b5%d0%ba%d1%82%d1%80%d0%be%d0%bd%d0%b8%d0%ba%d0%b0/%d0%a1%d0%b5%d1%80%d0%b2%d0%b8%d1%81-%d0%bc%d0%b0%d0%bd%d1%83%d0%b0%d0%bb%d1%8b/%d0%9c%d0%be%d0%b1%d0%b8%d0%bb%d1%8c%d0%bd%d1%8b%d0%b5%20%d1%82%d0%b5%d0%bb%d0%b5%d1%84%d0%be%d0%bd%d1%8b/nokia/nokia_1200_rh-99,_rh-100_service_schematics_v1.0.pdf">service schematics</a></span>.</li>
+<li>✅ Kept the service connector at a high-level mention — no pinout or procedure.</li>
+<li>❌ We have not opened, booted, probed, or photographed a Nokia 1200 ourselves.</li>
+<li>❌ We have not verified the flash die, RF markings, or populated PCB revision.</li>
+<li>❌ We have not tested the Easy Flash II interface or captured any boot log.</li>
+</ul>
+
+<h2>By the numbers</h2>
+<div class="table-scroll"><table>
+<tr><th>Metric</th><th>Value</th><th>Source</th></tr>
+<tr><td>Display</td><td>Monochrome, 96×68 px</td><td><span class="src"><a href="https://lpcwiki.miraheze.org/wiki/Nokia_1200">LPCWiki</a></span></td></tr>
+<tr><td>Network</td><td>GSM 900/1800 (RH-99); GSM 850/1900 (RH-100)</td><td><span class="badge confirmed">Confirmed</span> for RH-100 <span class="src"><a href="https://retrolib.info/_books/%d0%ad%d0%bb%d0%b5%d0%ba%d1%82%d1%80%d0%be%d0%bd%d0%b8%d0%ba%d0%b0/%d0%a1%d0%b5%d1%80%d0%b2%d0%b8%d1%81-%d0%bc%d0%b0%d0%bd%d1%83%d0%b0%d0%bb%d1%8b/%d0%9c%d0%be%d0%b1%d0%b8%d0%bb%d1%8c%d0%bd%d1%8b%d0%b5%20%d1%82%d0%b5%d0%bb%d0%b5%d1%84%d0%be%d0%bd%d1%8b/nokia/nokia_1200_rh-99,_rh-100_service_schematics_v1.0.pdf">service schematics</a></span></td></tr>
+<tr><td>Baseband</td><td>UPPCosto (ARM7TDMI)</td><td><span class="badge confirmed">Confirmed</span> <span class="src"><a href="https://retrolib.info/_books/%d0%ad%d0%bb%d0%b5%d0%ba%d1%82%d1%80%d0%be%d0%bd%d0%b8%d0%ba%d0%b0/%d0%a1%d0%b5%d1%80%d0%b2%d0%b8%d1%81-%d0%bc%d0%b0%d0%bd%d1%83%d0%b0%d0%bb%d1%8b/%d0%9c%d0%be%d0%b1%d0%b8%d0%bb%d1%8c%d0%bd%d1%8b%d0%b5%20%d1%82%d0%b5%d0%bb%d0%b5%d1%84%d0%be%d0%bd%d1%8b/nokia/nokia_1200_rh-99,_rh-100_service_schematics_v1.0.pdf">service schematics</a></span></td></tr>
+<tr><td>Memory</td><td>4 MB flash; 256 KB RAM</td><td><span class="badge likely">Likely</span> <span class="src"><a href="https://lpcwiki.miraheze.org/wiki/Nokia_1200">LPCWiki</a></span></td></tr>
+<tr><td>FCC ID</td><td>QTLRH-100 (1200b/RH-100)</td><td><span class="badge confirmed">Confirmed</span></td></tr>
+</table></div>
+
+<h2>Glossary</h2>
+<div class="table-scroll"><table class="glossary">
+<tr><td>BB4.1</td><td>Nokia's baseband platform generation bridging DCT4 and later designs.</td></tr>
+<tr><td>UPPCosto</td><td>Cost-optimized UPP baseband variant (ARM7TDMI) for ultrabasic phones.</td></tr>
+<tr><td>Easy Flash II</td><td>Nokia's second-generation documented service connector for flashing and diagnostics.</td></tr>
+<tr><td>RH-99 / RH-100</td><td>Nokia type designations: RH-99 is the global 1200, RH-100 the U.S. 1200b.</td></tr>
+</table></div>
+
+<h2>Sources &amp; confidence</h2>
+<ul>
+<li><a href="https://retrolib.info/_books/%d0%ad%d0%bb%d0%b5%d0%ba%d1%82%d1%80%d0%be%d0%bd%d0%b8%d0%ba%d0%b0/%d0%a1%d0%b5%d1%80%d0%b2%d0%b8%d1%81-%d0%bc%d0%b0%d0%bd%d1%83%d0%b0%d0%bb%d1%8b/%d0%9c%d0%be%d0%b1%d0%b8%d0%bb%d1%8c%d0%bd%d1%8b%d0%b5%20%d1%82%d0%b5%d0%bb%d0%b5%d1%84%d0%be%d0%bd%d1%8b/nokia/nokia_1200_rh-99,_rh-100_service_schematics_v1.0.pdf">Nokia 1200 RH-99/RH-100 service schematics v1.0 (PDF)</a> — UPPCOSTO design string, variant bands (primary manufacturer material, mirrored).</li>
+<li><a href="https://mirrors.pdp-11.net/_books/%d0%ad%d0%bb%d0%b5%d0%ba%d1%82%d1%80%d0%be%d0%bd%d0%b8%d0%ba%d0%b0/%d0%a1%d0%b5%d1%80%d0%b2%d0%b8%d1%81-%d0%bc%d0%b0%d0%bd%d1%83%d0%b0%d0%bb%d1%8b/%d0%9c%d0%be%d0%b1%d0%b8%d0%bb%d1%8c%d0%bd%d1%8b%d0%b5%20%d1%82%d0%b5%d0%bb%d0%b5%d1%84%d0%be%d0%bd%d1%8b/nokia/nokia_1200_rh-99,_rh-100_service_schematics_v1.0.pdf">Same schematics (alternate mirror)</a>.</li>
+<li><a href="https://www.globenewswire.com/news-release/2007/05/03/1848262/0/en/Nokia-answers-needs-of-entry-market-with-innovative-sharing-features.html">GlobeNewswire — Nokia announces the 1200 (2007-05-03)</a> (primary, manufacturer press release).</li>
+<li><a href="https://lpcwiki.miraheze.org/wiki/Nokia_1200">LPCWiki — Nokia 1200</a> (community documentation).</li>
+<li><a href="https://lpcwiki.miraheze.org/wiki/Nokia_Easy_Flash">LPCWiki — Nokia Easy Flash</a> (community documentation).</li>
+</ul>
+<div class="table-scroll"><table>
+<tr><th>Claim</th><th>Confidence</th><th>Basis</th></tr>
+<tr><td>FCC ID QTLRH-100; Nokia Corporation; 2007-05-25; covers 1200b/RH-100</td><td><span class="badge confirmed">Confirmed</span></td><td>FCC grant (primary evidence)</td></tr>
+<tr><td>UPPCOSTO_V1.3A_PROD_UMC12A design string; RH-99/RH-100 bands</td><td><span class="badge confirmed">Confirmed</span></td><td>Nokia service schematics (primary manufacturer material)</td></tr>
+<tr><td>4 MB flash; 256 KB RAM; Easy Flash II</td><td><span class="badge likely">Likely</span></td><td>Community documentation; die-level detail unverified</td></tr>
+<tr><td>Populated-board component identities</td><td><span class="badge unknown">Unknown</span></td><td>Awaits the bench</td></tr>
+</table></div>
+
+<h2>Legal note</h2>
+<p>This report is a transformative educational summary of publicly available records. Product names and marks belong to their owners. We describe only publicly documented service interfaces at a high level; we publish no lock-bypass, authentication-defeat, firmware-extraction, or unsafe service procedures. Our posture: <strong>we listen, we don't knock.</strong></p>
+
+<h2>Related reports</h2>
+<ul>
+<li><a href="/autopsy/nokia-1100/">Nokia 1100</a> — the earlier ultrabasic classic</li>
+<li><a href="/autopsy/nokia-1110-1110i/">Nokia 1110 / 1110i</a> — the mid-2000s DCT4 entry phone</li>
+<li><a href="/autopsy/nokia-105-series-2013-2015-variants/">Nokia 105 (2013/2015)</a> — the later ultrabasic</li>
+</ul>
+
+<footer class="report-foot">
+<p>Device #010 of the Hot 100. Last reviewed 2026-09-27. BareBoard has not possessed, opened, booted, probed, tested, or disassembled this device.</p>
+</footer>
+</article>
+</main>
+<footer>
+<nav><a href="/">BareBoard</a> · <a href="/autopsy/">Autopsy Reports</a> · <a href="/about.html">About</a></nav>
+<p>© BareBoard — free hardware education.</p>
+</footer>
+</body>
+</html>
