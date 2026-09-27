@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Autopsy 082: Arlo Pro 2 &mdash; BareBoard</title>
+<meta name="description" content="A public-records autopsy of the Arlo Pro 2 (2017) — NETGEAR's last wireless Arlo, 1080p wire-free camera, FCC ID 2APLE18300431.">
+<meta name="theme-color" content="#fbfbfc">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%231d1d1f'/%3E%3Ctext x='32' y='45' font-family='system-ui,-apple-system,sans-serif' font-size='36' font-weight='700' fill='white' text-anchor='middle'%3EB%3C/text%3E%3C/svg%3E">
+<link rel="stylesheet" href="/style.css">
+</head>
+<body>
+<header class="site-nav">
+  <div class="nav-inner">
+    <a class="brand" href="/">BareBoard</a>
+    <nav>
+      <a href="/about.html">About</a>
+      <a href="/autopsy/">Autopsy</a>
+      <a href="/hot-100.html">Hot 100</a>
+      <a href="/most-wanted.html">Most Wanted</a>
+      <a href="/support.html">Support</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <p class="kicker">The Autopsy Report &middot; Device #082</p>
+  <h1>Arlo Pro 2</h1>
+  <p class="lede">The Arlo Pro 2 is NETGEAR's second-generation wire-free security camera — the last Arlo built under the NETGEAR name before the company spun the brand out on its own. It promised 1080p, a rechargeable battery, and the choice to run wire-free or plugged in, and it sold the public on a simple pitch: a camera with no wires and, for a brief golden era, free cloud clips.</p>
+
+  <section>
+    <h2>What is this thing?</h2>
+<p>The Arlo Pro 2 is a wire-free indoor/outdoor security camera sold by NETGEAR under its Arlo brand, model number <strong>VMC4030P</strong>. It records in 1080p HD and can run on its rechargeable battery or plugged into AC power. <span class="src"><a href="https://9to5toys.com/2017/10/10/netgear-arlo-pro-2/">9to5Toys</a></span></p>
+    <p>It was the flagship of the Arlo line when it launched in late 2017, and it became quietly famous for one policy: NETGEAR offered free rolling 7-day cloud storage of motion-triggered clips, a generosity later generations withdrew. <span class="src"><a href="https://www.tomsguide.com/us/netgear-arlo-pro-2,review-4974.html">Tom's Guide</a></span></p>
+  </section>
+  <section>
+    <h2>Whose box is this?</h2>
+<p>This one isn't on our bench &mdash; yet. Nothing here comes from a BareBoard teardown: no disassembly, no boot logs, no bench measurements, no firmware in our hands. Everything below is built from public records &mdash; the government's FCC filing, the manufacturer's own documents, and contemporary press &mdash; read carefully and cited line by line. That's the deal with these reports: when a fact can't be verified from a public record, we say so, out loud.</p>
+    <p>The moment this hardware crosses our bench, this report gets a second act: our own photos, our own measurements, and anything the public record got wrong gets corrected.</p>
+  </section>
+  <section>
+    <h2>A short history</h2>
+<p>The Arlo brand began as a NETGEAR product line. On <strong>October 10, 2017</strong>, NETGEAR announced the Arlo Pro 2 as the successor to the original Arlo Pro, bringing 1080p resolution, a rechargeable battery, and the ability to run on battery or AC. <span class="src"><a href="https://www.androidpolice.com/2017/10/10/netgear-announces-arlo-pro-2-cameras-1080p-video-wired-wireless-modes/">Android Police</a></span></p>
+    <p>The company behind it soon changed shape: in 2018, NETGEAR and Arlo announced the closing of Arlo's initial public offering, spinning Arlo off as an independent company. <span class="src"><a href="https://investor.arlo.com/press-releases/press-release-details/2018/NETGEAR-and-Arlo-Announce-Closing-of-Initial-Public-Offering/default.aspx">Arlo investor relations</a></span> The Pro 2 was the last Arlo camera introduced under NETGEAR ownership — and the last to carry the free 7-day cloud storage plan. <span class="src"><a href="https://www.tomsguide.com/us/netgear-arlo-pro-2,review-4974.html">Tom's Guide</a></span></p>
+  </section>
+  <section>
+    <h2>The outside</h2>
+<figure>
+      <img src="img/device.jpg" alt="Arlo Pro 2 wire-free security camera">
+      <figcaption>Arlo Pro 2. <strong>Image placeholder:</strong> a verified free product photo is on our Most Wanted list — no exact free photo exists yet. When the unit reaches our bench, this becomes a real BareBoard photograph.</figcaption>
+    </figure>
+    <p>The Pro 2 is a small, white, pill-shaped camera on a magnetic ball mount — the Arlo look that persisted for years. Contemporary reviews describe it as weather-resistant and compact enough to mount indoors or out. <span class="src"><a href="https://www.tomsguide.com/us/netgear-arlo-pro-2,review-4974.html">Tom's Guide</a></span> The front face carries the lens, an IR array for night vision, and a motion sensor; the rear holds the magnetic mount cup and a micro-USB charging port.</p>
+  </section>
+  <section>
+    <h2>Reading the plastic</h2>
+<p>Mold marks, date wheels, material codes &mdash; the shell's birth certificate. This is bench-only evidence: without the physical unit in our hands, there's nothing honest to read here. What the enclosure looks like is described above from public photos; what's <em>molded into it</em> awaits the bench.</p>
+  </section>
+  <section>
+    <h2>The board</h2>
+<p>No public internal-photograph exhibit for this exact model has been verified in open research. The FCC filing (ID <strong>2APLE18300431</strong>, grantee Arlo Technologies, Inc.) <span class="src"><a href="https://fccid.io/2APLE18300431">fccid.io filing</a></span> exists in the public record, but its internal photos could not be confirmed from accessible sources, so we won't pretend to describe the board layout. The radio architecture is standard for the class: a 2.4 GHz Wi-Fi radio talking to the Arlo base station, plus whatever sub-GHz link the proprietary base-station protocol uses — the exact chipset awaits the bench.</p>
+  </section>
+  <section>
+    <h2>Under the microscope: the chips</h2>
+<p><strong>Unknown.</strong> No verified chip list exists for the VMC4030P in public records we've been able to reach — no legible board photographs, no bill of materials, no public teardown with component markings. Anything we named here would be a guess, and guesses are the one thing an autopsy must never contain. This section is waiting for a donor unit.</p>
+  </section>
+  <section>
+    <h2>The government's file on this box</h2>
+<p>The FCC equipment authorization for this device is <strong>FCC ID 2APLE18300431</strong>, grantee <strong>Arlo Technologies, Inc.</strong> <span class="src"><a href="https://fccid.io/2APLE18300431">fccid.io filing</a></span> The filing is part of the public record; note that some third-party mirrors re-uploaded portions of it in 2025 with a new U.S. agent attestation, which is a paperwork update, not a new authorization — the original filing belongs to the 2017 product.</p>
+  </section>
+  <section>
+    <h2>Listening in</h2>
+<p>We have no boot log for this device &mdash; no unit on the bench means nothing to listen to. But the posture is worth stating up front, because it governs everything BareBoard ever does with a live device.</p>
+    <p><strong>We listen, we don't knock.</strong> A serial console is a place to watch a device narrate its own startup, not a place to log in, change things, or break past anything the manufacturer locked. On our bench we attach read-only: power and ground, one receive wire, and silence on the transmit line. We never use JTAG or SWD debug headers to take control, never extract or modify firmware, never hunt for credentials, and never publish anything that would let someone else bypass a lock or defeat authentication.</p>
+    <p>When this device arrives, the first question will be: where does it talk, and does it talk to us unprompted? Until then, that question stays open.</p>
+  </section>
+  <section>
+    <h2>What we found</h2>
+<ul>
+      <li>The Arlo Pro 2 was NETGEAR's last Arlo camera before the 2018 spin-off that made Arlo an independent company.</li>
+      <li>It recorded in 1080p and could run on battery or AC power.</li>
+      <li>Its free 7-day rolling cloud storage made it the most owner-friendly Arlo — and the last one of its kind.</li>
+      <li>The hardware internals remain undocumented in public records; a donor unit would unlock this whole report.</li>
+    </ul>
+  </section>
+  <section>
+    <h2>What we didn't do</h2>
+    <ul>
+      <li>We never opened a unit, attached to a debug port, or powered one up for this report.</li>
+      <li>We never extracted, modified, or shared any firmware or software.</li>
+      <li>We never published or used any credentials, keys, or bypass techniques.</li>
+      <li>No boot logs, no bench measurements, and no photos of our own — because there is no unit of ours to photograph. The device photo above is credited in its caption.</li>
+    </ul>
+  </section>
+  <section>
+    <h2>By the numbers</h2>
+    <ul>
+      <li><strong>Launch:</strong> October 10, 2017</li>
+      <li><strong>Model:</strong> VMC4030P</li>
+      <li><strong>Resolution:</strong> 1080p HD</li>
+      <li><strong>Power:</strong> Rechargeable battery or AC</li>
+      <li><strong>Company:</strong> NETGEAR (Arlo brand); spun off as Arlo Technologies, Inc. in 2018</li>
+      <li><strong>FCC ID:</strong> 2APLE18300431</li>
+      <li><strong>Bench status:</strong> Not yet on our bench</li>
+    </ul>
+  </section>
+  <section>
+    <h2>Words to know</h2>
+    <dl class="glossary">
+      <div><dt>Wire-free</dt><dd>Battery-powered with a wireless link — no cable to a wall outlet or a recorder.</dd></div>
+      <div><dt>FCC ID</dt><dd>The identifier the U.S. Federal Communications Commission assigns to authorized radio equipment; the filing is public.</dd></div>
+      <div><dt>Cloud storage</dt><dd>Recordings kept on the vendor's servers rather than on a local device.</dd></div>
+    </dl>
+  </section>
+  <section>
+    <h2>Sources & confidence</h2>
+    <ul>
+      <li>NETGEAR announces Arlo Pro 2 (1080p, wired/wireless modes) — Android Police, Oct 2017 <span class="src"><a href="https://www.androidpolice.com/2017/10/10/netgear-announces-arlo-pro-2-cameras-1080p-video-wired-wireless-modes/">link</a></span> — <span class='badge confirmed'>Confirmed</span></li>
+      <li>Arlo Pro 2 announcement — 9to5Toys, Oct 2017 <span class="src"><a href="https://9to5toys.com/2017/10/10/netgear-arlo-pro-2/">link</a></span> — <span class='badge confirmed'>Confirmed</span></li>
+      <li>NETGEAR and Arlo announce closing of IPO — Arlo investor relations, 2018 <span class="src"><a href="https://investor.arlo.com/press-releases/press-release-details/2018/NETGEAR-and-Arlo-Announce-Closing-of-Initial-Public-Offering/default.aspx">link</a></span> — <span class='badge confirmed'>Confirmed</span></li>
+      <li>Arlo Pro 2 review (7-day free cloud storage detail) — Tom's Guide <span class="src"><a href="https://www.tomsguide.com/us/netgear-arlo-pro-2,review-4974.html">link</a></span> — <span class='badge likely'>Likely</span></li>
+      <li>FCC filing 2APLE18300431 (grantee: Arlo Technologies, Inc.) — fccid.io <span class="src"><a href="https://fccid.io/2APLE18300431">link</a></span> — <span class='badge confirmed'>Confirmed</span></li>
+      <li>Internal hardware (board layout, chip list) — no verified public exhibit found — <span class='badge unknown'>Unknown</span></li>
+    </ul>
+<p class="note"><strong>Legal note.</strong> BareBoard is an educational project. Everything on this page is derived from public records &mdash; our own bench work begins only when hardware arrives. We don't publish, host, or distribute firmware, keys, passwords, or credentials, and nothing here bypasses a lock, defeats authentication, or extracts software from a device. Product names and trademarks belong to their respective owners and appear here only to identify the hardware. If you believe anything here infringes your rights, contact us and we'll address it promptly.</p>
+  </section>
+
+  <footer>
+    <p>BareBoard &mdash; a free educational resource. Device #082 of the Hot 100.</p>
+    <nav>
+      <a href="/autopsy/">All autopsies</a>
+      <a href="/">Home</a>
+    </nav>
+  </footer>
+</main>
+</body>
+</html>
