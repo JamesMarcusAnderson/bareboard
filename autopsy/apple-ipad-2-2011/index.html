@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Autopsy 071: The Apple iPad 2 — BareBoard</title>
+<meta name="description" content="BareBoard Autopsy 071: the Apple iPad 2 (2011) — the tablet that made tablets inevitable. The A5, the 25 Wh battery, and an FCC filing with three model numbers.">
+<meta name="theme-color" content="#fbfbfc">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%231d1d1f'/%3E%3Ctext x='32' y='45' font-family='system-ui,-apple-system,sans-serif' font-size='36' font-weight='700' fill='white' text-anchor='middle'%3EB%3C/text%3E%3C/svg%3E">
+<link rel="stylesheet" href="/style.css">
+</head>
+<body>
+<header class="site-nav">
+  <div class="nav-inner">
+    <a class="brand" href="/">BareBoard</a>
+    <nav>
+      <a href="/about.html">About</a>
+      <a href="/autopsy/">Autopsy</a>
+      <a href="/hot-100.html">Hot 100</a>
+      <a href="/most-wanted.html">Most Wanted</a>
+      <a href="/support.html">Support</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <p class="kicker">The Autopsy Report · Device #071</p>
+  <h1>The Apple iPad 2</h1>
+  <p class="lede">The tablet that made tablets inevitable: thinner, lighter, and faster than the original, with a chip that defined mobile computing for a decade. Our representative is the Wi-Fi model, A1395. <span class="src"><a href="https://www.ifixit.com/News/4424/ipad-2-teardown">iFixit summary</a></span></p>
+
+  <section>
+    <h2>What is this thing?</h2>
+    <p>The iPad 2 is Apple's second tablet, released in <strong>March 2011</strong> — the machine that turned the iPad from a promising experiment into the default tablet. It kept the original's 9.7-inch 1024×768 display but went thinner (0.34 inches), lighter, and much faster, adding front and rear cameras and the gyroscope the original lacked. Three variants existed: <strong>A1395</strong> (Wi-Fi), <strong>A1396</strong> (GSM), and <strong>A1397</strong> (CDMA) — and the FCC filings treat them as three separate devices, which matters for the paperwork below. Our <strong>representative</strong> is the Wi-Fi model, A1395: the one in the photo, the one iFixit tore down first, and the one with the clearest public record. <span class="src"><a href="https://www.ifixit.com/Teardown/iPad+2+Wi-Fi+EMC+2415+Teardown/5071">iFixit teardown</a> · <a href="https://fccid.io/BCGA1395">FCC filing</a></span></p>
+  </section>
+
+  <section>
+    <h2>Not yet on our bench</h2>
+    <p><strong>No iPad 2 has sat on our bench yet.</strong> No disassembly, no battery test, no dock-connector probing, no original-unit photography. Everything below comes from iFixit's public teardown and the FCC's own filing database. When an iPad 2 lands on the bench, this page gets its second act.</p>
+  </section>
+
+  <section>
+    <h2>A short history</h2>
+    <ol class="timeline">
+      <li><span class="when">March 2011</span>The iPad 2 launches — thinner, lighter, dual-core A5, cameras front and back, gyroscope, and the Smart Cover with its magnetic hinge. The FCC granted the Wi-Fi model's filing on March 2, days before launch. <span class="src"><a href="https://www.ifixit.com/News/4424/ipad-2-teardown">iFixit summary</a> · <a href="https://fccid.io/BCGA1395">FCC filing</a></span></li>
+      <li><span class="when">2011–2012</span>The iPad 2 becomes the best-selling tablet on earth and the classroom standard. Apple keeps selling it long after the iPad 3 and 4 arrive — it stayed in the lineup until 2014, an unusually long run. <span class="src"><a href="https://www.ifixit.com/News/4424/ipad-2-teardown">iFixit summary</a></span></li>
+      <li><span class="when">2012</span>A quiet revision: Apple swaps the A5 for a 32 nm die-shrunk version (the "iPad 2,4") in later units — same name, cooler-running chip. The public teardown record covers the original. <span class="src"><a href="https://www.ifixit.com/Teardown/iPad+2+Wi-Fi+EMC+2415+Teardown/5071">iFixit teardown</a></span></li>
+    </ol>
+  </section>
+
+  <section>
+    <h2>The outside</h2>
+    <p>A 9.7-inch glass slab, 0.34 inches thin, aluminum back, one Home button — the silhouette every tablet since has quoted. Around the edges: the 30-pin dock connector on the bottom, a headphone jack and sleep/wake button up top, volume and mute/orientation switch on the right side, and on this generation, front VGA and rear 720p cameras. The Smart Cover's magnetic hinge snaps to the left edge. The teardown unit's battery is a three-cell 3.8 V, 25 Wh pack — and iFixit's most quoted finding about the outside is that the front glass is <em>glued on</em>, making opening the device a heat-gun affair. <span class="src"><a href="https://www.ifixit.com/Teardown/iPad+2+Wi-Fi+EMC+2415+Teardown/5071">iFixit teardown</a></span></p>
+    <figure>
+      <img src="img/device.jpg" alt="Apple iPad 2 tablet, closeup">
+      <figcaption>Our representative: the iPad 2 (Wi-Fi, A1395). Photo by <a href="https://commons.wikimedia.org/wiki/File:Apple_iPad_2_closeup.jpg">Rob Enslin</a>, CC BY 2.0, via Wikimedia Commons.</figcaption>
+    </figure>
+  </section>
+
+  <section>
+    <h2>The board</h2>
+    <p>The teardown record for the Wi-Fi A1395 reads like a 2011 mobile-industry census. The star is the <strong>Apple A5</strong> — 1 GHz dual-core, Apple's second custom SoC — with <strong>512 MB of Samsung RAM</strong> stacked on the package. Storage on the torn-down unit: <strong>Toshiba TH58NVG7D2FLA89 16 GB NAND</strong> (32 and 64 GB options existed). The wireless is <strong>Broadcom BCM43291HKUBC</strong>; the touchscreen controllers are <strong>Broadcom BCM5973KFBGH</strong> and <strong>BCM5974</strong>; power management includes <strong>TI CD3240B0</strong>; and motion sensing comes from STMicroelectronics gyroscope and accelerometer parts. One honest gap, stated plainly: <strong>Apple publishes no datasheet for the A5.</strong> Everything we know about it comes from teardowns and observation, not the manufacturer — so it stays <span class="badge b-likely">Likely</span>, never Confirmed. <span class="src"><a href="https://www.ifixit.com/Teardown/iPad+2+Wi-Fi+EMC+2415+Teardown/5071">iFixit teardown</a> · <a href="https://www.ifixit.com/News/4424/ipad-2-teardown">iFixit summary</a></span></p>
+  </section>
+
+  <section>
+    <h2>Under the microscope: the chips</h2>
+    <p>Wi-Fi model A1395 only. Teardown findings are <span class="badge b-likely">Likely</span> — direct physical evidence from iFixit's teardown, not manufacturer datasheets. <strong>Confirmed</strong> is reserved for the FCC filing.</p>
+    <div class="table-scroll">
+    <table class="chips">
+      <thead>
+        <tr><th>Chip</th><th>What it does</th><th>How we know</th><th>Dig deeper</th></tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><strong>Apple A5</strong><br><span class="partno">1 GHz dual-core SoC</span></td>
+          <td>The main processor — CPU, GPU, and memory interface on one Apple-designed package.</td>
+          <td><span class="badge b-likely">Likely</span> iFixit's teardown identifies the package. No public Apple datasheet exists — stated honestly.</td>
+          <td><a href="https://www.ifixit.com/Teardown/iPad+2+Wi-Fi+EMC+2415+Teardown/5071">iFixit teardown</a></td>
+        </tr>
+        <tr>
+          <td><strong>Samsung 512 MB RAM</strong><br><span class="partno">package-on-package</span></td>
+          <td>System memory, stacked on the A5 package.</td>
+          <td><span class="badge b-likely">Likely</span> iFixit's teardown marking identification.</td>
+          <td><a href="https://www.ifixit.com/Teardown/iPad+2+Wi-Fi+EMC+2415+Teardown/5071">iFixit teardown</a></td>
+        </tr>
+        <tr>
+          <td><strong>Toshiba TH58NVG7D2FLA89</strong><br><span class="partno">16 GB NAND (torn-down unit)</span></td>
+          <td>Flash storage. 32/64 GB options existed at other price points.</td>
+          <td><span class="badge b-likely">Likely</span> iFixit's teardown marking identification.</td>
+          <td><a href="https://www.ifixit.com/Teardown/iPad+2+Wi-Fi+EMC+2415+Teardown/5071">iFixit teardown</a></td>
+        </tr>
+        <tr>
+          <td><strong>Broadcom BCM43291HKUBC</strong></td>
+          <td>Wi-Fi/Bluetooth combo.</td>
+          <td><span class="badge b-likely">Likely</span> iFixit's teardown marking identification.</td>
+          <td><a href="https://www.ifixit.com/Teardown/iPad+2+Wi-Fi+EMC+2415+Teardown/5071">iFixit teardown</a></td>
+        </tr>
+        <tr>
+          <td><strong>Broadcom BCM5973KFBGH / BCM5974</strong></td>
+          <td>Touchscreen controllers.</td>
+          <td><span class="badge b-likely">Likely</span> iFixit's teardown marking identification.</td>
+          <td><a href="https://www.ifixit.com/Teardown/iPad+2+Wi-Fi+EMC+2415+Teardown/5071">iFixit teardown</a></td>
+        </tr>
+        <tr>
+          <td><strong>TI CD3240B0</strong></td>
+          <td>Power management / touchscreen-related TI part per the teardown.</td>
+          <td><span class="badge b-likely">Likely</span> iFixit's teardown marking identification.</td>
+          <td><a href="https://www.ifixit.com/Teardown/iPad+2+Wi-Fi+EMC+2415+Teardown/5071">iFixit teardown</a></td>
+        </tr>
+        <tr>
+          <td><strong>STMicro gyroscope + accelerometer</strong></td>
+          <td>Motion sensing — new on the iPad 2 versus the original.</td>
+          <td><span class="badge b-likely">Likely</span> iFixit's teardown marking identification.</td>
+          <td><a href="https://www.ifixit.com/News/4424/ipad-2-teardown">iFixit summary</a></td>
+        </tr>
+      </tbody>
+    </table>
+    </div>
+  </section>
+
+  <section>
+    <h2>The government's file</h2>
+    <p>This one is clean: the Wi-Fi model's FCC filing is <strong><span class="partno">BCGA1395</span></strong>, with the original grant dated <strong>2011-03-02</strong> and a Class II permissive change dated 2012-03-07. And the model-number discipline matters: the GSM (A1396) and CDMA (A1397) variants carry <em>separate</em> filings — the BCG prefix plus the model number is Apple's filing convention, and each radio configuration gets its own paperwork. <span class="badge b-confirmed">Confirmed</span> — straight from the filing record. <span class="src"><a href="https://fccid.io/BCGA1395">FCC filing BCG A1395</a></span></p>
+  </section>
+
+  <section>
+    <h2>Listening, not knocking</h2>
+    <p>Our posture: <strong>we listen, we don't knock.</strong> The iPad 2's documented path is Apple's own recovery procedure — recovery mode and restore via a computer, the manufacturer's sanctioned way back from a bad software state. Documenting that such a manufacturer procedure exists is the whole of this section: no button sequences published here, no instructions, no lock defeat. And the anti-theft line, stated once and finally: we do not bypass Activation Lock, and we never will — it protects stolen devices, and defeating it is not BareBoard's business. When an iPad 2 reaches our bench: visual inspection, battery voltage check against the 3.8 V / 25 Wh rating, and a documented restore test on a unit we own. Listening only. <span class="src"><a href="https://www.ifixit.com/Teardown/iPad+2+Wi-Fi+EMC+2415+Teardown/5071">iFixit teardown</a></span></p>
+  </section>
+
+  <section>
+    <h2>What we didn't do</h2>
+    <ul>
+      <li>No bench work yet: no disassembly, no battery test, no original-unit photos.</li>
+      <li>We performed no restore, no jailbreak, no baseband work — and publish no procedures for any of it.</li>
+      <li>We did not bypass Activation Lock or any passcode — and we never will.</li>
+      <li>Nothing here touches credentials, keys, or user data.</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>By the numbers</h2>
+    <ul>
+      <li><strong>Device:</strong> Apple iPad 2 — Wi-Fi A1395 (representative); GSM A1396; CDMA A1397 <span class="src"><a href="https://www.ifixit.com/Teardown/iPad+2+Wi-Fi+EMC+2415+Teardown/5071">iFixit teardown</a></span></li>
+      <li><strong>Launched:</strong> March 2011 · FCC grant 2011-03-02 <span class="src"><a href="https://fccid.io/BCGA1395">FCC filing</a></span></li>
+      <li><strong>SoC:</strong> Apple A5, 1 GHz dual-core (no public datasheet) <span class="src"><a href="https://www.ifixit.com/Teardown/iPad+2+Wi-Fi+EMC+2415+Teardown/5071">iFixit teardown</a></span></li>
+      <li><strong>Memory/storage:</strong> 512 MB RAM · 16/32/64 GB NAND <span class="src"><a href="https://www.ifixit.com/Teardown/iPad+2+Wi-Fi+EMC+2415+Teardown/5071">iFixit teardown</a></span></li>
+      <li><strong>Display:</strong> 9.7" 1024×768 · front VGA + rear 720p cameras <span class="src"><a href="https://www.ifixit.com/Teardown/iPad+2+Wi-Fi+EMC+2415+Teardown/5071">iFixit teardown</a></span></li>
+      <li><strong>Battery:</strong> 3.8 V, 25 Wh, three cells <span class="src"><a href="https://www.ifixit.com/Teardown/iPad+2+Wi-Fi+EMC+2415+Teardown/5071">iFixit teardown</a></span></li>
+      <li><strong>FCC:</strong> BCG A1395 (Wi-Fi) — Confirmed <span class="src"><a href="https://fccid.io/BCGA1395">FCC filing</a></span></li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>What awaits the bench</h2>
+    <ul>
+      <li>An iPad 2 of our own — model number, our photos, battery voltage against the 25 Wh rating.</li>
+      <li>A documented restore test on a unit we own, via Apple's own procedure.</li>
+      <li>Chip-marking photography to cross-check the teardown record.</li>
+      <li>The A5 die-shrink question: is our unit the original or the later 32 nm revision?</li>
+      <li>A regulatory-label photo to confirm the filing marks on the hardware itself.</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>Words to know</h2>
+    <p>Every term this page uses, in plain English. No prior knowledge required.</p>
+    <dl class="glossary">
+      <div><dt>System on a chip (SoC)</dt><dd>Processor, graphics, and more on one die. The A5 is Apple's second mobile SoC.</dd></div>
+      <div><dt>NAND flash</dt><dd>The non-volatile storage chips holding the operating system and your data.</dd></div>
+      <div><dt>Package-on-package</dt><dd>Stacking the RAM directly on top of the processor package — saves board space in thin devices.</dd></div>
+      <div><dt>Gyroscope / accelerometer</dt><dd>Motion sensors: the gyro measures rotation, the accelerometer measures tilt and movement. New on the iPad 2.</dd></div>
+      <div><dt>30-pin dock connector</dt><dd>Apple's wide pre-Lightning connector for charging, sync, and accessories.</dd></div>
+      <div><dt>Class II permissive change</dt><dd>An FCC filing update for a modified version of an already-approved device.</dd></div>
+      <div><dt>Activation Lock</dt><dd>Apple's anti-theft system tying a device to its owner's Apple Account. We document its existence; defeating it is out of scope, always.</dd></div>
+    </dl>
+  </section>
+
+  <section>
+    <h2>Sources &amp; confidence</h2>
+    <ul>
+      <li>Chip markings, battery rating, cameras, glued glass: iFixit's teardown and summary. High confidence as physical evidence — badges stay Likely, not Confirmed, since Apple publishes no datasheets.</li>
+      <li>FCC ID, grant date, Class II change: the FCC filing record. High confidence — Confirmed.</li>
+      <li>Model variants (A1395/A1396/A1397): the filing record and teardown. High confidence.</li>
+      <li>A5: no public datasheet — honestly marked as an information gap.</li>
+      <li>Anything not listed here is unknown until the bench says otherwise. We'll say so, out loud, when that's the case.</li>
+    </ul>
+    <p class="note">The device photo is a freely licensed stock photo, credited in its caption — not a photo of our own unit, because we don't have one yet.</p>
+    <p class="note"><strong>Legal note.</strong> BareBoard is an educational project. Everything on this page is our own writing based on public documents — our summaries, our analysis. We don't publish, host, or distribute firmware, keys, passwords, or credentials. Product names and trademarks belong to their respective owners and appear here only to identify the hardware. If you believe anything here infringes your rights, contact us and we'll address it promptly.</p>
+  </section>
+
+  <footer>
+    <p>BareBoard &mdash; a free educational resource. Device #071 of the Hot 100.</p>
+    <nav>
+      <a href="/autopsy/">All autopsies</a>
+      <a href="/">Home</a>
+    </nav>
+  </footer>
+</main>
+</body>
+</html>
