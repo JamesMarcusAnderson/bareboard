@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Autopsy 037: The NETGEAR Nighthawk R7000 &mdash; BareBoard</title>
+<meta name="description" content="BareBoard Autopsy 037: the NETGEAR Nighthawk R7000 AC1900 — the stealth-bomber router that became a third-party firmware legend. A public-records teardown.">
+<meta name="theme-color" content="#fbfbfc">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%231d1d1f'/%3E%3Ctext x='32' y='45' font-family='system-ui,-apple-system,sans-serif' font-size='36' font-weight='700' fill='white' text-anchor='middle'%3EB%3C/text%3E%3C/svg%3E">
+<link rel="stylesheet" href="/style.css">
+</head>
+<body>
+<header class="site-nav">
+  <div class="nav-inner">
+    <a class="brand" href="/">BareBoard</a>
+    <nav>
+      <a href="/about.html">About</a>
+      <a href="/autopsy/">Autopsy</a>
+      <a href="/hot-100.html">Hot 100</a>
+      <a href="/most-wanted.html">Most Wanted</a>
+      <a href="/support.html">Support</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <p class="kicker">The Autopsy Report &middot; Device #037</p>
+  <h1>The NETGEAR Nighthawk R7000</h1>
+  <p class="lede">The stealth-bomber router &mdash; three antennas, a 1&nbsp;GHz dual-core heart, and a second life in half the open-source firmware projects on earth.</p>
+
+  <section>
+    <h2>What is this thing?</h2>
+    <p>The <strong>NETGEAR Nighthawk R7000</strong> is a dual-band 802.11ac (&ldquo;Wi-Fi 5&rdquo;) router rated <strong>AC1900</strong> &mdash; 600&nbsp;Mbps on 2.4&nbsp;GHz plus 1300&nbsp;Mbps on 5&nbsp;GHz, 3&times;3 MIMO &mdash; with a 1&nbsp;GHz dual-core Broadcom SoC, five gigabit Ethernet ports, and two USB ports (one USB 3.0). It launched in late 2013 as the flagship of the Nighthawk line, and its angular black shell became one of the most recognizable router designs ever made. <span class="src"><a href="https://www.pcworld.com/article/447895/netgear-nighthawk-review-this-802-11ac-router-sets-lan-speed-records.html">PCWorld review</a></span> <span class="src"><a href="https://www.kitguru.net/peripherals/routers/leo-waldock/netgear-nighthawk-r7000-ac1900-review/3/">KitGuru review</a></span></p>
+    <p>It's also a third-party firmware legend: the R7000 runs DD-WRT, Tomato, and OpenWrt builds, and its longevity in the community rivals the WRT54G's. This report covers the R7000 under <strong>FCC ID PY313200233</strong> &mdash; an authorization it shares with the R6700 and the R6900v1, per the public record. <span class="src"><a href="https://www.fccpdf.com/PY3/PY313200233/3854174.pdf">FCC test report (mirror)</a></span></p>
+  </section>
+
+  <section>
+    <h2>Not on our bench (yet)</h2>
+    <p><strong>This device is not on our bench.</strong> We have never owned, opened, photographed, measured, or powered on the Nighthawk R7000. Everything in this report comes from <strong>public records</strong>: government filings, manufacturer documents, manuals, and credible public teardowns and hardware databases. Where a fact would require holding the hardware in our hands &mdash; our own photos, our measurements, our boot logs, the exact board revision of a future unit &mdash; we say so, out loud, and mark it unknown. Nothing here is presented as first-hand BareBoard evidence.</p>
+<p>That constraint is also the point: you can learn a remarkable amount about a device without ever touching it, because the public record is deep. What follows is everything the record could tell us &mdash; and an honest map of where the record runs out.</p>
+  </section>
+
+  <section>
+    <h2>A short history</h2>
+    <ol class="timeline">
+      <li><span class="when">2013-11</span>NETGEAR launches the <strong>Nighthawk R7000</strong> &mdash; AC1900, 1&nbsp;GHz dual-core, the angular &ldquo;stealth&rdquo; design &mdash; into a market about to be reshaped by 802.11ac. <span class="src"><a href="https://www.pcworld.com/article/447895/netgear-nighthawk-review-this-802-11ac-router-sets-lan-speed-records.html">PCWorld review</a></span></li>
+      <li><span class="when">2013&ndash;2014</span>Reviews praise its LAN throughput; the community discovers the R7000 is a superb third-party firmware host &mdash; DD-WRT, Tomato, and eventually OpenWrt all target it. <span class="src"><a href="https://www.pcworld.com/article/447895/netgear-nighthawk-review-this-802-11ac-router-sets-lan-speed-records.html">PCWorld review</a></span></li>
+      <li><span class="when">2016</span>A public &ldquo;how to unbrick the Nighthawk R7000&rdquo; thread documents the router's <strong>TFTP recovery mode</strong> &mdash; the manufacturer-adjacent escape hatch for bad flashes &mdash; in enough detail to prove the mode's existence in the public record. <span class="src"><a href="https://community.netgear.com/discussions/home-wifi-routers-nighthawk/how-to-unbrick-the-nighthawk-r7000-using-os-x-and-tftp/1643943/replies/1679394">NETGEAR community</a></span></li>
+      <li><span class="when">2018</span>A Class II-change test report for the R7000 is filed under <strong>PY313200233</strong> &mdash; 3TX/3RX, 12&nbsp;V/3.5&nbsp;A adapter &mdash; keeping the authorization current years after launch. <span class="src"><a href="https://www.fccpdf.com/PY3/PY313200233/3854174.pdf">FCC test report (mirror)</a></span></li>
+      </ol>
+  </section>
+
+  <section>
+    <h2>The outside</h2>
+    <p>The R7000 looks like nothing else on the shelf: a faceted black wedge with <strong>three tall external antennas</strong>, front LEDs for power, internet, 2.4&nbsp;GHz, 5&nbsp;GHz, USB, and LAN, and a rear panel with four gigabit LAN ports, one gigabit WAN, USB 3.0 + USB 2.0, power, a power switch, and the reset button. <span class="src"><a href="https://www.pcworld.com/article/447895/netgear-nighthawk-review-this-802-11ac-router-sets-lan-speed-records.html">PCWorld review</a></span></p>
+    <figure>
+      <img src="img/device.jpg" alt="Placeholder card — NETGEAR Nighthawk R7000 not yet on our bench">
+      <figcaption>Placeholder: this device isn't on our bench yet. When it is, this card becomes a real photograph.</figcaption>
+    </figure>
+    <p>The design language &mdash; sharp angles, matte black, oversized antennas &mdash; became the Nighthawk brand identity for a decade of successors.</p>
+  </section>
+
+  <section>
+    <h2>The board</h2>
+    <p>One board built around Broadcom's <strong>BCM4709A0</strong> &mdash; a 1&nbsp;GHz dual-core ARM Cortex-A9 SoC &mdash; with Samsung NAND flash for firmware and Samsung DDR3 for working memory, and the 2.4/5&nbsp;GHz radio chains built from Broadcom radios plus <strong>Skyworks SE2623L</strong> front-end modules. The public record describes 3-transmit/3-receive (3T3R) operation. <span class="src"><a href="https://www.fccpdf.com/PY3/PY313200233/3854174.pdf">FCC test report (mirror)</a></span> <span class="src"><a href="https://www.kitguru.net/peripherals/routers/leo-waldock/netgear-nighthawk-r7000-ac1900-review/3/">KitGuru review</a></span></p>
+    <p>Public third-party discussion documents a <strong>serial console</strong> used for unbricking, consistent with the board carrying an accessible UART header &mdash; third-party evidence only, no verified pinout. <span class="src"><a href="https://community.netgear.com/discussions/home-wifi-routers-nighthawk/how-to-unbrick-the-nighthawk-r7000-using-os-x-and-tftp/1643943/replies/1679394">NETGEAR community</a></span></p>
+  </section>
+
+  <section>
+    <h2>Under the microscope: the chips</h2>
+    <p>What's on the R7000 board, per the equipment-authorization exhibits and corroborating public records. <strong>Confirmed</strong> means a primary source &mdash; the FCC exhibits or the manufacturer record.</p>
+    <div class="table-scroll">
+        <table class="chips">
+        <thead><tr><th>Chip</th><th>What it does</th><th>How we know</th><th>Dig deeper</th></tr></thead>
+        <tbody>
+        <tr><td><strong>Broadcom BCM4709A0</strong></td><td>The main SoC &mdash; 1&nbsp;GHz dual-core ARM Cortex-A9 running the router, USB, and Ethernet.</td><td><span class="badge b-confirmed">Confirmed</span> Named in the FCC filing's public exhibits for PY313200233.</td><td><a href="https://www.fccpdf.com/PY3/PY313200233/3854174.pdf">FCC test report (mirror)</a></td></tr>
+        <tr><td><strong>Samsung K9F1G08U0D</strong><br><span class="partno">1&nbsp;Gb NAND</span></td><td>The flash chip holding the firmware (128&nbsp;MB).</td><td><span class="badge b-confirmed">Confirmed</span> Named in the FCC filing's public exhibits for PY313200233.</td><td><a href="https://www.fccpdf.com/PY3/PY313200233/3854174.pdf">FCC test report (mirror)</a></td></tr>
+        <tr><td><strong>Samsung K4B2G1646E-BCK0</strong><br><span class="partno">2&nbsp;Gb DDR3</span></td><td>Working memory for the SoC (256&nbsp;MB).</td><td><span class="badge b-confirmed">Confirmed</span> Named in the FCC filing's public exhibits for PY313200233.</td><td><a href="https://www.fccpdf.com/PY3/PY313200233/3854174.pdf">FCC test report (mirror)</a></td></tr>
+        <tr><td><strong>Skyworks SE2623L</strong></td><td>A 2.4&nbsp;GHz RF front-end module in the wireless chain.</td><td><span class="badge b-likely">Likely</span> Named in public hardware records for this model; exact placement not verified from a primary source.</td><td><a href="https://www.fccpdf.com/PY3/PY313200233/3854174.pdf">FCC test report (mirror)</a></td></tr>
+        </tbody>
+        </table>
+        </div>
+    <p>The 5&nbsp;GHz front-end parts and exact radio-chain part numbers are not verified from the public exhibits we could access. No public datasheets were located for the Broadcom SoC.</p>
+  </section>
+
+  <section id="fcc">
+    <h2>The government's file on this box</h2>
+    <p>The government's file on this router is public under <strong>FCC ID PY313200233</strong> &mdash; an authorization the R7000 shares with the R6700 and the R6900v1, per the public record. <span class="src"><a href="https://www.fccpdf.com/PY3/PY313200233/3854174.pdf">FCC test report (mirror)</a></span></p>
+    <ul>
+      <li><strong>What we read:</strong> a 2018 Class II-change test report for the R7000 under this ID &mdash; 3TX/3RX operation, powered by a 12&nbsp;V / 3.5&nbsp;A adapter. Its lab figures: about <strong>772&nbsp;mW</strong> conducted at 2.4&nbsp;GHz (CDD), <strong>279&nbsp;mW</strong> at 5.18&ndash;5.24&nbsp;GHz (CDD), and <strong>923&nbsp;mW</strong> at 5.745&ndash;5.825&nbsp;GHz (CDD), with separate beamforming figures in the report.</li>
+      <li><strong>Caveat:</strong> this is a Class II-change report, not necessarily the original grant &mdash; each number belongs to its own filing, and we don't blend them.</li>
+    </ul>
+    <p>Read the report yourself: <span class="src"><a href="https://www.fccpdf.com/PY3/PY313200233/3854174.pdf">test report (mirror)</a></span></p>
+  </section>
+
+  <section>
+    <h2>Service, recovery, and debug modes</h2>
+    <p>We listen, we don't knock: this section documents only that service or recovery modes <em>exist</em> in the public record, and what kind of thing they are &mdash; never how to defeat a lock.</p>
+    <p>Public third-party discussion documents a <strong>TFTP recovery mode</strong> on the R7000 &mdash; a bootloader-level state that accepts a firmware image over the network, used to recover from bad flashes. <span class="src"><a href="https://community.netgear.com/discussions/home-wifi-routers-nighthawk/how-to-unbrick-the-nighthawk-r7000-using-os-x-and-tftp/1643943/replies/1679394">NETGEAR community</a></span> Existence only: we describe that the mode exists in the public record, not a procedure.</p>
+    <p>The same public discussion references <strong>serial-console</strong> unbricking, implying an accessible UART header on the board. Third-party evidence only; location, pinout, and settings unverified.</p>
+  </section>
+
+  <section>
+    <h2>What the public record shows</h2>
+    <p><strong>The design <em>is</em> the product.</strong> Technically the R7000 is one of several Broadcom AC1900 routers &mdash; but the Nighthawk shell made it iconic, and iconography sells. The public record (launch reviews to a decade of successors) shows industrial design doing real market work.</p>
+    <p><strong>Community support is a second warranty.</strong> The R7000's third-party firmware scene &mdash; DD-WRT, Tomato, OpenWrt &mdash; kept these units useful and patched long past typical support windows. A router the community adopts is a router that refuses to become e-waste on schedule.</p>
+    <p><strong>Shared authorizations need reading carefully.</strong> One FCC ID covering the R7000, R6700, and R6900v1 means the filing's exhibits span related-but-different hardware &mdash; another case where &ldquo;the filing says&rdquo; needs a model name attached.</p>
+  </section>
+
+  <section>
+    <h2>What we didn't do</h2>
+    <ul>
+      <li>We never had a unit, so we took no photographs and no measurements.</li>
+      <li>We never opened an enclosure or lifted an RF shield.</li>
+      <li>We never captured a boot log or probed a debug port.</li>
+      <li>We never extracted, modified, redistributed, or ran the device's firmware.</li>
+      <li>We never defeated a lock, bypassed authentication, or recovered credentials or keys &mdash; and we publish none.</li>
+      <li>We never tested an exploit or a vulnerability against any device.</li>
+      <li>Anything below marked <strong>Unknown</strong> stays unknown until a unit reaches our bench.</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>By the numbers</h2>
+    <ul>
+      <li><strong>Device:</strong> NETGEAR Nighthawk R7000 (AC1900)</li>
+      <li><strong>Era:</strong> 2013&ndash;present</li>
+      <li><strong>FCC ID:</strong> PY313200233 (shared with R6700, R6900v1 per the public record)</li>
+      <li><strong>Wireless:</strong> AC1900 &mdash; 600&nbsp;Mbps @ 2.4&nbsp;GHz + 1300&nbsp;Mbps @ 5&nbsp;GHz, 3&times;3 MIMO</li>
+      <li><strong>Conducted power (2018 report, CDD):</strong> ~772&nbsp;mW @ 2.4&nbsp;GHz; ~279&nbsp;mW @ 5.18&ndash;5.24&nbsp;GHz; ~923&nbsp;mW @ 5.745&ndash;5.825&nbsp;GHz</li>
+      <li><strong>Main chip:</strong> Broadcom BCM4709A0, 1&nbsp;GHz dual-core ARM Cortex-A9</li>
+      <li><strong>Memory:</strong> 256&nbsp;MB RAM; 128&nbsp;MB flash</li>
+      <li><strong>Ports:</strong> 4&times; gigabit LAN, 1&times; gigabit WAN, USB 3.0 + USB 2.0</li>
+      <li><strong>Power:</strong> 12&nbsp;V / 3.5&nbsp;A adapter</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>Words to know</h2>
+    <p>Every term this page uses, in plain English. No prior knowledge required.</p>
+    <dl class="glossary">
+      <div><dt>AC1900</dt><dd>A speed class: up to ~600&nbsp;Mbps on 2.4&nbsp;GHz plus ~1300&nbsp;Mbps on 5&nbsp;GHz, added together for marketing. Real-world speeds are lower.</dd></div>
+      <div><dt>MIMO</dt><dd>Multiple-input, multiple-output: using several antennas and radio chains at once to move more data. 3&times;3 means three streams each way.</dd></div>
+      <div><dt>CDD / beamforming</dt><dd>Two ways of using multiple antennas: cyclic-delay diversity (CDD) spreads the signal for robustness; beamforming focuses it toward the client.</dd></div>
+      <div><dt>TFTP recovery</dt><dd>A bootloader mode that pulls a firmware image over the local network &mdash; a last resort when the normal software won't boot.</dd></div>
+      <div><dt>UART / serial console</dt><dd>A simple port that lets you watch a device narrate its own startup, line by line.</dd></div>
+      <div><dt>Class II change</dt><dd>An FCC filing for a modification to an already-authorized device &mdash; new report, same ID.</dd></div>
+      <div><dt>FCC ID</dt><dd>The ID the FCC assigns to each approved wireless product. Punch it into fccid.io and the whole public filing comes up.</dd></div>
+    </dl>
+  </section>
+
+  <section>
+    <h2>Sources &amp; confidence</h2>
+    <ul>
+      <li>FCC test report (2018, Class II change) under PY313200233 &mdash; 3TX/3RX, 12&nbsp;V/3.5&nbsp;A adapter, conducted powers ~772/~279/~923&nbsp;mW (CDD) plus beamforming figures: read via a public mirror of the FCC document. High confidence; each figure tied to its report.</li>
+      <li>Chip identities (BCM4709A0, Samsung NAND/DDR3): the authorization's public exhibits. High confidence. Skyworks SE2623L: public hardware records, medium confidence.</li>
+      <li>Launch, design, and performance context: PCWorld and KitGuru contemporary reviews. High confidence in attribution.</li>
+      <li>TFTP recovery mode and serial-console unbricking: NETGEAR community thread. Medium confidence; existence only, no procedure reproduced.</li>
+      <li>R6700/R6900v1 sharing the authorization: the public record. Medium-high confidence.</li>
+    </ul>
+    <p class="note">Anything not listed here is unknown until the bench says otherwise. We'll say so, out loud, when that's the case.</p>
+    <p class="note"><strong>Legal note.</strong> BareBoard is an educational project. This page is built entirely from public records &mdash; government filings, manufacturer documents, and published third-party research &mdash; about hardware we have never possessed. We don't publish, host, or distribute firmware, keys, passwords, or credentials, and nothing here is instructions for defeating a lock or an authentication check. Product names and trademarks belong to their respective owners and appear here only to identify the hardware. If you believe anything here infringes your rights, contact us and we'll address it promptly.</p>
+  </section>
+
+  <footer>
+    <p>BareBoard &mdash; a free educational resource. Device #037 of the Hot 100.</p>
+    <nav>
+      <a href="/autopsy/">All autopsies</a>
+      <a href="/">Home</a>
+    </nav>
+  </footer>
+</main>
+</body>
+</html>
