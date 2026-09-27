@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Autopsy 022: The 2015 Chromecast (2nd gen) — BareBoard</title>
+<meta name="description" content="BareBoard Autopsy 022: a plain-English hardware autopsy of Google's 2015 second-generation Chromecast (model NC2-6A5) — the puck that brought 5 GHz Wi-Fi to the $35 dongle. Public records edition: not yet on our bench.">
+<meta name="theme-color" content="#fbfbfc">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%231d1d1f'/%3E%3Ctext x='32' y='45' font-family='system-ui,-apple-system,sans-serif' font-size='36' font-weight='700' fill='white' text-anchor='middle'%3EB%3C/text%3E%3C/svg%3E">
+<link rel="stylesheet" href="/style.css">
+</head>
+<body>
+<header class="site-nav">
+  <div class="nav-inner">
+    <a class="brand" href="/">BareBoard</a>
+    <nav>
+      <a href="/about.html">About</a>
+      <a href="/autopsy/">Autopsy</a>
+      <a href="/hot-100.html">Hot 100</a>
+      <a href="/most-wanted.html">Most Wanted</a>
+      <a href="/support.html">Support</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <p class="kicker">The Autopsy Report · Device #022</p>
+  <h1>The 2015 Chromecast</h1>
+  <p class="lede">The little puck that turned any TV with an HDMI port into a smart TV — rebuilt in 2015 with a round body, faster Wi-Fi, and three antennas. This is the public-records edition: we haven't opened one yet, but the paperwork already tells quite a story.</p>
+
+  <section>
+    <h2>What is this thing?</h2>
+    <p>The second-generation Chromecast is Google's <strong>media-streaming dongle</strong>: it plugs into your TV's HDMI port, joins your Wi-Fi, and plays whatever your phone, tablet, or computer tells it to — YouTube, Netflix, Spotify, and the rest — without needing a remote of its own. It runs a simplified version of Chrome OS under the hood. <span class="src"><a href="https://en.wikipedia.org/wiki/Chromecast">Chromecast overview</a></span></p>
+    <p>This one is model <strong>NC2-6A5</strong> — the round 2015 redesign, sold in black, coral, and lemonade. Don't confuse it with the later <strong>NC2-6A5B</strong>, which is the third-generation model from 2018. <span class="src"><a href="https://en.wikipedia.org/wiki/Chromecast">Chromecast model comparison</a></span></p>
+  </section>
+
+  <section>
+    <h2>Whose box is this?</h2>
+    <p><strong>Not ours — not yet.</strong> No unit of this device is on our bench. We haven't bought one, opened one, photographed one's insides, or listened to one boot. Everything on this page comes from public records: FCC filings, published teardowns, launch coverage, and a freely-licensed stock photo credited below. When a unit lands on our bench, this report gets a second edition with our own photos, measurements, and boot log.</p>
+  </section>
+
+  <section>
+    <h2>A short history</h2>
+    <ol class="timeline">
+      <li><span class="when">July 2013</span>The original Chromecast launches at $35 and sells out almost immediately — Google's surprise hit of the year. <span class="src"><a href="https://en.wikipedia.org/wiki/Chromecast">Chromecast</a></span></li>
+      <li><span class="when">September 2015</span>Google announces the second-generation Chromecast alongside Chromecast Audio: a bold circular design, three adaptive antennas, dual-band 802.11ac Wi-Fi, and a "Fast Play" feature for quicker connections. It goes on sale the same day in 17 countries for $35. <span class="src"><a href="https://9to5google.com/2015/09/29/google-unveils-the-2nd-generation-chromecast-w-better-wifi-feeds-fast-play-more/">9to5Google</a></span> <span class="src"><a href="https://venturebeat.com/mobile/google-announces-the-new-chromecast-audio-and-chromecast-2">VentureBeat</a></span></li>
+      <li><span class="when">September 2015</span>The FCC filing (ID <strong>A4RNC2-6A5</strong>) is submitted, with the original equipment grant following on September 9. <span class="src"><a href="https://fccid.io/A4RNC2-6A5">FCC filing</a></span></li>
+      <li><span class="when">October 2015</span>Teardowns appear within days of launch, identifying the Marvell silicon inside. <span class="src"><a href="https://www.edn.com/the-google-chromecast-gen-2-2015-a-form-factor-redesign-with-beefier-wi-fi-too/">EDN teardown</a></span> <span class="src"><a href="https://9to5google.com/2015/10/07/chromecast-2-chromecast-audio-teardown/">9to5Google teardown</a></span></li>
+      <li><span class="when">October 2018</span>Google discontinues the second generation, replaced by the third-gen model (NC2-6A5B). <span class="src"><a href="https://en.wikipedia.org/wiki/Chromecast">Chromecast</a></span></li>
+      <li><span class="when">August 2024</span>Google retires the entire Chromecast line in favor of the Google TV Streamer. <span class="src"><a href="https://en.wikipedia.org/wiki/Chromecast">Chromecast</a></span></li>
+    </ol>
+  </section>
+
+  <section>
+    <h2>The outside</h2>
+    <p>The 2015 redesign ditched the first generation's USB-stick shape for a <strong>flat circular puck</strong> — about 52&nbsp;mm across — with a short HDMI cable looped out of its body so it hangs neatly behind the TV instead of jutting out rigidly. It came in black, coral (red), and lemonade (yellow), with a micro-USB port for power. <span class="src"><a href="https://venturebeat.com/mobile/google-announces-the-new-chromecast-audio-and-chromecast-2">VentureBeat</a></span></p>
+    <figure>
+      <img src="img/device.jpg" alt="Second-generation Google Chromecast puck with its attached HDMI cable">
+      <figcaption>Stock photo: the round 2015 Chromecast. Photo: <a href="https://commons.wikimedia.org/wiki/File:Chromecast_(2nd_generation).JPG">Mess</a>, <a href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a>, via Wikimedia Commons. Our own photos arrive when a unit reaches our bench.</figcaption>
+    </figure>
+  </section>
+
+  <section>
+    <h2>The board</h2>
+    <p>We haven't held this board ourselves, so this is the teardowns' account, not ours. Published teardowns of the 2015 Chromecast show a <strong>single small round circuit board</strong> dominated by the Marvell system-on-a-chip, a separate Marvell Wi-Fi chip, Samsung RAM, and Toshiba flash storage. The 2015 model's headline hardware change was the radio: three adaptive antennas and dual-band 802.11ac Wi-Fi (2.4&nbsp;GHz and 5&nbsp;GHz), up from the original's single-band radio. <span class="src"><a href="https://www.edn.com/the-google-chromecast-gen-2-2015-a-form-factor-redesign-with-beefier-wi-fi-too/">EDN teardown</a></span> <span class="src"><a href="https://9to5google.com/2015/10/07/chromecast-2-chromecast-audio-teardown/">9to5Google teardown</a></span></p>
+    <p>One caution from the teardowns: the 2015 Chromecast 2 and the Chromecast Audio launched the same day and share DNA, but they are different devices with different boards. The chip list below is for the video Chromecast (NC2-6A5) only. <span class="src"><a href="https://9to5google.com/2015/10/07/chromecast-2-chromecast-audio-teardown/">9to5Google teardown</a></span></p>
+  </section>
+
+  <section>
+    <h2>Under the microscope: the chips</h2>
+    <p>What's on the board according to published teardowns, what each part does, and how sure we are. <strong>Confirmed</strong> means a primary source (the manufacturer, the FCC, or our own bench) verifies it. <strong>Likely</strong> means public hardware records agree on it, but we haven't verified it ourselves. Every row links somewhere you can read more.</p>
+    <div class="table-scroll">
+    <table class="chips">
+      <thead>
+        <tr><th>Chip</th><th>What it does</th><th>How we know</th><th>Dig deeper</th></tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><strong>Marvell 88DE3006</strong><br><span class="partno">Armada 1500 Mini Plus</span></td>
+          <td>The main processor — a dual-core ARM Cortex-A7. Runs the whole dongle.</td>
+          <td><span class="badge b-likely">Likely</span> Named by both published teardowns and by Marvell's own announcement of the Google partnership.</td>
+          <td><a href="http://usdailyreview.com/marvell-and-google-team-up-on-new-chromecast-2-0/">Marvell/Google announcement (mirror)</a></td>
+        </tr>
+        <tr>
+          <td><strong>Marvell 88W8887</strong></td>
+          <td>The Wi-Fi radio — dual-band 802.11ac with the three-antenna array.</td>
+          <td><span class="badge b-likely">Likely</span> Named by published teardowns and the Marvell announcement.</td>
+          <td><a href="https://www.edn.com/the-google-chromecast-gen-2-2015-a-form-factor-redesign-with-beefier-wi-fi-too/">EDN teardown</a></td>
+        </tr>
+        <tr>
+          <td><strong>Samsung K4B4G1646D-BY</strong></td>
+          <td>The RAM — 512&nbsp;MB of DDR3L, the dongle's short-term workspace.</td>
+          <td><span class="badge b-likely">Likely</span> Marking reported by published teardowns; capacity corroborated by spec listings.</td>
+          <td><a href="https://camdsmith.github.io/assets/docs/K4B4G1646E.PDF">Family datasheet (third-party mirror)</a></td>
+        </tr>
+        <tr>
+          <td><strong>Toshiba TC58NVG1S3H</strong></td>
+          <td>The flash storage — 256&nbsp;MB, where the device's software lives when the power is off.</td>
+          <td><span class="badge b-likely">Likely</span> Marking reported by published teardowns; capacity corroborated by spec listings.</td>
+          <td><a href="https://9to5google.com/2015/10/07/chromecast-2-chromecast-audio-teardown/">9to5Google teardown</a></td>
+        </tr>
+      </tbody>
+    </table>
+    </div>
+    <p>Datasheet note: Marvell never published public datasheets for the 88DE3006 or 88W8887 — that's a documentation gap in the industry, not in the research. No manufacturer or archive.org datasheet was found for the Samsung or Toshiba parts either; the link above is a third-party mirror of the Samsung family datasheet, labeled as such. If you know of an official source, tell us and we'll upgrade the link.</p>
+  </section>
+
+  <section id="fcc">
+    <h2>The government's file on this box</h2>
+    <p>Before Google could sell the 2015 Chromecast in the United States, it filed with the Federal Communications Commission under <strong>FCC ID: A4RNC2-6A5</strong> ("A4R" is Google's grantee code). The original equipment applications are dated <strong>September 9, 2015</strong> — twenty days before the public announcement. <span class="src"><a href="https://fccid.io/A4RNC2-6A5">FCC filing</a></span></p>
+    <p>What's in the file:</p>
+    <ul>
+      <li><strong>Internal and external photos</strong> — submitted September 8, 2015 and kept confidential until March 7, 2016, so the public couldn't peek before launch. They are the earliest public pictures of this hardware's insides.</li>
+      <li><strong>Test reports</strong> — the lab measurements: Bluetooth Low Energy at about 4&nbsp;mW, the 2.4&nbsp;GHz Wi-Fi radio up to about 79&nbsp;mW, and 5&nbsp;GHz entries up to about 44&nbsp;mW. Boring to read, useful as independent confirmation of the radios.</li>
+      <li><strong>The user manual and label paperwork.</strong></li>
+      <li><strong>What's missing.</strong> The schematics, the block diagram, and the operational description are listed but not publicly available — Google requested confidentiality, and the FCC agreed. Public photos, private blueprints.</li>
+    </ul>
+    <p>Browse the file yourself: <a href="https://fccid.io/A4RNC2-6A5">filing page</a></p>
+  </section>
+
+  <section>
+    <h2>Listening to it boot</h2>
+    <p>We haven't — there is no unit on our bench, so there is no boot log, no serial capture, nothing. That section gets written the day one arrives.</p>
+    <p>Our rule for debug ports, whenever we do meet this hardware: <strong>we listen, we don't knock.</strong> If the board exposes a serial console, we'll connect a read-only listener and record what the device volunteers about its own startup — and publish that. We won't use it to break in, dump firmware, or bypass anything. Public teardowns we reviewed don't document a debug header on this board, so even the existence of a console is currently unknown — it awaits the bench.</p>
+  </section>
+
+  <section>
+    <h2>What we found</h2>
+    <p><strong>The 2015 Chromecast is a Marvell shop through and through.</strong> Both the application processor and the Wi-Fi radio are Marvell parts — the 88DE3006 and 88W8887 — a pairing Marvell itself announced alongside the Chromecast 2.0 launch. That's a clean, well-documented bill of materials for a $35 device. <span class="src"><a href="http://usdailyreview.com/marvell-and-google-team-up-on-new-chromecast-2-0/">Marvell/Google announcement (mirror)</a></span></p>
+    <p><strong>Don't buy a "2nd gen" that says NC2-6A5B.</strong> Sellers routinely mix up the model numbers: NC2-6A5 is this device (2015), NC2-6A5B is the third generation (2018). If you're hunting one for a collection or a project, check the label. <span class="src"><a href="https://en.wikipedia.org/wiki/Chromecast">Chromecast model comparison</a></span></p>
+  </section>
+
+  <section>
+    <h2>What we didn't do</h2>
+    <ul>
+      <li>This device is <strong>not on our bench</strong>. We have not disassembled one.</li>
+      <li>We captured <strong>no boot log</strong> and ran <strong>no bench tests</strong>.</li>
+      <li>We have not <strong>touched, extracted, modified, or shared</strong> this device's firmware.</li>
+      <li>We have not probed any debug interface on it — none is publicly documented for this board.</li>
+      <li>The product photo above is a freely-licensed stock image, credited in its caption — not our photography.</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>By the numbers</h2>
+    <ul>
+      <li><strong>Model:</strong> Google Chromecast 2nd gen (2015), NC2-6A5</li>
+      <li><strong>FCC ID:</strong> A4RNC2-6A5 (original grant September 9, 2015)</li>
+      <li><strong>Main chip:</strong> Marvell 88DE3006 "Armada 1500 Mini Plus" — dual-core ARM Cortex-A7 @ 1.2&nbsp;GHz</li>
+      <li><strong>Memory:</strong> 512&nbsp;MB DDR3L RAM, 256&nbsp;MB flash storage</li>
+      <li><strong>Networking:</strong> Dual-band 802.11ac Wi-Fi (2.4/5&nbsp;GHz), three adaptive antennas, Bluetooth LE</li>
+      <li><strong>Launched:</strong> September 29, 2015, at $35, in 17 countries</li>
+      <li><strong>Colors:</strong> Black, coral, lemonade</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>Words to know</h2>
+    <p>Every term this page uses, in plain English. No prior knowledge required.</p>
+    <dl class="glossary">
+      <div><dt>System on a chip (SoC)</dt><dd>The whole computer — processor and friends — on one piece of silicon.</dd></div>
+      <div><dt>Dongle</dt><dd>A small device that plugs directly into another device's port — here, an HDMI stick for your TV.</dd></div>
+      <div><dt>802.11ac</dt><dd>A Wi-Fi standard generation. The "ac" in this box means it can use the faster, less crowded 5&nbsp;GHz band.</dd></div>
+      <div><dt>Flash storage</dt><dd>The chip that holds the device's software when the power is off.</dd></div>
+      <div><dt>Boot log</dt><dd>The text a device prints as it starts up. Engineers read it to see what's inside without opening anything.</dd></div>
+      <div><dt>UART / serial console</dt><dd>A simple port that lets you watch a device narrate its own startup, line by line.</dd></div>
+      <div><dt>Firmware</dt><dd>The software baked into the device — the part that runs before anything else.</dd></div>
+      <div><dt>FCC</dt><dd>The Federal Communications Commission — the U.S. agency that regulates anything that transmits radio. Every wireless gadget sold here has to pass its tests first.</dd></div>
+      <div><dt>FCC ID</dt><dd>The ID the FCC assigns to each approved wireless product. The first few characters are the company's grantee code; the rest is the maker's model code. Punch it into fccid.io and the whole public filing comes up.</dd></div>
+    </dl>
+  </section>
+
+  <section>
+    <h2>Sources &amp; confidence</h2>
+    <ul>
+      <li>Launch details (date, price, countries, features): contemporaneous launch coverage. High confidence.</li>
+      <li>Chip identities: two published teardowns plus Marvell's partnership announcement agree. Medium-high confidence; still <span class="badge b-likely">Likely</span> until our bench confirms.</li>
+      <li>FCC details (grant date, power levels, confidentiality): the public filing at fccid.io, reviewed September 2026. High confidence.</li>
+      <li>Model-number distinction (NC2-6A5 vs NC2-6A5B): public model comparison. High confidence.</li>
+      <li>No debug-port documentation found in the public teardowns reviewed. If one is documented somewhere we missed, tell us.</li>
+      <li>Anything not listed here is unknown until the bench says otherwise. We'll say so, out loud, when that's the case.</li>
+    </ul>
+    <p class="note"><strong>Public-records edition.</strong> This device is not on our bench. No disassembly, no boot log, no bench testing, and no firmware touched, extracted, modified, or shared. The stock photo is freely licensed and credited in its caption.</p>
+    <p class="note"><strong>Legal note.</strong> BareBoard is an educational project. Everything on this page is assembled from public records and freely-licensed photography credited in its caption. We don't publish, host, or distribute firmware, keys, passwords, or credentials. Product names and trademarks belong to their respective owners and appear here only to identify the hardware. If you believe anything here infringes your rights, contact us and we'll address it promptly.</p>
+  </section>
+
+  <footer>
+    <p>BareBoard &mdash; a free educational resource. Device #022 of the Hot 100.</p>
+    <nav>
+      <a href="/autopsy/">All autopsies</a>
+      <a href="/">Home</a>
+    </nav>
+  </footer>
+</main>
+</body>
+</html>
