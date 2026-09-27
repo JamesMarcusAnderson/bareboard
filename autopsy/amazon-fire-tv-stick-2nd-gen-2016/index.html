@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Autopsy 041: The Amazon Fire TV Stick (2nd Gen, 2016) &mdash; BareBoard</title>
+<meta name="description" content="BareBoard Autopsy 041: the Amazon Fire TV Stick 2nd generation — the $40 dongle that put streaming in every HDMI port. A public-records teardown.">
+<meta name="theme-color" content="#fbfbfc">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%231d1d1f'/%3E%3Ctext x='32' y='45' font-family='system-ui,-apple-system,sans-serif' font-size='36' font-weight='700' fill='white' text-anchor='middle'%3EB%3C/text%3E%3C/svg%3E">
+<link rel="stylesheet" href="/style.css">
+</head>
+<body>
+<header class="site-nav">
+  <div class="nav-inner">
+    <a class="brand" href="/">BareBoard</a>
+    <nav>
+      <a href="/about.html">About</a>
+      <a href="/autopsy/">Autopsy</a>
+      <a href="/hot-100.html">Hot 100</a>
+      <a href="/most-wanted.html">Most Wanted</a>
+      <a href="/support.html">Support</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <p class="kicker">The Autopsy Report &middot; Device #041</p>
+  <h1>The Amazon Fire TV Stick (2nd Gen, 2016)</h1>
+  <p class="lede">Forty dollars, one HDMI port, and a whole streaming war inside &mdash; the dongle that made &lsquo;just plug it in&rsquo; the default answer to TV.</p>
+
+  <section>
+    <h2>What is this thing?</h2>
+    <p>The <strong>Amazon Fire TV Stick (2nd generation, 2016)</strong> is an HDMI streaming dongle: plug it into a TV's HDMI port, power it over USB, and it turns any screen into a Fire OS smart TV &mdash; 1080p video with HEVC, dual-band 802.11ac Wi-Fi, and Bluetooth for the Alexa voice remote. It launched at $40 and sold in the tens of millions, becoming the default &ldquo;make my TV smart&rdquo; answer. <span class="src"><a href="https://www.geeky-gadgets.com/new-amazon-fire-tv-stick-29-09-2016/">Geeky Gadgets (specs)</a></span> <span class="src"><a href="https://www.flatpanelshd.com/review.php?subaction=showfull&amp;id=1494573409">FlatpanelsHD (review)</a></span></p>
+    <p>This is the <strong>2016 second generation</strong> &mdash; not the 2014 original, and not the later 4K models. Its U.S. wireless authorization is <strong>FCC ID 2AE6S-0948</strong>, described in the grant as an &ldquo;HDMI Digital Media Receiver.&rdquo; <span class="src"><a href="https://fccid.io/2AE6S-0948">FCC filing</a></span></p>
+  </section>
+
+  <section>
+    <h2>Not on our bench (yet)</h2>
+    <p><strong>This device is not on our bench.</strong> We have never owned, opened, photographed, measured, or powered on the Fire TV Stick (2nd gen). Everything in this report comes from <strong>public records</strong>: government filings, manufacturer documents, manuals, and credible public teardowns and hardware databases. Where a fact would require holding the hardware in our hands &mdash; our own photos, our measurements, our boot logs, the exact board revision of a future unit &mdash; we say so, out loud, and mark it unknown. Nothing here is presented as first-hand BareBoard evidence.</p>
+<p>That constraint is also the point: you can learn a remarkable amount about a device without ever touching it, because the public record is deep. What follows is everything the record could tell us &mdash; and an honest map of where the record runs out.</p>
+  </section>
+
+  <section>
+    <h2>A short history</h2>
+    <ol class="timeline">
+      <li><span class="when">2016-09-14</span>The FCC grants equipment authorization <strong>2AE6S-0948</strong> to Amazon.com, Inc. for the &ldquo;HDMI Digital Media Receiver&rdquo; &mdash; the 2nd-gen Fire TV Stick. <span class="src"><a href="https://fccid.io/2AE6S-0948">FCC filing</a></span></li>
+      <li><span class="when">2016-10</span>The 2nd-gen Stick launches at $40: quad-core SoC, 802.11ac, HEVC 1080p, Alexa voice remote &mdash; a large step up from the 2014 original. <span class="src"><a href="https://www.geeky-gadgets.com/new-amazon-fire-tv-stick-29-09-2016/">Geeky Gadgets</a></span> <span class="src"><a href="https://www.flatpanelshd.com/review.php?subaction=showfull&amp;id=1494573409">FlatpanelsHD</a></span></li>
+      <li><span class="when">2016&ndash;2018</span>The Stick becomes the best-selling streaming device in its class; Amazon's forum staff confirm the <strong>factory-reset</strong> path for the 2nd generation in support threads. <span class="src"><a href="https://www.amazonforum.com/s/question/0D54P00007JKM0ESAX/i-have-an-amazon-fire-tv-stick-2nd-generation-and-i-cant-get-it-to-update-the-software">Amazon forum (staff)</a></span></li>
+      </ol>
+  </section>
+
+  <section>
+    <h2>The outside</h2>
+    <p>A black plastic stick about the size of a pack of gum: HDMI plug on one end, micro-USB power on the side, and a single LED. It hangs off the back of the TV, usually out of sight &mdash; the whole point is that the hardware disappears and only the interface remains. The Alexa voice remote (Bluetooth) is the part you actually touch. <span class="src"><a href="https://www.geeky-gadgets.com/new-amazon-fire-tv-stick-29-09-2016/">Geeky Gadgets</a></span></p>
+    <figure>
+      <img src="img/device.jpg" alt="Placeholder card — Fire TV Stick (2nd gen) not yet on our bench">
+      <figcaption>Placeholder: this device isn't on our bench yet. When it is, this card becomes a real photograph.</figcaption>
+    </figure>
+    <p>Forty dollars of deliberate invisibility: no vents to photograph, no ports to map, no switches at all.</p>
+  </section>
+
+  <section>
+    <h2>The board</h2>
+    <p>Here's the honest version for the board section too: <strong>no confirmed public internal photos</strong> of the 2nd-gen Stick were located in the accessible record, and no verified source names the exact board layout or debug interfaces. The public spec record &mdash; widely reported at launch and consistent across reviews &mdash; describes a <strong>MediaTek MT8127D</strong> quad-core 1.3&nbsp;GHz SoC with Mali-450 MP4 graphics, 1&nbsp;GB of RAM, and 8&nbsp;GB of storage. <span class="src"><a href="https://www.geeky-gadgets.com/new-amazon-fire-tv-stick-29-09-2016/">Geeky Gadgets</a></span> <span class="src"><a href="https://www.flatpanelshd.com/review.php?subaction=showfull&amp;id=1494573409">FlatpanelsHD</a></span></p>
+    <p>That spec attribution is <strong>Likely, not Confirmed</strong>: it's the consensus of the launch press, not a primary hardware source. Board layout, flash/RAM part numbers, and debug interfaces are unknown until a unit reaches a bench.</p>
+  </section>
+
+  <section>
+    <h2>Under the microscope: the chips</h2>
+    <p>What the public record says is inside the 2nd-gen Stick. The chipset attribution is launch-press consensus &mdash; badged honestly as Likely.</p>
+    <div class="table-scroll">
+        <table class="chips">
+        <thead><tr><th>Chip</th><th>What it does</th><th>How we know</th><th>Dig deeper</th></tr></thead>
+        <tbody>
+        <tr><td><strong>MediaTek MT8127D</strong></td><td>The application processor &mdash; quad-core 1.3&nbsp;GHz with Mali-450 MP4 graphics, per the launch spec record.</td><td><span class="badge b-likely">Likely</span> Widely reported at launch and consistent across reviews; no primary hardware source located.</td><td><a href="https://www.geeky-gadgets.com/new-amazon-fire-tv-stick-29-09-2016/">Geeky Gadgets</a></td></tr>
+        <tr><td><strong>RAM: 1&nbsp;GB</strong></td><td>Working memory.</td><td><span class="badge b-likely">Likely</span> Launch spec record; no primary hardware source located.</td><td><a href="https://www.flatpanelshd.com/review.php?subaction=showfull&amp;id=1494573409">FlatpanelsHD</a></td></tr>
+        <tr><td><strong>Storage: 8&nbsp;GB</strong></td><td>App and system storage.</td><td><span class="badge b-likely">Likely</span> Launch spec record; no primary hardware source located.</td><td><a href="https://www.flatpanelshd.com/review.php?subaction=showfull&amp;id=1494573409">FlatpanelsHD</a></td></tr>
+        </tbody>
+        </table>
+        </div>
+    <p>No confirmed internal photos, no exact board layout, no verified debug interface, no part markings. This is the thinnest board section in the batch, and it says so.</p>
+  </section>
+
+  <section id="fcc">
+    <h2>The government's file on this box</h2>
+    <p>The government's file on this dongle is public under <strong>FCC ID 2AE6S-0948</strong>, granted to <strong>Amazon.com, Inc.</strong> on <strong>September 14, 2016</strong>, described as an &ldquo;HDMI Digital Media Receiver.&rdquo; <span class="src"><a href="https://fccid.io/2AE6S-0948">FCC filing</a></span></p>
+    <ul>
+      <li><strong>Lab power figures (filing-specific):</strong> conducted outputs around <strong>99.5/99.8&nbsp;mW</strong> in 5&nbsp;GHz and <strong>532.1&nbsp;mW</strong> at 2.4&nbsp;GHz, plus lower Bluetooth figures &mdash; each tied to its own grant.</li>
+      <li><strong>Radios:</strong> dual-band 802.11ac Wi-Fi plus Bluetooth 4.1 (for the voice remote).</li>
+    </ul>
+    <p>Browse it yourself: <span class="src"><a href="https://fccid.io/2AE6S-0948">filing page</a></span></p>
+  </section>
+
+  <section>
+    <h2>Service, recovery, and debug modes</h2>
+    <p>We listen, we don't knock: this section documents only that service or recovery modes <em>exist</em> in the public record, and what kind of thing they are &mdash; never how to defeat a lock.</p>
+    <p>Amazon's own forum staff confirm a <strong>factory-reset</strong> path for the 2nd-generation Stick &mdash; a manufacturer-supported recovery mode whose purpose is erasing user data and restoring defaults. <span class="src"><a href="https://www.amazonforum.com/s/question/0D54P00007JKM0ESAX/i-have-an-amazon-fire-tv-stick-2nd-generation-and-i-cant-get-it-to-update-the-software">Amazon forum (staff)</a></span> Existence and purpose only; no button-procedure detail reproduced here.</p>
+    <p>We found <strong>no public record of a serial console, bootloader mode, or other debug interface</strong> for this device. Unknown until a bench says otherwise.</p>
+  </section>
+
+  <section>
+    <h2>What the public record shows</h2>
+    <p><strong>The dongle ate the set-top box.</strong> The 2nd-gen Stick's public record &mdash; $40, 1080p HEVC, voice remote, tens of millions sold &mdash; marks the moment streaming hardware became disposable-priced. The hardware got so cheap it stopped being the product; the store and the subscription became the product.</p>
+    <p><strong>Invisibility is a design choice.</strong> No vents, no ports, no switches, no status display &mdash; the Stick is engineered to vanish behind the TV. That same invisibility is why the public hardware record is thin: there's almost nothing to photograph and nobody to photograph it for.</p>
+    <p><strong>Thin record, stated plainly.</strong> This is the least-sourced board section in the batch: no confirmed internal photos, chipset on press consensus. We publish the gap instead of papering over it.</p>
+  </section>
+
+  <section>
+    <h2>What we didn't do</h2>
+    <ul>
+      <li>We never had a unit, so we took no photographs and no measurements.</li>
+      <li>We never opened an enclosure or lifted an RF shield.</li>
+      <li>We never captured a boot log or probed a debug port.</li>
+      <li>We never extracted, modified, redistributed, or ran the device's firmware.</li>
+      <li>We never defeated a lock, bypassed authentication, or recovered credentials or keys &mdash; and we publish none.</li>
+      <li>We never tested an exploit or a vulnerability against any device.</li>
+      <li>Anything below marked <strong>Unknown</strong> stays unknown until a unit reaches our bench.</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>By the numbers</h2>
+    <ul>
+      <li><strong>Device:</strong> Amazon Fire TV Stick (2nd generation, 2016)</li>
+      <li><strong>Era:</strong> 2016&ndash;2018</li>
+      <li><strong>FCC ID:</strong> 2AE6S-0948 (Amazon.com, Inc.; granted 2016-09-14; &ldquo;HDMI Digital Media Receiver&rdquo;)</li>
+      <li><strong>Wireless:</strong> Dual-band 802.11ac Wi-Fi + Bluetooth 4.1</li>
+      <li><strong>Conducted power (per filing):</strong> ~99.5/99.8&nbsp;mW @ 5&nbsp;GHz; ~532.1&nbsp;mW @ 2.4&nbsp;GHz</li>
+      <li><strong>Likely SoC:</strong> MediaTek MT8127D, quad-core 1.3&nbsp;GHz, Mali-450 MP4</li>
+      <li><strong>Likely memory:</strong> 1&nbsp;GB RAM; 8&nbsp;GB storage</li>
+      <li><strong>Video:</strong> 1080p with HEVC</li>
+      <li><strong>Launch price:</strong> $40 USD</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>Words to know</h2>
+    <p>Every term this page uses, in plain English. No prior knowledge required.</p>
+    <dl class="glossary">
+      <div><dt>HDMI dongle</dt><dd>A self-contained computer in a stick that plugs straight into a TV's HDMI port.</dd></div>
+      <div><dt>HEVC</dt><dd>High Efficiency Video Coding &mdash; the compression standard that made 1080p streaming practical on modest bandwidth.</dd></div>
+      <div><dt>Fire OS</dt><dd>Amazon's Android-based operating system for Fire TV devices.</dd></div>
+      <div><dt>Bluetooth remote</dt><dd>The Stick's remote pairs over Bluetooth rather than infrared &mdash; no line-of-sight needed.</dd></div>
+      <div><dt>Factory reset</dt><dd>A manufacturer-supported mode that erases user data and restores the device to its out-of-box state.</dd></div>
+      <div><dt>FCC ID</dt><dd>The ID the FCC assigns to each approved wireless product. Punch it into fccid.io and the whole public filing comes up.</dd></div>
+      <div><dt>FCC</dt><dd>The Federal Communications Commission &mdash; the U.S. agency that regulates anything that transmits radio.</dd></div>
+    </dl>
+  </section>
+
+  <section>
+    <h2>Sources &amp; confidence</h2>
+    <ul>
+      <li>FCC equipment authorization 2AE6S-0948 (grantee Amazon.com, Inc., grant 2016-09-14, &ldquo;HDMI Digital Media Receiver&rdquo;; conducted powers ~99.5/99.8&nbsp;mW @ 5&nbsp;GHz, ~532.1&nbsp;mW @ 2.4&nbsp;GHz, plus Bluetooth): primary evidence. High confidence.</li>
+      <li>Launch specs (MT8127D quad-core 1.3&nbsp;GHz, Mali-450 MP4, 1&nbsp;GB RAM, 8&nbsp;GB storage, 1080p HEVC, dual-band 802.11ac, Bluetooth 4.1, $40): Geeky Gadgets and FlatpanelsHD launch coverage. Medium confidence &mdash; press consensus, not primary hardware evidence.</li>
+      <li>Factory-reset existence (2nd gen): Amazon forum staff reply. High confidence in the existence claim; no procedure reproduced.</li>
+      <li>No confirmed public internal photos, board layout, or debug-interface record was located; stated as gaps.</li>
+    </ul>
+    <p class="note">Anything not listed here is unknown until the bench says otherwise. We'll say so, out loud, when that's the case.</p>
+    <p class="note"><strong>Legal note.</strong> BareBoard is an educational project. This page is built entirely from public records &mdash; government filings, manufacturer documents, and published third-party research &mdash; about hardware we have never possessed. We don't publish, host, or distribute firmware, keys, passwords, or credentials, and nothing here is instructions for defeating a lock or an authentication check. Product names and trademarks belong to their respective owners and appear here only to identify the hardware. If you believe anything here infringes your rights, contact us and we'll address it promptly.</p>
+  </section>
+
+  <footer>
+    <p>BareBoard &mdash; a free educational resource. Device #041 of the Hot 100.</p>
+    <nav>
+      <a href="/autopsy/">All autopsies</a>
+      <a href="/">Home</a>
+    </nav>
+  </footer>
+</main>
+</body>
+</html>
