@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Autopsy 090: Wyze Cam v3 &mdash; BareBoard</title>
+<meta name="description" content="A public-records autopsy of the Wyze Cam v3 (2020) — the $20 camera with color night vision. FCC ID 2AUIUWYZEC3.">
+<meta name="theme-color" content="#fbfbfc">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%231d1d1f'/%3E%3Ctext x='32' y='45' font-family='system-ui,-apple-system,sans-serif' font-size='36' font-weight='700' fill='white' text-anchor='middle'%3EB%3C/text%3E%3C/svg%3E">
+<link rel="stylesheet" href="/style.css">
+</head>
+<body>
+<header class="site-nav">
+  <div class="nav-inner">
+    <a class="brand" href="/">BareBoard</a>
+    <nav>
+      <a href="/about.html">About</a>
+      <a href="/autopsy/">Autopsy</a>
+      <a href="/hot-100.html">Hot 100</a>
+      <a href="/most-wanted.html">Most Wanted</a>
+      <a href="/support.html">Support</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <p class="kicker">The Autopsy Report &middot; Device #090</p>
+  <h1>Wyze Cam v3</h1>
+  <p class="lede">The Wyze Cam v3 is the twenty-dollar camera that embarrassed the industry: launched in October 2020, it offered color night vision, IP65 weather sealing, and local microSD recording at a price the big brands charged ten times over. It's also the most open book in this batch — the open-source community has documented its board down to the revision number.</p>
+
+  <section>
+    <h2>What is this thing?</h2>
+<p>The Wyze Cam v3 is a wired indoor/outdoor security camera: 1080p video, a 130° field of view, an f/1.6 aperture, two-way audio, and a <strong>starlight sensor</strong> that records color video in near-darkness — the "color night vision" that made its reputation. <span class="src"><a href="https://techcrunch.com/2020/10/27/wyze-launches-version-3-of-its-20-security-camera/432">TechCrunch</a></span> It's rated IP65 for outdoor use and records to microSD locally as well as to the cloud. <span class="src"><a href="https://www.tomsguide.com/reviews/wyze-cam-v3">Tom's Guide</a></span></p>
+    <p>It launched at <strong>$19.99</strong> — a price that reset expectations for the entire category. <span class="src"><a href="https://techcrunch.com/2020/10/27/wyze-launches-version-3-of-its-20-security-camera/432">TechCrunch</a></span></p>
+  </section>
+  <section>
+    <h2>Whose box is this?</h2>
+<p>This one isn't on our bench &mdash; yet. Nothing here comes from a BareBoard teardown: no disassembly, no boot logs, no bench measurements, no firmware in our hands. Everything below is built from public records &mdash; the government's FCC filing, the manufacturer's own documents, and contemporary press &mdash; read carefully and cited line by line. That's the deal with these reports: when a fact can't be verified from a public record, we say so, out loud.</p>
+    <p>The moment this hardware crosses our bench, this report gets a second act: our own photos, our own measurements, and anything the public record got wrong gets corrected.</p>
+  </section>
+  <section>
+    <h2>A short history</h2>
+<p>Wyze launched the Cam v3 on <strong>October 27, 2020</strong>, as the successor to the wildly popular v2. <span class="src"><a href="https://techcrunch.com/2020/10/27/wyze-launches-version-3-of-its-20-security-camera/432">TechCrunch</a></span> The upgrades that mattered: the starlight sensor for color night vision, IP65 weatherproofing so it could live outside, and a wider f/1.6 lens. <span class="src"><a href="https://www.tomsguide.com/reviews/wyze-cam-v3">Tom's Guide</a></span></p>
+    <p>Revision discipline matters: later production runs shipped as hardware revisions <strong>A, B, C, and F</strong>, which differ inside. This report is about the <strong>original</strong> hardware — board <strong>WYZEV3_T31GC2053 V1.4_20201010</strong> — documented by the open-source community. <span class="src"><a href="https://github.com/openipc/wiki/blob/HEAD/en/device-wyze-integration.md">OpenIPC wiki</a></span> Keep the later revisions in their own lane.</p>
+  </section>
+  <section>
+    <h2>The outside</h2>
+<figure>
+      <img src="img/device.jpg" alt="Wyze Cam v3 security camera">
+      <figcaption>Wyze Cam v3. <strong>Image placeholder:</strong> a verified free product photo is on our Most Wanted list — no exact free photo exists yet. When the unit reaches our bench, this becomes a real BareBoard photograph.</figcaption>
+    </figure>
+    <p>The v3 is a small white cube on a magnetic-base stand — the Wyze look. The front face carries the lens and IR array behind a dark window; the rear holds the microSD slot, setup button, and speaker; power arrives over micro-USB. Contemporary reviews describe the compact, mount-anywhere design. <span class="src"><a href="https://www.tomsguide.com/reviews/wyze-cam-v3">Tom's Guide</a></span></p>
+  </section>
+  <section>
+    <h2>Reading the plastic</h2>
+<p>Mold marks, date wheels, material codes &mdash; the shell's birth certificate. This is bench-only evidence: without the physical unit in our hands, there's nothing honest to read here. What the enclosure looks like is described above from public photos; what's <em>molded into it</em> awaits the bench.</p>
+  </section>
+  <section>
+    <h2>The board</h2>
+<p>The public FCC filing includes internal photographs (exhibit document 5001016), and the open-source community has gone further: the OpenIPC project documents the original-revision board as <strong>WYZEV3_T31GC2053 V1.4_20201010</strong>. <span class="src"><a href="https://github.com/openipc/wiki/blob/HEAD/en/device-wyze-integration.md">OpenIPC wiki</a></span> That's the board this report describes — original hardware only.</p>
+  </section>
+  <section>
+    <h2>Under the microscope: the chips</h2>
+<ul>
+      <li><strong>Ingenic T31ZX</strong> — the main system-on-chip, a MIPS-based video processor from Ingenic Semiconductor, documented by the OpenIPC community for the original revision. <span class="src"><a href="https://github.com/openipc/wiki/blob/HEAD/en/device-wyze-integration.md">OpenIPC wiki</a></span></li>
+      <li><strong>Realtek RTL8189FTV</strong> — the Wi-Fi radio (802.11 b/g/n), likewise documented for the original revision. <span class="src"><a href="https://github.com/openipc/wiki/blob/HEAD/en/device-wyze-integration.md">OpenIPC wiki</a></span></li>
+      <li>Image sensor and memory part numbers for this board are not verified in the public records we've reached — deliberately not listed. Later A/B/C/F revisions changed components; their chip lists belong to their own reports.</li>
+    </ul>
+  </section>
+  <section>
+    <h2>The government's file on this box</h2>
+<p>The FCC equipment authorization is <strong>FCC ID 2AUIUWYZEC3</strong>, grantee <strong>Wyze Labs, Inc.</strong> <span class="src"><a href="https://fccid.io/2AUIUWYZEC3">fccid.io filing</a></span> The filing's internal photographs (document 5001016) are part of the public record and corroborate the community's board documentation.</p>
+  </section>
+  <section>
+    <h2>Listening in</h2>
+<p>We have no boot log for this device &mdash; no unit on the bench means nothing to listen to. But the posture is worth stating up front, because it governs everything BareBoard ever does with a live device.</p>
+    <p><strong>We listen, we don't knock.</strong> A serial console is a place to watch a device narrate its own startup, not a place to log in, change things, or break past anything the manufacturer locked. On our bench we attach read-only: power and ground, one receive wire, and silence on the transmit line. We never use JTAG or SWD debug headers to take control, never extract or modify firmware, never hunt for credentials, and never publish anything that would let someone else bypass a lock or defeat authentication.</p>
+    <p>When this device arrives, the first question will be: where does it talk, and does it talk to us unprompted? Until then, that question stays open.</p>
+  </section>
+  <section>
+    <h2>What we found</h2>
+<ul>
+      <li>The Wyze Cam v3 launched October 27, 2020 at $19.99: 1080p, color night vision, IP65, local microSD recording.</li>
+      <li>The original-revision board (WYZEV3_T31GC2053 V1.4_20201010) is publicly documented: Ingenic T31ZX SoC, Realtek RTL8189FTV Wi-Fi.</li>
+      <li>Later A/B/C/F revisions differ inside — this report is original-hardware only.</li>
+    </ul>
+  </section>
+  <section>
+    <h2>What we didn't do</h2>
+    <ul>
+      <li>We never opened a unit, attached to a debug port, or powered one up for this report.</li>
+      <li>We never extracted, modified, or shared any firmware or software.</li>
+      <li>We never published or used any credentials, keys, or bypass techniques.</li>
+      <li>No boot logs, no bench measurements, and no photos of our own — because there is no unit of ours to photograph. The device photo above is credited in its caption.</li>
+    </ul>
+  </section>
+  <section>
+    <h2>By the numbers</h2>
+    <ul>
+      <li><strong>Launch:</strong> October 27, 2020</li>
+      <li><strong>Board:</strong> WYZEV3_T31GC2053 V1.4_20201010 (original revision)</li>
+      <li><strong>SoC:</strong> Ingenic T31ZX</li>
+      <li><strong>Wi-Fi:</strong> Realtek RTL8189FTV (802.11 b/g/n)</li>
+      <li><strong>Video:</strong> 1080p, 130° field of view, f/1.6</li>
+      <li><strong>Rating:</strong> IP65</li>
+      <li><strong>Price at launch:</strong> $19.99</li>
+      <li><strong>FCC ID:</strong> 2AUIUWYZEC3</li>
+      <li><strong>Bench status:</strong> Not yet on our bench</li>
+    </ul>
+  </section>
+  <section>
+    <h2>Words to know</h2>
+    <dl class="glossary">
+      <div><dt>Starlight sensor</dt><dd>An image sensor sensitive enough to record usable color video in very low light — the v3's headline feature.</dd></div>
+      <div><dt>IP65</dt><dd>Dust-tight and protected against water jets — the v3's outdoor rating.</dd></div>
+      <div><dt>OpenIPC</dt><dd>An open-source project documenting IP-camera hardware and building alternative firmware; a goldmine for public hardware records.</dd></div>
+    </dl>
+  </section>
+  <section>
+    <h2>Sources & confidence</h2>
+    <ul>
+      <li>Wyze launches version 3 of its $20 security camera — TechCrunch, Oct 2020 <span class="src"><a href="https://techcrunch.com/2020/10/27/wyze-launches-version-3-of-its-20-security-camera/432">link</a></span> — <span class='badge confirmed'>Confirmed</span></li>
+      <li>Wyze Cam v3 review — Tom's Guide <span class="src"><a href="https://www.tomsguide.com/reviews/wyze-cam-v3">link</a></span> — <span class='badge likely'>Likely</span></li>
+      <li>Wyze device integration (T31ZX SoC, RTL8189FTV, board V1.4_20201010) — OpenIPC wiki <span class="src"><a href="https://github.com/openipc/wiki/blob/HEAD/en/device-wyze-integration.md">link</a></span> — <span class='badge likely'>Likely</span></li>
+      <li>FCC filing 2AUIUWYZEC3, grantee Wyze Labs, Inc. (internal photos, doc 5001016) — fccid.io <span class="src"><a href="https://fccid.io/2AUIUWYZEC3">link</a></span> — <span class='badge confirmed'>Confirmed</span></li>
+    </ul>
+<p class="note"><strong>Legal note.</strong> BareBoard is an educational project. Everything on this page is derived from public records &mdash; our own bench work begins only when hardware arrives. We don't publish, host, or distribute firmware, keys, passwords, or credentials, and nothing here bypasses a lock, defeats authentication, or extracts software from a device. Product names and trademarks belong to their respective owners and appear here only to identify the hardware. If you believe anything here infringes your rights, contact us and we'll address it promptly.</p>
+  </section>
+
+  <footer>
+    <p>BareBoard &mdash; a free educational resource. Device #090 of the Hot 100.</p>
+    <nav>
+      <a href="/autopsy/">All autopsies</a>
+      <a href="/">Home</a>
+    </nav>
+  </footer>
+</main>
+</body>
+</html>
