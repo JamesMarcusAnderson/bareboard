@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Autopsy 095: The Meta Quest 2 (2020) — BareBoard</title>
+<meta name="description" content="BareBoard Autopsy 095: a public-records teardown of the Meta Quest 2 — Snapdragon XR2, FCC filing under Imaginante LLC, and what the documents reveal about the headset that took VR mainstream.">
+<meta name="theme-color" content="#fbfbfc">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%231d1d1f'/%3E%3Ctext x='32' y='45' font-family='system-ui,-apple-system,sans-serif' font-size='36' font-weight='700' fill='white' text-anchor='middle'%3EB%3C/text%3E%3C/svg%3E">
+<link rel="stylesheet" href="/style.css">
+</head>
+<body>
+<header class="site-nav">
+  <div class="nav-inner">
+    <a class="brand" href="/">BareBoard</a>
+    <nav>
+      <a href="/about.html">About</a>
+      <a href="/autopsy/">Autopsy</a>
+      <a href="/hot-100.html">Hot 100</a>
+      <a href="/most-wanted.html">Most Wanted</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <p class="kicker">The Autopsy Report · Device #095</p>
+  <h1>The Meta Quest 2 (2020)</h1>
+  <p class="lede">The standalone VR headset that sold by the millions — a Snapdragon XR2, six gigabytes of RAM, and a shell company on the FCC paperwork. We haven't opened one yet; the filings and teardowns tell the story instead.</p>
+
+  <section>
+    <h2>What is this thing?</h2>
+    <p>The <strong>Quest 2</strong> (launched as the Oculus Quest 2, later rebranded Meta) is a standalone virtual-reality headset: no PC, no phone, no wires — the computer is inside the visor. It launched <strong>October 13, 2020</strong> and became the best-selling VR headset of its era by undercutting everything else on price while shipping a genuinely capable chip, the Qualcomm Snapdragon XR2, with 6&nbsp;GB of RAM. <span class="src"><a href="https://www.ifixit.com/Device/Meta_Quest_2">iFixit</a></span> <span class="src"><a href="https://www.roadtovr.com/oculus-quest-2-teardown-disassembly/">Road to VR teardown</a></span></p>
+    <p>Hardware model <span class="partno">KW49CM</span>, certified under <strong>FCC ID 2AS7A-B3KF1</strong> — under the applicant name Imaginante, LLC, one of Meta's equipment-authorization shell entities. <span class="src"><a href="https://fccpdf.com/2AS7A/2AS7A-B3KF1/4758450.pdf">FCC label</a></span></p>
+  </section>
+
+  <section>
+    <h2>Not yet on our bench</h2>
+    <p>We don't own a Quest 2, so nothing here comes from our hands: no disassembly, no board photos, no measurements, no boot logs. Everything below is built from public records — the FCC certification filing, iFixit's teardown record, and a published disassembly — with each claim linked to its source. When a unit lands on our bench, we'll verify the hardware firsthand and update this page.</p>
+  </section>
+
+  <section>
+    <h2>A short history</h2>
+    <ol class="timeline">
+      <li><span class="when">December 2019</span>A head-mounted display, model KW49CM, arrives at the test lab; radio testing runs December 26–27, 2019. <span class="src"><a href="https://fccpdf.com/2AS7A/2AS7A-B3KF1/4856984.pdf">FCC DFS report</a></span></li>
+      <li><span class="when">May 21, 2020</span>Imaginante, LLC authorizes Sporton International to act on the FCC filing. <span class="src"><a href="https://fccpdf.com/2AS7A/2AS7A-B3KF1/4758444.pdf">FCC authorization letter</a></span></li>
+      <li><span class="when">August 14, 2020</span>The DFS test report for the 5&nbsp;GHz radios is issued. <span class="src"><a href="https://fccpdf.com/2AS7A/2AS7A-B3KF1/4856984.pdf">FCC DFS report</a></span></li>
+      <li><span class="when">September 2020</span>Oculus announces the Quest 2; it ships <strong>October 13, 2020</strong> with the Snapdragon XR2 and 6&nbsp;GB RAM. <span class="src"><a href="https://www.ifixit.com/Device/Meta_Quest_2">iFixit</a></span></li>
+      <li><span class="when">2021–present</span>The Oculus brand retires into Meta; the Quest 2 keeps selling as the default entry to VR. <span class="src"><a href="https://www.ifixit.com/Device/Meta_Quest_2">iFixit</a></span></li>
+    </ol>
+  </section>
+
+  <section>
+    <h2>The outside</h2>
+    <p>A white visor with four corner tracking cameras, a cloth head strap, and two controllers — the whole design says "appliance," not "lab equipment." The regulatory label (FCC ID, model KW49CM) hides inside the side strap. <span class="src"><a href="https://fccpdf.com/2AS7A/2AS7A-B3KF1/4758450.pdf">FCC label</a></span></p>
+    <figure>
+      <img src="img/device.jpg" alt="A Meta Quest 2 headset seen from the inside, showing the lenses and strap">
+      <figcaption>Meta Quest 2. Photo: Wikimedia Commons, CC BY-SA 4.0.</figcaption>
+    </figure>
+  </section>
+
+  <section>
+    <h2>The board</h2>
+    <p>Published disassemblies show a single main board dominated by the Snapdragon XR2 under a heatsink-and-fan assembly — active cooling in a headset, because the XR2 is a phone-class chip running hard. SanDisk flash provides storage, and the board carries the camera, display, and battery interconnects a standalone headset needs. One caution: one published teardown summary mislabels the SoC as an XR1 — the corroborated record (iFixit, Road to VR, Qualcomm's platform announcement) is XR2, and we follow it. <span class="src"><a href="https://www.roadtovr.com/oculus-quest-2-teardown-disassembly/">Road to VR teardown</a></span> <span class="src"><a href="https://www.ifixit.com/Device/Meta_Quest_2">iFixit</a></span></p>
+    <p>The FCC filing's internal photos (public after short-term confidentiality) document the same hardware from the certification lab's bench. Schematics, block diagram, parts list, operational description, and tune-up procedure are permanently confidential. <span class="src"><a href="https://fccpdf.com/2AS7A/2AS7A-B3KF1/4758421.pdf">FCC confidentiality letter</a></span></p>
+  </section>
+
+  <section>
+    <h2>Under the microscope: the chips</h2>
+    <p>What's on the board, what each part does, and how sure we are. <strong>Confirmed</strong> means a primary source (FCC exhibit or manufacturer document). <strong>Likely</strong> means well-corroborated public records.</p>
+    <div class="table-scroll">
+    <table class="chips">
+      <thead>
+        <tr><th>Chip</th><th>What it does</th><th>How we know</th><th>Dig deeper</th></tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><strong>Qualcomm Snapdragon XR2</strong></td>
+          <td>The whole computer: octa-core CPU, Adreno-class GPU, and dedicated vision/AI processing for the headset's cameras. Qualcomm's platform brief claims roughly twice the CPU/GPU performance of the Snapdragon 835, 3K×3K per-eye rendering at 90&nbsp;fps, seven-camera support, and 15&nbsp;TOPS of AI compute.</td>
+          <td><span class="badge b-likely">Likely</span> Identified in iFixit and Road to VR teardowns; specs from Qualcomm's platform announcement coverage.</td>
+          <td><a href="https://www.pcworld.com/article/398471/qualcomms-snapdragon-xr2-platform-takes-aim-at-true-mixed-reality.html">Platform announcement</a></td>
+        </tr>
+        <tr>
+          <td><strong>SanDisk iNAND 8521</strong><br><span class="partno">UFS 2.1, 64&nbsp;GB</span></td>
+          <td>Flash storage for the OS, apps, and games.</td>
+          <td><span class="badge b-likely">Likely</span> SanDisk storage identified in the Road to VR teardown; the 8521 / UFS 2.1 / 64&nbsp;GB part identity from hardware records.</td>
+          <td><a href="https://www.roadtovr.com/oculus-quest-2-teardown-disassembly/">Road to VR teardown</a></td>
+        </tr>
+        <tr>
+          <td><strong>6&nbsp;GB RAM</strong></td>
+          <td>Working memory for the XR2 — double the original Quest.</td>
+          <td><span class="badge b-likely">Likely</span> iFixit's device record.</td>
+          <td><a href="https://www.ifixit.com/Device/Meta_Quest_2">iFixit device page</a></td>
+        </tr>
+      </tbody>
+    </table>
+    </div>
+  </section>
+
+  <section id="fcc">
+    <h2>The government's file on this headset</h2>
+    <p>The Quest 2 carries <strong>FCC ID 2AS7A-B3KF1</strong>, applicant Imaginante, LLC, model <span class="partno">KW49CM</span>, described in the filings as a head-mounted display. The DFS report — covering the 5&nbsp;GHz Wi-Fi radios that share spectrum with weather radar — was issued August 14, 2020 after late-December 2019 testing. The label exhibit shows the e-label/printed label placement inside the side strap, marked "Made in China." Schematics, block diagram, parts list, operational description, and tune-up procedure are permanently confidential; the remaining exhibits took 180-day short-term confidentiality. <span class="src"><a href="https://fccpdf.com/2AS7A/2AS7A-B3KF1/4856984.pdf">FCC DFS report</a></span> <span class="src"><a href="https://fccpdf.com/2AS7A/2AS7A-B3KF1/4758421.pdf">FCC confidentiality letter</a></span> <span class="src"><a href="https://fccpdf.com/2AS7A/2AS7A-B3KF1/4758450.pdf">FCC label</a></span></p>
+    <p>The exact grant date isn't in the exhibits we reviewed — the authorization letter (May 21, 2020) and DFS report (August 14, 2020) bracket the certification window. We state the window, not a date we can't source.</p>
+  </section>
+
+  <section>
+    <h2>Debug and service modes</h2>
+    <p>Nothing about a debug header, serial console, or service mode for this hardware is documented in the public records we reviewed, and we claim nothing. Our posture throughout: <strong>we listen, we don't knock.</strong> If a bench unit ever reveals a diagnostic interface, we'll document it read-only — never bypasses, never credential or key extraction.</p>
+  </section>
+
+  <section>
+    <h2>What public records show</h2>
+    <ul>
+      <li>A phone-class SoC running hard enough to need a fan — the XR2 plus active cooling is the headset's whole thermal story. <span class="src"><a href="https://www.roadtovr.com/oculus-quest-2-teardown-disassembly/">Road to VR teardown</a></span></li>
+      <li>Meta certifies hardware through named subsidiaries (Imaginante, LLC here) — a common industry practice for keeping product names out of public filings before launch. <span class="src"><a href="https://fccpdf.com/2AS7A/2AS7A-B3KF1/4758444.pdf">FCC authorization letter</a></span></li>
+      <li>The 5&nbsp;GHz radio needed DFS certification — the headset shares spectrum with weather radar and must prove it yields. <span class="src"><a href="https://fccpdf.com/2AS7A/2AS7A-B3KF1/4856984.pdf">FCC DFS report</a></span></li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>What we haven't done</h2>
+    <ul>
+      <li>No disassembly — we don't own a unit.</li>
+      <li>No board-level verification of the XR2, flash, or RAM identities.</li>
+      <li>No thermal, power, or radio measurements of our own.</li>
+      <li>No boot-log or firmware observation of any kind.</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>By the numbers</h2>
+    <ul>
+      <li><strong>Model:</strong> KW49CM (Quest 2) · <strong>FCC ID:</strong> 2AS7A-B3KF1 · <strong>Applicant:</strong> Imaginante, LLC</li>
+      <li><strong>SoC:</strong> Qualcomm Snapdragon XR2 · <strong>RAM:</strong> 6&nbsp;GB · <strong>Storage:</strong> 64&nbsp;GB (SanDisk iNAND 8521, UFS 2.1)</li>
+      <li><strong>Launched:</strong> October 13, 2020</li>
+      <li><strong>DFS report:</strong> issued August 14, 2020 (5&nbsp;GHz radios)</li>
+      <li><strong>Permanently confidential:</strong> schematics, block diagram, parts list, operational description, tune-up procedure</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>Words to know</h2>
+    <p>Every term this page uses, in plain English. No prior knowledge required.</p>
+    <dl class="glossary">
+      <div><dt>Standalone VR</dt><dd>A headset with its own computer inside — no PC, phone, or cable required.</dd></div>
+      <div><dt>System on a chip (SoC)</dt><dd>The whole computer — processor, graphics, and more — on one piece of silicon.</dd></div>
+      <div><dt>TOPS</dt><dd>Trillion operations per second — a measure of AI accelerator throughput.</dd></div>
+      <div><dt>UFS</dt><dd>Universal Flash Storage — the fast flash interface phones and headsets use for storage.</dd></div>
+      <div><dt>DFS</dt><dd>Dynamic Frequency Selection — the rule that 5&nbsp;GHz Wi-Fi devices must detect and yield to radar (including weather radar) on shared channels.</dd></div>
+      <div><dt>Shell applicant</dt><dd>A subsidiary name used on regulatory filings — common practice for keeping unannounced products out of public records before launch.</dd></div>
+      <div><dt>FCC</dt><dd>The Federal Communications Commission — the U.S. agency that regulates anything that transmits radio. Every wireless gadget sold here has to pass its tests first.</dd></div>
+      <div><dt>FCC ID</dt><dd>The ID the FCC assigns to each approved wireless product. Punch it into fccid.io and the whole public filing comes up.</dd></div>
+    </dl>
+  </section>
+
+  <section>
+    <h2>Sources &amp; confidence</h2>
+    <ul>
+      <li>FCC ID, applicant, model, head-mounted-display description, DFS dates, label placement, confidentiality scope: FCC exhibits. <strong>Confirmed</strong> (primary source).</li>
+      <li>XR2 SoC, 6&nbsp;GB RAM, October 13, 2020 launch: iFixit device record. <strong>Likely</strong> (published teardown record; unconfirmed by us).</li>
+      <li>XR2, SanDisk storage, fan/heatsink: Road to VR disassembly. <strong>Likely</strong>.</li>
+      <li>XR2 platform specs (3K×3K/90fps, 7 cameras, 2× 835 performance, 15 TOPS): Qualcomm platform announcement via press coverage. <strong>Likely</strong>.</li>
+      <li>iNAND 8521 / UFS 2.1 / 64&nbsp;GB part identity: hardware records; <strong>Likely</strong> pending bench verification.</li>
+      <li>Device photo: Wikimedia Commons, CC BY-SA 4.0.</li>
+      <li>Anything not listed here is unknown until the bench says otherwise. We'll say so, out loud, when that's the case.</li>
+    </ul>
+    <p class="note"><strong>Legal note.</strong> BareBoard is an educational project. This report is built entirely from public records — we own no Quest 2 hardware and performed no testing. We don't publish, host, or distribute firmware, keys, passwords, or credentials. Product names and trademarks belong to their respective owners and appear here only to identify the hardware. If you believe anything here infringes your rights, contact us and we'll address it promptly.</p>
+  </section>
+
+  <footer>
+    <p>BareBoard &mdash; a free educational resource. Device #095 of the Hot 100.</p>
+    <nav>
+      <a href="/autopsy/">All autopsies</a>
+      <a href="/">Home</a>
+    </nav>
+  </footer>
+</main>
+</body>
+</html>
