@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Autopsy 077: The Nook Tablet (2011) &mdash; BareBoard</title>
+<meta name="description" content="BareBoard Autopsy 077: a plain-English, public-records teardown of the 2011 Nook Tablet — TI OMAP4, FCC filing XHHBNTV250-A, and the iFixit chip list.">
+<meta name="theme-color" content="#fbfbfc">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%231d1d1f'/%3E%3Ctext x='32' y='45' font-family='system-ui,-apple-system,sans-serif' font-size='36' font-weight='700' fill='white' text-anchor='middle'%3EB%3C/text%3E%3C/svg%3E">
+<link rel="stylesheet" href="/style.css">
+</head>
+<body>
+<header class="site-nav">
+  <div class="nav-inner">
+    <a class="brand" href="/">BareBoard</a>
+    <nav>
+      <a href="/about.html">About</a>
+      <a href="/autopsy/">Autopsy</a>
+      <a href="/hot-100.html">Hot 100</a>
+      <a href="/most-wanted.html">Most Wanted</a>
+      <a href="/support.html">Support</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <p class="kicker">The Autopsy Report &middot; Device #077</p>
+  <h1>The Nook Tablet (2011)</h1>
+  <p class="lede">Barnes & Noble's $249 answer to the Kindle Fire — an OMAP4 tablet whose FCC filing still says “NOOKcolor” on the label.</p>
+
+  <section>
+    <h2>What is this thing?</h2>
+    <p>The <strong>Nook Tablet</strong> is Barnes & Noble's 7-inch tablet, announced November 7, 2011 and released November 17, 2011, starting at $249 for 16&nbsp;GB. <span class="src"><a href="https://en.wikipedia.org/wiki/Nook_Tablet">Wikipedia</a></span> It was the bookseller's answer to the Kindle Fire: a media tablet built around the Nook bookstore, with a 1&nbsp;GHz dual-core TI OMAP4 inside. <span class="src"><a href="https://www.ifixit.com/News/14333/nook-tablet-teardown">iFixit news</a></span> </p>
+    <p>Here's the wrinkle that makes this device interesting on paper: the FCC filing behind it (XHHBNTV250-A) labels the product <strong>“NOOKcolor”</strong> — even though contemporary reporting ties that filing to the newly announced Nook Tablet. The label and the launch don't match, and we preserve the mismatch rather than flatten it. <span class="src"><a href="https://fccid.io/XHHBNTV250-A">FCC filing</a></span> <span class="src"><a href="https://www.adweek.com/performance-marketing/bns-new-nook-tablet-clears-the-fcc/">Adweek</a></span> </p>
+  </section>
+
+  <section>
+    <h2>Not yet on our bench</h2>
+    <p>This device is <strong>not on our bench</strong>. We don't own one, we haven't opened one, and we haven't powered one on. Everything on this page comes from public records: government filings, published teardowns by repair shops and journalists, and manufacturer documents. That's a legitimate way to learn a device's story &mdash; and it's also a limited one. There are no BareBoard photos, measurements, boot logs, or firmware notes here, because we haven't earned them yet.</p>
+    <p>When a unit of the Nook Tablet does reach our bench, this page gets a second edition: our own board photography, our own measurements, and whatever the device tells us when it wakes up. Until then, what follows is the public record, carefully sourced, with the gaps labeled as gaps.</p>
+  </section>
+
+  <section>
+    <h2>A short history</h2>
+    <ol class="timeline">
+      <li><span class="when">November 7, 2011</span>Barnes & Noble announces the Nook Tablet. <span class="src"><a href="https://en.wikipedia.org/wiki/Nook_Tablet">Wikipedia</a></span></li>
+      <li><span class="when">November 7, 2011</span>The FCC grants equipment authorization under ID XHHBNTV250-A — but the filing paperwork calls the product “NOOKcolor.” <span class="src"><a href="https://fccid.io/XHHBNTV250-A">FCC filing</a></span></li>
+      <li><span class="when">November 8, 2011</span>Adweek reports the new Nook Tablet has cleared the FCC — the press reads the filing as the Tablet, whatever the label says. <span class="src"><a href="https://www.adweek.com/performance-marketing/bns-new-nook-tablet-clears-the-fcc/">Adweek</a></span></li>
+      <li><span class="when">November 17, 2011</span>The Nook Tablet goes on sale at $249 (16 GB); an 8 GB model follows at $199. <span class="src"><a href="https://en.wikipedia.org/wiki/Nook_Tablet">Wikipedia</a></span></li>
+      <li><span class="when">2011</span>iFixit tears it down: big battery, lots of adhesive, and a clean single-board layout. <span class="src"><a href="https://www.ifixit.com/News/14333/nook-tablet-teardown">iFixit news</a></span> · <span class="src"><a href="https://liliputing.com/nook-tablet-dissected-reveals-big-battery-lots-of-adhesive/">Liliputing</a></span></li>
+      <li><span class="when">January 9, 2012</span>The FCC filing's internal photos, external photos, and user manual become public. <span class="src"><a href="https://fccid.io/XHHBNTV250-A">FCC filing</a></span></li>
+    </ol>
+  </section>
+
+  <section>
+    <h2>The outside</h2>
+    <p>A 7-inch, 1024×600 IPS display in a dark gray plastic body with a distinctive notched lower edge — the Nook design language, carried over from the Nook Color but thicker to hold the bigger battery. <span class="src"><a href="https://en.wikipedia.org/wiki/Nook_Tablet">Wikipedia</a></span> No camera on the back; the microSD slot sits under a cover.</p>
+    <p>The photo below is a period shot: a salesman demonstrating a Nook tablet in a Barnes & Noble store — the device in its natural habitat.</p>
+    <figure>
+      <img src="img/device.jpg" alt="A salesman demonstrating a Nook tablet inside a Barnes & Noble bookstore">
+      <figcaption>A Nook demonstrated in a Barnes & Noble store, circa the launch era — the Nook Tablet and the earlier Nook Color are visually close, so treat this as a stand-in, labeled honestly. Photo: Tomwsulcer, CC0, via Wikimedia Commons.</figcaption>
+    </figure>
+  </section>
+
+  <section>
+    <h2>The board</h2>
+    <p>Teardown coverage describes a single main board with the OMAP4 processor, Hynix RAM, and SanDisk storage, sitting beside a notably large battery — Liliputing's summary of the dissection leads with “big battery, lots of adhesive.” <span class="src"><a href="https://liliputing.com/nook-tablet-dissected-reveals-big-battery-lots-of-adhesive/">Liliputing</a></span> SlashGear's teardown walkthrough notes the clean, uncluttered internal layout. <span class="src"><a href="http://www.slashgear.com/nook-tablet-teardown-reveals-insides-just-as-clean-as-the-out-21196841/">SlashGear</a></span> </p>
+    <p>The FCC's internal photos (public since January 2012) show the same single-board construction with shielded radio sections. <span class="src"><a href="https://fccid.io/XHHBNTV250-A">FCC filing</a></span> We have not photographed the board ourselves.</p>
+  </section>
+
+  <section>
+    <h2>Under the microscope: the chips</h2>
+    <p>What's on the board, what each part does, and how sure we are &mdash; all from public teardown records, since we haven't seen the board ourselves. <strong>Likely</strong> means the public hardware record agrees on it. <strong>Confirmed</strong> is reserved for primary sources we could verify directly, like the government's own filing. Every row links somewhere you can read more.</p>
+    <div class="table-scroll">
+    <table class="chips">
+      <thead>
+        <tr><th>Chip</th><th>What it does</th><th>How we know</th><th>Dig deeper</th></tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><strong>TI OMAP4 1 GHz</strong><br><span class="partno">dual-core; commonly identified as OMAP4430</span></td>
+          <td>The main processor — dual-core ARM Cortex-A9.</td>
+          <td><span class="badge b-likely">Likely</span> iFixit names a 1 GHz TI OMAP4; secondary sources commonly read it as the 4430.</td>
+          <td><a href="https://www.ifixit.com/News/14333/nook-tablet-teardown">iFixit news</a></td>
+        </tr>
+        <tr>
+          <td><strong>Hynix H9TKNNN8P</strong><br><span class="partno">1 GB DDR2</span></td>
+          <td>Working memory.</td>
+          <td><span class="badge b-likely">Likely</span> Read off the board by teardown press.</td>
+          <td><a href="https://www.ifixit.com/News/14333/nook-tablet-teardown">iFixit news</a></td>
+        </tr>
+        <tr>
+          <td><strong>SanDisk SDIN5C1-16G</strong><br><span class="partno">16 GB</span></td>
+          <td>Flash storage.</td>
+          <td><span class="badge b-likely">Likely</span> Identified in teardown chip lists.</td>
+          <td><a href="https://liliputing.com/nook-tablet-dissected-reveals-big-battery-lots-of-adhesive/">Liliputing</a></td>
+        </tr>
+        <tr>
+          <td><strong>TI 6030B107</strong></td>
+          <td>Power-management IC.</td>
+          <td><span class="badge b-likely">Likely</span> Identified in teardown chip lists.</td>
+          <td><a href="https://www.ifixit.com/News/14333/nook-tablet-teardown">iFixit news</a></td>
+        </tr>
+        <tr>
+          <td><strong>TI AIC3100</strong></td>
+          <td>Audio codec.</td>
+          <td><span class="badge b-likely">Likely</span> Identified in teardown chip lists.</td>
+          <td><a href="https://liliputing.com/nook-tablet-dissected-reveals-big-battery-lots-of-adhesive/">Liliputing</a></td>
+        </tr>
+        <tr>
+          <td><strong>TI LVDS83B</strong></td>
+          <td>Display interface — talks to the LCD panel.</td>
+          <td><span class="badge b-likely">Likely</span> Identified in teardown chip lists.</td>
+          <td><a href="http://www.slashgear.com/nook-tablet-teardown-reveals-insides-just-as-clean-as-the-out-21196841/">SlashGear</a></td>
+        </tr>
+        <tr>
+          <td><strong>FocalTech FT5406EE8</strong></td>
+          <td>Touchscreen controller.</td>
+          <td><span class="badge b-likely">Likely</span> Identified in teardown chip lists.</td>
+          <td><a href="https://www.ifixit.com/News/14333/nook-tablet-teardown">iFixit news</a></td>
+        </tr>
+      </tbody>
+    </table>
+    </div>
+    <p>Not in the public chip lists: the exact Wi-Fi radio and the display driver. Note the OMAP identification is the common reading of the evidence, not a marking we or the teardown press could photograph cleanly — hence Likely, stated plainly.</p>
+  </section>
+
+  <section id="fcc">
+    <h2>The government's file on this device</h2>
+    <p>The filing behind this device is <strong>XHHBNTV250-A</strong>, registered to <strong>Barnes&amp;Noble.com</strong> for model <strong>BNTV250-A</strong>. The grant is dated <strong>November 7, 2011</strong> — announcement day — and the internal photos, external photos, and user manual became public on <strong>January 9, 2012</strong>. <span class="src"><a href="https://fccid.io/XHHBNTV250-A">FCC filing</a></span> <span class="badge b-confirmed">Confirmed</span> — straight from the filing index.</p>
+    <p>The filing lists 2.4&nbsp;GHz Wi-Fi around 88&nbsp;mW. The schematics, block diagram, and operational description show no public availability date — long- and short-term confidentiality was requested and granted. <span class="src"><a href="https://fccid.io/XHHBNTV250-A">FCC filing</a></span> </p>
+    <p>And the naming wrinkle, preserved: the filing's own paperwork calls this product <strong>“NOOKcolor”</strong> — the previous-generation device — while the press, the dates, and the model number all point to the Nook Tablet. Whether that's a paperwork shortcut or a reused filing, the public record doesn't say. We report both, and we don't pick a winner.</p>
+  </section>
+
+  <section>
+    <h2>Debug and service modes</h2>
+    <p>The user manual — a public exhibit in the FCC filing — documents the ordinary <strong>factory reset through the Settings menu</strong>. <span class="src"><a href="https://fccid.io/XHHBNTV250-A">FCC filing</a></span> </p>
+    <p>We found no manufacturer-published hardware debug documentation for this model, and we have not entered any mode on any Nook Tablet. Listed for orientation, not from experience.</p>
+    <p>Our posture on all of the above: we describe what's publicly documented, and we don't go knocking. No device has been probed, reflashed, or opened on our bench &mdash; there is nothing here but reading.</p>
+  </section>
+
+  <section>
+    <h2>What public records show</h2>
+    <p><strong>The filing label doesn't match the launch.</strong> “NOOKcolor” on the paperwork, Nook Tablet in the stores, same week. Filings get reused and relabeled more often than the industry admits — this one just left the evidence in the open. <span class="src"><a href="https://fccid.io/XHHBNTV250-A">FCC filing</a></span> <span class="src"><a href="https://www.adweek.com/performance-marketing/bns-new-nook-tablet-clears-the-fcc/">Adweek</a></span></p>
+    <p><strong>It's a clean, battery-forward design.</strong> Teardown coverage keeps coming back to the same two observations: a big battery and a tidy single board — a media tablet built to be held for hours. <span class="src"><a href="https://liliputing.com/nook-tablet-dissected-reveals-big-battery-lots-of-adhesive/">Liliputing</a></span></p>
+  </section>
+
+  <section>
+    <h2>What we haven't done</h2>
+    <ul>
+      <li>We have not opened a Nook Tablet, photographed its board, or measured anything on it.</li>
+      <li>We have not captured a boot log or entered any service mode on this model.</li>
+      <li>We have not resolved whether the OMAP4 is specifically the 4430 — that's the common identification, not a confirmed marking.</li>
+      <li>We have not resolved the NOOKcolor-vs-Tablet filing label beyond reporting both.</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>By the numbers</h2>
+    <ul>
+      <li><strong>Model:</strong> Nook Tablet (BNTV250-A); 16 GB ($249) and 8 GB ($199) <span class="src"><a href="https://en.wikipedia.org/wiki/Nook_Tablet">Wikipedia</a></span></li>
+      <li><strong>FCC ID:</strong> XHHBNTV250-A (filed as “NOOKcolor”) <span class="src"><a href="https://fccid.io/XHHBNTV250-A">FCC filing</a></span></li>
+      <li><strong>Main chip:</strong> TI OMAP4 1 GHz dual-core (commonly identified as OMAP4430) <span class="src"><a href="https://www.ifixit.com/News/14333/nook-tablet-teardown">iFixit news</a></span></li>
+      <li><strong>Memory:</strong> 1 GB RAM <span class="src"><a href="https://www.ifixit.com/News/14333/nook-tablet-teardown">iFixit news</a></span></li>
+      <li><strong>Display:</strong> 7 in, 1024×600 IPS <span class="src"><a href="https://en.wikipedia.org/wiki/Nook_Tablet">Wikipedia</a></span></li>
+      <li><strong>Storage:</strong> 16/8 GB, plus microSD <span class="src"><a href="https://en.wikipedia.org/wiki/Nook_Tablet">Wikipedia</a></span></li>
+      <li><strong>Released:</strong> November 17, 2011, from $249 <span class="src"><a href="https://en.wikipedia.org/wiki/Nook_Tablet">Wikipedia</a></span></li>
+      <li><strong>Wireless:</strong> Wi-Fi b/g/n <span class="src"><a href="https://en.wikipedia.org/wiki/Nook_Tablet">Wikipedia</a></span></li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>Words to know</h2>
+    <p>Every term this page uses, in plain English. No prior knowledge required.</p>
+    <dl class="glossary">
+      <div><dt>OMAP</dt><dd>Texas Instruments' line of mobile processors — the 44xx series powered a generation of tablets.</dd></div>
+      <div><dt>PMIC</dt><dd>Power-management IC: the chip that makes all the different voltages the board needs from the battery.</dd></div>
+      <div><dt>Touchscreen controller</dt><dd>The chip that turns finger touches on the glass into coordinates the processor understands.</dd></div>
+      <div><dt>FCC ID</dt><dd>The ID the FCC assigns to each approved wireless product. Punch it into fccid.io and the whole public filing comes up.</dd></div>
+      <div><dt>Short-term confidentiality</dt><dd>A deal with the FCC: the company files photos and manuals, but the public can't see them for a set number of days.</dd></div>
+      <div><dt>Factory reset</dt><dd>Wiping the device back to out-of-box software through the Settings menu — the supported, documented way.</dd></div>
+    </dl>
+  </section>
+
+  <section>
+    <h2>Sources &amp; confidence</h2>
+    <ul>
+      <li>Chip identities: iFixit's Nook Tablet teardown news, Liliputing's dissection summary, and SlashGear's teardown walkthrough. Marked Likely throughout — we haven't seen the board ourselves.</li>
+      <li>FCC ID, grantee, grant date, confidentiality dates, and transmit powers: the FCC filing index for XHHBNTV250-A — a primary source. High confidence.</li>
+      <li>The NOOKcolor label: the filing's own paperwork; the Tablet reading: Adweek's contemporary report and the launch dates. Both reported, neither flattened.</li>
+      <li>Release date and price: the device's encyclopedia entry, cross-checked against launch coverage.</li>
+      <li>Anything not listed here is unknown until the bench says otherwise. We'll say so, out loud, when that's the case.</li>
+    </ul>
