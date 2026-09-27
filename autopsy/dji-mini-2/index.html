@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Autopsy 084: DJI Mini 2 &mdash; BareBoard</title>
+<meta name="description" content="A public-records autopsy of the DJI Mini 2 (2020) — the sub-249 g 4K drone. FCC ID SS3-MT2PD2007, model MT2PD.">
+<meta name="theme-color" content="#fbfbfc">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%231d1d1f'/%3E%3Ctext x='32' y='45' font-family='system-ui,-apple-system,sans-serif' font-size='36' font-weight='700' fill='white' text-anchor='middle'%3EB%3C/text%3E%3C/svg%3E">
+<link rel="stylesheet" href="/style.css">
+</head>
+<body>
+<header class="site-nav">
+  <div class="nav-inner">
+    <a class="brand" href="/">BareBoard</a>
+    <nav>
+      <a href="/about.html">About</a>
+      <a href="/autopsy/">Autopsy</a>
+      <a href="/hot-100.html">Hot 100</a>
+      <a href="/most-wanted.html">Most Wanted</a>
+      <a href="/support.html">Support</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <p class="kicker">The Autopsy Report &middot; Device #084</p>
+  <h1>DJI Mini 2</h1>
+  <p class="lede">The Mini 2 is the drone that proved small could be serious: under 249 grams — light enough to dodge registration in many countries — with 4K video, a 10 km link, and half an hour of flight. It's the great-grandchild of the Mavic Pro from the previous report, and the best-documented drone in this batch.</p>
+
+  <section>
+    <h2>What is this thing?</h2>
+<p>The DJI Mini 2 is an ultralight folding quadcopter, model <strong>MT2PD</strong>, weighing under 249 grams. It shoots 4K/30 video at up to 100 Mbps, takes 12-megapixel RAW stills, and flies for a claimed 31 minutes. <span class="src"><a href="http://dronexl.co/2020/11/04/dji-mini-2-released-drone/">DroneXL</a></span></p>
+    <p>The sub-249 g weight isn't an accident — it's the threshold under which many aviation authorities (including the U.S. FAA for recreational flight) don't require registration, and the Mini 2 was engineered to sit just under it. <span class="src"><a href="https://www.androidpolice.com/2020/11/04/dji-announces-mavic-mini-2-4k-recording/?scrolla=5eb6d68b7fedc32c19ef33b4">Android Police</a></span></p>
+  </section>
+  <section>
+    <h2>Whose box is this?</h2>
+<p>This one isn't on our bench &mdash; yet. Nothing here comes from a BareBoard teardown: no disassembly, no boot logs, no bench measurements, no firmware in our hands. Everything below is built from public records &mdash; the government's FCC filing, the manufacturer's own documents, and contemporary press &mdash; read carefully and cited line by line. That's the deal with these reports: when a fact can't be verified from a public record, we say so, out loud.</p>
+    <p>The moment this hardware crosses our bench, this report gets a second act: our own photos, our own measurements, and anything the public record got wrong gets corrected.</p>
+  </section>
+  <section>
+    <h2>A short history</h2>
+<p>DJI released the Mini 2 on <strong>November 4, 2020</strong>, exactly one year after the original Mavic Mini. <span class="src"><a href="http://dronexl.co/2020/11/04/dji-mini-2-released-drone/">DroneXL</a></span> The upgrades that mattered: 4K replaced 2.7K video, the flaky Wi-Fi control link was replaced with DJI's far more robust OcuSync 2.0 (10 km range), and flight time ticked up to 31 minutes. <span class="src"><a href="https://www.androidpolice.com/2020/11/04/dji-announces-mavic-mini-2-4k-recording/?scrolla=5eb6d68b7fedc32c19ef33b4">Android Police</a></span> It sold for $449 at launch — $50 more than its predecessor.</p>
+    <p>One caution for fellow researchers: the model number <strong>MT2PD</strong> was later reused on the DJI Mini 4K (2024), a different product. <span class="src"><a href="https://en.wikipedia.org/wiki/DJI_Mini">DJI Mini — Wikipedia</a></span> When you look up this FCC filing, make sure you're reading about the 2020 drone.</p>
+  </section>
+  <section>
+    <h2>The outside</h2>
+<figure>
+      <img src="img/device.jpg" alt="DJI Mini 2 drone">
+      <figcaption>DJI Mini 2. <strong>Image placeholder:</strong> a verified free product photo is on our Most Wanted list — no exact free photo exists yet. When the unit reaches our bench, this becomes a real BareBoard photograph.</figcaption>
+    </figure>
+    <p>The Mini 2 keeps the Mavic folding geometry — four arms hinging flat against the body — shrunk to a footprint not much bigger than a phone. <span class="src"><a href="https://www.androidpolice.com/2020/11/04/dji-announces-mavic-mini-2-4k-recording/?scrolla=5eb6d68b7fedc32c19ef33b4">Android Police</a></span> The nose holds the 3-axis gimbal camera; the belly carries the downward vision sensors that give it stable hovering without GPS.</p>
+  </section>
+  <section>
+    <h2>Reading the plastic</h2>
+<p>Mold marks, date wheels, material codes &mdash; the shell's birth certificate. This is bench-only evidence: without the physical unit in our hands, there's nothing honest to read here. What the enclosure looks like is described above from public photos; what's <em>molded into it</em> awaits the bench.</p>
+  </section>
+  <section>
+    <h2>The board</h2>
+<p>This is the best-documented board in the batch. The public FCC filing includes internal photographs (FCC exhibit document 4941194), and an independent analysis of those photos walks through the board stack in detail. <span class="src"><a href="https://blog.looksei.com/dji-mini-2-teardown-specs-analysis-inside-fcc-id-ss3-mt2pd2007/">LookSei</a></span></p>
+    <p>The confirmed headline from that analysis: flight control runs on an <strong>STM32F4-series</strong> microcontroller — STMicroelectronics' Cortex-M4 workhorse, a chip so common in drones it's practically the industry's default nervous system. <span class="src"><a href="https://blog.looksei.com/dji-mini-2-teardown-specs-analysis-inside-fcc-id-ss3-mt2pd2007/">LookSei</a></span> Beyond that one well-supported identification, other component guesses circulating online are speculative and excluded from this report on purpose: one verified chip beats five guessed ones.</p>
+  </section>
+  <section>
+    <h2>Under the microscope: the chips</h2>
+<ul>
+      <li><strong>STM32F4xx (STMicroelectronics)</strong> — flight-control microcontroller, identified in the independent FCC-photo analysis. <span class="src"><a href="https://blog.looksei.com/dji-mini-2-teardown-specs-analysis-inside-fcc-id-ss3-mt2pd2007/">LookSei</a></span></li>
+      <li>Everything else on the stack — the video pipeline, the OcuSync radio chain, the vision sensors — is unverified at the component level from public photos alone. Deliberately not listed.</li>
+    </ul>
+  </section>
+  <section>
+    <h2>The government's file on this box</h2>
+<p>The FCC equipment authorization is <strong>FCC ID SS3-MT2PD2007</strong>, model <strong>MT2PD</strong>, grantee <strong>SZ DJI TECHNOLOGY CO., LTD.</strong> <span class="src"><a href="https://fccid.io/SS3-MT2PD2007">fccid.io filing</a></span> The internal photographs in the filing (document 4941194) are the primary source for everything above about the hardware.</p>
+  </section>
+  <section>
+    <h2>Listening in</h2>
+<p>We have no boot log for this device &mdash; no unit on the bench means nothing to listen to. But the posture is worth stating up front, because it governs everything BareBoard ever does with a live device.</p>
+    <p><strong>We listen, we don't knock.</strong> A serial console is a place to watch a device narrate its own startup, not a place to log in, change things, or break past anything the manufacturer locked. On our bench we attach read-only: power and ground, one receive wire, and silence on the transmit line. We never use JTAG or SWD debug headers to take control, never extract or modify firmware, never hunt for credentials, and never publish anything that would let someone else bypass a lock or defeat authentication.</p>
+    <p>When this device arrives, the first question will be: where does it talk, and does it talk to us unprompted? Until then, that question stays open.</p>
+  </section>
+  <section>
+    <h2>What we found</h2>
+<ul>
+      <li>The Mini 2 (model MT2PD) launched November 4, 2020: 4K/30, OcuSync 2.0, 31-minute flight, under 249 g.</li>
+      <li>Public FCC internal photos confirm the board stack; independent analysis identifies an STM32F4-series flight-control MCU.</li>
+      <li>The MT2PD model number was later reused on the 2024 Mini 4K — don't cross the filings.</li>
+    </ul>
+  </section>
+  <section>
+    <h2>What we didn't do</h2>
+    <ul>
+      <li>We never opened a unit, attached to a debug port, or powered one up for this report.</li>
+      <li>We never extracted, modified, or shared any firmware or software.</li>
+      <li>We never published or used any credentials, keys, or bypass techniques.</li>
+      <li>No boot logs, no bench measurements, and no photos of our own — because there is no unit of ours to photograph. The device photo above is credited in its caption.</li>
+    </ul>
+  </section>
+  <section>
+    <h2>By the numbers</h2>
+    <ul>
+      <li><strong>Launch:</strong> November 4, 2020</li>
+      <li><strong>Model:</strong> MT2PD</li>
+      <li><strong>Weight:</strong> Under 249 g</li>
+      <li><strong>Camera:</strong> 12 MP, 4K/30 at 100 Mbps, RAW stills</li>
+      <li><strong>Flight time:</strong> 31 minutes (advertised)</li>
+      <li><strong>Link:</strong> OcuSync 2.0, 10 km</li>
+      <li><strong>FCC ID:</strong> SS3-MT2PD2007</li>
+      <li><strong>Bench status:</strong> Not yet on our bench</li>
+    </ul>
+  </section>
+  <section>
+    <h2>Words to know</h2>
+    <dl class="glossary">
+      <div><dt>Sub-250 g</dt><dd>Under the weight threshold that triggers drone registration in many countries — the Mini 2 was designed to sit just below it.</dd></div>
+      <div><dt>OcuSync 2.0</dt><dd>DJI's second-generation control-and-video link; far more robust than the Wi-Fi link on the original Mavic Mini.</dd></div>
+      <div><dt>STM32F4</dt><dd>STMicroelectronics' Cortex-M4 microcontroller family, a staple of flight controllers.</dd></div>
+    </dl>
+  </section>
+  <section>
+    <h2>Sources & confidence</h2>
+    <ul>
+      <li>DJI Mini 2 officially released — DroneXL, Nov 2020 <span class="src"><a href="http://dronexl.co/2020/11/04/dji-mini-2-released-drone/">link</a></span> — <span class='badge confirmed'>Confirmed</span></li>
+      <li>DJI announces the Mini 2 — Android Police, Nov 2020 <span class="src"><a href="https://www.androidpolice.com/2020/11/04/dji-announces-mavic-mini-2-4k-recording/?scrolla=5eb6d68b7fedc32c19ef33b4">link</a></span> — <span class='badge confirmed'>Confirmed</span></li>
+      <li>DJI Mini model-number lineage (MT2PD reused on Mini 4K, 2024) — Wikipedia <span class="src"><a href="https://en.wikipedia.org/wiki/DJI_Mini">link</a></span> — <span class='badge likely'>Likely</span></li>
+      <li>DJI Mini 2 teardown / FCC photo analysis (STM32F4xx flight MCU, doc 4941194) — LookSei <span class="src"><a href="https://blog.looksei.com/dji-mini-2-teardown-specs-analysis-inside-fcc-id-ss3-mt2pd2007/">link</a></span> — <span class='badge likely'>Likely</span></li>
+      <li>FCC filing SS3-MT2PD2007, grantee SZ DJI TECHNOLOGY CO., LTD. — fccid.io <span class="src"><a href="https://fccid.io/SS3-MT2PD2007">link</a></span> — <span class='badge confirmed'>Confirmed</span></li>
+    </ul>
+<p class="note"><strong>Legal note.</strong> BareBoard is an educational project. Everything on this page is derived from public records &mdash; our own bench work begins only when hardware arrives. We don't publish, host, or distribute firmware, keys, passwords, or credentials, and nothing here bypasses a lock, defeats authentication, or extracts software from a device. Product names and trademarks belong to their respective owners and appear here only to identify the hardware. If you believe anything here infringes your rights, contact us and we'll address it promptly.</p>
+  </section>
+
+  <footer>
+    <p>BareBoard &mdash; a free educational resource. Device #084 of the Hot 100.</p>
+    <nav>
+      <a href="/autopsy/">All autopsies</a>
+      <a href="/">Home</a>
+    </nav>
+  </footer>
+</main>
+</body>
+</html>
