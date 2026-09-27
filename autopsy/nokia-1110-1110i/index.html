@@ -1,0 +1,184 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Nokia 1110 / 1110i (RH-69) Autopsy Report — BareBoard</title>
+<meta name="description" content="BareBoard Autopsy Report: Nokia 1110 / 1110i. FCC filing QTLRH-69, DCT4/UPP4M platform, and what we have not yet done.">
+<link rel="canonical" href="https://bareboard.org/autopsy/nokia-1110-1110i/">
+<meta property="og:title" content="Nokia 1110 / 1110i — BareBoard Autopsy Report">
+<meta property="og:description" content="The 1100's successor, documented from FCC records and public documentation. Not yet on our bench.">
+<meta property="og:image" content="https://bareboard.org/autopsy/nokia-1110-1110i/img/device.jpg">
+<meta property="og:type" content="article">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"TechArticle","headline":"Nokia 1110 / 1110i Autopsy Report","author":{"@type":"Organization","name":"BareBoard"},"about":{"@type":"Product","name":"Nokia 1110","manufacturer":{"@type":"Organization","name":"Nokia"}},"datePublished":"2026-09-27"}
+</script>
+<link rel="stylesheet" href="/style.css">
+<style>
+.hero{background:#101014;border:1px solid #2a2a30;border-radius:14px;padding:1.4rem 1.4rem 1.1rem;margin:0 0 1.4rem}
+.kicker{color:#8e8e96;text-transform:uppercase;letter-spacing:.14em;font-size:.78rem;margin:0 0 .5rem}
+h1{margin:.1rem 0 .5rem;font-size:2rem;line-height:1.15}
+.lede{color:#c9c9d1;font-size:1.08rem;line-height:1.65;margin:.4rem 0 0}
+.badge{display:inline-block;font-size:.72rem;font-weight:700;letter-spacing:.06em;text-transform:uppercase;border-radius:999px;padding:.18rem .6rem;margin-left:.5rem;vertical-align:middle}
+.badge.confirmed{background:#1c4d2e;color:#b8f0c9;border:1px solid #2e7d4f}
+.badge.likely{background:#4d3f1c;color:#f0dcae;border:1px solid #8a7135}
+.badge.unknown{background:#3a3a40;color:#b9b9c0;border:1px solid #55555c}
+.src{font-size:.78rem;color:#8e8e96;white-space:nowrap}
+.src a{color:#7ea6ff}
+figure{margin:1.2rem 0}
+figure img{max-width:100%;height:auto;border-radius:10px;border:1px solid #2a2a30;display:block}
+figcaption{font-size:.85rem;color:#9a9aa2;margin-top:.5rem;line-height:1.5}
+h2{margin-top:2rem}
+h3{margin-top:1.4rem}
+table{width:100%;border-collapse:collapse;font-size:.92rem}
+th,td{text-align:left;padding:.55rem .6rem;border-bottom:1px solid #2a2a30;vertical-align:top}
+th{color:#c9c9d1}
+.table-scroll{overflow-x:auto;border:1px solid #2a2a30;border-radius:10px}
+.timeline{list-style:none;margin:0;padding:0}
+.timeline li{padding:.6rem 0 .6rem 1.2rem;border-left:2px solid #3a3a42;position:relative;margin-left:.4rem}
+.timeline li::before{content:"";position:absolute;left:-7px;top:.95rem;width:12px;height:12px;border-radius:50%;background:#8e8e96}
+.timeline b{color:#ececf1}
+.note{background:#141419;border:1px solid #3a3a42;border-left:4px solid #7ea6ff;border-radius:8px;padding:.9rem 1.1rem;margin:1.2rem 0;line-height:1.6}
+.note.warn{border-left-color:#e0a63c}
+.chips{display:flex;flex-wrap:wrap;gap:.4rem;margin:.6rem 0}
+.chips span{background:#1c1c21;border:1px solid #33333a;border-radius:999px;padding:.25rem .7rem;font-size:.82rem;color:#c9c9d1}
+.glossary td:first-child{white-space:nowrap;font-weight:600;color:#ececf1}
+ul.findings li{margin:.45rem 0;line-height:1.6}
+.diagram{background:#101014;border:1px solid #2a2a30;border-radius:10px;padding:1rem 1.2rem;margin:1rem 0;font-size:.92rem;line-height:1.7}
+.diagram .marker{display:inline-block;background:#2a2a32;border:1px solid #4a4a55;border-radius:6px;padding:.05rem .5rem;margin:.15rem .2rem;font-family:ui-monospace,monospace;font-size:.85rem}
+.anatomy{columns:2;column-gap:2rem;font-size:.92rem}
+.anatomy li{break-inside:avoid;margin:.35rem 0;line-height:1.55}
+@media(max-width:640px){.anatomy{columns:1}}
+footer.report-foot{margin-top:2.5rem;padding-top:1.2rem;border-top:1px solid #2a2a30;color:#8e8e96;font-size:.85rem}
+</style>
+</head>
+<body>
+<header>
+<nav><a href="/">BareBoard</a> · <a href="/autopsy/">Autopsy Reports</a> · <a href="/hot-100.html">Hot 100</a></nav>
+</header>
+<main>
+<article>
+<div class="hero">
+<p class="kicker">BareBoard Autopsy Report · Mobile Phones</p>
+<h1>Nokia 1110 / 1110i <span class="badge confirmed">Confirmed</span></h1>
+<p class="lede">The Nokia 1100's successor and one of the best-selling phones ever made — with an actual FCC filing we can cite: <b>QTLRH-69</b>, granted to Nokia Corporation for the U.S. 1110b (RH-69) on September 21, 2005 <span class="src"><a href="https://fcc.report/FCC-ID/QTLRH-69/584393.pdf">FCC filing QTLRH-69</a></span>. Everything below comes from that filing, public documentation, and encyclopedic records. We have never owned, opened, booted, probed, tested, or disassembled a Nokia 1110 or 1110i.</p>
+</div>
+
+<figure>
+<img src="img/device.jpg" alt="Placeholder card: Nokia 1110 / 1110i photo coming — not yet on our bench" width="1200" height="800">
+<figcaption>Placeholder card. No freely-licensed photograph of the Nokia 1110/1110i could be verified, so this card stands in until a unit reaches our bench and we photograph it ourselves. This is not our photograph — no unit of this device has ever been on the BareBoard bench.</figcaption>
+</figure>
+
+<h2>What is this thing?</h2>
+<p>The Nokia 1110 (and its near-identical sibling, the 1110i) is a dual-band GSM candybar announced in June 2005 and released that September as the direct successor to the Nokia 1100 <span class="src"><a href="https://en.wikipedia.org/wiki/Nokia_1110">Wikipedia</a></span>. The global 1110/1110i use GSM 900/1800; the U.S. variant, the <b>1110b (RH-69)</b>, uses GSM 850/1900 <span class="badge confirmed">Confirmed</span> <span class="src"><a href="https://fcc.report/FCC-ID/QTLRH-69/584393.pdf">FCC filing QTLRH-69</a></span>. Like the 1100, it was built for first-time buyers: monochrome 96×68 display, dust-resistant keymat, and a focus on talk time over features <span class="src"><a href="https://en.wikipedia.org/wiki/Nokia_1110">Wikipedia</a></span>. Contemporary reporting credits the 1110 family with roughly 250 million units sold <span class="badge likely">Likely</span> <span class="src"><a href="https://en.wikipedia.org/wiki/Nokia_1110">Wikipedia</a></span>.</p>
+<p>The 1110i differs from the 1110 mainly in firmware-level details; publicly documented hardware architecture covers both under the same DCT4 platform <span class="badge likely">Likely</span> <span class="src"><a href="https://lpcwiki.miraheze.org/wiki/Nokia_1110">LPCWiki — Nokia 1110</a></span>.</p>
+
+<div class="note">
+<strong>Not yet on our bench.</strong> BareBoard has never possessed, opened, booted, probed, tested, or disassembled a Nokia 1110 or 1110i. The FCC grant below is primary evidence; the architecture is assembled from public documentation. Board revision, chip date codes, our own photographs, and boot behavior all await the bench.
+</div>
+
+<h2>Timeline</h2>
+<ul class="timeline">
+<li><b>June 2005</b> — Nokia 1110 announced <span class="src"><a href="https://en.wikipedia.org/wiki/Nokia_1110">Wikipedia</a></span>.</li>
+<li><b>September 2005</b> — Nokia 1110 released <span class="src"><a href="https://en.wikipedia.org/wiki/Nokia_1110">Wikipedia</a></span>.</li>
+<li><b>2005-09-21</b> — FCC grants QTLRH-69 to Nokia Corporation for the 1110b/RH-69 <span class="badge confirmed">Confirmed</span> <span class="src"><a href="https://fcc.report/FCC-ID/QTLRH-69/584393.pdf">FCC filing QTLRH-69</a></span>.</li>
+<li><b>2006</b> — 1110i variant released <span class="src"><a href="https://en.wikipedia.org/wiki/Nokia_1110">Wikipedia</a></span>.</li>
+<li><b>2026-09-27</b> — This report published from public records; no unit on our bench.</li>
+</ul>
+
+<h2>Outside</h2>
+<div class="diagram">
+<span class="marker">A</span> Monochrome 96×68 display, inverted (white-on-black) UI <span class="src"><a href="https://en.wikipedia.org/wiki/Nokia_1110">Wikipedia</a></span><br>
+<span class="marker">B</span> Two softkeys + Navi-key cluster<br>
+<span class="marker">C</span> One-piece dust-resistant keymat<br>
+<span class="marker">D</span> Xpress-on swappable covers <span class="src"><a href="https://en.wikipedia.org/wiki/Nokia_1110">Wikipedia</a></span><br>
+<span class="marker">E</span> Removable rear cover; BL-5C battery underneath <span class="src"><a href="https://en.wikipedia.org/wiki/Nokia_1110">Wikipedia</a></span>
+</div>
+<p>Approximately 104 × 44 × 17 mm at 80 g <span class="src"><a href="https://en.wikipedia.org/wiki/Nokia_1110">Wikipedia</a></span>. The 1110 dropped the 1100's flashlight but added an inverted-color display and a speaking clock/alarm — small upgrades on the same ultrabasic formula <span class="badge likely">Likely</span> <span class="src"><a href="https://en.wikipedia.org/wiki/Nokia_1110">Wikipedia</a></span>.</p>
+
+<h2>Board</h2>
+<p>Public architecture: a <b>DCT4</b>-generation design around the <b>UPP4M</b> baseband processor (ARM7TDMI core), with 4 MB of NOR flash and 2 MB of PSRAM <span class="badge likely">Likely</span> <span class="src"><a href="https://lpcwiki.miraheze.org/wiki/Nokia_1110">LPCWiki — Nokia 1110</a></span>. Nokia serviced this generation through the <b>Easy Flash</b> connector family — a documented service/flashing interface <span class="src"><a href="https://lpcwiki.miraheze.org/wiki/Nokia_Easy_Flash">LPCWiki — Nokia Easy Flash</a></span>.</p>
+<div class="note warn"><strong>What we don't know without the bench:</strong> exact PCB revision, the NOR flash die part number, RF front-end markings, and any board-level differences between the 1110 and 1110i. Public records describe the platform; the populated board of a real unit is unverified.</div>
+
+<h2>Chips</h2>
+<div class="table-scroll"><table>
+<tr><th>Ref</th><th>Marking / identity</th><th>Role</th><th>Confidence</th><th>Dig deeper</th></tr>
+<tr><td>—</td><td>UPP4M (ARM7TDMI)</td><td>Baseband processor: GSM stack, UI, peripherals</td><td><span class="badge likely">Likely</span></td><td><a href="https://lpcwiki.miraheze.org/wiki/Nokia_1110">LPCWiki — Nokia 1110</a> — no public datasheet located</td></tr>
+<tr><td>—</td><td>4 MB NOR flash</td><td>Firmware storage</td><td><span class="badge likely">Likely</span></td><td><a href="https://lpcwiki.miraheze.org/wiki/Nokia_1110">LPCWiki — Nokia 1110</a>; die-level identity awaits the bench — no public datasheet claimed</td></tr>
+<tr><td>—</td><td>2 MB PSRAM</td><td>Working memory</td><td><span class="badge likely">Likely</span></td><td><a href="https://lpcwiki.miraheze.org/wiki/Nokia_1110">LPCWiki — Nokia 1110</a>; packaging unknown — no public datasheet claimed</td></tr>
+<tr><td>—</td><td>UEM-class power ASIC</td><td>Power management, charging, audio (DCT4 standard block)</td><td><span class="badge likely">Likely</span></td><td>Platform-standard per DCT4 service documentation; exact marking awaits the bench — no public datasheet claimed</td></tr>
+</table></div>
+
+<h2 id="fcc">FCC</h2>
+<p><b>FCC ID QTLRH-69</b> — granted to <b>Nokia Corporation</b> on <b>September 21, 2005</b> <span class="badge confirmed">Confirmed</span> <span class="src"><a href="https://fcc.report/FCC-ID/QTLRH-69/584393.pdf">FCC filing QTLRH-69 (PDF)</a></span>. The grant covers the <b>1110b (type RH-69)</b>, the U.S. dual-band GSM 850/1900 variant <span class="badge confirmed">Confirmed</span> <span class="src"><a href="https://fcc.report/FCC-ID/QTLRH-69/584393.pdf">FCC filing QTLRH-69 (PDF)</a></span>. Note the scope: this filing names the RH-69 specifically. We do not extend its test data or label photos to the global 900/1800 1110 or the 1110i without separate evidence.</p>
+
+<h2>Debug / service modes</h2>
+<p>Nokia's Easy Flash connector family provided the factory flashing and diagnostic path for DCT4 devices including the 1110 <span class="src"><a href="https://lpcwiki.miraheze.org/wiki/Nokia_Easy_Flash">LPCWiki — Nokia Easy Flash</a></span>. We describe this only at the documented high level: a service connector for authorized flashing and diagnostics. We have never connected to one, we publish no pinout, no baud rate, no procedure, no security codes, and no instructions for defeating any lock or protection. We listen; we don't knock.</p>
+
+<h2>Public findings &amp; what we didn't do</h2>
+<ul class="findings">
+<li>✅ Cited the primary FCC grant (QTLRH-69, 2005-09-21) and scoped it to the 1110b/RH-69 <span class="src"><a href="https://fcc.report/FCC-ID/QTLRH-69/584393.pdf">FCC filing</a></span>.</li>
+<li>✅ Assembled the public architecture (DCT4 / UPP4M / 4 MB NOR / 2 MB PSRAM) <span class="src"><a href="https://lpcwiki.miraheze.org/wiki/Nokia_1110">LPCWiki</a></span>.</li>
+<li>✅ Kept the global 1110/1110i separate from the FCC-covered U.S. variant.</li>
+<li>❌ We have not opened, booted, probed, or photographed a Nokia 1110/1110i ourselves.</li>
+<li>❌ We have not verified the NOR flash die, RF markings, or PCB revision.</li>
+<li>❌ We have not tested the Easy Flash interface or captured any boot log.</li>
+</ul>
+
+<h2>By the numbers</h2>
+<div class="table-scroll"><table>
+<tr><th>Metric</th><th>Value</th><th>Source</th></tr>
+<tr><td>Units sold (reported)</td><td>≈ 250 million</td><td><span class="badge likely">Likely</span> <span class="src"><a href="https://en.wikipedia.org/wiki/Nokia_1110">Wikipedia</a></span></td></tr>
+<tr><td>Display</td><td>Monochrome, 96×68 px</td><td><span class="src"><a href="https://en.wikipedia.org/wiki/Nokia_1110">Wikipedia</a></span></td></tr>
+<tr><td>Network</td><td>GSM 900/1800 (global); GSM 850/1900 (1110b/RH-69)</td><td><span class="badge confirmed">Confirmed</span> for RH-69 <span class="src"><a href="https://fcc.report/FCC-ID/QTLRH-69/584393.pdf">FCC filing</a></span></td></tr>
+<tr><td>Weight / size</td><td>80 g; 104 × 44 × 17 mm</td><td><span class="src"><a href="https://en.wikipedia.org/wiki/Nokia_1110">Wikipedia</a></span></td></tr>
+<tr><td>Memory</td><td>4 MB NOR flash; 2 MB PSRAM</td><td><span class="badge likely">Likely</span> <span class="src"><a href="https://lpcwiki.miraheze.org/wiki/Nokia_1110">LPCWiki</a></span></td></tr>
+<tr><td>Platform</td><td>DCT4; UPP4M (ARM7TDMI)</td><td><span class="badge likely">Likely</span> <span class="src"><a href="https://lpcwiki.miraheze.org/wiki/Nokia_1110">LPCWiki</a></span></td></tr>
+</table></div>
+
+<h2>Glossary</h2>
+<div class="table-scroll"><table class="glossary">
+<tr><td>DCT4</td><td>Nokia's fourth-generation digital core technology platform for GSM handsets.</td></tr>
+<tr><td>UPP4M</td><td>A later UPP baseband variant (ARM7TDMI) used in mid-2000s DCT4 phones.</td></tr>
+<tr><td>NOR flash</td><td>Flash memory that supports execute-in-place; used here for firmware.</td></tr>
+<tr><td>PSRAM</td><td>Pseudo-static RAM — DRAM with an SRAM-like interface, used as working memory.</td></tr>
+<tr><td>Easy Flash</td><td>Nokia's documented service connector family for flashing and diagnostics on DCT4/BB5 devices.</td></tr>
+<tr><td>RH-69</td><td>Nokia type designation for the U.S. 1110b.</td></tr>
+</table></div>
+
+<h2>Sources &amp; confidence</h2>
+<ul>
+<li><a href="https://fcc.report/FCC-ID/QTLRH-69/584393.pdf">FCC filing QTLRH-69 (PDF)</a> — grant to Nokia Corporation, 2005-09-21, covering the 1110b/RH-69 (primary evidence).</li>
+<li><a href="https://lpcwiki.miraheze.org/wiki/Nokia_1110">LPCWiki — Nokia 1110</a> — architecture: UPP4M, 4 MB NOR, 2 MB PSRAM (community documentation).</li>
+<li><a href="https://lpcwiki.miraheze.org/wiki/Nokia_Easy_Flash">LPCWiki — Nokia Easy Flash</a> — service interface family (community documentation).</li>
+<li><a href="https://en.wikipedia.org/wiki/Nokia_1110">Nokia 1110 — Wikipedia</a> — dates, variants, specs, sales figure (secondary).</li>
+</ul>
+<div class="table-scroll"><table>
+<tr><th>Claim</th><th>Confidence</th><th>Basis</th></tr>
+<tr><td>FCC ID QTLRH-69; grantee Nokia Corporation; grant date 2005-09-21; covers 1110b/RH-69</td><td><span class="badge confirmed">Confirmed</span></td><td>FCC filing (primary evidence)</td></tr>
+<tr><td>DCT4 / UPP4M / 4 MB NOR / 2 MB PSRAM</td><td><span class="badge likely">Likely</span></td><td>Corroborated community documentation; die-level detail unverified</td></tr>
+<tr><td>Dates, specs, 250M-unit figure</td><td><span class="badge likely">Likely</span></td><td>Corroborated secondary records</td></tr>
+<tr><td>Board-level component identities</td><td><span class="badge unknown">Unknown</span></td><td>Awaits the bench</td></tr>
+</table></div>
+
+<h2>Legal note</h2>
+<p>This report is a transformative educational summary of publicly available records. Product names and marks belong to their owners. We describe only publicly documented service interfaces at a high level; we publish no lock-bypass, authentication-defeat, firmware-extraction, or unsafe service procedures — including no security codes. Our posture: <strong>we listen, we don't knock.</strong></p>
+
+<h2>Related reports</h2>
+<ul>
+<li><a href="/autopsy/nokia-1100/">Nokia 1100</a> — the 1110's DCT4 predecessor</li>
+<li><a href="/autopsy/nokia-1200/">Nokia 1200</a> — the later ultrabasic DCT4 descendant</li>
+<li><a href="/autopsy/nokia-3210/">Nokia 3210</a> — the DCT3 classic</li>
+</ul>
+
+<footer class="report-foot">
+<p>Device #003 of the Hot 100. Last reviewed 2026-09-27. BareBoard has not possessed, opened, booted, probed, tested, or disassembled this device.</p>
+</footer>
+</article>
+</main>
+<footer>
+<nav><a href="/">BareBoard</a> · <a href="/autopsy/">Autopsy Reports</a> · <a href="/about.html">About</a></nav>
+<p>© BareBoard — free hardware education.</p>
+</footer>
+</body>
+</html>
