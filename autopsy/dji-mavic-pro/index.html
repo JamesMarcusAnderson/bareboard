@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Autopsy 083: DJI Mavic Pro &mdash; BareBoard</title>
+<meta name="description" content="A public-records autopsy of the DJI Mavic Pro (2016) — the folding drone that made pro aerial video pocketable. FCC ID SS3-M1P1607.">
+<meta name="theme-color" content="#fbfbfc">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%231d1d1f'/%3E%3Ctext x='32' y='45' font-family='system-ui,-apple-system,sans-serif' font-size='36' font-weight='700' fill='white' text-anchor='middle'%3EB%3C/text%3E%3C/svg%3E">
+<link rel="stylesheet" href="/style.css">
+</head>
+<body>
+<header class="site-nav">
+  <div class="nav-inner">
+    <a class="brand" href="/">BareBoard</a>
+    <nav>
+      <a href="/about.html">About</a>
+      <a href="/autopsy/">Autopsy</a>
+      <a href="/hot-100.html">Hot 100</a>
+      <a href="/most-wanted.html">Most Wanted</a>
+      <a href="/support.html">Support</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <p class="kicker">The Autopsy Report &middot; Device #083</p>
+  <h1>DJI Mavic Pro</h1>
+  <p class="lede">The Mavic Pro is the drone that changed the shape of the industry: launched in late 2016, it folded down to the size of a water bottle yet carried a stabilized 4K camera and flew for nearly half an hour. Every pocket drone since — including the Mini line covered in this very batch — is its descendant.</p>
+
+  <section>
+    <h2>What is this thing?</h2>
+<p>The DJI Mavic Pro is a foldable quadcopter drone with a stabilized 4K camera on a 3-axis gimbal, model <strong>M1P</strong>. It launched in late September 2016 with a headline spec that was unheard of at the time: a 12-megapixel 1/2.3-inch CMOS sensor shooting 4K/30 video, 27 minutes of flight time, and a 7 km control/video link — all folded into something you could fit in a jacket pocket. <span class="src"><a href="https://www.unmannedsystemstechnology.com/2016/09/dji-announces-new-mavic-pro-portable-folding-drone/">Unmanned Systems Technology</a></span></p>
+  </section>
+  <section>
+    <h2>Whose box is this?</h2>
+<p>This one isn't on our bench &mdash; yet. Nothing here comes from a BareBoard teardown: no disassembly, no boot logs, no bench measurements, no firmware in our hands. Everything below is built from public records &mdash; the government's FCC filing, the manufacturer's own documents, and contemporary press &mdash; read carefully and cited line by line. That's the deal with these reports: when a fact can't be verified from a public record, we say so, out loud.</p>
+    <p>The moment this hardware crosses our bench, this report gets a second act: our own photos, our own measurements, and anything the public record got wrong gets corrected.</p>
+  </section>
+  <section>
+    <h2>A short history</h2>
+<p>DJI announced the Mavic Pro on <strong>September 27, 2016</strong>, positioning it as the company's first truly portable folding drone — the "personal drone" pitched at creators rather than specialists. <span class="src"><a href="https://appleworld.today/2016/09/dji-launches-the-mavic-pro-personal-drone/">AppleWorld.today</a></span></p>
+    <p>The concept worked: the Mavic line became DJI's most important product family, and its direct successors — the Mavic 2, the Mavic Air line, and the sub-250 g Mini series — inherited both its folding geometry and its market position. The Mini 2 in this same report batch is the third-generation descendant of the idea the Mavic Pro proved.</p>
+  </section>
+  <section>
+    <h2>The outside</h2>
+<figure>
+      <img src="img/device.jpg" alt="DJI Mavic Pro drone in flight">
+      <figcaption>A DJI Mavic Pro on location. <strong>Photo: Tore Sætre / Wikimedia</strong> — licensed CC BY-SA 4.0 (see Sources).</figcaption>
+    </figure>
+    <p>The Mavic Pro's party trick is its hinges: four arms fold flat against a rectangular body, and the two front arms' propellers fold too. Unfolded, it spans about 335 mm diagonally; folded, it's roughly 198 × 83 × 83 mm. <span class="src"><a href="https://www.ephotozine.com/article/dji-mavic-pro-foldable-drone-announced-30006">ePhotozine</a></span> The nose carries the camera on its 3-axis gimbal — the fragile-looking egg in the drone's jaw — flanked by the forward vision-sensor pair.</p>
+  </section>
+  <section>
+    <h2>Reading the plastic</h2>
+<p>Mold marks, date wheels, material codes &mdash; the shell's birth certificate. This is bench-only evidence: without the physical unit in our hands, there's nothing honest to read here. What the enclosure looks like is described above from public photos; what's <em>molded into it</em> awaits the bench.</p>
+  </section>
+  <section>
+    <h2>The board</h2>
+<p>The public FCC record for this device includes internal photographs showing the main board, the GPS module, and the RF section — evidence that the airframe is a densely packed multi-board stack rather than a single PCB. <span class="src"><a href="https://fccid.io/SS3-M1P1607">fccid.io filing</a></span></p>
+    <p>From the public photos, no chip markings are legible: the marks are obscured by shielding cans and viewing angle, not by any verified redaction. That means the board can be described honestly only at the block level — flight control, vision processing, video encoding, and the OcuSync radio chain — with the component details still to be confirmed from a bench unit.</p>
+  </section>
+  <section>
+    <h2>Under the microscope: the chips</h2>
+<p><strong>Unknown.</strong> The public internal photos don't resolve any legible chip markings, and no verified bill of materials is published for the M1P. DJI's silicon choices in this era were a mix of in-house and off-the-shelf parts, but naming any specific chip here would be speculation. This is exactly the kind of fact a bench teardown exists to settle.</p>
+  </section>
+  <section>
+    <h2>The government's file on this box</h2>
+<p>The FCC equipment authorization is <strong>FCC ID SS3-M1P1607</strong>, grantee <strong>SZ DJI TECHNOLOGY CO., LTD.</strong> <span class="src"><a href="https://fccid.io/SS3-M1P1607">fccid.io filing</a></span> The filing includes external and internal photographs of the aircraft — the internal shots are the source of everything above about the board stack.</p>
+  </section>
+  <section>
+    <h2>Listening in</h2>
+<p>We have no boot log for this device &mdash; no unit on the bench means nothing to listen to. But the posture is worth stating up front, because it governs everything BareBoard ever does with a live device.</p>
+    <p><strong>We listen, we don't knock.</strong> A serial console is a place to watch a device narrate its own startup, not a place to log in, change things, or break past anything the manufacturer locked. On our bench we attach read-only: power and ground, one receive wire, and silence on the transmit line. We never use JTAG or SWD debug headers to take control, never extract or modify firmware, never hunt for credentials, and never publish anything that would let someone else bypass a lock or defeat authentication.</p>
+    <p>When this device arrives, the first question will be: where does it talk, and does it talk to us unprompted? Until then, that question stays open.</p>
+  </section>
+  <section>
+    <h2>What we found</h2>
+<ul>
+      <li>The Mavic Pro (model M1P) launched September 27, 2016: the first folding, pocket-portable DJI drone.</li>
+      <li>Its public FCC filing confirms a multi-board internal stack — main board, GPS module, RF section — but no legible chip markings.</li>
+      <li>It established the template every Mini-series drone in this batch descends from.</li>
+    </ul>
+  </section>
+  <section>
+    <h2>What we didn't do</h2>
+    <ul>
+      <li>We never opened a unit, attached to a debug port, or powered one up for this report.</li>
+      <li>We never extracted, modified, or shared any firmware or software.</li>
+      <li>We never published or used any credentials, keys, or bypass techniques.</li>
+      <li>No boot logs, no bench measurements, and no photos of our own — because there is no unit of ours to photograph. The device photo above is credited in its caption.</li>
+    </ul>
+  </section>
+  <section>
+    <h2>By the numbers</h2>
+    <ul>
+      <li><strong>Launch:</strong> September 27, 2016</li>
+      <li><strong>Model:</strong> M1P</li>
+      <li><strong>Camera:</strong> 12 MP 1/2.3″ CMOS, 4K/30, 3-axis gimbal</li>
+      <li><strong>Flight time:</strong> 27 minutes (advertised)</li>
+      <li><strong>Link:</strong> OcuSync 1.0, 7 km</li>
+      <li><strong>FCC ID:</strong> SS3-M1P1607</li>
+      <li><strong>Bench status:</strong> Not yet on our bench</li>
+    </ul>
+  </section>
+  <section>
+    <h2>Words to know</h2>
+    <dl class="glossary">
+      <div><dt>Gimbal</dt><dd>A motorized mount that keeps the camera level and steady while the drone moves.</dd></div>
+      <div><dt>OcuSync</dt><dd>DJI's proprietary control-and-video transmission system.</dd></div>
+      <div><dt>Shielding can</dt><dd>A metal cover over RF circuitry that blocks electromagnetic interference — and, incidentally, prying eyes.</dd></div>
+    </dl>
+  </section>
+  <section>
+    <h2>Sources & confidence</h2>
+    <ul>
+      <li>DJI announces Mavic Pro portable folding drone — Unmanned Systems Technology, Sep 2016 <span class="src"><a href="https://www.unmannedsystemstechnology.com/2016/09/dji-announces-new-mavic-pro-portable-folding-drone/">link</a></span> — <span class='badge confirmed'>Confirmed</span></li>
+      <li>DJI launches the Mavic Pro personal drone — AppleWorld.today, Sep 2016 <span class="src"><a href="https://appleworld.today/2016/09/dji-launches-the-mavic-pro-personal-drone/">link</a></span> — <span class='badge confirmed'>Confirmed</span></li>
+      <li>DJI Mavic Pro foldable drone announced — ePhotozine, Sep 2016 <span class="src"><a href="https://www.ephotozine.com/article/dji-mavic-pro-foldable-drone-announced-30006">link</a></span> — <span class='badge confirmed'>Confirmed</span></li>
+      <li>FCC filing SS3-M1P1607, grantee SZ DJI TECHNOLOGY CO., LTD. (internal photos: main board, GPS, RF views) — fccid.io <span class="src"><a href="https://fccid.io/SS3-M1P1607">link</a></span> — <span class='badge confirmed'>Confirmed</span></li>
+      <li>Chip markings on the board — not legible in public photos; no verified bill of materials — <span class='badge unknown'>Unknown</span></li>
+      <li>Photo: Tore Sætre, via Wikimedia Commons, licensed CC BY-SA 4.0 <span class="src"><a href="https://commons.wikimedia.org/wiki/File:DJI_Mavic_Pro_Rallarvegen_2018_(123513).jpg">link</a></span> — <span class='badge confirmed'>Confirmed</span></li>
+    </ul>
+<p class="note"><strong>Legal note.</strong> BareBoard is an educational project. Everything on this page is derived from public records &mdash; our own bench work begins only when hardware arrives. We don't publish, host, or distribute firmware, keys, passwords, or credentials, and nothing here bypasses a lock, defeats authentication, or extracts software from a device. Product names and trademarks belong to their respective owners and appear here only to identify the hardware. If you believe anything here infringes your rights, contact us and we'll address it promptly.</p>
+  </section>
+
+  <footer>
+    <p>BareBoard &mdash; a free educational resource. Device #083 of the Hot 100.</p>
+    <nav>
+      <a href="/autopsy/">All autopsies</a>
+      <a href="/">Home</a>
+    </nav>
+  </footer>
+</main>
+</body>
+</html>
