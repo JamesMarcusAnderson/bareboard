@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Autopsy 076: The Nexus 7 (2013) &mdash; BareBoard</title>
+<meta name="description" content="BareBoard Autopsy 076: a plain-English, public-records teardown of the 2013 Nexus 7 — Snapdragon S4 Pro, FCC filing MSQK009, and the iFixit chip list.">
+<meta name="theme-color" content="#fbfbfc">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%231d1d1f'/%3E%3Ctext x='32' y='45' font-family='system-ui,-apple-system,sans-serif' font-size='36' font-weight='700' fill='white' text-anchor='middle'%3EB%3C/text%3E%3C/svg%3E">
+<link rel="stylesheet" href="/style.css">
+</head>
+<body>
+<header class="site-nav">
+  <div class="nav-inner">
+    <a class="brand" href="/">BareBoard</a>
+    <nav>
+      <a href="/about.html">About</a>
+      <a href="/autopsy/">Autopsy</a>
+      <a href="/hot-100.html">Hot 100</a>
+      <a href="/most-wanted.html">Most Wanted</a>
+      <a href="/support.html">Support</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <p class="kicker">The Autopsy Report &middot; Device #076</p>
+  <h1>The Nexus 7 (2013)</h1>
+  <p class="lede">The sequel that fixed everything: a Snapdragon S4 Pro, a 1920×1200 screen, and wireless charging — still $229.</p>
+
+  <section>
+    <h2>What is this thing?</h2>
+    <p>The <strong>Nexus 7 (2013)</strong> is the second-generation 7-inch tablet Google built with ASUS, announced July 24, 2013 and released July 26, 2013, starting at $229. <span class="src"><a href="https://en.wikipedia.org/wiki/Nexus_7_(2013)">Wikipedia</a></span> It replaced the Tegra 3 with a <strong>Snapdragon S4 Pro</strong>, doubled the RAM to 2&nbsp;GB, and jumped the display to 1920×1200 — at the same launch price as its predecessor.</p>
+    <p>It was also the first device to ship Android 4.3, and it added wireless charging and 5&nbsp;GHz Wi-Fi — the two most-requested upgrades from the 2012 model. <span class="src"><a href="https://www.ifixit.com/News/5035/nexus-7-2nd-generation-teardown">iFixit news</a></span> </p>
+  </section>
+
+  <section>
+    <h2>Not yet on our bench</h2>
+    <p>This device is <strong>not on our bench</strong>. We don't own one, we haven't opened one, and we haven't powered one on. Everything on this page comes from public records: government filings, published teardowns by repair shops and journalists, and manufacturer documents. That's a legitimate way to learn a device's story &mdash; and it's also a limited one. There are no BareBoard photos, measurements, boot logs, or firmware notes here, because we haven't earned them yet.</p>
+    <p>When a unit of the Nexus 7 (2013) does reach our bench, this page gets a second edition: our own board photography, our own measurements, and whatever the device tells us when it wakes up. Until then, what follows is the public record, carefully sourced, with the gaps labeled as gaps.</p>
+  </section>
+
+  <section>
+    <h2>A short history</h2>
+    <ol class="timeline">
+      <li><span class="when">July 24, 2013</span>Google announces the second-generation Nexus 7. <span class="src"><a href="https://en.wikipedia.org/wiki/Nexus_7_(2013)">Wikipedia</a></span></li>
+      <li><span class="when">July 26, 2013</span>The new Nexus 7 goes on sale at $229. <span class="src"><a href="https://en.wikipedia.org/wiki/Nexus_7_(2013)">Wikipedia</a></span></li>
+      <li><span class="when">July 30, 2013</span>Teardowns land within days: iFixit and The Register open one up and agree on the parts. <span class="src"><a href="https://www.ifixit.com/Teardown/Nexus+7+2nd+Generation+Teardown/16072">iFixit teardown</a></span> · <span class="src"><a href="http://www.theregister.com/2013/07/30/googles_secondgen_nexus_7_fondleslab_stripped_bare/">The Register</a></span></li>
+      <li><span class="when">2013</span>Filed with the FCC as MSQK009. <span class="src"><a href="https://fccid.io/MSQK009">FCC filing (index unreachable during research)</a></span>  The filing index page was unreachable from our network during research — see the FCC section below.</li>
+    </ol>
+  </section>
+
+  <section>
+    <h2>The outside</h2>
+    <p>A 7-inch, 1920×1200 display in a thinner, lighter body than the 2012 model — the bezels shrank and the soft-touch back got a smoother finish. <span class="src"><a href="https://en.wikipedia.org/wiki/Nexus_7_(2013)">Wikipedia</a></span> Stereo speakers, a 5-megapixel rear camera (new for the line), and a notification LED round out the visible changes.</p>
+    <p>The photo below shows a 2013 Nexus 7 running a community Android build.</p>
+    <figure>
+      <img src="img/device.jpg" alt="A 2013 Nexus 7 tablet running LineageOS">
+      <figcaption>A 2013 Nexus 7 running a community Android build — the unlockable bootloader made it a tinkerer favorite. Photo: Thequiettortoise, CC BY-SA 4.0, via Wikimedia Commons.</figcaption>
+    </figure>
+  </section>
+
+  <section>
+    <h2>The board</h2>
+    <p>iFixit's teardown describes a single main board with the Snapdragon S4 Pro at its center, four Elpida memory chips making up the 2&nbsp;GB of RAM, and the SK Hynix eMMC nearby; the wireless-charging coil sits against the back cover. <span class="src"><a href="https://www.ifixit.com/Teardown/Nexus+7+2nd+Generation+Teardown/16072">iFixit teardown</a></span> The Register's teardown coverage walks the same board and confirms the layout. <span class="src"><a href="http://www.theregister.com/2013/07/30/googles_secondgen_nexus_7_fondleslab_stripped_bare/">The Register</a></span> </p>
+    <p>We have not photographed the board ourselves. One caution from the record: secondary sources disagree on the exact eMMC part number suffix — the table below carries the marking iFixit read, flagged accordingly.</p>
+  </section>
+
+  <section>
+    <h2>Under the microscope: the chips</h2>
+    <p>What's on the board, what each part does, and how sure we are &mdash; all from public teardown records, since we haven't seen the board ourselves. <strong>Likely</strong> means the public hardware record agrees on it. <strong>Confirmed</strong> is reserved for primary sources we could verify directly, like the government's own filing. Every row links somewhere you can read more.</p>
+    <div class="table-scroll">
+    <table class="chips">
+      <thead>
+        <tr><th>Chip</th><th>What it does</th><th>How we know</th><th>Dig deeper</th></tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><strong>Qualcomm APQ8064</strong><br><span class="partno">Snapdragon S4 Pro</span></td>
+          <td>The main processor — quad-core Krait plus Adreno 320 graphics.</td>
+          <td><span class="badge b-likely">Likely</span> Identified by iFixit and The Register.</td>
+          <td><a href="https://www.ifixit.com/Teardown/Nexus+7+2nd+Generation+Teardown/16072">iFixit teardown</a></td>
+        </tr>
+        <tr>
+          <td><strong>4× Elpida J4216EFBG</strong><br><span class="partno">512 MB each — 2 GB total</span></td>
+          <td>Working memory, four chips around the SoC.</td>
+          <td><span class="badge b-likely">Likely</span> Read off the board by iFixit.</td>
+          <td><a href="https://www.ifixit.com/News/5035/nexus-7-2nd-generation-teardown">iFixit news</a></td>
+        </tr>
+        <tr>
+          <td><strong>SK Hynix H26M52003EQR</strong><br><span class="partno">16 GB eMMC (marking per iFixit)</span></td>
+          <td>Flash storage. Note: some secondary sources print a slightly different suffix.</td>
+          <td><span class="badge b-likely">Likely</span> iFixit’s marking; suffix varies in secondary reporting.</td>
+          <td><a href="https://www.ifixit.com/Teardown/Nexus+7+2nd+Generation+Teardown/16072">iFixit teardown</a></td>
+        </tr>
+        <tr>
+          <td><strong>Qualcomm Atheros WCN3660</strong></td>
+          <td>Wi-Fi/Bluetooth/FM combo radio.</td>
+          <td><span class="badge b-likely">Likely</span> Identified in teardown chip lists.</td>
+          <td><a href="http://www.theregister.com/2013/07/30/googles_secondgen_nexus_7_fondleslab_stripped_bare/">The Register</a></td>
+        </tr>
+        <tr>
+          <td><strong>Qualcomm PM8921</strong></td>
+          <td>Power management for the Snapdragon platform.</td>
+          <td><span class="badge b-likely">Likely</span> Identified in teardown chip lists.</td>
+          <td><a href="https://www.ifixit.com/Teardown/Nexus+7+2nd+Generation+Teardown/16072">iFixit teardown</a></td>
+        </tr>
+        <tr>
+          <td><strong>Analogix ANX7808</strong></td>
+          <td>SlimPort transmitter — video-out over the micro-USB port.</td>
+          <td><span class="badge b-likely">Likely</span> Identified in teardown chip lists.</td>
+          <td><a href="https://www.ifixit.com/News/5035/nexus-7-2nd-generation-teardown">iFixit news</a></td>
+        </tr>
+        <tr>
+          <td><strong>TI BQ51013B</strong></td>
+          <td>Wireless-charging receiver — the Qi coil's other half.</td>
+          <td><span class="badge b-likely">Likely</span> Identified in teardown chip lists.</td>
+          <td><a href="https://www.ifixit.com/Teardown/Nexus+7+2nd+Generation+Teardown/16072">iFixit teardown</a></td>
+        </tr>
+      </tbody>
+    </table>
+    </div>
+    <p>Deliberately omitted: two part numbers that appear in some secondary sources for this device — a Qualcomm RF transceiver and a Japan Display panel marking — could not be tied to the exact K009 variant in a source we trust, so they don't appear here. Unknown beats wrong.</p>
+  </section>
+
+  <section id="fcc">
+    <h2>The government's file on this device</h2>
+    <p>The 2013 Nexus 7 was filed with the FCC as <strong>MSQK009</strong>. During our research the FCC's index page for this filing refused the connection, and per our own rules we don't retry a blocked fetch — so we report <strong>no grant dates, no exhibit dates, and no transmit powers</strong> for this filing rather than guess at them.</p>
+    <p>What we can say honestly: the filing exists under that ID, registered in the ASUS/Google Nexus line. If your network cooperates, the primary source is worth a visit: <span class="src"><a href="https://fccid.io/MSQK009">filing page</a></span>. When we can reach it, this section gets the full treatment.</p>
+  </section>
+
+  <section>
+    <h2>Debug and service modes</h2>
+    <p>Google publicly documents the <strong>fastboot</strong> workflow for Nexus devices: the factory-images page describes flashing official system images with fastboot commands, which requires the bootloader mode the device ships with. <span class="src"><a href="https://developers.google.com/android/images">Google factory images</a></span> The bootloader on Nexus hardware is unlockable by design.</p>
+    <p>We have not unlocked, flashed, or fastbooted any 2013 Nexus 7. The mode is listed because Google documents the workflow — not because we've run it.</p>
+    <p>Our posture on all of the above: we describe what's publicly documented, and we don't go knocking. No device has been probed, reflashed, or opened on our bench &mdash; there is nothing here but reading.</p>
+  </section>
+
+  <section>
+    <h2>What public records show</h2>
+    <p><strong>The sequel fixed the first generation's complaints.</strong> Faster chip, double the RAM, a far sharper screen, 5&nbsp;GHz Wi-Fi, wireless charging, a rear camera — and the price didn't move. The teardown press treated it as the obvious upgrade. <span class="src"><a href="http://www.theregister.com/2013/07/30/googles_secondgen_nexus_7_fondleslab_stripped_bare/">The Register</a></span></p>
+    <p><strong>Some filings stay out of reach.</strong> The MSQK009 index page refused our connection during research. That's a gap in this report, labeled as one — not papered over with numbers from somewhere else. <span class="src"><a href="https://fccid.io/MSQK009">FCC filing (index unreachable during research)</a></span></p>
+  </section>
+
+  <section>
+    <h2>What we haven't done</h2>
+    <ul>
+      <li>We have not opened a 2013 Nexus 7, photographed its board, or measured anything on it.</li>
+      <li>We have not captured a boot log or entered fastboot mode on this model.</li>
+      <li>We have not resolved the eMMC part-number suffix disagreement in secondary sources.</li>
+      <li>We have not retrieved the MSQK009 FCC exhibit list — the index page was unreachable during research.</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>By the numbers</h2>
+    <ul>
+      <li><strong>Model:</strong> Nexus 7 (2013), Wi-Fi (K009); co-developed by Google and ASUS <span class="src"><a href="https://en.wikipedia.org/wiki/Nexus_7_(2013)">Wikipedia</a></span></li>
+      <li><strong>FCC ID:</strong> MSQK009 (filing index unreachable during research) <span class="src"><a href="https://fccid.io/MSQK009">FCC filing (index unreachable)</a></span></li>
+      <li><strong>Main chip:</strong> Qualcomm Snapdragon S4 Pro (APQ8064) <span class="src"><a href="https://www.ifixit.com/Teardown/Nexus+7+2nd+Generation+Teardown/16072">iFixit teardown</a></span></li>
+      <li><strong>Memory:</strong> 2 GB RAM <span class="src"><a href="https://www.ifixit.com/News/5035/nexus-7-2nd-generation-teardown">iFixit news</a></span></li>
+      <li><strong>Display:</strong> 7 in, 1920×1200 <span class="src"><a href="https://en.wikipedia.org/wiki/Nexus_7_(2013)">Wikipedia</a></span></li>
+      <li><strong>Storage:</strong> 16/32 GB <span class="src"><a href="https://en.wikipedia.org/wiki/Nexus_7_(2013)">Wikipedia</a></span></li>
+      <li><strong>Released:</strong> July 26, 2013, from $229 <span class="src"><a href="https://en.wikipedia.org/wiki/Nexus_7_(2013)">Wikipedia</a></span></li>
+      <li><strong>Wireless:</strong> dual-band Wi-Fi, Bluetooth 4.0, NFC, GPS, Qi wireless charging <span class="src"><a href="https://en.wikipedia.org/wiki/Nexus_7_(2013)">Wikipedia</a></span></li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>Words to know</h2>
+    <p>Every term this page uses, in plain English. No prior knowledge required.</p>
+    <dl class="glossary">
+      <div><dt>Bootloader</dt><dd>The first program that runs when a device powers on — it decides whether to start Android or wait for instructions.</dd></div>
+      <div><dt>Fastboot</dt><dd>A mode on Nexus devices for talking to the bootloader over USB: Google documents it for flashing official system images.</dd></div>
+      <div><dt>eMMC</dt><dd>Embedded MultiMediaCard: flash storage plus its controller in one package.</dd></div>
+      <div><dt>SlimPort</dt><dd>A standard for sending video out over a micro-USB port — the ANX7808's job.</dd></div>
+      <div><dt>Qi wireless charging</dt><dd>Charging over a magnetic coil instead of a cable; the BQ51013B receives the power.</dd></div>
+      <div><dt>FCC ID</dt><dd>The ID the FCC assigns to each approved wireless product. Punch it into fccid.io and the whole public filing comes up.</dd></div>
+    </dl>
+  </section>
+
+  <section>
+    <h2>Sources &amp; confidence</h2>
+    <ul>
+      <li>Chip identities: iFixit's 2013 teardown and news write-up, plus The Register's teardown coverage. Marked Likely throughout — we haven't seen the board ourselves.</li>
+      <li>FCC ID: public records; the MSQK009 index page was unreachable during research, so no filing details are reported. That's a labeled gap.</li>
+      <li>Release date, price, and launch specs: the device's encyclopedia entry, cross-checked against launch coverage.</li>
+      <li>Fastboot workflow: Google's own factory-images documentation.</li>
+      <li>Anything not listed here is unknown until the bench says otherwise. We'll say so, out loud, when that's the case.</li>
+    </ul>
