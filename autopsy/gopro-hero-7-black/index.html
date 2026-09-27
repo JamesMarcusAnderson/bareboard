@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Autopsy 086: GoPro HERO7 Black &mdash; BareBoard</title>
+<meta name="description" content="A public-records autopsy of the GoPro HERO7 Black (2018) — HyperSmooth stabilization, GP1 chip, 4K60. FCC ID CNFSPCH1.">
+<meta name="theme-color" content="#fbfbfc">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%231d1d1f'/%3E%3Ctext x='32' y='45' font-family='system-ui,-apple-system,sans-serif' font-size='36' font-weight='700' fill='white' text-anchor='middle'%3EB%3C/text%3E%3C/svg%3E">
+<link rel="stylesheet" href="/style.css">
+</head>
+<body>
+<header class="site-nav">
+  <div class="nav-inner">
+    <a class="brand" href="/">BareBoard</a>
+    <nav>
+      <a href="/about.html">About</a>
+      <a href="/autopsy/">Autopsy</a>
+      <a href="/hot-100.html">Hot 100</a>
+      <a href="/most-wanted.html">Most Wanted</a>
+      <a href="/support.html">Support</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <p class="kicker">The Autopsy Report &middot; Device #086</p>
+  <h1>GoPro HERO7 Black</h1>
+  <p class="lede">The HERO7 Black is the GoPro that killed the gimbal: its HyperSmooth electronic stabilization was so good that action-camera shooters sold their motorized stabilizers. Announced in September 2018, it paired the GP1 processor with a built-in gyroscope to smooth footage in-camera — and made 'gimbal-like' a software feature.</p>
+
+  <section>
+    <h2>What is this thing?</h2>
+<p>The GoPro HERO7 Black is a rugged action camera, model <strong>SPCH1</strong> — the flagship of GoPro's 2018 HERO7 line (Black, Silver, White). It shoots 12-megapixel stills, 4K/60 video, 1080p/240 slow motion, and is waterproof to 10 meters without a housing. <span class="src"><a href="https://www.slashgear.com/gopro-hero-7-release-date-price-pricing-black-silver-white-20546585/">SlashGear</a></span></p>
+    <p>Its defining feature is <strong>HyperSmooth</strong>: electronic image stabilization driven by the camera's built-in gyroscope, marketed as delivering gimbal-like smoothness with no external stabilizer. <span class="src"><a href="https://nofilmschool.com/2018/09/gopro-rolls-out-hero7-cameras-its-best-image-stabilization-yet">No Film School</a></span></p>
+  </section>
+  <section>
+    <h2>Whose box is this?</h2>
+<p>This one isn't on our bench &mdash; yet. Nothing here comes from a BareBoard teardown: no disassembly, no boot logs, no bench measurements, no firmware in our hands. Everything below is built from public records &mdash; the government's FCC filing, the manufacturer's own documents, and contemporary press &mdash; read carefully and cited line by line. That's the deal with these reports: when a fact can't be verified from a public record, we say so, out loud.</p>
+    <p>The moment this hardware crosses our bench, this report gets a second act: our own photos, our own measurements, and anything the public record got wrong gets corrected.</p>
+  </section>
+  <section>
+    <h2>A short history</h2>
+<p>GoPro announced the HERO7 line on <strong>September 20, 2018</strong>, with the Black at $399, Silver at $299, and White at $199 — the first time GoPro sold three distinct tiers under one generation. <span class="src"><a href="https://www.slashgear.com/gopro-hero-7-release-date-price-pricing-black-silver-white-20546585/">SlashGear</a></span> Alongside HyperSmooth it introduced <strong>TimeWarp</strong> (stabilized time-lapse video), live streaming straight from the camera, and SuperPhoto intelligent HDR. <span class="src"><a href="https://nofilmschool.com/2018/09/gopro-rolls-out-hero7-cameras-its-best-image-stabilization-yet">No Film School</a></span></p>
+    <p>Under the hood, the Black runs GoPro's <strong>GP1</strong> processor — the same chip as the HERO6, but with the HERO7's firmware unlocking its stabilization and scene-analysis headroom. <span class="src"><a href="https://newatlas.com/gopro-hero7-black/56431/">New Atlas</a></span></p>
+  </section>
+  <section>
+    <h2>The outside</h2>
+<figure>
+      <img src="img/device.jpg" alt="GoPro HERO7 Black action camera">
+      <figcaption>GoPro HERO7 Black. <strong>Image placeholder:</strong> a verified free product photo is on our Most Wanted list — no exact free photo exists yet. When the unit reaches our bench, this becomes a real BareBoard photograph.</figcaption>
+    </figure>
+    <p>The HERO7 Black is the classic GoPro brick: a rubberized, waterproof body with the lens and a small status screen on the front, a 2-inch touchscreen on the back, and the side door covering USB-C, micro-HDMI, and the microSD slot. Contemporary coverage describes the familiar rugged shell carried over from the HERO5/6 generation. <span class="src"><a href="https://newatlas.com/gopro-hero7-black/56431/">New Atlas</a></span></p>
+  </section>
+  <section>
+    <h2>Reading the plastic</h2>
+<p>Mold marks, date wheels, material codes &mdash; the shell's birth certificate. This is bench-only evidence: without the physical unit in our hands, there's nothing honest to read here. What the enclosure looks like is described above from public photos; what's <em>molded into it</em> awaits the bench.</p>
+  </section>
+  <section>
+    <h2>The board</h2>
+<p>No internal-photograph exhibit for the SPCH1 has been verified in open research, so the board layout is <strong>unknown</strong>. What the public record supports: the Black is built around GoPro's GP1 system-on-chip paired with a gyroscope for HyperSmooth, in a sealed waterproof chassis with USB-C, micro-HDMI, and microSD on the side. <span class="src"><a href="https://newatlas.com/gopro-hero7-black/56431/">New Atlas</a></span> The component-level details — memory, power management, the exact sensor — await a donor unit.</p>
+  </section>
+  <section>
+    <h2>Under the microscope: the chips</h2>
+<ul>
+      <li><strong>GP1 (GoPro)</strong> — GoPro's custom system-on-chip, carried over from the HERO6 and driving HyperSmooth, TimeWarp, and SuperPhoto on the HERO7 Black. <span class="src"><a href="https://newatlas.com/gopro-hero7-black/56431/">New Atlas</a></span></li>
+      <li>Image sensor, DRAM, and power-management parts are unverified for this model from public records — deliberately not listed.</li>
+    </ul>
+  </section>
+  <section>
+    <h2>The government's file on this box</h2>
+<p>The FCC equipment authorization is <strong>FCC ID CNFSPCH1</strong>, model <strong>SPCH1</strong>, grantee <strong>GoPro, Inc.</strong> <span class="src"><a href="https://fccid.io/CNFSPCH1">fccid.io filing</a></span> The application is recorded as filed June 30, 2017. No internal-photograph exhibit has been verified in open research.</p>
+  </section>
+  <section>
+    <h2>Listening in</h2>
+<p>We have no boot log for this device &mdash; no unit on the bench means nothing to listen to. But the posture is worth stating up front, because it governs everything BareBoard ever does with a live device.</p>
+    <p><strong>We listen, we don't knock.</strong> A serial console is a place to watch a device narrate its own startup, not a place to log in, change things, or break past anything the manufacturer locked. On our bench we attach read-only: power and ground, one receive wire, and silence on the transmit line. We never use JTAG or SWD debug headers to take control, never extract or modify firmware, never hunt for credentials, and never publish anything that would let someone else bypass a lock or defeat authentication.</p>
+    <p>When this device arrives, the first question will be: where does it talk, and does it talk to us unprompted? Until then, that question stays open.</p>
+  </section>
+  <section>
+    <h2>What we found</h2>
+<ul>
+      <li>The HERO7 Black (model SPCH1) launched September 20, 2018 at $399, headlining HyperSmooth gyro-based stabilization.</li>
+      <li>It runs GoPro's GP1 processor — the one chip on this board the public record firmly supports.</li>
+      <li>The rest of the board — sensor, memory, power chain — is undocumented in public records and awaits the bench.</li>
+    </ul>
+  </section>
+  <section>
+    <h2>What we didn't do</h2>
+    <ul>
+      <li>We never opened a unit, attached to a debug port, or powered one up for this report.</li>
+      <li>We never extracted, modified, or shared any firmware or software.</li>
+      <li>We never published or used any credentials, keys, or bypass techniques.</li>
+      <li>No boot logs, no bench measurements, and no photos of our own — because there is no unit of ours to photograph. The device photo above is credited in its caption.</li>
+    </ul>
+  </section>
+  <section>
+    <h2>By the numbers</h2>
+    <ul>
+      <li><strong>Launch:</strong> September 20, 2018</li>
+      <li><strong>Model:</strong> SPCH1</li>
+      <li><strong>Video:</strong> 4K/60, 1080p/240</li>
+      <li><strong>Stills:</strong> 12 MP, SuperPhoto HDR</li>
+      <li><strong>Waterproof:</strong> 10 m, no housing</li>
+      <li><strong>Price at launch:</strong> $399</li>
+      <li><strong>FCC ID:</strong> CNFSPCH1</li>
+      <li><strong>Bench status:</strong> Not yet on our bench</li>
+    </ul>
+  </section>
+  <section>
+    <h2>Words to know</h2>
+    <dl class="glossary">
+      <div><dt>HyperSmooth</dt><dd>GoPro's gyro-assisted electronic image stabilization — software smoothing using the camera's motion sensor.</dd></div>
+      <div><dt>TimeWarp</dt><dd>GoPro's stabilized time-lapse video mode, introduced on the HERO7 Black.</dd></div>
+      <div><dt>GP1</dt><dd>GoPro's custom camera system-on-chip, first used in the HERO6.</dd></div>
+    </dl>
+  </section>
+  <section>
+    <h2>Sources & confidence</h2>
+    <ul>
+      <li>GoPro HERO7 Black announcement — New Atlas, Sep 2018 <span class="src"><a href="https://newatlas.com/gopro-hero7-black/56431/">link</a></span> — <span class='badge confirmed'>Confirmed</span></li>
+      <li>GoPro rolls out HERO7 cameras — No Film School, Sep 2018 <span class="src"><a href="https://nofilmschool.com/2018/09/gopro-rolls-out-hero7-cameras-its-best-image-stabilization-yet">link</a></span> — <span class='badge confirmed'>Confirmed</span></li>
+      <li>GoPro Hero 7 release date and pricing (Black/Silver/White) — SlashGear <span class="src"><a href="https://www.slashgear.com/gopro-hero-7-release-date-price-pricing-black-silver-white-20546585/">link</a></span> — <span class='badge confirmed'>Confirmed</span></li>
+      <li>FCC filing CNFSPCH1 (grantee: GoPro, Inc.; application filed 2017-06-30) — fccid.io <span class="src"><a href="https://fccid.io/CNFSPCH1">link</a></span> — <span class='badge likely'>Likely</span></li>
+      <li>Full chip list beyond the GP1 — no verified public record found — <span class='badge unknown'>Unknown</span></li>
+    </ul>
+<p class="note"><strong>Legal note.</strong> BareBoard is an educational project. Everything on this page is derived from public records &mdash; our own bench work begins only when hardware arrives. We don't publish, host, or distribute firmware, keys, passwords, or credentials, and nothing here bypasses a lock, defeats authentication, or extracts software from a device. Product names and trademarks belong to their respective owners and appear here only to identify the hardware. If you believe anything here infringes your rights, contact us and we'll address it promptly.</p>
+  </section>
+
+  <footer>
+    <p>BareBoard &mdash; a free educational resource. Device #086 of the Hot 100.</p>
+    <nav>
+      <a href="/autopsy/">All autopsies</a>
+      <a href="/">Home</a>
+    </nav>
+  </footer>
+</main>
+</body>
+</html>
