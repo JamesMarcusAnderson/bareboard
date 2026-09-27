@@ -1,0 +1,187 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Nokia 3210 (NSE-8) Autopsy Report — BareBoard</title>
+<meta name="description" content="BareBoard Autopsy Report: Nokia 3210. DCT3 platform, TI MAD2PR1, teardown-backed chip table, and what we have not yet done.">
+<link rel="canonical" href="https://bareboard.org/autopsy/nokia-3210/">
+<meta property="og:title" content="Nokia 3210 — BareBoard Autopsy Report">
+<meta property="og:description" content="The DCT3 classic with the internal antenna, documented from teardowns and public records. Not yet on our bench.">
+<meta property="og:image" content="https://bareboard.org/autopsy/nokia-3210/img/device.jpg">
+<meta property="og:type" content="article">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"TechArticle","headline":"Nokia 3210 Autopsy Report","author":{"@type":"Organization","name":"BareBoard"},"about":{"@type":"Product","name":"Nokia 3210","manufacturer":{"@type":"Organization","name":"Nokia"}},"datePublished":"2026-09-27"}
+</script>
+<link rel="stylesheet" href="/style.css">
+<style>
+.hero{background:#101014;border:1px solid #2a2a30;border-radius:14px;padding:1.4rem 1.4rem 1.1rem;margin:0 0 1.4rem}
+.kicker{color:#8e8e96;text-transform:uppercase;letter-spacing:.14em;font-size:.78rem;margin:0 0 .5rem}
+h1{margin:.1rem 0 .5rem;font-size:2rem;line-height:1.15}
+.lede{color:#c9c9d1;font-size:1.08rem;line-height:1.65;margin:.4rem 0 0}
+.badge{display:inline-block;font-size:.72rem;font-weight:700;letter-spacing:.06em;text-transform:uppercase;border-radius:999px;padding:.18rem .6rem;margin-left:.5rem;vertical-align:middle}
+.badge.confirmed{background:#1c4d2e;color:#b8f0c9;border:1px solid #2e7d4f}
+.badge.likely{background:#4d3f1c;color:#f0dcae;border:1px solid #8a7135}
+.badge.unknown{background:#3a3a40;color:#b9b9c0;border:1px solid #55555c}
+.src{font-size:.78rem;color:#8e8e96;white-space:nowrap}
+.src a{color:#7ea6ff}
+figure{margin:1.2rem 0}
+figure img{max-width:100%;height:auto;border-radius:10px;border:1px solid #2a2a30;display:block}
+figcaption{font-size:.85rem;color:#9a9aa2;margin-top:.5rem;line-height:1.5}
+h2{margin-top:2rem}
+h3{margin-top:1.4rem}
+table{width:100%;border-collapse:collapse;font-size:.92rem}
+th,td{text-align:left;padding:.55rem .6rem;border-bottom:1px solid #2a2a30;vertical-align:top}
+th{color:#c9c9d1}
+.table-scroll{overflow-x:auto;border:1px solid #2a2a30;border-radius:10px}
+.timeline{list-style:none;margin:0;padding:0}
+.timeline li{padding:.6rem 0 .6rem 1.2rem;border-left:2px solid #3a3a42;position:relative;margin-left:.4rem}
+.timeline li::before{content:"";position:absolute;left:-7px;top:.95rem;width:12px;height:12px;border-radius:50%;background:#8e8e96}
+.timeline b{color:#ececf1}
+.note{background:#141419;border:1px solid #3a3a42;border-left:4px solid #7ea6ff;border-radius:8px;padding:.9rem 1.1rem;margin:1.2rem 0;line-height:1.6}
+.note.warn{border-left-color:#e0a63c}
+.chips{display:flex;flex-wrap:wrap;gap:.4rem;margin:.6rem 0}
+.chips span{background:#1c1c21;border:1px solid #33333a;border-radius:999px;padding:.25rem .7rem;font-size:.82rem;color:#c9c9d1}
+.glossary td:first-child{white-space:nowrap;font-weight:600;color:#ececf1}
+ul.findings li{margin:.45rem 0;line-height:1.6}
+.diagram{background:#101014;border:1px solid #2a2a30;border-radius:10px;padding:1rem 1.2rem;margin:1rem 0;font-size:.92rem;line-height:1.7}
+.diagram .marker{display:inline-block;background:#2a2a32;border:1px solid #4a4a55;border-radius:6px;padding:.05rem .5rem;margin:.15rem .2rem;font-family:ui-monospace,monospace;font-size:.85rem}
+.anatomy{columns:2;column-gap:2rem;font-size:.92rem}
+.anatomy li{break-inside:avoid;margin:.35rem 0;line-height:1.55}
+@media(max-width:640px){.anatomy{columns:1}}
+footer.report-foot{margin-top:2.5rem;padding-top:1.2rem;border-top:1px solid #2a2a30;color:#8e8e96;font-size:.85rem}
+</style>
+</head>
+<body>
+<header>
+<nav><a href="/">BareBoard</a> · <a href="/autopsy/">Autopsy Reports</a> · <a href="/hot-100.html">Hot 100</a></nav>
+</header>
+<main>
+<article>
+<div class="hero">
+<p class="kicker">BareBoard Autopsy Report · Mobile Phones</p>
+<h1>Nokia 3210 <span class="badge likely">Likely</span></h1>
+<p class="lede">The DCT3 classic — announced March 18, 1999 and released in Q2 1999 <span class="src"><a href="https://en.wikipedia.org/wiki/Nokia_3210">Wikipedia</a></span> — among the best-selling mobile phones of all time and one of the first with an internal antenna. Public teardowns document a Texas Instruments MAD2PR1 baseband, Nokia CCONT power ASIC, and discrete memory <span class="badge likely">Likely</span> <span class="src"><a href="https://www.ifixit.com/Teardown/Nokia+3210+Teardown/11328">iFixit teardown</a></span> <span class="src"><a href="https://github.com/bitplane/nokia-dct3-re/blob/HEAD/docs/hardware_atlas.md">nokia-dct3-re hardware atlas</a></span>. We have never owned, opened, booted, probed, tested, or disassembled a Nokia 3210.</p>
+</div>
+
+<figure>
+<img src="img/device.jpg" alt="A Nokia 3210 feature phone, front view" width="1230" height="3024">
+<figcaption>Stock photo: a Nokia 3210, front view. This is not our photograph — no unit of this device has ever been on the BareBoard bench. Photo by Discostu (Michael Brandtner), released into the public domain, via <a href="https://commons.wikimedia.org/wiki/File:Nokia_3210_3.jpg">Wikimedia Commons</a>.</figcaption>
+</figure>
+
+<h2>What is this thing?</h2>
+<p>The Nokia 3210 (type <b>NSE-8</b>) is a dual-band GSM 900/1800 candybar from Nokia's DCT3 generation <span class="src"><a href="https://en.wikipedia.org/wiki/Nokia_3210">Wikipedia</a></span>. It is remembered for three firsts-at-scale: the internal antenna, the built-in composer for monophonic ringtones, and preloaded Snake — wrapped in Xpress-on swappable covers that made it a youth-culture icon <span class="src"><a href="https://www.techspot.com/article/3163-legends-nokia-phones/">TechSpot</a></span> <span class="src"><a href="https://en.wikipedia.org/wiki/Nokia_3210">Wikipedia</a></span>.</p>
+
+<div class="note">
+<strong>Not yet on our bench.</strong> BareBoard has never possessed, opened, booted, probed, tested, or disassembled a Nokia 3210. The chip table is assembled from public teardowns and reverse-engineering documentation of other people's units. Our own board photographs, revision notes, and measurements all await the bench.
+</div>
+
+<h2>Timeline</h2>
+<ul class="timeline">
+<li><b>1999-03-18</b> — Nokia 3210 announced <span class="src"><a href="https://en.wikipedia.org/wiki/Nokia_3210">Wikipedia</a></span>.</li>
+<li><b>Q2 1999</b> — Released <span class="src"><a href="https://en.wikipedia.org/wiki/Nokia_3210">Wikipedia</a></span>.</li>
+<li><b>1999–2000s</b> — Becomes one of the best-selling phones in history; DCT3 reverse-engineering community later documents the MAD2 platform in depth <span class="src"><a href="https://github.com/bitplane/nokia-dct3-re/blob/HEAD/docs/hardware_atlas.md">nokia-dct3-re hardware atlas</a></span>.</li>
+<li><b>2026-09-27</b> — This report published from public records; no unit on our bench.</li>
+</ul>
+
+<h2>Outside</h2>
+<div class="diagram">
+<span class="marker">A</span> Monochrome 84×48 display <span class="src"><a href="https://en.wikipedia.org/wiki/Nokia_3210">Wikipedia</a></span><br>
+<span class="marker">B</span> Navi-key + C key + two softkeys<br>
+<span class="marker">C</span> Xpress-on swappable front and back covers <span class="src"><a href="https://en.wikipedia.org/wiki/Nokia_3210">Wikipedia</a></span><br>
+<span class="marker">D</span> Internal antenna — no external whip <span class="src"><a href="https://www.techspot.com/article/3163-legends-nokia-phones/">TechSpot</a></span><br>
+<span class="marker">E</span> Removable rear cover; extended NiMH/Li-ion battery options
+</div>
+<p>123.8 × 50.5 × 16.7–22.5 mm, 151 g with standard battery <span class="src"><a href="https://en.wikipedia.org/wiki/Nokia_3210">Wikipedia</a></span>.</p>
+
+<h2>Board</h2>
+<p>Public documentation describes a DCT3 board built around the <b>TI MAD2PR1</b> (baseband MCU+DSP), the Nokia <b>CCONT NMP70467</b> power-management ASIC, Intel F160B3TA flash (2 MiB), an Atmel 24C128 serial EEPROM, and Samsung KM68U1000 SRAM (128 KiB) <span class="badge likely">Likely</span> <span class="src"><a href="https://github.com/bitplane/nokia-dct3-re/blob/HEAD/docs/hardware_atlas.md">nokia-dct3-re hardware atlas</a></span> <span class="src"><a href="https://www.ifixit.com/Teardown/Nokia+3210+Teardown/11328">iFixit teardown</a></span>. The RF section uses discrete power amplifiers (BGY252/BGY262 family) and a Hitachi duplexer <span class="badge likely">Likely</span> <span class="src"><a href="https://github.com/bitplane/nokia-dct3-re/blob/HEAD/docs/hardware_atlas.md">nokia-dct3-re hardware atlas</a></span>. An archived iFixit teardown PDF shows the board layout and shielding <span class="src"><a href="https://ia600408.us.archive.org/7/items/IFixItGuides/Nokia%203210%20Teardown.pdf">iFixit teardown (PDF via Internet Archive)</a></span>.</p>
+<div class="note warn"><strong>What we don't know without the bench:</strong> exact PCB revision, component date codes, and the physical locations of the FBUS/MBUS service pads — all unverified. The reverse-engineering references below are used for architecture only, never for extraction or exploitation instructions.</div>
+
+<h2>Chips</h2>
+<div class="table-scroll"><table>
+<tr><th>Ref</th><th>Marking / identity</th><th>Role</th><th>Confidence</th><th>Dig deeper</th></tr>
+<tr><td>BB</td><td>TI MAD2PR1</td><td>Baseband: MCU + DSP for GSM stack and UI</td><td><span class="badge likely">Likely</span></td><td><a href="https://github.com/bitplane/nokia-dct3-re/blob/HEAD/docs/hardware_atlas.md">hardware atlas</a> · <a href="https://github.com/bitplane/nokia-dct3-re/blob/HEAD/docs/mad2_fidelity.md">MAD2 notes</a> — no public datasheet located</td></tr>
+<tr><td>PM</td><td>Nokia CCONT — NMP70467</td><td>Power management ASIC</td><td><span class="badge likely">Likely</span></td><td><a href="https://github.com/bitplane/nokia-dct3-re/blob/HEAD/docs/hardware_atlas.md">hardware atlas</a> — no public datasheet located</td></tr>
+<tr><td>Flash</td><td>Intel F160B3TA — 2 MiB</td><td>Firmware storage</td><td><span class="badge likely">Likely</span></td><td><a href="https://github.com/bitplane/nokia-dct3-re/blob/HEAD/docs/hardware_atlas.md">hardware atlas</a> — no public datasheet located</td></tr>
+<tr><td>EEPROM</td><td>Atmel 24C128</td><td>Serial EEPROM (calibration / settings)</td><td><span class="badge likely">Likely</span></td><td><a href="https://github.com/bitplane/nokia-dct3-re/blob/HEAD/docs/hardware_atlas.md">hardware atlas</a> — 24C128-class datasheets are public from the manufacturer family</td></tr>
+<tr><td>SRAM</td><td>Samsung KM68U1000 — 128 KiB</td><td>Working memory</td><td><span class="badge likely">Likely</span></td><td><a href="https://github.com/bitplane/nokia-dct3-re/blob/HEAD/docs/hardware_atlas.md">hardware atlas</a> · <a href="http://www.datasheet.hk/download_online.php?id=1062002&pdfid=DFE317934C2A1A1A11F5BF0B96D8AD77&file=0026\km68v1000b_219921.pdf">KM68V1000B datasheet (PDF mirror)</a></td></tr>
+<tr><td>Audio</td><td>NMP0581</td><td>Audio/UI ASIC (DCT3 standard block)</td><td><span class="badge likely">Likely</span></td><td><a href="https://github.com/bitplane/nokia-dct3-re/blob/HEAD/docs/hardware_atlas.md">hardware atlas</a> — no public datasheet located</td></tr>
+<tr><td>RF PA</td><td>BGY252 / BGY262 family</td><td>GSM power amplifiers</td><td><span class="badge likely">Likely</span></td><td><a href="https://github.com/bitplane/nokia-dct3-re/blob/HEAD/docs/hardware_atlas.md">hardware atlas</a> — no public datasheet located</td></tr>
+<tr><td>Duplexer</td><td>Hitachi HWYN202A</td><td>Antenna duplexer</td><td><span class="badge likely">Likely</span></td><td><a href="https://github.com/bitplane/nokia-dct3-re/blob/HEAD/docs/hardware_atlas.md">hardware atlas</a> — no public datasheet located</td></tr>
+</table></div>
+
+<h2 id="fcc">FCC</h2>
+<p>No FCC filing for the Nokia 3210 (NSE-8) has been located in public records <span class="badge unknown">Unknown</span>. The 3210 predates Nokia's consistent U.S. certification trail for this form factor, and no grantee code naming the NSE-8 has been reviewed. This section will be completed from the FCC OET database if a filing surfaces, or from a unit label when one reaches our bench.</p>
+
+<h2>Debug / service modes</h2>
+<p>DCT3 Nokias expose FBUS and MBUS serial service interfaces, documented in Nokia service literature and the community service-bootstrap notes <span class="src"><a href="https://github.com/bitplane/nokia-dct3-re/blob/HEAD/docs/service_bootstrap.md">nokia-dct3-re service bootstrap</a></span>. We describe these only at the documented high level: wired serial service interfaces for factory and service use. Their physical pad locations on the 3210 board are unverified. We have never connected to one, we publish no pinout, no baud rate, no procedure, and no instructions for defeating any lock or protection. We listen; we don't knock.</p>
+
+<h2>Public findings &amp; what we didn't do</h2>
+<ul class="findings">
+<li>✅ Assembled the DCT3 chip table from teardown and reverse-engineering documentation <span class="src"><a href="https://github.com/bitplane/nokia-dct3-re/blob/HEAD/docs/hardware_atlas.md">hardware atlas</a></span> <span class="src"><a href="https://www.ifixit.com/Teardown/Nokia+3210+Teardown/11328">iFixit</a></span>.</li>
+<li>✅ Used reverse-engineering references for architecture only — no extraction or exploitation instructions.</li>
+<li>✅ Stated the FCC gap plainly instead of guessing a grantee code.</li>
+<li>❌ We have not opened, booted, probed, or photographed a Nokia 3210 ourselves.</li>
+<li>❌ We have not verified FBUS/MBUS pad locations, PCB revision, or date codes.</li>
+<li>❌ We have not tested any service interface or captured any boot log.</li>
+</ul>
+
+<h2>By the numbers</h2>
+<div class="table-scroll"><table>
+<tr><th>Metric</th><th>Value</th><th>Source</th></tr>
+<tr><td>Display</td><td>Monochrome, 84×48 px</td><td><span class="src"><a href="https://en.wikipedia.org/wiki/Nokia_3210">Wikipedia</a></span></td></tr>
+<tr><td>Network</td><td>Dual-band GSM 900/1800</td><td><span class="src"><a href="https://en.wikipedia.org/wiki/Nokia_3210">Wikipedia</a></span></td></tr>
+<tr><td>Baseband / memory</td><td>TI MAD2PR1; 2 MiB flash; 128 KiB SRAM</td><td><span class="badge likely">Likely</span> <span class="src"><a href="https://github.com/bitplane/nokia-dct3-re/blob/HEAD/docs/hardware_atlas.md">hardware atlas</a></span></td></tr>
+<tr><td>Weight / size</td><td>151 g; 123.8 × 50.5 × 16.7–22.5 mm</td><td><span class="src"><a href="https://en.wikipedia.org/wiki/Nokia_3210">Wikipedia</a></span></td></tr>
+<tr><td>Internal antenna</td><td>Yes — among the first at this scale</td><td><span class="src"><a href="https://www.techspot.com/article/3163-legends-nokia-phones/">TechSpot</a></span></td></tr>
+</table></div>
+
+<h2>Glossary</h2>
+<div class="table-scroll"><table class="glossary">
+<tr><td>DCT3</td><td>Nokia's third-generation digital core technology platform (late-1990s GSM).</td></tr>
+<tr><td>MAD2</td><td>Texas Instruments baseband family (MCU + DSP) used across DCT3 Nokias.</td></tr>
+<tr><td>CCONT</td><td>Nokia power-management ASIC in the DCT3 generation.</td></tr>
+<tr><td>FBUS / MBUS</td><td>Nokia wired serial service interfaces (fast bus / master bus) for factory and service use.</td></tr>
+<tr><td>NSE-8</td><td>Nokia type designation for the 3210.</td></tr>
+</table></div>
+
+<h2>Sources &amp; confidence</h2>
+<ul>
+<li><a href="https://github.com/bitplane/nokia-dct3-re/blob/HEAD/docs/hardware_atlas.md">nokia-dct3-re — hardware atlas</a> (community reverse-engineering documentation; architecture only).</li>
+<li><a href="https://github.com/bitplane/nokia-dct3-re/blob/HEAD/docs/service_bootstrap.md">nokia-dct3-re — service bootstrap</a> (architecture only).</li>
+<li><a href="https://www.ifixit.com/Teardown/Nokia+3210+Teardown/11328">iFixit — Nokia 3210 teardown</a> (secondary).</li>
+<li><a href="https://ia600408.us.archive.org/7/items/IFixItGuides/Nokia%203210%20Teardown.pdf">iFixit teardown PDF (Internet Archive)</a> (secondary).</li>
+<li><a href="http://www.datasheet.hk/download_online.php?id=1062002&pdfid=DFE317934C2A1A1A11F5BF0B96D8AD77&file=0026\km68v1000b_219921.pdf">Samsung KM68V1000B datasheet (PDF mirror)</a> (primary document, mirrored).</li>
+<li><a href="https://en.wikipedia.org/wiki/Nokia_3210">Nokia 3210 — Wikipedia</a> (secondary).</li>
+<li><a href="https://www.techspot.com/article/3163-legends-nokia-phones/">TechSpot — legends: Nokia phones</a> (secondary).</li>
+</ul>
+<div class="table-scroll"><table>
+<tr><th>Claim</th><th>Confidence</th><th>Basis</th></tr>
+<tr><td>MAD2PR1, CCONT NMP70467, F160B3TA, 24C128, KM68U1000, NMP0581, BGY252/262, HWYN202A</td><td><span class="badge likely">Likely</span></td><td>Teardown + community documentation; die-level verification awaits the bench</td></tr>
+<tr><td>Dates, specs, internal antenna, NSE-8</td><td><span class="badge likely">Likely</span></td><td>Corroborated secondary records</td></tr>
+<tr><td>FBUS/MBUS pad locations</td><td><span class="badge unknown">Unknown</span></td><td>Unverified — awaits the bench</td></tr>
+<tr><td>FCC ID</td><td><span class="badge unknown">Unknown</span></td><td>No filing located</td></tr>
+</table></div>
+
+<h2>Legal note</h2>
+<p>This report is a transformative educational summary of publicly available records. Product names and marks belong to their owners. We describe only publicly documented service interfaces at a high level; we publish no lock-bypass, authentication-defeat, firmware-extraction, or unsafe service procedures. Reverse-engineering references are cited for hardware architecture only. Our posture: <strong>we listen, we don't knock.</strong></p>
+
+<h2>Related reports</h2>
+<ul>
+<li><a href="/autopsy/nokia-1100/">Nokia 1100</a> — the DCT4 successor generation</li>
+<li><a href="/autopsy/nokia-1110-1110i/">Nokia 1110 / 1110i</a> — the mid-2000s DCT4 entry phone</li>
+<li><a href="/autopsy/nokia-1200/">Nokia 1200</a> — the 2007 ultrabasic</li>
+</ul>
+
+<footer class="report-foot">
+<p>Device #008 of the Hot 100. Last reviewed 2026-09-27. BareBoard has not possessed, opened, booted, probed, tested, or disassembled this device.</p>
+</footer>
+</article>
+</main>
+<footer>
+<nav><a href="/">BareBoard</a> · <a href="/autopsy/">Autopsy Reports</a> · <a href="/about.html">About</a></nav>
+<p>© BareBoard — free hardware education.</p>
+</footer>
+</body>
+</html>
