@@ -346,6 +346,7 @@ p.note { font-size: 0.95rem; color: var(--secondary); border-left: 3px solid var
 .b-confirmed { background: #e2f3e6; color: #1c6b31; }
 .b-likely { background: #fff3d1; color: #8a6100; }
 .b-mixed { background: #e8eefc; color: #27448f; }
+.b-unknown { background: #ececf1; color: #55555e; }
 
 /* ---------- history timeline ---------- */
 .timeline { list-style: none; margin: 1.5rem 0; padding: 0 0 0 1.15rem; border-left: 2px solid var(--line); display: grid; gap: 1.15rem; }
