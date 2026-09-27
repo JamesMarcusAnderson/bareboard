@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Autopsy 054: Apple Watch Series 3 &mdash; BareBoard</title>
+<meta name="description" content="BareBoard Autopsy 054: a public-records teardown of the Apple Watch Series 3 (A1860) — cellular, eSIM, W2 chip, and a hidden diagnostic port.">
+<meta name="theme-color" content="#fbfbfc">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%231d1d1f'/%3E%3Ctext x='32' y='45' font-family='system-ui,-apple-system,sans-serif' font-size='36' font-weight='700' fill='white' text-anchor='middle'%3EB%3C/text%3E%3C/svg%3E">
+<link rel="stylesheet" href="/style.css">
+</head>
+<body>
+<header class="site-nav">
+  <div class="nav-inner">
+    <a class="brand" href="/">BareBoard</a>
+    <nav>
+      <a href="/about.html">About</a>
+      <a href="/autopsy/">Autopsy</a>
+      <a href="/hot-100.html">Hot 100</a>
+      <a href="/most-wanted.html">Most Wanted</a>
+      <a href="/support.html">Support</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <p class="kicker">The Autopsy Report &middot; Device #054</p>
+  <h1>Apple Watch Series 3</h1>
+  <p class="lede">The watch that cut the phone cord. Apple hid a cellular radio, an eSIM, and a secret six-pin diagnostic port inside a case barely bigger than its predecessor.</p>
+
+<section>
+    <h2>What is this thing?</h2>
+    <p>The <strong>Apple Watch Series 3</strong> is Apple's 2017 smartwatch — the first Apple Watch with an optional <strong>cellular connection</strong>, so it could take calls and stream without an iPhone nearby. The U.S. cellular models are <strong>A1860</strong> (38&nbsp;mm) and <strong>A1861</strong> (42&nbsp;mm). It runs on a <strong>dual-core processor</strong> with Apple's <strong>W2 wireless chip</strong>, and in a neat trick, the <strong>display itself doubles as the cellular antenna</strong>. An <strong>eSIM</strong> — no physical SIM tray — holds the carrier subscription. <span class="src"><a href="https://techcrunch.com/2017/09/12/the-new-apple-watch-series-3-has-cellular-built-in/">TechCrunch</a></span></p>
+  </section>
+
+<section>
+    <h2>Not yet on our bench</h2>
+    <p>Straightforward honesty first: <strong>BareBoard has not possessed, disassembled, tested, booted, or touched the firmware of this unit.</strong> We don't have one on the bench yet. Everything below is built from public records — FCC filings, manufacturer material, datasheets, manuals, and published teardowns — with every claim linked to its source and graded for confidence. When a fact genuinely requires our hands on hardware (boot logs, our own photos, exact board revision of a future unit), we say so out loud.</p>
+    <p>That framing is what makes publishing now legitimate: this is a public-records autopsy, and it will grow into a bench autopsy the day a unit lands on our desk.</p>
+  </section>
+
+<section>
+    <h2>A short history</h2>
+    <ol class="timeline">
+      <li><span class="when">September 12, 2017</span>Apple announces the Watch Series 3 with built-in cellular. <span class="src"><a href="https://techcrunch.com/2017/09/12/the-new-apple-watch-series-3-has-cellular-built-in/">TechCrunch</a> &middot; <a href="https://fccid.io/BCG-A1860/Test-Setup-Photos/Test-Setup-Photographs-3549555.html">FCC application record</a></span></li>
+      <li><span class="when">September 15, 2017</span>Orders open. <span class="src"><a href="https://www.slashgear.com/apple-watch-series-3-release-date-lte-redesign-12499383/">SlashGear</a></span></li>
+      <li><span class="when">September 22, 2017</span>The watch goes on sale. <span class="src"><a href="https://www.slashgear.com/apple-watch-series-3-release-date-lte-redesign-12499383/">SlashGear</a></span></li>
+      <li><span class="when">September 25, 2017</span>iFixit's teardown: an LTE RF section, an STMicroelectronics part believed to be the eSIM, the W2 wireless chip, a slightly bigger <strong>1.07&nbsp;Wh</strong> battery, and a repairability score of <strong>6 out of 10</strong>. <span class="src"><a href="http://appleinsider.com/articles/17/09/25/apple-watch-series-3-teardown-finds-slightly-bigger-battery-few-other-changes-beyond-lte">AppleInsider</a> &middot; <a href="https://hothardware.com/news/apple-watch-series-3-lte-teardown">HotHardware</a></span></li>
+    </ol>
+  </section>
+
+<section>
+    <h2>The outside</h2>
+    <p>Same general size as the Series 2 — the cellular models are distinguished by a <strong>red dot on the Digital Crown</strong>. The case back is ceramic with the optical heart sensor array in the middle. <span class="src"><a href="https://techcrunch.com/2017/09/12/the-new-apple-watch-series-3-has-cellular-built-in/">TechCrunch</a></span></p>
+    <figure>
+      <img src="img/device.jpg" alt="Underside of a 38mm Apple Watch Series 3 showing the sensor array">
+      <figcaption>The underside: heart-sensor array in ceramic. <em>Photo: <a href="https://commons.wikimedia.org/wiki/File:Apple_Watch_Series_3_Sensors.jpg">Fletcher</a>, CC BY 4.0, via Wikimedia Commons.</em></figcaption>
+    </figure>
+  </section>
+
+<section>
+    <h2>The board</h2>
+    <p>The Series 3 is built around Apple's <strong>S3 system-in-package</strong>, with the cellular hardware as the headline addition: an <strong>LTE RF section</strong> and an <strong>STMicroelectronics part the teardown team believes is the eSIM</strong>. Apple's <strong>W2 chip</strong> handles Wi-Fi and Bluetooth. A <strong>1.07&nbsp;Wh battery</strong> — slightly larger than the Series 2's — fills much of the remaining space. iFixit scored it <strong>6/10</strong> for repairability: the screen comes off without destroying the watch, but the tiny battery and glued bits still fight you. <span class="src"><a href="http://appleinsider.com/articles/17/09/25/apple-watch-series-3-teardown-finds-slightly-bigger-battery-few-other-changes-beyond-lte">AppleInsider</a> &middot; <a href="https://hothardware.com/news/apple-watch-series-3-lte-teardown">HotHardware</a></span></p>
+    <p>One honest gap: the FCC filing we could reach shows test-setup photos and user manuals, but <strong>no internal-photo exhibit</strong> — so the board description above rests on the public teardown, not on regulator photos. <span class="src"><a href="https://fccid.io/BCG-A1860/Test-Setup-Photos/Test-Setup-Photographs-3549555.html">FCC exhibit index</a></span></p>
+  </section>
+
+<section>
+    <h2>Under the microscope: the chips</h2>
+    <p>What's inside, what each part does, and how sure we are. <span class="badge b-confirmed">Confirmed</span> means a primary source. <span class="badge b-likely">Likely</span> means well-corroborated public records. Apple publishes no datasheets for the S3 or W2.</p>
+    <div class="table-scroll">
+    <table class="chips">
+      <thead>
+        <tr><th>Chip</th><th>What it does</th><th>How we know</th><th>Dig deeper</th></tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><strong>Apple S3</strong><br><span class="partno">system-in-package</span></td>
+          <td>The main computer: dual-core processor plus supporting logic in one package. <span class="src"><a href="https://techcrunch.com/2017/09/12/the-new-apple-watch-series-3-has-cellular-built-in/">TechCrunch</a></span></td>
+          <td><span class="badge b-likely">Likely</span> Named in Apple's product material and confirmed present by the teardown. <span class="src"><a href="http://appleinsider.com/articles/17/09/25/apple-watch-series-3-teardown-finds-slightly-bigger-battery-few-other-changes-beyond-lte">AppleInsider</a></span></td>
+          <td>No public datasheet was found — Apple does not publish datasheets for the S3.</td>
+        </tr>
+        <tr>
+          <td><strong>Apple W2</strong></td>
+          <td>Wi-Fi and Bluetooth wireless. <span class="src"><a href="https://techcrunch.com/2017/09/12/the-new-apple-watch-series-3-has-cellular-built-in/">TechCrunch</a></span></td>
+          <td><span class="badge b-likely">Likely</span> Identified in the teardown. <span class="src"><a href="http://appleinsider.com/articles/17/09/25/apple-watch-series-3-teardown-finds-slightly-bigger-battery-few-other-changes-beyond-lte">AppleInsider</a></span></td>
+          <td>No public datasheet was found.</td>
+        </tr>
+        <tr>
+          <td><strong>STMicroelectronics part</strong> <em>(believed to be the eSIM)</em></td>
+          <td>Holds the carrier subscription electronically — no SIM tray. <span class="src"><a href="https://techcrunch.com/2017/09/12/the-new-apple-watch-series-3-has-cellular-built-in/">TechCrunch</a></span></td>
+          <td><span class="badge b-likely">Likely</span> The teardown team's identification, kept in their wording. <span class="src"><a href="http://appleinsider.com/articles/17/09/25/apple-watch-series-3-teardown-finds-slightly-bigger-battery-few-other-changes-beyond-lte">AppleInsider</a></span></td>
+          <td>Exact part number not identified in public records.</td>
+        </tr>
+        <tr>
+          <td><strong>Battery</strong><br><span class="partno">1.07&nbsp;Wh</span></td>
+          <td>Power.</td>
+          <td><span class="badge b-likely">Likely</span> Reported by the teardown. <span class="src"><a href="http://appleinsider.com/articles/17/09/25/apple-watch-series-3-teardown-finds-slightly-bigger-battery-few-other-changes-beyond-lte">AppleInsider</a></span></td>
+          <td>&mdash;</td>
+        </tr>
+      </tbody>
+    </table>
+    </div>
+  </section>
+
+<section>
+    <h2>The government's file on this device</h2>
+    <p>The FCC record for <strong>BCG-A1860</strong> (Apple Inc.) carries an application date of <strong>September 12, 2017</strong> — launch day. The exhibits we could verify include <strong>test-setup photographs</strong> and <strong>user manuals</strong>. We found <strong>no internal-photo exhibit</strong> in the reachable record, so the FCC's own view of the insides isn't public here. <span class="src"><a href="https://fccid.io/BCG-A1860/Test-Setup-Photos/Test-Setup-Photographs-3549555.html">FCC test-setup photos</a> &middot; <a href="https://fccid.io/BCG-A1860/User-Manual/Users-Manual-1-3549301">FCC user manual</a></span></p>
+  </section>
+
+<section>
+    <h2>Debug &amp; service modes</h2>
+    <p>Our posture: <strong>we listen, we don't knock.</strong> Only publicly verified interfaces.</p>
+    <p><strong>The hidden six-pin diagnostic port.</strong> Under the band-release slot sits a small six-pin port Apple never officially acknowledged. It was designed for Apple's internal use — diagnostics and software flashing — and third parties later demonstrated it could also carry charging current. Apple removed the port starting with the Series 7. We document its public existence only: no pinout, no access procedure, no bypass. <span class="src"><a href="https://www.idownloadblog.com/2021/10/14/apple-watch-diagnostics-port-removed/">iDownloadBlog</a></span></p>
+    <p><strong>User-facing service:</strong> unpairing, erase, and restore are handled through the Watch app on the paired iPhone — ordinary, documented, user-level operations.</p>
+  </section>
+
+<section>
+    <h2>What the public record says</h2>
+    <p><strong>Cellular without a bigger watch.</strong> The engineering story of the Series 3 is miniaturization: LTE, eSIM, and a display-as-antenna squeezed into essentially the Series 2's footprint. <span class="src"><a href="https://techcrunch.com/2017/09/12/the-new-apple-watch-series-3-has-cellular-built-in/">TechCrunch</a></span></p>
+    <p><strong>Fixable, with patience.</strong> The 6/10 repairability score makes it one of the more repairable Apple wearables of its era — the display is removable without heat-gun heroics — though the battery remains fiddly. <span class="src"><a href="http://appleinsider.com/articles/17/09/25/apple-watch-series-3-teardown-finds-slightly-bigger-battery-few-other-changes-beyond-lte">AppleInsider</a></span></p>
+  </section>
+
+<section>
+    <h2>What we didn't do</h2>
+    <ul>
+      <li>We have not possessed, disassembled, tested, or booted this device.</li>
+      <li>We have not extracted, modified, shared, or reverse-engineered its firmware.</li>
+      <li>We document only publicly verified interfaces and user-facing modes — read-only, no lock bypass, no authentication defeat, no credential or key material.</li>
+      <li>Anything below marked as unknown stays unknown until the bench says otherwise.</li>
+    </ul>
+  </section>
+
+<section>
+    <h2>By the numbers</h2>
+    <ul>
+      <li><strong>Models:</strong> A1860 (38&nbsp;mm) / A1861 (42&nbsp;mm) — U.S. cellular</li>
+      <li><strong>FCC ID:</strong> BCG-A1860 (no internal-photo exhibit found in the reachable record)</li>
+      <li><strong>Chips:</strong> Apple S3 SiP · Apple W2 · STMicroelectronics eSIM part (teardown's belief)</li>
+      <li><strong>Battery:</strong> 1.07&nbsp;Wh (teardown-reported)</li>
+      <li><strong>Announced:</strong> September 12, 2017 · on sale September 22, 2017</li>
+      <li><strong>Repairability:</strong> 6/10 (iFixit)</li>
+    </ul>
+  </section>
+
+<section>
+    <h2>Words to know</h2>
+    <p>Every term this page uses, in plain English. No prior knowledge required.</p>
+    <dl class="glossary">
+      <div><dt>eSIM</dt><dd>A carrier subscription stored on a chip instead of a removable plastic SIM card.</dd></div>
+      <div><dt>System-in-package (SiP)</dt><dd>Several chips stacked into one module — Apple's way of shrinking a computer into a watch.</dd></div>
+      <div><dt>LTE</dt><dd>The 4G cellular standard — what lets the watch call and stream without the phone.</dd></div>
+      <div><dt>Diagnostic port</dt><dd>A hidden connector manufacturers use for testing and repair. Apple's was six pins, under the band slot.</dd></div>
+      <div><dt>FCC ID</dt><dd>The ID the FCC assigns to each approved wireless product. Punch it into fccid.io and the whole public filing comes up.</dd></div>
+    </dl>
+  </section>
+
+<section>
+    <h2>Sources &amp; confidence</h2>
+    <ul>
+      <li>FCC record BCG-A1860 (application September 12 2017, test-setup photos, user manuals, no internal-photo exhibit found): primary source — <strong>Confirmed</strong>.</li>
+      <li>Dual-core processor, W2, display-as-antenna, eSIM, same size as Series 2: Apple product claims via TechCrunch — <strong>Likely</strong>.</li>
+      <li>LTE RF section, ST eSIM part, W2, 1.07 Wh battery, 6/10 repairability: iFixit teardown via AppleInsider/HotHardware — <strong>Likely</strong>.</li>
+      <li>Orders September 15 / launch September 22, 2017: SlashGear — <strong>Likely</strong>.</li>
+      <li>Six-pin diagnostic port (internal use, unacknowledged, removed in Series 7): iDownloadBlog — <strong>Likely</strong>.</li>
+      <li>Anything not listed here is unknown until the bench says otherwise. We'll say so, out loud, when that's the case.</li>
+    </ul>
+<p class="note">Serial numbers and QR codes are blacked out of every published photo. Raw originals stay private.</p>
+    <p class="note"><strong>Legal note.</strong> BareBoard is an educational project. Everything on this page comes from public records — FCC filings, manufacturer material, datasheets, and published teardowns — plus our own analysis of those records. We don't publish, host, or distribute firmware, keys, passwords, or credentials. Product names and trademarks belong to their respective owners and appear here only to identify the hardware. If you believe anything here infringes your rights, contact us and we'll address it promptly.</p>
+  </section>
+
+  <footer>
+    <p>BareBoard &mdash; a free educational resource. Device #054 of the Hot 100.</p>
+    <nav>
+      <a href="/autopsy/">All autopsies</a>
+      <a href="/">Home</a>
+    </nav>
+  </footer>
+</main>
+</body>
+</html>
