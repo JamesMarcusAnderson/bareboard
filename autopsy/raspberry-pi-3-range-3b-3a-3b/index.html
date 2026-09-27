@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Autopsy 063: The Raspberry Pi 3 Range (3B, 3A+, 3B+) — BareBoard</title>
+<meta name="description" content="BareBoard Autopsy 063: the Raspberry Pi 3 family — the 3B, the 3A+, and the 3B+ — with the 3B+ as our representative. Chips, differences, and what changed between revisions.">
+<meta name="theme-color" content="#fbfbfc">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%231d1d1f'/%3E%3Ctext x='32' y='45' font-family='system-ui,-apple-system,sans-serif' font-size='36' font-weight='700' fill='white' text-anchor='middle'%3EB%3C/text%3E%3C/svg%3E">
+<link rel="stylesheet" href="/style.css">
+</head>
+<body>
+<header class="site-nav">
+  <div class="nav-inner">
+    <a class="brand" href="/">BareBoard</a>
+    <nav>
+      <a href="/about.html">About</a>
+      <a href="/autopsy/">Autopsy</a>
+      <a href="/hot-100.html">Hot 100</a>
+      <a href="/most-wanted.html">Most Wanted</a>
+      <a href="/support.html">Support</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <p class="kicker">The Autopsy Report · Device #063</p>
+  <h1>The Raspberry Pi 3 Range</h1>
+  <p class="lede">Three boards, one generation: the 3B that brought Wi-Fi to the Pi, the tiny 3A+, and the faster 3B+. Same family, different silicon — and the differences matter. <span class="src"><a href="https://en.wikipedia.org/wiki/Raspberry_Pi">Family history</a> · <a href="https://www.cnx-software.com/2018/03/14/35-raspberry-pi-3-model-b-launched-with-a-faster-processor-802-11ac-wifi-gigabit-ethernet-and-optional-poe/?amp=1">3B+ launch report</a></span></p>
+
+  <section>
+    <h2>What is this thing?</h2>
+    <p>The Pi 3 range is the third generation of the Raspberry Pi single-board computer, and the generation that made the Pi a wireless device. Three boards share the name: the <strong>3B</strong> (February 2016) — the first Pi with on-board Wi-Fi and Bluetooth, and the first 64-bit Pi; the <strong>3B+</strong> (March 2018) — faster processor, dual-band Wi-Fi, and a Power-over-Ethernet header; and the <strong>3A+</strong> (late 2018) — the same faster chip in a smaller, cheaper board with half the memory. <span class="src"><a href="https://en.wikipedia.org/wiki/Raspberry_Pi">Family history</a> · <a href="https://www.cnx-software.com/2018/03/14/35-raspberry-pi-3-model-b-launched-with-a-faster-processor-802-11ac-wifi-gigabit-ethernet-and-optional-poe/?amp=1">3B+ launch report</a> · <a href="https://www.raspberrypi.com/products/raspberry-pi-3-model-a-plus/">3A+ official specs</a></span></p>
+    <p>Our <strong>representative board</strong> is the <strong>3B+</strong> — the one in the photo. It's the most capable of the three and the one whose launch was best documented in the press. But the three boards are not interchangeable, and we don't pretend they are: chip names and specs below are labeled per-board. <span class="src"><a href="https://HEXUS.net/tech/news/systems/116195-raspberry-pi-3-model-b-launched-celebrate-pi-day/?set_mobile_full_site_cookie=1">Contemporary 3B+ report</a></span></p>
+  </section>
+
+  <section>
+    <h2>Not yet on our bench</h2>
+    <p>Same honesty as the family page: <strong>no Pi 3 has sat on our bench yet.</strong> No disassembly, no boot log, no measurements, no original-unit photography. Everything here comes from Raspberry Pi's own documents, launch reporting, and chip datasheets. When a 3B+ lands on the bench, this page gets its second act.</p>
+  </section>
+
+  <section>
+    <h2>A short history</h2>
+    <ol class="timeline">
+      <li><span class="when">February 2016</span>The Pi 3 Model B launches: quad-core 64-bit BCM2837 at 1.2 GHz, 1 GB of RAM, and — the headline — 2.4 GHz Wi-Fi and Bluetooth 4.1 on the board for the first time. Same $35. <span class="src"><a href="https://en.wikipedia.org/wiki/Raspberry_Pi">Wikipedia</a> · <a href="https://www.raspberrypi.com/products/raspberry-pi-3-model-b/">Official specs</a></span></li>
+      <li><span class="when">March 14, 2018</span>The Pi 3 Model B+ launches on Pi Day, still $35: the processor steps up to 1.4 GHz (BCM2837B0), wireless moves to a dual-band 802.11ac part, Bluetooth goes to 4.2 with BLE, Ethernet is nominally gigabit, and a 4-pin header appears for Power-over-Ethernet. <span class="src"><a href="https://www.cnx-software.com/2018/03/14/35-raspberry-pi-3-model-b-launched-with-a-faster-processor-802-11ac-wifi-gigabit-ethernet-and-optional-poe/?amp=1">CNX Software</a> · <a href="https://HEXUS.net/tech/news/systems/116195-raspberry-pi-3-model-b-launched-celebrate-pi-day/?set_mobile_full_site_cookie=1">HEXUS</a></span></li>
+      <li><span class="when">Late 2018</span>The Pi 3 Model A+ arrives: the B+ silicon in the smaller A+ form factor — 512 MB of RAM, a single USB port, same $25-ish cut-down philosophy as the original Model A. <span class="src"><a href="https://www.raspberrypi.com/products/raspberry-pi-3-model-a-plus/">Official specs</a></span></li>
+      <li><span class="when">June 2019</span>The Pi 4 supersedes the whole range — but the 3B+ stays in production as the budget pick, because $35 boards don't retire, they just get cheaper jobs. <span class="src"><a href="https://en.wikipedia.org/wiki/Raspberry_Pi">Wikipedia</a></span></li>
+    </ol>
+  </section>
+
+  <section>
+    <h2>The outside</h2>
+    <p>The 3B+ looks like the 3B at a glance — same 85 × 56 mm board, same port layout: micro-USB power, HDMI, audio/video jack, four USB 2.0 ports, Ethernet, micro-SD underneath, 40-pin GPIO header. Look closer and the differences show: the wireless can is a different shape with a new antenna design (a cavity-backed antenna the launch coverage called out), and there's a small 4-pin header near the edge for Power-over-Ethernet. The 3A+, by contrast, is visibly smaller — one USB port instead of four, no Ethernet jack at all. <span class="src"><a href="https://www.cnx-software.com/2018/03/14/35-raspberry-pi-3-model-b-launched-with-a-faster-processor-802-11ac-wifi-gigabit-ethernet-and-optional-poe/?amp=1">CNX Software</a> · <a href="https://www.raspberrypi.com/products/raspberry-pi-3-model-a-plus/">3A+ official specs</a></span></p>
+    <figure>
+      <img src="img/device.jpg" alt="Raspberry Pi 3 Model B+ single-board computer, top view">
+      <figcaption>Our representative: the Pi 3 Model B+. Photo by <a href="https://commons.wikimedia.org/wiki/File:Raspberry_Pi_3_B%2B_(39906369025).png">Gareth Halfacree</a>, CC BY-SA 2.0, via Wikimedia Commons.</figcaption>
+    </figure>
+  </section>
+
+  <section>
+    <h2>The board</h2>
+    <p>The 3B+'s headline chip is the <strong>BCM2837B0</strong> — the same architecture as the 3B's BCM2837, clocked up to 1.4 GHz, with better thermal management (a metal heat-spreader on the package, which is why the chip looks different in photos). Wireless moves to the <strong>CYW43455</strong>, a dual-band 802.11ac Wi-Fi plus Bluetooth 4.2/BLE combo part with a public datasheet — a rarity in this price class, and genuinely useful if you want to know what the radio is. Memory stays 1 GB of LPDDR2 on the B models; the 3A+ halves it to 512 MB. The "gigabit" Ethernet on the 3B+ runs through the board's USB 2.0 hub chip internally, so it tops out around 300 Mbps in practice — honest gigabit it is not, and the launch coverage said so at the time. <span class="src"><a href="https://www.cnx-software.com/2018/03/14/35-raspberry-pi-3-model-b-launched-with-a-faster-processor-802-11ac-wifi-gigabit-ethernet-and-optional-poe/?amp=1">CNX Software</a> · <a href="https://www.mouser.dk/datasheet/3/70/1/Infineon_CYW43455_DataSheet_v16_00_EN.pdf">CYW43455 datasheet (PDF)</a></span></p>
+  </section>
+
+  <section>
+    <h2>Under the microscope: the chips</h2>
+    <p>Per-board, because the three boards differ. <strong>Confirmed</strong> means a primary source — Raspberry Pi's documents, a vendor datasheet, or contemporary launch reporting quoting the specs — says so. <strong>Likely</strong> means public hardware records agree but we haven't traced it to a primary source.</p>
+    <div class="table-scroll">
+    <table class="chips">
+      <thead>
+        <tr><th>Chip</th><th>What it does</th><th>How we know</th><th>Dig deeper</th></tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><strong>Broadcom BCM2837B0</strong><br><span class="partno">quad-core ARM Cortex-A53 @ 1.4 GHz — 3B+ and 3A+</span></td>
+          <td>The main processor on the two newer boards; the 3B uses the BCM2837 at 1.2 GHz.</td>
+          <td><span class="badge b-confirmed">Confirmed</span> Launch reporting and Raspberry Pi's official 3A+ specifications.</td>
+          <td><a href="https://www.cnx-software.com/2018/03/14/35-raspberry-pi-3-model-b-launched-with-a-faster-processor-802-11ac-wifi-gigabit-ethernet-and-optional-poe/?amp=1">CNX Software</a></td>
+        </tr>
+        <tr>
+          <td><strong>Cypress CYW43455</strong><br><span class="partno">3B+ and 3A+ wireless</span></td>
+          <td>Dual-band 802.11ac Wi-Fi plus Bluetooth 4.2/BLE combo radio.</td>
+          <td><span class="badge b-confirmed">Confirmed</span> Launch reporting names the part; the vendor datasheet is public.</td>
+          <td><a href="https://www.mouser.dk/datasheet/3/70/1/Infineon_CYW43455_DataSheet_v16_00_EN.pdf">Datasheet (PDF)</a></td>
+        </tr>
+        <tr>
+          <td><strong>1 GB LPDDR2</strong> (3B, 3B+) · <strong>512 MB LPDDR2</strong> (3A+)</td>
+          <td>Working memory — halved on the cut-down A+ board.</td>
+          <td><span class="badge b-confirmed">Confirmed</span> Raspberry Pi's official specifications.</td>
+          <td><a href="https://www.raspberrypi.com/products/raspberry-pi-3-model-a-plus/">3A+ official specs</a></td>
+        </tr>
+        <tr>
+          <td><strong>USB-hub Ethernet controller</strong><br><span class="partno">3B+ "gigabit" port</span></td>
+          <td>Runs the USB ports and the Ethernet jack; the gigabit PHY talks through USB 2.0, capping real throughput near 300 Mbps.</td>
+          <td><span class="badge b-likely">Likely</span> Public hardware records name the part; launch reporting documents the USB-2.0 bottleneck. We could not find a trustworthy public datasheet for the exact chip, so we don't name it here.</td>
+          <td><a href="https://www.cnx-software.com/2018/03/14/35-raspberry-pi-3-model-b-launched-with-a-faster-processor-802-11ac-wifi-gigabit-ethernet-and-optional-poe/?amp=1">CNX Software</a></td>
+        </tr>
+        <tr>
+          <td><strong>PoE header</strong><br><span class="partno">3B+ only, 4-pin</span></td>
+          <td>Lets an add-on board feed the Pi power over its Ethernet cable.</td>
+          <td><span class="badge b-confirmed">Confirmed</span> Launch reporting; present on the 3B+, absent on the 3B and 3A+.</td>
+          <td><a href="https://HEXUS.net/tech/news/systems/116195-raspberry-pi-3-model-b-launched-celebrate-pi-day/?set_mobile_full_site_cookie=1">HEXUS</a></td>
+        </tr>
+      </tbody>
+    </table>
+    </div>
+  </section>
+
+  <section>
+    <h2>The government's file</h2>
+    <p>The 3B+ — our representative — carries its own filing: <strong>FCC ID 2ABCB-RPI3BP</strong>. The public UL test report (serial no. UL-RPT-RP11913492-2016A, issued March 6, 2018) identifies the equipment under test as the Raspberry Pi 3 Model B+, manufacturer Raspberry Pi (Trading) Ltd, with Bluetooth and 2.4/5 GHz WLAN and an integral antenna, tested against FCC Parts 15.207, 15.209(a), and 15.247. Independent compliance documents corroborate the ID mapping: 3B = 2ABCB-RPI32, 3B+ = 2ABCB-RPI3BP. The 3B's filing belongs to the 3B alone — we don't apply either board's paperwork to the other, or to the 3A+, whose own filing is a separate matter. <span class="src"><a href="https://fccpdf.com/2ABCB/2ABCB-RPI3BP/3777894.pdf">3B+ FCC test report (PDF)</a></span></p>
+  </section>
+
+  <section>
+    <h2>Listening, not knocking</h2>
+    <p>Our posture, as always: <strong>we listen, we don't knock.</strong> The Pi 3 range is among the best-documented boards in existence — Raspberry Pi publishes board schematics and hardware documentation on its official documentation site, and the serial console on the GPIO header is a documented developer interface, not a secret. When a 3B+ reaches our bench, the plan is a read-only boot-log capture and published measurements — listening only. No bypasses, no extractions, no firmware redistribution; there's nothing locked here to defeat. <span class="src"><a href="https://www.raspberrypi.com/documentation/computers/raspberry-pi.html#schematics-and-mechanical-drawings">Official docs: schematics &amp; drawings</a></span></p>
+  </section>
+
+  <section>
+    <h2>What we didn't do</h2>
+    <ul>
+      <li>No bench work at all yet: no disassembly, no boot log, no power measurements, no original-unit photos.</li>
+      <li>We did not verify the 3B+'s wireless chip marking against the CYW43455 datasheet — that's bench work.</li>
+      <li>We did not measure the Ethernet throughput claim or the PoE header — launch reporting did, and we cite it.</li>
+      <li>Nothing here touches credentials, keys, or locked functionality.</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>By the numbers</h2>
+    <ul>
+      <li><strong>Range:</strong> Raspberry Pi 3 — 3B (Feb 2016), 3B+ (Mar 2018), 3A+ (late 2018) <span class="src"><a href="https://en.wikipedia.org/wiki/Raspberry_Pi">Family history</a></span></li>
+      <li><strong>Representative:</strong> 3B+ — BCM2837B0 @ 1.4 GHz, 1 GB LPDDR2, CYW43455 dual-band ac Wi-Fi + BT 4.2/BLE, 4× USB 2.0, "gigabit" Ethernet (≈300 Mbps real), PoE header, $35 <span class="src"><a href="https://www.cnx-software.com/2018/03/14/35-raspberry-pi-3-model-b-launched-with-a-faster-processor-802-11ac-wifi-gigabit-ethernet-and-optional-poe/?amp=1">CNX Software</a></span></li>
+      <li><strong>3A+ differences:</strong> same SoC, 512 MB RAM, 1× USB, no Ethernet, smaller board <span class="src"><a href="https://www.raspberrypi.com/products/raspberry-pi-3-model-a-plus/">3A+ official specs</a></span></li>
+      <li><strong>3B differences:</strong> BCM2837 @ 1.2 GHz, single-band 2.4 GHz Wi-Fi + BT 4.1, 10/100 Ethernet, no PoE header <span class="src"><a href="https://www.raspberrypi.com/products/raspberry-pi-3-model-b/">3B official specs</a></span></li>
+      <li><strong>Storage:</strong> micro-SD on all three — no onboard flash to wear out <span class="src"><a href="https://www.raspberrypi.com/products/raspberry-pi-3-model-a-plus/">3A+ official specs</a></span></li>
+      <li><strong>FCC (3B+):</strong> 2ABCB-RPI3BP — UL test report issued March 6, 2018 <span class="src"><a href="https://fccpdf.com/2ABCB/2ABCB-RPI3BP/3777894.pdf">FCC test report (PDF)</a></span></li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>What awaits the bench</h2>
+    <ul>
+      <li>A 3B+ of our own — revision, photos, measurements, and a read-only boot log.</li>
+      <li>Chip-marking verification: BCM2837B0 and CYW43455 read off a real board.</li>
+      <li>Thermal behavior of the B0 package under sustained load — the heat-spreader was a real change, worth measuring.</li>
+      <li>A side-by-side 3B vs 3B+ vs 3A+ photo set, so the physical differences are visible, not just described.</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>Words to know</h2>
+    <p>Every term this page uses, in plain English. No prior knowledge required.</p>
+    <dl class="glossary">
+      <div><dt>System on a chip (SoC)</dt><dd>Processor, graphics, and more on one piece of silicon. The BCM2837B0 is the 3B+'s SoC.</dd></div>
+      <div><dt>802.11ac</dt><dd>A Wi-Fi generation that adds the 5 GHz band and higher speeds. The 3B+'s big wireless upgrade over the 3B's 802.11n.</dd></div>
+      <div><dt>Bluetooth Low Energy (BLE)</dt><dd>A power-sipping Bluetooth mode for sensors and small gadgets. The 3B+ added it; the 3B lacks it.</dd></div>
+      <div><dt>Power over Ethernet (PoE)</dt><dd>Power and data over one network cable. The 3B+ has a header for an optional PoE add-on board.</dd></div>
+      <div><dt>Heat-spreader</dt><dd>A metal plate on top of a chip package that spreads heat out so the chip can run faster without cooking itself.</dd></div>
+      <div><dt>micro-SD card</dt><dd>The Pi's storage — the operating system lives on this removable card.</dd></div>
+      <div><dt>FCC ID</dt><dd>The FCC's approval ID for a wireless product. One board's filing covers one board — we don't share them across models.</dd></div>
+      <div><dt>Serial console</dt><dd>A text interface for watching a board boot, over a few wires. Documented and open on the Pi — listening, not knocking.</dd></div>
+    </dl>
+  </section>
+
+  <section>
+    <h2>Sources &amp; confidence</h2>
+    <ul>
+      <li>3B+ launch specs (1.4 GHz, CYW43455, PoE header, USB-2.0-limited Ethernet, $35): contemporary launch reporting. High confidence.</li>
+      <li>3A+ specs (BCM2837B0, 512 MB, dual-band wireless): Raspberry Pi's official product page. High confidence.</li>
+      <li>3B specs and dates: Raspberry Pi's official page and the family history. High confidence.</li>
+      <li>CYW43455 capabilities: the vendor's public datasheet. High confidence.</li>
+      <li>Exact USB/Ethernet controller part number on the 3B+: not pinned to a trustworthy primary source — deliberately unnamed here.</li>
+      <li>Anything not listed here is unknown until the bench says otherwise. We'll say so, out loud, when that's the case.</li>
+    </ul>
+    <p class="note">The device photo is a freely licensed stock photo, credited in its caption — not a photo of our own unit, because we don't have one yet.</p>
+    <p class="note"><strong>Legal note.</strong> BareBoard is an educational project. Everything on this page is our own writing based on public documents — our summaries, our analysis. We don't publish, host, or distribute firmware, keys, passwords, or credentials. Product names and trademarks belong to their respective owners and appear here only to identify the hardware. If you believe anything here infringes your rights, contact us and we'll address it promptly.</p>
+  </section>
+
+  <footer>
+    <p>BareBoard &mdash; a free educational resource. Device #063 of the Hot 100.</p>
+    <nav>
+      <a href="/autopsy/">All autopsies</a>
+      <a href="/">Home</a>
+    </nav>
+  </footer>
+</main>
+</body>
+</html>
