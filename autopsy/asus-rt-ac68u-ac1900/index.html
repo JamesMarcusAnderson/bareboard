@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Autopsy 033: The ASUS RT-AC68U &mdash; BareBoard</title>
+<meta name="description" content="BareBoard Autopsy 033: the ASUS RT-AC68U AC1900 router — a decade-long bestseller built on Broadcom&#x27;s BCM4708A0. A public-records teardown.">
+<meta name="theme-color" content="#fbfbfc">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%231d1d1f'/%3E%3Ctext x='32' y='45' font-family='system-ui,-apple-system,sans-serif' font-size='36' font-weight='700' fill='white' text-anchor='middle'%3EB%3C/text%3E%3C/svg%3E">
+<link rel="stylesheet" href="/style.css">
+</head>
+<body>
+<header class="site-nav">
+  <div class="nav-inner">
+    <a class="brand" href="/">BareBoard</a>
+    <nav>
+      <a href="/about.html">About</a>
+      <a href="/autopsy/">Autopsy</a>
+      <a href="/hot-100.html">Hot 100</a>
+      <a href="/most-wanted.html">Most Wanted</a>
+      <a href="/support.html">Support</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <p class="kicker">The Autopsy Report &middot; Device #033</p>
+  <h1>The ASUS RT-AC68U</h1>
+  <p class="lede">The AC1900 workhorse that refused to die &mdash; sold for a decade, rebadged by T-Mobile, and still getting firmware long after its rivals were landfill.</p>
+
+  <section>
+    <h2>What is this thing?</h2>
+    <p>The <strong>ASUS RT-AC68U</strong> is a dual-band 802.11ac (&ldquo;Wi-Fi 5&rdquo;) router rated <strong>AC1900</strong> &mdash; up to 600&nbsp;Mbps on 2.4&nbsp;GHz plus 1300&nbsp;Mbps on 5&nbsp;GHz &mdash; with 3&times;3 MIMO, beamforming, and four gigabit Ethernet ports. It launched in 2013 and simply never left: ASUS kept it in the lineup for years, it gained AiMesh mesh-networking support later in life, and carrier variants like T-Mobile's <strong>TM-AC1900</strong> shipped the same hardware under another name. <span class="src"><a href="https://fccid.io/MSQ-RTAC68U">FCC filing</a></span> <span class="src"><a href="https://rog.asus.com/support/faq/1000814">ASUS rescue FAQ</a></span></p>
+    <p>This report covers the original RT-AC68U hardware. ASUS later shipped a <strong>V2</strong> revision under a separate FCC ID (<strong>MSQ-RTAC68UV2</strong>) &mdash; different hardware, different filing, kept separate here. <span class="src"><a href="https://fccid.io/MSQ-RTAC68U">FCC filing</a></span></p>
+  </section>
+
+  <section>
+    <h2>Not on our bench (yet)</h2>
+    <p><strong>This device is not on our bench.</strong> We have never owned, opened, photographed, measured, or powered on the RT-AC68U. Everything in this report comes from <strong>public records</strong>: government filings, manufacturer documents, manuals, and credible public teardowns and hardware databases. Where a fact would require holding the hardware in our hands &mdash; our own photos, our measurements, our boot logs, the exact board revision of a future unit &mdash; we say so, out loud, and mark it unknown. Nothing here is presented as first-hand BareBoard evidence.</p>
+<p>That constraint is also the point: you can learn a remarkable amount about a device without ever touching it, because the public record is deep. What follows is everything the record could tell us &mdash; and an honest map of where the record runs out.</p>
+  </section>
+
+  <section>
+    <h2>A short history</h2>
+    <ol class="timeline">
+      <li><span class="when">2013-09-30</span>The FCC grants equipment authorization <strong>MSQ-RTAC68U</strong> to ASUSTeK Computer Inc. &mdash; the RT-AC68U (also covering the RT-AC68R, RT-AC68RW, and T-Mobile's TM-AC1900) enters the U.S. market as an AC1900 flagship. <span class="src"><a href="https://fccid.io/MSQ-RTAC68U">FCC filing</a></span></li>
+      <li><span class="when">2013&ndash;2015</span>The router earns its reputation: Broadcom's 800&nbsp;MHz dual-core BCM4708A0, 256&nbsp;MB RAM, USB 3.0, and ASUS's unusually rich stock firmware &mdash; plus a thriving third-party firmware scene &mdash; make it the default recommendation for years. <span class="src"><a href="https://fccid.io/MSQ-RTAC68U">FCC filing</a></span> <span class="src"><a href="https://www.snbforums.com/threads/unbrick-asus-rt-ac68u-router-over-serial-connection-using-a-raspberry-pi.56567/">SNBForums</a></span></li>
+      <li><span class="when">2016-05-11</span>Class II permissive changes to the FCC authorization run through this date; ASUS notes that newer <strong>V2</strong> hardware carries its own ID, MSQ-RTAC68UV2. <span class="src"><a href="https://fccid.io/MSQ-RTAC68U">FCC filing</a></span></li>
+      <li><span class="when">2013&ndash;present</span>A decade on shelves. ASUS's official rescue-mode documentation still uses the RT-AC68U as its worked example &mdash; a sign of how long this platform stayed in service. <span class="src"><a href="https://rog.asus.com/support/faq/1000814">ASUS rescue FAQ</a></span></li>
+      </ol>
+  </section>
+
+  <section>
+    <h2>The outside</h2>
+    <p>The RT-AC68U is a flat black slab with a diamond-pattern top and <strong>three external detachable antennas</strong> &mdash; the classic late-2013 flagship look. Front LEDs report power, internet, 2.4&nbsp;GHz, 5&nbsp;GHz, USB, and LAN status; the rear carries four gigabit LAN ports, one gigabit WAN port, a USB 3.0 port, a USB 2.0 port, power, and the recessed reset button that doubles as the rescue-mode trigger. <span class="src"><a href="https://fccid.io/MSQ-RTAC68U">FCC filing</a></span></p>
+    <figure>
+      <img src="img/device.jpg" alt="Placeholder card — ASUS RT-AC68U not yet on our bench">
+      <figcaption>Placeholder: this device isn't on our bench yet. When it is, this card becomes a real photograph.</figcaption>
+    </figure>
+    <p>Carrier variants wore the same shell: T-Mobile's TM-AC1900 is the same hardware in T-Mobile trim, and the RT-AC68R/RT-AC68RW are retail-channel twins of the RT-AC68U. <span class="src"><a href="https://fccid.io/MSQ-RTAC68U">FCC filing</a></span></p>
+  </section>
+
+  <section>
+    <h2>The board</h2>
+    <p>One board built around Broadcom's <strong>BCM4708A0</strong> &mdash; an 800&nbsp;MHz dual-core ARM Cortex-A9 SoC &mdash; with separate 2.4&nbsp;GHz and 5&nbsp;GHz radio chains under shield cans, a Spansion NAND flash for firmware, and ESMT DDR3 for working memory. The FCC filing's public internal photos show the layout: SoC and memory center-stage, radio sections shielded, power regulation along one edge. <span class="src"><a href="https://fccid.io/MSQ-RTAC68U">FCC filing</a></span></p>
+    <p>Public discussion among owners documents an unpopulated or accessible <strong>serial console header</strong> used for low-level recovery &mdash; the kind of thing third parties write &ldquo;unbrick over serial&rdquo; guides about. <span class="src"><a href="https://www.snbforums.com/threads/unbrick-asus-rt-ac68u-router-over-serial-connection-using-a-raspberry-pi.56567/">SNBForums</a></span> We have not verified the header's location, pinout, or baud rate; that is bench work.</p>
+  </section>
+
+  <section>
+    <h2>Under the microscope: the chips</h2>
+    <p>What's on the RT-AC68U board, per the equipment-authorization exhibits and corroborating public records. <strong>Confirmed</strong> means a primary source &mdash; the FCC filing or the manufacturer.</p>
+    <div class="table-scroll">
+        <table class="chips">
+        <thead><tr><th>Chip</th><th>What it does</th><th>How we know</th><th>Dig deeper</th></tr></thead>
+        <tbody>
+        <tr><td><strong>Broadcom BCM4708A0</strong></td><td>The main SoC &mdash; 800&nbsp;MHz dual-core ARM Cortex-A9 running the router, its USB ports, and the Ethernet switch.</td><td><span class="badge b-confirmed">Confirmed</span> Named in the FCC filing's public exhibits for MSQ-RTAC68U.</td><td><a href="https://fccid.io/MSQ-RTAC68U">FCC filing</a></td></tr>
+        <tr><td><strong>Spansion S34ML01G100TFI00</strong><br><span class="partno">1&nbsp;Gb NAND</span></td><td>The flash chip holding the firmware (128&nbsp;MB).</td><td><span class="badge b-confirmed">Confirmed</span> Named in the FCC filing's public exhibits for MSQ-RTAC68U.</td><td><a href="https://fccid.io/MSQ-RTAC68U">FCC filing</a></td></tr>
+        <tr><td><strong>ESMT M15F2G16128A-ADB</strong><br><span class="partno">2&nbsp;Gb DDR3</span></td><td>Working memory for the SoC (256&nbsp;MB).</td><td><span class="badge b-confirmed">Confirmed</span> Named in the FCC filing's public exhibits for MSQ-RTAC68U.</td><td><a href="https://fccid.io/MSQ-RTAC68U">FCC filing</a></td></tr>
+        <tr><td><strong>Richwave RTC6649E</strong></td><td>An RF front-end part in the wireless chain.</td><td><span class="badge b-likely">Likely</span> Named in public hardware records for this model; exact stage role not verified from a primary source.</td><td><a href="https://fccid.io/MSQ-RTAC68U">FCC filing</a></td></tr>
+        </tbody>
+        </table>
+        </div>
+    <p>The 2.4&nbsp;GHz and 5&nbsp;GHz radio chains sit under soldered shield cans in the filing photos; their exact part markings are not public. No public datasheets were located for the Broadcom SoC &mdash; Broadcom does not publish them.</p>
+  </section>
+
+  <section id="fcc">
+    <h2>The government's file on this box</h2>
+    <p>The government's file on this router is public under <strong>FCC ID MSQ-RTAC68U</strong>, granted to <strong>ASUSTeK Computer Inc.</strong> on <strong>September 30, 2013</strong>, with Class II changes running through <strong>May 11, 2016</strong>. <span class="src"><a href="https://fccid.io/MSQ-RTAC68U">FCC filing</a></span></p>
+    <ul>
+      <li><strong>What's public:</strong> internal and external photos, the manual, test reports, and RF-exposure exhibits. The lab's conducted-output figures are filing-specific: about <strong>770&nbsp;mW</strong> at 2.4&nbsp;GHz, <strong>430&nbsp;mW</strong> in one later lower-5-GHz filing, and up to <strong>960&nbsp;mW</strong> in an upper-5-GHz filing &mdash; each tied to its own grant, not blended into one number.</li>
+      <li><strong>Scope:</strong> the authorization covers the RT-AC68U, RT-AC68R, RT-AC68RW, and the T-Mobile TM-AC1900 as the same hardware. The later <strong>V2</strong> hardware is a separate authorization, <strong>MSQ-RTAC68UV2</strong> &mdash; not this filing.</li>
+    </ul>
+    <p>Browse it yourself: <span class="src"><a href="https://fccid.io/MSQ-RTAC68U">filing page</a></span></p>
+  </section>
+
+  <section>
+    <h2>Service, recovery, and debug modes</h2>
+    <p>We listen, we don't knock: this section documents only that service or recovery modes <em>exist</em> in the public record, and what kind of thing they are &mdash; never how to defeat a lock.</p>
+    <p>ASUS documents a <strong>rescue mode</strong> for this router in its official support FAQ &mdash; and uses the RT-AC68U as the worked example. Holding the reset button puts the router into rescue mode (the power LED flashes slowly), after which ASUS's Firmware Restoration utility can reload firmware. <span class="src"><a href="https://rog.asus.com/support/faq/1000814">ASUS rescue FAQ</a></span> That's a manufacturer-supported recovery path, documented for owners &mdash; we describe its existence, not a procedure.</p>
+    <p>Separately, public third-party discussion documents <strong>serial-console recovery</strong> (e.g. an &ldquo;unbrick over serial&rdquo; guide using a Raspberry Pi), which implies an accessible UART header on the board. <span class="src"><a href="https://www.snbforums.com/threads/unbrick-asus-rt-ac68u-router-over-serial-connection-using-a-raspberry-pi.56567/">SNBForums</a></span> Third-party evidence only; pinout and settings unverified.</p>
+  </section>
+
+  <section>
+    <h2>What the public record shows</h2>
+    <p><strong>Ten-year hardware is a security story.</strong> A router this long-lived accumulates firmware history &mdash; features, fixes, and eventually end-of-support. The public record shows ASUS supporting this platform far longer than most rivals supported theirs, which is part of why so many are still in service.</p>
+    <p><strong>One board, many badges.</strong> The FCC filing ties the RT-AC68U, RT-AC68R, RT-AC68RW, and T-Mobile's TM-AC1900 to the same authorization &mdash; a reminder that carrier &ldquo;exclusives&rdquo; are often the same hardware in different clothes. <span class="src"><a href="https://fccid.io/MSQ-RTAC68U">FCC filing</a></span></p>
+    <p><strong>The rescue mode is the headline feature of the debug story.</strong> Most routers hide recovery; ASUS documented this one's, with a utility to match. For a device family famous for third-party firmware experiments, a manufacturer-blessed way back from a bad flash is the difference between a brick and a lesson.</p>
+  </section>
+
+  <section>
+    <h2>What we didn't do</h2>
+    <ul>
+      <li>We never had a unit, so we took no photographs and no measurements.</li>
+      <li>We never opened an enclosure or lifted an RF shield.</li>
+      <li>We never captured a boot log or probed a debug port.</li>
+      <li>We never extracted, modified, redistributed, or ran the device's firmware.</li>
+      <li>We never defeated a lock, bypassed authentication, or recovered credentials or keys &mdash; and we publish none.</li>
+      <li>We never tested an exploit or a vulnerability against any device.</li>
+      <li>Anything below marked <strong>Unknown</strong> stays unknown until a unit reaches our bench.</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>By the numbers</h2>
+    <ul>
+      <li><strong>Device:</strong> ASUS RT-AC68U (AC1900); twins: RT-AC68R, RT-AC68RW, T-Mobile TM-AC1900</li>
+      <li><strong>Era:</strong> 2013&ndash;present</li>
+      <li><strong>FCC ID:</strong> MSQ-RTAC68U (ASUSTeK; granted 2013-09-30; Class II changes through 2016-05-11)</li>
+      <li><strong>V2 hardware:</strong> Separate authorization: MSQ-RTAC68UV2</li>
+      <li><strong>Wireless:</strong> AC1900 &mdash; 600&nbsp;Mbps @ 2.4&nbsp;GHz + 1300&nbsp;Mbps @ 5&nbsp;GHz, 3&times;3 MIMO, beamforming</li>
+      <li><strong>Conducted power (per filing):</strong> ~770&nbsp;mW @ 2.4&nbsp;GHz; ~430&nbsp;mW lower-5&nbsp;GHz (later filing); up to ~960&nbsp;mW upper-5&nbsp;GHz</li>
+      <li><strong>Main chip:</strong> Broadcom BCM4708A0, 800&nbsp;MHz dual-core ARM Cortex-A9</li>
+      <li><strong>Memory:</strong> 256&nbsp;MB RAM; 128&nbsp;MB flash</li>
+      <li><strong>Ports:</strong> 4&times; gigabit LAN, 1&times; gigabit WAN, USB 3.0 + USB 2.0</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>Words to know</h2>
+    <p>Every term this page uses, in plain English. No prior knowledge required.</p>
+    <dl class="glossary">
+      <div><dt>AC1900</dt><dd>A speed class: up to ~600&nbsp;Mbps on 2.4&nbsp;GHz plus ~1300&nbsp;Mbps on 5&nbsp;GHz, added together for marketing. Real-world speeds are lower.</dd></div>
+      <div><dt>MIMO</dt><dd>Multiple-input, multiple-output: using several antennas and radio chains at once to move more data. 3&times;3 means three streams each way.</dd></div>
+      <div><dt>Beamforming</dt><dd>The router focuses its radio energy toward your device instead of broadcasting equally in all directions.</dd></div>
+      <div><dt>AiMesh</dt><dd>ASUS's system for linking multiple ASUS routers into one mesh Wi-Fi network.</dd></div>
+      <div><dt>Rescue mode</dt><dd>A manufacturer-built recovery state &mdash; here, triggered by the reset button &mdash; that lets you reload firmware when the normal software won't boot.</dd></div>
+      <div><dt>UART / serial console</dt><dd>A simple port that lets you watch a device narrate its own startup, line by line.</dd></div>
+      <div><dt>FCC ID</dt><dd>The ID the FCC assigns to each approved wireless product. Punch it into fccid.io and the whole public filing comes up.</dd></div>
+      <div><dt>FCC</dt><dd>The Federal Communications Commission &mdash; the U.S. agency that regulates anything that transmits radio.</dd></div>
+    </dl>
+  </section>
+
+  <section>
+    <h2>Sources &amp; confidence</h2>
+    <ul>
+      <li>FCC equipment authorization MSQ-RTAC68U (grantee ASUSTeK Computer Inc., grants 2013-09-30, Class II changes through 2016-05-11; conducted powers ~770/~430/~960&nbsp;mW per filing): primary evidence. High confidence.</li>
+      <li>Chip identities (BCM4708A0, Spansion NAND, ESMT DDR3): the filing's public exhibits. High confidence. Richwave front-end part: public hardware records, medium confidence.</li>
+      <li>Rescue mode (reset-button trigger, slow-flash power LED, Firmware Restoration utility): ASUS's official support FAQ, using the RT-AC68U as its example. High confidence in the existence claim.</li>
+      <li>Serial-console recovery: third-party SNBForums guide. Low-medium confidence; existence only, no verified pinout.</li>
+      <li>Carrier/retail variants sharing the authorization (RT-AC68R/RW, TM-AC1900) and V2's separate ID (MSQ-RTAC68UV2): the FCC filing. High confidence.</li>
+    </ul>
+    <p class="note">Anything not listed here is unknown until the bench says otherwise. We'll say so, out loud, when that's the case.</p>
+    <p class="note"><strong>Legal note.</strong> BareBoard is an educational project. This page is built entirely from public records &mdash; government filings, manufacturer documents, and published third-party research &mdash; about hardware we have never possessed. We don't publish, host, or distribute firmware, keys, passwords, or credentials, and nothing here is instructions for defeating a lock or an authentication check. Product names and trademarks belong to their respective owners and appear here only to identify the hardware. If you believe anything here infringes your rights, contact us and we'll address it promptly.</p>
+  </section>
+
+  <footer>
+    <p>BareBoard &mdash; a free educational resource. Device #033 of the Hot 100.</p>
+    <nav>
+      <a href="/autopsy/">All autopsies</a>
+      <a href="/">Home</a>
+    </nav>
+  </footer>
+</main>
+</body>
+</html>
