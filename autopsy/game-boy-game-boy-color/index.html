@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Autopsy 015: The Game Boy — BareBoard</title>
+<meta name="description" content="BareBoard Autopsy 015: a plain-English hardware report on the Nintendo Game Boy and Game Boy Color (1989–2003) — the Sharp CPU, the green screen, and why there's no FCC file.">
+<meta name="theme-color" content="#fbfbfc">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%231d1d1f'/%3E%3Ctext x='32' y='45' font-family='system-ui,-apple-system,sans-serif' font-size='36' font-weight='700' fill='white' text-anchor='middle'%3EB%3C/text%3E%3C/svg%3E">
+<link rel="stylesheet" href="/style.css">
+</head>
+<body>
+<header class="site-nav">
+  <div class="nav-inner">
+    <a class="brand" href="/">BareBoard</a>
+    <nav>
+      <a href="/about.html">About</a>
+      <a href="/autopsy/">Autopsy</a>
+      <a href="/hot-100.html">Hot 100</a>
+      <a href="/most-wanted.html">Most Wanted</a>
+      <a href="/support.html">Support</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <p class="kicker">The Autopsy Report · Device #015</p>
+  <h1>The Game Boy</h1>
+  <p class="lede">The gray brick that outlasted every rival by being cheaper, tougher, and sippier on batteries. We haven't opened one yet, so this report is built from the public record: the technical literature, independent hardware references, and the chip Sharp built for it.</p>
+
+  <section>
+    <h2>What is this thing?</h2>
+    <p>The <strong>Nintendo Game Boy</strong> is the 1989 handheld that made portable gaming a mass-market habit: a gray plastic brick with a green-tinted screen, four AA batteries that lasted a school week, and <em>Tetris</em> in the box. It sold over <strong>118 million units</strong> across its models. <span class="src"><a href="https://en.wikipedia.org/wiki/Game_Boy">Wikipedia</a></span></p>
+    <p>The <strong>Game Boy Color</strong> (1998) is the same idea with a color screen — not a new generation, but a faster, color-capable revision of the same hardware. This report covers the family from the 1989 original (DMG, "Dot Matrix Game") through the Color (CGB), ending with the 2003 Game Boy Advance SP era boundary — the Game Boy line proper. Inside the original: a <strong>Sharp-built CPU</strong> running at 4.19&nbsp;MHz, 8&nbsp;KB of working RAM, and a screen that shows four shades of green-gray. The Color doubles the speed (with an 8.38&nbsp;MHz fast mode), doubles the memory, and adds a 15-bit color palette. <span class="src"><a href="https://en.wikipedia.org/wiki/Game_Boy">Wikipedia</a></span></p>
+  </section>
+
+  <section>
+    <h2>Not yet on our bench</h2>
+    <p>No unit of ours has been opened for this report. Everything below comes from public records: the published technical references, independent hardware documentation, and the historical record. The public-record facts are as complete as we could make them; what awaits the bench is everything that requires <em>our hands on our hardware</em> — our own photos, our own measurements, and confirmation of exactly which board revision our future unit carries. When a Game Boy lands on the bench, the thin spots below are exactly where we'll start.</p>
+  </section>
+
+  <section>
+    <h2>A short history</h2>
+    <ol class="timeline">
+      <li><span class="when">April 21, 1989</span>Nintendo launches the Game Boy in Japan (North America: July 31). Gunpei Yokoi's team bets on a cheap monochrome screen and long battery life over flashy color — and wins. <span class="src"><a href="https://en.wikipedia.org/wiki/Game_Boy">Wikipedia</a></span></li>
+      <li><span class="when">1989 – 1998</span>Rivals with color screens and backlights (Atari Lynx, Sega Game Gear) come and go; the Game Boy outsells them all combined. Battery life beats beauty. <span class="src"><a href="https://en.wikipedia.org/wiki/Game_Boy">Wikipedia</a></span></li>
+      <li><span class="when">October 21, 1998</span>The <strong>Game Boy Color</strong> launches: same cartridge family, now with a color screen, double the clock speed, and double the memory. <span class="src"><a href="https://en.wikipedia.org/wiki/Game_Boy">Wikipedia</a></span></li>
+      <li><span class="when">2003</span>The Game Boy line winds down as the Game Boy Advance takes over. Total: over 118 million units — the gray brick retires undefeated. <span class="src"><a href="https://en.wikipedia.org/wiki/Game_Boy">Wikipedia</a></span></li>
+    </ol>
+  </section>
+
+  <section>
+    <h2>The outside</h2>
+    <p>A gray rectangle with a cross-shaped D-pad, two round buttons (A and B), Start and Select as rubber pills, a volume wheel and a contrast wheel on the sides, and a screen the size of a postage stamp. The Color is smaller and comes in atomic purple and a rainbow of shells. What the photo can't show: the satisfying <em>click</em> of the power switch, or the way the contrast wheel fades the screen to nothing.</p>
+    <figure>
+      <img src="img/device.jpg" alt="An original Nintendo Game Boy handheld in gray">
+      <figcaption>An original 1989 Game Boy. Photo: "Game-Boy-FL.png" by Evan-Amos, public domain, via Wikimedia Commons. Shown for identification; our own unit photos will replace it once one reaches the bench.</figcaption>
+    </figure>
+  </section>
+
+  <section>
+    <h2>The board</h2>
+    <p>The Game Boy's board is famously simple: one main chip does nearly everything. The <strong>DMG-CPU</strong> — built by Sharp — contains the processor and most of the system logic in a single package, surrounded by a small amount of RAM, the cartridge connector, the link-port circuitry, and the power regulation. <span class="src"><a href="https://github.com/8bitscript/8bitscript/blob/HEAD/docs/project/machines/gameboy.md">Hardware reference</a></span> The Color's board (CGB-CPU) follows the same pattern at higher speed. Exact board revisions, date codes, and factory variations of our future unit are unknown until we open one ourselves.</p>
+  </section>
+
+  <section>
+    <h2>Under the microscope: the chips</h2>
+    <p>What's on the board, what each part does, and how sure we are. <strong>Confirmed</strong> means primary evidence only — an FCC exhibit, a manufacturer manual or datasheet, or an official announcement. <strong>Likely</strong> means corroborated secondary or public-teardown evidence. Markings are representative; board revisions differ.</p>
+    <div class="table-scroll">
+    <table class="chips">
+      <thead>
+        <tr><th>Chip</th><th>What it does</th><th>How we know</th><th>Dig deeper</th></tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><strong>Sharp LR35902-family CPU</strong><br><span class="partno">DMG-CPU @ 4.194304 MHz; CGB @ 4.19 / 8.38 MHz</span></td>
+          <td>The whole system in one package: an 8-bit processor (a hybrid of the Intel 8080 and Z80 instruction sets) plus most of the console's logic.</td>
+          <td><span class="badge b-likely">Likely</span> Chip family and speeds documented across the hardware literature; exact die markings vary by revision.</td>
+          <td><a href="https://github.com/8bitscript/8bitscript/blob/HEAD/docs/project/machines/gameboy.md">Hardware reference</a></td>
+        </tr>
+        <tr>
+          <td><strong>8&nbsp;KB WRAM / 8&nbsp;KB VRAM</strong><br><span class="partno">32 KB / 16 KB on Color</span></td>
+          <td>Working memory and video memory — tiny by any modern measure, and exactly enough.</td>
+          <td><span class="badge b-likely">Likely</span> Per the published technical specifications.</td>
+          <td><a href="https://en.wikipedia.org/wiki/Game_Boy">Technical overview</a></td>
+        </tr>
+      </tbody>
+    </table>
+    </div>
+    <p>Sharp never published a public datasheet for the Game Boy's CPU — custom console silicon, again. The most complete public documentation is the community-maintained hardware literature (notably the Pan Docs tradition), which is secondary but deeply corroborated. Awaiting the bench: our unit's exact board revision, chip date codes, and the power-regulation section.</p>
+  </section>
+
+  <section>
+    <h2>The government's file on this box</h2>
+    <p>There isn't one, and the reason is the same as the PlayStation 2's: <strong>no radio transmitter, no FCC equipment authorization</strong>. The Game Boy and Game Boy Color have no Wi-Fi, no Bluetooth, no wireless of any kind — the link port is a wire. The FCC's filing system exists to manage radio transmitters, so a device with no intentional radiator never enters it. No console-level FCC ID was ever issued. That's normal, not suspicious — it means exactly what the rules say it means.</p>
+  </section>
+
+  <section>
+    <h2>Debug and service modes</h2>
+    <p>Nintendo never published a public recovery or service menu for the Game Boy or Game Boy Color. There is no button combination in any official Nintendo documentation we could find that boots one into a diagnostic screen. The closest thing the hardware offers is the famous <em>Nintendo</em> logo scroll at power-on — a boot check, not a service mode. Until we have a unit on the bench, we can't say what, if anything, the board quietly offers.</p>
+  </section>
+
+  <section>
+    <h2>What public records show</h2>
+    <p>The public record gives us the Game Boy family's full biography: launch and wind-down dates, the Sharp CPU and its speeds, the memory configuration, the screen technology, and the regulatory posture (no radio, no FCC filing). What it does <em>not</em> give us is anything that only exists inside a specific unit — board revision, date codes, or the factory-to-factory drift across a fourteen-year production run. That's the bench's job.</p>
+  </section>
+
+  <section>
+    <h2>What we haven't done</h2>
+    <ul>
+      <li>We haven't opened, photographed, or measured a Game Boy of our own.</li>
+      <li>We haven't confirmed whether our future unit will be an original, a Color, or both.</li>
+      <li>We haven't verified the chip markings against a physical board.</li>
+      <li>We haven't tested any service procedure.</li>
+      <li>The photo above is a freely licensed stock image, credited in full — not our hardware.</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>By the numbers</h2>
+    <ul>
+      <li><strong>Models:</strong> Game Boy DMG (1989), Game Boy Color CGB (1998)</li>
+      <li><strong>FCC ID:</strong> none — no radio transmitter</li>
+      <li><strong>CPU:</strong> Sharp LR35902-family, 4.194304&nbsp;MHz (8.38&nbsp;MHz fast mode on Color)</li>
+      <li><strong>Memory:</strong> 8&nbsp;KB WRAM + 8&nbsp;KB VRAM (32&nbsp;KB + 16&nbsp;KB on Color)</li>
+      <li><strong>Screen:</strong> 160×144, 4-shade monochrome (DMG); 15-bit color (CGB)</li>
+      <li><strong>Power:</strong> 4× AA batteries</li>
+      <li><strong>Launched:</strong> April 21, 1989 (Japan); July 31, 1989 (North America)</li>
+      <li><strong>Units sold:</strong> over 118 million across the family</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>Words to know</h2>
+    <p>Every term this page uses, in plain English. No prior knowledge required.</p>
+    <dl class="glossary">
+      <div><dt>DMG</dt><dd>"Dot Matrix Game" — Nintendo's internal name for the original Game Boy, after its dot-matrix screen.</dd></div>
+      <div><dt>Z80 / 8080</dt><dd>Two classic 1970s processor designs. The Game Boy's CPU speaks a hybrid of their languages.</dd></div>
+      <div><dt>Dot-matrix screen</dt><dd>The original's green-tinted LCD: no backlight, four shades of green-gray, readable in sunlight, invisible in the dark.</dd></div>
+      <div><dt>Link port</dt><dd>The wired connector for two-player games via a cable — the Game Boy's only "networking."</dd></div>
+      <div><dt>FCC ID</dt><dd>The ID the FCC assigns to each approved wireless product. Devices with no radio don't get one — like this one.</dd></div>
+    </dl>
+  </section>
+
+  <section>
+    <h2>Sources &amp; confidence</h2>
+    <ul>
+      <li>Launch dates, sales figures, CPU/memory/screen specifications: published technical overviews. High confidence in the facts, medium in any single source.</li>
+      <li>CPU family and architecture (Sharp, 8080/Z80 hybrid): the hardware literature, deeply corroborated. Medium-high confidence; exact die markings vary by revision.</li>
+      <li>Regulatory posture (no radio, no FCC filing): researched; no filing expected or found. High confidence — a wired-only handheld of 1989.</li>
+      <li>No public datasheet exists for the custom Sharp CPU. Stated as an industry documentation gap.</li>
+      <li>Anything not listed here is unknown until the bench says otherwise. We'll say so, out loud, when that's the case.</li>
+    </ul>
+    <p class="note">We publish no firmware, serials, keys, or private data. This report uses only public records plus a freely licensed stock photo.</p>
+    <p class="note"><strong>Legal note.</strong> BareBoard is an educational project. We don't publish, host, or distribute firmware, keys, passwords, or credentials. Product names and trademarks belong to their respective owners and appear here only to identify the hardware. If you believe anything here infringes your rights, contact us and we'll address it promptly.</p>
+  </section>
+
+  <footer>
+    <p>BareBoard &mdash; a free educational resource. Device #015 of the Hot 100.</p>
+    <nav>
+      <a href="/autopsy/">All autopsies</a>
+      <a href="/">Home</a>
+    </nav>
+  </footer>
+</main>
+</body>
+</html>
