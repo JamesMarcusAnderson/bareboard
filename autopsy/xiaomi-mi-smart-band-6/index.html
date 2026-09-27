@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Autopsy 060: Xiaomi Mi Smart Band 6 &mdash; BareBoard</title>
+<meta name="description" content="BareBoard Autopsy 060: a public-records autopsy of the Xiaomi Mi Smart Band 6 (XMSH15HM) — a great screen, a SpO2 sensor, and a chipset nobody named.">
+<meta name="theme-color" content="#fbfbfc">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%231d1d1f'/%3E%3Ctext x='32' y='45' font-family='system-ui,-apple-system,sans-serif' font-size='36' font-weight='700' fill='white' text-anchor='middle'%3EB%3C/text%3E%3C/svg%3E">
+<link rel="stylesheet" href="/style.css">
+</head>
+<body>
+<header class="site-nav">
+  <div class="nav-inner">
+    <a class="brand" href="/">BareBoard</a>
+    <nav>
+      <a href="/about.html">About</a>
+      <a href="/autopsy/">Autopsy</a>
+      <a href="/hot-100.html">Hot 100</a>
+      <a href="/most-wanted.html">Most Wanted</a>
+      <a href="/support.html">Support</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <p class="kicker">The Autopsy Report &middot; Device #060</p>
+  <h1>Xiaomi Mi Smart Band 6</h1>
+  <p class="lede">A bigger, brighter screen and blood-oxygen sensing — and a main chip Xiaomi never identified. The Band 6 is the rare device where the most important part is the one nobody can name.</p>
+
+<section>
+    <h2>What is this thing?</h2>
+    <p>The <strong>Xiaomi Mi Smart Band 6</strong> is the 2021 follow-up to the Mi Band 4: a fitness capsule with a larger <strong>1.56-inch AMOLED</strong> display (450 nits), <strong>SpO2</strong> blood-oxygen sensing alongside the usual heart-rate tracking, plus accelerometer and gyroscope. Model <strong>XMSH15HM</strong>. <span class="src"><a href="https://androidcommunity.com/xiaomi-launches-mi-smart-band-6-with-bigger-display-20210330/">AndroidCommunity</a> &middot; <a href="http://www.gsmarena.com/xiaomi_mi_smart_band_6_arrives_with_larger_display_mi_smart_projector_2_pro_unveiled-news-48423.php">GSMArena</a></span></p>
+  </section>
+
+<section>
+    <h2>Not yet on our bench</h2>
+    <p>Straightforward honesty first: <strong>BareBoard has not possessed, disassembled, tested, booted, or touched the firmware of this unit.</strong> We don't have one on the bench yet. Everything below is built from public records — FCC filings, manufacturer material, datasheets, manuals, and published teardowns — with every claim linked to its source and graded for confidence. When a fact genuinely requires our hands on hardware (boot logs, our own photos, exact board revision of a future unit), we say so out loud.</p>
+    <p>That framing is what makes publishing now legitimate: this is a public-records autopsy, and it will grow into a bench autopsy the day a unit lands on our desk.</p>
+  </section>
+
+<section>
+    <h2>A short history</h2>
+    <ol class="timeline">
+      <li><span class="when">March 29, 2021</span>Xiaomi launches the Mi Smart Band 6 with the bigger display and SpO2 sensing. <span class="src"><a href="https://androidcommunity.com/xiaomi-launches-mi-smart-band-6-with-bigger-display-20210330/">AndroidCommunity</a></span></li>
+      <li><span class="when">2021</span>It lands in India, Indonesia, and other markets with regional certifications — but no U.S. FCC filing. <span class="src"><a href="http://www.gsmarena.com/xiaomi_mi_smart_band_6_arrives_with_larger_display_mi_smart_projector_2_pro_unveiled-news-48423.php">GSMArena</a></span></li>
+    </ol>
+  </section>
+
+<section>
+    <h2>The outside</h2>
+    <p>The same capsule-in-strap formula as the Band 4, but the screen now stretches nearly edge to edge: <strong>1.56 inches of AMOLED at 450 nits</strong>. The capsule pops out for charging; the back carries the PPG heart-rate/SpO2 sensor window. <span class="src"><a href="https://androidcommunity.com/xiaomi-launches-mi-smart-band-6-with-bigger-display-20210330/">AndroidCommunity</a></span></p>
+    <figure>
+      <img src="img/device.jpg" alt="Xiaomi Mi Smart Band 6 fitness tracker">
+      <figcaption>The Band 6. <em>Photo: <a href="https://commons.wikimedia.org/wiki/File:Mi_Band_6_-_2.jpg">KKPCW</a>, CC BY-SA 4.0, via Wikimedia Commons.</em></figcaption>
+    </figure>
+  </section>
+
+<section>
+    <h2>The board</h2>
+    <p>Honestly: <strong>the chipset is unknown.</strong> Xiaomi's own launch materials don't name it, and no public teardown text we've found identifies the main chip, the memory, the storage, or the sensor part numbers. This is a device where the public record describes the product beautifully and the circuit not at all. We'll say it once more for the record: the chipset of the Mi Smart Band 6 is <strong>unknown</strong> in every public source we checked. <span class="src"><a href="https://androidcommunity.com/xiaomi-launches-mi-smart-band-6-with-bigger-display-20210330/">AndroidCommunity</a></span></p>
+  </section>
+
+<section>
+    <h2>Under the microscope: the chips</h2>
+    <p>There is no chip table for this device. <span class="badge b-confirmed">Confirmed</span> needs a primary source and <span class="badge b-likely">Likely</span> needs corroborated public records — and for the Band 6's internals we have neither. No chip has been reliably identified in any public record we found. When a unit reaches our bench, this section gets built for real.</p>
+  </section>
+
+<section>
+    <h2>The government's file on this device</h2>
+    <p>There isn't a U.S. one. We found <strong>no FCC filing for the Mi Smart Band 6 (XMSH15HM)</strong> — the certifications on record are from India and Indonesia. No FCC photos or test reports exist to learn from here.</p>
+  </section>
+
+<section>
+    <h2>Debug &amp; service modes</h2>
+    <p>Our posture: <strong>we listen, we don't knock.</strong> Only publicly verified interfaces.</p>
+    <p><strong>User-facing:</strong> pairing, charging, and factory reset run through the companion app and the band's own menus — ordinary, documented, user-level operations.</p>
+    <p><strong>No public debug interface.</strong> No serial console, JTAG header, or diagnostic mode appears in any public record we found.</p>
+  </section>
+
+<section>
+    <h2>What the public record says</h2>
+    <p><strong>The unnamed chip.</strong> It's genuinely unusual: a device this popular, and the main chip goes unidentified in every public source we checked — including the launch coverage, which explicitly notes the chipset wasn't specified. That silence is itself the finding. <span class="src"><a href="https://androidcommunity.com/xiaomi-launches-mi-smart-band-6-with-bigger-display-20210330/">AndroidCommunity</a></span></p>
+    <p><strong>What is verifiable:</strong> the 1.56-inch 450-nit AMOLED, SpO2 and PPG sensing, accelerometer and gyroscope — all from launch coverage. <span class="src"><a href="http://www.gsmarena.com/xiaomi_mi_smart_band_6_arrives_with_larger_display_mi_smart_projector_2_pro_unveiled-news-48423.php">GSMArena</a></span></p>
+  </section>
+
+<section>
+    <h2>What we didn't do</h2>
+    <ul>
+      <li>We have not possessed, disassembled, tested, or booted this device.</li>
+      <li>We have not extracted, modified, shared, or reverse-engineered its firmware.</li>
+      <li>We document only publicly verified interfaces and user-facing modes — read-only, no lock bypass, no authentication defeat, no credential or key material.</li>
+      <li>Anything below marked as unknown stays unknown until the bench says otherwise.</li>
+    </ul>
+  </section>
+
+<section>
+    <h2>By the numbers</h2>
+    <ul>
+      <li><strong>Model:</strong> XMSH15HM — no U.S. FCC filing found</li>
+      <li><strong>Chipset:</strong> unknown — not specified in launch coverage or any public teardown we found</li>
+      <li><strong>Display:</strong> 1.56-inch AMOLED, 450 nits</li>
+      <li><strong>Sensors:</strong> PPG heart-rate, SpO2, accelerometer, gyroscope</li>
+      <li><strong>Launched:</strong> March 29, 2021</li>
+    </ul>
+  </section>
+
+<section>
+    <h2>Words to know</h2>
+    <p>Every term this page uses, in plain English. No prior knowledge required.</p>
+    <dl class="glossary">
+      <div><dt>PPG</dt><dd>Photoplethysmography — the optical trick of shining light into skin and reading the reflection to measure pulse.</dd></div>
+      <div><dt>SpO2</dt><dd>Blood-oxygen saturation — the percentage of your blood carrying oxygen, estimated from the wrist.</dd></div>
+      <div><dt>AMOLED</dt><dd>A display technology where each pixel makes its own light — vivid, and power-sipping on dark screens.</dd></div>
+      <div><dt>nits</dt><dd>A unit of screen brightness. 450 nits is comfortably readable outdoors.</dd></div>
+      <div><dt>FCC</dt><dd>The U.S. regulator that approves wireless devices. No filing here means no regulator photos to learn from.</dd></div>
+    </dl>
+  </section>
+
+<section>
+    <h2>Sources &amp; confidence</h2>
+    <ul>
+      <li>Display size and brightness, SpO2/PPG, accelerometer, gyroscope, launch date: AndroidCommunity and GSMArena launch coverage — <strong>Likely</strong>.</li>
+      <li>Chipset not specified: stated explicitly in the launch coverage itself — <strong>Confirmed</strong> as a documented gap.</li>
+      <li>No U.S. FCC filing for XMSH15HM; India/Indonesia certifications exist: negative/positive results from our search — stated as such.</li>
+      <li>Anything not listed here is unknown until the bench says otherwise. We'll say so, out loud, when that's the case.</li>
+    </ul>
+<p class="note">Serial numbers and QR codes are blacked out of every published photo. Raw originals stay private.</p>
+    <p class="note"><strong>Legal note.</strong> BareBoard is an educational project. Everything on this page comes from public records — FCC filings, manufacturer material, datasheets, and published teardowns — plus our own analysis of those records. We don't publish, host, or distribute firmware, keys, passwords, or credentials. Product names and trademarks belong to their respective owners and appear here only to identify the hardware. If you believe anything here infringes your rights, contact us and we'll address it promptly.</p>
+  </section>
+
+  <footer>
+    <p>BareBoard &mdash; a free educational resource. Device #060 of the Hot 100.</p>
+    <nav>
+      <a href="/autopsy/">All autopsies</a>
+      <a href="/">Home</a>
+    </nav>
+  </footer>
+</main>
+</body>
+</html>
