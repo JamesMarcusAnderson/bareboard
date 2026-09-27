@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Autopsy 062: The Raspberry Pi (Every Generation) — BareBoard</title>
+<meta name="description" content="BareBoard Autopsy 062: the Raspberry Pi family, from the 2012 original to the Pi 5 — with the Pi 3 Model B as our FCC-backed representative. History, chips, and what the government file says.">
+<meta name="theme-color" content="#fbfbfc">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%231d1d1f'/%3E%3Ctext x='32' y='45' font-family='system-ui,-apple-system,sans-serif' font-size='36' font-weight='700' fill='white' text-anchor='middle'%3EB%3C/text%3E%3C/svg%3E">
+<link rel="stylesheet" href="/style.css">
+</head>
+<body>
+<header class="site-nav">
+  <div class="nav-inner">
+    <a class="brand" href="/">BareBoard</a>
+    <nav>
+      <a href="/about.html">About</a>
+      <a href="/autopsy/">Autopsy</a>
+      <a href="/hot-100.html">Hot 100</a>
+      <a href="/most-wanted.html">Most Wanted</a>
+      <a href="/support.html">Support</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <p class="kicker">The Autopsy Report · Device #062</p>
+  <h1>The Raspberry Pi</h1>
+  <p class="lede">The little green board that put a computer in fifty million pockets, classrooms, and closets. This is the story of the whole family — and one generation in particular, the Pi 3, whose government paperwork we can read line by line. <span class="src"><a href="https://en.wikipedia.org/wiki/Raspberry_Pi">Family history</a></span></p>
+
+  <section>
+    <h2>What is this thing?</h2>
+    <p>The Raspberry Pi is a <strong>single-board computer</strong> — a complete, working computer on one small circuit board, about the size of a deck of cards. No case, no power brick in the box, no hard drive: you plug in a keyboard, a monitor, a phone charger for power, and a memory card for storage, and it boots into a full desktop. It was designed to be cheap enough that a school could buy a classroom's worth and a student could afford one out of pocket. <span class="src"><a href="https://en.wikipedia.org/wiki/Raspberry_Pi">Family history</a> · <a href="https://www.raspberrypi.com/products/raspberry-pi-3-model-b/">Pi 3 Model B, official specs</a></span></p>
+    <p>The family has grown a lot since 2012. The original Pi, the Pi 2, the Pi 3 range, the Pi 4, the Pi 5, the tiny Pi Zero line, the Pi 400 (a Pi built into a keyboard), the Pico microcontrollers — each generation faster than the last, each one backward-compatible enough that the software mostly just works. We treat the whole family as one device here, because that's how most people experience it: "a Pi is a Pi." But the chips change generation to generation, so we name exactly which model every claim belongs to. Our <strong>representative board</strong> — the one in the photo, and the one with a public FCC filing — is the <strong>Pi 3 Model B</strong>, the best-selling generation's most famous member. <span class="src"><a href="https://en.wikipedia.org/wiki/Raspberry_Pi">Family history</a> · <a href="https://www.raspberrypi.com/products/raspberry-pi-3-model-b/">Pi 3 Model B, official specs</a></span></p>
+  </section>
+
+  <section>
+    <h2>Not yet on our bench</h2>
+    <p>Let's be upfront: <strong>no Raspberry Pi has sat on our bench yet.</strong> We haven't disassembled one, captured a boot log, measured its rails, or photographed our own unit — because we don't own one yet. Everything below comes from the Raspberry Pi organization's own documents, the chip vendors' datasheets, and the Pi's public FCC filing. Where the public record ends, we say so. When a Pi finally lands on the bench, this page gets a second act: our own photos, our own boot log, our own measurements.</p>
+  </section>
+
+  <section>
+    <h2>A short history</h2>
+    <ol class="timeline">
+      <li><span class="when">2012</span>The first Raspberry Pi ships. The Raspberry Pi Foundation — a charity based in Cambridge, England — set out to get programmable computers back into kids' hands, and the $35 board sells far beyond the classroom. <span class="src"><a href="https://en.wikipedia.org/wiki/Raspberry_Pi">Wikipedia</a></span></li>
+      <li><span class="when">February 2015</span>Sales pass 5 million, making the Pi the best-selling British computer ever. The commercial arm, Raspberry Pi Trading Ltd, is already funding the charity's education work. <span class="src"><a href="https://en.wikipedia.org/wiki/Raspberry_Pi">Wikipedia</a></span></li>
+      <li><span class="when">February 2016</span>The Pi 3 Model B arrives: the first Pi with Wi-Fi and Bluetooth built onto the board, and the first 64-bit Pi. It becomes the family's workhorse — the one in classrooms, in hobby projects, and in the photo above. <span class="src"><a href="https://en.wikipedia.org/wiki/Raspberry_Pi">Wikipedia</a> · <a href="https://www.raspberrypi.com/products/raspberry-pi-3-model-b/">Official specs</a></span></li>
+      <li><span class="when">March 2018</span>The Pi 3 Model B+ launches at $35 on Pi Day: faster processor, dual-band Wi-Fi, and — nominally — gigabit Ethernet. (It's wired through USB 2.0 internally, so real-world throughput tops out around 300 Mbps.) It also gains a header for Power-over-Ethernet. <span class="src"><a href="https://www.cnx-software.com/2018/03/14/35-raspberry-pi-3-model-b-launched-with-a-faster-processor-802-11ac-wifi-gigabit-ethernet-and-optional-poe/?amp=1">CNX Software</a></span></li>
+      <li><span class="when">Late 2018</span>The Pi 3 Model A+ follows: the same faster chip in a smaller, cheaper board with half the RAM and one USB port — the spiritual successor to the original cut-down Model A. <span class="src"><a href="https://www.raspberrypi.com/products/raspberry-pi-3-model-a-plus/">Official specs</a></span></li>
+      <li><span class="when">June 2019</span>The Pi 4 jumps to up to 8 GB of RAM and true gigabit Ethernet, and swaps the full-size HDMI for two micro-HDMI ports — the first Pi that feels like a real desktop replacement. <span class="src"><a href="https://en.wikipedia.org/wiki/Raspberry_Pi">Wikipedia</a></span></li>
+      <li><span class="when">October 2023</span>The Pi 5 lands with the RP1 — the first Pi to use silicon designed in-house at Raspberry Pi, an I/O controller handling USB, Ethernet, cameras, and GPIO, working alongside the Broadcom BCM2712 application processor. The main processor is still Broadcom; the in-house part is the I/O. <span class="src"><a href="https://www.raspberrypi.com/news/rp1-the-silicon-controlling-raspberry-pi-5-i-o-designed-here-at-raspberry-pi/">RP1 announcement</a> · <a href="https://www.raspberrypi.com/news/introducing-raspberry-pi-5/">Pi 5 announcement</a></span></li>
+      <li><span class="when">June 2024</span>Raspberry Pi lists on the London Stock Exchange, raising $200 million — a charity-born project going public without abandoning the $35 board. By this point more than 50 million Pis have sold. <span class="src"><a href="https://en.wikipedia.org/wiki/Raspberry_Pi">Wikipedia</a></span></li>
+    </ol>
+  </section>
+
+  <section>
+    <h2>The outside</h2>
+    <p>A Pi 3 Model B is a bare board, 85 × 56 mm, with its personality written right on the silkscreen. Around the edges, counter-clockwise from the power corner: a micro-USB port that takes 5 volts (the official spec calls for a 2.5-amp supply), a full-size HDMI port, a 3.5 mm jack that carries both audio and composite video, four USB 2.0 ports, a 10/100 Ethernet jack, the micro-SD card slot underneath (that's the hard drive), a 40-pin GPIO header along one edge for wiring up your own electronics, and the little camera and display ribbon connectors. No power switch — you plug it in, it boots. <span class="src"><a href="https://www.raspberrypi.com/products/raspberry-pi-3-model-b/">Official specs</a></span></p>
+    <figure>
+      <img src="img/device.jpg" alt="Raspberry Pi 3 Model B single-board computer, top view">
+      <figcaption>Our representative: the Pi 3 Model B. Photo by <a href="https://commons.wikimedia.org/wiki/File:Raspberry_Pi_3_B_(40759298092).png">Gareth Halfacree</a>, CC BY-SA 2.0, via Wikimedia Commons.</figcaption>
+    </figure>
+  </section>
+
+  <section>
+    <h2>The board</h2>
+    <p>One chip dominates the middle of the Pi 3B: the Broadcom BCM2837, a quad-core 64-bit ARM processor running at 1.2 GHz. Next to it sits 1 GB of LPDDR2 memory. The wireless lives in a small metal can on the board — a cavity-shielded module with the antenna etched right into the PCB next to it, a distinctive triangular shape you'll recognize in every Pi 3 photo. Ethernet comes off a separate USB-hub-and-Ethernet chip, which is why the Pi 3's wired network shares bandwidth with its USB ports. Power enters at 5 V and gets stepped down on-board for the 3.3 V, 1.8 V, and core voltages the chips need. There's no BIOS chip full of secrets here: the Pi boots straight off the micro-SD card, starting with code baked into the SoC itself. <span class="src"><a href="https://www.raspberrypi.com/products/raspberry-pi-3-model-b/">Official specs</a> · <a href="https://fccpdf.com/2ABCB/2ABCB-RPI32/2912418.pdf">FCC test report</a></span></p>
+  </section>
+
+  <section>
+    <h2>Under the microscope: the chips</h2>
+    <p>What public records say is on the Pi 3 Model B, and how sure we are. <strong>Confirmed</strong> means a primary source — Raspberry Pi's own documents, a chip vendor's datasheet, or the FCC filing — says so. <strong>Likely</strong> means reputable public hardware records agree, but we haven't traced it to a primary source. Nothing here comes from our own bench — yet.</p>
+    <div class="table-scroll">
+    <table class="chips">
+      <thead>
+        <tr><th>Chip</th><th>What it does</th><th>How we know</th><th>Dig deeper</th></tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><strong>Broadcom BCM2837</strong><br><span class="partno">quad-core ARM Cortex-A53 @ 1.2 GHz</span></td>
+          <td>The main processor — the whole computer, more or less.</td>
+          <td><span class="badge b-confirmed">Confirmed</span> Raspberry Pi's official specification for the 3 Model B.</td>
+          <td><a href="https://www.raspberrypi.com/products/raspberry-pi-3-model-b/">Official product page</a></td>
+        </tr>
+        <tr>
+          <td><strong>1 GB LPDDR2 SDRAM</strong></td>
+          <td>The board's working memory, packaged next to the processor.</td>
+          <td><span class="badge b-confirmed">Confirmed</span> Raspberry Pi's official specification for the 3 Model B.</td>
+          <td><a href="https://www.raspberrypi.com/products/raspberry-pi-3-model-b/">Official product page</a></td>
+        </tr>
+        <tr>
+          <td><strong>Broadcom wireless combo chip</strong><br><span class="partno">public records identify BCM43438</span></td>
+          <td>2.4 GHz 802.11n Wi-Fi plus Bluetooth 4.1, inside the shielded can.</td>
+          <td><span class="badge b-likely">Likely</span> Public hardware records agree on the part; the official spec confirms wireless LAN and Bluetooth without naming the chip. The FCC filing tests the radio.</td>
+          <td><a href="https://fccpdf.com/2ABCB/2ABCB-RPI32/2912418.pdf">FCC test report (PDF)</a></td>
+        </tr>
+        <tr>
+          <td><strong>USB hub + 10/100 Ethernet controller</strong></td>
+          <td>Runs the four USB ports and the wired network jack off one chip.</td>
+          <td><span class="badge b-likely">Likely</span> Public hardware records for the 3B name this part; the official spec confirms 4× USB 2.0 and 10/100 Ethernet.</td>
+          <td><a href="https://www.raspberrypi.com/products/raspberry-pi-3-model-b/">Official product page</a></td>
+        </tr>
+        <tr>
+          <td><strong>micro-SD slot</strong></td>
+          <td>The Pi's "hard drive" — the operating system lives on the card.</td>
+          <td><span class="badge b-confirmed">Confirmed</span> Raspberry Pi's official specification.</td>
+          <td><a href="https://www.raspberrypi.com/products/raspberry-pi-3-model-b/">Official product page</a></td>
+        </tr>
+      </tbody>
+    </table>
+    </div>
+    <p>The exact power-management chip and the board's revision history are details the public record doesn't pin down cleanly for the 3B — those wait for the bench. And a note on the broader family: the 3B+'s faster BCM2837B0 (1.4 GHz) and its Cypress CYW43455 dual-band Wi-Fi chip are documented in contemporary launch reporting, with a public datasheet for the wireless part. <span class="src"><a href="https://www.cnx-software.com/2018/03/14/35-raspberry-pi-3-model-b-launched-with-a-faster-processor-802-11ac-wifi-gigabit-ethernet-and-optional-poe/?amp=1">CNX Software</a> · <a href="https://www.mouser.dk/datasheet/3/70/1/Infineon_CYW43455_DataSheet_v16_00_EN.pdf">CYW43455 datasheet (PDF)</a></span></p>
+  </section>
+
+  <section>
+    <h2>The government's file on this board</h2>
+    <p>Because the Pi 3B has a radio in it, Raspberry Pi Trading Ltd had to get it through the FCC before selling it in the United States. The filing is under <strong>FCC ID 2ABCB-RPI32</strong> ("2ABCB" is Raspberry Pi Trading's grantee code). The public test report is dated January 29, 2016 — a month before the board launched — and notes that the tested unit was a prototype. It covers Part 15.247 testing: the 2.4 GHz Wi-Fi radio, measured in a lab, doing exactly what the label says it does. The filing also includes internal photos of the board, the earliest public look at the Pi 3's insides. <span class="src"><a href="https://fccpdf.com/2ABCB/2ABCB-RPI32/2912418.pdf">FCC test report (PDF)</a></span></p>
+    <p>Browse it yourself: the test report above is the core of the public file. Schematics and the full theory of operation are the parts companies usually keep confidential — the trade this system makes is public photos and lab measurements, private blueprints.</p>
+  </section>
+
+  <section>
+    <h2>Listening, not knocking</h2>
+    <p>Our debug posture on every device: <strong>we listen, we don't knock.</strong> We document interfaces that exist and the manufacturer's own safe procedures — never bypasses, extractions, keys, or firmware redistribution. For the Pi family, the honest version of this section is short: the Pi is one of the most documented boards on earth, and Raspberry Pi publishes board schematics and hardware documentation on its official documentation site. The serial console on the GPIO header is a documented developer interface, not a secret. When a Pi reaches our bench, we'll capture its boot log read-only and publish what it says — that's the whole plan, and it's all listening. <span class="src"><a href="https://www.raspberrypi.com/documentation/computers/raspberry-pi.html#schematics-and-mechanical-drawings">Official docs: schematics &amp; drawings</a></span></p>
+    <p>The one power note worth keeping: the official spec wants 5 volts at up to 2.5 amps for the 3B. Underpowered chargers are the classic cause of the little lightning-bolt warning and mysterious crashes — the board will happily try to run on less and unhappily tell you about it. <span class="src"><a href="https://www.raspberrypi.com/products/raspberry-pi-3-model-b/">Official specs</a></span></p>
+  </section>
+
+  <section>
+    <h2>What we didn't do</h2>
+    <ul>
+      <li>We have no Pi on the bench, so: no disassembly, no boot-log capture, no power measurements, no original-unit photography.</li>
+      <li>We did not extract, modify, or redistribute any firmware.</li>
+      <li>We did not test the radio against its FCC filing — the lab already did, in January 2016.</li>
+      <li>Nothing in this report bypasses any lock, credential, or protection. The Pi has none to bypass: it boots from its micro-SD card, and this report uses only public documents.</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>By the numbers</h2>
+    <ul>
+      <li><strong>Family:</strong> Raspberry Pi, all generations (2012 – present) <span class="src"><a href="https://en.wikipedia.org/wiki/Raspberry_Pi">Family history</a></span></li>
+      <li><strong>Representative board:</strong> Pi 3 Model B — quad-core BCM2837 @ 1.2 GHz, 1 GB LPDDR2, 2.4 GHz Wi-Fi + Bluetooth 4.1, 10/100 Ethernet, 4× USB 2.0, micro-SD storage, 5 V / 2.5 A power <span class="src"><a href="https://www.raspberrypi.com/products/raspberry-pi-3-model-b/">Official specs</a></span></li>
+      <li><strong>FCC ID (3B):</strong> 2ABCB-RPI32 — tested January 29, 2016, prototype unit <span class="src"><a href="https://fccpdf.com/2ABCB/2ABCB-RPI32/2912418.pdf">FCC test report (PDF)</a></span></li>
+      <li><strong>Launch price:</strong> $35 for the classic models — the 3B+ launched at $35 on Pi Day 2018 <span class="src"><a href="https://www.cnx-software.com/2018/03/14/35-raspberry-pi-3-model-b-launched-with-a-faster-processor-802-11ac-wifi-gigabit-ethernet-and-optional-poe/?amp=1">CNX Software</a></span></li>
+      <li><strong>Scale:</strong> 5M+ by February 2015 (best-selling British computer); 50M+ by 2024 <span class="src"><a href="https://en.wikipedia.org/wiki/Raspberry_Pi">Family history</a></span></li>
+      <li><strong>Maker:</strong> Raspberry Pi Foundation (charity, Cambridge) → Raspberry Pi Trading Ltd (commercial arm) <span class="src"><a href="https://en.wikipedia.org/wiki/Raspberry_Pi">Family history</a></span></li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>What awaits the bench</h2>
+    <ul>
+      <li>A Pi of our own — exact board revision, our own photos, our own measurements.</li>
+      <li>A read-only boot-log capture from the serial console, so we can document what the board says when it wakes up.</li>
+      <li>Verification of the wireless chip marking against the public record (BCM43438 on the 3B).</li>
+      <li>Power-draw measurements under load, and whether the classic undervoltage warning reproduces on a known-good supply.</li>
+      <li>One day, the same treatment for a Pi 4, a Pi 5, and a Zero — the family deserves the full shelf.</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>Words to know</h2>
+    <p>Every term this page uses, in plain English. No prior knowledge required.</p>
+    <dl class="glossary">
+      <div><dt>Single-board computer</dt><dd>A complete computer on one circuit board — processor, memory, and ports, no case required.</dd></div>
+      <div><dt>System on a chip (SoC)</dt><dd>The whole computer — processor, graphics, and more — on one piece of silicon. The BCM2837 is the Pi 3's SoC.</dd></div>
+      <div><dt>GPIO</dt><dd>General-purpose input/output — the row of pins on the Pi's edge that lets it talk to sensors, motors, lights, and other electronics.</dd></div>
+      <div><dt>Serial console</dt><dd>A simple text interface that lets you watch (and talk to) a board as it boots, over a few wires.</dd></div>
+      <div><dt>micro-SD card</dt><dd>The tiny memory card that acts as the Pi's hard drive — the operating system lives on it.</dd></div>
+      <div><dt>Power over Ethernet (PoE)</dt><dd>A way to deliver power and data over one network cable. The Pi 3B+ added a header for an optional PoE add-on.</dd></div>
+      <div><dt>802.11n / 802.11ac</dt><dd>Generations of the Wi-Fi standard. The Pi 3B speaks n (2.4 GHz); the 3B+ adds ac (dual-band).</dd></div>
+      <div><dt>FCC</dt><dd>The Federal Communications Commission — the U.S. agency that regulates anything that transmits radio. Every wireless gadget sold here has to pass its tests first.</dd></div>
+      <div><dt>FCC ID</dt><dd>The ID the FCC assigns to each approved wireless product. The first few characters are the company's grantee code; the rest is the maker's model code.</dd></div>
+      <div><dt>Grantee code</dt><dd>The first characters of an FCC ID, identifying the company that registered the product — 2ABCB for Raspberry Pi Trading.</dd></div>
+    </dl>
+  </section>
+
+  <section>
+    <h2>Sources &amp; confidence</h2>
+    <ul>
+      <li>Family history, sales figures, launch dates, IPO: the Raspberry Pi family overview, cross-checked against contemporary reporting. High confidence in the well-documented milestones.</li>
+      <li>Pi 3 Model B specs (SoC, RAM, wireless, ports, power): Raspberry Pi's official product page. High confidence.</li>
+      <li>FCC ID 2ABCB-RPI32, January 29 2016 test date, prototype status, Part 15.247: the public FCC test report. High confidence.</li>
+      <li>Pi 3B+ launch details ($35, 1.4 GHz, dual-band Wi-Fi, PoE header, USB-2.0-limited Ethernet): contemporary launch reporting. High confidence.</li>
+      <li>Wireless chip identity on the 3B (BCM43438): public hardware records, not a primary source. Marked Likely.</li>
+      <li>Anything not listed here is unknown until the bench says otherwise. We'll say so, out loud, when that's the case.</li>
+    </ul>
+    <p class="note">The device photo is a freely licensed stock photo, credited in its caption — not a photo of our own unit, because we don't have one yet.</p>
+    <p class="note"><strong>Legal note.</strong> BareBoard is an educational project. Everything on this page is our own writing based on public documents — our summaries, our analysis. We don't publish, host, or distribute firmware, keys, passwords, or credentials. Product names and trademarks belong to their respective owners and appear here only to identify the hardware. If you believe anything here infringes your rights, contact us and we'll address it promptly.</p>
+  </section>
+
+  <footer>
+    <p>BareBoard &mdash; a free educational resource. Device #062 of the Hot 100.</p>
+    <nav>
+      <a href="/autopsy/">All autopsies</a>
+      <a href="/">Home</a>
+    </nav>
+  </footer>
+</main>
+</body>
+</html>
