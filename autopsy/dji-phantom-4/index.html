@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Autopsy 085: DJI Phantom 4 &mdash; BareBoard</title>
+<meta name="description" content="A public-records autopsy of the DJI Phantom 4 (2016) — the first consumer drone with obstacle avoidance. FCC ID 2AHAY-WM3301601.">
+<meta name="theme-color" content="#fbfbfc">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%231d1d1f'/%3E%3Ctext x='32' y='45' font-family='system-ui,-apple-system,sans-serif' font-size='36' font-weight='700' fill='white' text-anchor='middle'%3EB%3C/text%3E%3C/svg%3E">
+<link rel="stylesheet" href="/style.css">
+</head>
+<body>
+<header class="site-nav">
+  <div class="nav-inner">
+    <a class="brand" href="/">BareBoard</a>
+    <nav>
+      <a href="/about.html">About</a>
+      <a href="/autopsy/">Autopsy</a>
+      <a href="/hot-100.html">Hot 100</a>
+      <a href="/most-wanted.html">Most Wanted</a>
+      <a href="/support.html">Support</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <p class="kicker">The Autopsy Report &middot; Device #085</p>
+  <h1>DJI Phantom 4</h1>
+  <p class="lede">The Phantom 4 is the drone that taught consumer aircraft to see: announced in March 2016, it was the first mass-market drone with forward obstacle avoidance, paired with subject tracking and tap-to-fly autonomy. The Mavic Pro stole its spotlight six months later, but the Phantom 4 is the ancestor of every drone that now refuses to fly into a wall.</p>
+
+  <section>
+    <h2>What is this thing?</h2>
+<p>The DJI Phantom 4 is a quadcopter drone, model <strong>WM330A</strong>, built around a 12-megapixel 1/2.3-inch camera shooting 4K/30 on a 3-axis gimbal. <span class="src"><a href="https://www.nofilmschool.com/2016/02/dji-phantom-4-4k-drone-price-cost-release-date">No Film School</a></span> Its headline feature was <strong>obstacle avoidance</strong>: a pair of forward-facing vision sensors that let the drone see and stop before hitting things — a first for a consumer drone. <span class="src"><a href="https://petapixel.com/2016/03/01/the-dji-phantom-4-is-a-camera-drone-that-can-fly-itself/">PetaPixel</a></span></p>
+  </section>
+  <section>
+    <h2>Whose box is this?</h2>
+<p>This one isn't on our bench &mdash; yet. Nothing here comes from a BareBoard teardown: no disassembly, no boot logs, no bench measurements, no firmware in our hands. Everything below is built from public records &mdash; the government's FCC filing, the manufacturer's own documents, and contemporary press &mdash; read carefully and cited line by line. That's the deal with these reports: when a fact can't be verified from a public record, we say so, out loud.</p>
+    <p>The moment this hardware crosses our bench, this report gets a second act: our own photos, our own measurements, and anything the public record got wrong gets corrected.</p>
+  </section>
+  <section>
+    <h2>A short history</h2>
+<p>DJI announced the Phantom 4 on <strong>March 1, 2016</strong>, priced at $1,399. <span class="src"><a href="https://www.nofilmschool.com/2016/02/dji-phantom-4-4k-drone-price-cost-release-date">No Film School</a></span> Alongside obstacle sensing it introduced <strong>ActiveTrack</strong> (follow a moving subject automatically) and <strong>TapFly</strong> (tap a point on the screen and the drone flies there, dodging obstacles on the way) — the first time a consumer drone could meaningfully fly itself. <span class="src"><a href="https://petapixel.com/2016/03/01/the-dji-phantom-4-is-a-camera-drone-that-can-fly-itself/">PetaPixel</a></span></p>
+    <p>A note for researchers: the Phantom 4 is <strong>not</strong> the Phantom 4 Pro (a later, upgraded model) or the Phantom 4 Pro V2.0. The filings and the hardware differ — don't merge them.</p>
+  </section>
+  <section>
+    <h2>The outside</h2>
+<figure>
+      <img src="img/device.jpg" alt="DJI Phantom 4 drone">
+      <figcaption>DJI Phantom 4. <strong>Image placeholder:</strong> a verified free product photo is on our Most Wanted list — no exact free photo exists yet. When the unit reaches our bench, this becomes a real BareBoard photograph.</figcaption>
+    </figure>
+    <p>The Phantom 4 keeps the classic Phantom silhouette — a white, bulbous body with fixed landing gear — but the giveaway is the nose: two forward vision sensors flanking the gimbal camera, the eyes that made it famous. The user manual documents the airframe, battery, and controller layout in full. <span class="src"><a href="https://www.manualslib.com/manual/3153739/Dji-Phantom-4.html">ManualsLib — Phantom 4 manual</a></span></p>
+  </section>
+  <section>
+    <h2>Reading the plastic</h2>
+<p>Mold marks, date wheels, material codes &mdash; the shell's birth certificate. This is bench-only evidence: without the physical unit in our hands, there's nothing honest to read here. What the enclosure looks like is described above from public photos; what's <em>molded into it</em> awaits the bench.</p>
+  </section>
+  <section>
+    <h2>The board</h2>
+<p>No internal-photograph exhibit for the WM330A has been verified in open research, so this section stays honest and short: the board layout is <strong>unknown</strong>. What the public record does tell us is the sensing architecture — forward stereo vision plus downward positioning sensors, documented in the manual and contemporary press — and a 5,350 mAh battery delivering a claimed 28 minutes of flight. <span class="src"><a href="https://www.manualslib.com/manual/3153739/Dji-Phantom-4.html">ManualsLib — Phantom 4 manual</a></span></p>
+  </section>
+  <section>
+    <h2>Under the microscope: the chips</h2>
+<p><strong>Unknown.</strong> Without a verified board photograph or bill of materials for this exact model, naming chips would be fabrication. The vision-processing and flight-control silicon awaits a bench unit.</p>
+  </section>
+  <section>
+    <h2>The government's file on this box</h2>
+<p>The FCC equipment authorization is <strong>FCC ID 2AHAY-WM3301601</strong>, model <strong>WM330A</strong>, grantee <strong>SZ DJI BaiWang Technology Co., Ltd.</strong> <span class="src"><a href="https://fccid.io/2AHAY-WM3301601">fccid.io filing</a></span> The filing's grant is recorded as February 22, 2016. Don't confuse this filing with the Phantom 4 Pro or Pro V2.0 — different models, different authorizations.</p>
+  </section>
+  <section>
+    <h2>Listening in</h2>
+<p>We have no boot log for this device &mdash; no unit on the bench means nothing to listen to. But the posture is worth stating up front, because it governs everything BareBoard ever does with a live device.</p>
+    <p><strong>We listen, we don't knock.</strong> A serial console is a place to watch a device narrate its own startup, not a place to log in, change things, or break past anything the manufacturer locked. On our bench we attach read-only: power and ground, one receive wire, and silence on the transmit line. We never use JTAG or SWD debug headers to take control, never extract or modify firmware, never hunt for credentials, and never publish anything that would let someone else bypass a lock or defeat authentication.</p>
+    <p>When this device arrives, the first question will be: where does it talk, and does it talk to us unprompted? Until then, that question stays open.</p>
+  </section>
+  <section>
+    <h2>What we found</h2>
+<ul>
+      <li>The Phantom 4 (model WM330A) was announced March 1, 2016 at $1,399 — the first consumer drone with forward obstacle avoidance.</li>
+      <li>ActiveTrack and TapFly made it the first consumer drone that could meaningfully fly itself.</li>
+      <li>Its internal hardware is undocumented in public records; keep it separate from the Phantom 4 Pro filings.</li>
+    </ul>
+  </section>
+  <section>
+    <h2>What we didn't do</h2>
+    <ul>
+      <li>We never opened a unit, attached to a debug port, or powered one up for this report.</li>
+      <li>We never extracted, modified, or shared any firmware or software.</li>
+      <li>We never published or used any credentials, keys, or bypass techniques.</li>
+      <li>No boot logs, no bench measurements, and no photos of our own — because there is no unit of ours to photograph. The device photo above is credited in its caption.</li>
+    </ul>
+  </section>
+  <section>
+    <h2>By the numbers</h2>
+    <ul>
+      <li><strong>Launch:</strong> March 1, 2016</li>
+      <li><strong>Model:</strong> WM330A</li>
+      <li><strong>Camera:</strong> 12 MP 1/2.3″, 4K/30, 3-axis gimbal</li>
+      <li><strong>Flight time:</strong> 28 minutes (advertised), 5,350 mAh battery</li>
+      <li><strong>Price at launch:</strong> $1,399</li>
+      <li><strong>FCC ID:</strong> 2AHAY-WM3301601</li>
+      <li><strong>Bench status:</strong> Not yet on our bench</li>
+    </ul>
+  </section>
+  <section>
+    <h2>Words to know</h2>
+    <dl class="glossary">
+      <div><dt>Obstacle avoidance</dt><dd>Sensors that detect objects in the flight path and stop or reroute the drone automatically.</dd></div>
+      <div><dt>ActiveTrack</dt><dd>DJI's subject-tracking mode: the drone follows a moving person or object on its own.</dd></div>
+      <div><dt>Gimbal</dt><dd>The motorized 3-axis mount that keeps the camera steady.</dd></div>
+    </dl>
+  </section>
+  <section>
+    <h2>Sources & confidence</h2>
+    <ul>
+      <li>DJI Phantom 4 announced ($1,399) — No Film School, Feb 2016 <span class="src"><a href="https://www.nofilmschool.com/2016/02/dji-phantom-4-4k-drone-price-cost-release-date">link</a></span> — <span class='badge confirmed'>Confirmed</span></li>
+      <li>DJI announces Phantom 4 quadcopter with Active... — GlobeNewswire/DJI press release <span class="src"><a href="https://pnr-files.pro1.gus.wdc.dianum.io/globenewswire/articles/1308993/en/dji-announces-phantom-4-quadcopter-with-active.pdf">link</a></span> — <span class='badge confirmed'>Confirmed</span></li>
+      <li>The DJI Phantom 4 is a camera drone that can fly itself — PetaPixel, Mar 2016 <span class="src"><a href="https://petapixel.com/2016/03/01/the-dji-phantom-4-is-a-camera-drone-that-can-fly-itself/">link</a></span> — <span class='badge confirmed'>Confirmed</span></li>
+      <li>Phantom 4 user manual — ManualsLib <span class="src"><a href="https://www.manualslib.com/manual/3153739/Dji-Phantom-4.html">link</a></span> — <span class='badge confirmed'>Confirmed</span></li>
+      <li>FCC filing 2AHAY-WM3301601 (grantee: SZ DJI BaiWang Technology Co., Ltd.; grant recorded 2016-02-22) — fccid.io <span class="src"><a href="https://fccid.io/2AHAY-WM3301601">link</a></span> — <span class='badge likely'>Likely</span></li>
+      <li>Internal hardware (board layout, chip list) — no verified public exhibit found — <span class='badge unknown'>Unknown</span></li>
+    </ul>
+<p class="note"><strong>Legal note.</strong> BareBoard is an educational project. Everything on this page is derived from public records &mdash; our own bench work begins only when hardware arrives. We don't publish, host, or distribute firmware, keys, passwords, or credentials, and nothing here bypasses a lock, defeats authentication, or extracts software from a device. Product names and trademarks belong to their respective owners and appear here only to identify the hardware. If you believe anything here infringes your rights, contact us and we'll address it promptly.</p>
+  </section>
+
+  <footer>
+    <p>BareBoard &mdash; a free educational resource. Device #085 of the Hot 100.</p>
+    <nav>
+      <a href="/autopsy/">All autopsies</a>
+      <a href="/">Home</a>
+    </nav>
+  </footer>
+</main>
+</body>
+</html>
