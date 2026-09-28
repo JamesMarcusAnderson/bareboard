@@ -12,10 +12,10 @@
       name: "Networking Gear",
       devices: [
         {
-          name: "XB3",
+          name: "23",
           url: "/autopsy/xb3-tg1682g/",
           status: "Published",
-          title: "XB3",
+          title: "23",
           blurb: "Our first full autopsy: the gateway we tore down to show what this platform does — verified findings only, uncertainty dated and marked.",
           facts: [
             "Intel Puma 6 \u201cCat Mountain D0\u201d \u2014 J3 UART, read-only capture",
