@@ -12,10 +12,10 @@
       name: "Networking Gear",
       devices: [
         {
-          name: "Arris TG1682G — XB3 Gateway",
+          name: "XB3",
           url: "/autopsy/xb3-tg1682g/",
           status: "Published",
-          title: "Arris TG1682G · Xfinity XB3 Gateway",
+          title: "XB3",
           blurb: "Our first full autopsy: the gateway we tore down to show what this platform does — verified findings only, uncertainty dated and marked.",
           facts: [
             "Intel Puma 6 \u201cCat Mountain D0\u201d \u2014 J3 UART, read-only capture",
