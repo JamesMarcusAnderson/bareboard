@@ -71,6 +71,82 @@ a:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; border-
   letter-spacing: -0.005em;
 }
 .site-nav nav a:hover { color: var(--text); text-decoration: none; }
+/* ---------- column-view nav (Finder "as Columns" transposed to rows) ---------- */
+.site-nav nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.site-nav nav > ul {
+  display: flex;
+  gap: 1.4rem;
+  flex-wrap: wrap;
+}
+.site-nav nav > ul > li {
+  position: static;
+}
+.site-nav .col-panel {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  background: rgba(251, 251, 252, 0.97);
+  -webkit-backdrop-filter: blur(20px) saturate(180%);
+  backdrop-filter: blur(20px) saturate(180%);
+  border-bottom: 1px solid var(--line);
+  z-index: 100;
+}
+.site-nav .has-children:hover > .col-panel,
+.site-nav .has-children:focus-within > .col-panel {
+  display: block;
+}
+.site-nav .col-row {
+  display: flex;
+  gap: 1.6rem;
+  flex-wrap: wrap;
+  max-width: 46rem;
+  margin: 0 auto;
+  padding: 0.9rem 1.5rem;
+  list-style: none;
+}
+.site-nav .col-row + .col-row {
+  border-top: 1px solid var(--line);
+  padding-top: 0.9rem;
+}
+.site-nav .col-row {
+  position: relative;
+}
+.site-nav .col-row li {
+  position: static;
+}
+.site-nav .col-row a {
+  font-size: 0.92rem;
+  white-space: nowrap;
+}
+.site-nav .col-sub {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  gap: 1.6rem;
+  flex-wrap: wrap;
+  list-style: none;
+  margin: 0;
+  padding: 0.9rem 0;
+  border-top: 1px solid var(--line);
+  background: rgba(251, 251, 252, 0.97);
+  -webkit-backdrop-filter: blur(20px) saturate(180%);
+  backdrop-filter: blur(20px) saturate(180%);
+  border-bottom: 1px solid var(--line);
+  z-index: 101;
+}
+.site-nav .col-row .has-children:hover > .col-sub,
+.site-nav .col-row .has-children:focus-within > .col-sub {
+  display: flex;
+}
+
 /* ---------- layout ---------- */
 
 main {
