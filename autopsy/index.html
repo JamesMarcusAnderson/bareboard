@@ -2,11 +2,11 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
-<meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self' data:; style-src 'self'; script-src 'self'; object-src 'none'; frame-src 'none'; base-uri 'self'; form-action 'none'">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self' data:; font-src 'self'; object-src 'none'; frame-ancestors 'none'; form-action 'none'; base-uri 'self'">
 <meta name="referrer" content="no-referrer">
 <meta name="robots" content="noai, noimageai">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Autopsy Reports &mdash; BareBoard</title>
+<title>The Autopsy Report &mdash; BareBoard</title>
 <meta name="description" content="The Autopsy Report: hardware analysis from BareBoard. Verified findings only.">
 <meta name="theme-color" content="#fbfbfc">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%231d1d1f'/%3E%3Ctext x='32' y='45' font-family='system-ui,-apple-system,sans-serif' font-size='36' font-weight='700' fill='white' text-anchor='middle'%3EB%3C/text%3E%3C/svg%3E">
@@ -17,114 +17,36 @@
   <div class="nav-inner">
     <a class="brand" href="/">BareBoard</a>
     <nav>
-      <ul>
-        <li class="has-dropdown">
-          <a href="/about.html">About</a>
-          <div class="dropdown-panel"><div class="dropdown-inner"><ul>
-            <li><a href="/about.html#how-we-work">How we work</a></li>
-            <li><a href="/about.html#what-this-is-not">What this is not</a></li>
-          </ul></div></div>
-        </li>
-        <li class="has-dropdown">
-          <a href="/autopsy/">Autopsy</a>
-          <div class="dropdown-panel"><div class="dropdown-inner"><ul>
-            <li><a href="/autopsy/">All reports</a></li>
-          </ul></div></div>
-        </li>
-        <li class="has-dropdown">
-          <a href="/hot-100.html">Hot 100</a>
-          <div class="dropdown-panel"><div class="dropdown-inner"><ul>
-            <li class="has-flyout"><a href="/hot-100.html#ranking">The ranking</a>
-              <ul class="flyout">
-                <li><a href="/hot-100.html#top-10">Top 10</a></li>
-                <li><a href="/hot-100.html#ranking">Full ranking</a></li>
-              </ul>
-            </li>
-            <li><a href="/hot-100.html#methodology">Methodology</a></li>
-          </ul></div></div>
-        </li>
-        <li class="has-dropdown">
-          <a href="/most-wanted.html">Most Wanted</a>
-          <div class="dropdown-panel"><div class="dropdown-inner"><ul>
-            <li><a href="/most-wanted.html#board">The board</a></li>
-          </ul></div></div>
-        </li>
-        <li class="has-dropdown">
-          <a href="/support.html">Support</a>
-          <div class="dropdown-panel"><div class="dropdown-inner"><ul>
-            <li><a href="/support.html#note-from-bench">A note from the bench</a></li>
-            <li><a href="/support.html#chip-in">Chip in</a></li>
-            <li><a href="/support.html#where-it-goes">Where it goes</a></li>
-          </ul></div></div>
-        </li>
-      </ul>
+      <a href="/about.html">About</a>
+      <a href="/autopsy/">Autopsy</a>
+      <a href="/hot-100.html">Hot 100</a>
+      <a href="/most-wanted.html">Most Wanted</a>
+      <a href="/support.html">Support</a>
     </nav>
   </div>
 </header>
 
 <main>
-  <h1>Autopsy Reports</h1>
+  <h1>The Autopsy Report</h1>
   <p class="lede">We can&rsquo;t open their hardware, so we open our findings.</p>
   <p>Hardware analysis, published free &mdash; verified findings only, uncertainty dated and marked. Reports land here as they come off the bench.</p>
 
-  <section>
-    <p class="lede">Nothing on the bench yet. The <a href="/hot-100.html">Hot 100</a> shows what&rsquo;s being tracked.</p>
-  </section>
+
 
 
   <footer>
     <p>BareBoard &mdash; a free educational resource.</p>
     <nav>
-      <ul>
-        <li class="has-dropdown">
-          <a href="/about.html">About</a>
-          <div class="dropdown-panel"><div class="dropdown-inner"><ul>
-            <li><a href="/about.html#how-we-work">How we work</a></li>
-            <li><a href="/about.html#what-this-is-not">What this is not</a></li>
-          </ul></div></div>
-        </li>
-        <li class="has-dropdown">
-          <a href="/autopsy/">Autopsy</a>
-          <div class="dropdown-panel"><div class="dropdown-inner"><ul>
-            <li><a href="/autopsy/">All reports</a></li>
-          </ul></div></div>
-        </li>
-        <li class="has-dropdown">
-          <a href="/hot-100.html">Hot 100</a>
-          <div class="dropdown-panel"><div class="dropdown-inner"><ul>
-            <li class="has-flyout"><a href="/hot-100.html#ranking">The ranking</a>
-              <ul class="flyout">
-                <li><a href="/hot-100.html#top-10">Top 10</a></li>
-                <li><a href="/hot-100.html#ranking">Full ranking</a></li>
-              </ul>
-            </li>
-            <li><a href="/hot-100.html#methodology">Methodology</a></li>
-          </ul></div></div>
-        </li>
-        <li class="has-dropdown">
-          <a href="/most-wanted.html">Most Wanted</a>
-          <div class="dropdown-panel"><div class="dropdown-inner"><ul>
-            <li><a href="/most-wanted.html#board">The board</a></li>
-          </ul></div></div>
-        </li>
-        <li class="has-dropdown">
-          <a href="/support.html">Support</a>
-          <div class="dropdown-panel"><div class="dropdown-inner"><ul>
-            <li><a href="/support.html#note-from-bench">A note from the bench</a></li>
-            <li><a href="/support.html#chip-in">Chip in</a></li>
-            <li><a href="/support.html#where-it-goes">Where it goes</a></li>
-          </ul></div></div>
-        </li>
-      </ul>
+      <a href="/">Home</a>
     </nav>
 
     <div class="legal-framework">
       <p><strong>BareBoard Legal Framework &amp; Declarations</strong></p>
       <ul>
-      <li><strong>No AI training:</strong> All text, findings, and original photography on this site are copyrighted. Automated scraping for AI model training is prohibited. crawlers that ignore robots.txt are trespassing.</li>
         <li><strong>Educational nature:</strong> BareBoard operates exclusively as a non-commercial, open educational resource. All material is compiled for academic evaluation, hardware preservation, and technical literacy under 17 U.S.C. &sect; 107 (fair use).</li>
         <li><strong>Zero-leak / no-binary clause:</strong> This site does not host, distribute, or mirror proprietary firmware binaries, encrypted operating system keys, or weaponizable exploits. Documentation covers only the public, physical realities of circuit hardware.</li>
         <li><strong>Property verification:</strong> Every hardware autopsy is performed on personally owned, legally acquired equipment. No rented or third-party infrastructure is used.</li>
+        <li>All text, findings, and original photography on this site are copyrighted. Automated scraping for AI model training is prohibited.</li>
         <li><strong>Public source sourcing:</strong> Comparative and regulatory data is aggregated from official public filings, including the U.S. Federal Communications Commission equipment authorization database.</li>
       </ul>
       <p class="legal-note"><em>BareBoard &mdash; open hardware allies, documented in alignment with the Open Source Hardware Association framework. Text and original photography published under open terms; nothing here is for sale.</em></p>
@@ -133,3 +55,4 @@
 </main>
 </body>
 </html>
+
