@@ -1,0 +1,153 @@
+/* BareBoard Devices — Finder-style column browser. No frameworks, no build step. */
+
+.col-browser {
+  margin-top: 2.5rem;
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  background: var(--surface);
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+.col-strip {
+  display: flex;
+  align-items: stretch;
+  min-height: 22rem;
+}
+
+.browser-col {
+  /* James's rule: smallest width that fits the longest word, no wrapping. */
+  width: max-content;
+  min-width: 11rem;
+  max-width: 24rem;
+  flex: 0 0 auto;
+  border-right: 1px solid var(--line);
+  display: flex;
+  flex-direction: column;
+}
+
+.browser-col:last-child { border-right: 0; }
+
+.col-head {
+  padding: 0.55rem 0.9rem;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--tertiary);
+  border-bottom: 1px solid var(--line);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.col-rows {
+  list-style: none;
+  padding: 0.35rem;
+  overflow-y: auto;
+}
+
+.col-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.25rem;
+  width: 100%;
+  padding: 0.42rem 0.6rem;
+  border: 0;
+  border-radius: 7px;
+  background: transparent;
+  color: var(--text);
+  font: inherit;
+  font-size: 0.92rem;
+  text-align: left;
+  white-space: nowrap;
+  cursor: pointer;
+}
+
+.col-row:hover { background: rgba(0, 102, 204, 0.07); }
+
+.col-row[aria-selected="true"] {
+  background: rgba(0, 102, 204, 0.13);
+  color: var(--accent-ink);
+  font-weight: 600;
+}
+
+.col-row .chev {
+  color: var(--tertiary);
+  font-size: 1.05rem;
+  line-height: 1;
+}
+
+.col-row[aria-selected="true"] .chev { color: var(--accent-ink); }
+
+.col-empty {
+  padding: 0.42rem 0.6rem;
+  font-size: 0.9rem;
+  color: var(--tertiary);
+  white-space: nowrap;
+  font-style: italic;
+}
+
+/* Preview column — our take on Finder's preview pane. */
+.col-preview { padding: 1.1rem 1.2rem; }
+
+.preview-status {
+  display: inline-block;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: #1a7f37;
+  background: rgba(26, 127, 55, 0.1);
+  border: 1px solid rgba(26, 127, 55, 0.25);
+  border-radius: 999px;
+  padding: 0.18rem 0.7rem;
+  margin-bottom: 0.8rem;
+}
+
+.col-preview h2 {
+  font-size: 1.2rem;
+  letter-spacing: -0.015em;
+  margin-bottom: 0.5rem;
+  white-space: normal;
+}
+
+.col-preview p {
+  font-size: 0.92rem;
+  color: var(--secondary);
+  margin-bottom: 0.9rem;
+  white-space: normal;
+}
+
+.col-preview .facts {
+  list-style: none;
+  margin-bottom: 1.1rem;
+}
+
+.col-preview .facts li {
+  font-size: 0.88rem;
+  color: var(--text);
+  padding: 0.28rem 0;
+  border-top: 1px solid var(--line);
+  white-space: normal;
+}
+
+.col-preview .facts li:last-child { border-bottom: 1px solid var(--line); }
+
+.preview-link {
+  display: inline-block;
+  font-size: 0.95rem;
+  font-weight: 600;
+}
+
+.bench-note {
+  margin-top: 1.75rem;
+  font-size: 0.9rem;
+  color: var(--secondary);
+}
+
+@media (max-width: 560px) {
+  .col-strip { min-height: 18rem; }
+  .browser-col { min-width: 9.5rem; }
+}
