@@ -134,7 +134,7 @@ a:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; border-
 }
 
 
-/* ---------- devices folder: vertical category list, smart flyout ---------- */
+/* ---------- devices folder: mega reveal, everything visible at once ---------- */
 .site-nav .nav-label {
   color: var(--secondary);
   font-size: 0.92rem;
@@ -142,59 +142,26 @@ a:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; border-
   cursor: default;
 }
 .site-nav .nav-label:hover { color: var(--text); }
-.site-nav .cat-wrap {
+.site-nav .mega-wrap {
   max-width: 46rem;
   margin: 0 auto;
-  padding: 0.9rem 1.5rem;
+  padding: 1rem 1.5rem 1.2rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(9rem, 1fr));
+  gap: 1rem 1.5rem;
 }
-.site-nav .cat-list {
-  list-style: none;
-  margin: 0;
-  padding: 0;
+.site-nav .mega-col {
   display: flex;
   flex-direction: column;
-  max-width: 16rem;
-  position: relative;
+  gap: 0.25rem;
 }
-.site-nav .cat-item {
-  padding: 0.45rem 0;
-  cursor: default;
-}
-.site-nav .cat-name {
+.site-nav .mega-cat {
   font-size: 0.92rem;
-  color: var(--secondary);
+  color: var(--text);
+  font-weight: 600;
   white-space: nowrap;
 }
-.site-nav .cat-item:hover .cat-name,
-.site-nav .cat-item:focus-within .cat-name { color: var(--text); }
-.site-nav .cat-sub {
-  display: none;
-  position: absolute;
-  left: 100%;
-  top: 0;
-  min-width: 12rem;
-  list-style: none;
-  margin: 0 0 0 0.6rem;
-  padding: 0.6rem 1rem;
-  background: rgba(251, 251, 252, 0.98);
-  -webkit-backdrop-filter: blur(20px) saturate(180%);
-  backdrop-filter: blur(20px) saturate(180%);
-  border: 1px solid var(--line);
-  border-radius: 0.6rem;
-  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
-  z-index: 102;
-}
-.site-nav .cat-item:hover > .cat-sub,
-.site-nav .cat-item:focus-within > .cat-sub { display: block; }
-.site-nav .cat-sub::before {
-  content: "";
-  position: absolute;
-  left: -0.7rem;
-  top: 0;
-  bottom: 0;
-  width: 0.7rem;
-}
-.site-nav .cat-sub .soon {
+.site-nav .mega-col .soon {
   font-size: 0.85rem;
   color: var(--secondary);
   white-space: nowrap;
