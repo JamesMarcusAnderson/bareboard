@@ -4,6 +4,7 @@
 <meta charset="utf-8">
 <meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self' data:; style-src 'self'; script-src 'self'; object-src 'none'; frame-src 'none'; base-uri 'self'; form-action 'none'">
 <meta name="referrer" content="no-referrer">
+<meta name="robots" content="noai, noimageai">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>The BareBoard Hot 100&trade; &mdash; Free Hardware Education</title>
 <meta name="description" content="The BareBoard Hot 100: the 100 most-used consumer electronic devices overall, ranked across a 1,000-device universe. Preliminary ranking, methodology v0.1.">
@@ -24,17 +25,48 @@
   <div class="nav-inner">
     <a class="brand" href="/">BareBoard</a>
     <nav>
-      <a href="/about.html">About</a>
-      <a href="/autopsy/">Autopsy</a>
-      <a href="/hot-100.html">Hot 100</a>
-      <a href="/most-wanted.html">Most Wanted</a>
-      <a href="/support.html">Support</a>
+      <ul>
+        <li class="has-dropdown">
+          <a href="/about.html">About</a>
+          <div class="dropdown-panel"><div class="dropdown-inner"><ul>
+            <li><a href="/about.html#how-we-work">How we work</a></li>
+            <li><a href="/about.html#what-this-is-not">What this is not</a></li>
+          </ul></div></div>
+        </li>
+        <li class="has-dropdown">
+          <a href="/autopsy/">Autopsy</a>
+          <div class="dropdown-panel"><div class="dropdown-inner"><ul>
+            <li><a href="/autopsy/">All reports</a></li>
+          </ul></div></div>
+        </li>
+        <li class="has-dropdown">
+          <a href="/hot-100.html">Hot 100</a>
+          <div class="dropdown-panel"><div class="dropdown-inner"><ul>
+            <li><a href="/hot-100.html#ranking">The ranking</a></li>
+            <li><a href="/hot-100.html#methodology">Methodology</a></li>
+          </ul></div></div>
+        </li>
+        <li class="has-dropdown">
+          <a href="/most-wanted.html">Most Wanted</a>
+          <div class="dropdown-panel"><div class="dropdown-inner"><ul>
+            <li><a href="/most-wanted.html#board">The board</a></li>
+          </ul></div></div>
+        </li>
+        <li class="has-dropdown">
+          <a href="/support.html">Support</a>
+          <div class="dropdown-panel"><div class="dropdown-inner"><ul>
+            <li><a href="/support.html#note-from-bench">A note from the bench</a></li>
+            <li><a href="/support.html#chip-in">Chip in</a></li>
+            <li><a href="/support.html#where-it-goes">Where it goes</a></li>
+          </ul></div></div>
+        </li>
+      </ul>
     </nav>
   </div>
 </header>
 
 <main>
-<span class="badge-prelim">Preliminary &mdash; methodology v0.1</span>
+<span class="badge-prelim" id="methodology">Preliminary &mdash; methodology v0.1</span>
 <h1>The BareBoard Hot 100&trade;</h1>
 <p class="lede">The 100 most-used consumer electronic devices overall &mdash; ranked #1 through #100
 across a 1,000-device universe (top 100 in each of ten categories). Recomputed whenever the
@@ -51,7 +83,7 @@ cameras and wearables are near-total black holes. The industry&rsquo;s most-inst
 its least-counted.</p>
 </div>
 
-<div class="table-wrap">
+<div class="table-wrap" id="ranking">
 <table class="hot100">
 <thead><tr><th>#</th><th>Device</th><th>Category</th><th>Units sold</th><th>Conf.</th></tr></thead>
 <tbody>
@@ -163,12 +195,48 @@ carries its source and confidence grade. Corrections welcome, verified correctio
   <footer>
     <p>BareBoard &mdash; a free educational resource. Text and findings published under open terms; nothing here is for sale.</p>
     <nav>
-      <a href="/">Home</a>
+      <ul>
+        <li class="has-dropdown">
+          <a href="/about.html">About</a>
+          <div class="dropdown-panel"><div class="dropdown-inner"><ul>
+            <li><a href="/about.html#how-we-work">How we work</a></li>
+            <li><a href="/about.html#what-this-is-not">What this is not</a></li>
+          </ul></div></div>
+        </li>
+        <li class="has-dropdown">
+          <a href="/autopsy/">Autopsy</a>
+          <div class="dropdown-panel"><div class="dropdown-inner"><ul>
+            <li><a href="/autopsy/">All reports</a></li>
+          </ul></div></div>
+        </li>
+        <li class="has-dropdown">
+          <a href="/hot-100.html">Hot 100</a>
+          <div class="dropdown-panel"><div class="dropdown-inner"><ul>
+            <li><a href="/hot-100.html#ranking">The ranking</a></li>
+            <li><a href="/hot-100.html#methodology">Methodology</a></li>
+          </ul></div></div>
+        </li>
+        <li class="has-dropdown">
+          <a href="/most-wanted.html">Most Wanted</a>
+          <div class="dropdown-panel"><div class="dropdown-inner"><ul>
+            <li><a href="/most-wanted.html#board">The board</a></li>
+          </ul></div></div>
+        </li>
+        <li class="has-dropdown">
+          <a href="/support.html">Support</a>
+          <div class="dropdown-panel"><div class="dropdown-inner"><ul>
+            <li><a href="/support.html#note-from-bench">A note from the bench</a></li>
+            <li><a href="/support.html#chip-in">Chip in</a></li>
+            <li><a href="/support.html#where-it-goes">Where it goes</a></li>
+          </ul></div></div>
+        </li>
+      </ul>
     </nav>
 
     <div class="legal-framework">
       <p><strong>BareBoard Legal Framework &amp; Declarations</strong></p>
       <ul>
+      <li><strong>No AI training:</strong> All text, findings, and original photography on this site are copyrighted. Automated scraping for AI model training is prohibited. crawlers that ignore robots.txt are trespassing.</li>
         <li><strong>Educational nature:</strong> BareBoard operates exclusively as a non-commercial, open educational resource. All material is compiled for academic evaluation, hardware preservation, and technical literacy under 17 U.S.C. &sect; 107 (fair use).</li>
         <li><strong>Zero-leak / no-binary clause:</strong> This site does not host, distribute, or mirror proprietary firmware binaries, encrypted operating system keys, or weaponizable exploits. Documentation covers only the public, physical realities of circuit hardware.</li>
         <li><strong>Property verification:</strong> Every hardware autopsy is performed on personally owned, legally acquired equipment. No rented or third-party infrastructure is used.</li>
