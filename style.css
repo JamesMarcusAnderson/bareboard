@@ -154,9 +154,9 @@ a:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; border-
   display: flex;
   flex-direction: column;
   max-width: 16rem;
+  position: relative;
 }
 .site-nav .cat-item {
-  position: relative;
   padding: 0.45rem 0;
   cursor: default;
 }
@@ -186,9 +186,13 @@ a:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; border-
 }
 .site-nav .cat-item:hover > .cat-sub,
 .site-nav .cat-item:focus-within > .cat-sub { display: block; }
-.site-nav .cat-sub.flip-up {
-  top: auto;
+.site-nav .cat-sub::before {
+  content: "";
+  position: absolute;
+  left: -0.7rem;
+  top: 0;
   bottom: 0;
+  width: 0.7rem;
 }
 .site-nav .cat-sub .soon {
   font-size: 0.85rem;
