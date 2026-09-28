@@ -4,6 +4,7 @@
 <meta charset="utf-8">
 <meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self' data:; style-src 'self'; script-src 'self'; object-src 'none'; frame-src 'none'; base-uri 'self'; form-action 'none'">
 <meta name="referrer" content="no-referrer">
+<meta name="robots" content="noai, noimageai">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Support — BareBoard</title>
 <meta name="description" content="BareBoard is free forever. Donations keep the bench running — devices, test gear, and hosting.">
@@ -16,11 +17,42 @@
   <div class="nav-inner">
     <a class="brand" href="/">BareBoard</a>
     <nav>
-      <a href="/about.html">About</a>
-      <a href="/autopsy/">Autopsy</a>
-      <a href="/hot-100.html">Hot 100</a>
-      <a href="/most-wanted.html">Most Wanted</a>
-      <a href="/support.html">Support</a>
+      <ul>
+        <li class="has-dropdown">
+          <a href="/about.html">About</a>
+          <div class="dropdown-panel"><div class="dropdown-inner"><ul>
+            <li><a href="/about.html#how-we-work">How we work</a></li>
+            <li><a href="/about.html#what-this-is-not">What this is not</a></li>
+          </ul></div></div>
+        </li>
+        <li class="has-dropdown">
+          <a href="/autopsy/">Autopsy</a>
+          <div class="dropdown-panel"><div class="dropdown-inner"><ul>
+            <li><a href="/autopsy/">All reports</a></li>
+          </ul></div></div>
+        </li>
+        <li class="has-dropdown">
+          <a href="/hot-100.html">Hot 100</a>
+          <div class="dropdown-panel"><div class="dropdown-inner"><ul>
+            <li><a href="/hot-100.html#ranking">The ranking</a></li>
+            <li><a href="/hot-100.html#methodology">Methodology</a></li>
+          </ul></div></div>
+        </li>
+        <li class="has-dropdown">
+          <a href="/most-wanted.html">Most Wanted</a>
+          <div class="dropdown-panel"><div class="dropdown-inner"><ul>
+            <li><a href="/most-wanted.html#board">The board</a></li>
+          </ul></div></div>
+        </li>
+        <li class="has-dropdown">
+          <a href="/support.html">Support</a>
+          <div class="dropdown-panel"><div class="dropdown-inner"><ul>
+            <li><a href="/support.html#note-from-bench">A note from the bench</a></li>
+            <li><a href="/support.html#chip-in">Chip in</a></li>
+            <li><a href="/support.html#where-it-goes">Where it goes</a></li>
+          </ul></div></div>
+        </li>
+      </ul>
     </nav>
   </div>
 </header>
@@ -30,19 +62,19 @@
   <p class="mission">Free for readers, funded by readers. No paywall, no ads, no selling data &mdash; this is the budget line that keeps it that way.</p>
 
   <section>
-    <h2>A note from the bench</h2>
+    <h2 id="note-from-bench">A note from the bench</h2>
     <p class="lede">We started BareBoard on a simple belief: education should be a human right &mdash; free and free to access. Everything here will always be free to read. No paywall, no premium tier, no exceptions.</p>
     <p class="lede">Free to read doesn&rsquo;t mean free to run. The bench needs devices to tear down, probes and adapters to measure them with, and a domain to live on. If this site ever taught you something, chip in and keep it running for the next person.</p>
   </section>
 
   <section>
-    <h2>Chip in</h2>
+    <h2 id="chip-in">Chip in</h2>
     <p class="lede">Everything here is free and stays free &mdash; that&rsquo;s the whole point. But free to read isn&rsquo;t free to run: the bench needs devices to open, probes to measure them with, and a domain to live on.</p>
     <p class="lede">If BareBoard ever taught you something, saved you a repair bill, or just fed your curiosity &mdash; you can feed the parts jar. Any amount, one-time or monthly, entirely your call. And if money&rsquo;s tight, sending the site to one curious person does just as much.</p>
   </section>
 
   <section>
-    <h2>Where it goes</h2>
+    <h2 id="where-it-goes">Where it goes</h2>
     <ul>
       <li><strong>Bench devices.</strong> Teardowns need hardware &mdash; the rarer the device, the more it costs to get one onto the bench.</li>
       <li><strong>Test equipment.</strong> Probes, adapters, and bench gear that make the findings possible.</li>
@@ -54,12 +86,48 @@
   <footer>
     <p>BareBoard &mdash; a free educational resource. Text and findings published under open terms; nothing here is for sale.</p>
     <nav>
-      <a href="/about.html">About</a>
+      <ul>
+        <li class="has-dropdown">
+          <a href="/about.html">About</a>
+          <div class="dropdown-panel"><div class="dropdown-inner"><ul>
+            <li><a href="/about.html#how-we-work">How we work</a></li>
+            <li><a href="/about.html#what-this-is-not">What this is not</a></li>
+          </ul></div></div>
+        </li>
+        <li class="has-dropdown">
+          <a href="/autopsy/">Autopsy</a>
+          <div class="dropdown-panel"><div class="dropdown-inner"><ul>
+            <li><a href="/autopsy/">All reports</a></li>
+          </ul></div></div>
+        </li>
+        <li class="has-dropdown">
+          <a href="/hot-100.html">Hot 100</a>
+          <div class="dropdown-panel"><div class="dropdown-inner"><ul>
+            <li><a href="/hot-100.html#ranking">The ranking</a></li>
+            <li><a href="/hot-100.html#methodology">Methodology</a></li>
+          </ul></div></div>
+        </li>
+        <li class="has-dropdown">
+          <a href="/most-wanted.html">Most Wanted</a>
+          <div class="dropdown-panel"><div class="dropdown-inner"><ul>
+            <li><a href="/most-wanted.html#board">The board</a></li>
+          </ul></div></div>
+        </li>
+        <li class="has-dropdown">
+          <a href="/support.html">Support</a>
+          <div class="dropdown-panel"><div class="dropdown-inner"><ul>
+            <li><a href="/support.html#note-from-bench">A note from the bench</a></li>
+            <li><a href="/support.html#chip-in">Chip in</a></li>
+            <li><a href="/support.html#where-it-goes">Where it goes</a></li>
+          </ul></div></div>
+        </li>
+      </ul>
     </nav>
 
     <div class="legal-framework">
       <p><strong>BareBoard Legal Framework &amp; Declarations</strong></p>
       <ul>
+      <li><strong>No AI training:</strong> All text, findings, and original photography on this site are copyrighted. Automated scraping for AI model training is prohibited. crawlers that ignore robots.txt are trespassing.</li>
         <li><strong>Educational nature:</strong> BareBoard operates exclusively as a non-commercial, open educational resource. All material is compiled for academic evaluation, hardware preservation, and technical literacy under 17 U.S.C. &sect; 107 (fair use).</li>
         <li><strong>Zero-leak / no-binary clause:</strong> This site does not host, distribute, or mirror proprietary firmware binaries, encrypted operating system keys, or weaponizable exploits. Documentation covers only the public, physical realities of circuit hardware.</li>
         <li><strong>Property verification:</strong> Every hardware autopsy is performed on personally owned, legally acquired equipment. No rented or third-party infrastructure is used.</li>
