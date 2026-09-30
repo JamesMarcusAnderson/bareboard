@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self' data:; style-src 'self' 'unsafe-inline'; script-src 'none'; object-src 'none'; frame-src 'none'; base-uri 'self'; form-action 'none'">
+<meta name="referrer" content="no-referrer">
+<meta name="robots" content="noai, noimageai">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>AI Crawler Defense — BareBoard</title>
+<meta name="description" content="How BareBoard keeps AI training crawlers off its work: a layered, honest, defensive setup built on robots.txt hardening, page-level opt-outs, strict CSP, and clean publishing hygiene.">
+<style>
+  :root { color-scheme: light; }
+  * { box-sizing: border-box; }
+  body { background: #ffffff; color: #1b1b1b; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; line-height: 1.7; margin: 0; padding: 0; }
+  main { max-width: 760px; margin: 0 auto; padding: 48px 24px 96px; }
+  .lede { color: #555; font-size: 1.1rem; }
+  h1 { font-size: 2.4rem; line-height: 1.15; letter-spacing: -0.02em; margin: 0.4em 0 0.15em; }
+  .subtitle { font-size: 1.25rem; font-weight: 600; color: #333; margin: 0 0 1em; }
+  h2 { font-size: 1.6rem; letter-spacing: -0.01em; margin: 2.2em 0 0.8em; }
+  p { margin: 0 0 1em; }
+  hr { border: 0; border-top: 1px solid #e6e6e6; margin: 2em 0; }
+  a { color: #0b57d0; }
+  code { font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; font-size: 0.88em; background: #f5f5f5; padding: 2px 6px; border-radius: 4px; }
+  pre { font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; font-size: 0.85em; background: #f7f7f8; border: 1px solid #e6e6e6; border-radius: 8px; padding: 16px 18px; overflow-x: auto; line-height: 1.6; }
+  ul { margin: 0 0 1em; padding-left: 1.4em; }
+  li { margin-bottom: 0.4em; }
+  .back { margin-bottom: 2em; }
+  .back a { text-decoration: none; }
+  footer { margin-top: 4em; padding-top: 2em; border-top: 1px solid #e6e6e6; color: #666; font-size: 0.9rem; }
+</style>
+</head>
+<body>
+<main>
+
+<p class="back"><a href="/about.html">&larr; About BareBoard</a></p>
+
+<h1>AI Crawler Defense</h1>
+<p class="subtitle">How BareBoard keeps training scrapers off its work</p>
+
+<p class="lede">BareBoard publishes original hardware research — teardowns, measurements, photography — for humans learning hardware. AI training crawlers are not our audience, and we do not consent to feeding them. This page documents the layered defense we run. It is all boundary-setting, no trickery: nothing here deceives, traps, or poisons anyone.</p>
+
+<hr>
+
+<h2>The problem</h2>
+
+<p>Our content is expensive to produce — bench time, hardware, photography, careful documentation — and trivially cheap to scrape. Training crawlers ingest it into models that then compete with the free resource they learned from. We want search engines, because humans find us through search. We do not want training ingestion. Those are different crawlers with different purposes, and we treat them differently.</p>
+
+<hr>
+
+<h2>Layer 1: robots.txt hardening</h2>
+
+<p>The perimeter. Our <code>robots.txt</code> names the known AI training user-agents one by one and denies them the whole site, while the wildcard rule leaves the door open for everyone else — including Google and Bing, which is how humans discover us.</p>
+
+<pre>User-agent: GPTBot
+Disallow: /
+
+User-agent: ChatGPT-User
+Disallow: /
+
+User-agent: ClaudeBot
+Disallow: /
+
+User-agent: anthropic-ai
+Disallow: /
+
+User-agent: CCBot
+Disallow: /
+
+User-agent: Google-Extended
+Disallow: /
+
+User-agent: PerplexityBot
+Disallow: /
+
+# ... ~25 training and scraping agents total ...
+
+User-agent: *
+Disallow:</pre>
+
+<p>The ordering is deliberate: specific denials for training agents first, then an empty <code>Disallow:</code> on the wildcard, which means "everything not named above is allowed." Search crawlers match the wildcard and are welcomed in. Training crawlers match their own named block and are shown the door.</p>
+
+<p>Note what this does <em>not</em> do: <code>robots.txt</code> is a voluntary protocol. Respectful crawlers obey it; bad actors ignore it. This layer stops the compliant majority — which includes every major lab's documented training crawler — and draws a clear line for the rest: a crawler that ignores <code>robots.txt</code> is trespassing, and our footer says so in plain language.</p>
+
+<hr>
+
+<h2>Layer 2: page-level opt-outs</h2>
+
+<p>Every page carries <code>&lt;meta name="robots" content="noai, noimageai"&gt;</code> in its head. The <code>noai</code> and <code>noimageai</code> directives tell participating crawlers not to use the page's text or images for AI training. It is belt-and-suspenders alongside <code>robots.txt</code>: one operates at crawl time, the other at the page level.</p>
+
+<hr>
+
+<h2>Layer 3: strict Content Security Policy</h2>
+
+<p>Every page ships a tight CSP:</p>
+
+<pre>default-src 'self'; img-src 'self' data:;
+style-src 'self'; script-src 'self';
+object-src 'none'; frame-src 'none';
+base-uri 'self'; form-action 'none'</pre>
+
+<p>No third-party scripts, no frames, no objects, no form submissions. This keeps the page exactly what we published — nothing injected, nothing exfiltrated — which shrinks the surface that scraping and injection tooling can work with.</p>
+
+<hr>
+
+<h2>Layer 4: the legal notice</h2>
+
+<p>Every page's footer carries the declaration: all text, findings, and original photography are copyrighted; automated scraping for AI model training is prohibited; crawlers that ignore <code>robots.txt</code> are trespassing. The site operates as a non-commercial educational resource under 17 U.S.C. &sect; 107 (fair use). This is the layer that turns a technical boundary into a stated one.</p>
+
+<hr>
+
+<h2>Layer 5: clean publishing hygiene</h2>
+
+<p>Before any photo goes public, <code>tools/purge_metadata.sh</code> strips EXIF data, GPS coordinates, macOS extended attributes, and resource forks from the image files. Scrapers and downloaders get pixels, not a map of where our bench is or what camera shot it. Privacy for us, nothing lost for the reader.</p>
+
+<hr>
+
+<h2>Honest limitations</h2>
+
+<p>No <code>robots.txt</code> setup stops a determined bad actor — it is a social contract, not a firewall. What this stack does is three things: it stops every compliant crawler cold, it makes our non-consent unambiguous and machine-readable, and it keeps our own house clean (CSP, metadata) so there is less to take. Defense in depth, not a guarantee. We document it here so other small publishers can copy the whole thing in an afternoon.</p>
+
+<hr>
+
+<h2>White-hat, always</h2>
+
+<p>This is defensive publishing. We set boundaries around our own work; we do not attack, deceive, or sabotage anyone else's systems. No honeypots, no poisoned content, no prompt-injection games — just clear, honest, layered "no." That is the whole philosophy, and it is the same one behind everything else on this site.</p>
+
+<footer>
+  <p>BareBoard &mdash; a free educational resource. Text and findings published under open terms; nothing here is for sale.</p>
+  <p><a href="/">Home</a> &middot; <a href="/about.html">About</a></p>
+</footer>
+
+</main>
+</body>
+</html>
