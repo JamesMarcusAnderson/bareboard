@@ -88,6 +88,8 @@ Disallow:</pre>
 
 <p>Every page carries <code>&lt;meta name="robots" content="noai, noimageai"&gt;</code> in its head. The <code>noai</code> and <code>noimageai</code> directives tell participating crawlers not to use the page's text or images for AI training. It is belt-and-suspenders alongside <code>robots.txt</code>: one operates at crawl time, the other at the page level.</p>
 
+<p>Every page also carries <code>&lt;meta name="tdm-reservation" content="1"&gt;</code>, the W3C TDM Reservation Protocol opt-out, backed by a site-wide <code>/.well-known/tdmrep.json</code>. This is the machine-readable form of the EU's text-and-data-mining reservation (CDSM Directive Article 4): a formal "no" to mining our content for model training, recognized in law even where crawler conventions are voluntary.</p>
+
 <hr>
 
 <h2>Layer 3: strict Content Security Policy</h2>
