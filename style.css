@@ -358,6 +358,7 @@ footer {
 }
 footer p { margin-bottom: 0.4rem; color: var(--secondary); }
 footer nav { display: flex; gap: 1.2rem; margin-top: 0.8rem; flex-wrap: wrap; }
+footer .colophon { opacity: 0.5; font-size: 0.8rem; margin-top: 1.2rem; }
 
 /* ---------- page transitions ---------- */
 
