@@ -75,3 +75,80 @@ Disallow: /
 
 User-agent: aiHitBot
 Disallow: /
+
+# --- Added 2026-10-01: monthly security loop review ---
+# OpenAI search crawler (docs: developers.openai.com/api/docs/bots)
+User-agent: OAI-SearchBot
+Disallow: /
+
+# OpenAI computer-use agent
+User-agent: Operator
+Disallow: /
+
+# Anthropic search crawler and user-triggered fetch (docs: support.anthropic.com crawler article)
+User-agent: Claude-SearchBot
+Disallow: /
+
+User-agent: Claude-User
+Disallow: /
+
+# Anthropic legacy user-fetch token, still observed in the wild
+User-agent: Claude-Web
+Disallow: /
+
+# Cohere training-data crawler (observed token; matches the Cloudflare WAF rule)
+User-agent: cohere-training-data-crawler
+Disallow: /
+
+# Google user-triggered AI agent fetchers (March 2026 docs; these ignore robots.txt
+# by design, so this is a declared preference + matches future edge enforcement)
+User-agent: Google-Agent
+Disallow: /
+
+User-agent: GoogleAgent-Mariner
+Disallow: /
+
+User-agent: GoogleAgent-URLContext
+Disallow: /
+
+User-agent: Google-NotebookLM
+Disallow: /
+
+# Meta user-triggered agentic fetch and Meta AI search-quality crawler
+User-agent: meta-externalfetcher
+Disallow: /
+
+User-agent: meta-webindexer
+Disallow: /
+
+# Mistral training and search-index crawlers
+User-agent: MistralAI-Training
+Disallow: /
+
+User-agent: MistralAI-Index
+Disallow: /
+
+# Moonshot AI (Kimi) crawlers (docs: kimi.com/policies/kimi-crawlers)
+User-agent: KimiBot
+Disallow: /
+
+User-agent: Kimi-SearchBot
+Disallow: /
+
+User-agent: Kimi-User
+Disallow: /
+
+# ByteDance training crawler alongside Bytespider
+User-agent: TikTokSpider
+Disallow: /
+
+# Allen Institute for AI training crawlers (Dolma dataset)
+User-agent: Ai2Bot
+Disallow: /
+
+User-agent: Ai2Bot-Dolma
+Disallow: /
+
+# Webz.io data-for-training crawler (successor in the omgili family)
+User-agent: webzio-extended
+Disallow: /
