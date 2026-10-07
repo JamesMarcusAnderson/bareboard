@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
-<meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self' data:; style-src 'self'; script-src 'self'; object-src 'none'; frame-src 'none'; base-uri 'self'; form-action 'none'">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self' data: upload.wikimedia.org thumb.wikimedia.org; style-src 'self'; script-src 'self'; object-src 'none'; frame-src 'none'; base-uri 'self'; form-action 'none'">
 <meta name="referrer" content="no-referrer">
 <meta name="robots" content="noai, noimageai">
 <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -125,9 +125,9 @@ When a device is acquired, it graduates off the board and the next one moves up.
 <p class="lede">These are the devices our visitors look up most. When a device gets enough attention, it jumps the queue for a full teardown.</p>
 <ol class="most-requested-list">
   <li><a href="/devices/nintendo-switch/">Nintendo Switch</a> &mdash; Joy-Con drift, Tegra X1, most-visited device hub</li>
-  <li><a href="/devices/playstation/">Sony PlayStation</a> &mdash; PSN hack, OtherOS lawsuit, repair restrictions</li>
+  <li><a href="/devices/playstation/">Sony PlayStation</a> &mdash; PSN breach, OtherOS lawsuit, repair restrictions</li>
   <li><a href="/devices/raspberry-pi/">Raspberry Pi</a> &mdash; board revisions, Broadcom silicon, supply chain</li>
-  <li><a href="/devices/esp32/">ESP32</a> &mdash; the hacker&rsquo;s microcontroller, open documentation</li>
+  <li><a href="/devices/esp32/">ESP32</a> &mdash; the maker&rsquo;s microcontroller, open documentation</li>
   <li><a href="/devices/ti-84-plus/">TI-84 Plus</a> &mdash; the calculator monopoly, DMCA battle</li>
   <li><a href="/devices/xfinity-xb3/">Xfinity XB3</a> &mdash; <a href="/autopsy/xfinity-xb3/">teardown complete</a></li>
 </ol>
@@ -148,10 +148,20 @@ When a device is acquired, it graduates off the board and the next one moves up.
 
 <section>
 <h2 id="board">The board</h2>
+<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/7f/IPhone_6s_-_opened-92987.jpg/500px-IPhone_6s_-_opened-92987.jpg" alt="Opened smartphone showing battery and logic board" loading="lazy" style="max-width:100%;height:auto;margin-bottom:1rem;">
 <ol class="wanted">
-<li><strong>Board opens with the 1,000-device universe.</strong> Rarity research is running now across all ten categories. The first ten bounties post here when the data lands.</li>
+<li><strong>Humane AI Pin</strong> <span class="priority high">High priority</span><br>Failed 2024 startup device, now disappearing from the market. Snapdragon-based wearable with almost no public board-level documentation. <em>Why wanted:</em> documents an entire product category&rsquo;s rise and fall at the silicon level.</li>
+<li><strong>Rabbit R1</strong> <span class="priority high">High priority</span><br>MediaTek-powered AI handheld. Little verified teardown data exists on its internals, power design, or component choices. <em>Why wanted:</em> independent examination of heavily marketed AI hardware.</li>
+<li><strong>Apple Vision Pro</strong> <span class="priority high">High priority</span><br>Dual-chip (M2 + R1) spatial computer. Apple publishes nothing about the board; independent analysis is scarce and the display stack is unique. <em>Why wanted:</em> the most complex consumer board of its generation, undocumented.</li>
+<li><strong>Nintendo Switch 2</strong> <span class="priority high">High priority</span><br>New generation hardware with unknown silicon revisions, board layout, and repairability characteristics. <em>Why wanted:</em> baseline documentation before revisions and cost-downs change the design.</li>
+<li><strong>Meta Quest Pro</strong> <span class="priority elevated">Elevated</span><br>Discontinued headset with pancake-lens optics and Snapdragon XR2+ board. Units are vanishing; the display assembly deserves recording. <em>Why wanted:</em> preservation of a short-lived premium design.</li>
+<li><strong>DJI Avata 2</strong> <span class="priority elevated">Elevated</span><br>FPV drone with OcuSync video pipeline and tight firmware lockdown. <em>Why wanted:</em> independent examination of video transmission hardware the manufacturer keeps closed.</li>
+<li><strong>Amazon Astro</strong> <span class="priority elevated">Elevated</span><br>Home robot, rare in the wild, with an unknown sensor and compute stack. <em>Why wanted:</em> almost no public hardware analysis of a shipping home robot.</li>
+<li><strong>Oura Ring 4</strong> <span class="priority elevated">Elevated</span><br>Extremely compact wearable; no public teardown of the current generation. <em>Why wanted:</em> miniaturization techniques worth studying and recording.</li>
+<li><strong>Peloton Bike+</strong> <span class="priority standard">Standard</span><br>Subscription-linked exercise hardware. <em>Why wanted:</em> documents the &ldquo;connected hardware&rdquo; category where software decisions can limit hardware you own.</li>
+<li><strong>Steam Deck OLED</strong> <span class="priority standard">Standard</span><br>Valve handheld with some existing coverage. <em>Why wanted:</em> the HDR OLED panel supply chain and revised board layout deserve a complete record.</li>
 </ol>
-<p class="lede">Have one of these on a shelf? Sourcing is handled privately while the program takes shape &mdash; no public intake yet.</p>
+<p class="lede">Have one of these on a shelf? <a href="mailto:contact@bareboard.org">Suggest a device or offer hardware</a> &mdash; every bounty claimed is documented and the board updates.</p>
 </section>
 
   <footer>
