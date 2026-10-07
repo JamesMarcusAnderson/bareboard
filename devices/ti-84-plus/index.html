@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self' data:; style-src 'self'; script-src 'self'; object-src 'none'; frame-src 'none'; base-uri 'self'; form-action 'none'">
+<meta name="referrer" content="no-referrer">
+<meta name="robots" content="noai, noimageai">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>TI-84 Plus Family — BareBoard — Free Hardware Education</title>
+<meta name="description" content="TI-84 Plus calculators: variants, Z80 CPU, and the 2009 DMCA signing key controversy.">
+<meta name="theme-color" content="#fbfbfc">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%231d1d1f'/%3E%3Ctext x='32' y='45' font-family='system-ui,-apple-system,sans-serif' font-size='36' font-weight='700' fill='white' text-anchor='middle'%3EB%3C/text%3E%3C/svg%3E">
+<link rel="stylesheet" href="/style.css">
+</head>
+<body>
+<header class="site-nav">
+  <div class="nav-inner">
+    <nav aria-label="Primary">
+      <ul>
+        <li><a href="/" class="brand-word">BareBoard</a></li>
+        <li><a href="/devices/">Devices</a></li>
+        <li class="has-children">
+          <a href="/about.html" aria-haspopup="true" aria-expanded="false">About</a>
+          <div class="col-panel">
+            <div class="dropdown-inner">
+              <ul class="dropdown-col">
+                <li><a href="/about.html#how-we-work">How we work</a></li>
+                <li><a href="/about.html#what-this-is-not">What this is not</a></li>
+                <li><a href="/datasheets.html">Datasheet Index</a></li>
+                <li><a href="/notes/">Bench Notes</a></li>
+              </ul>
+            </div>
+          </div></li>
+        <li class="has-children">
+          <a href="/hot-100.html" aria-haspopup="true" aria-expanded="false">Hot 100</a>
+          <div class="col-panel">
+            <div class="dropdown-inner">
+              <ul class="dropdown-col">
+                <li><a href="/hot-100.html">Cameras &amp; Drones</a></li>
+                <li><a href="/hot-100.html">E-Readers &amp; Tablets</a></li>
+                <li><a href="/hot-100.html">Game Consoles</a></li>
+                <li><a href="/hot-100.html">Media Streamers</a></li>
+                <li><a href="/hot-100.html">Networking Gear</a></li>
+                <li class="dropdown-sub"><a href="/autopsy/xfinity-xb3/">Xfinity XB3 (Arris TG1682G)</a></li>
+                <li><a href="/hot-100.html">Other</a></li>
+                <li><a href="/hot-100.html">PCs &amp; Single-Board</a></li>
+                <li><a href="/hot-100.html">Phones</a></li>
+                <li><a href="/hot-100.html">Printers</a></li>
+                <li><a href="/hot-100.html">Smart Home / IoT</a></li>
+                <li><a href="/hot-100.html">TVs &amp; Displays</a></li>
+                <li><a href="/hot-100.html">Wearables</a></li>
+              </ul>
+            </div>
+          </div></li>
+<li class="has-children">
+          <a href="/most-wanted.html" aria-haspopup="true" aria-expanded="false">Most Wanted</a>
+          <div class="col-panel">
+            <div class="dropdown-inner">
+              <ul class="dropdown-col">
+                <li><a href="/most-wanted.html#board">The board</a></li>
+              </ul>
+            </div>
+          </div></li>
+        <li class="has-children">
+          <a href="/support.html" aria-haspopup="true" aria-expanded="false">Support</a>
+          <div class="col-panel">
+            <div class="dropdown-inner">
+              <ul class="dropdown-col">
+                <li><a href="/support.html#mission">Mission</a></li>
+                <li><a href="/support.html#chip-in">Donate</a></li>
+                <li><a href="/support.html#allies">Allies</a></li>
+              </ul>
+            </div>
+          </div></li>
+        <li class="has-children">
+          <a href="/watchmen.html" aria-haspopup="true" aria-expanded="false">Watchmen</a>
+          <div class="col-panel">
+            <div class="dropdown-inner">
+              <ul class="dropdown-col">
+                <li><a href="/watchmen.html#who-watches">Who watches</a></li>
+                <li><a href="/watchmen.html#methodology">Methodology</a></li>
+                <li><a href="/watchmen.html#tools">The bench</a></li>
+                <li><a href="/watchmen.html#corrections">Corrections</a></li>
+              </ul>
+            </div>
+          </div></li>
+        <li class="nav-search-item">
+          <button type="button" class="search-toggle" aria-label="Search BareBoard" aria-expanded="false" aria-controls="search-panel"><svg width="15" height="15" viewBox="0 0 16 16" fill="none" aria-hidden="true"><circle cx="7" cy="7" r="5.2" stroke="currentColor" stroke-width="1.7"/><line x1="11.2" y1="11.2" x2="14.6" y2="14.6" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/></svg></button>
+        </li>
+      </ul>
+    </nav>
+  </div>
+  <div class="search-panel" id="search-panel" hidden>
+    <div class="search-inner">
+      <svg width="15" height="15" viewBox="0 0 16 16" fill="none" aria-hidden="true" class="search-icon"><circle cx="7" cy="7" r="5.2" stroke="currentColor" stroke-width="1.7"/><line x1="11.2" y1="11.2" x2="14.6" y2="14.6" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/></svg>
+      <input type="search" id="site-search" placeholder="Search BareBoard" aria-label="Search BareBoard" autocomplete="off" spellcheck="false">
+      <button type="button" class="search-close" aria-label="Close search">&times;</button>
+    </div>
+    <ul class="search-results" id="search-results" aria-live="polite"></ul>
+  </div>
+</header>
+
+<main>
+  <h1>TI-84 Plus Family</h1>
+  <p class="lede">The graphing calculator that ate American education. Powered by a Zilog Z80 &mdash; a CPU from 1976 &mdash; and protected by one of the most aggressive legal strategies in consumer electronics.</p>
+
+  <section>
+    <h2 id="fcc">FCC ID</h2>
+    <p><strong>FCC ID: Not verified.</strong> Graphing calculators without wireless radios are not intentional radiators and typically do not carry FCC IDs. If you find an FCC ID printed on a TI-84 variant, <a href="/about.html">let us know</a>.</p>
+  </section>
+
+  <section>
+    <h2 id="fcc-revealed">What the FCC filing revealed</h2>
+    <p>The FCC filing for this device includes the documents manufacturers are required to submit: external photos, internal photos, test setup photos, RF test reports, and the user manual. These are public record at <a href="https://fccid.io/">fccid.io</a>.</p>
+    <p>What you can typically find:</p>
+    <ul>
+      <li><strong>Internal photos</strong> &mdash; board layout, chip placement, shielding, antenna design</li>
+      <li><strong>Block diagrams</strong> &mdash; sometimes included, showing the RF chain architecture</li>
+      <li><strong>Test reports</strong> &mdash; conducted and radiated emissions data, which can reveal operating frequencies and power levels</li>
+      <li><strong>Label placement</strong> &mdash; where the FCC ID lives on the device</li>
+    </ul>
+    <p>What the FCC filing does <em>not</em> include: schematics (usually withheld under confidentiality requests), firmware, bill of materials, or debug interface documentation.</p>
+  </section>
+
+  <section>
+    <h2 id="we-reveal">What we reveal</h2>
+    <p>The FCC tells you what a device emits. We tell you what&rsquo;s inside and how it works.</p>
+    <ul>
+      <li><strong>Chip-level identification</strong> &mdash; every major IC named, with datasheet links where public documentation exists</li>
+      <li><strong>Board mapping</strong> &mdash; what connects to what, which test pads matter, where the debug interfaces hide</li>
+      <li><strong>What the manufacturer won&rsquo;t tell you</strong> &mdash; undocumented features, hidden radios, silent telemetry, repair blockers</li>
+    </ul>
+    <p>Check our <a href="/autopsy/">teardowns</a> for full board-level analysis.</p>
+  </section>
+
+  <section>
+    <h2 id="variants">Variants</h2>
+    <table>
+      <tr><th>Model</th><th>Released</th><th>CPU</th><th>Display</th><th>Notes</th></tr>
+      <tr><td>TI-84 Plus</td><td>2004</td><td>Z80 @ 15 MHz</td><td>96&times;64 mono</td><td>The standard. Still sold today.</td></tr>
+      <tr><td>TI-84 Plus Silver Edition</td><td>2004</td><td>Z80 @ 15 MHz</td><td>96&times;64 mono</td><td>More flash/RAM. Discontinued.</td></tr>
+      <tr><td>TI-84 Plus C Silver Edition</td><td>2013</td><td>Z80 @ 15 MHz</td><td>320&times;240 color</td><td>First color screen. Short-lived.</td></tr>
+      <tr><td>TI-84 Plus CE</td><td>2015</td><td>eZ80 @ 48 MHz</td><td>320&times;240 color</td><td>Thinner, rechargeable. Current flagship.</td></tr>
+      <tr><td>TI-84 Plus CE Python</td><td>2021</td><td>eZ80 @ 48 MHz</td><td>320&times;240 color</td><td>Adds Python programming support.</td></tr>
+    </table>
+  </section>
+
+  <section>
+    <h2 id="chips">Key Chips</h2>
+    <ul>
+      <li><strong>Zilog Z80</strong> (original Plus) &mdash; 8-bit CPU from 1976, clocked at 15 MHz. The same architecture as the Sinclair ZX Spectrum.</li>
+      <li><strong>Zilog eZ80</strong> (CE models) &mdash; 24-bit enhanced Z80, clocked at 48 MHz.</li>
+      <li><strong>TI proprietary ASIC</strong> &mdash; integrates memory controller, display driver, and USB. TI does not publish datasheets for these.</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2 id="controversies">Controversies &amp; Legal</h2>
+
+    <h3>The 2009 signing key DMCA battle</h3>
+    <p>In 2009, hobbyists factored the 512-bit RSA keys TI used to sign calculator firmware, allowing custom operating systems on TI calculators. TI responded with DMCA takedown notices against bloggers and websites &mdash; including United-TI, Reddit, and Wikipedia &mdash; claiming the keys were circumvention devices.</p>
+    <p>The Electronic Frontier Foundation (EFF) intervened <em>pro bono</em>, representing three bloggers. On October 13, 2009, the EFF sent TI a letter warning that publishing the keys did not violate the DMCA and that TI could face liability for misrepresentation. TI continued sending notices briefly but stopped after late 2009 and never pursued legal action.</p>
+    <p>The incident became a textbook example of the Streisand Effect &mdash; TI&rsquo;s attempts to suppress the keys ensured their widespread distribution, including on WikiLeaks.</p>
+    <p>Sources: <a href="https://en.wikipedia.org/wiki/Texas_Instruments_signing_key_controversy">Wikipedia</a>, <a href="https://www.eff.org/ja/node/60826">EFF</a>, <a href="https://www.theregister.com/offbeat/2009/09/23/texas-instruments-aims-lawyers-at-calculator-hackers/1455704?page=2">The Register</a></p>
+
+    <h3>The calculator monopoly</h3>
+    <p>TI dominates the US graphing calculator market, with the TI-84 series effectively mandatory in many American classrooms. Critics note that the hardware has barely changed in two decades &mdash; the original TI-84 Plus used a CPU architecture from 1976 &mdash; while prices remained above $100. The College Board and ACT&rsquo;s approved-calculator lists have been cited as entrenching TI&rsquo;s position, as schools standardize on TI models to ensure test compliance.</p>
+
+    <h3>Exam mode and lockdown</h3>
+    <p>Newer TI calculators include &ldquo;exam mode&rdquo; features and increasingly locked-down firmware, limiting what users can do with hardware they own. This runs directly counter to the right-to-repair and device-ownership principles BareBoard stands for.</p>
+  </section>
+
+  <section>
+    <h2 id="reading">Further Reading</h2>
+    <ul>
+      <li><a href="https://en.wikipedia.org/wiki/Texas_Instruments_signing_key_controversy">Wikipedia &mdash; TI signing key controversy</a></li>
+      <li><a href="https://www.eff.org/ja/node/60826">EFF &mdash; TI calculator hacking case</a></li>
+      <li><a href="/datasheets.html">BareBoard datasheet index</a></li>
+    </ul>
+  </section>
+  <footer>
+    <a href="/tarpit/" class="hp-link" aria-hidden="true" tabindex="-1">device index</a>
+    <p>BareBoard &mdash; a free educational resource. Text and findings published under open terms; nothing here is for sale.</p>
+        <nav>
+      <a href="/">Home</a> &middot; <a href="/about.html">About</a> &middot; <a href="/colophon.html">Colophon</a>
+    </nav>
+
+    <div class="legal-framework">
+      <p><strong>BareBoard Legal Framework &amp; Declarations</strong></p>
+      <ul>
+      <li><strong>No AI training:</strong> All text, findings, and original photography on this site are copyrighted. Automated scraping for AI model training is prohibited. Crawlers that ignore robots.txt are trespassing.</li>
+        <li><strong>Educational nature:</strong> BareBoard operates exclusively as a non-commercial, open educational resource. All material is compiled for academic evaluation, hardware preservation, and technical literacy under 17 U.S.C. &sect; 107 (fair use).</li>
+        <li><strong>Zero-leak / no-binary clause:</strong> This site does not host, distribute, or mirror proprietary firmware binaries, encrypted operating system keys, or weaponizable exploits. Documentation covers only the public, physical realities of circuit hardware.</li>
+        <li><strong>Property verification:</strong> Every hardware autopsy is performed on personally owned, legally acquired equipment. No rented or third-party infrastructure is used.</li>
+        <li><strong>Public source sourcing:</strong> Comparative and regulatory data is aggregated from official public filings, including the U.S. Federal Communications Commission equipment authorization database.</li>
+      </ul>
+      <p class="legal-note"><em>BareBoard &mdash; open hardware allies, documented in alignment with the Open Source Hardware Association framework. Text and original photography published under open terms; nothing here is for sale.</em></p>
+    </div>
+  </footer>
+</main>
+
+<script src="/nav.js" defer></script>
+<script src="/search.js" defer></script>
+</body>
+</html>
