@@ -27,6 +27,7 @@
                 <li><a href="/about.html#how-we-work">How we work</a></li>
                 <li><a href="/about.html#what-this-is-not">What this is not</a></li>
                 <li><a href="/datasheets.html">Datasheet Index</a></li>
+                <li><a href="/notes/">Bench Notes</a></li>
               </ul>
             </div>
           </div></li>
@@ -71,6 +72,18 @@
               </ul>
             </div>
           </div></li>
+        <li class="has-children">
+          <a href="/watchmen.html" aria-haspopup="true" aria-expanded="false">Watchmen</a>
+          <div class="col-panel">
+            <div class="dropdown-inner">
+              <ul class="dropdown-col">
+                <li><a href="/watchmen.html#who-watches">Who watches</a></li>
+                <li><a href="/watchmen.html#methodology">Methodology</a></li>
+                <li><a href="/watchmen.html#tools">The bench</a></li>
+                <li><a href="/watchmen.html#corrections">Corrections</a></li>
+              </ul>
+            </div>
+          </div></li>
         <li class="nav-search-item">
           <button type="button" class="search-toggle" aria-label="Search BareBoard" aria-expanded="false" aria-controls="search-panel"><svg width="15" height="15" viewBox="0 0 16 16" fill="none" aria-hidden="true"><circle cx="7" cy="7" r="5.2" stroke="currentColor" stroke-width="1.7"/><line x1="11.2" y1="11.2" x2="14.6" y2="14.6" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/></svg></button>
         </li>
@@ -102,6 +115,24 @@
 </ul>
 <h3 id="B">B</h3>
 <ul class="ds-list">
+<li>
+<strong>BCM2835</strong> &mdash; Broadcom<br>
+<span class="ds-func">SoC — powers Raspberry Pi 1, Zero, Zero W (ARM11 + VideoCore IV)</span><br>
+<span class="ds-links"><a href="https://web.archive.org/web/20211017004822/https://datasheets.raspberrypi.com/bcm2835/bcm2835-peripherals.pdf">Archive.org copy (PDF, ARM Peripherals)</a></span><br>
+<span class="ds-device">Found in: Raspberry Pi 1 / Zero / Zero W</span>
+</li>
+<li>
+<strong>BCM2836</strong> &mdash; Broadcom<br>
+<span class="ds-func">SoC — powers Raspberry Pi 2 (quad-core Cortex-A7). No public datasheet; register-compatible with BCM2835 peripherals.</span><br>
+<span class="ds-links"><em>No public datasheet released — use BCM2835 peripherals doc above</em></span><br>
+<span class="ds-device">Found in: Raspberry Pi 2</span>
+</li>
+<li>
+<strong>BCM2837</strong> &mdash; Broadcom<br>
+<span class="ds-func">SoC — powers Raspberry Pi 3, 3B+, Zero 2W (quad-core Cortex-A53). No public datasheet.</span><br>
+<span class="ds-links"><em>No public datasheet released</em></span><br>
+<span class="ds-device">Found in: Raspberry Pi 3 / 3B+ / Zero 2W</span>
+</li>
 <li>
 <strong>BCM53124S</strong> &mdash; Broadcom<br>
 <span class="ds-func">5-port gigabit Ethernet switch</span><br>
@@ -182,7 +213,7 @@
 <li>
 <strong>AMS1117</strong> &mdash; Advanced Monolithic Systems<br>
 <span class="ds-func">1 A low-dropout linear regulator (the ubiquitous cheap LDO)</span><br>
-<span class="ds-links"><em>No stable manufacturer page found — datasheet widely mirrored by distributors</em></span><br>
+<span class="ds-links"><a href="https://web.archive.org/web/20201219042429/http://www.advanced-monolithic.com/pdf/ds1117.pdf">Archive.org copy (PDF)</a></span><br>
 </li>
 <li>
 <strong>ATmega2560</strong> &mdash; Microchip<br>
@@ -226,7 +257,7 @@
 <li>
 <strong>DHT22</strong> &mdash; Aosong (ASAIR)<br>
 <span class="ds-func">Capacitive humidity + temperature sensor</span><br>
-<span class="ds-links"><em>No stable English manufacturer page found — datasheet widely mirrored by distributors</em></span><br>
+<span class="ds-links"><a href="https://web.archive.org/web/20201219025954/https://www.sparkfun.com/datasheets/Sensors/Temperature/DHT22.pdf">Archive.org copy (PDF)</a></span><br>
 </li>
 <li>
 <strong>DRV8825</strong> &mdash; Texas Instruments<br>
@@ -257,12 +288,32 @@
 <li>
 <strong>FT232RL</strong> &mdash; FTDI<br>
 <span class="ds-func">USB-to-UART bridge — the classic hacker serial chip</span><br>
-<span class="ds-links"><a href="https://ftdichip.com/document/usb-ic-data-sheets/">FTDI USB IC datasheet index</a></span><br>
+<span class="ds-links"><a href="https://ftdichip.com/document/usb-ic-data-sheets/">FTDI USB IC datasheet index</a> &middot; <a href="https://web.archive.org/web/20201114001822/https://www.ftdichip.com/Support/Documents/DataSheets/ICs/DS_FT232R.pdf">Archive.org copy (PDF)</a></span><br>
 </li>
 <li>
 <strong>FT2232H</strong> &mdash; FTDI<br>
 <span class="ds-func">Dual-channel USB UART/FIFO/JTAG bridge</span><br>
-<span class="ds-links"><a href="https://ftdichip.com/document/usb-ic-data-sheets/">FTDI USB IC datasheet index</a></span><br>
+<span class="ds-links"><a href="https://ftdichip.com/document/usb-ic-data-sheets/">FTDI USB IC datasheet index</a> &middot; <a href="https://web.archive.org/web/20210506101807/http://www.ftdichip.com/Support/Documents/DataSheets/ICs/DS_FT2232H.pdf">Archive.org copy (PDF)</a></span><br>
+</li>
+<li>
+<strong>FT232RQ</strong> &mdash; FTDI<br>
+<span class="ds-func">USB-to-UART bridge — QFN package variant of the FT232R (same silicon as FT232RL)</span><br>
+<span class="ds-links"><a href="https://web.archive.org/web/20201114001822/https://www.ftdichip.com/Support/Documents/DataSheets/ICs/DS_FT232R.pdf">Archive.org copy (PDF, shared with FT232RL)</a></span><br>
+</li>
+<li>
+<strong>FT231X</strong> &mdash; FTDI<br>
+<span class="ds-func">USB-to-UART bridge — compact X-series, USB-C ready</span><br>
+<span class="ds-links"><a href="https://ftdichip.com/document/usb-ic-data-sheets/">FTDI USB IC datasheet index</a> &middot; <a href="https://web.archive.org/web/20220121060221/https://ftdichip.com/wp-content/uploads/2020/08/DS_FT231X.pdf">Archive.org copy (PDF)</a></span><br>
+</li>
+<li>
+<strong>FT230X</strong> &mdash; FTDI<br>
+<span class="ds-func">USB-to-UART bridge — smallest X-series package</span><br>
+<span class="ds-links"><a href="https://ftdichip.com/document/usb-ic-data-sheets/">FTDI USB IC datasheet index</a> &middot; <a href="https://web.archive.org/web/20220121062541/https://ftdichip.com/wp-content/uploads/2020/08/DS_FT230X.pdf">Archive.org copy (PDF)</a></span><br>
+</li>
+<li>
+<strong>FT4232H</strong> &mdash; FTDI<br>
+<span class="ds-func">Quad-channel USB UART/FIFO/JTAG bridge</span><br>
+<span class="ds-links"><a href="https://ftdichip.com/document/usb-ic-data-sheets/">FTDI USB IC datasheet index</a> &middot; <a href="https://web.archive.org/web/20201030200313/https://www.ftdichip.com/Support/Documents/DataSheets/ICs/DS_FT4232H.pdf">Archive.org copy (PDF)</a></span><br>
 </li>
 </ul>
 <h3 id="hc-H">H</h3>
@@ -270,12 +321,12 @@
 <li>
 <strong>HC-05</strong> &mdash; Generic (CSR BC417 inside)<br>
 <span class="ds-func">Bluetooth 2.0 SPP serial module</span><br>
-<span class="ds-links"><em>Generic module with no single manufacturer — datasheet mirrored by many vendors</em></span><br>
+<span class="ds-links"><a href="https://web.archive.org/web/20210415044150/https://www.electronicoscaldas.com/datasheet/HC-Serial-Bluetooth-Products-User-Instructional-Manual_Wavesen.pdf">Archive.org copy (PDF, Wavesen manufacturer manual)</a></span><br>
 </li>
 <li>
 <strong>HC-SR04</strong> &mdash; Generic<br>
 <span class="ds-func">Ultrasonic distance sensor module</span><br>
-<span class="ds-links"><em>Generic module with no single manufacturer — datasheet mirrored by many vendors</em></span><br>
+<span class="ds-links"><a href="https://web.archive.org/web/20201112023446/https://cdn.sparkfun.com/datasheets/Sensors/Proximity/HCSR04.pdf">Archive.org copy (PDF)</a></span><br>
 </li>
 </ul>
 <h3 id="hc-L">L</h3>
@@ -311,7 +362,7 @@
 <li>
 <strong>MT3608</strong> &mdash; Aerosemi<br>
 <span class="ds-func">2 A boost (step-up) converter</span><br>
-<span class="ds-links"><em>No stable manufacturer page found — datasheet widely mirrored by distributors</em></span><br>
+<span class="ds-links"><a href="https://web.archive.org/web/20220703000319/https://datasheet.lcsc.com/lcsc/2201121530_XI-AN-Aerosemi-Tech-MT3608L_C2932326.pdf">Archive.org copy (PDF)</a></span><br>
 </li>
 </ul>
 <h3 id="hc-N">N</h3>
@@ -381,7 +432,7 @@
 <li>
 <strong>TP4056</strong> &mdash; Top Power (Nanjing)<br>
 <span class="ds-func">1 A linear Li-ion battery charger IC</span><br>
-<span class="ds-links"><em>No stable manufacturer page found — datasheet widely mirrored by distributors</em></span><br>
+<span class="ds-links"><a href="https://web.archive.org/web/20240415014504/https://www.alldatasheet.com/datasheet-pdf/pdf/1132405/ASIC/TP4056.html">Archive.org copy (datasheet page)</a></span><br>
 </li>
 </ul>
 <h3 id="hc-W">W</h3>
@@ -408,6 +459,119 @@
 <strong>74HC595</strong> &mdash; Texas Instruments (SN74HC595)<br>
 <span class="ds-func">8-bit serial-in / parallel-out shift register with latch</span><br>
 <span class="ds-links"><a href="https://www.ti.com/product/SN74HC595">TI product page</a> &middot; <a href="https://www.ti.com/lit/ds/symlink/sn74hc595.pdf">Datasheet (PDF)</a></span><br>
+</li>
+</ul>
+<h3 id="hc-Z">Z</h3>
+<ul class="ds-list">
+<li>
+<strong>Z80</strong> &mdash; Zilog<br>
+<span class="ds-func">8-bit microprocessor — powers the TI-84 calculator family, ZX Spectrum, Game Boy (LR35902 variant)</span><br>
+<span class="ds-links"><a href="https://web.archive.org/web/20201231164021/http://www.zilog.com/docs/z80/UM0080.pdf">Archive.org copy (PDF, User Manual)</a></span><br>
+<span class="ds-device">Found in: TI-84 Plus / Plus CE, ZX Spectrum, Game Boy</span>
+</li>
+</ul>
+<h2 id="game-consoles" style="margin-top:2.5em;">Game console &amp; proprietary hardware</h2>
+<p class="lede">Nintendo, Sony, and TI guard their custom silicon closely. No public datasheets exist for the chips below — this is stated explicitly rather than leaving gaps. Where documentation exists (teardowns, community reverse-engineering), we link it.</p>
+<h3 id="gc-nintendo">Nintendo</h3>
+<ul class="ds-list">
+<li>
+<strong>Flipper / Hollywood</strong> &mdash; Nintendo / ATI (GameCube)<br>
+<span class="ds-func">GameCube GPU (Flipper) and Wii GPU (Hollywood, Flipper-derived). No public datasheet.</span><br>
+<span class="ds-links"><em>No public datasheet — see Dolphin emulator wiki for reverse-engineered docs</em></span><br>
+</li>
+<li>
+<strong>Tegra X1 (T210)</strong> &mdash; NVIDIA (Nintendo Switch)<br>
+<span class="ds-func">Switch SoC — custom Tegra X1. NVIDIA publishes Tegra X1 technical docs for the stock chip; Nintendo's customizations are undocumented.</span><br>
+<span class="ds-links"><em>No Nintendo-specific datasheet — NVIDIA Tegra X1 docs cover the base silicon</em></span><br>
+<span class="ds-device">Found in: Nintendo Switch (HAC-001), Switch Lite (HDH-001), Switch OLED (HEG-001)</span>
+</li>
+<li>
+<strong>3DS / Wii U SoCs</strong> &mdash; Nintendo<br>
+<span class="ds-func">Custom ARM SoCs. No public datasheets for any 3DS (original/XL/2DS/New) or Wii U variant.</span><br>
+<span class="ds-links"><em>No public datasheets — see 3DBrew and WiiUBrew wikis for community docs</em></span><br>
+</li>
+</ul>
+<h3 id="gc-sony">Sony</h3>
+<ul class="ds-list">
+<li>
+<strong>Emotion Engine</strong> &mdash; Sony / Toshiba (PlayStation 2)<br>
+<span class="ds-func">PS2 CPU. No public datasheet.</span><br>
+<span class="ds-links"><em>No public datasheet</em></span><br>
+<span class="ds-device">Found in: PlayStation 2 (fat SCPH-30000–50000, slim SCPH-70000–90000)</span>
+</li>
+<li>
+<strong>Cell Broadband Engine</strong> &mdash; Sony / IBM / Toshiba (PlayStation 3)<br>
+<span class="ds-func">PS3 CPU. IBM published architecture papers; no full datasheet.</span><br>
+<span class="ds-links"><em>No public datasheet — IBM Cell BE architecture docs are the closest public reference</em></span><br>
+<span class="ds-device">Found in: PlayStation 3 (fat CECHA–CECHG, slim CECH-2000–3000, super slim CECH-4000)</span>
+</li>
+<li>
+<strong>PS4 / PS5 APUs</strong> &mdash; AMD (Sony custom)<br>
+<span class="ds-func">Semi-custom AMD Jaguar (PS4) and Zen 2 + RDNA 2 (PS5). No public datasheets.</span><br>
+<span class="ds-links"><em>No public datasheets</em></span><br>
+<span class="ds-device">Found in: PS4 (CUH-1000/1200/2200), PS4 Slim (CUH-2000), PS4 Pro (CUH-7000), PS5 (CFI-1000/1100/1200 disc &amp; digital, CFI-2000 slim)</span>
+</li>
+<li>
+<strong>IMX219</strong> &mdash; Sony Semiconductor<br>
+<span class="ds-func">8 MP camera sensor — the Raspberry Pi Camera v2 sensor. Public docs available via Raspberry Pi.</span><br>
+<span class="ds-links"><a href="https://web.archive.org/web/20211006142446/https://www.raspberrypi.com/documentation/accessories/camera.html">Archive.org copy (Raspberry Pi camera docs)</a></span><br>
+</li>
+</ul>
+<h3 id="gc-ti">Texas Instruments (calculators)</h3>
+<ul class="ds-list">
+<li>
+<strong>TI-84 Plus series ASIC</strong> &mdash; TI<br>
+<span class="ds-func">Custom ASIC in TI-84 Plus, Plus Silver Edition, Plus C Silver Edition, Plus CE, Plus CE Python. No public datasheet.</span><br>
+<span class="ds-links"><em>No public datasheet — TI keeps calculator ASICs proprietary</em></span><br>
+<span class="ds-device">Found in: TI-84 Plus, Plus SE, Plus C SE, Plus CE, Plus CE Python</span>
+</li>
+<li>
+<strong>Z80</strong> &mdash; Zilog<br>
+<span class="ds-func">8-bit CPU — powers all TI-84 variants (see Z section above for datasheet)</span><br>
+<span class="ds-links"><a href="#hc-Z">See Z80 entry above</a></span><br>
+</li>
+</ul>
+<h2 id="fcc-ids" style="margin-top:2.5em;">FCC ID reference</h2>
+<p class="lede">Every wireless device sold in the US has an FCC ID. Look it up and you&rsquo;ll find internal photos, test reports, and sometimes schematics — all legally public. Variants that share an FCC ID are noted.</p>
+<h3 id="fcc-networking">Networking</h3>
+<ul class="ds-list">
+<li>
+<strong>Arris TG1682G / Xfinity XB3</strong> — FCC ID <a href="https://fccid.io/UIDTG1682">UIDTG1682</a><br>
+<span class="ds-func">Variants UIDTG1682-2 and UIDTG1682-3 share the base filing. Internal photos, test reports, and user manual on file.</span><br>
+<span class="ds-device">See our <a href="/autopsy/xfinity-xb3/">full teardown</a></span>
+</li>
+</ul>
+<h3 id="fcc-pi">Raspberry Pi</h3>
+<ul class="ds-list">
+<li>
+<strong>Raspberry Pi 4 Model B</strong> (1GB / 2GB / 4GB / 8GB) — FCC ID <a href="https://fccid.io/2ABCB-RPI4B">2ABCB-RPI4B</a><br>
+<span class="ds-func">All RAM variants share one FCC ID. Test reports and internal photos on file.</span><br>
+</li>
+<li>
+<strong>Raspberry Pi 5</strong> (8GB / 16GB) — FCC ID <a href="https://fccid.io/2ABCB-RPI5">2ABCB-RPI5</a><br>
+<span class="ds-func">All RAM variants share one FCC ID.</span><br>
+</li>
+</ul>
+<h3 id="fcc-esp32">ESP32 modules</h3>
+<ul class="ds-list">
+<li>
+<strong>ESP32-WROOM-32E</strong> — FCC ID <a href="https://fccid.io/2AC7Z-ESP32WROOM32E">2AC7Z-ESP32WROOM32E</a><br>
+<span class="ds-func">PCB antenna variant. Test reports and internal photos on file.</span><br>
+</li>
+<li>
+<strong>ESP32-WROOM-32U</strong> — FCC ID <a href="https://fccid.io/2AC7Z-ESP32WROOM32U">2AC7Z-ESP32WROOM32U</a><br>
+<span class="ds-func">U.FL external antenna variant.</span><br>
+</li>
+<li>
+<strong>ESP32-C3-WROOM-02U</strong> — FCC ID <a href="https://fccid.io/2AC7Z-ESPC3WROOMU">2AC7Z-ESPC3WROOMU</a><br>
+<span class="ds-func">RISC-V variant, U.FL antenna.</span><br>
+</li>
+</ul>
+<h3 id="fcc-nintendo">Nintendo</h3>
+<ul class="ds-list">
+<li>
+<strong>Nintendo Switch</strong> (HAC-001) — FCC ID <a href="https://fccid.io/BKEHAC001">BKEHAC001</a><br>
+<span class="ds-func">Original Switch. Test reports, internal photos on file. Switch Lite (HDH-001) and Switch OLED (HEG-001) have separate filings.</span><br>
 </li>
 </ul>
 <h2 id="manufacturers" style="margin-top:2.5em;">Manufacturer datasheet libraries</h2>
