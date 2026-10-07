@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-07T08:45:00Z",
+ "updated": "2026-10-07T08:50:48.182114+00:00",
  "methodology": "v0.2",
  "live": true,
  "devices": [
@@ -323,7 +323,7 @@
    "trend_amount": 2
   },
   {
-   "rank": 31,
+   "rank": 30,
    "name": "Nintendo 3DS",
    "category": "Game Consoles",
    "units": "75.9M (Nintendo IR sales data, 2020-09)",
@@ -334,7 +334,7 @@
    "trend_amount": 1
   },
   {
-   "rank": 32,
+   "rank": 31,
    "name": "Raspberry Pi (all generations)",
    "category": "PCs &amp; Single-Board",
    "units": "75M (Raspberry Pi Holdings FY 2025 resul",
@@ -345,7 +345,7 @@
    "trend_amount": 0
   },
   {
-   "rank": 33,
+   "rank": 32,
    "name": "Nokia I-240G-A (Alcatel-Lucent GPON ONT)",
    "category": "Networking Gear",
    "units": "100M (Nokia (Feb 2021, via GlobeNewswire",
@@ -356,7 +356,7 @@
    "trend_amount": 2
   },
   {
-   "rank": 34,
+   "rank": 33,
    "name": "iPhone 12 / 12 mini / 12 Pro / 12 Pro Max",
    "category": "Phones",
    "units": "100M (Wikipedia (List of best-selling mo",
@@ -367,7 +367,7 @@
    "trend_amount": 0
   },
   {
-   "rank": 35,
+   "rank": 34,
    "name": "PlayStation 5 (CFI-1000 through CFI-2000)",
    "category": "Game Consoles",
    "units": "93.6M (Sony earnings disclosure (via Vid",
@@ -378,7 +378,7 @@
    "trend_amount": 1
   },
   {
-   "rank": 36,
+   "rank": 35,
    "name": "Family Computer / Nintendo Entertainment System (NES)",
    "category": "Game Consoles",
    "units": "61.9M (Nintendo IR sales data, 2016-03)",
@@ -389,7 +389,7 @@
    "trend_amount": 1
   },
   {
-   "rank": 37,
+   "rank": 36,
    "name": "Vizio TV line (2002\u2013present)",
    "category": "TVs &amp; Displays",
    "units": "82M (Vizio IPO coverage (Nasdaq, Mar 202",
@@ -400,7 +400,7 @@
    "trend_amount": 3
   },
   {
-   "rank": 38,
+   "rank": 37,
    "name": "Tamagotchi line (1996\u2013present)",
    "category": "Other",
    "units": "80M (Bandai licensing material (via Tota",
@@ -411,7 +411,7 @@
    "trend_amount": 3
   },
   {
-   "rank": 39,
+   "rank": 38,
    "name": "Super Famicom / Super Nintendo (SNES)",
    "category": "Game Consoles",
    "units": "49.1M (Nintendo IR sales data, 2016-03)",
@@ -422,7 +422,7 @@
    "trend_amount": 3
   },
   {
-   "rank": 40,
+   "rank": 39,
    "name": "Epson EcoTank line (2010\u2013present; e.g. ET-2850)",
    "category": "Printers",
    "units": "60M (Epson press release, 2021-11)",
@@ -433,7 +433,7 @@
    "trend_amount": 3
   },
   {
-   "rank": 41,
+   "rank": 40,
    "name": "iRobot home-robot line (2002\u2013present)",
    "category": "Smart Home / IoT",
    "units": "40M (iRobot company disclosure (via ZDNe",
@@ -444,7 +444,7 @@
    "trend_amount": 3
   },
   {
-   "rank": 42,
+   "rank": 41,
    "name": "Samsung Galaxy A12",
    "category": "Phones",
    "units": "51.8M (Omdia 4Q21 Smartphone Model Marke",
@@ -455,7 +455,7 @@
    "trend_amount": 2
   },
   {
-   "rank": 43,
+   "rank": 42,
    "name": "Nintendo 64",
    "category": "Game Consoles",
    "units": "32.9M (Nintendo IR sales data, 2016-03)",
@@ -466,7 +466,7 @@
    "trend_amount": 2
   },
   {
-   "rank": 44,
+   "rank": 43,
    "name": "Linksys WRT54G (all revisions, incl. WRT54GL)",
    "category": "Networking Gear",
    "units": "31M (Linksys Global Product Manager Vinc",
@@ -477,7 +477,7 @@
    "trend_amount": 0
   },
   {
-   "rank": 45,
+   "rank": 44,
    "name": "Sega Genesis / Mega Drive",
    "category": "Game Consoles",
    "units": "30.8M (Sega historical sales data, 2001)",
@@ -488,7 +488,7 @@
    "trend_amount": 1
   },
   {
-   "rank": 46,
+   "rank": 45,
    "name": "Samsung QLED TV line (2017\u2013present)",
    "category": "TVs &amp; Displays",
    "units": "40M (Samsung Newsroom, citing Omdia, 202",
@@ -499,7 +499,7 @@
    "trend_amount": 1
   },
   {
-   "rank": 47,
+   "rank": 46,
    "name": "Nintendo Switch 2",
    "category": "Game Consoles",
    "units": "23.7M (Nintendo FY2027 Q1 earnings, 2026",
@@ -510,7 +510,7 @@
    "trend_amount": 2
   },
   {
-   "rank": 48,
+   "rank": 47,
    "name": "Raspberry Pi 3 range (3B / 3A+ / 3B+)",
    "category": "PCs &amp; Single-Board",
    "units": "23M (Tom&#x27;s Hardware, citing CEO Ebe",
@@ -521,7 +521,7 @@
    "trend_amount": 2
   },
   {
-   "rank": 49,
+   "rank": 48,
    "name": "Hisense TV line (annual brand shipments)",
    "category": "TVs &amp; Displays",
    "units": "29.1M (Hisense company news (2024 global",
@@ -532,7 +532,7 @@
    "trend_amount": 3
   },
   {
-   "rank": 50,
+   "rank": 49,
    "name": "TCL TV line (incl. Roku TV models)",
    "category": "TVs &amp; Displays",
    "units": "29M (TCL Industries 2024 annual report (",
@@ -543,7 +543,7 @@
    "trend_amount": 1
   },
   {
-   "rank": 51,
+   "rank": 50,
    "name": "Nintendo GameCube",
    "category": "Game Consoles",
    "units": "21.7M (Nintendo IR sales data, 2016-03)",
@@ -554,7 +554,7 @@
    "trend_amount": 3
   },
   {
-   "rank": 52,
+   "rank": 51,
    "name": "Sonos connected-speaker line (Play:1 / One / Era)",
    "category": "Smart Home / IoT",
    "units": "19M (Sonos S-1 SEC filing (as of March 3",
@@ -565,7 +565,7 @@
    "trend_amount": 3
   },
   {
-   "rank": 53,
+   "rank": 52,
    "name": "ECOVACS DEEBOT line (2006\u2013present)",
    "category": "Smart Home / IoT",
    "units": "25M (ECOVACS company claim at launch eve",
@@ -576,7 +576,7 @@
    "trend_amount": 0
   },
   {
-   "rank": 54,
+   "rank": 53,
    "name": "iPhone SE (2nd generation)",
    "category": "Phones",
    "units": "24.2M (Wikipedia (List of best-selling m",
@@ -587,7 +587,7 @@
    "trend_amount": 3
   },
   {
-   "rank": 55,
+   "rank": 54,
    "name": "Xbox Series X / Series S",
    "category": "Game Consoles",
    "units": "35.2M (VGChartz estimate, 2026-07)",
@@ -598,7 +598,7 @@
    "trend_amount": 1
   },
   {
-   "rank": 56,
+   "rank": 55,
    "name": "Google Chromecast 1st gen (2013)",
    "category": "Media Streamers",
    "units": "17M (Google (I/O 2015 keynote, reported ",
@@ -609,7 +609,7 @@
    "trend_amount": 3
   },
   {
-   "rank": 57,
+   "rank": 56,
    "name": "Amazon eero (2nd gen, 2017)",
    "category": "Networking Gear",
    "units": "20M (eero CEO Nick Weaver, eero 7 launch",
@@ -620,7 +620,7 @@
    "trend_amount": 1
   },
   {
-   "rank": 58,
+   "rank": 57,
    "name": "Keurig brewer line (1998\u2013present)",
    "category": "Other",
    "units": "20M (Keurig sales history (Food Business",
@@ -631,7 +631,7 @@
    "trend_amount": 1
   },
   {
-   "rank": 59,
+   "rank": 58,
    "name": "Hatchimals line (2016\u2013present)",
    "category": "Other",
    "units": "14.2M (Spin Master press release (PR New",
@@ -642,7 +642,7 @@
    "trend_amount": 1
   },
   {
-   "rank": 60,
+   "rank": 59,
    "name": "Nintendo Wii U",
    "category": "Game Consoles",
    "units": "13.6M (Nintendo IR sales data, 2019-12)",
@@ -653,7 +653,7 @@
    "trend_amount": 3
   },
   {
-   "rank": 61,
+   "rank": 60,
    "name": "Canon SELPHY line (2004\u2013present)",
    "category": "Printers",
    "units": "17M (Canon 20th-anniversary announcement",
@@ -664,7 +664,7 @@
    "trend_amount": 3
   },
   {
-   "rank": 62,
+   "rank": 61,
    "name": "Samsung Galaxy S21 / S21+ / S21 Ultra",
    "category": "Phones",
    "units": "13.5M (Wikipedia (List of best-selling m",
@@ -675,7 +675,7 @@
    "trend_amount": 2
   },
   {
-   "rank": 63,
+   "rank": 62,
    "name": "Arris TG1682G / Xfinity XB3 (xFi Wireless Gateway)",
    "category": "Networking Gear",
    "units": "10M (Comcast via ibtimes.sg: &#x27;over ",
@@ -686,7 +686,7 @@
    "trend_amount": 0
   },
   {
-   "rank": 64,
+   "rank": 63,
    "name": "Arduino Uno (ATmega328P boards)",
    "category": "PCs &amp; Single-Board",
    "units": "10M (CNX Software reporting Arduino&#x27",
@@ -697,7 +697,7 @@
    "trend_amount": 1
   },
   {
-   "rank": 65,
+   "rank": 64,
    "name": "Samsung Galaxy S22 Ultra",
    "category": "Phones",
    "units": "10.9M (Wikipedia (List of best-selling m",
@@ -708,7 +708,7 @@
    "trend_amount": 3
   },
   {
-   "rank": 66,
+   "rank": 65,
    "name": "magicJack line (2008\u2013present)",
    "category": "Other",
    "units": "8M (magicJack company press release (Glo",
@@ -719,7 +719,7 @@
    "trend_amount": 0
   },
   {
-   "rank": 67,
+   "rank": 66,
    "name": "LG OLED TV line (2013\u2013present)",
    "category": "TVs &amp; Displays",
    "units": "10M (LG/Omdia milestone reported by Adva",
@@ -730,7 +730,7 @@
    "trend_amount": 3
   },
   {
-   "rank": 68,
+   "rank": 67,
    "name": "Sega Dreamcast",
    "category": "Game Consoles",
    "units": "9.1M (IT History Society / Sega-era repo",
@@ -741,7 +741,7 @@
    "trend_amount": 1
   },
   {
-   "rank": 69,
+   "rank": 68,
    "name": "Google Home Mini (2017)",
    "category": "Smart Home / IoT",
    "units": "6.4M (Google via Engadget, 2018-01-06)",
@@ -752,7 +752,7 @@
    "trend_amount": 1
   },
   {
-   "rank": 70,
+   "rank": 69,
    "name": "Tectoy Master System (Brazilian variants)",
    "category": "Game Consoles",
    "units": "8M (Tectoy reporting, 2015)",
@@ -763,7 +763,7 @@
    "trend_amount": 3
   },
   {
-   "rank": 71,
+   "rank": 70,
    "name": "SodaStream soda-maker line (1903\u2013present)",
    "category": "Other",
    "units": "8M (Company-derived sales history (Motle",
@@ -774,7 +774,7 @@
    "trend_amount": 2
   },
   {
-   "rank": 72,
+   "rank": 71,
    "name": "Super Nintendo Classic Edition",
    "category": "Game Consoles",
    "units": "5.3M (Nintendo IR sales data, 2019-03)",
@@ -785,7 +785,7 @@
    "trend_amount": 1
   },
   {
-   "rank": 73,
+   "rank": 72,
    "name": "PlayStation VR (2016)",
    "category": "Game Consoles",
    "units": "5M (Sony announcement (Jim Ryan, via Roa",
@@ -796,7 +796,7 @@
    "trend_amount": 3
   },
   {
-   "rank": 74,
+   "rank": 73,
    "name": "Ledger hardware-wallet line (2014\u2013present)",
    "category": "Other",
    "units": "6M (Ledger company disclosure (via TechC",
@@ -807,7 +807,7 @@
    "trend_amount": 1
   },
   {
-   "rank": 75,
+   "rank": 74,
    "name": "Chromebooks (global)",
    "category": "PCs &amp; Single-Board",
    "units": "5.8M (IDC via press reports, 2023)",
@@ -818,7 +818,7 @@
    "trend_amount": 1
   },
   {
-   "rank": 76,
+   "rank": 75,
    "name": "Raspberry Pi Pico",
    "category": "PCs &amp; Single-Board",
    "units": "4M (Tom&#x27;s Hardware (quoting Eben Up",
@@ -829,7 +829,7 @@
    "trend_amount": 2
   },
   {
-   "rank": 77,
+   "rank": 76,
    "name": "GoPro Hero 5 Black",
    "category": "Cameras &amp; Drones",
    "units": "4M (GoPro press release &#x27;HERO5 Blac",
@@ -840,7 +840,7 @@
    "trend_amount": 2
   },
   {
-   "rank": 78,
+   "rank": 77,
    "name": "Nintendo Classic Mini: NES",
    "category": "Game Consoles",
    "units": "3.6M (Nintendo IR sales data, 2019-03)",
@@ -851,7 +851,7 @@
    "trend_amount": 3
   },
   {
-   "rank": 79,
+   "rank": 78,
    "name": "Technics SL-1200 turntable line (1972\u2013present)",
    "category": "Other",
    "units": "3.5M (Panasonic/Technics 50th-anniversar",
@@ -862,7 +862,7 @@
    "trend_amount": 3
   },
   {
-   "rank": 80,
+   "rank": 79,
    "name": "Apple Pencil (1st generation, 2015)",
    "category": "E-Readers &amp; Tablets",
    "units": "4.5M (KGI/Ming-Chi Kuo via AppleInsider,",
@@ -873,7 +873,7 @@
    "trend_amount": 2
   },
   {
-   "rank": 81,
+   "rank": 80,
    "name": "Chipolo tracker line (2013\u2013present)",
    "category": "Smart Home / IoT",
    "units": "4.5M (Chipolo company disclosure (via Te",
@@ -884,7 +884,7 @@
    "trend_amount": 2
   },
   {
-   "rank": 82,
+   "rank": 81,
    "name": "Apple iPad 3rd generation (2012)",
    "category": "E-Readers &amp; Tablets",
    "units": "3M (Apple press release, 2012-03-19)",
@@ -895,7 +895,7 @@
    "trend_amount": 3
   },
   {
-   "rank": 83,
+   "rank": 82,
    "name": "Apple iPad 4th generation (2012)",
    "category": "E-Readers &amp; Tablets",
    "units": "3M (Apple press release, 2012-11-05)",
@@ -906,7 +906,7 @@
    "trend_amount": 1
   },
   {
-   "rank": 84,
+   "rank": 83,
    "name": "Parallax BASIC Stamp",
    "category": "PCs &amp; Single-Board",
    "units": "3M (Parallax (BASIC Stamp manual, 2nd ed",
@@ -917,7 +917,7 @@
    "trend_amount": 3
   },
   {
-   "rank": 85,
+   "rank": 84,
    "name": "Valve Steam Deck",
    "category": "Game Consoles",
    "units": "3.7M (IDC estimate (by end-2024; Valve h",
@@ -928,7 +928,7 @@
    "trend_amount": 3
   },
   {
-   "rank": 86,
+   "rank": 85,
    "name": "Tectoy Mega Drive (Brazilian variants)",
    "category": "Game Consoles",
    "units": "3M (Tectoy reporting, 2015)",
@@ -939,7 +939,7 @@
    "trend_amount": 2
   },
   {
-   "rank": 87,
+   "rank": 86,
    "name": "Ray-Ban Meta Smart Glasses",
    "category": "Wearables",
    "units": "2M (EssilorLuxottica (Q4 2024 earnings c",
@@ -950,7 +950,7 @@
    "trend_amount": 3
   },
   {
-   "rank": 88,
+   "rank": 87,
    "name": "Whisker Litter-Robot line (2000\u2013present)",
    "category": "Smart Home / IoT",
    "units": "2M (Whisker press release (Business Wire",
@@ -961,7 +961,7 @@
    "trend_amount": 3
   },
   {
-   "rank": 89,
+   "rank": 88,
    "name": "Wyze Cam v2 (2018)",
    "category": "Smart Home / IoT",
    "units": "1.5M (Wyze Labs via Pulse2 / GeekWire fu",
@@ -972,7 +972,7 @@
    "trend_amount": 0
   },
   {
-   "rank": 90,
+   "rank": 89,
    "name": "BBC micro:bit",
    "category": "PCs &amp; Single-Board",
    "units": "2M (Science Museum Group, 2026)",
@@ -983,7 +983,7 @@
    "trend_amount": 1
   },
   {
-   "rank": 91,
+   "rank": 90,
    "name": "Husqvarna Automower line (1995\u2013present)",
    "category": "Smart Home / IoT",
    "units": "2M (Husqvarna press coverage (Landscape ",
@@ -994,7 +994,7 @@
    "trend_amount": 0
   },
   {
-   "rank": 92,
+   "rank": 91,
    "name": "Meta Quest 3 / Quest 3S",
    "category": "Game Consoles",
    "units": "1.7M (industry reporting (over 1.7M), 20",
@@ -1005,7 +1005,7 @@
    "trend_amount": 2
   },
   {
-   "rank": 93,
+   "rank": 92,
    "name": "Sega Genesis Mini / Mega Drive Mini",
    "category": "Game Consoles",
    "units": "1.5M (Sega reporting (over 1.5M), 2023)",
@@ -1016,7 +1016,7 @@
    "trend_amount": 3
   },
   {
-   "rank": 94,
+   "rank": 93,
    "name": "reMarkable 2 (2020)",
    "category": "E-Readers &amp; Tablets",
    "units": "1M (reMarkable company announcement via ",
@@ -1027,7 +1027,7 @@
    "trend_amount": 1
   },
   {
-   "rank": 95,
+   "rank": 94,
    "name": "Xfinity xFi Pods (2nd gen)",
    "category": "Networking Gear",
    "units": "1M (Comcast 2021 WiFi Trends Report (via",
@@ -1038,7 +1038,7 @@
    "trend_amount": 2
   },
   {
-   "rank": 96,
+   "rank": 95,
    "name": "Flipper Zero (2020\u2013present)",
    "category": "Other",
    "units": "1M (Flipper Devices company statement (v",
@@ -1049,7 +1049,7 @@
    "trend_amount": 1
   },
   {
-   "rank": 97,
+   "rank": 96,
    "name": "Tractive GPS tracker line (2013\u2013present)",
    "category": "Smart Home / IoT",
    "units": "1M (Tractive company website (product pa",
@@ -1060,7 +1060,7 @@
    "trend_amount": 1
   },
   {
-   "rank": 98,
+   "rank": 97,
    "name": "Sky Q (2016)",
    "category": "Media Streamers",
    "units": "1M (Sky via AVForums/informitv, 2017-01/",
@@ -1071,7 +1071,7 @@
    "trend_amount": 2
   },
   {
-   "rank": 99,
+   "rank": 98,
    "name": "Nex Playground",
    "category": "Game Consoles",
    "units": "1M (Nex announcement, 2025)",
@@ -1082,7 +1082,7 @@
    "trend_amount": 1
   },
   {
-   "rank": 100,
+   "rank": 99,
    "name": "Ring Video Doorbell (2nd Gen, 2020)",
    "category": "Smart Home / IoT",
    "units": "359K (U.S. CPSC recall notice (Nov 2020)",
@@ -1091,6 +1091,270 @@
    "previous_rank": 99,
    "trend": "down",
    "trend_amount": 1
+  },
+  {
+   "name": "NVIDIA GeForce RTX 4090",
+   "category": "GPUs",
+   "units": "~3M+ sold",
+   "confidence": "B",
+   "rank": 100,
+   "previous_rank": 101,
+   "trend": "same",
+   "trend_amount": 0,
+   "url": null,
+   "trending_score": 0.0
+  },
+  {
+   "name": "NVIDIA GeForce RTX 4080 Super",
+   "category": "GPUs",
+   "units": "~2M+ sold",
+   "confidence": "C",
+   "rank": 101,
+   "previous_rank": 102,
+   "trend": "same",
+   "trend_amount": 0,
+   "url": null,
+   "trending_score": 0.0
+  },
+  {
+   "name": "NVIDIA GeForce RTX 4070 Ti Super",
+   "category": "GPUs",
+   "units": "~2M+ sold",
+   "confidence": "C",
+   "rank": 102,
+   "previous_rank": 103,
+   "trend": "same",
+   "trend_amount": 0,
+   "url": null,
+   "trending_score": 0.0
+  },
+  {
+   "name": "NVIDIA GeForce RTX 4070 Super",
+   "category": "GPUs",
+   "units": "~3M+ sold",
+   "confidence": "B",
+   "rank": 103,
+   "previous_rank": 104,
+   "trend": "same",
+   "trend_amount": 0,
+   "url": null,
+   "trending_score": 0.0
+  },
+  {
+   "name": "NVIDIA GeForce RTX 4070",
+   "category": "GPUs",
+   "units": "~4M+ sold",
+   "confidence": "B",
+   "rank": 104,
+   "previous_rank": 105,
+   "trend": "same",
+   "trend_amount": 0,
+   "url": null,
+   "trending_score": 0.0
+  },
+  {
+   "name": "NVIDIA GeForce RTX 4060 Ti",
+   "category": "GPUs",
+   "units": "~3M+ sold",
+   "confidence": "C",
+   "rank": 105,
+   "previous_rank": 106,
+   "trend": "same",
+   "trend_amount": 0,
+   "url": null,
+   "trending_score": 0.0
+  },
+  {
+   "name": "NVIDIA GeForce RTX 4060",
+   "category": "GPUs",
+   "units": "~5M+ sold",
+   "confidence": "B",
+   "rank": 106,
+   "previous_rank": 107,
+   "trend": "same",
+   "trend_amount": 0,
+   "url": null,
+   "trending_score": 0.0
+  },
+  {
+   "name": "NVIDIA GeForce RTX 3090",
+   "category": "GPUs",
+   "units": "~2M+ sold",
+   "confidence": "C",
+   "rank": 107,
+   "previous_rank": 108,
+   "trend": "same",
+   "trend_amount": 0,
+   "url": null,
+   "trending_score": 0.0
+  },
+  {
+   "name": "NVIDIA GeForce RTX 3080",
+   "category": "GPUs",
+   "units": "~6M+ sold",
+   "confidence": "B",
+   "rank": 108,
+   "previous_rank": 109,
+   "trend": "same",
+   "trend_amount": 0,
+   "url": null,
+   "trending_score": 0.0
+  },
+  {
+   "name": "NVIDIA GeForce RTX 3070",
+   "category": "GPUs",
+   "units": "~8M+ sold",
+   "confidence": "B",
+   "rank": 109,
+   "previous_rank": 110,
+   "trend": "same",
+   "trend_amount": 0,
+   "url": null,
+   "trending_score": 0.0
+  },
+  {
+   "name": "NVIDIA GeForce RTX 3060",
+   "category": "GPUs",
+   "units": "~15M+ sold",
+   "confidence": "A",
+   "rank": 110,
+   "previous_rank": 111,
+   "trend": "same",
+   "trend_amount": 0,
+   "url": null,
+   "trending_score": 0.0
+  },
+  {
+   "name": "NVIDIA GeForce RTX 3060 Ti",
+   "category": "GPUs",
+   "units": "~6M+ sold",
+   "confidence": "C",
+   "rank": 111,
+   "previous_rank": 112,
+   "trend": "same",
+   "trend_amount": 0,
+   "url": null,
+   "trending_score": 0.0
+  },
+  {
+   "name": "NVIDIA GeForce RTX 2080 Ti",
+   "category": "GPUs",
+   "units": "~3M+ sold",
+   "confidence": "C",
+   "rank": 112,
+   "previous_rank": 113,
+   "trend": "same",
+   "trend_amount": 0,
+   "url": null,
+   "trending_score": 0.0
+  },
+  {
+   "name": "NVIDIA GeForce GTX 1660 Super",
+   "category": "GPUs",
+   "units": "~10M+ sold",
+   "confidence": "B",
+   "rank": 113,
+   "previous_rank": 114,
+   "trend": "same",
+   "trend_amount": 0,
+   "url": null,
+   "trending_score": 0.0
+  },
+  {
+   "name": "NVIDIA GeForce GTX 1060",
+   "category": "GPUs",
+   "units": "~30M+ sold",
+   "confidence": "A",
+   "rank": 114,
+   "previous_rank": 115,
+   "trend": "same",
+   "trend_amount": 0,
+   "url": null,
+   "trending_score": 0.0
+  },
+  {
+   "name": "AMD Radeon RX 7900 XTX",
+   "category": "GPUs",
+   "units": "~1.5M+ sold",
+   "confidence": "C",
+   "rank": 115,
+   "previous_rank": 116,
+   "trend": "same",
+   "trend_amount": 0,
+   "url": null,
+   "trending_score": 0.0
+  },
+  {
+   "name": "AMD Radeon RX 7800 XT",
+   "category": "GPUs",
+   "units": "~2M+ sold",
+   "confidence": "C",
+   "rank": 116,
+   "previous_rank": 117,
+   "trend": "same",
+   "trend_amount": 0,
+   "url": null,
+   "trending_score": 0.0
+  },
+  {
+   "name": "AMD Radeon RX 6700 XT",
+   "category": "GPUs",
+   "units": "~4M+ sold",
+   "confidence": "C",
+   "rank": 117,
+   "previous_rank": 118,
+   "trend": "same",
+   "trend_amount": 0,
+   "url": null,
+   "trending_score": 0.0
+  },
+  {
+   "name": "AMD Radeon RX 6600",
+   "category": "GPUs",
+   "units": "~5M+ sold",
+   "confidence": "C",
+   "rank": 118,
+   "previous_rank": 119,
+   "trend": "same",
+   "trend_amount": 0,
+   "url": null,
+   "trending_score": 0.0
+  },
+  {
+   "name": "AMD Radeon RX 580",
+   "category": "GPUs",
+   "units": "~15M+ sold",
+   "confidence": "B",
+   "rank": 119,
+   "previous_rank": 120,
+   "trend": "same",
+   "trend_amount": 0,
+   "url": null,
+   "trending_score": 0.0
+  },
+  {
+   "name": "Intel Arc A770",
+   "category": "GPUs",
+   "units": "~500K+ sold",
+   "confidence": "C",
+   "rank": 120,
+   "previous_rank": 121,
+   "trend": "same",
+   "trend_amount": 0,
+   "url": null,
+   "trending_score": 0.0
+  },
+  {
+   "name": "Intel Arc A750",
+   "category": "GPUs",
+   "units": "~500K+ sold",
+   "confidence": "C",
+   "rank": 121,
+   "previous_rank": 122,
+   "trend": "same",
+   "trend_amount": 0,
+   "url": null,
+   "trending_score": 0.0
   }
  ],
  "pulse": {
