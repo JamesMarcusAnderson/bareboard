@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0">
+  <channel>
+    <title>BareBoard — What's New</title>
+    <link>https://bareboard.org/</link>
+    <description>Recent additions to BareBoard, the free hardware education resource.</description>
+    <language>en-us</language>
+    <lastBuildDate>Wed, 07 Oct 2026 00:00:00 +0000</lastBuildDate>
+    <item>
+      <title>Chip Database</title>
+      <link>https://bareboard.org/chips.html</link>
+      <guid>https://bareboard.org/chips.html</guid>
+      <description>95 chips mapped across 47 devices — every chip traced to the device it ships in, sourced from public teardowns with evidence labels.</description>
+      <pubDate>Wed, 07 Oct 2026 00:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>Planned Obsolescence Archive</title>
+      <link>https://bareboard.org/obsolescence.html</link>
+      <guid>https://bareboard.org/obsolescence.html</guid>
+      <description>7 documented cases of updates and policies bricking or degrading owned hardware, each with evidence URLs and outcomes.</description>
+      <pubDate>Wed, 07 Oct 2026 00:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>Repair Guides</title>
+      <link>https://bareboard.org/repair.html</link>
+      <guid>https://bareboard.org/repair.html</guid>
+      <description>19 devices ranked by repair hostility with iFixit scores, anti-repair tactics, and tools needed — worst first.</description>
+      <pubDate>Wed, 07 Oct 2026 00:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>Protocol Reverse Engineering</title>
+      <link>https://bareboard.org/protocols.html</link>
+      <guid>https://bareboard.org/protocols.html</guid>
+      <description>7 closed protocols the community has reverse engineered, plus a 14-technique firmware access playbook and simple entry points using everyday ports.</description>
+      <pubDate>Wed, 07 Oct 2026 00:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>Start Here</title>
+      <link>https://bareboard.org/start-here.html</link>
+      <guid>https://bareboard.org/start-here.html</guid>
+      <description>A beginner's guide for zero technology skill: what to buy for under $15, a first project that opens nothing, and a plain-language glossary.</description>
+      <pubDate>Wed, 07 Oct 2026 00:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>Datasheet Index Search</title>
+      <link>https://bareboard.org/datasheets.html</link>
+      <guid>https://bareboard.org/datasheets.html</guid>
+      <description>101 component datasheets now searchable with category filters and photos.</description>
+      <pubDate>Wed, 07 Oct 2026 00:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>New IoT Device Pages</title>
+      <link>https://bareboard.org/devices/</link>
+      <guid>https://bareboard.org/devices/</guid>
+      <description>Echo Dot 5th Gen, Nest Mini 2nd Gen, Wyze Cam v3, Kasa HS103, Sonoff Basic R3, and Raspberry Pi Pico W — each with FCC ID, chip identification, and non-destructive firmware access.</description>
+      <pubDate>Wed, 07 Oct 2026 00:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>FCC IDs on Teardowns</title>
+      <link>https://bareboard.org/autopsy/</link>
+      <guid>https://bareboard.org/autopsy/</guid>
+      <description>Every teardown page now lists the device's FCC ID after the mission statement, linking to public filings.</description>
+      <pubDate>Wed, 07 Oct 2026 00:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>The BareBoard Hot 100</title>
+      <link>https://bareboard.org/hot-100.html</link>
+      <guid>https://bareboard.org/hot-100.html</guid>
+      <description>The 100 devices that matter most to hardware education, ranked by editorial judgment. Every entry sourced — no invented sales data, no fake metrics.</description>
+      <pubDate>Wed, 07 Oct 2026 00:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>Legal Framework</title>
+      <link>https://bareboard.org/terms.html</link>
+      <guid>https://bareboard.org/terms.html</guid>
+      <description>Terms, DMCA, Copyright, and Privacy policies published.</description>
+      <pubDate>Wed, 07 Oct 2026 00:00:00 +0000</pubDate>
+    </item>
+  </channel>
+</rss>

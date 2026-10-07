@@ -9,8 +9,16 @@
 <title>Wyze Cam v3 &mdash; BareBoard &mdash; Free Hardware Education</title>
 <meta name="description" content="Wyze Cam v3: Ingenic T31, FCC ID 2AUIUWYZEC3, UART access, and teardown notes.">
 <meta name="theme-color" content="#fbfbfc">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="BareBoard">
+<meta property="og:title" content="Wyze Cam v3">
+<meta property="og:description" content="Wyze Cam v3: Ingenic T31, FCC ID, UART access, and teardown notes.">
+<meta property="og:url" content="https://bareboard.org/devices/wyze-cam-v3/">
+<meta property="og:image" content="https://bareboard.org/img/frank-clean.jpg">
+<meta name="twitter:card" content="summary_large_image">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%231d1d1f'/%3E%3Ctext x='32' y='45' font-family='system-ui,-apple-system,sans-serif' font-size='36' fill='white' text-anchor='middle'%3EB%3C/text%3E%3C/svg%3E">
 <link rel="stylesheet" href="/style.css">
+<link rel="alternate" type="application/rss+xml" title="BareBoard &mdash; What&apos;s New" href="/feed.xml">
 </head>
 <body>
 <header class="site-nav">
@@ -107,9 +115,6 @@
   <aside class="legal-notice" style="background:#fff8e1;border:1px solid #e6d690;border-radius:8px;padding:1em 1.2em;margin:0 0 1.5em;font-size:0.88rem;color:#5a4e1a;">
     <strong>Educational purpose.</strong> Everything on this page is published for education and research. Teardowns document hardware the author legally owns. Datasheets link to public sources. FCC filings are public record. Lawsuits and controversies cite public reporting. Nothing here is stolen, leaked, or confidential. If you use this information, you&rsquo;re responsible for complying with the laws where you live. This isn&rsquo;t legal advice &mdash; it&rsquo;s a workbench.
   </aside>
-  <aside class="purpose-note" style="background:#eef6ee;border:1px solid #b9d8b9;border-radius:8px;padding:1em 1.2em;margin:0 0 1.5em;font-size:0.92rem;color:#1e4620;">
-    <strong>Your device, your rules.</strong> You bought it &mdash; you have the right to update its firmware, patch its security issues, and remove software you don&rsquo;t want on it. Every method on this page is non-destructive: it uses the device&rsquo;s existing ports, buttons, or software features. Nothing here requires breaking the enclosure.
-  </aside>
   <h1>Wyze Cam v3</h1>
   <p class="lede">The $30 camera that proved good hardware doesn&rsquo;t need a luxury price. An Ingenic T31 video SoC, color night vision, and &mdash; unusually for a budget camera &mdash; serial pads the community has already mapped.</p>
 
@@ -164,21 +169,20 @@
 
   <section>
     <h2 id="entry">Simple Entry Points</h2>
-    <h3>Update firmware with a microSD card (no tools needed)</h3>
-    <p><strong>What do I need?</strong> A microSD card and the firmware file from the manufacturer&rsquo;s support site.</p>
+    <h3>Serial pads beside the SoC</h3>
+    <p><strong>You need:</strong> A 3.3 V USB-to-serial adapter (about $3) and fine probe wires or pogo pins.</p>
     <ol>
-      <li>Copy the firmware file to the microSD card following the manufacturer&rsquo;s instructions.</li>
-      <li>With the camera unplugged, insert the card and hold the setup button.</li>
-      <li>Plug the camera in while holding the button until the status light changes &mdash; the camera installs the firmware from the card.</li>
+      <li>Open the housing and locate the three pads adjacent to the largest IC (the Ingenic SoC), as identified in community analysis of the FCC internal photos.</li>
+      <li>Identify GND with a multimeter (continuity to the USB shield), then probe the remaining pads at 115200 baud for boot output to find TX.</li>
+      <li>A serial console typically drops into the bootloader, where you can inspect the firmware layout and boot parameters.</li>
     </ol>
-    <p>This is the same process used to recover a camera with corrupted software, and it never requires opening the case.</p>
-    <h3>For advanced users: the serial pads</h3>
-    <p>Community analysis of the FCC internal photos identified three pads beside the main chip that appear to carry a serial console. Reaching them requires removing screws only (no glue, no prying). A 3.3&nbsp;V USB-to-serial adapter (about $3) at 115200 baud is the standard tool:</p>
 <pre class="term" style="background:#1d1d1f;color:#e8e8e8;padding:1em;border-radius:8px;overflow-x:auto;"><code>$ screen /dev/ttyUSB0 115200
 U-Boot 2013.07 (Nov 04 2020 - 14:22:10)
 DRAM:  128 MiB
+SF: Detected MX25L12805D with page size 256 Bytes
 # (bootloader prompt — firmware layout visible here)</code></pre>
     <p><em>Pad functions are community-identified, not manufacturer-documented; verify with a multimeter before connecting anything.</em></p>
+  </section>
 
   <section>
     <h2 id="reading">Further Reading</h2>
