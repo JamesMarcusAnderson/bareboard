@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self' data:; style-src 'self'; script-src 'self'; object-src 'none'; frame-src 'none'; base-uri 'self'; form-action 'none'">
+<meta name="referrer" content="no-referrer">
+<meta name="robots" content="noai, noimageai">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Bench Notes — BareBoard — Free Hardware Education</title>
+<meta name="description" content="BareBoard: a free educational and beneficial resource. We can't open their hardware, so we open our findings.">
+<meta name="theme-color" content="#fbfbfc">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%231d1d1f'/%3E%3Ctext x='32' y='45' font-family='system-ui,-apple-system,sans-serif' font-size='36' font-weight='700' fill='white' text-anchor='middle'%3EB%3C/text%3E%3C/svg%3E">
+<link rel="stylesheet" href="/style.css">
+</head>
+<body>
+<header class="site-nav">
+  <div class="nav-inner">
+    <nav aria-label="Primary">
+      <ul>
+        <li><a href="/" class="brand-word">BareBoard</a></li>
+        <li><a href="/devices/">Devices</a></li>
+        <li class="has-children">
+          <a href="/about.html" aria-haspopup="true" aria-expanded="false">About</a>
+          <div class="col-panel">
+            <div class="dropdown-inner">
+              <ul class="dropdown-col">
+                <li><a href="/about.html#how-we-work">How we work</a></li>
+                <li><a href="/about.html#what-this-is-not">What this is not</a></li>
+                <li><a href="/datasheets.html">Datasheet Index</a></li>
+                <li><a href="/notes/">Bench Notes</a></li>
+              </ul>
+            </div>
+          </div></li>
+        <li class="has-children">
+          <a href="/hot-100.html" aria-haspopup="true" aria-expanded="false">Hot 100</a>
+          <div class="col-panel">
+            <div class="dropdown-inner">
+              <ul class="dropdown-col">
+                <li><a href="/hot-100.html">Cameras &amp; Drones</a></li>
+                <li><a href="/hot-100.html">E-Readers &amp; Tablets</a></li>
+                <li><a href="/hot-100.html">Game Consoles</a></li>
+                <li><a href="/hot-100.html">Media Streamers</a></li>
+                <li><a href="/hot-100.html">Networking Gear</a></li>
+                <li class="dropdown-sub"><a href="/autopsy/xfinity-xb3/">Xfinity XB3 (Arris TG1682G)</a></li>
+                <li><a href="/hot-100.html">Other</a></li>
+                <li><a href="/hot-100.html">PCs &amp; Single-Board</a></li>
+                <li><a href="/hot-100.html">Phones</a></li>
+                <li><a href="/hot-100.html">Printers</a></li>
+                <li><a href="/hot-100.html">Smart Home / IoT</a></li>
+                <li><a href="/hot-100.html">TVs &amp; Displays</a></li>
+                <li><a href="/hot-100.html">Wearables</a></li>
+              </ul>
+            </div>
+          </div></li>
+<li class="has-children">
+          <a href="/most-wanted.html" aria-haspopup="true" aria-expanded="false">Most Wanted</a>
+          <div class="col-panel">
+            <div class="dropdown-inner">
+              <ul class="dropdown-col">
+                <li><a href="/most-wanted.html#board">The board</a></li>
+              </ul>
+            </div>
+          </div></li>
+        <li class="has-children">
+          <a href="/support.html" aria-haspopup="true" aria-expanded="false">Support</a>
+          <div class="col-panel">
+            <div class="dropdown-inner">
+              <ul class="dropdown-col">
+                <li><a href="/support.html#mission">Mission</a></li>
+                <li><a href="/support.html#chip-in">Donate</a></li>
+                <li><a href="/support.html#allies">Allies</a></li>
+              </ul>
+            </div>
+          </div></li>
+        <li class="has-children">
+          <a href="/watchmen.html" aria-haspopup="true" aria-expanded="false">Watchmen</a>
+          <div class="col-panel">
+            <div class="dropdown-inner">
+              <ul class="dropdown-col">
+                <li><a href="/watchmen.html#who-watches">Who watches</a></li>
+                <li><a href="/watchmen.html#methodology">Methodology</a></li>
+                <li><a href="/watchmen.html#tools">The bench</a></li>
+                <li><a href="/watchmen.html#corrections">Corrections</a></li>
+              </ul>
+            </div>
+          </div></li>
+        <li class="nav-search-item">
+          <button type="button" class="search-toggle" aria-label="Search BareBoard" aria-expanded="false" aria-controls="search-panel"><svg width="15" height="15" viewBox="0 0 16 16" fill="none" aria-hidden="true"><circle cx="7" cy="7" r="5.2" stroke="currentColor" stroke-width="1.7"/><line x1="11.2" y1="11.2" x2="14.6" y2="14.6" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/></svg></button>
+        </li>
+      </ul>
+    </nav>
+  </div>
+  <div class="search-panel" id="search-panel" hidden>
+    <div class="search-inner">
+      <svg width="15" height="15" viewBox="0 0 16 16" fill="none" aria-hidden="true" class="search-icon"><circle cx="7" cy="7" r="5.2" stroke="currentColor" stroke-width="1.7"/><line x1="11.2" y1="11.2" x2="14.6" y2="14.6" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/></svg>
+      <input type="search" id="site-search" placeholder="Search BareBoard" aria-label="Search BareBoard" autocomplete="off" spellcheck="false">
+      <button type="button" class="search-close" aria-label="Close search">&times;</button>
+    </div>
+    <ul class="search-results" id="search-results" aria-live="polite"></ul>
+  </div>
+</header>
+
+<main>
+  <h1>Bench Notes</h1>
+  <p class="lede">Short observations from the workbench. No fluff, no filler &mdash; just things worth knowing.</p>
+
+  <section>
+    <article style="margin-bottom:2em;">
+      <h2 id="uart-baud-115200" style="font-size:1.2rem;">115200 is almost always the answer</h2>
+      <p>If you&rsquo;re hunting for a serial console and getting garbage, try 115200 first. It&rsquo;s the default baud rate on the overwhelming majority of embedded Linux devices, routers, and IoT gadgets. The runner-ups are 57600 and 9600, but 115200 hits more often than everything else combined.</p>
+    </article>
+
+    <article style="margin-bottom:2em;">
+      <h2 id="tx-idles-high" style="font-size:1.2rem;">TX idles high &mdash; use it</h2>
+      <p>Not sure which pad is TX? Power the board and probe with a multimeter. UART TX idles at logic HIGH (3.3V or 1.8V). The pin sitting at a steady rail voltage while the board boots is almost certainly TX. RX idles high too but won&rsquo;t show boot chatter on a scope.</p>
+    </article>
+
+    <article style="margin-bottom:2em;">
+      <h2 id="dont-connect-vcc" style="font-size:1.2rem;">Don&rsquo;t connect VCC on your serial adapter</h2>
+      <p>The board powers itself. Your USB-to-serial adapter powers itself. Connecting VCC between them joins two power supplies that were never meant to meet. You only need three wires: TX, RX, GND. Leave VCC unconnected.</p>
+    </article>
+
+    <article style="margin-bottom:2em;">
+      <h2 id="fcc-id-gold" style="font-size:1.2rem;">The FCC ID is a cheat code</h2>
+      <p>Every wireless device sold in the US has an FCC ID printed on it. Look it up at fccid.io and you&rsquo;ll find internal photos, test reports, block diagrams, and sometimes full schematics &mdash; all legally public. It&rsquo;s the single best free intelligence source in hardware hacking.</p>
+    </article>
+
+    <article style="margin-bottom:2em;">
+      <h2 id="esd-mat" style="font-size:1.2rem;">Your boards are tougher than you think (but ground yourself anyway)</h2>
+      <p>Modern chips have decent ESD protection. You&rsquo;re unlikely to kill a board by touching it. But &ldquo;unlikely&rdquo; isn&rsquo;t &ldquo;never&rdquo; &mdash; a $5 grounding strap is cheaper than a dead SoC. Ground yourself, especially in dry environments.</p>
+    </article>
+
+    <article style="margin-bottom:2em;">
+      <h2 id="read-datasheet-first" style="font-size:1.2rem;">Read the datasheet before you probe</h2>
+      <p>Five minutes with the pinout diagram saves an hour of guessing. The datasheet tells you which pins are power, which are ground, and which ones will release magic smoke if you short them. Our <a href="/datasheets.html">datasheet index</a> is a good place to start.</p>
+    </article>
+  </section>
+  <footer>
+    <a href="/tarpit/" class="hp-link" aria-hidden="true" tabindex="-1">device index</a>
+    <p>BareBoard &mdash; a free educational resource. Text and findings published under open terms; nothing here is for sale.</p>
+        <nav>
+      <a href="/">Home</a> &middot; <a href="/about.html">About</a> &middot; <a href="/colophon.html">Colophon</a>
+    </nav>
+
+    <div class="legal-framework">
+      <p><strong>BareBoard Legal Framework &amp; Declarations</strong></p>
+      <ul>
+      <li><strong>No AI training:</strong> All text, findings, and original photography on this site are copyrighted. Automated scraping for AI model training is prohibited. Crawlers that ignore robots.txt are trespassing.</li>
+        <li><strong>Educational nature:</strong> BareBoard operates exclusively as a non-commercial, open educational resource. All material is compiled for academic evaluation, hardware preservation, and technical literacy under 17 U.S.C. &sect; 107 (fair use).</li>
+        <li><strong>Zero-leak / no-binary clause:</strong> This site does not host, distribute, or mirror proprietary firmware binaries, encrypted operating system keys, or weaponizable exploits. Documentation covers only the public, physical realities of circuit hardware.</li>
+        <li><strong>Property verification:</strong> Every hardware autopsy is performed on personally owned, legally acquired equipment. No rented or third-party infrastructure is used.</li>
+        <li><strong>Public source sourcing:</strong> Comparative and regulatory data is aggregated from official public filings, including the U.S. Federal Communications Commission equipment authorization database.</li>
+      </ul>
+      <p class="legal-note"><em>BareBoard &mdash; open hardware allies, documented in alignment with the Open Source Hardware Association framework. Text and original photography published under open terms; nothing here is for sale.</em></p>
+    </div>
+  </footer>
+</main>
+
+<script src="/nav.js" defer></script>
+<script src="/search.js" defer></script>
+</body>
+</html>
