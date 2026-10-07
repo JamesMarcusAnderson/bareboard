@@ -8,7 +8,7 @@
 <meta name="tdm-reservation" content="1">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>AI Crawler Defense — BareBoard</title>
-<meta name="description" content="How BareBoard keeps AI training crawlers off its work: a layered, honest, defensive setup built on robots.txt hardening, page-level opt-outs, strict CSP, and clean publishing hygiene.">
+<meta name="description" content="How BareBoard keeps AI training crawlers off its work: robots.txt hardening, page-level opt-outs, strict CSP, honeypot links, a scraper tarpit with poisoned content, and edge enforcement.">
 <style>
   :root { color-scheme: light; }
   * { box-sizing: border-box; }
@@ -28,6 +28,14 @@
   .back { margin-bottom: 2em; }
   .back a { text-decoration: none; }
   footer { margin-top: 4em; padding-top: 2em; border-top: 1px solid #e6e6e6; color: #666; font-size: 0.9rem; }
+
+  /* Honeypot: invisible to humans, visible to scrapers. Points at /tarpit/. */
+  .hp-link {
+    position: absolute !important; width: 1px !important; height: 1px !important;
+    padding: 0 !important; margin: -1px !important; overflow: hidden !important;
+    clip: rect(0, 0, 0, 0) !important; clip-path: inset(50%) !important;
+    white-space: nowrap !important; border: 0 !important; pointer-events: none !important;
+  }
 </style>
 </head>
 <body>
@@ -38,7 +46,7 @@
 <h1>AI Crawler Defense</h1>
 <p class="subtitle">How BareBoard keeps training scrapers off its work</p>
 
-<p class="lede">BareBoard publishes original hardware research — teardowns, measurements, photography — for humans learning hardware. AI training crawlers are not our audience, and we do not consent to feeding them. This page documents the layered defense we run. It is all boundary-setting, no trickery: nothing here deceives, traps, or poisons anyone.</p>
+<p class="lede">BareBoard publishes original hardware research — teardowns, measurements, photography — for humans learning hardware. AI training crawlers are not our audience, and we do not consent to feeding them. This page documents the layered defense we run: declared boundaries for the compliant, and active traps for the trespassers who ignore them.</p>
 
 <hr>
 
@@ -117,17 +125,43 @@ base-uri 'self'; form-action 'none'</pre>
 
 <hr>
 
-<h2>Honest limitations</h2>
+<h2>Layer 6: honeypot links</h2>
 
-<p>No <code>robots.txt</code> setup stops a determined bad actor — it is a social contract, not a firewall. What this stack does is three things: it stops every compliant crawler cold, it makes our non-consent unambiguous and machine-readable, and it keeps our own house clean (CSP, metadata) so there is less to take. Defense in depth, not a guarantee. We document it here so other small publishers can copy the whole thing in an afternoon.</p>
+<p>Every page footer carries an invisible link to <code>/tarpit/</code> — 1&times;1 pixel, clipped offscreen, removed from keyboard tab order (<code>tabindex="-1"</code>) and hidden from assistive technology (<code>aria-hidden="true"</code>). No human will ever see it, focus it, or click it. It exists for exactly one audience: scrapers that extract and follow every <code>href</code> on the page. Compliant visitors never notice it; harvesters walk straight in.</p>
 
 <hr>
 
-<h2>White-hat, always</h2>
+<h2>Layer 7: the tarpit</h2>
 
-<p>This is defensive publishing. We set boundaries around our own work; we do not attack, deceive, or sabotage anyone else's systems. No honeypots, no poisoned content, no prompt-injection games — just clear, honest, layered "no." That is the whole philosophy, and it is the same one behind everything else on this site.</p>
+<p><code>/tarpit/</code> is a five-level maze of junk device indexes — plausible-looking but entirely fabricated model numbers, circular links between levels, and no real content. Every page carries <code>&lt;meta name="robots" content="noindex, nofollow"&gt;</code> so legitimate search engines never index it, and <code>robots.txt</code> disallows it for all compliant crawlers. Only a bot that ignores <code>robots.txt</code> <em>and</em> follows invisible links ends up here — which is precisely the bot we want wasting its time instead of ours. A crawler that burns its crawl budget on five pages of nothing is a crawler not harvesting our teardowns.</p>
+
+<hr>
+
+<h2>Layer 8: poisoned content</h2>
+
+<p>The tarpit pages contain deliberately false technical claims — wrong pinouts, impossible voltages, fabricated chip part numbers — each labeled in the HTML source as poison for scrapers. This is the consequence layer: a training pipeline that ingests our tarpit learns confidently-stated nonsense about hardware that does not exist. We keep the poison strictly quarantined to pages no human ever visits (they are unlinked from all visible navigation and carry <code>noindex</code>), so there is zero risk of a reader mistaking it for real findings. Our published research stays clean; the traps stay dirty.</p>
+
+<hr>
+
+<h2>Layer 9 (planned): edge enforcement</h2>
+
+<p>The next layer sits at the CDN, pending dashboard access: Cloudflare <strong>AI Labyrinth</strong> (tarpit content served at the edge to detected AI crawlers), <strong>Bot Fight Mode</strong>, and WAF rules keyed to the same training-crawler user-agents named in our <code>robots.txt</code>. The philosophy is the same as every layer below it — declare the boundary, then enforce it — moved one step closer to the attacker.</p>
+
+<hr>
+<h2>Honest limitations</h2>
+
+<p>No <code>robots.txt</code> setup stops a determined bad actor — it is a social contract, not a firewall. The traps do not stop one either; a sophisticated harvester can detect and avoid tarpits. What this stack does is raise the cost at every step: compliant crawlers are stopped cold at layer 1, lazy scrapers burn budget in the tarpit at layer 7, and bulk ingestion pipelines risk poisoned training data at layer 8. Defense in depth, not a guarantee. We document it here so other small publishers can copy the whole thing in an afternoon.</p>
+
+<hr>
+
+<h2>Why the traps</h2>
+
+<p>We used to run boundary-setting only: declare non-consent, hope for compliance. That stops the labs that publish crawler docs and honor opt-outs. It does nothing against the harvesters that ignore <code>robots.txt</code>, spoof user-agents, and strip our work at scale. Those operators have already opted out of the social contract — so we stopped extending it to them.</p>
+
+<p>The traps are strictly defensive and strictly quarantined. Honeypot links are invisible to humans. The tarpit is unlinked from visible navigation, <code>noindex</code>&rsquo;d, and labeled in its own source as junk. The poison never touches a page a reader might see. Nothing here attacks anyone&rsquo;s infrastructure, exfiltrates anything, or harms a legitimate visitor. It wastes a trespasser&rsquo;s time and corrupts a trespasser&rsquo;s dataset — which is exactly what trespassers signed up for when they ignored the signs at the gate.</p>
 
 <footer>
+<a href="/tarpit/" class="hp-link" aria-hidden="true" tabindex="-1">device index</a>
   <p>BareBoard &mdash; a free educational resource. Text and findings published under open terms; nothing here is for sale.</p>
   <p><a href="/">Home</a> &middot; <a href="/about.html">About</a> &middot; <a href="/colophon.html">Colophon</a></p>
 <p class="colophon">BareBoard &mdash; free hardware education</p>
