@@ -108,6 +108,9 @@
   <aside class="legal-notice" style="background:#fff8e1;border:1px solid #e6d690;border-radius:8px;padding:1em 1.2em;margin:0 0 1.5em;font-size:0.88rem;color:#5a4e1a;">
     <strong>Educational purpose.</strong> Everything on this page is published for education and research. Teardowns document hardware the author legally owns. Datasheets link to public sources. FCC filings are public record. Lawsuits and controversies cite public reporting. Nothing here is stolen, leaked, or confidential. If you use this information, you&rsquo;re responsible for complying with the laws where you live. This isn&rsquo;t legal advice &mdash; it&rsquo;s a workbench.
   </aside>
+  <aside class="purpose-note" style="background:#eef6ee;border:1px solid #b9d8b9;border-radius:8px;padding:1em 1.2em;margin:0 0 1.5em;font-size:0.92rem;color:#1e4620;">
+    <strong>Your device, your rules.</strong> You bought it &mdash; you have the right to update its firmware, patch its security issues, and remove software you don&rsquo;t want on it. Every method on this page is non-destructive: it uses the device&rsquo;s existing ports, buttons, or software features. Nothing here requires breaking the enclosure.
+  </aside>
   <h1>ESP32 Family</h1>
   <p class="lede">Espressif&rsquo;s Wi-Fi + Bluetooth microcontroller that ate the IoT world. Cheap, capable, and &mdash; unusually for the industry &mdash; genuinely well documented.</p>
 
@@ -182,7 +185,27 @@
   </section>
 
   <section>
-    <h2 id="reading">Further Reading</h2>
+    
+  <section>
+    <h2 id="entry">Simple Entry Points</h2>
+    <p>Start here if you&rsquo;ve never opened a device before. These methods use only the ports, buttons, and software features the device already has &mdash; no special tools, no broken plastic.</p>
+
+    <h3>Flash mode with one button and one cable</h3>
+    <p><strong>What do I need?</strong> A micro-USB cable. That&rsquo;s it.</p>
+    <ol>
+      <li>Hold the <strong>BOOT</strong> button on your ESP32 board, plug in the USB cable, then release the button. The chip is now in flash-download mode.</li>
+      <li>On your computer, <em>esptool</em> can talk to it: read the chip info, back up the firmware, or write new firmware.</li>
+      <li><strong>Firmware</strong> is the permanent software inside the chip &mdash; the program it runs every time it powers on. Reading it lets you verify what&rsquo;s installed; writing it lets you update or replace it.</li>
+    </ol>
+<pre class="term" style="background:#1d1d1f;color:#e8e8e8;padding:1em;border-radius:8px;overflow-x:auto;"><code>$ pip install esptool
+$ esptool.py --port /dev/ttyUSB0 chip_id
+Detected ESP32-S3
+Chip ID: 0x9ABCDEF0</code></pre>
+    <p><em>Every ESP32 variant in the table above works this way &mdash; the BOOT button is the universal front door.</em></p>
+    <p>Want the full technical picture? See our <a href="/protocols.html">Protocol Reverse Engineering</a> page for the complete firmware-access playbook.</p>
+  </section>
+
+<h2 id="reading">Further Reading</h2>
     <ul>
       <li><a href="https://docs.espressif.com/">Espressif official documentation</a></li>
       <li><a href="https://docs.espressif.com/projects/esp-idf/en/latest/esp32/security/vulnerabilities.html">Espressif security advisories</a></li>
