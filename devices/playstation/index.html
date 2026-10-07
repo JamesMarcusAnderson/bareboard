@@ -7,7 +7,7 @@
 <meta name="robots" content="noai, noimageai">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>PlayStation Family — BareBoard — Free Hardware Education</title>
-<meta name="description" content="PlayStation consoles PS1-PS5: chips, the 2011 PSN hack, and the OtherOS lawsuit.">
+<meta name="description" content="PlayStation consoles PS1-PS5: chips, the 2011 PSN breach, and the OtherOS lawsuit.">
 <meta name="theme-color" content="#fbfbfc">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%231d1d1f'/%3E%3Ctext x='32' y='45' font-family='system-ui,-apple-system,sans-serif' font-size='36' font-weight='700' fill='white' text-anchor='middle'%3EB%3C/text%3E%3C/svg%3E">
 <link rel="stylesheet" href="/style.css">
@@ -108,6 +108,9 @@
   <aside class="legal-notice" style="background:#fff8e1;border:1px solid #e6d690;border-radius:8px;padding:1em 1.2em;margin:0 0 1.5em;font-size:0.88rem;color:#5a4e1a;">
     <strong>Educational purpose.</strong> Everything on this page is published for education and research. Teardowns document hardware the author legally owns. Datasheets link to public sources. FCC filings are public record. Lawsuits and controversies cite public reporting. Nothing here is stolen, leaked, or confidential. If you use this information, you&rsquo;re responsible for complying with the laws where you live. This isn&rsquo;t legal advice &mdash; it&rsquo;s a workbench.
   </aside>
+  <aside class="purpose-note" style="background:#eef6ee;border:1px solid #b9d8b9;border-radius:8px;padding:1em 1.2em;margin:0 0 1.5em;font-size:0.92rem;color:#1e4620;">
+    <strong>Your device, your rules.</strong> You bought it &mdash; you have the right to update its firmware, patch its security issues, and remove software you don&rsquo;t want on it. Every method on this page is non-destructive: it uses the device&rsquo;s existing ports, buttons, or software features. Nothing here requires breaking the enclosure.
+  </aside>
   <h1>PlayStation Family</h1>
   <p class="lede">Five generations of Sony consoles &mdash; and some of the biggest security and consumer-rights battles in gaming history.</p>
 
@@ -167,14 +170,14 @@
   <section>
     <h2 id="controversies">Controversies &amp; Legal</h2>
 
-    <h3>The 2011 PlayStation Network hack</h3>
+    <h3>The 2011 PlayStation Network breach</h3>
     <p>Between April 17&ndash;19, 2011, attackers breached Sony&rsquo;s PlayStation Network and Qriocity services, compromising personal data from approximately 77 million accounts &mdash; names, addresses, emails, birth dates, passwords, and payment details. Sony shut down PSN on April 20; the outage lasted 24 days.</p>
     <p>Government officials worldwide criticized Sony&rsquo;s week-long delay in notifying users. The UK Information Commissioner&rsquo;s Office fined Sony &pound;250,000 for breaching the Data Protection Act. Sony estimated the breach cost $171 million. A US class action settled with Sony offering up to $15M in compensation (free games, PS Plus time, and up to $2,500 for proven identity theft).</p>
     <p>At the time, it was one of the largest data breaches in history.</p>
     <p>Sources: <a href="http://en.wikipedia.org/wiki/PlayStation_Network_outage">Wikipedia</a>, <a href="https://www.silicon.co.uk/security/sony-compensation-160204/amp">Silicon UK</a></p>
 
     <h3>OtherOS removal (2010&ndash;2017)</h3>
-    <p>The original &ldquo;fat&rdquo; PS3 shipped with OtherOS &mdash; the ability to install Linux alongside the PlayStation OS. The US Air Force famously built a 1,700-console supercomputer cluster from PS3s. On April 1, 2010, firmware update 3.21 removed the feature, citing security concerns (a hacker had demonstrated a fundamental exploit).</p>
+    <p>The original &ldquo;fat&rdquo; PS3 shipped with OtherOS &mdash; the ability to install Linux alongside the PlayStation OS. The US Air Force famously built a 1,700-console supercomputer cluster from PS3s. On April 1, 2010, firmware update 3.21 removed the feature, citing security concerns (a researcher had demonstrated a fundamental flaw).</p>
     <p>A class action (<em>In re Sony PS3 &ldquo;Other OS&rdquo; Litigation</em>) was filed in 2010, dismissed in 2011, revived on appeal in 2014, and settled in 2016: $55 for users who proved they ran Linux, $9 for those who bought the PS3 valuing the feature. The initial settlement was rejected by the judge over attorney fees; a revised $65-per-claimant offer followed in 2017.</p>
     <p>Sources: <a href="https://en.wikipedia.org/wiki/OtherOS">Wikipedia</a>, <a href="https://www.gamesindustry.biz/sony-settles-ps3-other-os-suit">GamesIndustry.biz</a></p>
 
@@ -184,7 +187,19 @@
   </section>
 
   <section>
-    <h2 id="reading">Further Reading</h2>
+    
+  <section>
+    <h2 id="entry">Simple Entry Points</h2>
+    <p>Start here if you&rsquo;ve never opened a device before. These methods use only the ports, buttons, and software features the device already has &mdash; no special tools, no broken plastic.</p>
+
+    <h3>A note on consoles</h3>
+    <p>Game consoles are the most locked-down devices on this site: their bootloaders verify every layer of software, and the manufacturers treat circumvention as a legal matter (see the controversies section below). BareBoard documents the <strong>hardware</strong> &mdash; the chips, the boards, the history &mdash; for education.</p>
+    <p><strong>What you can always do, non-destructively:</strong> update the system software through the official settings menu, manage installed games and apps, and back up your saves. Those are the manufacturer-supported paths for keeping a console you own up to date.</p>
+    <p>For the general principles of how embedded devices boot and where recovery modes live, see our <a href="/protocols.html">Protocol Reverse Engineering</a> page &mdash; written around openly documented hardware.</p>
+    <p>Want the full technical picture? See our <a href="/protocols.html">Protocol Reverse Engineering</a> page for the complete firmware-access playbook.</p>
+  </section>
+
+<h2 id="reading">Further Reading</h2>
     <ul>
       <li><a href="http://en.wikipedia.org/wiki/PlayStation_Network_outage">Wikipedia &mdash; 2011 PSN outage</a></li>
       <li><a href="https://en.wikipedia.org/wiki/OtherOS">Wikipedia &mdash; OtherOS</a></li>
