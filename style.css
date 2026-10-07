@@ -35,7 +35,7 @@ a { color: var(--accent); text-decoration: none; }
 a:hover { text-decoration: underline; text-underline-offset: 3px; }
 a:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; border-radius: 4px; }
 
-/* ---------- navigation — Finder column browser ---------- */
+/* ---------- navigation — Apple-style dropdown panels ---------- */
 
 .site-nav {
   position: sticky;
@@ -64,7 +64,7 @@ a:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; border-
 }
 .site-nav .brand-word:hover { text-decoration: none; color: var(--accent); }
 
-/* top-level row = Finder column zero */
+/* top-level nav row */
 .site-nav nav > ul {
   list-style: none;
   margin: 0;
@@ -87,8 +87,8 @@ a:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; border-
   transition: color 0.18s ease, background-color 0.18s ease;
 }
 .site-nav nav > ul > li > a:hover { color: var(--text); text-decoration: none; }
-/* single active selection per column, Finder-style */
-.site-nav nav > ul > li.selected > a {
+/* open trigger word gets the active pill, Apple-style */
+.site-nav nav > ul > li.open > a {
   background: rgba(0, 102, 204, 0.1);
   color: var(--text);
 }
@@ -112,7 +112,7 @@ a:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; border-
 .search-toggle:hover { color: var(--text); background: rgba(0, 0, 0, 0.05); }
 .search-toggle[aria-expanded="true"] { color: var(--text); background: rgba(0, 102, 204, 0.1); }
 
-/* full-width frosted panel shared by Finder columns and search */
+/* full-width frosted panel shared by dropdowns and search */
 .site-nav .col-panel,
 .site-nav .search-panel {
   position: absolute;
@@ -158,80 +158,46 @@ html:not(.js) .site-nav .has-children:focus-within > .col-panel {
     visibility 0s;
 }
 
-/* Finder column strip */
-.finder {
-  display: flex;
-  align-items: stretch;
+/* Apple dropdown: single Finder-style link column per panel.
+   The panel shell is full-width; JS aligns .dropdown-inner's left edge
+   under the panel's own trigger word (per-item alignment). */
+.dropdown-inner {
   max-width: 46rem;
   margin: 0 auto;
-  padding: 0 1.5rem;
-  overflow-x: auto;
-  min-height: 4rem;
+  padding: 0.7rem 1.5rem 1rem;
+  /* padding-left is set live by nav.js for per-trigger alignment */
 }
-.finder-col {
+.dropdown-col {
   list-style: none;
   margin: 0;
-  padding: 0.7rem 0;
+  padding: 0;
   min-width: 13rem;
-  max-width: 16rem;
-  flex: 0 0 auto;
-  overflow-y: auto;
-  max-height: 21rem;
+  max-width: 22rem;
 }
-.finder-col + .finder-col {
-  border-left: 1px solid var(--line);
-}
-.finder-col-head {
-  font-family: var(--mono);
-  font-size: 0.68rem;
-  font-weight: 600;
-  text-transform: uppercase;
-  letter-spacing: 0.09em;
-  color: var(--tertiary);
-  padding: 0.35rem 1.1rem 0.5rem;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-}
-.finder-col > li > a,
-.finder-col > li > .finder-note {
+.dropdown-col > li > a {
   display: flex;
   align-items: center;
   justify-content: space-between;
   gap: 0.75rem;
-  padding: 0.42rem 1.1rem;
+  padding: 0.42rem 0.7rem;
   font-size: 0.92rem;
   letter-spacing: -0.005em;
   color: var(--text);
   white-space: nowrap;
   border-radius: 6px;
-  margin: 0 0.4rem;
+  margin: 0 -0.7rem;
   transition: background-color 0.12s ease;
 }
-.finder-col > li > a:hover { text-decoration: none; background: rgba(0, 0, 0, 0.045); }
-.finder-col > li.selected > a {
-  background: rgba(0, 102, 204, 0.12);
-  color: var(--text);
-}
-.finder-col > li.has-kids > a::after {
-  content: "\203a";
-  color: var(--tertiary);
-  font-size: 1.05rem;
-  line-height: 1;
-}
-.finder-col > li > .finder-note {
+.dropdown-col > li > a:hover { text-decoration: none; background: rgba(0, 0, 0, 0.045); }
+/* indented sub-link (e.g. the XB3 report under Networking Gear) */
+.dropdown-col > li.dropdown-sub > a {
+  padding-left: 1.6rem;
+  font-size: 0.86rem;
   color: var(--secondary);
-  font-size: 0.85rem;
-  cursor: default;
 }
-/* no-JS fallback: nested lists render as an indented tree */
-html:not(.js) .finder ul ul {
-  list-style: none;
-  margin: 0.15rem 0 0.5rem 1.1rem;
-  padding-left: 0.7rem;
-  border-left: 1px solid var(--line);
-}
-html:not(.js) .finder ul ul a { font-size: 0.86rem; color: var(--secondary); }
+.dropdown-col > li.dropdown-sub > a:hover { color: var(--text); }
+/* no-JS fallback: panels reveal as simple stacked lists */
+html:not(.js) .dropdown-inner { padding-left: 1.5rem; }
 
 /* ---------- search panel ---------- */
 
@@ -570,17 +536,22 @@ body { animation: page-in 0.35s ease; }
   .site-nav nav > ul::-webkit-scrollbar { display: none; }
   .site-nav nav > ul > li { flex: 0 0 auto; }
   .site-nav nav > ul > li > a { font-size: 0.86rem; white-space: nowrap; }
-  /* Finder panel on small screens: columns scroll horizontally with snap */
-  .finder {
-    padding: 0 1rem;
-    scroll-snap-type: x proximity;
+  /* Apple dropdown panel on small screens: full-width, column scrolls if tall.
+     position:fixed escapes the horizontally-scrolling nav row (which would
+     otherwise clip the absolutely-positioned panel); JS pins top below the
+     sticky header. */
+  .site-nav .col-panel {
+    position: fixed;
+    left: 0;
+    right: 0;
+    /* top is set live by nav.js */
   }
-  .finder-col {
-    min-width: 11.5rem;
-    max-width: 78vw;
-    scroll-snap-align: start;
+  .dropdown-inner {
+    padding: 0.6rem 1rem 0.9rem;
+    max-width: 100%;
   }
-  .finder-col > li > a { font-size: 0.95rem; }
+  .dropdown-col { max-width: 100%; }
+  .dropdown-col > li > a { font-size: 0.95rem; padding: 0.5rem 0.7rem; }
   /* search panel stays comfortable */
   .search-inner { padding: 1rem 1.25rem 0.4rem; }
   #site-search { font-size: 1.15rem; }
