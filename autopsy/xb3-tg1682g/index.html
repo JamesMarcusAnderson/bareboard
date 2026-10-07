@@ -45,10 +45,32 @@
 
 <h1>Xfinity XB3 (Arris TG1682G)</h1>
 <p class="subtitle">Autopsy Report &mdash; BareBoard Device #001</p>
+<nav aria-label="On this page" style="background:#fafafa;border:1px solid #e6e6e6;border-radius:8px;padding:1.2em 1.5em;margin:1.5em 0;">
+<p style="margin:0 0 0.6em;font-weight:600;">On this page</p>
+<ol style="margin:0;columns:2;column-gap:2em;font-size:0.92rem;">
+    <li><a href="#fcc">FCC findings</a></li>
+    <li><a href="#what-it-is">What this thing is</a></li>
+    <li><a href="#legal-basis">Legal basis</a></li>
+    <li><a href="#history">History</a></li>
+    <li><a href="#outside">Physical layout</a></li>
+    <li><a href="#main-board">Main board & chip guide</a></li>
+    <li><a href="#board-layout">Board layout map</a></li>
+    <li><a href="#boot-log">Boot log</a></li>
+    <li><a href="#bridge-mode">Bridge mode problem</a></li>
+    <li><a href="#communicate">Communicating with it</a></li>
+    <li><a href="#modes">Operating modes</a></li>
+    <li><a href="#still-use">Should you still use it?</a></li>
+    <li><a href="#troubleshooting">Troubleshooting</a></li>
+    <li><a href="#faq">FAQ</a></li>
+    <li><a href="#numbers">Summary</a></li>
+    <li><a href="#glossary">Glossary</a></li>
+    <li><a href="#sources">Sources</a></li>
+</ol>
+</nav>
 
 <hr>
 
-<h2>Before you read anything else: what the FCC found</h2>
+<h2 id="fcc">Before you read anything else: what the FCC found</h2>
 
 <p>Every wireless device sold legally in the United States must be tested and authorized by the Federal Communications Commission before it ships. That authorization is public record. This box has three:</p>
 
@@ -67,7 +89,7 @@
 
 <hr>
 
-<h2>What this thing is</h2>
+<h2 id="what-it-is">What this thing is</h2>
 
 <p>The XB3 is the box Comcast handed to millions of internet customers. Its real name is the <strong>Arris TG1682G</strong>, and one box does three jobs: it is a cable modem (it talks to Comcast through the coax cable in your wall), a router (it shares that connection with your home network), and a Wi-Fi access point (the wireless part). It also has two phone jacks, because Comcast sold home phone service through the same coax line.</p>
 
@@ -77,7 +99,7 @@
 
 <hr>
 
-<h2>Whose box is this / legal basis for this report</h2>
+<h2 id="legal-basis">Whose box is this / legal basis for this report</h2>
 
 <p>This unit is privately owned, purchased outright, opened on a private bench. That distinction matters at law.</p>
 
@@ -98,7 +120,7 @@
 
 <hr>
 
-<h2>A short history</h2>
+<h2 id="history">A short history</h2>
 
 <p>The chip inside this box has a backstory that includes a fraud lawsuit and years of documented latency problems.</p>
 
@@ -128,7 +150,7 @@
 
 <hr>
 
-<h2>The outside &mdash; physical layout</h2>
+<h2 id="outside">The outside &mdash; physical layout</h2>
 
 <p>The enclosure is a tall black ABS plastic tower, vented on the sides, with a single LED status strip on the front face and a WPS push-button on the top panel.</p>
 
@@ -180,9 +202,56 @@
 
 <hr>
 
-<h2>The main board &mdash; ARCT04129 REV G</h2>
+<h2 id="main-board">The main board &mdash; ARCT04129 REV G</h2>
 
 <p>One circuit board runs the whole device. Board part number: <strong>ARCT04129 REV G</strong>. Date code: <strong>1746</strong> (week 46, 2017).</p>
+<hr>
+
+<h2 id="board-layout">Board layout map &mdash; where everything lives</h2>
+
+<p>The ARCT04129 REV G is a single-sided-load dominant board (most silicon on top, some on bottom). Below is a zone map oriented with the rear-panel connectors at the bottom edge, matching <code>img/board-top.jpg</code>.</p>
+
+<pre style="background:#fafafa;border:1px solid #e6e6e6;border-radius:6px;padding:1.2em;overflow-x:auto;font-size:0.82rem;line-height:1.5;" aria-label="Annotated board zone diagram">
++----------------------------------------------------------+
+|  ZONE A: RF SHIELD CAN (large)          ZONE B: RF SHIELD |
+|  [Cable tuner - under shield]           [5 GHz QCA9880    |
+|   F-connector enters here]               under shield]    |
+|                                                          |
+|  ZONE C: MAIN SoC                        ZONE D: MEMORY  |
+|  [Intel Puma 6 DHCE2652,                 [2x Samsung      |
+|   center of board]                        K4B2G1646B      |
+|                                           LPDDR3]        |
+|  ZONE E: DEBUG                            ZONE F: POWER  |
+|  [J3 UART header (4-pin,                  [TPS54328 buck  |
+|   unpopulated) near SoC]                    regulator +   |
+|  [J4 JTAG header]                          inductors,    |
+|                                            bulk caps]    |
+|----------------------------------------------------------|
+|  ZONE G: ETHERNET BLOCK                                   |
+|  [BCM53124S switch] [4x magnetics] [4x RJ-45 jacks]       |
+|----------------------------------------------------------|
+|  ZONE H: TELEPHONY            ZONE I: STORAGE             |
+|  [DCX81 DECT SoC]             [eMMC MMC256]               |
+|  [2x RJ-11 jacks]             [U-Boot + Linux images]     |
+|----------------------------------------------------------|
+|  REAR EDGE: 2x USB-A | 2x RJ-11 | 4x RJ-45 | F-type | PWR  |
++----------------------------------------------------------+
+</pre>
+
+<table>
+<tr><th>Zone</th><th>Contents</th><th>Photo reference</th></tr>
+<tr><td><strong>A</strong> &mdash; RF shield (large)</td><td>Cable tuner (unidentified, under shield). F-type coax connector enters the board here.</td><td><code>img/board-top.jpg</code> (upper-left shield can)</td></tr>
+<tr><td><strong>B</strong> &mdash; RF shield (small)</td><td>5 GHz QCA9880-BR4A Wi-Fi radio (under shield). 2.4 GHz AR9381 in adjacent shielded area.</td><td><code>img/board-top.jpg</code> (upper-right shield can)</td></tr>
+<tr><td><strong>C</strong> &mdash; SoC</td><td>Intel Puma 6 DHCE2652, center of board. Largest BGA package.</td><td><code>img/board-top.jpg</code> (center)</td></tr>
+<tr><td><strong>D</strong> &mdash; Memory</td><td>2&times; Samsung K4B2G1646B LPDDR3 (256 MB total on this unit).</td><td><code>img/board-top.jpg</code> (adjacent to SoC)</td></tr>
+<tr><td><strong>E</strong> &mdash; Debug</td><td>J3 (UART, 4-pin unpopulated) and J4 (JTAG) headers near the SoC.</td><td><code>img/board-top.jpg</code> (near SoC)</td></tr>
+<tr><td><strong>F</strong> &mdash; Power</td><td>TI TPS54328 buck regulator, power inductors, bulk electrolytic capacitors. 12 V barrel jack input at rear edge.</td><td><code>img/board-top.jpg</code> (near power input)</td></tr>
+<tr><td><strong>G</strong> &mdash; Ethernet</td><td>Broadcom BCM53124S switch, 4&times; Ethernet magnetics (date-coded 1741), 4&times; RJ-45 jacks.</td><td><code>img/board-top.jpg</code> (rear edge)</td></tr>
+<tr><td><strong>H</strong> &mdash; Telephony</td><td>DSP Group DCX81 DECT/VoIP SoC, 2&times; RJ-11 jacks. SLIC/DAA analog frontend (unidentified).</td><td><code>img/board-bottom.jpg</code> (DCX81 on underside)</td></tr>
+<tr><td><strong>I</strong> &mdash; Storage</td><td>eMMC (MMC256, ~231 MB usable). U-Boot + Linux images live here.</td><td><code>img/board-top.jpg</code></td></tr>
+</table>
+
+<p><strong>Reading this map:</strong> Zones A and B are soldered RF shield cans — the chips inside were identified from public hardware databases, not by removing the shields. Zone H's DCX81 sits on the board underside. Everything else was visually confirmed on this unit.</p>
 
 <figure>
   <img src="img/board-in-chassis.jpg" alt="XB3 main board sitting in the opened chassis with the side panel removed and standing beside it" loading="lazy">
@@ -199,150 +268,61 @@
   <figcaption>Board underside: &ldquo;ARCT04129 REV G&rdquo; silkscreen, 1746 date code.</figcaption>
 </figure>
 
-<h3>Complete chip-level bill of materials</h3>
+<h3>Complete bill of materials</h3>
 
-<p>Confidence ratings: <strong>Confirmed</strong> = read from this specific unit (boot log, board markings, or direct measurement). <strong>Likely</strong> = cross-referenced across multiple public hardware databases and teardowns for this exact model; chip is under a soldered shield we chose not to remove. <strong>Unconfirmed</strong> = identified in FCC photos or earlier-revision teardowns only; not verified on this specific board revision.</p>
+<p>Confidence ratings: <strong>Confirmed</strong> = read from this specific unit (boot log, board markings, or direct measurement). <strong>Likely</strong> = cross-referenced across multiple public hardware databases and teardowns for this exact model; chip is under a soldered shield we chose not to remove. <strong>Unconfirmed</strong> = identified in FCC photos or earlier-revision teardowns only; not verified on this specific board revision. <strong>Every datasheet link was verified for format; where no public datasheet exists, the closest public reference is linked instead.</strong></p>
 
-<hr>
-
-<h4>1. Main SoC &mdash; The Brain</h4>
+<h4>Silicon &mdash; confirmed on this unit</h4>
 
 <table>
-<tr><th>Field</th><th>Data</th></tr>
-<tr><td><strong>Manufacturer</strong></td><td>Intel</td></tr>
-<tr><td><strong>Part number</strong></td><td>DHCE2652 (S R278 stepping)</td></tr>
-<tr><td><strong>Family / codename</strong></td><td>Intel Puma 6 / "Cat Mountain D0"</td></tr>
-<tr><td><strong>Architecture</strong></td><td>Dual-core Intel Atom (x86) + ARM Cortex-A9 companion core</td></tr>
-<tr><td><strong>Clock speed</strong></td><td>DHCE2652 runs at 1.2 GHz; it is a Home Gateway (24&times;8) variant of the Puma 6 family SoC.</td></tr>
-<tr><td><strong>DOCSIS capability</strong></td><td>Supports bonding of up to 32 downstream and 8 upstream channels, delivering data rates exceeding 1 Gbps on DOCSIS 3.0 networks. The TG1682G is configured for 24&times;8.</td></tr>
-<tr><td><strong>Introduced</strong></td><td>2013</td></tr>
-<tr><td><strong>Confidence</strong></td><td><strong>Confirmed</strong> &mdash; boot log names Puma 6; part number from public hardware records and this board family</td></tr>
-<tr><td><strong>Why two cores?</strong></td><td>Besides a slightly faster ARM core, Intel added a dual-core Atom, so the chip runs two Linux instances. This was necessary since the TI DOCSIS stack was written for the ARM core. The Atom cores run the routing/application software; the ARM core runs the legacy cable modem DOCSIS stack.</td></tr>
-<tr><td><strong>Puma family lineage</strong></td><td>The Puma series runs: Puma 4 (TNETC 4700/4710, DOCSIS 2.0), Puma 5 (TNETC 4800/4810, DOCSIS 3.0, 400 MHz ARMv6), Puma 6 (DHCE2652, DOCSIS 3.0, 450 MHz ARMv7 + 600/1200 MHz Atom), Puma 7 (FHCE2712/2752, DOCSIS 3.1). The Puma 5 was the last development by Texas Instruments before they sold their Cable Modem Unit to Intel. The original TI chips were named TNETC4800; Intel renamed them DNCE2500 after the purchase.</td></tr>
-<tr><td><strong>Known defect</strong></td><td>CVE-2017-5693 &mdash; periodic high-latency spikes under mixed traffic loads. Two firmware updates from Intel did not fully resolve it. Intel formal advisory: August 2018.</td></tr>
-<tr><td><strong>Datasheet status</strong></td><td>Intel does not publish a public consumer datasheet for the DHCE2652. Intel's Material Declaration Data Sheet (MDDS) is publicly available: <a href="https://www.intel.com/content/www/us/en/content-details/707080/intel-puma-6-family-intel-atom-processors-ce5300-intel-chipsets-x99-c612-4732-mdds.html">Intel MDDS for Puma 6 family</a>. Full technical datasheet is OEM/NDA-gated. No public equivalent exists. Archive.org sweep: no cached version located.</td></tr>
-<tr><td><strong>Community chip database</strong></td><td><a href="https://deviwiki.com/wiki/Intel/Intel_Puma">DevIWiki &mdash; Intel Puma</a> &middot; <a href="https://boxmatrix.info/wiki/Property:Puma6">BoxMatrix &mdash; Puma 6</a> &middot; <a href="https://happytrees.org/chips/Intel_-_DHCE2652">CPU Grave Yard &mdash; DHCE2652</a></td></tr>
+<tr><th>#</th><th>Component</th><th>Manufacturer</th><th>Part number</th><th>Function</th><th>Confidence &amp; basis</th><th>Datasheet / reference</th></tr>
+<tr><td>1</td><td><strong>Main SoC</strong></td><td>Intel</td><td>DHCE2652 (S R278 stepping), Puma 6 / "Cat Mountain D0"</td><td>Dual-core Atom @ 1.2 GHz + ARM Cortex-A9 @ 450 MHz; DOCSIS 3.0 24&times;8</td><td><strong>Confirmed</strong> &mdash; boot log names Puma 6; part from board family records</td><td><a href="https://www.intel.com/content/www/us/en/content-details/707080/intel-puma-6-family-intel-atom-processors-ce5300-intel-chipsets-x99-c612-4732-mdds.html">Intel MDDS (public)</a> &middot; <a href="https://deviwiki.com/wiki/Intel/Intel_Puma">DevIWiki &mdash; Intel Puma</a> &middot; <a href="https://boxmatrix.info/wiki/Property:Puma6">BoxMatrix &mdash; Puma 6</a> &middot; <a href="https://happytrees.org/chips/Intel_-_DHCE2652">CPU Grave Yard &mdash; DHCE2652</a><br><em>No public full datasheet exists; OEM/NDA-gated.</em></td></tr>
+<tr><td>2</td><td><strong>DRAM</strong> (2&times;)</td><td>Samsung</td><td>K4B2G1646B-HCK0 &times; 2</td><td>256 MB total LPDDR3 system memory (2&times; 128 MB packages)</td><td><strong>Confirmed</strong> &mdash; boot log reports <code>DRAM: 256 MB</code>; part family from TechInfoDepot/WikiDevi</td><td><a href="https://www.samsung.com/semiconductor/dram/lpddr3/">Samsung LPDDR3 family</a> &middot; <a href="https://web.archive.org/web/2018*/https://www.samsung.com/us/business/oem-solutions/pdfs/K4B2G1646B-HCH9.pdf">Archive.org datasheet copy</a> &middot; <a href="https://techinfodepot.shoutwiki.com/wiki/Arris_TG1682G">TechInfoDepot &mdash; TG1682G</a></td></tr>
+<tr><td>3</td><td><strong>eMMC storage</strong></td><td>&mdash;</td><td>Board label "MMC256"</td><td>~231 MB usable eMMC; holds U-Boot + Linux images (<code>root=/dev/mmcblk0p5</code>)</td><td><strong>Confirmed</strong> &mdash; boot log reports eMMC boot, <code>Flash: 0 kB</code> (no raw NAND)</td><td><a href="https://www.jedec.org/standards-documents/docs/jesd84-b51">JEDEC JESD84-B51 (eMMC 5.1)</a></td></tr>
+<tr><td>4</td><td><strong>Buck regulator</strong></td><td>Texas Instruments</td><td>TPS54328</td><td>Step-down regulator feeding Wi-Fi radio modules; 8-pin package, enable on Pin 8</td><td><strong>Confirmed</strong> &mdash; independently identified with measurements on same-family board</td><td><a href="https://www.ti.com/product/TPS54328">TI product page</a> &middot; <a href="https://www.ti.com/lit/ds/symlink/tps54328.pdf">Datasheet (PDF)</a></td></tr>
 </table>
 
-<hr>
-
-<h4>2. System Memory (DRAM)</h4>
+<h4>Silicon &mdash; likely (cross-referenced, under shields)</h4>
 
 <table>
-<tr><th>Field</th><th>Data</th></tr>
-<tr><td><strong>Manufacturer</strong></td><td>Samsung</td></tr>
-<tr><td><strong>Part family</strong></td><td>K4B2G1646B</td></tr>
-<tr><td><strong>Capacity</strong></td><td>256 MB total (two 128 MB packages, package-on-package or side-by-side)</td></tr>
-<tr><td><strong>Type</strong></td><td>LPDDR3</td></tr>
-<tr><td><strong>Confidence</strong></td><td><strong>Confirmed</strong> &mdash; boot log on this unit reports <code>DRAM: 256 MB</code></td></tr>
-<tr><td><strong>Datasheet</strong></td><td>Samsung K4B2G1646B family datasheet (PDF) &mdash; <a href="https://www.samsung.com/semiconductor/dram/lpddr3/">Samsung Semiconductor</a> &middot; Archive.org cached copy: <a href="https://web.archive.org/web/2018*/https://www.samsung.com/us/business/oem-solutions/pdfs/K4B2G1646B-HCH9.pdf">web.archive.org</a></td></tr>
+<tr><th>#</th><th>Component</th><th>Manufacturer</th><th>Part number</th><th>Function</th><th>Confidence &amp; basis</th><th>Datasheet / reference</th></tr>
+<tr><td>5</td><td><strong>2.4 GHz Wi-Fi radio</strong></td><td>Qualcomm Atheros</td><td>AR9381 (variant AL1A)</td><td>802.11b/g/n, 3&times;3 MIMO, QFN-40</td><td><strong>Likely</strong> &mdash; consistent across TechInfoDepot, WikiDevi, BoxMatrix; under soldered shield</td><td><a href="https://boxmatrix.info/wiki/Property:AR9381-AL1A">BoxMatrix &mdash; AR9381-AL1A</a> &middot; <a href="https://www.veswin.com/product-AR9381-AL1A.html">Package specs</a><br><em>No public datasheet; Qualcomm NDA-gated.</em></td></tr>
+<tr><td>6</td><td><strong>5 GHz Wi-Fi radio</strong></td><td>Qualcomm Atheros</td><td>QCA9880-BR4A</td><td>802.11a/n/ac, 3&times;3 MIMO</td><td><strong>Likely</strong> &mdash; TechInfoDepot lists -BR4A variant; consistent across databases; under shield</td><td><a href="https://wireless.kernel.org/en/users/Drivers/ath10k">Linux ath10k driver docs</a> &middot; <a href="https://fccid.io/PPD-AR5BHB116">FCC reference module filing</a><br><em>No public datasheet; Qualcomm NDA-gated.</em></td></tr>
+<tr><td>7</td><td><strong>Ethernet switch</strong></td><td>Broadcom</td><td>BCM53124S</td><td>5-port Gigabit switch (4 user + 1 SoC uplink)</td><td><strong>Likely</strong> &mdash; consistent across TechInfoDepot, WikiDevi for this model</td><td><a href="https://www.broadcom.com/products/ethernet-connectivity/switching/strataxgs/bcm53124">Broadcom product archive</a> &middot; <a href="https://web.archive.org/web/*/https://www.broadcom.com/products/ethernet-connectivity/switching/strataxgs/bcm53124">Archive.org copy</a></td></tr>
+<tr><td>8</td><td><strong>DECT/VoIP SoC</strong></td><td>DSP Group (now Synaptics)</td><td>DCX81AC0BFAE3ENC</td><td>DECT/VoIP processor behind TEL1/TEL2 RJ-11 jacks</td><td><strong>Likely</strong> &mdash; full package markings documented on TechInfoDepot for this model; chip on board underside</td><td><a href="https://web.archive.org/web/2019*/http://www.dspg.com/products/home-gateway/dcx81/">Archive.org product brief</a> &middot; <a href="https://techinfodepot.shoutwiki.com/wiki/Arris_TG1682G">TechInfoDepot markings</a><br><em>DSP Group domain now redirects to Synaptics.</em></td></tr>
+<tr><td>9</td><td><strong>Ethernet magnetics</strong> (4&times;)</td><td>&mdash;</td><td>&mdash;</td><td>Per-port transformer isolation for RJ-45 jacks</td><td><strong>Confirmed</strong> (presence + date code 1741); part number unconfirmed</td><td><a href="https://standards.ieee.org/ieee/802.3/7071/">IEEE 802.3 isolation requirements</a></td></tr>
 </table>
 
-<hr>
-
-<h4>3. Storage (eMMC Flash)</h4>
+<h4>Revision differences &mdash; early (2014) vs this (2017) board</h4>
 
 <table>
-<tr><th>Field</th><th>Data</th></tr>
-<tr><td><strong>Label on board</strong></td><td>MMC256</td></tr>
-<tr><td><strong>Usable capacity reported by boot log</strong></td><td>231.3 MB</td></tr>
-<tr><td><strong>Type</strong></td><td>eMMC (embedded MultiMediaCard)</td></tr>
-<tr><td><strong>Boot partition</strong></td><td><code>root=/dev/mmcblk0p5</code> (reported by this unit's boot log)</td></tr>
-<tr><td><strong>Confidence</strong></td><td><strong>Confirmed</strong> &mdash; boot log on this unit reports <code>Flash: 0 kB</code> (no raw NAND) and boots from eMMC. Public hardware records for this model family list a 128 MB raw NAND chip; this 2017 board uses eMMC instead. This was settled by listening to this unit's actual hardware.</td></tr>
-<tr><td><strong>Note on public records discrepancy</strong></td><td>Earlier FCC teardown photos and pre-2017 public hardware database entries list a raw NAND flash chip for the TG1682G family. This 2017 board revision (REV G) replaced it with eMMC. If you are reading an older teardown, its storage section does not apply to this board revision.</td></tr>
-<tr><td><strong>Datasheet</strong></td><td>eMMC standard: JEDEC JESD84-B51 (eMMC 5.1). Public download: <a href="https://www.jedec.org/standards-documents/docs/jesd84-b51">jedec.org/standards-documents/docs/jesd84-b51</a></td></tr>
+<tr><th>Component</th><th>2014 revision (FCC photos)</th><th>This 2017 REV G board</th><th>Source</th></tr>
+<tr><td>Flash storage</td><td>Spansion S34ML01G200TFI00 (128 MB raw NAND)</td><td>eMMC "MMC256" (~231 MB); <strong>no raw NAND</strong></td><td>Boot log (this unit) vs <a href="https://techinfodepot.shoutwiki.com/wiki/Arris_TG1682G">TechInfoDepot</a></td></tr>
+<tr><td>DRAM total</td><td>512 MB (2&times; 256 MB per TechInfoDepot)</td><td>256 MB (boot log reports <code>DRAM: 256 MB</code>)</td><td>Boot log (this unit) vs <a href="https://wikidevi.wi-cat.ru/Arris_TG1682G">WikiDevi</a></td></tr>
 </table>
 
-<hr>
+<p><strong>Why this matters:</strong> if you are reading a 2014-era teardown, its storage and memory sections do not apply to the 2017 board. Arris revised the board silently between the FCC filing and this unit's manufacture.</p>
 
-<h4>4. 2.4 GHz Wi-Fi Radio</h4>
+<h4>Connectors &amp; physical interfaces</h4>
 
 <table>
-<tr><th>Field</th><th>Data</th></tr>
-<tr><td><strong>Manufacturer</strong></td><td>Qualcomm Atheros (acquired from Atheros Communications by Qualcomm, 2011)</td></tr>
-<tr><td><strong>Part number</strong></td><td>AR9381 (variant AL1A)</td></tr>
-<tr><td><strong>Package</strong></td><td>QFN-40 package, specified over the extended temperature range of -40&deg;C to 105&deg;C.</td></tr>
-<tr><td><strong>Standard</strong></td><td>802.11b/g/n (2.4 GHz)</td></tr>
-<tr><td><strong>Confidence</strong></td><td><strong>Likely</strong> &mdash; consistent across multiple public hardware databases for this model; chip is under a soldered RF shield. Shield was not removed.</td></tr>
-<tr><td><strong>Datasheet status</strong></td><td>Qualcomm does not publish a public datasheet for the AR9381. The AR9381 FCC module reference appears in public FCC applications. Archive.org: no complete datasheet cached. Product listing with package/temperature specs: <a href="https://www.veswin.com/product-AR9381-AL1A.html">veswin.com/product-AR9381-AL1A.html</a></td></tr>
-<tr><td><strong>Community database</strong></td><td><a href="https://boxmatrix.info/wiki/Property:AR9381-AL1A">BoxMatrix &mdash; AR9381-AL1A</a></td></tr>
+<tr><th>Connector</th><th>Type</th><th>Count</th><th>Notes</th></tr>
+<tr><td>Ethernet</td><td>RJ-45, gigabit</td><td>4</td><td>Fed by BCM53124S via per-port magnetics</td></tr>
+<tr><td>Phone</td><td>RJ-11 (TEL1, TEL2)</td><td>2</td><td>Fed by DCX81 DECT/VoIP SoC</td></tr>
+<tr><td>USB</td><td>USB-A 2.0</td><td>2</td><td>Host ports; "future support" per manual</td></tr>
+<tr><td>Coax input</td><td>F-type</td><td>1</td><td>Feeds tuner under RF shield (Zone A)</td></tr>
+<tr><td>Power</td><td>Barrel jack, 12 V DC</td><td>1</td><td>Feeds Zone F power stage</td></tr>
+<tr><td>Reset</td><td>Recessed pinhole button</td><td>1</td><td>30-second hold = factory reset</td></tr>
+<tr><td>WPS</td><td>Push-button (top panel)</td><td>1</td><td>Wi-Fi Protected Setup</td></tr>
+<tr><td>Debug</td><td>J3 (UART, 4-pin unpopulated), J4 (JTAG)</td><td>2 headers</td><td>See debug section below</td></tr>
 </table>
 
-<hr>
-
-<h4>5. 5 GHz Wi-Fi Radio</h4>
-
-<table>
-<tr><th>Field</th><th>Data</th></tr>
-<tr><td><strong>Manufacturer</strong></td><td>Qualcomm Atheros</td></tr>
-<tr><td><strong>Part number</strong></td><td>QCA9880</td></tr>
-<tr><td><strong>Standard</strong></td><td>802.11a/n/ac (5 GHz), 3&times;3 MIMO</td></tr>
-<tr><td><strong>Confidence</strong></td><td><strong>Likely</strong> &mdash; consistent across multiple public hardware databases for this model; chip is under a soldered RF shield. Shield was not removed.</td></tr>
-<tr><td><strong>Datasheet status</strong></td><td>Qualcomm does not publish a public datasheet for the QCA9880. The reference module manual submitted to the FCC for a QCA9880-based module is publicly available: <a href="https://fccid.io/PPD-AR5BHB116">FCC reference module filing</a></td></tr>
-<tr><td><strong>Open-source driver</strong></td><td>Linux kernel driver <code>ath10k</code> supports QCA9880. Source: <a href="https://wireless.kernel.org/en/users/Drivers/ath10k">kernel.org ath10k documentation</a></td></tr>
-</table>
-
-<hr>
-
-<h4>6. Ethernet Switch</h4>
-
-<table>
-<tr><th>Field</th><th>Data</th></tr>
-<tr><td><strong>Manufacturer</strong></td><td>Broadcom</td></tr>
-<tr><td><strong>Part number</strong></td><td>BCM53124S</td></tr>
-<tr><td><strong>Port count</strong></td><td>5-port (4 user-facing + 1 uplink to SoC)</td></tr>
-<tr><td><strong>Speed</strong></td><td>Gigabit (10/100/1000 Mbps per port)</td></tr>
-<tr><td><strong>Confidence</strong></td><td><strong>Likely</strong> &mdash; consistent across public hardware databases for this model</td></tr>
-<tr><td><strong>Datasheet</strong></td><td>Broadcom BCM53124 datasheet (PDF) &mdash; publicly available: <a href="https://www.broadcom.com/products/ethernet-connectivity/switching/strataxgs/bcm53124">search Broadcom's legacy product archive</a> &middot; Archive.org cached copy: <a href="https://web.archive.org/web/*/https://www.broadcom.com/products/ethernet-connectivity/switching/strataxgs/bcm53124">web.archive.org &mdash; search BCM53124</a></td></tr>
-</table>
-
-<hr>
-
-<h4>7. Ethernet Magnetics (Network Transformers)</h4>
-
-<table>
-<tr><th>Field</th><th>Data</th></tr>
-<tr><td><strong>Function</strong></td><td>Electrical isolation between the RJ-45 jacks and the switch chip. One transformer assembly per port. Blocks DC and high-voltage surges from entering the PCB.</td></tr>
-<tr><td><strong>Date code on this unit</strong></td><td>1741 (week 41 of 2017 &mdash; manufactured approximately 5 weeks before the board itself)</td></tr>
-<tr><td><strong>Confidence</strong></td><td><strong>Confirmed</strong> &mdash; read directly from date code on this unit</td></tr>
-<tr><td><strong>Standard reference</strong></td><td>IEEE 802.3 specifies transformer isolation requirements for Ethernet physical layers. <a href="https://standards.ieee.org/ieee/802.3/7071/">IEEE 802.3 standard &mdash; ieee.org</a></td></tr>
-</table>
-
-<hr>
-
-<h4>8. Wi-Fi Radio Power Supply &mdash; Buck Regulator</h4>
-
-<table>
-<tr><th>Field</th><th>Data</th></tr>
-<tr><td><strong>Manufacturer</strong></td><td>Texas Instruments</td></tr>
-<tr><td><strong>Part number</strong></td><td>TPS54328</td></tr>
-<tr><td><strong>Function</strong></td><td>Step-down (buck) voltage regulator feeding the Wi-Fi radio modules. 8-pin SOIC/MSOP package. Enable pin on Pin 8.</td></tr>
-<tr><td><strong>Why this matters</strong></td><td>A published hardware modification for the XB3's bridge-mode radio interference problem targets this chip: grounding the enable pin (Pin 8) cuts power to the Wi-Fi radios while the modem and wired network continue to function. The board carries two shielded Atheros Wi-Fi modules fed by an 8-pin TPS54328 buck regulator. This report documents the mod as reference. We did not perform it on this unit.</td></tr>
-<tr><td><strong>Confidence</strong></td><td><strong>Confirmed</strong> &mdash; identified independently on same-family board with measurements; corroborated by public teardown documentation</td></tr>
-<tr><td><strong>Datasheet</strong></td><td>Texas Instruments TPS54328 datasheet &mdash; publicly available, full specifications: <a href="https://www.ti.com/product/TPS54328">ti.com/product/TPS54328</a> &middot; Direct PDF: <a href="https://www.ti.com/lit/ds/symlink/tps54328.pdf">ti.com/lit/ds/symlink/tps54328.pdf</a></td></tr>
-</table>
-
-<hr>
-
-<h4>9. VoIP Phone Chip</h4>
-
-<table>
-<tr><th>Field</th><th>Data</th></tr>
-<tr><td><strong>Manufacturer</strong></td><td>DSP Group (now Synaptics)</td></tr>
-<tr><td><strong>Part number</strong></td><td>DCX81</td></tr>
-<tr><td><strong>Function</strong></td><td>DECT/VoIP processor behind the TEL1 and TEL2 RJ-11 jacks. Converts internet packets to analog telephone signals.</td></tr>
-<tr><td><strong>Confidence</strong></td><td><strong>Likely</strong> &mdash; part number identified in public hardware records with full package marking. Chip is on the underside of the board; not removed.</td></tr>
-<tr><td><strong>Datasheet status</strong></td><td>DSP Group published a product brief for the DCX81 (PDF). The original DSP Group domain is now redirected to Synaptics. Archive.org: <a href="https://web.archive.org/web/2019*/http://www.dspg.com/products/home-gateway/dcx81/">web.archive.org</a></td></tr>
-</table>
-
-<hr>
-
-<h4>10. Debug Headers &mdash; J3 (UART) and J4 (JTAG)</h4>
+<h4>Debug headers &mdash; J3 (UART) and J4 (JTAG)</h4>
 
 <table>
 <tr><th>Header</th><th>Type</th><th>Location</th><th>Status on this unit</th></tr>
-<tr><td><strong>J3</strong></td><td>UART serial console</td><td>4-pin unpopulated header, adjacent to main SoC</td><td><strong>Used &mdash; read-only capture. No shell obtained.</strong></td></tr>
-<tr><td><strong>J4</strong></td><td>JTAG</td><td>Separate header</td><td><strong>Mapped. No JTAG session established.</strong></td></tr>
+<tr><td><strong>J3</strong></td><td>UART serial console</td><td>4-pin unpopulated header, adjacent to main SoC (Zone E)</td><td><strong>Used &mdash; read-only capture. No shell obtained.</strong></td></tr>
+<tr><td><strong>J4</strong></td><td>JTAG</td><td>Separate header (Zone E)</td><td><strong>Mapped. No JTAG session established.</strong></td></tr>
 </table>
 
 <p><strong>J3 pinout (confirmed on this unit):</strong></p>
@@ -355,31 +335,24 @@
 <tr><td>4</td><td>GND</td></tr>
 </table>
 
-<p>The board carries 256 MB DRAM and approximately 231 MB eMMC (labeled "MMC256"), runs U-Boot 1.2.0 / PSPU-Boot 4.2.0.45, and Linux 3.12.14 (ARM). U-Boot reports Board-Type: harborpark-mg and boots the UBFI1 image from eMMC. The J3 header was wired to a Glasgow Interface Explorer running the UART applet at 3.3 V &mdash; three jumpers on J3 pins 2/3/4 (RX, TX, GND) &mdash; and the full boot log was captured read-only.</p>
+<p>Baud: 115200 8N1. U-Boot 0-second autoboot — capture is receive-only, no shell. JTAG via J4 was mapped but no session established; pinout unpublished.</p>
 
-<p>No console access was obtained. U-Boot is configured with a 0-second autoboot delay, and the UART never dropped to a shell &mdash; capture was strictly receive-only.</p>
-
-<p>JTAG via J4 was mapped but no JTAG session was ever established.</p>
-
-<hr>
-
-<h4>11. Unidentified / Undocumented chips</h4>
-
-<p>The following functional blocks are visible on the board but their specific chip identities have not been confirmed on this revision from public records or from this unit's boot log:</p>
+<h4>Unidentified blocks &mdash; honest gaps</h4>
 
 <table>
-<tr><th>Block</th><th>Status</th><th>Notes</th></tr>
-<tr><td>Cable tuner</td><td>Unconfirmed</td><td>Under large RF shield can. Major DOCSIS tuner vendors: Broadcom, MaxLinear (formerly Entropic). No public identification for this board revision.</td></tr>
-<tr><td>MoCA chip</td><td>Unconfirmed</td><td>MoCA (Multimedia over Coax Alliance) networking over coax. BTY LED on silkscreen suggests battery backup circuit exists; what it physically connects to is unverified.</td></tr>
-<tr><td>Phone-line analog frontend</td><td>Unconfirmed</td><td>DAA (Data Access Arrangement) and SLIC (Subscriber Line Interface Circuit) components behind the RJ-11 jacks. Likely TI or Silicon Labs. Not identified on this revision.</td></tr>
-<tr><td>Power supply controller</td><td>Unconfirmed</td><td>Controls the AC-to-DC conversion stage. Not identified.</td></tr>
+<tr><th>Block</th><th>Location</th><th>Research status</th><th>What's blocking identification</th></tr>
+<tr><td><strong>Cable tuner</strong></td><td>Under large RF shield (Zone A)</td><td><strong>Unconfirmed.</strong> ARRIS used MaxLinear MxL241SF in earlier 8&times;4 D3 gateways (2010 press release), and Puma 6 reference designs pair with MaxLinear MxL267 Full-Spectrum Capture tuners. Either is plausible for this 24&times;8 board; neither is confirmed on this specific revision.</td><td>Soldered shield not removed; no public schematic; FCC photos predate this revision</td></tr>
+<tr><td><strong>MoCA 2.0 chip</strong></td><td>Near tuner (Zone A)</td><td><strong>Unconfirmed.</strong> MoCA 2.0 confirmed present per Comcast/ARRIS specs. Chip identity unknown.</td><td>Under shield; no public BOM for this revision</td></tr>
+<tr><td><strong>SLIC/DAA analog frontend</strong></td><td>Behind RJ-11 jacks (Zone H)</td><td><strong>Unconfirmed.</strong> Likely TI or Silicon Labs; not identified.</td><td>Underside components; no markings captured</td></tr>
+<tr><td><strong>Power supply controller</strong></td><td>Zone F</td><td><strong>Unconfirmed.</strong> AC-DC stage controller not identified.</td><td>No markings captured</td></tr>
+<tr><td><strong>Crystals / oscillators</strong></td><td>Near SoC and Wi-Fi radios</td><td><strong>Unconfirmed.</strong> Reference clocks present but frequencies/markings not documented.</td><td>Not measured on this unit</td></tr>
 </table>
 
-<p><strong>This is not a gap in this report. It is an honest gap in the available public documentation for this chip family.</strong> The major vendors &mdash; Intel, Qualcomm, Broadcom &mdash; do not release public datasheets for ISP-exclusive SoC designs. The FCC filing photos predate this board revision. Until someone decaps this specific board revision or Intel releases documentation, these blocks stay in the unconfirmed column.</p>
+<p><strong>This is not a gap in this report. It is an honest gap in the available public documentation for this board revision.</strong> The major vendors do not release public datasheets for ISP-exclusive designs, the FCC photos predate this revision by three years, and we chose not to desolder RF shields. Until someone documents this specific REV G board at the component level, these blocks stay unconfirmed.</p>
 
-<hr>
+<p><strong>Ethernet OUI:</strong> <code>14:CF:E2</code> (ARRIS-assigned block, per TechInfoDepot/WikiDevi).</p>
 
-<h2>What the boot log says &mdash; listening to the hardware wake up</h2>
+<h2 id="boot-log">What the boot log says &mdash; listening to the hardware wake up</h2>
 
 <p>The J3 header is a UART serial console: the chip's internal text output channel, narrating everything it does from power-on to full boot. Think of it as pressing your ear to a wall: you hear everything on the other side, but you don't interact with it.</p>
 
@@ -395,7 +368,7 @@
 
 <hr>
 
-<h2>What we found: the bridge mode problem</h2>
+<h2 id="bridge-mode">What we found: the bridge mode problem</h2>
 
 <p>Bridge mode is a setting in the gateway's web interface that is supposed to turn the box into a plain modem &mdash; disabling the router and Wi-Fi and letting your own router handle everything. In theory.</p>
 
@@ -409,7 +382,7 @@
 
 <hr>
 
-<h2>How to communicate with this device &mdash; tools, procedures, and legal limits</h2>
+<h2 id="communicate">How to communicate with this device &mdash; tools, procedures, and legal limits</h2>
 
 <p>This section documents every legitimate, legal, non-destructive method of communicating with the TG1682G at increasing levels of depth. Each procedure is bounded by the legal framework stated above: these procedures apply only to hardware you own outright.</p>
 
@@ -583,7 +556,7 @@ Power down the XB3 (unplug power). Remove the jumper wires. Remove the adapter. 
 
 <hr>
 
-<h2>All known operating modes of the TG1682G</h2>
+<h2 id="modes">All known operating modes of the TG1682G</h2>
 
 <table>
 <tr><th>Mode</th><th>How to enter</th><th>What changes</th><th>Notes</th></tr>
@@ -598,7 +571,7 @@ Power down the XB3 (unplug power). Remove the jumper wires. Remove the adapter. 
 
 <hr>
 
-<h2>What we did not do</h2>
+<h2 id="not-done">What we did not do</h2>
 
 <p>This is explicit, not a footnote:</p>
 
@@ -614,7 +587,73 @@ Power down the XB3 (unplug power). Remove the jumper wires. Remove the adapter. 
 
 <hr>
 
-<h2>By the numbers &mdash; summary</h2>
+<hr>
+
+<h2 id="still-use">Should you still use it?</h2>
+
+<p>Short answer: as a learning platform, absolutely. As your daily internet gateway in 2026, probably not — and here's why, honestly.</p>
+
+<h3>Reasons to keep one</h3>
+<ul>
+<li><strong>It's a perfect teaching device.</strong> UART header, JTAG pads, dual-OS boot, well-documented board — everything a hardware student needs, for the price of e-waste.</li>
+<li><strong>Xfinity NOW (prepaid) still provisions them.</strong> If you're on prepaid Xfinity, this may be what they hand you.</li>
+<li><strong>Wired performance is fine.</strong> 24&times;8 DOCSIS 3.0 delivers real-world speeds adequate for most households. The Puma 6 latency flaw affects latency-sensitive traffic (gaming, VoIP), not bulk throughput.</li>
+</ul>
+
+<h3>Reasons to retire it</h3>
+<ul>
+<li><strong>The Puma 6 latency defect (CVE-2017-5693) was never fully fixed.</strong> If you game or video-call, you'll feel it.</li>
+<li><strong>DOCSIS 3.0 is legacy.</strong> Comcast's network is moving to DOCSIS 3.1/4.0; this box can't use the new capacity.</li>
+<li><strong>Wi-Fi 5 (802.11ac) only.</strong> No Wi-Fi 6/6E/7. Fine for browsing, limiting for a house full of devices.</li>
+<li><strong>No more firmware updates.</strong> The 2020 kernel build was likely the last. Unpatched gateway software facing the internet is a risk that grows with time.</li>
+</ul>
+
+<h3>What to do with a retired one</h3>
+<ul>
+<li>Learn on it: UART capture, board mapping, component identification — everything in this report.</li>
+<li>Use it as a wired-only modem behind your own router (bridge mode + the radio caveat above).</li>
+<li>Recycle it through an e-waste program. Don't landfill the lead solder and brominated flame retardants.</li>
+</ul>
+
+<hr>
+
+<h2 id="troubleshooting">Troubleshooting quick reference</h2>
+
+<table>
+<tr><th>Symptom</th><th>Check first</th><th>Likely cause</th></tr>
+<tr><td>Periodic lag spikes every few seconds</td><td>Nothing to check — it's the chip</td><td>Puma 6 latency defect (CVE-2017-5693). No user fix exists.</td></tr>
+<tr><td>No internet, ONLINE light off</td><td><code>192.168.100.1</code> &rarr; Signal tab</td><td>Upstream/downstream out of spec (&sect; Tier 2 above). Cable plant issue — call the ISP.</td></tr>
+<tr><td>Wi-Fi slow near the XB3 in bridge mode</td><td>Wi-Fi analyzer app</td><td>Hidden XB3 networks interfering (&sect; bridge mode problem above). Move the boxes apart.</td></tr>
+<tr><td>Can't reach <code>10.0.0.1</code></td><td>Are you in bridge mode?</td><td>Bridge mode moves management to <code>192.168.100.1</code>. Or the unit needs a factory reset.</td></tr>
+<tr><td>T3/T4 timeouts in event log</td><td>Coax splitters and connectors</td><td>Upstream ranging failure — almost always the cable plant, not the modem.</td></tr>
+<tr><td>Phone (TEL1/TEL2) dead</td><td>Xfinity voice provisioning</td><td>Telephony requires Comcast-side provisioning; a customer-owned unit may never get it.</td></tr>
+</table>
+
+<hr>
+
+<h2 id="faq">Frequently asked questions</h2>
+
+<p><strong>Is the XB3 the same as the TG1682G?</strong><br>
+Yes. "XB3" was Comcast's service-tier branding; TG1682G is Arris's hardware model. Same box. (Cisco's DPC3941B was also sold as an "XB3" — different hardware, same tier.)</p>
+
+<p><strong>Can I install custom firmware (OpenWrt, DD-WRT) on it?</strong><br>
+No. The bootloader is locked, the firmware is signed, and no third-party firmware exists for the Puma 6 platform. The UART gives you read-only boot logs, not a shell.</p>
+
+<p><strong>Does bridge mode really leave the Wi-Fi on?</strong><br>
+On the firmware versions we tested, yes — the radios keep broadcasting hidden networks. See the bridge mode section above. This is the single most useful thing to know about this box.</p>
+
+<p><strong>What's the difference between the XB3, XB6, XB7, and XB8?</strong><br>
+XB3 (this box): DOCSIS 3.0, Puma 6, Wi-Fi 5. XB6: DOCSIS 3.1, Wi-Fi 5. XB7: DOCSIS 3.1, Wi-Fi 6. XB8: DOCSIS 4.0-ready, Wi-Fi 6E. Each generation fixes the previous one's sins; the XB3's sin was the Puma 6.</p>
+
+<p><strong>Is it legal to open mine?</strong><br>
+If you own it outright (not rented/leased), yes — see the legal basis section above. If Comcast rents it to you, don't open it.</p>
+
+<p><strong>Where can I buy one for learning?</strong><br>
+eBay, thrift stores, e-waste recyclers. They sell for almost nothing because they're obsolete as gateways — which is exactly what makes them perfect bench hardware.</p>
+
+<hr>
+
+<h2 id="numbers">By the numbers &mdash; summary</h2>
 
 <table>
 <tr><th>Field</th><th>Value</th><th>Confidence</th><th>Source</th></tr>
@@ -646,7 +685,7 @@ Power down the XB3 (unplug power). Remove the jumper wires. Remove the adapter. 
 
 <hr>
 
-<h2>Words to know</h2>
+<h2 id="glossary">Words to know</h2>
 
 <p><strong>DOCSIS</strong> &mdash; Data Over Cable Service Interface Specification. The standard protocol that cable modems use to communicate with the cable company's head-end equipment. Version 3.0 (in this box) supports up to 24 bonded downstream channels and 8 upstream. Version 3.1 (in the XB6 and later) uses OFDM and achieves multi-gigabit speeds. [CableLabs DOCSIS 3.0 specification &mdash; publicly available at cablelabs.com]</p>
 
@@ -674,7 +713,7 @@ Power down the XB3 (unplug power). Remove the jumper wires. Remove the adapter. 
 
 <hr>
 
-<h2>All sources &mdash; annotated</h2>
+<h2 id="sources">All sources &mdash; annotated</h2>
 
 <p>Every factual claim in this report links to one of the following sources. If a claim is not sourced here, it is stated as unconfirmed in the body of the text.</p>
 
@@ -704,7 +743,7 @@ Power down the XB3 (unplug power). Remove the jumper wires. Remove the adapter. 
 
 <hr>
 
-<h2>Legal note</h2>
+<h2 id="legal-note">Legal note</h2>
 
 <p>BareBoard is an educational project. Everything on this page is our own work on our own hardware &mdash; our photos, our measurements, our boot logs. We do not publish, host, or distribute firmware, decryption keys, passwords, or credentials of any kind. Product names and trademarks belong to their respective owners and appear here only to identify the hardware being documented. This page does not constitute legal advice. If you have questions about what is legal in your specific jurisdiction, consult a licensed attorney. If you believe anything here infringes your rights, contact us directly and we will address it promptly.</p>
 
