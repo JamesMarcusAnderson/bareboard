@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self' data:; style-src 'self'; script-src 'self'; object-src 'none'; frame-src 'none'; base-uri 'self'; form-action 'none'">
+<meta name="referrer" content="no-referrer">
+<meta name="robots" content="noai, noimageai">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Sonoff Basic R3 &mdash; BareBoard &mdash; Free Hardware Education</title>
+<meta name="description" content="Sonoff Basic R3: ESP8285, DIY mode, flash-mode button procedure, and teardown notes.">
+<meta name="theme-color" content="#fbfbfc">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%231d1d1f'/%3E%3Ctext x='32' y='45' font-family='system-ui,-apple-system,sans-serif' font-size='36' fill='white' text-anchor='middle'%3EB%3C/text%3E%3C/svg%3E">
+<link rel="stylesheet" href="/style.css">
+</head>
+<body>
+<header class="site-nav">
+  <div class="nav-inner">
+    <nav aria-label="Primary">
+      <ul>
+        <li><a href="/" class="brand-word">BareBoard</a></li>
+        <li><a href="/devices/">Devices</a></li>
+        <li class="has-children">
+          <a href="/about.html" aria-haspopup="true" aria-expanded="false">About</a>
+          <div class="col-panel">
+            <div class="dropdown-inner">
+              <ul class="dropdown-col">
+                <li><a href="/about.html#how-we-work">How we work</a></li>
+                <li><a href="/about.html#what-this-is-not">What this is not</a></li>
+                <li><a href="/datasheets.html">Datasheet Index</a></li>
+                <li><a href="/notes/">Bench Notes</a></li>
+                <li><a href="/chips.html">Chip Database</a></li>
+                <li><a href="/obsolescence.html">Planned Obsolescence</a></li>
+                <li><a href="/repair.html">Repair Guides</a></li>
+                <li><a href="/protocols.html">Protocol RE</a></li>
+              </ul>
+            </div>
+          </div></li>
+        <li class="has-children">
+          <a href="/hot-100.html" aria-haspopup="true" aria-expanded="false">Hot 100</a>
+          <div class="col-panel">
+            <div class="dropdown-inner">
+              <ul class="dropdown-col">
+                <li><a href="/hot-100.html">Cameras &amp; Drones</a></li>
+                <li><a href="/hot-100.html">E-Readers &amp; Tablets</a></li>
+                <li><a href="/hot-100.html">Game Consoles</a></li>
+                <li><a href="/hot-100.html">Media Streamers</a></li>
+                <li><a href="/hot-100.html">Networking Gear</a></li>
+                <li class="dropdown-sub"><a href="/autopsy/xfinity-xb3/">Xfinity XB3 (Arris TG1682G)</a></li>
+                <li><a href="/hot-100.html">Other</a></li>
+                <li><a href="/hot-100.html">PCs &amp; Single-Board</a></li>
+                <li><a href="/hot-100.html">Phones</a></li>
+                <li><a href="/hot-100.html">Printers</a></li>
+                <li><a href="/hot-100.html">Smart Home / IoT</a></li>
+                <li><a href="/hot-100.html">TVs &amp; Displays</a></li>
+                <li><a href="/hot-100.html">Wearables</a></li>
+              </ul>
+            </div>
+          </div></li>
+<li class="has-children">
+          <a href="/most-wanted.html" aria-haspopup="true" aria-expanded="false">Most Wanted</a>
+          <div class="col-panel">
+            <div class="dropdown-inner">
+              <ul class="dropdown-col">
+                <li><a href="/most-wanted.html#board">The board</a></li>
+              </ul>
+            </div>
+          </div></li>
+        <li class="has-children">
+          <a href="/support.html" aria-haspopup="true" aria-expanded="false">Support</a>
+          <div class="col-panel">
+            <div class="dropdown-inner">
+              <ul class="dropdown-col">
+                <li><a href="/support.html#mission">Mission</a></li>
+                <li><a href="/support.html#chip-in">Donate</a></li>
+                <li><a href="/support.html#allies">Allies</a></li>
+              </ul>
+            </div>
+          </div></li>
+        <li class="has-children">
+          <a href="/watchmen.html" aria-haspopup="true" aria-expanded="false">Watchmen</a>
+          <div class="col-panel">
+            <div class="dropdown-inner">
+              <ul class="dropdown-col">
+                <li><a href="/watchmen.html#who-watches">Who watches</a></li>
+                <li><a href="/watchmen.html#methodology">Methodology</a></li>
+                <li><a href="/watchmen.html#tools">The bench</a></li>
+                <li><a href="/watchmen.html#corrections">Corrections</a></li>
+              </ul>
+            </div>
+          </div></li>
+        <li class="nav-search-item">
+          <button type="button" class="search-toggle" aria-label="Search BareBoard" aria-expanded="false" aria-controls="search-panel"><svg width="15" height="15" viewBox="0 0 16 16" fill="none" aria-hidden="true"><circle cx="7" cy="7" r="5.2" stroke="currentColor" stroke-width="1.7"/><line x1="11.2" y1="11.2" x2="14.6" y2="14.6" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/></svg></button>
+        </li>
+      </ul>
+    </nav>
+  </div>
+  <div class="search-panel" id="search-panel" hidden>
+    <div class="search-inner">
+      <svg width="15" height="15" viewBox="0 0 16 16" fill="none" aria-hidden="true" class="search-icon"><circle cx="7" cy="7" r="5.2" stroke="currentColor" stroke-width="1.7"/><line x1="11.2" y1="11.2" x2="14.6" y2="14.6" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/></svg>
+      <input type="search" id="site-search" placeholder="Search BareBoard" aria-label="Search BareBoard" autocomplete="off" spellcheck="false">
+      <button type="button" class="search-close" aria-label="Close search">&times;</button>
+    </div>
+    <ul class="search-results" id="search-results" aria-live="polite"></ul>
+  </div>
+</header>
+<main>
+  <aside class="legal-notice" style="background:#fff8e1;border:1px solid #e6d690;border-radius:8px;padding:1em 1.2em;margin:0 0 1.5em;font-size:0.88rem;color:#5a4e1a;">
+    <strong>Educational purpose.</strong> Everything on this page is published for education and research. Teardowns document hardware the author legally owns. Datasheets link to public sources. FCC filings are public record. Lawsuits and controversies cite public reporting. Nothing here is stolen, leaked, or confidential. If you use this information, you&rsquo;re responsible for complying with the laws where you live. This isn&rsquo;t legal advice &mdash; it&rsquo;s a workbench.
+  </aside>
+  <h1>Sonoff Basic R3</h1>
+  <p class="lede">ITEAD&rsquo;s in-line Wi-Fi switch &mdash; the device that taught a generation about ESP8266-family hardware. The R3 revision uses the ESP8285 (flash built into the chip), keeps the famous flash-mode button, and even ships a documented DIY mode.</p>
+
+  <figure style="margin:1.5em 0;">
+    <img src="img/sonoff-r3.webp" alt="Sonoff Basic R3 Wi-Fi smart switch" loading="lazy" style="max-width:100%;height:auto;border-radius:8px;">
+    <figcaption style="font-size:0.85rem;color:#666;margin-top:0.5em;">Sonoff Basic R3. Product photo via retailer.</figcaption>
+  </figure>
+
+  <section>
+    <h2 id="fcc">FCC ID</h2>
+    <p>No standalone FCC ID was located for this device in public records. ITEAD markets the Basic R3 internationally; the ESP8285 module family carries Espressif&rsquo;s own modular certifications. If you can verify a grant, <a href="/support.html">let us know</a>.</p>
+  </section>
+
+  <section>
+    <h2 id="we-reveal">What we reveal</h2>
+    <p>The FCC tells you what a device emits. We tell you what&rsquo;s inside and how it works.</p>
+    <ul>
+      <li><strong>Chip-level identification</strong> &mdash; every major IC named, with datasheet links where public documentation exists</li>
+      <li><strong>Board mapping</strong> &mdash; what connects to what, which test pads matter, where the debug interfaces hide</li>
+      <li><strong>What the manufacturer won&rsquo;t tell you</strong> &mdash; undocumented features, hidden radios, silent telemetry, repair blockers</li>
+    </ul>
+  </section>
+  <section>
+    <h2 id="chips">Key Chips</h2>
+    <ul>
+      <li><strong>Espressif ESP8285</strong> &mdash; the Wi-Fi SoC with 1 MB of flash integrated into the package &mdash; no external flash chip needed, unlike the original ESP8266.</li>
+      <li><strong>Relay + power supply</strong> &mdash; mains switching and AC-to-DC conversion on the same compact PCB.</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2 id="teardown">Teardown Notes</h2>
+    <ul>
+      <li>The R3 opens with screws &mdash; no glue &mdash; revealing a single PCB with clearly separated mains and low-voltage sections.</li>
+      <li>A four-pin serial header footprint is on the board (3.3 V, TX, RX, GND); the case button is wired to GPIO0, which doubles as the flash-mode select.</li>
+      <li>GPIO assignments are community-documented: GPIO0 = button, GPIO12 = relay, GPIO13 = LED.</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2 id="entry">Simple Entry Points</h2>
+    <h3>Flash mode with one button and one cable</h3>
+    <p><strong>You need:</strong> A 3.3 V USB-to-serial adapter (about $3) and four Dupont wires. <strong>Mains-voltage warning:</strong> disconnect from wall power; power the board only from the 3.3 V adapter during this procedure.</p>
+    <ol>
+      <li>Wire the adapter to the serial header: GND to GND, TX to RX, RX to TX. Do not connect the adapter&rsquo;s 5 V line.</li>
+      <li>Press and hold the case button (GPIO0 low), then apply 3.3 V power. Release the button &mdash; the ESP8285 is now in UART download mode.</li>
+      <li>Back up the original firmware first, then write your replacement firmware with esptool.</li>
+    </ol>
+<pre class="term" style="background:#1d1d1f;color:#e8e8e8;padding:1em;border-radius:8px;overflow-x:auto;"><code>$ esptool.py --port /dev/ttyUSB0 read_flash 0x00000 0x100000 backup.bin
+esptool.py v4.0
+Detected ESP8285 — 1 MB flash
+1048576 bytes read successfully
+$ esptool.py --port /dev/ttyUSB0 write_flash 0x00000 tasmota.bin
+Writing at 0x00000000... 100%
+Leaving... Hard resetting via RTS pin...</code></pre>
+    <p><em>The R3 also offers a manufacturer-documented DIY mode (local REST API over Wi-Fi) for users who prefer not to open the case at all.</em></p>
+  </section>
+
+  <section>
+    <h2 id="reading">Further Reading</h2>
+    <ul>
+      <li><a href="https://www.edn.com/sonoff-basic-wi-fi-switch/">Sonoff Basic Wi-Fi Smart Switch — Untangling the Ropes</a> &mdash; EDN</li>
+      <li><a href="https://tasmota.github.io/docs/devices/Sonoff-Basic/">Sonoff Basic</a> &mdash; Tasmota device documentation</li>
+    </ul>
+  </section>
+  <footer>
+    <a href="/tarpit/" class="hp-link" aria-hidden="true" tabindex="-1">device index</a>
+    <p>BareBoard &mdash; a free educational resource. Text and findings published under open terms; nothing here is for sale.</p>
+        <nav>
+      <a href="/">Home</a> &middot; <a href="/about.html">About</a> &middot; <a href="/colophon.html">Colophon</a>
+    </nav>
+
+    <div class="legal-framework">
+      <p><strong>BareBoard Legal Framework &amp; Declarations</strong></p>
+      <ul>
+      <li><strong>No AI training:</strong> All text, findings, and original photography on this site are copyrighted. Automated scraping for AI model training is prohibited. Crawlers that ignore robots.txt are trespassing.</li>
+        <li><strong>Educational nature:</strong> BareBoard operates exclusively as a non-commercial, open educational resource. All material is compiled for academic evaluation, hardware preservation, and technical literacy under 17 U.S.C. &sect; 107 (fair use).</li>
+        <li><strong>Zero-leak / no-binary clause:</strong> This site does not host, distribute, or mirror proprietary firmware binaries, encrypted operating system keys, or weaponizable exploits. Documentation covers only the public, physical realities of circuit hardware.</li>
+        <li><strong>Property verification:</strong> Every hardware autopsy is performed on personally owned, legally acquired equipment. No rented or third-party infrastructure is used.</li>
+        <li><strong>Public source sourcing:</strong> Comparative and regulatory data is aggregated from official public filings, including the U.S. Federal Communications Commission equipment authorization database.</li>
+      </ul>
+      <p class="legal-note"><em>BareBoard &mdash; open hardware allies, documented in alignment with the Open Source Hardware Association framework. Text and original photography published under open terms; nothing here is for sale.</em></p>
+    </div>
+  </footer>
+</main>
+<script src="/nav.js" defer></script>
+<script src="/search.js" defer></script>
+</body>
+</html>
