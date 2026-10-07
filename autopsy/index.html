@@ -2,12 +2,12 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self' data:; font-src 'self'; object-src 'none'; frame-ancestors 'none'; form-action 'none'; base-uri 'self'">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self' data:; style-src 'self'; script-src 'self'; object-src 'none'; frame-src 'none'; base-uri 'self'; form-action 'none'">
 <meta name="referrer" content="no-referrer">
 <meta name="robots" content="noai, noimageai">
-<title>The Autopsy Report &mdash; BareBoard</title>
-<meta name="description" content="The Autopsy Report: hardware analysis from BareBoard. Verified findings only.">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Teardowns — BareBoard — Free Hardware Education</title>
+<meta name="description" content="BareBoard: a free educational and beneficial resource. We can't open their hardware, so we open our findings.">
 <meta name="theme-color" content="#fbfbfc">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%231d1d1f'/%3E%3Ctext x='32' y='45' font-family='system-ui,-apple-system,sans-serif' font-size='36' font-weight='700' fill='white' text-anchor='middle'%3EB%3C/text%3E%3C/svg%3E">
 <link rel="stylesheet" href="/style.css">
@@ -18,45 +18,51 @@
     <nav aria-label="Primary">
       <ul>
         <li><a href="/" class="brand-word">BareBoard</a></li>
-        <li><a href="/devices/">Devices</a></li>
         <li class="has-children">
-          <a href="/about.html" aria-haspopup="true" aria-expanded="false">About</a>
+          <a href="/devices/" aria-haspopup="true" aria-expanded="false">Devices</a>
           <div class="col-panel">
             <div class="dropdown-inner">
               <ul class="dropdown-col">
-                <li><a href="/about.html#how-we-work">How we work</a></li>
-                <li><a href="/about.html#what-this-is-not">What this is not</a></li>
+                <li><a href="/devices/nintendo-switch/">Nintendo Switch</a></li>
+                <li><a href="/devices/playstation/">PlayStation</a></li>
+                <li><a href="/devices/raspberry-pi/">Raspberry Pi</a></li>
+                <li><a href="/devices/esp32/">ESP32</a></li>
+                <li><a href="/devices/ti-84-plus/">TI-84 Plus</a></li>
+                <li><a href="/devices/xfinity-xb3/">Xfinity XB3</a></li>
+              </ul>
+            </div>
+          </div></li>
+        <li class="has-children">
+          <a href="/autopsy/" aria-haspopup="true" aria-expanded="false">Teardowns</a>
+          <div class="col-panel">
+            <div class="dropdown-inner">
+              <ul class="dropdown-col">
+                <li><a href="/autopsy/xfinity-xb3/">Xfinity XB3</a></li>
+              </ul>
+            </div>
+          </div></li>
+        <li class="has-children">
+          <a href="/datasheets.html" aria-haspopup="true" aria-expanded="false">Resources</a>
+          <div class="col-panel">
+            <div class="dropdown-inner">
+              <ul class="dropdown-col">
                 <li><a href="/datasheets.html">Datasheet Index</a></li>
+                <li><a href="/datasheets.html#cables">Cable Reference</a></li>
+                <li><a href="/notes/">Bench Notes</a></li>
               </ul>
             </div>
           </div></li>
+        <li><a href="/hot-100.html">Hot 100</a></li>
+        <li><a href="/most-wanted.html">Most Wanted</a></li>
         <li class="has-children">
-          <a href="/hot-100.html" aria-haspopup="true" aria-expanded="false">Hot 100</a>
+          <a href="/watchmen.html" aria-haspopup="true" aria-expanded="false">Watchmen</a>
           <div class="col-panel">
             <div class="dropdown-inner">
               <ul class="dropdown-col">
-                <li><a href="/hot-100.html">Cameras &amp; Drones</a></li>
-                <li><a href="/hot-100.html">E-Readers &amp; Tablets</a></li>
-                <li><a href="/hot-100.html">Game Consoles</a></li>
-                <li><a href="/hot-100.html">Media Streamers</a></li>
-                <li><a href="/hot-100.html">Networking Gear</a></li>
-                <li class="dropdown-sub"><a href="/autopsy/xfinity-xb3/">Xfinity XB3 (Arris TG1682G)</a></li>
-                <li><a href="/hot-100.html">Other</a></li>
-                <li><a href="/hot-100.html">PCs &amp; Single-Board</a></li>
-                <li><a href="/hot-100.html">Phones</a></li>
-                <li><a href="/hot-100.html">Printers</a></li>
-                <li><a href="/hot-100.html">Smart Home / IoT</a></li>
-                <li><a href="/hot-100.html">TVs &amp; Displays</a></li>
-                <li><a href="/hot-100.html">Wearables</a></li>
-              </ul>
-            </div>
-          </div></li>
-<li class="has-children">
-          <a href="/most-wanted.html" aria-haspopup="true" aria-expanded="false">Most Wanted</a>
-          <div class="col-panel">
-            <div class="dropdown-inner">
-              <ul class="dropdown-col">
-                <li><a href="/most-wanted.html#board">The board</a></li>
+                <li><a href="/watchmen.html#who-watches">Who watches</a></li>
+                <li><a href="/watchmen.html#methodology">Methodology</a></li>
+                <li><a href="/watchmen.html#tools">The bench</a></li>
+                <li><a href="/watchmen.html#corrections">Corrections</a></li>
               </ul>
             </div>
           </div></li>
@@ -88,133 +94,35 @@
 </header>
 
 <main>
-  <h1>The Autopsy Report</h1>
-  <p class="lede">We can&rsquo;t open their hardware, so we open our findings.</p>
-  <p>Hardware analysis, published free &mdash; verified findings only, uncertainty dated and marked. Reports land here as they come off the bench.</p>
+  <h1>Teardowns</h1>
+  <p class="lede">We open hardware so you don&rsquo;t have to guess what&rsquo;s inside. Every teardown documents the chips, the board, and what the manufacturer won&rsquo;t tell you.</p>
 
-
-
-
-  <section class="report-index">
-    <h2>All Reports</h2>
-    <ul class="report-list">
-      <li><span class="soon">Airpods 2nd Generation &mdash; on the bench</span></li>
-      <li><span class="soon">Airpods Pro 1st Generation &mdash; on the bench</span></li>
-      <li><span class="soon">Amazon Echo 2nd Gen 2017 &mdash; on the bench</span></li>
-      <li><span class="soon">Amazon Echo Dot 3rd Gen 2018 &mdash; on the bench</span></li>
-      <li><span class="soon">Amazon Echo Show Line 2017 Present &mdash; on the bench</span></li>
-      <li><span class="soon">Amazon Fire TV Stick 2nd Gen 2016 &mdash; on the bench</span></li>
-      <li><span class="soon">Amazon Fire TV Stick 4k 2018 &mdash; on the bench</span></li>
-      <li><span class="soon">Amazon Kindle Fire 1st Generation 2011 &mdash; on the bench</span></li>
-      <li><span class="soon">Amazon Kindle Fire Hd 7 Inch 2012 &mdash; on the bench</span></li>
-      <li><span class="soon">Amazon Kindle Paperwhite 11th Gen 2021 &mdash; on the bench</span></li>
-      <li><span class="soon">Amazon Kindle Paperwhite 1st Generation 2012 &mdash; on the bench</span></li>
-      <li><span class="soon">Apple Airtag 1st Gen 2021 &mdash; on the bench</span></li>
-      <li><span class="soon">Apple Ii All Models &mdash; on the bench</span></li>
-      <li><span class="soon">Apple Ipad 1st Generation 2010 &mdash; on the bench</span></li>
-      <li><span class="soon">Apple Ipad 2 2011 &mdash; on the bench</span></li>
-      <li><span class="soon">Apple Ipad 6th Generation 2018 &mdash; on the bench</span></li>
-      <li><span class="soon">Apple Ipad Mini 1st Generation 2012 &mdash; on the bench</span></li>
-      <li><span class="soon">Apple Macbook All Laptop Lines &mdash; on the bench</span></li>
-      <li><span class="soon">Apple Tv 4k 1st Gen 2017 &mdash; on the bench</span></li>
-      <li><span class="soon">Apple Tv Hd 4th Gen 2015 &mdash; on the bench</span></li>
-      <li><span class="soon">Apple Watch Series 3 &mdash; on the bench</span></li>
-      <li><span class="soon">Arduino Uno Atmega328p Boards &mdash; on the bench</span></li>
-      <li><span class="soon">Arlo Pro 2 2017 &mdash; on the bench</span></li>
-      <li><span class="soon">Asus Rt Ac68u Ac1900 &mdash; on the bench</span></li>
-      <li><span class="soon">Barnes &amp; Noble Nook Tablet 2011 &mdash; on the bench</span></li>
-      <li><span class="soon">Comcast Xfinity X1 Dvr Xg1v1 2012 &mdash; on the bench</span></li>
-      <li><span class="soon">Commodore 64 &mdash; on the bench</span></li>
-      <li><span class="soon">D-Link Dir 615 All Hardware Revisions &mdash; on the bench</span></li>
-      <li><span class="soon">Dell Inspiron Consumer Line &mdash; on the bench</span></li>
-      <li><span class="soon">Dji Mavic Pro &mdash; on the bench</span></li>
-      <li><span class="soon">Dji Mini 2 &mdash; on the bench</span></li>
-      <li><span class="soon">Dji Phantom 4 &mdash; on the bench</span></li>
-      <li><span class="soon">Epson Ecotank Line 2010 Present E G Et 2850 &mdash; on the bench</span></li>
-      <li><span class="soon">Fitbit Charge 2 &mdash; on the bench</span></li>
-      <li><span class="soon">Fitbit Inspire Hr &mdash; on the bench</span></li>
-      <li><span class="soon">Game Boy Game Boy Color &mdash; on the bench</span></li>
-      <li><span class="soon">Google Chromecast 2nd Gen 2015 &mdash; on the bench</span></li>
-      <li><span class="soon">Google Chromecast Ultra 2016 &mdash; on the bench</span></li>
-      <li><span class="soon">Google Chromecast With Google Tv 4k 2020 &mdash; on the bench</span></li>
-      <li><span class="soon">Google Home Mini 2017 &mdash; on the bench</span></li>
-      <li><span class="soon">Google Nest Cam Indoor Wired 2015 &mdash; on the bench</span></li>
-      <li><span class="soon">Google Nest Hub 2nd Gen 2021 &mdash; on the bench</span></li>
-      <li><span class="soon">Google Nest Mini 2nd Gen 2019 &mdash; on the bench</span></li>
-      <li><span class="soon">Google Nexus 7 2012 Asus &mdash; on the bench</span></li>
-      <li><span class="soon">Google Nexus 7 2013 Asus &mdash; on the bench</span></li>
-      <li><span class="soon">Google Wifi 2016 Nest Wifi 2019 &mdash; on the bench</span></li>
-      <li><span class="soon">Gopro Hero 5 Black &mdash; on the bench</span></li>
-      <li><span class="soon">Gopro Hero 7 Black &mdash; on the bench</span></li>
-      <li><span class="soon">Huawei Watch Gt 2 &mdash; on the bench</span></li>
-      <li><span class="soon">Iphone 11 11 Pro 11 Pro Max &mdash; on the bench</span></li>
-      <li><span class="soon">Iphone 5s &mdash; on the bench</span></li>
-      <li><span class="soon">Iphone 6 6 Plus &mdash; on the bench</span></li>
-      <li><span class="soon">Iphone 6s 6s Plus &mdash; on the bench</span></li>
-      <li><span class="soon">Itead Sonoff Basic R2 2018 Original Basic 2016 &mdash; on the bench</span></li>
-      <li><span class="soon">Lenovo Thinkpad Entire Line &mdash; on the bench</span></li>
-      <li><span class="soon">Lenovo Thinkpad T Series T420 T430 Era &mdash; on the bench</span></li>
-      <li><span class="soon">Linksys Wrt54g All Revisions Incl Wrt54gl &mdash; on the bench</span></li>
-      <li><span class="soon">Logitech Unifying Receiver 2009 Present &mdash; on the bench</span></li>
-      <li><span class="soon">Meta Quest 2 2020 &mdash; on the bench</span></li>
-      <li><span class="soon">Motorola Surfboard Sb6141 Arris &mdash; on the bench</span></li>
-      <li><span class="soon">Nest Learning Thermostat 3rd Gen 2015 &mdash; on the bench</span></li>
-      <li><span class="soon">Netgear Nighthawk R7000 Ac1900 &mdash; on the bench</span></li>
-      <li><span class="soon">Nextbase 522gw 2019 &mdash; on the bench</span></li>
-      <li><span class="soon">Nintendo Ds Ds Lite &mdash; on the bench</span></li>
-      <li><span class="soon">Nintendo Switch Original Lite Oled &mdash; on the bench</span></li>
-      <li><span class="soon">Nintendo Wii &mdash; on the bench</span></li>
-      <li><span class="soon">Nokia 105 Series 2013 2015 Variants &mdash; on the bench</span></li>
-      <li><span class="soon">Nokia 1100 &mdash; on the bench</span></li>
-      <li><span class="soon">Nokia 1110 1110i &mdash; on the bench</span></li>
-      <li><span class="soon">Nokia 1200 &mdash; on the bench</span></li>
-      <li><span class="soon">Nokia 3210 &mdash; on the bench</span></li>
-      <li><span class="soon">Nokia 5230 &mdash; on the bench</span></li>
-      <li><span class="soon">Nvidia Shield Tv 2017 Refresh &mdash; on the bench</span></li>
-      <li><span class="soon">Philips Hue Bridge V2 2015 Square Model &mdash; on the bench</span></li>
-      <li><span class="soon">PlayStation 2 Scph 30000 Through 90000 &mdash; on the bench</span></li>
-      <li><span class="soon">PlayStation 3 Cecha Through Cech 4300 &mdash; on the bench</span></li>
-      <li><span class="soon">PlayStation 4 Cuh 1000 Through Cuh 2200 &mdash; on the bench</span></li>
-      <li><span class="soon">PlayStation 5 Cfi 1000 Through Cfi 2000 &mdash; on the bench</span></li>
-      <li><span class="soon">PlayStation Ps1 Scph 1000 Through 9000 &mdash; on the bench</span></li>
-      <li><span class="soon">Raspberry Pi 3 Range 3b 3a 3b &mdash; on the bench</span></li>
-      <li><span class="soon">Raspberry Pi All Generations &mdash; on the bench</span></li>
-      <li><span class="soon">Ring Video Doorbell 2 2017 &mdash; on the bench</span></li>
-      <li><span class="soon">Roku Streaming Stick 3810x 2017 &mdash; on the bench</span></li>
-      <li><span class="soon">Roku Ultra 4660x 2016 &mdash; on the bench</span></li>
-      <li><span class="soon">Samsung Galaxy Watch 4 &mdash; on the bench</span></li>
-      <li><span class="soon">Samsung Qled Tv Line 2017 Present &mdash; on the bench</span></li>
-      <li><span class="soon">Sinclair Zx Spectrum &mdash; on the bench</span></li>
-      <li><span class="soon">Tcl Tv Line Incl Roku Tv Models &mdash; on the bench</span></li>
-      <li><span class="soon">Tile Tracker Line 2013 Present E G Tile Mate 2022 &mdash; on the bench</span></li>
-      <li><span class="soon">TP-Link Archer C7 Ac1750 &mdash; on the bench</span></li>
-      <li><span class="soon">TP-Link Kasa Hs100 V1 2016 &mdash; on the bench</span></li>
-      <li><span class="soon">TP-Link Tl Wr841n N300 &mdash; on the bench</span></li>
-      <li><span class="soon">Verizon Fios Quantum Gateway G1100 &mdash; on the bench</span></li>
-      <li><span class="soon">Wyze Cam V2 2018 &mdash; on the bench</span></li>
-      <li><span class="soon">Wyze Cam V3 2020 &mdash; on the bench</span></li>
-      <li><a href="/autopsy/xfinity-xb3/">Xfinity XB3 (Arris TG1682G)</a></li>
-      <li><span class="soon">Xbox 360 Xenon Through Corona &mdash; on the bench</span></li>
-      <li><span class="soon">Xiaomi Mi Band 3 &mdash; on the bench</span></li>
-      <li><span class="soon">Xiaomi Mi Band 4 &mdash; on the bench</span></li>
-      <li><span class="soon">Xiaomi Mi Smart Band 6 &mdash; on the bench</span></li>
-    </ul>
+  <section>
+    <article style="margin-bottom:2em;">
+      <h2 style="font-size:1.3rem;"><a href="/autopsy/xfinity-xb3/">Xfinity XB3 (Arris TG1682G)</a></h2>
+      <p>DOCSIS 3.0 gateway with Intel Puma 6 SoC, dual-band Wi-Fi, and a full board map. Chip-level identification, UART discovery, and honest confidence labels on every finding.</p>
+    </article>
   </section>
 
+  <section>
+    <h2>How we teardown</h2>
+    <p>Every device gets the same treatment: external documentation, board photography, chip identification, interface discovery, and protocol analysis. See our <a href="/watchmen.html#methodology">methodology</a> for the full process.</p>
+    <p>Want a specific device opened? Check the <a href="/most-wanted.html">Most Wanted</a> list &mdash; the most requested devices jump the queue.</p>
+  </section>
   <footer>
     <a href="/tarpit/" class="hp-link" aria-hidden="true" tabindex="-1">device index</a>
-    <p>BareBoard &mdash; a free educational resource.</p>
-    <nav>
+    <p>BareBoard &mdash; a free educational resource. Text and findings published under open terms; nothing here is for sale.</p>
+        <nav>
       <a href="/">Home</a> &middot; <a href="/about.html">About</a> &middot; <a href="/colophon.html">Colophon</a>
     </nav>
 
     <div class="legal-framework">
       <p><strong>BareBoard Legal Framework &amp; Declarations</strong></p>
       <ul>
+      <li><strong>No AI training:</strong> All text, findings, and original photography on this site are copyrighted. Automated scraping for AI model training is prohibited. Crawlers that ignore robots.txt are trespassing.</li>
         <li><strong>Educational nature:</strong> BareBoard operates exclusively as a non-commercial, open educational resource. All material is compiled for academic evaluation, hardware preservation, and technical literacy under 17 U.S.C. &sect; 107 (fair use).</li>
         <li><strong>Zero-leak / no-binary clause:</strong> This site does not host, distribute, or mirror proprietary firmware binaries, encrypted operating system keys, or weaponizable exploits. Documentation covers only the public, physical realities of circuit hardware.</li>
         <li><strong>Property verification:</strong> Every hardware autopsy is performed on personally owned, legally acquired equipment. No rented or third-party infrastructure is used.</li>
-        <li>All text, findings, and original photography on this site are copyrighted. Automated scraping for AI model training is prohibited.</li>
         <li><strong>Public source sourcing:</strong> Comparative and regulatory data is aggregated from official public filings, including the U.S. Federal Communications Commission equipment authorization database.</li>
       </ul>
       <p class="legal-note"><em>BareBoard &mdash; open hardware allies, documented in alignment with the Open Source Hardware Association framework. Text and original photography published under open terms; nothing here is for sale.</em></p>
@@ -226,5 +134,3 @@
 <script src="/search.js" defer></script>
 </body>
 </html>
-
-
