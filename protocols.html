@@ -319,7 +319,7 @@ Starting kernel ...
 [    1.240000] console [ttyS0] enabled
 root@smartplug:/#</code></pre>
 
-<p>That <span class="mono">root@smartplug:/#</span> prompt is the device handing you its keys. From here you can copy the firmware straight off &mdash; no disassembly damage required.</p>
+<p>That <span class="mono">root@smartplug:/#</span> prompt is a root shell on the device itself. From here the firmware can be copied off directly &mdash; no disassembly required.</p>
 
 <h3>Step 2: turn a $4 Pico into a debug probe</h3>
 <p>For chips with SWD (the debug port on ARM microcontrollers &mdash; two tiny pads usually labeled SWDIO and SWCLK), flash <strong>Picoprobe</strong> firmware onto a Raspberry Pi Pico. It becomes a proper debug probe:</p>
@@ -354,6 +354,127 @@ Hard resetting via RTS pin...</code></pre>
 <p><a href="https://tasmota.github.io/" rel="noopener">Tasmota</a> replaces the vendor&rsquo;s cloud-dependent firmware with local control &mdash; no account, no app, no internet required. Prefer config files over clicking? <a href="https://esphome.io/" rel="noopener">ESPHome</a> does the same job. Either way, the device now answers to you &mdash; not a server that might shut down next year (see the <a href="/obsolescence.html">obsolescence archive</a> for why that matters).</p>
 </section>
 
+<section>
+<h2>Every way in: the firmware access playbook</h2>
+<p>If a device runs code, that code is stored on a chip inside it &mdash; and there is always a method to read it. The techniques below are ordered from simplest to most involved. Each one names a specific device and the exact steps for it. Total equipment cost for the full set is under $25; most techniques need under $10.</p>
+<h3>1. Serial console &mdash; Sonoff Basic smart switch</h3>
+<p>The Sonoff Basic (an ESP8266-based smart switch) exposes a 4-pin serial header on its board: 3V3, RX, TX, GND. Connecting a USB-to-serial adapter here gives you the device&rsquo;s boot log and, on many firmware versions, a command shell &mdash; all without removing any components.</p><p><strong>You need:</strong> USB-to-serial breakout (~$2&ndash;3, CH340 or CP2102), 4 jumper wires, micro USB cable.</p><p><strong>Use it when:</strong> the device has a visible header or test pads. This is always the first method to attempt: it is non-destructive and frequently sufficient on its own.</p><pre class="term"><code><span class="p">$</span> ls /dev/ttyUSB*
+/dev/ttyUSB0
+<span class="p">$</span> screen /dev/ttyUSB0 115200
+ESP8266EX boot ROM
+SPI flash detected: Winbond 25Q32 (4 MB)
+WiFi connecting to HomeNet...
+Tasmota 14.1.0 ready</code></pre>
+
+
+<h3>2. Serial console on devices without a header &mdash; Amazon Echo Dot (3rd gen)</h3>
+<p>Many devices hide the serial connection on unlabelled test pads instead of a header. The pads can be identified with a multimeter: the ground pad shows continuity with the USB shield, and the transmit pad idles at 3.3&nbsp;V while the device is powered. Community documentation and the device&rsquo;s public FCC filing photographs show pad locations for the Echo Dot (3rd generation).</p><p><strong>You need:</strong> USB-to-serial breakout (~$2&ndash;3), multimeter (~$8, useful for all future work), fine probe tips or pogo pins.</p><p><strong>Use it when:</strong> there is no obvious header. The identification method &mdash; ground by continuity, transmit by idle voltage &mdash; works on nearly any device.</p><pre class="term"><code><span class="p">$</span> # multimeter: black probe on USB shield, red probe on each pad
+<span class="p">$</span> # pad 4 reads 0 ohms --&gt; GND
+<span class="p">$</span> # pad 7 reads 3.3V idle --&gt; TX (device transmit)
+<span class="p">$</span> screen /dev/ttyUSB0 115200
+U-Boot 2017.11
+DRAM:  256 MiB
+Starting kernel ...</code></pre>
+
+
+<h3>3. SWD debug port &mdash; Raspberry Pi Pico as the probe</h3>
+<p>ARM microcontrollers include a Serial Wire Debug (SWD) port: two pins (SWDIO and SWCLK, plus ground) through which the chip&rsquo;s entire flash memory can be read and written. A Raspberry Pi Pico flashed with the free Picoprobe firmware functions as a complete debug probe.</p><p><strong>You need:</strong> Raspberry Pi Pico (~$4), 3 jumper wires, free OpenOCD software.</p><p><strong>Use it when:</strong> the serial console is absent or locked. Wiring: Pico GP2 to target SWDIO, Pico GP3 to target SWCLK, GND to GND.</p><pre class="term"><code><span class="p">$</span> picotool load picoprobe.uf2
+Loading picoprobe.uf2 into RP2040 device...
+The device was rebooted into application mode.
+<span class="p">$</span> openocd -f interface/picoprobe.cfg -f target/rp2040.cfg \
+    -c "init; dump_image firmware.bin 0x10000000 0x200000; exit"
+Open On-Chip Debugger 0.12.0
+dumped 2097152 bytes in 3.42s</code></pre>
+
+
+<h3>4. JTAG on ESP32 &mdash; smart bulbs and plugs</h3>
+<p>Espressif documents the ESP32&rsquo;s JTAG debug pins: GPIO&nbsp;12 (TDI), GPIO&nbsp;13 (TCK), GPIO&nbsp;14 (TMS), GPIO&nbsp;15 (TDO). Many ESP32-based smart bulbs and plugs route these to test pads on the board edge. The same $4 Pico running Picoprobe works as the adapter.</p><p><strong>You need:</strong> Raspberry Pi Pico (~$4) with Picoprobe, jumper wires, free OpenOCD with ESP32 support.</p><p><strong>Use it when:</strong> working with ESP32-based IoT devices where the serial pins are inaccessible but test pads are visible.</p><pre class="term"><code><span class="p">$</span> openocd -f interface/picoprobe.cfg -f target/esp32.cfg
+Open On-Chip Debugger 0.12.0
+Info : esp32: Debug controller was reset.
+Info : esp32: Core 0 was reset.
+<span class="p">$</span> # flash can now be read and written through the debug port</code></pre>
+
+
+<h3>5. SPI flash clip &mdash; Wyze Cam (Winbond 25Q128)</h3>
+<p>The Wyze Cam stores its firmware on a Winbond 25Q128 SPI flash chip in an 8-pin SOIC package. A SOIC-8 test clip clamps directly over the chip &mdash; no soldering required &mdash; and a USB programmer reads the full 16&nbsp;MB.</p><p><strong>You need:</strong> SOIC-8 test clip (~$3), CH341A USB programmer (~$3).</p><p><strong>Use it when:</strong> serial and debug ports are unavailable but the flash chip is visible and reachable on the board.</p><pre class="term"><code><span class="p">$</span> flashrom -p ch341a_spi -r wyze-backup.bin
+flashrom v1.3 on Linux
+Found Winbond flash chip "W25Q128.V" (16384 kB, SPI).
+Reading flash... done.
+<span class="p">$</span> ls -la wyze-backup.bin
+-rw-r--r-- 1 you you 16777216 Oct  7 08:30 wyze-backup.bin</code></pre>
+
+
+<h3>6. Replace the firmware &mdash; Sonoff Basic with Tasmota</h3>
+<p>Once serial access is established (technique&nbsp;1), the original firmware can be replaced. On the Sonoff Basic, holding the onboard button while applying power places the ESP8266 in flash mode (GPIO0 held low). The free esptool utility then writes new firmware.</p><p><strong>You need:</strong> the USB-to-serial setup from technique&nbsp;1. No additional hardware.</p><p><strong>Use it when:</strong> the goal is local control without the vendor&rsquo;s cloud service. <strong>Always save a backup of the original firmware first</strong> &mdash; it is the only path back.</p><pre class="term"><code><span class="p">$</span> # hold the Sonoff button, plug in USB, release the button
+<span class="p">$</span> esptool.py --port /dev/ttyUSB0 read_flash 0x0 0x100000 backup.bin
+Detected ESP8266EX chip
+1048576 bytes read successfully.
+<span class="p">$</span> esptool.py --port /dev/ttyUSB0 write_flash 0x0 tasmota.bin
+Wrote 598016 bytes at 0x00000000 in 5.6 seconds.
+Hard resetting via RTS pin...
+<span class="p">$</span> # the switch now runs Tasmota: local web UI, no cloud account</code></pre>
+
+
+<h3>7. eMMC direct read &mdash; phones and tablets</h3>
+<p>Phones and tablets store data on an eMMC chip &mdash; effectively a soldered-in memory card. An eMMC adapter presents it to a computer as an ordinary drive, allowing a complete image to be copied even when the device no longer boots.</p><p><strong>You need:</strong> eMMC-to-SD adapter (~$5&ndash;8), fine tweezers or pogo pins for the contact pads.</p><p><strong>Use it when:</strong> the device is non-functional but the storage chip is intact.</p><pre class="term"><code><span class="p">$</span> dmesg | tail -2
+[  120.4] mmc0: new high speed MMC card at address 0001
+[  120.5] mmcblk0: mmc0:0001 SA08G 7.25 GiB
+<span class="p">$</span> sudo dd if=/dev/mmcblk0 of=emmc-backup.img bs=4M status=progress
+7570718720 bytes (7.6 GB) copied</code></pre>
+
+
+<h3>8. Over-the-air interception &mdash; no hardware required</h3>
+<p>Devices download firmware updates from the internet, and those files frequently sit on public servers behind predictable URLs. Observing what the device &mdash; or its companion app &mdash; requests reveals the direct download address.</p><p><strong>You need:</strong> a computer. Nothing else.</p><p><strong>Use it when:</strong> any network-connected device needs analysis. Attempt this before any hardware method: it costs nothing.</p><pre class="term"><code><span class="p">$</span> curl -s 'http://update.vendor.com/api/check?model=X100&amp;ver=1.2.3'
+{"latest": "1.4.0", "url": "http://update.vendor.com/fw/X100_1.4.0.bin"}
+<span class="p">$</span> curl -O http://update.vendor.com/fw/X100_1.4.0.bin
+<span class="p">$</span> file X100_1.4.0.bin
+X100_1.4.0.bin: Squashfs filesystem, little endian</code></pre>
+
+
+<h3>9. Companion app traffic analysis &mdash; proxy method</h3>
+<p>Vendor phone apps communicate with the same update servers as the hardware. Routing the phone&rsquo;s traffic through a proxy on a computer reveals firmware URLs, API endpoints, and authentication flows.</p><p><strong>You need:</strong> free mitmproxy software; phone and computer on the same Wi-Fi network.</p><p><strong>Use it when:</strong> the device itself is uncooperative but its app checks for updates.</p><pre class="term"><code><span class="p">$</span> mitmproxy --mode transparent --showhost
+# install the mitmproxy certificate on the phone, then open the vendor app
+192.168.1.5:51234: GET https://api.vendor.com/v2/firmware/latest
+            &lt;&lt; 200 OK 312b
+            {"version":"2.1.0","url":"https://cdn.vendor.com/fw/app_2.1.0.zip"}</code></pre>
+
+
+<h3>10. Bootloader modes &mdash; DFU, fastboot, download mode</h3>
+<p>Nearly every phone and tablet has a documented key combination that starts it in a special bootloader mode &mdash; Apple&rsquo;s DFU, Android fastboot, Samsung Download mode &mdash; in which the bootloader communicates over USB and accepts low-level commands outside the normal operating system&rsquo;s restrictions.</p><p><strong>You need:</strong> a USB cable and the published key combination for the device.</p><p><strong>Use it when:</strong> the operating system will not boot, or low-level access is required that the running system would not permit.</p><pre class="term"><code><span class="p">$</span> # iPhone: hold Power + Home 10 seconds, release Power, keep holding Home
+<span class="p">$</span> lsusb | grep -i apple
+Bus 001 Device 042: ID 05ac:1227 Apple, Inc. iPhone (DFU Mode)
+<span class="p">$</span> # the bootloader is now communicating over USB</code></pre>
+
+
+<h3>11. Bus traffic capture &mdash; logic analyzer</h3>
+<p>Chips communicate over SPI and I2C buses on exposed circuit traces. A logic analyzer records these signals, and free software decodes them into readable data. Observing the boot ROM fetch firmware from flash captures the firmware without any modification to the device.</p><p><strong>You need:</strong> 24&nbsp;MHz logic analyzer clone (~$8&ndash;10), free PulseView/sigrok software, mini grabber clips.</p><p><strong>Use it when:</strong> understanding the boot sequence is the goal, or when data in transit (keys, configuration) must be observed.</p><pre class="term"><code><span class="p">$</span> sigrok-cli --driver fx2lafw --config samplerate=24M \
+    --channels MOSI=0,MISO=1,CLK=2,CS=3 -O binary &gt; boot.sr
+<span class="p">$</span> # open boot.sr in PulseView and apply the SPI decoder:
+<span class="p">$</span> # MOSI shows flash read commands; MISO returns the firmware bytes</code></pre>
+
+
+<h3>12. CH341A USB programmer &mdash; the $3 instrument</h3>
+<p>A single inexpensive USB adapter handles both SPI flash chips and I2C EEPROMs &mdash; the two most common firmware storage types in IoT devices, routers, and PC BIOS chips. Combined with the clip from technique&nbsp;5, it reads firmware from a powered-off board in minutes.</p><p><strong>You need:</strong> CH341A programmer (~$3).</p><p><strong>Use it when:</strong> routinely &mdash; it is worth acquiring before it is needed. It complements techniques&nbsp;5 and&nbsp;11.</p><pre class="term"><code><span class="p">$</span> # SPI flash (8-pin chip):
+<span class="p">$</span> flashrom -p ch341a_spi -r spi-backup.bin
+Found Winbond flash chip "W25Q64.V" (8192 kB, SPI).
+Reading flash... done.
+<span class="p">$</span> # I2C EEPROM (small settings chip) with the same adapter:
+<span class="p">$</span> flashrom -p ch341a_i2c -r eeprom-backup.bin
+Reading flash... done.</code></pre>
+
+
+<h3>13. Voltage glitching &mdash; when the chip refuses</h3>
+<p>Some chips verify a password or signature before granting access. A precisely timed dip in supply voltage &mdash; or a brief disturbance of the clock signal &mdash; can cause the chip to skip exactly that verification step. This is an advanced method, included here for completeness.</p><p><strong>You need:</strong> a Pico or Arduino to generate the pulse (~$4), a MOSFET to dip the power rail (~$1), and patience: success typically requires hundreds of attempts.</p><p><strong>Use it when:</strong> all software and debug interfaces are locked, and the device must be accessed without removing chips.</p><pre class="term"><code><span class="p">$</span> python3 glitch.py --target bootloader --attempts 1000
+[#0046] offset 4380ns width 120ns ... no response
+[#0047] offset 4400ns width 120ns ... no response
+[#0048] offset 4420ns width 120ns ... response received
+verification bypassed after 48 attempts</code></pre>
+
+
+<h3>14. Chip removal &mdash; the final option</h3>
+<p>When no other method succeeds, the storage chip is removed from the board with hot air and read directly with the CH341A from technique&nbsp;12. This destroys the board&rsquo;s original assembly, but the firmware itself is preserved.</p><p><strong>You need:</strong> hot air rework station (~$15) or heat gun, tweezers, flux, CH341A programmer.</p><p><strong>Use it when:</strong> nothing else has worked &mdash; the chip is underfilled, the board is non-functional, or all interfaces are fused off. There is no software step here; once the chip is removed, it is read exactly as in technique&nbsp;5.</p>
+
+</section>
 <div id="proto-cards"><p>Loading&hellip;</p></div>
 
   <footer>
