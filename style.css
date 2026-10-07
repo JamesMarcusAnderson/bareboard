@@ -815,3 +815,32 @@ pre.term a { color: #8ab4f8; }
 .ds-cat-filter button.active { background: #1d1d1f; color: #fff; border-color: #1d1d1f; }
 .ds-count { font-size: 0.9rem; color: #555; margin: 0.6rem 0 0; }
 .ds-no-results { font-size: 0.95rem; background: #f6f6f8; border: 1px solid var(--line, #d9d9de); border-radius: 8px; padding: 0.8rem 1rem; max-width: 40rem; }
+
+/* ---------- Hot 100 card grid (v2.0) ---------- */
+#hot100-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 1.2rem;
+  margin: 1.2rem 0 2rem;
+}
+.hot-card { position: relative; padding: 1rem; display: flex; flex-direction: column; }
+.hot-rank {
+  position: absolute; top: 1.4rem; left: 1.4rem;
+  background: #1d1d1f; color: #fff; font-weight: 700;
+  border-radius: 8px; padding: 0.2rem 0.6rem; font-size: 0.9rem;
+}
+.hot-thumb {
+  width: 100%; height: 160px; object-fit: cover;
+  border-radius: 8px; background: #ececf0; display: block;
+}
+.hot-thumb--none {
+  display: flex; align-items: center; justify-content: center;
+  color: #a9a9b3; font-size: 2rem; font-weight: 700;
+}
+.hot-card h2 { font-size: 1.15rem; margin: 0.8rem 0 0.25rem; }
+.hot-meta { font-size: 0.85rem; color: var(--secondary, #555); margin: 0 0 0.5rem; }
+.hot-why { font-size: 0.95rem; margin: 0 0 0.6rem; }
+.hot-sources { font-size: 0.8rem; margin: 0; }
+.pill--active { background: #1d1d1f; color: #fff; border-color: #1d1d1f; }
+#hot100-filters { display: flex; flex-wrap: wrap; gap: 0.5rem; margin: 0.8rem 0; }
+#hot100-count { font-size: 0.9rem; color: var(--secondary, #555); }
