@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self' data:; style-src 'self'; script-src 'self'; object-src 'none'; frame-src 'none'; base-uri 'self'; form-action 'none'">
+<meta name="referrer" content="no-referrer">
+<meta name="robots" content="noai, noimageai">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ESP32 Family — BareBoard — Free Hardware Education</title>
+<meta name="description" content="ESP32 microcontrollers: variants, FCC ID, and security research including CVE-2025-27840.">
+<meta name="theme-color" content="#fbfbfc">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%231d1d1f'/%3E%3Ctext x='32' y='45' font-family='system-ui,-apple-system,sans-serif' font-size='36' font-weight='700' fill='white' text-anchor='middle'%3EB%3C/text%3E%3C/svg%3E">
+<link rel="stylesheet" href="/style.css">
+</head>
+<body>
+<header class="site-nav">
+  <div class="nav-inner">
+    <nav aria-label="Primary">
+      <ul>
+        <li><a href="/" class="brand-word">BareBoard</a></li>
+        <li><a href="/devices/">Devices</a></li>
+        <li class="has-children">
+          <a href="/about.html" aria-haspopup="true" aria-expanded="false">About</a>
+          <div class="col-panel">
+            <div class="dropdown-inner">
+              <ul class="dropdown-col">
+                <li><a href="/about.html#how-we-work">How we work</a></li>
+                <li><a href="/about.html#what-this-is-not">What this is not</a></li>
+                <li><a href="/datasheets.html">Datasheet Index</a></li>
+                <li><a href="/notes/">Bench Notes</a></li>
+              </ul>
+            </div>
+          </div></li>
+        <li class="has-children">
+          <a href="/hot-100.html" aria-haspopup="true" aria-expanded="false">Hot 100</a>
+          <div class="col-panel">
+            <div class="dropdown-inner">
+              <ul class="dropdown-col">
+                <li><a href="/hot-100.html">Cameras &amp; Drones</a></li>
+                <li><a href="/hot-100.html">E-Readers &amp; Tablets</a></li>
+                <li><a href="/hot-100.html">Game Consoles</a></li>
+                <li><a href="/hot-100.html">Media Streamers</a></li>
+                <li><a href="/hot-100.html">Networking Gear</a></li>
+                <li class="dropdown-sub"><a href="/autopsy/xfinity-xb3/">Xfinity XB3 (Arris TG1682G)</a></li>
+                <li><a href="/hot-100.html">Other</a></li>
+                <li><a href="/hot-100.html">PCs &amp; Single-Board</a></li>
+                <li><a href="/hot-100.html">Phones</a></li>
+                <li><a href="/hot-100.html">Printers</a></li>
+                <li><a href="/hot-100.html">Smart Home / IoT</a></li>
+                <li><a href="/hot-100.html">TVs &amp; Displays</a></li>
+                <li><a href="/hot-100.html">Wearables</a></li>
+              </ul>
+            </div>
+          </div></li>
+<li class="has-children">
+          <a href="/most-wanted.html" aria-haspopup="true" aria-expanded="false">Most Wanted</a>
+          <div class="col-panel">
+            <div class="dropdown-inner">
+              <ul class="dropdown-col">
+                <li><a href="/most-wanted.html#board">The board</a></li>
+              </ul>
+            </div>
+          </div></li>
+        <li class="has-children">
+          <a href="/support.html" aria-haspopup="true" aria-expanded="false">Support</a>
+          <div class="col-panel">
+            <div class="dropdown-inner">
+              <ul class="dropdown-col">
+                <li><a href="/support.html#mission">Mission</a></li>
+                <li><a href="/support.html#chip-in">Donate</a></li>
+                <li><a href="/support.html#allies">Allies</a></li>
+              </ul>
+            </div>
+          </div></li>
+        <li class="has-children">
+          <a href="/watchmen.html" aria-haspopup="true" aria-expanded="false">Watchmen</a>
+          <div class="col-panel">
+            <div class="dropdown-inner">
+              <ul class="dropdown-col">
+                <li><a href="/watchmen.html#who-watches">Who watches</a></li>
+                <li><a href="/watchmen.html#methodology">Methodology</a></li>
+                <li><a href="/watchmen.html#tools">The bench</a></li>
+                <li><a href="/watchmen.html#corrections">Corrections</a></li>
+              </ul>
+            </div>
+          </div></li>
+        <li class="nav-search-item">
+          <button type="button" class="search-toggle" aria-label="Search BareBoard" aria-expanded="false" aria-controls="search-panel"><svg width="15" height="15" viewBox="0 0 16 16" fill="none" aria-hidden="true"><circle cx="7" cy="7" r="5.2" stroke="currentColor" stroke-width="1.7"/><line x1="11.2" y1="11.2" x2="14.6" y2="14.6" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/></svg></button>
+        </li>
+      </ul>
+    </nav>
+  </div>
+  <div class="search-panel" id="search-panel" hidden>
+    <div class="search-inner">
+      <svg width="15" height="15" viewBox="0 0 16 16" fill="none" aria-hidden="true" class="search-icon"><circle cx="7" cy="7" r="5.2" stroke="currentColor" stroke-width="1.7"/><line x1="11.2" y1="11.2" x2="14.6" y2="14.6" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/></svg>
+      <input type="search" id="site-search" placeholder="Search BareBoard" aria-label="Search BareBoard" autocomplete="off" spellcheck="false">
+      <button type="button" class="search-close" aria-label="Close search">&times;</button>
+    </div>
+    <ul class="search-results" id="search-results" aria-live="polite"></ul>
+  </div>
+</header>
+
+<main>
+  <h1>ESP32 Family</h1>
+  <p class="lede">Espressif&rsquo;s Wi-Fi + Bluetooth microcontroller that ate the IoT world. Cheap, capable, and &mdash; unusually for the industry &mdash; genuinely well documented.</p>
+
+  <section>
+    <h2 id="fcc">FCC ID</h2>
+    <p><strong>FCC ID: <a href="https://fccid.io/2AC7ZESPWROOM32">2AC7Z-ESPWROOM32</a></strong> (Grantee: 2AC7Z = Espressif Systems) for the ESP32-WROOM-32 module.</p>
+    <ul>
+      <li><strong>Other variants:</strong> 2AC7Z-ESPWROOM32UE, 2A9ZM-WROOM32E (32E variant)</li>
+      <li><strong>Available:</strong> Test reports, antenna specs, user manuals, RF exposure docs</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2 id="fcc-revealed">What the FCC filing revealed</h2>
+    <p>The FCC filing for this device includes the documents manufacturers are required to submit: external photos, internal photos, test setup photos, RF test reports, and the user manual. These are public record at <a href="https://fccid.io/">fccid.io</a>.</p>
+    <p>What you can typically find:</p>
+    <ul>
+      <li><strong>Internal photos</strong> &mdash; board layout, chip placement, shielding, antenna design</li>
+      <li><strong>Block diagrams</strong> &mdash; sometimes included, showing the RF chain architecture</li>
+      <li><strong>Test reports</strong> &mdash; conducted and radiated emissions data, which can reveal operating frequencies and power levels</li>
+      <li><strong>Label placement</strong> &mdash; where the FCC ID lives on the device</li>
+    </ul>
+    <p>What the FCC filing does <em>not</em> include: schematics (usually withheld under confidentiality requests), firmware, bill of materials, or debug interface documentation.</p>
+  </section>
+
+  <section>
+    <h2 id="we-reveal">What we reveal</h2>
+    <p>The FCC tells you what a device emits. We tell you what&rsquo;s inside and how it works.</p>
+    <ul>
+      <li><strong>Chip-level identification</strong> &mdash; every major IC named, with datasheet links where public documentation exists</li>
+      <li><strong>Board mapping</strong> &mdash; what connects to what, which test pads matter, where the debug interfaces hide</li>
+      <li><strong>What the manufacturer won&rsquo;t tell you</strong> &mdash; undocumented features, hidden radios, silent telemetry, repair blockers</li>
+    </ul>
+    <p>Check our <a href="/autopsy/">teardowns</a> for full board-level analysis.</p>
+  </section>
+
+  <section>
+    <h2 id="variants">Variants</h2>
+    <table>
+      <tr><th>Chip / Module</th><th>CPU</th><th>Wireless</th><th>Notes</th></tr>
+      <tr><td>ESP32 (original)</td><td>Dual-core Xtensa LX6 @ 240 MHz</td><td>Wi-Fi 4 + BT 4.2</td><td>The classic. Dozens of module variants.</td></tr>
+      <tr><td>ESP32-WROOM-32</td><td>ESP32</td><td>Wi-Fi + BT</td><td>Most common module. FCC ID: <a href="https://fccid.io/2AC7ZESPWROOM32">2AC7Z-ESPWROOM32</a></td></tr>
+      <tr><td>ESP32-WROVER</td><td>ESP32</td><td>Wi-Fi + BT</td><td>Adds PSRAM.</td></tr>
+      <tr><td>ESP32-S2</td><td>Single-core Xtensa LX7</td><td>Wi-Fi 4 only</td><td>USB OTG. No Bluetooth.</td></tr>
+      <tr><td>ESP32-S3</td><td>Dual-core Xtensa LX7</td><td>Wi-Fi 4 + BT 5</td><td>AI acceleration, USB OTG.</td></tr>
+      <tr><td>ESP32-C3</td><td>RISC-V @ 160 MHz</td><td>Wi-Fi 4 + BT 5</td><td>Espressif&rsquo;s RISC-V entry. Cheap.</td></tr>
+      <tr><td>ESP32-C6 / H2</td><td>RISC-V</td><td>Wi-Fi 6 / 802.15.4</td><td>Newer low-power parts.</td></tr>
+    </table>
+  </section>
+
+  <section>
+    <h2 id="chips">Key Chips</h2>
+    <ul>
+      <li><strong>ESP32</strong> &mdash; the original dual-core Xtensa. The chip that made $3 Wi-Fi possible.</li>
+      <li><strong>ESP32-S3</strong> &mdash; current workhorse for new designs.</li>
+      <li><strong>ESP32-C3</strong> &mdash; RISC-V, often under $1 in volume.</li>
+    </ul>
+    <p>Espressif publishes full technical reference manuals, datasheets, and hardware design guidelines &mdash; a stark contrast to most chip vendors. See our <a href="/datasheets.html">datasheet index</a>.</p>
+  </section>
+
+  <section>
+    <h2 id="controversies">Security Research &amp; Notes</h2>
+
+    <h3>CVE-2025-27840: Undocumented Bluetooth HCI commands (2025)</h3>
+    <p>In March 2025, Tarlogic Security disclosed 29 undocumented vendor-specific HCI commands in the original ESP32&rsquo;s Bluetooth firmware &mdash; including commands that could read/write RAM and flash. Initial coverage called it a &ldquo;backdoor.&rdquo;</p>
+    <p>Espressif responded that these are standard debugging and manufacturing-test commands (common across Bluetooth implementations), not intentional backdoors. They require HCI access &mdash; meaning physical access or prior firmware compromise &mdash; and are not remotely exploitable over Bluetooth alone. Espressif committed to removing them from future firmware. CVSS 6.8 (Medium).</p>
+    <p>This is how responsible disclosure is supposed to work: researchers found it, the vendor acknowledged it, and a fix was committed.</p>
+    <p>Sources: <a href="https://socprime.com/blog/cve-2025-27840-vulnerability-in-esp32-bluetooth-chips/">SOC Prime</a>, <a href="https://docs.espressif.com/projects/esp-idf/en/latest/esp32/security/vulnerabilities.html">Espressif security advisories</a></p>
+
+    <h3>Espressif&rsquo;s open documentation (positive)</h3>
+    <p>Credit where due: Espressif is one of the few chip vendors that publishes comprehensive, public, no-NDA documentation &mdash; technical reference manuals, datasheets, hardware design guides, and open-source SDKs (ESP-IDF). This is the model BareBoard wishes every vendor followed. Open docs don&rsquo;t prevent vulnerabilities, but they let the community find and fix them.</p>
+  </section>
+
+  <section>
+    <h2 id="reading">Further Reading</h2>
+    <ul>
+      <li><a href="https://docs.espressif.com/">Espressif official documentation</a></li>
+      <li><a href="https://docs.espressif.com/projects/esp-idf/en/latest/esp32/security/vulnerabilities.html">Espressif security advisories</a></li>
+      <li><a href="/datasheets.html">BareBoard datasheet index</a> &mdash; ESP32 datasheets</li>
+    </ul>
+  </section>
+  <footer>
+    <a href="/tarpit/" class="hp-link" aria-hidden="true" tabindex="-1">device index</a>
+    <p>BareBoard &mdash; a free educational resource. Text and findings published under open terms; nothing here is for sale.</p>
+        <nav>
+      <a href="/">Home</a> &middot; <a href="/about.html">About</a> &middot; <a href="/colophon.html">Colophon</a>
+    </nav>
+
+    <div class="legal-framework">
+      <p><strong>BareBoard Legal Framework &amp; Declarations</strong></p>
+      <ul>
+      <li><strong>No AI training:</strong> All text, findings, and original photography on this site are copyrighted. Automated scraping for AI model training is prohibited. Crawlers that ignore robots.txt are trespassing.</li>
+        <li><strong>Educational nature:</strong> BareBoard operates exclusively as a non-commercial, open educational resource. All material is compiled for academic evaluation, hardware preservation, and technical literacy under 17 U.S.C. &sect; 107 (fair use).</li>
+        <li><strong>Zero-leak / no-binary clause:</strong> This site does not host, distribute, or mirror proprietary firmware binaries, encrypted operating system keys, or weaponizable exploits. Documentation covers only the public, physical realities of circuit hardware.</li>
+        <li><strong>Property verification:</strong> Every hardware autopsy is performed on personally owned, legally acquired equipment. No rented or third-party infrastructure is used.</li>
+        <li><strong>Public source sourcing:</strong> Comparative and regulatory data is aggregated from official public filings, including the U.S. Federal Communications Commission equipment authorization database.</li>
+      </ul>
+      <p class="legal-note"><em>BareBoard &mdash; open hardware allies, documented in alignment with the Open Source Hardware Association framework. Text and original photography published under open terms; nothing here is for sale.</em></p>
+    </div>
+  </footer>
+</main>
+
+<script src="/nav.js" defer></script>
+<script src="/search.js" defer></script>
+</body>
+</html>
