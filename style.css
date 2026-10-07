@@ -799,3 +799,19 @@ pre.term {
 pre.term code { font-size: 1em; background: none; padding: 0; }
 pre.term .p { color: #7fb069; font-weight: 700; }
 pre.term a { color: #8ab4f8; }
+
+/* Datasheet index — search, category filters, hero */
+.ds-lede { max-width: 62ch; }
+.ds-hero { margin: 1.5rem 0; max-width: 62ch; }
+.ds-hero img { width: 100%; height: auto; border-radius: 10px; border: 1px solid var(--line, #d9d9de); }
+.ds-hero figcaption, .ds-photo-strip figcaption { font-size: 0.8rem; color: #555; margin-top: 0.4rem; }
+.ds-photo-strip { display: flex; flex-wrap: wrap; gap: 1rem; margin: 1rem 0 1.5rem; }
+.ds-photo-strip figure { margin: 0; flex: 1 1 220px; max-width: 340px; }
+.ds-photo-strip img { width: 100%; height: auto; border-radius: 8px; border: 1px solid var(--line, #d9d9de); }
+.ds-filters { margin: 1.2rem 0 0.5rem; }
+.ds-filters input[type="search"] { font: inherit; padding: 0.5rem 0.7rem; border: 1px solid var(--line, #d9d9de); border-radius: 8px; width: 100%; max-width: 32rem; box-sizing: border-box; }
+.ds-cat-filter { display: flex; flex-wrap: wrap; gap: 0.5rem; margin-top: 0.8rem; }
+.ds-cat-filter button { font: inherit; font-size: 0.85rem; padding: 0.35rem 0.75rem; border: 1px solid var(--line, #d9d9de); border-radius: 999px; background: #fff; cursor: pointer; }
+.ds-cat-filter button.active { background: #1d1d1f; color: #fff; border-color: #1d1d1f; }
+.ds-count { font-size: 0.9rem; color: #555; margin: 0.6rem 0 0; }
+.ds-no-results { font-size: 0.95rem; background: #f6f6f8; border: 1px solid var(--line, #d9d9de); border-radius: 8px; padding: 0.8rem 1rem; max-width: 40rem; }
