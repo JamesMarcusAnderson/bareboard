@@ -1,0 +1,867 @@
+{
+  "name": "BareBoard Chip-to-Device Database",
+  "version": "1.0",
+  "methodology": "Each entry maps a chip to the device it ships in, sourced from public teardowns (iFixit, TechInsights, EDN) and the BareBoard big-tech write-up archive. Evidence labels: 'confirmed' = teardown identification plus a public datasheet in the archive; 'likely' = teardown/community identification without a public datasheet. No entries are invented; chips without a source are excluded.",
+  "evidence_labels": {
+    "confirmed": "Chip identified in a public teardown AND a public datasheet exists in the BareBoard archive.",
+    "likely": "Chip identified in a public teardown or reputable community reference, but no public datasheet is available (common for Qualcomm, Apple, Samsung custom silicon)."
+  },
+  "entry_count": 95,
+  "entries": [
+    {
+      "device": "iPhone 15 Pro",
+      "device_manufacturer": "Apple",
+      "chip": "Apple A17 Pro",
+      "chip_manufacturer": "Apple",
+      "function": "SoC (application processor)",
+      "source": "theapplewiki.com community reference A-series docs",
+      "evidence": "likely"
+    },
+    {
+      "device": "iPhone 15 Pro Max",
+      "device_manufacturer": "Apple",
+      "chip": "Apple A17 Pro",
+      "chip_manufacturer": "Apple",
+      "function": "SoC (application processor)",
+      "source": "theapplewiki.com community reference A-series docs",
+      "evidence": "likely"
+    },
+    {
+      "device": "iPhone 14 Pro",
+      "device_manufacturer": "Apple",
+      "chip": "Apple A16",
+      "chip_manufacturer": "Apple",
+      "function": "SoC (application processor)",
+      "source": "theapplewiki.com community reference A-series docs",
+      "evidence": "likely"
+    },
+    {
+      "device": "iPhone 14 Pro Max",
+      "device_manufacturer": "Apple",
+      "chip": "Apple A16",
+      "chip_manufacturer": "Apple",
+      "function": "SoC (application processor)",
+      "source": "theapplewiki.com community reference A-series docs",
+      "evidence": "likely"
+    },
+    {
+      "device": "iPhone 15",
+      "device_manufacturer": "Apple",
+      "chip": "Apple A16",
+      "chip_manufacturer": "Apple",
+      "function": "SoC (application processor)",
+      "source": "theapplewiki.com community reference A-series docs",
+      "evidence": "likely"
+    },
+    {
+      "device": "iPhone 15 Plus",
+      "device_manufacturer": "Apple",
+      "chip": "Apple A16",
+      "chip_manufacturer": "Apple",
+      "function": "SoC (application processor)",
+      "source": "theapplewiki.com community reference A-series docs",
+      "evidence": "likely"
+    },
+    {
+      "device": "iPhone 13",
+      "device_manufacturer": "Apple",
+      "chip": "Apple A15",
+      "chip_manufacturer": "Apple",
+      "function": "SoC (application processor)",
+      "source": "theapplewiki.com community reference A-series docs",
+      "evidence": "likely"
+    },
+    {
+      "device": "iPhone 13 mini",
+      "device_manufacturer": "Apple",
+      "chip": "Apple A15",
+      "chip_manufacturer": "Apple",
+      "function": "SoC (application processor)",
+      "source": "theapplewiki.com community reference A-series docs",
+      "evidence": "likely"
+    },
+    {
+      "device": "iPhone 13 Pro",
+      "device_manufacturer": "Apple",
+      "chip": "Apple A15",
+      "chip_manufacturer": "Apple",
+      "function": "SoC (application processor)",
+      "source": "theapplewiki.com community reference A-series docs",
+      "evidence": "likely"
+    },
+    {
+      "device": "iPhone 13 Pro Max",
+      "device_manufacturer": "Apple",
+      "chip": "Apple A15",
+      "chip_manufacturer": "Apple",
+      "function": "SoC (application processor)",
+      "source": "theapplewiki.com community reference A-series docs",
+      "evidence": "likely"
+    },
+    {
+      "device": "iPhone 12",
+      "device_manufacturer": "Apple",
+      "chip": "Apple A14",
+      "chip_manufacturer": "Apple",
+      "function": "SoC (application processor)",
+      "source": "theapplewiki.com community reference A-series docs",
+      "evidence": "likely"
+    },
+    {
+      "device": "iPhone 12 mini",
+      "device_manufacturer": "Apple",
+      "chip": "Apple A14",
+      "chip_manufacturer": "Apple",
+      "function": "SoC (application processor)",
+      "source": "theapplewiki.com community reference A-series docs",
+      "evidence": "likely"
+    },
+    {
+      "device": "iPhone 12 Pro",
+      "device_manufacturer": "Apple",
+      "chip": "Apple A14",
+      "chip_manufacturer": "Apple",
+      "function": "SoC (application processor)",
+      "source": "theapplewiki.com community reference A-series docs",
+      "evidence": "likely"
+    },
+    {
+      "device": "iPhone 12 Pro Max",
+      "device_manufacturer": "Apple",
+      "chip": "Apple A14",
+      "chip_manufacturer": "Apple",
+      "function": "SoC (application processor)",
+      "source": "theapplewiki.com community reference A-series docs",
+      "evidence": "likely"
+    },
+    {
+      "device": "iPhone 11",
+      "device_manufacturer": "Apple",
+      "chip": "Apple A13",
+      "chip_manufacturer": "Apple",
+      "function": "SoC (application processor)",
+      "source": "theapplewiki.com community reference A-series docs",
+      "evidence": "likely"
+    },
+    {
+      "device": "iPhone 11 Pro",
+      "device_manufacturer": "Apple",
+      "chip": "Apple A13",
+      "chip_manufacturer": "Apple",
+      "function": "SoC (application processor)",
+      "source": "theapplewiki.com community reference A-series docs",
+      "evidence": "likely"
+    },
+    {
+      "device": "iPhone 11 Pro Max",
+      "device_manufacturer": "Apple",
+      "chip": "Apple A13",
+      "chip_manufacturer": "Apple",
+      "function": "SoC (application processor)",
+      "source": "theapplewiki.com community reference A-series docs",
+      "evidence": "likely"
+    },
+    {
+      "device": "iPhone SE (2nd gen)",
+      "device_manufacturer": "Apple",
+      "chip": "Apple A13",
+      "chip_manufacturer": "Apple",
+      "function": "SoC (application processor)",
+      "source": "theapplewiki.com community reference A-series docs",
+      "evidence": "likely"
+    },
+    {
+      "device": "iPhone XR",
+      "device_manufacturer": "Apple",
+      "chip": "Apple A12",
+      "chip_manufacturer": "Apple",
+      "function": "SoC (application processor)",
+      "source": "theapplewiki.com community reference A-series docs",
+      "evidence": "likely"
+    },
+    {
+      "device": "iPhone XS",
+      "device_manufacturer": "Apple",
+      "chip": "Apple A12",
+      "chip_manufacturer": "Apple",
+      "function": "SoC (application processor)",
+      "source": "theapplewiki.com community reference A-series docs",
+      "evidence": "likely"
+    },
+    {
+      "device": "iPhone XS Max",
+      "device_manufacturer": "Apple",
+      "chip": "Apple A12",
+      "chip_manufacturer": "Apple",
+      "function": "SoC (application processor)",
+      "source": "theapplewiki.com community reference A-series docs",
+      "evidence": "likely"
+    },
+    {
+      "device": "iPhone 8",
+      "device_manufacturer": "Apple",
+      "chip": "Qualcomm MDM9655 (Snapdragon X16 LTE)",
+      "chip_manufacturer": "Qualcomm",
+      "function": "Cellular modem",
+      "source": "theapplewiki.com community reference baseband docs",
+      "evidence": "likely"
+    },
+    {
+      "device": "iPhone 8 Plus",
+      "device_manufacturer": "Apple",
+      "chip": "Qualcomm MDM9655 (Snapdragon X16 LTE)",
+      "chip_manufacturer": "Qualcomm",
+      "function": "Cellular modem",
+      "source": "theapplewiki.com community reference baseband docs",
+      "evidence": "likely"
+    },
+    {
+      "device": "iPhone X",
+      "device_manufacturer": "Apple",
+      "chip": "Qualcomm MDM9655 (Snapdragon X16 LTE)",
+      "chip_manufacturer": "Qualcomm",
+      "function": "Cellular modem",
+      "source": "theapplewiki.com community reference baseband docs",
+      "evidence": "likely"
+    },
+    {
+      "device": "iPhone 7",
+      "device_manufacturer": "Apple",
+      "chip": "Qualcomm MDM9645 (Snapdragon X12 LTE)",
+      "chip_manufacturer": "Qualcomm",
+      "function": "Cellular modem",
+      "source": "theapplewiki.com community reference baseband docs",
+      "evidence": "likely"
+    },
+    {
+      "device": "iPhone 7",
+      "device_manufacturer": "Apple",
+      "chip": "Intel PMB9943 (XMM 7360)",
+      "chip_manufacturer": "Intel",
+      "function": "Cellular modem",
+      "source": "theapplewiki.com community reference baseband docs",
+      "evidence": "likely"
+    },
+    {
+      "device": "iPhone 6s",
+      "device_manufacturer": "Apple",
+      "chip": "Qualcomm MDM9635 (Snapdragon X7 LTE)",
+      "chip_manufacturer": "Qualcomm",
+      "function": "Cellular modem",
+      "source": "theapplewiki.com community reference baseband docs",
+      "evidence": "likely"
+    },
+    {
+      "device": "iPhone 6s Plus",
+      "device_manufacturer": "Apple",
+      "chip": "Qualcomm MDM9635 (Snapdragon X7 LTE)",
+      "chip_manufacturer": "Qualcomm",
+      "function": "Cellular modem",
+      "source": "theapplewiki.com community reference baseband docs",
+      "evidence": "likely"
+    },
+    {
+      "device": "iPhone 6",
+      "device_manufacturer": "Apple",
+      "chip": "Qualcomm MDM9625 (Snapdragon X5 LTE)",
+      "chip_manufacturer": "Qualcomm",
+      "function": "Cellular modem",
+      "source": "theapplewiki.com community reference baseband docs",
+      "evidence": "likely"
+    },
+    {
+      "device": "iPhone 6 Plus",
+      "device_manufacturer": "Apple",
+      "chip": "Qualcomm MDM9625 (Snapdragon X5 LTE)",
+      "chip_manufacturer": "Qualcomm",
+      "function": "Cellular modem",
+      "source": "theapplewiki.com community reference baseband docs",
+      "evidence": "likely"
+    },
+    {
+      "device": "Pixel 6",
+      "device_manufacturer": "Google",
+      "chip": "Google Tensor G1",
+      "chip_manufacturer": "Google/Samsung",
+      "function": "SoC (application processor)",
+      "source": "BareBoard big-tech archive: WRITEUP-google-tensor.md",
+      "evidence": "likely"
+    },
+    {
+      "device": "Pixel 6",
+      "device_manufacturer": "Google",
+      "chip": "Samsung Exynos 5123",
+      "chip_manufacturer": "Samsung",
+      "function": "Cellular modem",
+      "source": "BareBoard big-tech archive: WRITEUP-google-tensor.md",
+      "evidence": "likely"
+    },
+    {
+      "device": "Pixel 6 Pro",
+      "device_manufacturer": "Google",
+      "chip": "Google Tensor G1",
+      "chip_manufacturer": "Google/Samsung",
+      "function": "SoC (application processor)",
+      "source": "BareBoard big-tech archive: WRITEUP-google-tensor.md",
+      "evidence": "likely"
+    },
+    {
+      "device": "Pixel 6 Pro",
+      "device_manufacturer": "Google",
+      "chip": "Samsung Exynos 5123",
+      "chip_manufacturer": "Samsung",
+      "function": "Cellular modem",
+      "source": "BareBoard big-tech archive: WRITEUP-google-tensor.md",
+      "evidence": "likely"
+    },
+    {
+      "device": "Pixel 7",
+      "device_manufacturer": "Google",
+      "chip": "Google Tensor G2",
+      "chip_manufacturer": "Google/Samsung",
+      "function": "SoC (application processor)",
+      "source": "BareBoard big-tech archive: WRITEUP-google-tensor.md",
+      "evidence": "likely"
+    },
+    {
+      "device": "Pixel 7",
+      "device_manufacturer": "Google",
+      "chip": "Samsung (Exynos-derived)",
+      "chip_manufacturer": "Samsung",
+      "function": "Cellular modem",
+      "source": "BareBoard big-tech archive: WRITEUP-google-tensor.md",
+      "evidence": "likely"
+    },
+    {
+      "device": "Pixel 7 Pro",
+      "device_manufacturer": "Google",
+      "chip": "Google Tensor G2",
+      "chip_manufacturer": "Google/Samsung",
+      "function": "SoC (application processor)",
+      "source": "BareBoard big-tech archive: WRITEUP-google-tensor.md",
+      "evidence": "likely"
+    },
+    {
+      "device": "Pixel 7 Pro",
+      "device_manufacturer": "Google",
+      "chip": "Samsung (Exynos-derived)",
+      "chip_manufacturer": "Samsung",
+      "function": "Cellular modem",
+      "source": "BareBoard big-tech archive: WRITEUP-google-tensor.md",
+      "evidence": "likely"
+    },
+    {
+      "device": "Pixel 9",
+      "device_manufacturer": "Google",
+      "chip": "Google Tensor G4",
+      "chip_manufacturer": "Google/Samsung",
+      "function": "SoC (application processor)",
+      "source": "BareBoard big-tech archive: WRITEUP-google-tensor.md",
+      "evidence": "likely"
+    },
+    {
+      "device": "Pixel 9",
+      "device_manufacturer": "Google",
+      "chip": "Samsung",
+      "chip_manufacturer": "Samsung",
+      "function": "Cellular modem",
+      "source": "BareBoard big-tech archive: WRITEUP-google-tensor.md",
+      "evidence": "likely"
+    },
+    {
+      "device": "Pixel 9 Pro",
+      "device_manufacturer": "Google",
+      "chip": "Google Tensor G4",
+      "chip_manufacturer": "Google/Samsung",
+      "function": "SoC (application processor)",
+      "source": "BareBoard big-tech archive: WRITEUP-google-tensor.md",
+      "evidence": "likely"
+    },
+    {
+      "device": "Pixel 9 Pro",
+      "device_manufacturer": "Google",
+      "chip": "Samsung",
+      "chip_manufacturer": "Samsung",
+      "function": "Cellular modem",
+      "source": "BareBoard big-tech archive: WRITEUP-google-tensor.md",
+      "evidence": "likely"
+    },
+    {
+      "device": "Pixel 6",
+      "device_manufacturer": "Google",
+      "chip": "Titan M2",
+      "chip_manufacturer": "Google",
+      "function": "Security coprocessor",
+      "source": "BareBoard big-tech archive: WRITEUP-google-tensor.md",
+      "evidence": "likely"
+    },
+    {
+      "device": "Pixel 7",
+      "device_manufacturer": "Google",
+      "chip": "Titan M2",
+      "chip_manufacturer": "Google",
+      "function": "Security coprocessor",
+      "source": "BareBoard big-tech archive: WRITEUP-google-tensor.md",
+      "evidence": "likely"
+    },
+    {
+      "device": "Tesla FSD Computer (HW3)",
+      "device_manufacturer": "Tesla",
+      "chip": "Tesla FSD Chip (2x, Samsung 14nm)",
+      "chip_manufacturer": "Tesla/Samsung",
+      "function": "AI accelerator (autonomous driving compute)",
+      "source": "BareBoard big-tech archive: WRITEUP-tesla-fsd-computer.md; Tesla Autonomy Day 2019",
+      "evidence": "likely"
+    },
+    {
+      "device": "Tesla FSD Computer (HW3)",
+      "device_manufacturer": "Tesla",
+      "chip": "Micron LPDDR4",
+      "chip_manufacturer": "Micron",
+      "function": "Memory (2 GB per chip)",
+      "source": "BareBoard big-tech archive: WRITEUP-tesla-fsd-computer.md; TechInsights",
+      "evidence": "likely"
+    },
+    {
+      "device": "Tesla MCU3",
+      "device_manufacturer": "Tesla",
+      "chip": "AMD Ryzen APU (215-130000026, Zen 1 + Navi 23 RDNA 2)",
+      "chip_manufacturer": "AMD",
+      "function": "SoC (infotainment)",
+      "source": "BareBoard big-tech archive: WRITEUP-tesla-mcu.md; Ingineerix/@greentheonly teardowns",
+      "evidence": "likely"
+    },
+    {
+      "device": "Tesla MCU3",
+      "device_manufacturer": "Tesla",
+      "chip": "Quectel AG525R-GL",
+      "chip_manufacturer": "Quectel",
+      "function": "Cellular modem (LTE-A + C-V2X)",
+      "source": "BareBoard big-tech archive: WRITEUP-tesla-mcu.md",
+      "evidence": "likely"
+    },
+    {
+      "device": "Tesla MCU3",
+      "device_manufacturer": "Tesla",
+      "chip": "NXP SPC5748GSMMJ6",
+      "chip_manufacturer": "NXP",
+      "function": "Vehicle gateway MCU (ASIL-D)",
+      "source": "BareBoard big-tech archive: WRITEUP-tesla-mcu.md; datasheet in archive (NXP-SPC5748G-datasheet.pdf)",
+      "evidence": "confirmed"
+    },
+    {
+      "device": "Tesla MCU3",
+      "device_manufacturer": "Tesla",
+      "chip": "ADI ADSP-SC587W",
+      "chip_manufacturer": "Analog Devices",
+      "function": "Audio DSP (SHARC+ dual-core + Cortex-A5)",
+      "source": "BareBoard big-tech archive: WRITEUP-tesla-mcu.md; datasheet in archive (ADI-ADSP-SC58x_ADSP-2158x-datasheet.pdf)",
+      "evidence": "confirmed"
+    },
+    {
+      "device": "Tesla MCU3",
+      "device_manufacturer": "Tesla",
+      "chip": "ADI AD21584",
+      "chip_manufacturer": "Analog Devices",
+      "function": "Audio DSP (SHARC+ dual-core + Cortex-A5)",
+      "source": "BareBoard big-tech archive: WRITEUP-tesla-mcu.md; datasheet in archive (ADI-ADSP-SC58x_ADSP-2158x-datasheet.pdf)",
+      "evidence": "confirmed"
+    },
+    {
+      "device": "Tesla MCU2",
+      "device_manufacturer": "Tesla",
+      "chip": "Intel Atom A3950",
+      "chip_manufacturer": "Intel",
+      "function": "SoC (infotainment)",
+      "source": "BareBoard big-tech archive: WRITEUP-tesla-mcu.md; datasheet in archive (Intel-Atom-A3900-E3900-datasheet-addendum.pdf)",
+      "evidence": "confirmed"
+    },
+    {
+      "device": "Tesla MCU1",
+      "device_manufacturer": "Tesla",
+      "chip": "NVIDIA Tegra 3",
+      "chip_manufacturer": "NVIDIA",
+      "function": "SoC (infotainment)",
+      "source": "BareBoard big-tech archive: WRITEUP-tesla-mcu.md",
+      "evidence": "likely"
+    },
+    {
+      "device": "Starlink User Terminal (Dishy)",
+      "device_manufacturer": "SpaceX",
+      "chip": "STMicro STM32MP151/153 derivative (custom-marked)",
+      "chip_manufacturer": "STMicroelectronics",
+      "function": "Application processor (Cortex-A7 + Cortex-M4)",
+      "source": "BareBoard big-tech archive: WRITEUP-starlink-dish.md; datasheets in archive (ST-STM32MP151/153-datasheet.pdf); Kenneth Keiter 2020 teardown; TechInsights",
+      "evidence": "confirmed"
+    },
+    {
+      "device": "Starlink User Terminal (Dishy)",
+      "device_manufacturer": "SpaceX",
+      "chip": "MediaTek dual-core Cortex-A7 @ 1.25 GHz",
+      "chip_manufacturer": "MediaTek",
+      "function": "Network processor",
+      "source": "BareBoard big-tech archive: WRITEUP-starlink-dish.md; KU Leuven COSIC findings",
+      "evidence": "likely"
+    },
+    {
+      "device": "Starlink User Terminal (Dishy)",
+      "device_manufacturer": "SpaceX",
+      "chip": "Micron DDR3L SDRAM (256 MB)",
+      "chip_manufacturer": "Micron",
+      "function": "Memory",
+      "source": "BareBoard big-tech archive: WRITEUP-starlink-dish.md; datasheet in archive (Micron-MT41K256M16-DDR3L-datasheet.pdf)",
+      "evidence": "confirmed"
+    },
+    {
+      "device": "Starlink User Terminal (Dishy)",
+      "device_manufacturer": "SpaceX",
+      "chip": "Winbond SLC NAND flash",
+      "chip_manufacturer": "Winbond",
+      "function": "Firmware storage",
+      "source": "BareBoard big-tech archive: WRITEUP-starlink-dish.md; datasheet in archive (Winbond-W25N01GV-datasheet.pdf)",
+      "evidence": "confirmed"
+    },
+    {
+      "device": "Starlink User Terminal (Dishy)",
+      "device_manufacturer": "SpaceX",
+      "chip": "TI TPS54360 (representative)",
+      "chip_manufacturer": "Texas Instruments",
+      "function": "DC/DC converter",
+      "source": "BareBoard big-tech archive: WRITEUP-starlink-dish.md; datasheet in archive (TI-TPS54360-datasheet.pdf)",
+      "evidence": "likely"
+    },
+    {
+      "device": "Starlink User Terminal (Dishy)",
+      "device_manufacturer": "SpaceX",
+      "chip": "MPS MP24943 (representative)",
+      "chip_manufacturer": "Monolithic Power Systems",
+      "function": "PFC + LLC controller",
+      "source": "BareBoard big-tech archive: WRITEUP-starlink-dish.md; datasheet in archive (MPS-MP24943-datasheet.pdf)",
+      "evidence": "likely"
+    },
+    {
+      "device": "Starlink User Terminal (Dishy)",
+      "device_manufacturer": "SpaceX",
+      "chip": "SpaceX custom phased-array silicon",
+      "chip_manufacturer": "SpaceX",
+      "function": "Beamforming ASIC",
+      "source": "BareBoard big-tech archive: WRITEUP-starlink-dish.md",
+      "evidence": "likely"
+    },
+    {
+      "device": "Meta Quest 3",
+      "device_manufacturer": "Meta",
+      "chip": "Qualcomm SXR2230P (Snapdragon XR2 Gen 2)",
+      "chip_manufacturer": "Qualcomm",
+      "function": "SoC (XR application processor)",
+      "source": "BareBoard big-tech archive: WRITEUP-meta-quest-3.md; iFixit Meta Quest 3 Chip ID (ifixit.com/Guide/Meta+Quest+3+Chip+ID/165932)",
+      "evidence": "likely"
+    },
+    {
+      "device": "Meta Quest 3",
+      "device_manufacturer": "Meta",
+      "chip": "SK hynix H58G66BK8BX105 (8 GB LPDDR5)",
+      "chip_manufacturer": "SK hynix",
+      "function": "Memory",
+      "source": "BareBoard big-tech archive: WRITEUP-meta-quest-3.md; iFixit chip ID",
+      "evidence": "likely"
+    },
+    {
+      "device": "Meta Quest 3",
+      "device_manufacturer": "Meta",
+      "chip": "SK hynix HN8T05DEHKX073 (128 GB NAND)",
+      "chip_manufacturer": "SK hynix",
+      "function": "Storage (UFS)",
+      "source": "BareBoard big-tech archive: WRITEUP-meta-quest-3.md; iFixit chip ID",
+      "evidence": "likely"
+    },
+    {
+      "device": "Meta Quest 3",
+      "device_manufacturer": "Meta",
+      "chip": "Qualcomm WCN6856",
+      "chip_manufacturer": "Qualcomm",
+      "function": "WiFi 6E SoC",
+      "source": "BareBoard big-tech archive: WRITEUP-meta-quest-3.md; iFixit chip ID",
+      "evidence": "likely"
+    },
+    {
+      "device": "Meta Quest 3",
+      "device_manufacturer": "Meta",
+      "chip": "Nordic nRF52833",
+      "chip_manufacturer": "Nordic Semiconductor",
+      "function": "Bluetooth LE 5.4 SoC",
+      "source": "BareBoard big-tech archive: WRITEUP-meta-quest-3.md; iFixit chip ID; datasheet in archive (nRF52833_Product_Specification.pdf)",
+      "evidence": "confirmed"
+    },
+    {
+      "device": "Meta Quest 3",
+      "device_manufacturer": "Meta",
+      "chip": "STMicro STM32G071EB",
+      "chip_manufacturer": "STMicroelectronics",
+      "function": "MCU (sensor hub / power, Cortex-M0+)",
+      "source": "BareBoard big-tech archive: WRITEUP-meta-quest-3.md; iFixit chip ID; datasheet in archive (STM32G071x8-xB_datasheet.pdf)",
+      "evidence": "confirmed"
+    },
+    {
+      "device": "Meta Quest 3",
+      "device_manufacturer": "Meta",
+      "chip": "Infineon CYPD3177",
+      "chip_manufacturer": "Infineon",
+      "function": "USB-C port controller (Power Delivery)",
+      "source": "BareBoard big-tech archive: WRITEUP-meta-quest-3.md; iFixit chip ID; datasheet in archive (CYPD3177_datasheet.pdf)",
+      "evidence": "confirmed"
+    },
+    {
+      "device": "Meta Quest 3",
+      "device_manufacturer": "Meta",
+      "chip": "ADI MAX98388",
+      "chip_manufacturer": "Analog Devices",
+      "function": "Class-D audio amplifier",
+      "source": "BareBoard big-tech archive: WRITEUP-meta-quest-3.md; iFixit chip ID; datasheet in archive (MAX98388_MAX98389_datasheet.pdf)",
+      "evidence": "confirmed"
+    },
+    {
+      "device": "Meta Quest 3",
+      "device_manufacturer": "Meta",
+      "chip": "ADI MAX98361",
+      "chip_manufacturer": "Analog Devices",
+      "function": "Class-D audio amplifier",
+      "source": "BareBoard big-tech archive: WRITEUP-meta-quest-3.md; iFixit chip ID; datasheet in archive (MAX98361_datasheet.pdf)",
+      "evidence": "confirmed"
+    },
+    {
+      "device": "Meta Quest 3",
+      "device_manufacturer": "Meta",
+      "chip": "Allegro A1392 / A1393",
+      "chip_manufacturer": "Allegro MicroSystems",
+      "function": "Hall effect sensors (IPD / tracking)",
+      "source": "BareBoard big-tech archive: WRITEUP-meta-quest-3.md; iFixit chip ID; datasheet in archive (A1391_A1392_A1393_A1395_datasheet.pdf)",
+      "evidence": "confirmed"
+    },
+    {
+      "device": "Meta Quest 3",
+      "device_manufacturer": "Meta",
+      "chip": "Qualcomm PMXR2230 (x4)",
+      "chip_manufacturer": "Qualcomm",
+      "function": "Power management IC",
+      "source": "BareBoard big-tech archive: WRITEUP-meta-quest-3.md; iFixit chip ID",
+      "evidence": "likely"
+    },
+    {
+      "device": "Meta Quest Pro",
+      "device_manufacturer": "Meta",
+      "chip": "Qualcomm SXR2155P (Snapdragon XR2+)",
+      "chip_manufacturer": "Qualcomm",
+      "function": "SoC (XR application processor)",
+      "source": "BareBoard big-tech archive: WRITEUP-meta-quest-pro.md; iFixit Meta Quest Pro Chip ID (ifixit.com/Guide/Meta+Quest+Pro+Chip+ID/154876)",
+      "evidence": "likely"
+    },
+    {
+      "device": "Meta Quest Pro",
+      "device_manufacturer": "Meta",
+      "chip": "Lattice LIF-MD6000-6 (CrossLink)",
+      "chip_manufacturer": "Lattice Semiconductor",
+      "function": "FPGA (sensor aggregation)",
+      "source": "BareBoard big-tech archive: WRITEUP-meta-quest-pro.md; iFixit chip ID; datasheet in archive (LIF-MD6000_CrossLink_Family_datasheet.pdf)",
+      "evidence": "confirmed"
+    },
+    {
+      "device": "Xbox Series X",
+      "device_manufacturer": "Microsoft",
+      "chip": "AMD custom SoC 'Project Scarlett' (Zen 2 8C/16T + RDNA 2 52CU, TSMC 7nm)",
+      "chip_manufacturer": "AMD",
+      "function": "SoC (CPU + GPU APU)",
+      "source": "BareBoard big-tech archive: WRITEUP-xbox-series-x.md; Microsoft HotChips 2020; iFixit Xbox Series X Teardown",
+      "evidence": "likely"
+    },
+    {
+      "device": "Xbox Series X",
+      "device_manufacturer": "Microsoft",
+      "chip": "Micron GDDR6 (16 GB)",
+      "chip_manufacturer": "Micron",
+      "function": "Memory (unified)",
+      "source": "BareBoard big-tech archive: WRITEUP-xbox-series-x.md; iFixit teardown",
+      "evidence": "likely"
+    },
+    {
+      "device": "Xbox Series X",
+      "device_manufacturer": "Microsoft",
+      "chip": "ON Semiconductor NB7NQ621M",
+      "chip_manufacturer": "onsemi",
+      "function": "HDMI 2.1 / DisplayPort redriver",
+      "source": "BareBoard big-tech archive: WRITEUP-xbox-series-x.md; iFixit teardown; datasheet in archive (onsemi_NB7NQ621M.pdf)",
+      "evidence": "confirmed"
+    },
+    {
+      "device": "Xbox Series X",
+      "device_manufacturer": "Microsoft",
+      "chip": "TI TPS568230",
+      "chip_manufacturer": "Texas Instruments",
+      "function": "Synchronous buck regulator",
+      "source": "BareBoard big-tech archive: WRITEUP-xbox-series-x.md; datasheet in archive (TI_TPS568230.pdf)",
+      "evidence": "confirmed"
+    },
+    {
+      "device": "Xbox Series S",
+      "device_manufacturer": "Microsoft",
+      "chip": "AMD custom SoC (Zen 2 + RDNA 2 20CU cut-down, 197mm2)",
+      "chip_manufacturer": "AMD",
+      "function": "SoC (CPU + GPU APU)",
+      "source": "BareBoard big-tech archive: WRITEUP-xbox-series-s.md; Digital Foundry teardown",
+      "evidence": "likely"
+    },
+    {
+      "device": "Amazon Echo (1st gen)",
+      "device_manufacturer": "Amazon",
+      "chip": "TI DM3725CUS100 (Cortex-A8 + C64x+ DSP)",
+      "chip_manufacturer": "Texas Instruments",
+      "function": "SoC (digital media processor)",
+      "source": "BareBoard big-tech archive: WRITEUP-amazon-echo-gen1.md; iFixit Amazon Echo Teardown; datasheet in archive (TI_dm3725.pdf)",
+      "evidence": "confirmed"
+    },
+    {
+      "device": "Amazon Echo (1st gen)",
+      "device_manufacturer": "Amazon",
+      "chip": "Qualcomm Atheros QCA6234X-AM2D",
+      "chip_manufacturer": "Qualcomm",
+      "function": "WiFi + Bluetooth module",
+      "source": "BareBoard big-tech archive: WRITEUP-amazon-echo-gen1.md; iFixit teardown",
+      "evidence": "likely"
+    },
+    {
+      "device": "Amazon Echo (1st gen)",
+      "device_manufacturer": "Amazon",
+      "chip": "TI TPS65910A1",
+      "chip_manufacturer": "Texas Instruments",
+      "function": "Power management IC",
+      "source": "BareBoard big-tech archive: WRITEUP-amazon-echo-gen1.md; iFixit teardown; datasheet in archive (TI_tps65910a1.pdf)",
+      "evidence": "confirmed"
+    },
+    {
+      "device": "Amazon Echo (1st gen)",
+      "device_manufacturer": "Amazon",
+      "chip": "TI TPA3110D2",
+      "chip_manufacturer": "Texas Instruments",
+      "function": "Class-D speaker amplifier (15W)",
+      "source": "BareBoard big-tech archive: WRITEUP-amazon-echo-gen1.md; iFixit teardown; datasheet in archive (TI_tpa3110d2.pdf)",
+      "evidence": "confirmed"
+    },
+    {
+      "device": "Amazon Echo (1st gen)",
+      "device_manufacturer": "Amazon",
+      "chip": "TI TLV320DAC3203",
+      "chip_manufacturer": "Texas Instruments",
+      "function": "Stereo audio DAC",
+      "source": "BareBoard big-tech archive: WRITEUP-amazon-echo-gen1.md; iFixit teardown; datasheet in archive (TI_tlv320dac3203.pdf)",
+      "evidence": "confirmed"
+    },
+    {
+      "device": "Amazon Echo (1st gen)",
+      "device_manufacturer": "Amazon",
+      "chip": "TI TLV320ADC3101 (x4)",
+      "chip_manufacturer": "Texas Instruments",
+      "function": "Stereo ADC (microphone array)",
+      "source": "BareBoard big-tech archive: WRITEUP-amazon-echo-gen1.md; iFixit teardown; datasheet in archive (TI_tlv320adc3101.pdf)",
+      "evidence": "confirmed"
+    },
+    {
+      "device": "Amazon Echo (1st gen)",
+      "device_manufacturer": "Amazon",
+      "chip": "TI LP55231 (x4)",
+      "chip_manufacturer": "Texas Instruments",
+      "function": "LED driver (light ring)",
+      "source": "BareBoard big-tech archive: WRITEUP-amazon-echo-gen1.md; iFixit teardown; datasheet in archive (TI_lp55231.pdf)",
+      "evidence": "confirmed"
+    },
+    {
+      "device": "Amazon Echo (1st gen)",
+      "device_manufacturer": "Amazon",
+      "chip": "TI SN74LVC74A",
+      "chip_manufacturer": "Texas Instruments",
+      "function": "Dual D-type flip-flop (glue logic)",
+      "source": "BareBoard big-tech archive: WRITEUP-amazon-echo-gen1.md; iFixit teardown; datasheet in archive (TI_sn74lvc74a.pdf)",
+      "evidence": "confirmed"
+    },
+    {
+      "device": "Ring Wired Doorbell Pro (Gen 3)",
+      "device_manufacturer": "Amazon",
+      "chip": "MediaTek WiFi 6 / BT 5.2 transceiver",
+      "chip_manufacturer": "MediaTek",
+      "function": "Wireless SoC",
+      "source": "BareBoard big-tech archive: WRITEUP-amazon-ring-doorbell-pro.md; TechInsights teardown",
+      "evidence": "likely"
+    },
+    {
+      "device": "Ring Wired Doorbell Pro (Gen 3)",
+      "device_manufacturer": "Amazon",
+      "chip": "Semtech LoRa transceiver",
+      "chip_manufacturer": "Semtech",
+      "function": "Long-range IoT radio (Sidewalk)",
+      "source": "BareBoard big-tech archive: WRITEUP-amazon-ring-doorbell-pro.md; TechInsights teardown",
+      "evidence": "likely"
+    },
+    {
+      "device": "Ring Wired Doorbell Pro (Gen 3)",
+      "device_manufacturer": "Amazon",
+      "chip": "Silicon Labs BT 5.2 SoC",
+      "chip_manufacturer": "Silicon Labs",
+      "function": "Bluetooth SoC",
+      "source": "BareBoard big-tech archive: WRITEUP-amazon-ring-doorbell-pro.md; TechInsights teardown",
+      "evidence": "likely"
+    },
+    {
+      "device": "Ring Wired Doorbell Pro (Gen 3)",
+      "device_manufacturer": "Amazon",
+      "chip": "RichWave 5 GHz WiFi 7 front-end",
+      "chip_manufacturer": "RichWave",
+      "function": "RF front-end module",
+      "source": "BareBoard big-tech archive: WRITEUP-amazon-ring-doorbell-pro.md; TechInsights teardown",
+      "evidence": "likely"
+    },
+    {
+      "device": "Amazon Dash Wand",
+      "device_manufacturer": "Amazon",
+      "chip": "Microchip ATSAMG55J19A (Cortex-M4)",
+      "chip_manufacturer": "Microchip",
+      "function": "Main MCU",
+      "source": "BareBoard big-tech archive: WRITEUP-amazon-dash-wand.md; EDN teardown; datasheet in archive (Microchip_ATSAMG55J19A.pdf)",
+      "evidence": "confirmed"
+    },
+    {
+      "device": "Amazon Dash Wand",
+      "device_manufacturer": "Amazon",
+      "chip": "Microchip ATWINC1500B",
+      "chip_manufacturer": "Microchip",
+      "function": "WiFi module (802.11 b/g/n)",
+      "source": "BareBoard big-tech archive: WRITEUP-amazon-dash-wand.md; EDN teardown; datasheet in archive (Microchip_ATWINC1500B.pdf)",
+      "evidence": "confirmed"
+    },
+    {
+      "device": "Amazon Dash Wand",
+      "device_manufacturer": "Amazon",
+      "chip": "Cirrus Logic WM8904",
+      "chip_manufacturer": "Cirrus Logic",
+      "function": "Audio codec (ultra-low-power)",
+      "source": "BareBoard big-tech archive: WRITEUP-amazon-dash-wand.md; EDN teardown; datasheet in archive (CirrusLogic_WM8904.pdf)",
+      "evidence": "confirmed"
+    },
+    {
+      "device": "Amazon Dash Wand",
+      "device_manufacturer": "Amazon",
+      "chip": "Micron MT25Q128A (128 Mb)",
+      "chip_manufacturer": "Micron",
+      "function": "Serial flash",
+      "source": "BareBoard big-tech archive: WRITEUP-amazon-dash-wand.md; EDN teardown; datasheet in archive (Micron_MT25Q128A.pdf)",
+      "evidence": "confirmed"
+    },
+    {
+      "device": "Amazon Dash Wand",
+      "device_manufacturer": "Amazon",
+      "chip": "TI TPS61091",
+      "chip_manufacturer": "Texas Instruments",
+      "function": "Boost converter",
+      "source": "BareBoard big-tech archive: WRITEUP-amazon-dash-wand.md; EDN teardown; datasheet in archive (TI_tps61091.pdf)",
+      "evidence": "confirmed"
+    }
+  ]
+}
