@@ -7,12 +7,19 @@
 <meta name="robots" content="noai, noimageai">
 <meta name="tdm-reservation" content="1">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Colophon — BareBoard</title>
-<meta name="description" content="How BareBoard is built: hand-written pages, no trackers, no frameworks.">
+<title>Changelog &mdash; BareBoard</title>
+<meta name="description" content="What&apos;s new on BareBoard: recent additions and updates.">
 <meta name="theme-color" content="#fbfbfc">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="BareBoard">
+<meta property="og:title" content="Changelog">
+<meta property="og:description" content="What&apos;s new on BareBoard: recent additions and updates.">
+<meta property="og:url" content="https://bareboard.org/changelog.html">
+<meta property="og:image" content="https://bareboard.org/img/frank-clean.jpg">
+<meta name="twitter:card" content="summary_large_image">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%231d1d1f'/%3E%3Ctext x='32' y='45' font-family='system-ui,-apple-system,sans-serif' font-size='36' font-weight='700' fill='white' text-anchor='middle'%3EB%3C/text%3E%3C/svg%3E">
 <link rel="stylesheet" href="/style.css">
-<link rel="alternate" type="application/rss+xml" title="BareBoard &mdash; What&apos;s New" href="/feed.xml">
+<link rel="alternate" type="application/rss+xml" title="BareBoard — What&apos;s New" href="/feed.xml">
 </head>
 <body>
 <header class="site-nav">
@@ -99,40 +106,37 @@
     <ul class="search-results" id="search-results" aria-live="polite"></ul>
   </div>
 </header>
-
 <main class="content">
-<h1>Colophon</h1>
-<p class="lede">How this site is made &mdash; and why it&rsquo;s made this way.</p>
+<h1>Changelog</h1>
+<p class="lede">What&apos;s new on BareBoard &mdash; recent additions and updates, newest first.</p>
 
-<h2>Hand-built</h2>
-<p>Every page on BareBoard is written by hand as plain HTML, styled by a single
-shared stylesheet, with a little vanilla JavaScript only where a page needs it.
-There is no framework, no build step, no content management system, and no
-third-party scripts, fonts, or trackers. Outbound links go to cited sources
-(datasheets, filings, reference material) &mdash; nothing phones home.</p>
+<h2>2026-10-07</h2>
+<ul>
+  <li><a href="/chips.html">Chip Database</a> &mdash; 95 chips mapped across 47 devices, every chip traced to the device it ships in, sourced from public teardowns with evidence labels.</li>
+  <li><a href="/obsolescence.html">Planned Obsolescence Archive</a> &mdash; 7 documented cases of updates and policies bricking or degrading owned hardware, each with evidence URLs and outcomes.</li>
+  <li><a href="/repair.html">Repair Guides</a> &mdash; 19 devices ranked by repair hostility with iFixit scores, anti-repair tactics, and tools needed &mdash; worst first.</li>
+  <li><a href="/protocols.html">Protocol Reverse Engineering</a> &mdash; 7 closed protocols the community has reverse engineered, plus a 14-technique firmware access playbook and simple entry points using everyday ports.</li>
+  <li><a href="/start-here.html">Start Here</a> &mdash; a beginner&apos;s guide for zero technology skill: what to buy for under $15, a first project that opens nothing, and a plain-language glossary.</li>
+  <li><a href="/datasheets.html">Datasheet Index</a> &mdash; 101 component datasheets now searchable with category filters and photos.</li>
+  <li>New IoT device pages: <a href="/devices/echo-dot/">Echo Dot 5th Gen</a>, <a href="/devices/nest-mini/">Nest Mini 2nd Gen</a>, <a href="/devices/wyze-cam-v3/">Wyze Cam v3</a>, <a href="/devices/kasa-hs103/">Kasa HS103</a>, <a href="/devices/sonoff-basic-r3/">Sonoff Basic R3</a>, and <a href="/devices/pico-w/">Raspberry Pi Pico W</a> &mdash; each with verified FCC ID, chip identification, and non-destructive firmware access notes.</li>
+  <li>FCC IDs added to every teardown page, placed after the mission statement.</li>
+  <li>Simple entry points documented: Switch RCM via Joy-Con rail, Samsung download-mode jig, TP-Link TFTP recovery, headphone-jack serial, ESP flash-mode button.</li>
+  <li><a href="/sitemap.xml">Sitemap</a> and <a href="/feed.xml">RSS feed</a> published for discovery and subscriptions.</li>
+</ul>
 
-<h2>Defensive by default</h2>
-<p>Each page carries a strict Content Security Policy, a no-referrer policy,
-<code>noai, noimageai</code> crawler directives, and a TDM (text-and-data-mining)
-reservation, backed by a <code>robots.txt</code> and a
-<code>/.well-known/tdmrep.json</code> declaration. Automated scraping for AI
-model training is prohibited &mdash; the findings here are published for
-humans learning hardware.</p>
+<h2>Earlier</h2>
+<ul>
+  <li><a href="/hot-100.html">Hot 100</a> rebuilt &mdash; 100 devices ranked by editorial judgment for hardware-education relevance, every entry sourced, methodology published. No invented sales data, no fake metrics.</li>
+  <li>Legal framework published: <a href="/terms.html">Terms</a>, <a href="/dmca.html">DMCA</a>, <a href="/copyright.html">Copyright</a>, <a href="/privacy.html">Privacy</a>.</li>
+  <li><a href="/support.html">Support page</a> &mdash; working Ko-fi and PayPal donation buttons, plus a hardware donation section for contributing devices for teardown analysis.</li>
+  <li>Homepage mission figure: Frank White (Christopher Walken), <em>King of New York</em> (1990), with the revised statement ending &ldquo;Now it&rsquo;s the people&rsquo;s turn.&rdquo;</li>
+  <li>Datasheet archive compiled: 196 PDFs, official documentation, big-tech datasheets, and Apple chip references.</li>
+  <li><a href="/most-wanted.html">Most Wanted</a> bounty board launched.</li>
+</ul>
 
-<h2>Free forever</h2>
-<p>BareBoard is a non-commercial, open educational resource. It is hosted on
-GitHub Pages at no cost, which is exactly why it can afford to be free:
-there is nothing to sell and no one to sell it to. Text and original findings
-are published under open terms.</p>
-
-<h2>How it&rsquo;s built</h2>
-<p>This site was assembled and published on September 30, 2026. Every claim is
-checked against hardware on the bench, and every page is written to be read by
-humans first. The division of labor is the point of the place:
-<em>we can&rsquo;t open their hardware, so we open our findings.</em></p>
-
-<p class="signoff">BareBoard &mdash; free hardware education.</p>
+<p>Subscribe to updates via the <a href="/feed.xml">RSS feed</a>.</p>
 </main>
+
 <footer>
     <a href="/tarpit/" class="hp-link" aria-hidden="true" tabindex="-1">device index</a>
     <p>BareBoard &mdash; a free educational resource. Text and findings published under open terms; nothing here is for sale.</p>
