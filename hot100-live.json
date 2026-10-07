@@ -9,7 +9,10 @@
    "category": "Other",
    "units": "1.80B (Casio 60th-anniversary manufactur",
    "confidence": "A",
-   "url": null
+   "url": null,
+   "previous_rank": 3,
+   "trend": "up",
+   "trend_amount": 2
   },
   {
    "rank": 2,
@@ -17,7 +20,10 @@
    "category": "Other",
    "units": "300M (Apple announcement (Tim Cook, via ",
    "confidence": "A",
-   "url": null
+   "url": null,
+   "previous_rank": 1,
+   "trend": "down",
+   "trend_amount": 1
   },
   {
    "rank": 3,
@@ -25,7 +31,10 @@
    "category": "PCs &amp; Single-Board",
    "units": "200M (Lenovo StoryHub (30th anniversary ",
    "confidence": "A",
-   "url": null
+   "url": null,
+   "previous_rank": 1,
+   "trend": "down",
+   "trend_amount": 2
   },
   {
    "rank": 4,
@@ -33,7 +42,10 @@
    "category": "Phones",
    "units": "250M (Wikipedia citing Nokia-era press r",
    "confidence": "B",
-   "url": null
+   "url": null,
+   "previous_rank": 6,
+   "trend": "up",
+   "trend_amount": 2
   },
   {
    "rank": 5,
@@ -41,7 +53,10 @@
    "category": "Phones",
    "units": "250M (Wikipedia citing press reports, no",
    "confidence": "B",
-   "url": null
+   "url": null,
+   "previous_rank": 4,
+   "trend": "down",
+   "trend_amount": 1
   },
   {
    "rank": 6,
@@ -49,7 +64,10 @@
    "category": "Printers",
    "units": "240M (HP 20th-anniversary milestone repo",
    "confidence": "B",
-   "url": null
+   "url": null,
+   "previous_rank": 4,
+   "trend": "down",
+   "trend_amount": 2
   },
   {
    "rank": 7,
@@ -57,7 +75,10 @@
    "category": "Phones",
    "units": "222.4M (AppleInsider/analyst estimates v",
    "confidence": "B",
-   "url": null
+   "url": null,
+   "previous_rank": 5,
+   "trend": "down",
+   "trend_amount": 2
   },
   {
    "rank": 8,
@@ -65,7 +86,10 @@
    "category": "Game Consoles",
    "units": "160M (Sony official PlayStation history ",
    "confidence": "A",
-   "url": null
+   "url": null,
+   "previous_rank": 6,
+   "trend": "down",
+   "trend_amount": 2
   },
   {
    "rank": 9,
@@ -73,7 +97,10 @@
    "category": "Game Consoles",
    "units": "155.9M (Nintendo FY2026 financial result",
    "confidence": "A",
-   "url": null
+   "url": null,
+   "previous_rank": 11,
+   "trend": "up",
+   "trend_amount": 2
   },
   {
    "rank": 10,
@@ -81,7 +108,10 @@
    "category": "Game Consoles",
    "units": "154M (Nintendo IR lifetime hardware, 201",
    "confidence": "A",
-   "url": null
+   "url": null,
+   "previous_rank": 7,
+   "trend": "down",
+   "trend_amount": 3
   },
   {
    "rank": 11,
@@ -89,7 +119,10 @@
    "category": "Phones",
    "units": "200M (Wikipedia (List of best-selling mo",
    "confidence": "B",
-   "url": null
+   "url": null,
+   "previous_rank": 13,
+   "trend": "up",
+   "trend_amount": 2
   },
   {
    "rank": 12,
@@ -97,7 +130,10 @@
    "category": "Printers",
    "units": "200M (HP milestone reported by IT-Sp (co",
    "confidence": "B",
-   "url": null
+   "url": null,
+   "previous_rank": 14,
+   "trend": "up",
+   "trend_amount": 2
   },
   {
    "rank": 13,
@@ -105,7 +141,10 @@
    "category": "Phones",
    "units": "174.5M (analyst estimates via Wikipedia,",
    "confidence": "B",
-   "url": null
+   "url": null,
+   "previous_rank": 14,
+   "trend": "up",
+   "trend_amount": 1
   },
   {
    "rank": 14,
@@ -113,7 +152,10 @@
    "category": "Phones",
    "units": "165M (Omdia via Visual Capitalist, 2023)",
    "confidence": "B",
-   "url": null
+   "url": null,
+   "previous_rank": 11,
+   "trend": "down",
+   "trend_amount": 3
   },
   {
    "rank": 15,
@@ -121,7 +163,10 @@
    "category": "Phones",
    "units": "161M (Omdia via Visual Capitalist, 2023)",
    "confidence": "B",
-   "url": null
+   "url": null,
+   "previous_rank": 16,
+   "trend": "up",
+   "trend_amount": 1
   },
   {
    "rank": 16,
@@ -129,7 +174,10 @@
    "category": "Phones",
    "units": "159M (Omdia via Visual Capitalist, 2023)",
    "confidence": "B",
-   "url": null
+   "url": null,
+   "previous_rank": 16,
+   "trend": "same",
+   "trend_amount": 0
   },
   {
    "rank": 17,
@@ -137,7 +185,10 @@
    "category": "Game Consoles",
    "units": "118.7M (Nintendo IR lifetime hardware, 2",
    "confidence": "A",
-   "url": null
+   "url": null,
+   "previous_rank": 14,
+   "trend": "down",
+   "trend_amount": 3
   },
   {
    "rank": 18,
@@ -145,7 +196,10 @@
    "category": "Phones",
    "units": "156.7M (Wikipedia (List of best-selling ",
    "confidence": "B",
-   "url": null
+   "url": null,
+   "previous_rank": 15,
+   "trend": "down",
+   "trend_amount": 3
   },
   {
    "rank": 19,
@@ -153,7 +207,10 @@
    "category": "Game Consoles",
    "units": "117M (Sony official PlayStation history ",
    "confidence": "A",
-   "url": null
+   "url": null,
+   "previous_rank": 16,
+   "trend": "down",
+   "trend_amount": 3
   },
   {
    "rank": 20,
@@ -161,7 +218,10 @@
    "category": "Phones",
    "units": "150.7M (Wikipedia (List of best-selling ",
    "confidence": "B",
-   "url": null
+   "url": null,
+   "previous_rank": 18,
+   "trend": "down",
+   "trend_amount": 2
   },
   {
    "rank": 21,
@@ -169,7 +229,10 @@
    "category": "Phones",
    "units": "150M (Omdia via Visual Capitalist, 2023)",
    "confidence": "B",
-   "url": null
+   "url": null,
+   "previous_rank": 19,
+   "trend": "down",
+   "trend_amount": 2
   },
   {
    "rank": 22,
@@ -177,7 +240,10 @@
    "category": "Phones",
    "units": "150M (Omdia via Visual Capitalist, 2023)",
    "confidence": "B",
-   "url": null
+   "url": null,
+   "previous_rank": 23,
+   "trend": "up",
+   "trend_amount": 1
   },
   {
    "rank": 23,
@@ -185,7 +251,10 @@
    "category": "Game Consoles",
    "units": "102M (Sony official PlayStation history ",
    "confidence": "A",
-   "url": null
+   "url": null,
+   "previous_rank": 24,
+   "trend": "up",
+   "trend_amount": 1
   },
   {
    "rank": 24,
@@ -193,7 +262,10 @@
    "category": "Game Consoles",
    "units": "101.6M (Nintendo IR lifetime hardware, 2",
    "confidence": "A",
-   "url": null
+   "url": null,
+   "previous_rank": 21,
+   "trend": "down",
+   "trend_amount": 3
   },
   {
    "rank": 25,
@@ -201,7 +273,10 @@
    "category": "Media Streamers",
    "units": "100M (Google (official blog + hardware e",
    "confidence": "A",
-   "url": null
+   "url": null,
+   "previous_rank": 26,
+   "trend": "up",
+   "trend_amount": 1
   },
   {
    "rank": 26,
@@ -209,7 +284,10 @@
    "category": "Phones",
    "units": "130M (Wikipedia (List of best-selling mo",
    "confidence": "B",
-   "url": null
+   "url": null,
+   "previous_rank": 24,
+   "trend": "down",
+   "trend_amount": 2
   },
   {
    "rank": 27,
@@ -217,7 +295,10 @@
    "category": "Phones",
    "units": "126M (Wikipedia (List of best-selling mo",
    "confidence": "B",
-   "url": null
+   "url": null,
+   "previous_rank": 29,
+   "trend": "up",
+   "trend_amount": 2
   },
   {
    "rank": 28,
@@ -225,7 +306,10 @@
    "category": "Game Consoles",
    "units": "87M (Sony official PlayStation history p",
    "confidence": "A",
-   "url": null
+   "url": null,
+   "previous_rank": 30,
+   "trend": "up",
+   "trend_amount": 2
   },
   {
    "rank": 29,
@@ -233,7 +317,10 @@
    "category": "Game Consoles",
    "units": "84M (Microsoft E3 2014 announcement, 201",
    "confidence": "A",
-   "url": null
+   "url": null,
+   "previous_rank": 31,
+   "trend": "up",
+   "trend_amount": 2
   },
   {
    "rank": 31,
@@ -241,7 +328,10 @@
    "category": "Game Consoles",
    "units": "75.9M (Nintendo IR sales data, 2020-09)",
    "confidence": "A",
-   "url": null
+   "url": null,
+   "previous_rank": 32,
+   "trend": "up",
+   "trend_amount": 1
   },
   {
    "rank": 32,
@@ -249,7 +339,10 @@
    "category": "PCs &amp; Single-Board",
    "units": "75M (Raspberry Pi Holdings FY 2025 resul",
    "confidence": "A",
-   "url": null
+   "url": null,
+   "previous_rank": 32,
+   "trend": "same",
+   "trend_amount": 0
   },
   {
    "rank": 33,
@@ -257,7 +350,10 @@
    "category": "Networking Gear",
    "units": "100M (Nokia (Feb 2021, via GlobeNewswire",
    "confidence": "B",
-   "url": null
+   "url": null,
+   "previous_rank": 31,
+   "trend": "down",
+   "trend_amount": 2
   },
   {
    "rank": 34,
@@ -265,7 +361,10 @@
    "category": "Phones",
    "units": "100M (Wikipedia (List of best-selling mo",
    "confidence": "B",
-   "url": null
+   "url": null,
+   "previous_rank": 34,
+   "trend": "same",
+   "trend_amount": 0
   },
   {
    "rank": 35,
@@ -273,7 +372,10 @@
    "category": "Game Consoles",
    "units": "93.6M (Sony earnings disclosure (via Vid",
    "confidence": "B",
-   "url": null
+   "url": null,
+   "previous_rank": 36,
+   "trend": "up",
+   "trend_amount": 1
   },
   {
    "rank": 36,
@@ -281,7 +383,10 @@
    "category": "Game Consoles",
    "units": "61.9M (Nintendo IR sales data, 2016-03)",
    "confidence": "A",
-   "url": null
+   "url": null,
+   "previous_rank": 35,
+   "trend": "down",
+   "trend_amount": 1
   },
   {
    "rank": 37,
@@ -289,7 +394,10 @@
    "category": "TVs &amp; Displays",
    "units": "82M (Vizio IPO coverage (Nasdaq, Mar 202",
    "confidence": "B",
-   "url": null
+   "url": null,
+   "previous_rank": 40,
+   "trend": "up",
+   "trend_amount": 3
   },
   {
    "rank": 38,
@@ -297,7 +405,10 @@
    "category": "Other",
    "units": "80M (Bandai licensing material (via Tota",
    "confidence": "B",
-   "url": null
+   "url": null,
+   "previous_rank": 41,
+   "trend": "up",
+   "trend_amount": 3
   },
   {
    "rank": 39,
@@ -305,7 +416,10 @@
    "category": "Game Consoles",
    "units": "49.1M (Nintendo IR sales data, 2016-03)",
    "confidence": "A",
-   "url": null
+   "url": null,
+   "previous_rank": 36,
+   "trend": "down",
+   "trend_amount": 3
   },
   {
    "rank": 40,
@@ -313,7 +427,10 @@
    "category": "Printers",
    "units": "60M (Epson press release, 2021-11)",
    "confidence": "B",
-   "url": null
+   "url": null,
+   "previous_rank": 43,
+   "trend": "up",
+   "trend_amount": 3
   },
   {
    "rank": 41,
@@ -321,7 +438,10 @@
    "category": "Smart Home / IoT",
    "units": "40M (iRobot company disclosure (via ZDNe",
    "confidence": "A",
-   "url": null
+   "url": null,
+   "previous_rank": 44,
+   "trend": "up",
+   "trend_amount": 3
   },
   {
    "rank": 42,
@@ -329,7 +449,10 @@
    "category": "Phones",
    "units": "51.8M (Omdia 4Q21 Smartphone Model Marke",
    "confidence": "B",
-   "url": null
+   "url": null,
+   "previous_rank": 40,
+   "trend": "down",
+   "trend_amount": 2
   },
   {
    "rank": 43,
@@ -337,7 +460,10 @@
    "category": "Game Consoles",
    "units": "32.9M (Nintendo IR sales data, 2016-03)",
    "confidence": "A",
-   "url": null
+   "url": null,
+   "previous_rank": 45,
+   "trend": "up",
+   "trend_amount": 2
   },
   {
    "rank": 44,
@@ -345,7 +471,10 @@
    "category": "Networking Gear",
    "units": "31M (Linksys Global Product Manager Vinc",
    "confidence": "A",
-   "url": null
+   "url": null,
+   "previous_rank": 44,
+   "trend": "same",
+   "trend_amount": 0
   },
   {
    "rank": 45,
@@ -353,7 +482,10 @@
    "category": "Game Consoles",
    "units": "30.8M (Sega historical sales data, 2001)",
    "confidence": "A",
-   "url": null
+   "url": null,
+   "previous_rank": 44,
+   "trend": "down",
+   "trend_amount": 1
   },
   {
    "rank": 46,
@@ -361,7 +493,10 @@
    "category": "TVs &amp; Displays",
    "units": "40M (Samsung Newsroom, citing Omdia, 202",
    "confidence": "B",
-   "url": null
+   "url": null,
+   "previous_rank": 45,
+   "trend": "down",
+   "trend_amount": 1
   },
   {
    "rank": 47,
@@ -369,7 +504,10 @@
    "category": "Game Consoles",
    "units": "23.7M (Nintendo FY2027 Q1 earnings, 2026",
    "confidence": "A",
-   "url": null
+   "url": null,
+   "previous_rank": 45,
+   "trend": "down",
+   "trend_amount": 2
   },
   {
    "rank": 48,
@@ -377,7 +515,10 @@
    "category": "PCs &amp; Single-Board",
    "units": "23M (Tom&#x27;s Hardware, citing CEO Ebe",
    "confidence": "A",
-   "url": null
+   "url": null,
+   "previous_rank": 46,
+   "trend": "down",
+   "trend_amount": 2
   },
   {
    "rank": 49,
@@ -385,7 +526,10 @@
    "category": "TVs &amp; Displays",
    "units": "29.1M (Hisense company news (2024 global",
    "confidence": "B",
-   "url": null
+   "url": null,
+   "previous_rank": 52,
+   "trend": "up",
+   "trend_amount": 3
   },
   {
    "rank": 50,
@@ -393,7 +537,10 @@
    "category": "TVs &amp; Displays",
    "units": "29M (TCL Industries 2024 annual report (",
    "confidence": "B",
-   "url": null
+   "url": null,
+   "previous_rank": 49,
+   "trend": "down",
+   "trend_amount": 1
   },
   {
    "rank": 51,
@@ -401,7 +548,10 @@
    "category": "Game Consoles",
    "units": "21.7M (Nintendo IR sales data, 2016-03)",
    "confidence": "A",
-   "url": null
+   "url": null,
+   "previous_rank": 48,
+   "trend": "down",
+   "trend_amount": 3
   },
   {
    "rank": 52,
@@ -409,7 +559,10 @@
    "category": "Smart Home / IoT",
    "units": "19M (Sonos S-1 SEC filing (as of March 3",
    "confidence": "A",
-   "url": null
+   "url": null,
+   "previous_rank": 49,
+   "trend": "down",
+   "trend_amount": 3
   },
   {
    "rank": 53,
@@ -417,7 +570,10 @@
    "category": "Smart Home / IoT",
    "units": "25M (ECOVACS company claim at launch eve",
    "confidence": "B",
-   "url": null
+   "url": null,
+   "previous_rank": 53,
+   "trend": "same",
+   "trend_amount": 0
   },
   {
    "rank": 54,
@@ -425,7 +581,10 @@
    "category": "Phones",
    "units": "24.2M (Wikipedia (List of best-selling m",
    "confidence": "B",
-   "url": null
+   "url": null,
+   "previous_rank": 51,
+   "trend": "down",
+   "trend_amount": 3
   },
   {
    "rank": 55,
@@ -433,7 +592,10 @@
    "category": "Game Consoles",
    "units": "35.2M (VGChartz estimate, 2026-07)",
    "confidence": "C",
-   "url": null
+   "url": null,
+   "previous_rank": 54,
+   "trend": "down",
+   "trend_amount": 1
   },
   {
    "rank": 56,
@@ -441,7 +603,10 @@
    "category": "Media Streamers",
    "units": "17M (Google (I/O 2015 keynote, reported ",
    "confidence": "A",
-   "url": null
+   "url": null,
+   "previous_rank": 59,
+   "trend": "up",
+   "trend_amount": 3
   },
   {
    "rank": 57,
@@ -449,7 +614,10 @@
    "category": "Networking Gear",
    "units": "20M (eero CEO Nick Weaver, eero 7 launch",
    "confidence": "B",
-   "url": null
+   "url": null,
+   "previous_rank": 56,
+   "trend": "down",
+   "trend_amount": 1
   },
   {
    "rank": 58,
@@ -457,7 +625,10 @@
    "category": "Other",
    "units": "20M (Keurig sales history (Food Business",
    "confidence": "B",
-   "url": null
+   "url": null,
+   "previous_rank": 59,
+   "trend": "up",
+   "trend_amount": 1
   },
   {
    "rank": 59,
@@ -465,7 +636,10 @@
    "category": "Other",
    "units": "14.2M (Spin Master press release (PR New",
    "confidence": "A",
-   "url": null
+   "url": null,
+   "previous_rank": 58,
+   "trend": "down",
+   "trend_amount": 1
   },
   {
    "rank": 60,
@@ -473,7 +647,10 @@
    "category": "Game Consoles",
    "units": "13.6M (Nintendo IR sales data, 2019-12)",
    "confidence": "A",
-   "url": null
+   "url": null,
+   "previous_rank": 63,
+   "trend": "up",
+   "trend_amount": 3
   },
   {
    "rank": 61,
@@ -481,7 +658,10 @@
    "category": "Printers",
    "units": "17M (Canon 20th-anniversary announcement",
    "confidence": "B",
-   "url": null
+   "url": null,
+   "previous_rank": 58,
+   "trend": "down",
+   "trend_amount": 3
   },
   {
    "rank": 62,
@@ -489,7 +669,10 @@
    "category": "Phones",
    "units": "13.5M (Wikipedia (List of best-selling m",
    "confidence": "B",
-   "url": null
+   "url": null,
+   "previous_rank": 64,
+   "trend": "up",
+   "trend_amount": 2
   },
   {
    "rank": 63,
@@ -497,7 +680,10 @@
    "category": "Networking Gear",
    "units": "10M (Comcast via ibtimes.sg: &#x27;over ",
    "confidence": "A",
-   "url": null
+   "url": null,
+   "previous_rank": 63,
+   "trend": "same",
+   "trend_amount": 0
   },
   {
    "rank": 64,
@@ -505,7 +691,10 @@
    "category": "PCs &amp; Single-Board",
    "units": "10M (CNX Software reporting Arduino&#x27",
    "confidence": "A",
-   "url": null
+   "url": null,
+   "previous_rank": 65,
+   "trend": "up",
+   "trend_amount": 1
   },
   {
    "rank": 65,
@@ -513,7 +702,10 @@
    "category": "Phones",
    "units": "10.9M (Wikipedia (List of best-selling m",
    "confidence": "B",
-   "url": null
+   "url": null,
+   "previous_rank": 62,
+   "trend": "down",
+   "trend_amount": 3
   },
   {
    "rank": 66,
@@ -521,7 +713,10 @@
    "category": "Other",
    "units": "8M (magicJack company press release (Glo",
    "confidence": "A",
-   "url": null
+   "url": null,
+   "previous_rank": 66,
+   "trend": "same",
+   "trend_amount": 0
   },
   {
    "rank": 67,
@@ -529,7 +724,10 @@
    "category": "TVs &amp; Displays",
    "units": "10M (LG/Omdia milestone reported by Adva",
    "confidence": "B",
-   "url": null
+   "url": null,
+   "previous_rank": 64,
+   "trend": "down",
+   "trend_amount": 3
   },
   {
    "rank": 68,
@@ -537,7 +735,10 @@
    "category": "Game Consoles",
    "units": "9.1M (IT History Society / Sega-era repo",
    "confidence": "B",
-   "url": null
+   "url": null,
+   "previous_rank": 69,
+   "trend": "up",
+   "trend_amount": 1
   },
   {
    "rank": 69,
@@ -545,7 +746,10 @@
    "category": "Smart Home / IoT",
    "units": "6.4M (Google via Engadget, 2018-01-06)",
    "confidence": "A",
-   "url": null
+   "url": null,
+   "previous_rank": 68,
+   "trend": "down",
+   "trend_amount": 1
   },
   {
    "rank": 70,
@@ -553,7 +757,10 @@
    "category": "Game Consoles",
    "units": "8M (Tectoy reporting, 2015)",
    "confidence": "B",
-   "url": null
+   "url": null,
+   "previous_rank": 73,
+   "trend": "up",
+   "trend_amount": 3
   },
   {
    "rank": 71,
@@ -561,7 +768,10 @@
    "category": "Other",
    "units": "8M (Company-derived sales history (Motle",
    "confidence": "B",
-   "url": null
+   "url": null,
+   "previous_rank": 73,
+   "trend": "up",
+   "trend_amount": 2
   },
   {
    "rank": 72,
@@ -569,7 +779,10 @@
    "category": "Game Consoles",
    "units": "5.3M (Nintendo IR sales data, 2019-03)",
    "confidence": "A",
-   "url": null
+   "url": null,
+   "previous_rank": 73,
+   "trend": "up",
+   "trend_amount": 1
   },
   {
    "rank": 73,
@@ -577,7 +790,10 @@
    "category": "Game Consoles",
    "units": "5M (Sony announcement (Jim Ryan, via Roa",
    "confidence": "A",
-   "url": null
+   "url": null,
+   "previous_rank": 76,
+   "trend": "up",
+   "trend_amount": 3
   },
   {
    "rank": 74,
@@ -585,7 +801,10 @@
    "category": "Other",
    "units": "6M (Ledger company disclosure (via TechC",
    "confidence": "B",
-   "url": null
+   "url": null,
+   "previous_rank": 73,
+   "trend": "down",
+   "trend_amount": 1
   },
   {
    "rank": 75,
@@ -593,7 +812,10 @@
    "category": "PCs &amp; Single-Board",
    "units": "5.8M (IDC via press reports, 2023)",
    "confidence": "B",
-   "url": null
+   "url": null,
+   "previous_rank": 76,
+   "trend": "up",
+   "trend_amount": 1
   },
   {
    "rank": 76,
@@ -601,7 +823,10 @@
    "category": "PCs &amp; Single-Board",
    "units": "4M (Tom&#x27;s Hardware (quoting Eben Up",
    "confidence": "A",
-   "url": null
+   "url": null,
+   "previous_rank": 74,
+   "trend": "down",
+   "trend_amount": 2
   },
   {
    "rank": 77,
@@ -609,7 +834,10 @@
    "category": "Cameras &amp; Drones",
    "units": "4M (GoPro press release &#x27;HERO5 Blac",
    "confidence": "A",
-   "url": null
+   "url": null,
+   "previous_rank": 79,
+   "trend": "up",
+   "trend_amount": 2
   },
   {
    "rank": 78,
@@ -617,7 +845,10 @@
    "category": "Game Consoles",
    "units": "3.6M (Nintendo IR sales data, 2019-03)",
    "confidence": "A",
-   "url": null
+   "url": null,
+   "previous_rank": 75,
+   "trend": "down",
+   "trend_amount": 3
   },
   {
    "rank": 79,
@@ -625,7 +856,10 @@
    "category": "Other",
    "units": "3.5M (Panasonic/Technics 50th-anniversar",
    "confidence": "A",
-   "url": null
+   "url": null,
+   "previous_rank": 76,
+   "trend": "down",
+   "trend_amount": 3
   },
   {
    "rank": 80,
@@ -633,7 +867,10 @@
    "category": "E-Readers &amp; Tablets",
    "units": "4.5M (KGI/Ming-Chi Kuo via AppleInsider,",
    "confidence": "B",
-   "url": null
+   "url": null,
+   "previous_rank": 82,
+   "trend": "up",
+   "trend_amount": 2
   },
   {
    "rank": 81,
@@ -641,7 +878,10 @@
    "category": "Smart Home / IoT",
    "units": "4.5M (Chipolo company disclosure (via Te",
    "confidence": "B",
-   "url": null
+   "url": null,
+   "previous_rank": 79,
+   "trend": "down",
+   "trend_amount": 2
   },
   {
    "rank": 82,
@@ -649,7 +889,10 @@
    "category": "E-Readers &amp; Tablets",
    "units": "3M (Apple press release, 2012-03-19)",
    "confidence": "A",
-   "url": null
+   "url": null,
+   "previous_rank": 85,
+   "trend": "up",
+   "trend_amount": 3
   },
   {
    "rank": 83,
@@ -657,7 +900,10 @@
    "category": "E-Readers &amp; Tablets",
    "units": "3M (Apple press release, 2012-11-05)",
    "confidence": "A",
-   "url": null
+   "url": null,
+   "previous_rank": 82,
+   "trend": "down",
+   "trend_amount": 1
   },
   {
    "rank": 84,
@@ -665,7 +911,10 @@
    "category": "PCs &amp; Single-Board",
    "units": "3M (Parallax (BASIC Stamp manual, 2nd ed",
    "confidence": "A",
-   "url": null
+   "url": null,
+   "previous_rank": 81,
+   "trend": "down",
+   "trend_amount": 3
   },
   {
    "rank": 85,
@@ -673,7 +922,10 @@
    "category": "Game Consoles",
    "units": "3.7M (IDC estimate (by end-2024; Valve h",
    "confidence": "B",
-   "url": null
+   "url": null,
+   "previous_rank": 88,
+   "trend": "up",
+   "trend_amount": 3
   },
   {
    "rank": 86,
@@ -681,7 +933,10 @@
    "category": "Game Consoles",
    "units": "3M (Tectoy reporting, 2015)",
    "confidence": "B",
-   "url": null
+   "url": null,
+   "previous_rank": 84,
+   "trend": "down",
+   "trend_amount": 2
   },
   {
    "rank": 87,
@@ -689,7 +944,10 @@
    "category": "Wearables",
    "units": "2M (EssilorLuxottica (Q4 2024 earnings c",
    "confidence": "A",
-   "url": null
+   "url": null,
+   "previous_rank": 90,
+   "trend": "up",
+   "trend_amount": 3
   },
   {
    "rank": 88,
@@ -697,7 +955,10 @@
    "category": "Smart Home / IoT",
    "units": "2M (Whisker press release (Business Wire",
    "confidence": "A",
-   "url": null
+   "url": null,
+   "previous_rank": 85,
+   "trend": "down",
+   "trend_amount": 3
   },
   {
    "rank": 89,
@@ -705,7 +966,10 @@
    "category": "Smart Home / IoT",
    "units": "1.5M (Wyze Labs via Pulse2 / GeekWire fu",
    "confidence": "A",
-   "url": null
+   "url": null,
+   "previous_rank": 89,
+   "trend": "same",
+   "trend_amount": 0
   },
   {
    "rank": 90,
@@ -713,7 +977,10 @@
    "category": "PCs &amp; Single-Board",
    "units": "2M (Science Museum Group, 2026)",
    "confidence": "B",
-   "url": null
+   "url": null,
+   "previous_rank": 89,
+   "trend": "down",
+   "trend_amount": 1
   },
   {
    "rank": 91,
@@ -721,7 +988,10 @@
    "category": "Smart Home / IoT",
    "units": "2M (Husqvarna press coverage (Landscape ",
    "confidence": "B",
-   "url": null
+   "url": null,
+   "previous_rank": 91,
+   "trend": "same",
+   "trend_amount": 0
   },
   {
    "rank": 92,
@@ -729,7 +999,10 @@
    "category": "Game Consoles",
    "units": "1.7M (industry reporting (over 1.7M), 20",
    "confidence": "B",
-   "url": null
+   "url": null,
+   "previous_rank": 94,
+   "trend": "up",
+   "trend_amount": 2
   },
   {
    "rank": 93,
@@ -737,7 +1010,10 @@
    "category": "Game Consoles",
    "units": "1.5M (Sega reporting (over 1.5M), 2023)",
    "confidence": "B",
-   "url": null
+   "url": null,
+   "previous_rank": 96,
+   "trend": "up",
+   "trend_amount": 3
   },
   {
    "rank": 94,
@@ -745,7 +1021,10 @@
    "category": "E-Readers &amp; Tablets",
    "units": "1M (reMarkable company announcement via ",
    "confidence": "A",
-   "url": null
+   "url": null,
+   "previous_rank": 93,
+   "trend": "down",
+   "trend_amount": 1
   },
   {
    "rank": 95,
@@ -753,7 +1032,10 @@
    "category": "Networking Gear",
    "units": "1M (Comcast 2021 WiFi Trends Report (via",
    "confidence": "A",
-   "url": null
+   "url": null,
+   "previous_rank": 93,
+   "trend": "down",
+   "trend_amount": 2
   },
   {
    "rank": 96,
@@ -761,7 +1043,10 @@
    "category": "Other",
    "units": "1M (Flipper Devices company statement (v",
    "confidence": "A",
-   "url": null
+   "url": null,
+   "previous_rank": 95,
+   "trend": "down",
+   "trend_amount": 1
   },
   {
    "rank": 97,
@@ -769,7 +1054,10 @@
    "category": "Smart Home / IoT",
    "units": "1M (Tractive company website (product pa",
    "confidence": "A",
-   "url": null
+   "url": null,
+   "previous_rank": 96,
+   "trend": "down",
+   "trend_amount": 1
   },
   {
    "rank": 98,
@@ -777,7 +1065,10 @@
    "category": "Media Streamers",
    "units": "1M (Sky via AVForums/informitv, 2017-01/",
    "confidence": "B",
-   "url": null
+   "url": null,
+   "previous_rank": 96,
+   "trend": "down",
+   "trend_amount": 2
   },
   {
    "rank": 99,
@@ -785,7 +1076,10 @@
    "category": "Game Consoles",
    "units": "1M (Nex announcement, 2025)",
    "confidence": "B",
-   "url": null
+   "url": null,
+   "previous_rank": 100,
+   "trend": "up",
+   "trend_amount": 1
   },
   {
    "rank": 100,
@@ -793,7 +1087,16 @@
    "category": "Smart Home / IoT",
    "units": "359K (U.S. CPSC recall notice (Nov 2020)",
    "confidence": "A",
-   "url": null
+   "url": null,
+   "previous_rank": 99,
+   "trend": "down",
+   "trend_amount": 1
   }
- ]
+ ],
+ "pulse": {
+  "status": "live",
+  "movers_up": 40,
+  "movers_down": 50,
+  "new_entries": 0
+ }
 }
