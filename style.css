@@ -1,4 +1,4 @@
-/* BareBoard v2 â tasteful, quiet, confident. No frameworks, no build step. */
+/* BareBoard v2 — tasteful, quiet, confident. No frameworks, no build step. */
 
 :root {
   --bg: #fbfbfc;
@@ -35,7 +35,7 @@ a { color: var(--accent); text-decoration: none; }
 a:hover { text-decoration: underline; text-underline-offset: 3px; }
 a:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; border-radius: 4px; }
 
-/* ---------- navigation â Apple-style dropdown panels ---------- */
+/* ---------- navigation — Finder column browser ---------- */
 
 .site-nav {
   position: sticky;
@@ -64,7 +64,7 @@ a:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; border-
 }
 .site-nav .brand-word:hover { text-decoration: none; color: var(--accent); }
 
-/* top-level nav row */
+/* top-level row = Finder column zero */
 .site-nav nav > ul {
   list-style: none;
   margin: 0;
@@ -87,8 +87,8 @@ a:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; border-
   transition: color 0.18s ease, background-color 0.18s ease;
 }
 .site-nav nav > ul > li > a:hover { color: var(--text); text-decoration: none; }
-/* open trigger word gets the active pill, Apple-style */
-.site-nav nav > ul > li.open > a {
+/* single active selection per column, Finder-style */
+.site-nav nav > ul > li.selected > a {
   background: rgba(0, 102, 204, 0.1);
   color: var(--text);
 }
@@ -112,7 +112,7 @@ a:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; border-
 .search-toggle:hover { color: var(--text); background: rgba(0, 0, 0, 0.05); }
 .search-toggle[aria-expanded="true"] { color: var(--text); background: rgba(0, 102, 204, 0.1); }
 
-/* full-width frosted panel shared by dropdowns and search */
+/* full-width frosted panel shared by Finder columns and search */
 .site-nav .col-panel,
 .site-nav .search-panel {
   position: absolute;
@@ -158,46 +158,80 @@ html:not(.js) .site-nav .has-children:focus-within > .col-panel {
     visibility 0s;
 }
 
-/* Apple dropdown: single Finder-style link column per panel.
-   The panel shell is full-width; JS aligns .dropdown-inner's left edge
-   under the panel's own trigger word (per-item alignment). */
-.dropdown-inner {
+/* Finder column strip */
+.finder {
+  display: flex;
+  align-items: stretch;
   max-width: 46rem;
   margin: 0 auto;
-  padding: 0.7rem 1.5rem 1rem;
-  /* padding-left is set live by nav.js for per-trigger alignment */
+  padding: 0 1.5rem;
+  overflow-x: auto;
+  min-height: 4rem;
 }
-.dropdown-col {
+.finder-col {
   list-style: none;
   margin: 0;
-  padding: 0;
+  padding: 0.7rem 0;
   min-width: 13rem;
-  max-width: 22rem;
+  max-width: 16rem;
+  flex: 0 0 auto;
+  overflow-y: auto;
+  max-height: 21rem;
 }
-.dropdown-col > li > a {
+.finder-col + .finder-col {
+  border-left: 1px solid var(--line);
+}
+.finder-col-head {
+  font-family: var(--mono);
+  font-size: 0.68rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.09em;
+  color: var(--tertiary);
+  padding: 0.35rem 1.1rem 0.5rem;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.finder-col > li > a,
+.finder-col > li > .finder-note {
   display: flex;
   align-items: center;
   justify-content: space-between;
   gap: 0.75rem;
-  padding: 0.42rem 0.7rem;
+  padding: 0.42rem 1.1rem;
   font-size: 0.92rem;
   letter-spacing: -0.005em;
   color: var(--text);
   white-space: nowrap;
   border-radius: 6px;
-  margin: 0 -0.7rem;
+  margin: 0 0.4rem;
   transition: background-color 0.12s ease;
 }
-.dropdown-col > li > a:hover { text-decoration: none; background: rgba(0, 0, 0, 0.045); }
-/* indented sub-link (e.g. the XB3 report under Networking Gear) */
-.dropdown-col > li.dropdown-sub > a {
-  padding-left: 1.6rem;
-  font-size: 0.86rem;
-  color: var(--secondary);
+.finder-col > li > a:hover { text-decoration: none; background: rgba(0, 0, 0, 0.045); }
+.finder-col > li.selected > a {
+  background: rgba(0, 102, 204, 0.12);
+  color: var(--text);
 }
-.dropdown-col > li.dropdown-sub > a:hover { color: var(--text); }
-/* no-JS fallback: panels reveal as simple stacked lists */
-html:not(.js) .dropdown-inner { padding-left: 1.5rem; }
+.finder-col > li.has-kids > a::after {
+  content: "\203a";
+  color: var(--tertiary);
+  font-size: 1.05rem;
+  line-height: 1;
+}
+.finder-col > li > .finder-note {
+  color: var(--secondary);
+  font-size: 0.85rem;
+  cursor: default;
+}
+/* no-JS fallback: nested lists render as an indented tree */
+html:not(.js) .finder ul ul {
+  list-style: none;
+  margin: 0.15rem 0 0.5rem 1.1rem;
+  padding-left: 0.7rem;
+  border-left: 1px solid var(--line);
+}
+html:not(.js) .finder ul ul a { font-size: 0.86rem; color: var(--secondary); }
 
 /* ---------- search panel ---------- */
 
@@ -518,12 +552,60 @@ body { animation: page-in 0.35s ease; }
   * { transition: none !important; }
 }
 
+
+/* ---------- Atlas mini-map (Hot 100 dropdown) ---------- */
+.atlas-minimap {
+  max-width: 46rem;
+  margin: 0 auto;
+  padding: 0.9rem 1.5rem 0;
+}
+.atlas-minimap-head {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-bottom: 0.5rem;
+}
+.atlas-minimap-kicker {
+  font-family: var(--mono);
+  font-size: 0.68rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.09em;
+  color: var(--tertiary);
+}
+.atlas-minimap-more {
+  font-size: 0.85rem;
+  color: var(--secondary);
+  white-space: nowrap;
+}
+.atlas-minimap-more:hover { color: var(--text); text-decoration: none; }
+.atlas-minimap-svg {
+  width: 100%;
+  height: auto;
+  display: block;
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  background: rgba(255, 255, 255, 0.55);
+}
+.atlas-quad-bg { fill: rgba(0, 0, 0, 0.028); }
+.atlas-quad:hover .atlas-quad-bg,
+.atlas-quad:focus .atlas-quad-bg { fill: rgba(0, 102, 204, 0.09); }
+.atlas-quad-label {
+  font-size: 13px;
+  font-family: var(--mono, ui-monospace, monospace);
+  fill: #86868b;
+  pointer-events: none;
+}
+.atlas-quad:hover .atlas-quad-label { fill: #1d1d1f; }
+.atlas-div { stroke: rgba(0, 0, 0, 0.12); stroke-width: 1; }
+
 /* ---------- small screens ---------- */
 
 @media (max-width: 560px) {
   main { padding: 2.5rem 1.25rem 4rem; }
   .nav-inner { padding: 0.55rem 1rem; justify-content: flex-start; }
-  /* single scrollable row instead of wrapping â keeps the bar slim */
+  /* single scrollable row instead of wrapping — keeps the bar slim */
   .site-nav nav > ul {
     flex-wrap: nowrap;
     justify-content: flex-start;
@@ -536,27 +618,25 @@ body { animation: page-in 0.35s ease; }
   .site-nav nav > ul::-webkit-scrollbar { display: none; }
   .site-nav nav > ul > li { flex: 0 0 auto; }
   .site-nav nav > ul > li > a { font-size: 0.86rem; white-space: nowrap; }
-  /* Apple dropdown panel on small screens: full-width, column scrolls if tall.
-     position:fixed escapes the horizontally-scrolling nav row (which would
-     otherwise clip the absolutely-positioned panel); JS pins top below the
-     sticky header. */
-  .site-nav .col-panel {
-    position: fixed;
-    left: 0;
-    right: 0;
-    /* top is set live by nav.js */
+  /* Finder panel on small screens: columns scroll horizontally with snap */
+  .finder {
+    padding: 0 1rem;
+    scroll-snap-type: x proximity;
   }
-  .dropdown-inner {
-    padding: 0.6rem 1rem 0.9rem;
-    max-width: 100%;
+  .finder-col {
+    min-width: 11.5rem;
+    max-width: 78vw;
+    scroll-snap-align: start;
   }
-  .dropdown-col { max-width: 100%; }
-  .dropdown-col > li > a { font-size: 0.95rem; padding: 0.5rem 0.7rem; }
+  .finder-col > li > a { font-size: 0.95rem; }
   /* search panel stays comfortable */
   .search-inner { padding: 1rem 1.25rem 0.4rem; }
   #site-search { font-size: 1.15rem; }
   .search-hint, .search-results { padding-left: 1.25rem; padding-right: 1.25rem; }
   table.hot100 th, table.hot100 td { padding: 0.55rem 0.6rem; }
+  /* Atlas mini-map stays compact on small screens */
+  .atlas-minimap { padding: 0.75rem 1rem 0; }
+  .atlas-minimap-more { font-size: 0.8rem; }
 }
 
 /* ---------- autopsy entries ---------- */
@@ -694,20 +774,12 @@ p.note { font-size: 0.95rem; color: var(--secondary); border-left: 3px solid var
   padding: 0 0.5rem;
 }
 
-/* ---------- donate buttons (CSP-safe: no inline styles) ---------- */
-.donate-btn {
-  display: inline-block;
-  background: #0070ba;
-  color: #fff !important;
-  font-weight: 600;
-  padding: 12px 28px;
-  border-radius: 8px;
-  text-decoration: none;
-}
-.donate-btn:hover {
-  text-decoration: none;
-  opacity: 0.92;
-}
-.donate-btn.kofi {
-  background: #72a4f2;
-}
+/* ---------- data pages: score badges & filters ---------- */
+.score-bad { background: #fbe4e4; color: #a02020; }
+.score-mid { background: #fff3d1; color: #8a6100; }
+.score-ok { background: #e2f3e6; color: #1c6b31; }
+.filters { display: flex; flex-wrap: wrap; gap: 1rem 1.5rem; margin: 1.2rem 0; }
+.filters label { font-size: 0.9rem; font-weight: 600; display: flex; flex-direction: column; gap: 0.3rem; }
+.filters input[type="search"], .filters select { font: inherit; padding: 0.45rem 0.6rem; border: 1px solid var(--line, #d9d9de); border-radius: 8px; max-width: 16rem; }
+#obs-cards .card h2, #repair-cards .card h2, #proto-cards .card h2 { font-size: 1.25rem; margin: 0.4rem 0 0.6rem; }
+#obs-cards .card h3, #repair-cards .card h3, #proto-cards .card h3 { font-size: 1rem; margin: 1rem 0 0.4rem; }
