@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
-<meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self' data:; style-src 'self'; script-src 'self'; object-src 'none'; frame-src 'none'; base-uri 'self'; form-action 'none'">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self' data: upload.wikimedia.org www.espressif.com; style-src 'self'; script-src 'self'; object-src 'none'; frame-src 'none'; base-uri 'self'; form-action 'none'">
 <meta name="referrer" content="no-referrer">
 <meta name="robots" content="noai, noimageai">
 <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -293,6 +293,66 @@
 <span class="badge-prelim">Community reverse engineering</span>
 <h1>Protocol Reverse Engineering</h1>
 <p class="lede">Closed protocols the community has pried open. What was reverse engineered, what&rsquo;s still unknown, and the open-source projects that document it. Only public, community-driven work &mdash; no leaked confidential material.</p>
+
+<figure>
+  <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/ab/PXL_20220703_104511558.PORTRAIT_%28cropped%29.jpg/1280px-PXL_20220703_104511558.PORTRAIT_%28cropped%29.jpg" alt="Raspberry Pi Pico microcontroller board" loading="lazy">
+  <figcaption>Raspberry Pi Pico &mdash; about $4. Flash it with Picoprobe firmware and it becomes a full debug probe for reading other devices&rsquo; firmware. Photo: Wikimedia Commons.</figcaption>
+</figure>
+
+
+<section>
+<h2>Take control for under $10</h2>
+<p>You don&rsquo;t need a $300 debugger. The cheapest way into a device&rsquo;s firmware is a <strong>Raspberry Pi Pico</strong> (about $4), a <strong>USB-to-serial breakout board</strong> (about $2&ndash;3 &mdash; look for CH340 or CP2102), and a micro USB cable you already own. That&rsquo;s the whole shopping list.</p>
+
+<h3>Step 1: listen before you touch</h3>
+<p>Many devices &mdash; routers, smart plugs, cameras &mdash; have a serial console (UART) that narrates everything the device does as it boots. Think of it as the device&rsquo;s diary. It&rsquo;s often exposed on small test pads you can reach without fully opening the case. Plug in your USB-to-serial adapter, then:</p>
+<pre class="term"><code><span class="p">$</span> ls /dev/ttyUSB*
+/dev/ttyUSB0
+<span class="p">$</span> screen /dev/ttyUSB0 115200</code></pre>
+
+<p><span class="mono">/dev/ttyUSB0</span> is your adapter showing up. <span class="mono">115200</span> is the speed (baud rate) most devices use &mdash; if you see gibberish, try 9600 or 57600. <span class="mono">screen</span> just opens a window onto the serial line. Power the device on and watch:</p>
+<pre class="term"><code>U-Boot 2021.04 (Jan 12 2022 - 09:14:22)
+DRAM:  128 MiB
+Loading kernel from NAND...
+Starting kernel ...
+[    0.000000] Linux version 5.4.0 (builder@factory)
+[    1.240000] console [ttyS0] enabled
+root@smartplug:/#</code></pre>
+
+<p>That <span class="mono">root@smartplug:/#</span> prompt is the device handing you its keys. From here you can copy the firmware straight off &mdash; no disassembly damage required.</p>
+
+<h3>Step 2: turn a $4 Pico into a debug probe</h3>
+<p>For chips with SWD (the debug port on ARM microcontrollers &mdash; two tiny pads usually labeled SWDIO and SWCLK), flash <strong>Picoprobe</strong> firmware onto a Raspberry Pi Pico. It becomes a proper debug probe:</p>
+<pre class="term"><code><span class="p">$</span> picotool load picoprobe.uf2
+Loading picoprobe.uf2 into RP2040 device...
+The device was rebooted into application mode.
+<span class="p">$</span> openocd -f interface/picoprobe.cfg -f target/rp2040.cfg
+Open On-Chip Debugger 0.12.0
+Info : RP2040 Flash Bank Command
+Info : Listening on port 3333 for gdb connections</code></pre>
+
+<p>OpenOCD is free, open-source software that can now read and write the target chip&rsquo;s flash through the Pico &mdash; the same job as a $100+ commercial probe.</p>
+
+<h3>Step 3: back up, then take over (ESP32 example)</h3>
+<figure>
+  <img src="https://www.espressif.com/sites/default/files/dev-board/ESP32-S2-DevKitC-1%20large.png" alt="ESP32-S2 DevKitC development board" loading="lazy">
+  <figcaption>ESP32-S2 DevKitC. Millions of smart bulbs and plugs run ESP chips &mdash; all flashable with free tools. Photo: Espressif.</figcaption>
+</figure>
+
+<p>ESP-based smart-home devices are the friendliest starting point: the manufacturer&rsquo;s own flashing tool is free. <strong>Always save a copy of the original firmware first</strong> &mdash; that&rsquo;s your way back if anything goes wrong:</p>
+<pre class="term"><code><span class="p">$</span> esptool.py --port /dev/ttyUSB0 read_flash 0x0 0x400000 backup.bin
+esptool.py v4.7
+Serial port /dev/ttyUSB0
+Connecting...
+Chip is ESP32-D0WD-V3 (revision v3.0)
+4194304 bytes read successfully.
+<span class="p">$</span> esptool.py --port /dev/ttyUSB0 write_flash 0x0 tasmota.bin
+Writing at 0x0003e800... (100 %)
+Wrote 598016 bytes at 0x00000000 in 5.6 seconds.
+Hard resetting via RTS pin...</code></pre>
+
+<p><a href="https://tasmota.github.io/" rel="noopener">Tasmota</a> replaces the vendor&rsquo;s cloud-dependent firmware with local control &mdash; no account, no app, no internet required. Prefer config files over clicking? <a href="https://esphome.io/" rel="noopener">ESPHome</a> does the same job. Either way, the device now answers to you &mdash; not a server that might shut down next year (see the <a href="/obsolescence.html">obsolescence archive</a> for why that matters).</p>
+</section>
 
 <div id="proto-cards"><p>Loading&hellip;</p></div>
 
