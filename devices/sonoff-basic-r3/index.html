@@ -9,8 +9,16 @@
 <title>Sonoff Basic R3 &mdash; BareBoard &mdash; Free Hardware Education</title>
 <meta name="description" content="Sonoff Basic R3: ESP8285, DIY mode, flash-mode button procedure, and teardown notes.">
 <meta name="theme-color" content="#fbfbfc">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="BareBoard">
+<meta property="og:title" content="Sonoff Basic R3">
+<meta property="og:description" content="Sonoff Basic R3: ESP8285, DIY mode, flash-mode button procedure, and teardown notes.">
+<meta property="og:url" content="https://bareboard.org/devices/sonoff-basic-r3/">
+<meta property="og:image" content="https://bareboard.org/img/frank-clean.jpg">
+<meta name="twitter:card" content="summary_large_image">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%231d1d1f'/%3E%3Ctext x='32' y='45' font-family='system-ui,-apple-system,sans-serif' font-size='36' fill='white' text-anchor='middle'%3EB%3C/text%3E%3C/svg%3E">
 <link rel="stylesheet" href="/style.css">
+<link rel="alternate" type="application/rss+xml" title="BareBoard &mdash; What&apos;s New" href="/feed.xml">
 </head>
 <body>
 <header class="site-nav">
@@ -107,9 +115,6 @@
   <aside class="legal-notice" style="background:#fff8e1;border:1px solid #e6d690;border-radius:8px;padding:1em 1.2em;margin:0 0 1.5em;font-size:0.88rem;color:#5a4e1a;">
     <strong>Educational purpose.</strong> Everything on this page is published for education and research. Teardowns document hardware the author legally owns. Datasheets link to public sources. FCC filings are public record. Lawsuits and controversies cite public reporting. Nothing here is stolen, leaked, or confidential. If you use this information, you&rsquo;re responsible for complying with the laws where you live. This isn&rsquo;t legal advice &mdash; it&rsquo;s a workbench.
   </aside>
-  <aside class="purpose-note" style="background:#eef6ee;border:1px solid #b9d8b9;border-radius:8px;padding:1em 1.2em;margin:0 0 1.5em;font-size:0.92rem;color:#1e4620;">
-    <strong>Your device, your rules.</strong> You bought it &mdash; you have the right to update its firmware, patch its security issues, and remove software you don&rsquo;t want on it. Every method on this page is non-destructive: it uses the device&rsquo;s existing ports, buttons, or software features. Nothing here requires breaking the enclosure.
-  </aside>
   <h1>Sonoff Basic R3</h1>
   <p class="lede">ITEAD&rsquo;s in-line Wi-Fi switch &mdash; the device that taught a generation about ESP8266-family hardware. The R3 revision uses the ESP8285 (flash built into the chip), keeps the famous flash-mode button, and even ships a documented DIY mode.</p>
 
@@ -151,27 +156,22 @@
 
   <section>
     <h2 id="entry">Simple Entry Points</h2>
-    <h3>DIY mode: local control with no tools</h3>
-    <p><strong>What do I need?</strong> Just the device and your Wi-Fi network.</p>
+    <h3>Flash mode with one button and one cable</h3>
+    <p><strong>You need:</strong> A 3.3 V USB-to-serial adapter (about $3) and four Dupont wires. <strong>Mains-voltage warning:</strong> disconnect from wall power; power the board only from the 3.3 V adapter during this procedure.</p>
     <ol>
-      <li>The R3 ships with a manufacturer-documented <strong>DIY mode</strong>: a local REST API on your own network &mdash; no cloud account, no app required.</li>
-      <li>Enable it in the app once, then control and update the switch from any computer on your network.</li>
-    </ol>
-<pre class="term" style="background:#1d1d1f;color:#e8e8e8;padding:1em;border-radius:8px;overflow-x:auto;"><code>$ curl http://192.168.1.61:8081/zeroconf/info
-{&quot;seq&quot;:1,&quot;data&quot;:{&quot;switch&quot;:&quot;on&quot;,&quot;rssi&quot;:-58}}</code></pre>
-    <h3>For advanced users: one-button flash mode</h3>
-    <p><strong>What do I need?</strong> A 3.3&nbsp;V USB-to-serial adapter (about $3) and four jumper wires. The case opens with screws &mdash; no glue, fully reversible.</p>
-    <ol>
-      <li>Wire the adapter to the serial header: GND to GND, TX to RX, RX to TX. Power the board from the 3.3&nbsp;V adapter only &mdash; <strong>never while connected to wall power</strong>.</li>
-      <li>Press and hold the case button (this pulls GPIO0 low), apply power, then release &mdash; the ESP8285 enters UART download mode.</li>
-      <li>Back up the original firmware first, then write your replacement.</li>
+      <li>Wire the adapter to the serial header: GND to GND, TX to RX, RX to TX. Do not connect the adapter&rsquo;s 5 V line.</li>
+      <li>Press and hold the case button (GPIO0 low), then apply 3.3 V power. Release the button &mdash; the ESP8285 is now in UART download mode.</li>
+      <li>Back up the original firmware first, then write your replacement firmware with esptool.</li>
     </ol>
 <pre class="term" style="background:#1d1d1f;color:#e8e8e8;padding:1em;border-radius:8px;overflow-x:auto;"><code>$ esptool.py --port /dev/ttyUSB0 read_flash 0x00000 0x100000 backup.bin
+esptool.py v4.0
 Detected ESP8285 — 1 MB flash
 1048576 bytes read successfully
 $ esptool.py --port /dev/ttyUSB0 write_flash 0x00000 tasmota.bin
-Writing at 0x00000000... 100%</code></pre>
-    <p><em>Always keep your backup.bin &mdash; it&rsquo;s your way back if anything goes wrong.</em></p>
+Writing at 0x00000000... 100%
+Leaving... Hard resetting via RTS pin...</code></pre>
+    <p><em>The R3 also offers a manufacturer-documented DIY mode (local REST API over Wi-Fi) for users who prefer not to open the case at all.</em></p>
+  </section>
 
   <section>
     <h2 id="reading">Further Reading</h2>
