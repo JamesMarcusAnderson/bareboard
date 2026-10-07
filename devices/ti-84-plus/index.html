@@ -108,6 +108,9 @@
   <aside class="legal-notice" style="background:#fff8e1;border:1px solid #e6d690;border-radius:8px;padding:1em 1.2em;margin:0 0 1.5em;font-size:0.88rem;color:#5a4e1a;">
     <strong>Educational purpose.</strong> Everything on this page is published for education and research. Teardowns document hardware the author legally owns. Datasheets link to public sources. FCC filings are public record. Lawsuits and controversies cite public reporting. Nothing here is stolen, leaked, or confidential. If you use this information, you&rsquo;re responsible for complying with the laws where you live. This isn&rsquo;t legal advice &mdash; it&rsquo;s a workbench.
   </aside>
+  <aside class="purpose-note" style="background:#eef6ee;border:1px solid #b9d8b9;border-radius:8px;padding:1em 1.2em;margin:0 0 1.5em;font-size:0.92rem;color:#1e4620;">
+    <strong>Your device, your rules.</strong> You bought it &mdash; you have the right to update its firmware, patch its security issues, and remove software you don&rsquo;t want on it. Every method on this page is non-destructive: it uses the device&rsquo;s existing ports, buttons, or software features. Nothing here requires breaking the enclosure.
+  </aside>
   <h1>TI-84 Plus Family</h1>
   <p class="lede">The graphing calculator that ate American education. Powered by a Zilog Z80 &mdash; a CPU from 1976 &mdash; and protected by one of the most aggressive legal strategies in consumer electronics.</p>
 
@@ -178,10 +181,30 @@
   </section>
 
   <section>
-    <h2 id="reading">Further Reading</h2>
+    
+  <section>
+    <h2 id="entry">Simple Entry Points</h2>
+    <p>Start here if you&rsquo;ve never opened a device before. These methods use only the ports, buttons, and software features the device already has &mdash; no special tools, no broken plastic.</p>
+
+    <h3>Manage the OS over USB (no tools needed)</h3>
+    <p><strong>What do I need?</strong> A mini-USB cable and the free TI Connect CE software.</p>
+    <ol>
+      <li>Connect the calculator to your computer with the USB cable.</li>
+      <li>TI Connect CE shows the installed operating system and apps &mdash; you can update the OS, remove apps you don&rsquo;t want, or transfer your own programs.</li>
+      <li>The calculator world has a decades-long community of programmers; the <strong>signing-key controversy</strong> documented below is exactly about who gets to decide what software runs on hardware you own.</li>
+    </ol>
+<pre class="term" style="background:#1d1d1f;color:#e8e8e8;padding:1em;border-radius:8px;overflow-x:auto;"><code>$ # TI Connect CE is graphical — but the calculator also
+$ # appears as a USB device you can inspect:
+$ lsusb | grep -i texas
+Bus 001 Device 017: ID 0451:e008 Texas Instruments, Inc. TI-84 Plus</code></pre>
+    <p><em>No disassembly, no special hardware &mdash; the USB port is the whole interface.</em></p>
+    <p>Want the full technical picture? See our <a href="/protocols.html">Protocol Reverse Engineering</a> page for the complete firmware-access playbook.</p>
+  </section>
+
+<h2 id="reading">Further Reading</h2>
     <ul>
       <li><a href="https://en.wikipedia.org/wiki/Texas_Instruments_signing_key_controversy">Wikipedia &mdash; TI signing key controversy</a></li>
-      <li><a href="https://www.eff.org/ja/node/60826">EFF &mdash; TI calculator hacking case</a></li>
+      <li><a href="https://www.eff.org/ja/node/60826">EFF &mdash; TI calculator case</a></li>
       <li><a href="/datasheets.html">BareBoard datasheet index</a></li>
     </ul>
     <h3>Video</h3>
