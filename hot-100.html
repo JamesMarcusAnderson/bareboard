@@ -7,7 +7,7 @@
 <meta name="robots" content="noai, noimageai">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>The BareBoard Hot 100&trade; &mdash; Free Hardware Education</title>
-<meta name="description" content="The BareBoard Hot 100: the 100 most-used consumer electronic devices overall, ranked across a 1,200-device universe. Preliminary ranking, methodology v0.2.">
+<meta name="description" content="The BareBoard Hot 100: the 100 devices that matter most to hardware hackers, ranked by editorial judgment. Every entry sourced. Methodology v1.0.">
 <meta name="theme-color" content="#fbfbfc">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%231d1d1f'/%3E%3Ctext x='32' y='45' font-family='system-ui,-apple-system,sans-serif' font-size='36' font-weight='700' fill='white' text-anchor='middle'%3EB%3C/text%3E%3C/svg%3E">
 <link rel="stylesheet" href="/style.css">
@@ -16,7 +16,7 @@
   "@context": "https://schema.org",
   "@type": "ItemList",
   "name": "The BareBoard Hot 100",
-  "description": "The 100 most-used consumer electronic devices overall, ranked across a 1,200-device universe. Preliminary ranking, methodology v0.2."
+  "description": "The 100 devices that matter most to hardware hackers, ranked by editorial judgment. Every entry sourced. Methodology v1.0."
 }
 </script>
 </head>
@@ -103,35 +103,26 @@
 </header>
 
 <main>
-<span class="badge-prelim" id="methodology">Preliminary &mdash; methodology v0.2</span>
+<span class="badge-prelim" id="methodology">Methodology v1.0</span>
 <h1>The BareBoard Hot 100&trade;</h1>
   <blockquote class="epigraph" style="margin:1.5em 0;padding:0 0 0 1em;border-left:3px solid #c00;font-style:italic;color:#555;">
     <p>&ldquo;From now on, nothing ships unless I&rsquo;ve opened it. No locked bootloaders, no glued-in batteries, no nothing. A chip gets fabbed, I want to know what&rsquo;s on it. You guys got fat selling devices people can&rsquo;t repair. Now it&rsquo;s the people&rsquo;s turn.&rdquo;</p>
     <cite style="font-style:normal;font-size:0.85em;">&mdash; after Frank White (Christopher Walken), <em>King of New York</em> (1990)</cite>
   </blockquote>
   <p class="tagline" style="font-size:1.1rem;font-weight:bold;margin:0.5em 0 1.5em;">If it has a chip, I know about it.</p>
-  <p><span id="hot100-live-dot" style="display:inline-block;width:10px;height:10px;border-radius:50%;background:#888;margin-right:6px;"></span><strong>LIVE</strong> &mdash; <span id="hot100-updated">Loading...</span></p>
-  <p id="hot100-pulse" style="font-size:0.9rem;color:#555;"></p>
-<p class="lede">The 100 most-used consumer electronic devices overall &mdash; ranked #1 through #100
-across a 1,200-device universe (top 100 in each of twelve categories). Recomputed whenever the
-universe updates. #1 isn&rsquo;t forever &mdash; it&rsquo;s whoever matters most right now.</p>
-
-<div class="method">
-<p><strong>How it&rsquo;s ranked:</strong> confidence-weighted all-time units sold &mdash; A counts full, B at 75%, C at 50%, undisclosed scores zero, no invented numbers &mdash; highest first. Every position is auditable from the sourced figures in the table. (v0.1 blended an unquantified &ldquo;still in use&rdquo; estimate; v0.2 ranks purely on published figures.)</p>
-<p class="src">The data gap, quantified: ~70% of the 1,200-device universe has no public sales figure.
-Consoles and phones are the only categories with real numbers; IoT, networking, streamers,
-cameras and wearables are near-total black holes. The industry&rsquo;s most-installed devices are
-its least-counted.</p>
-</div>
+  <p><span id="hot100-updated">Loading...</span></p>
+<div id="hot100-methodology"></div>
+<p class="lede">The 100 devices that matter most to hardware hackers &mdash; ranked #1 through #100
+by editorial judgment. Not sales, not shipments, not search volume: just the devices most
+worth opening up.</p>
 
 <div class="table-wrap" id="ranking">
 <table class="hot100">
-<thead><tr><th>#</th><th>Device</th><th>Category</th><th>Units sold</th><th>Conf.</th><th>Trend</th></tr></thead>
-<tbody id="hot100-table-body"><tr><td colspan="5">Loading rankings...</td></tr></tbody>
+<thead><tr><th>#</th><th>Device</th><th>Maker</th><th>Category</th><th>Evidence</th><th>Why</th></tr></thead>
+<tbody id="hot100-table-body"><tr><td colspan="6">Loading rankings...</td></tr></tbody>
 </table>
 </div>
-<p class="lede">Full per-category top-100 lists and sources available on request &mdash; every figure
-carries its source and confidence grade. Corrections welcome, verified corrections only.</p>
+<p class="lede">Every entry carries its sources and an evidence label. Corrections welcome, verified corrections only.</p>
   <footer>
     <a href="/tarpit/" class="hp-link" aria-hidden="true" tabindex="-1">device index</a>
     <p>BareBoard &mdash; a free educational resource. Text and findings published under open terms; nothing here is for sale.</p>
