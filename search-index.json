@@ -130,5 +130,35 @@
     "title": "Bench Notes",
     "url": "/notes/",
     "description": "Short technical observations from the BareBoard workbench."
+  },
+  {
+    "title": "Xfinity XB3 (Arris TG1682G) \u2014 Device Hub",
+    "url": "/devices/xfinity-xb3/",
+    "description": "XB3 specs, Puma 6 chipset, FCC ID UIDTG1682, Puma 6 latency defect and controversies."
+  },
+  {
+    "title": "TI-84 Plus Family \u2014 Device Hub",
+    "url": "/devices/ti-84-plus/",
+    "description": "TI-84 Plus variants, Z80 CPU, and the 2009 DMCA signing key controversy."
+  },
+  {
+    "title": "Raspberry Pi Family \u2014 Device Hub",
+    "url": "/devices/raspberry-pi/",
+    "description": "All Raspberry Pi models, Broadcom SoCs, supply chain shortages and price increase."
+  },
+  {
+    "title": "Nintendo Switch Family \u2014 Device Hub",
+    "url": "/devices/nintendo-switch/",
+    "description": "Switch models, Tegra X1, FCC ID BKEHAC001, Joy-Con drift lawsuits and French settlement."
+  },
+  {
+    "title": "PlayStation Family \u2014 Device Hub",
+    "url": "/devices/playstation/",
+    "description": "PlayStation PS1-PS5, the 2011 PSN hack, and the OtherOS class action lawsuit."
+  },
+  {
+    "title": "ESP32 Family \u2014 Device Hub",
+    "url": "/devices/esp32/",
+    "description": "ESP32 variants, FCC ID 2AC7Z-ESPWROOM32, and CVE-2025-27840 Bluetooth security research."
   }
 ]
