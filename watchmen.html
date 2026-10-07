@@ -2,13 +2,19 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
-<meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self' data:; style-src 'self'; script-src 'self'; object-src 'none'; frame-src 'none'; base-uri 'self'; form-action 'none'">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self' data: upload.wikimedia.org thumb.wikimedia.org; style-src 'self'; script-src 'self'; object-src 'none'; frame-src 'none'; base-uri 'self'; form-action 'none'">
 <meta name="referrer" content="no-referrer">
 <meta name="robots" content="noai, noimageai">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Quis Custodiet Ipsos Custodes? — BareBoard — Free Hardware Education</title>
-<meta name="description" content="BareBoard: a free educational and beneficial resource. We can't open their hardware, so we open our findings.">
+<title>W³ — Who Watches the Watchmen — BareBoard</title>
+<meta name="description" content="W³ — Who Watches the Watchmen. BareBoard examines its own tools: what is inside the logic analyzers, debug probes, and programmers we trust, and can it be verified?">
 <meta name="theme-color" content="#fbfbfc">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="BareBoard">
+<meta property="og:title" content="W³ — Who Watches the Watchmen">
+<meta property="og:description" content="Do we know what is inside the tools we use to examine hardware? BareBoard examines its own bench, chip by chip.">
+<meta property="og:url" content="https://bareboard.org/watchmen.html">
+<meta name="twitter:card" content="summary_large_image">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%231d1d1f'/%3E%3Ctext x='32' y='45' font-family='system-ui,-apple-system,sans-serif' font-size='36' font-weight='700' fill='white' text-anchor='middle'%3EB%3C/text%3E%3C/svg%3E">
 <link rel="stylesheet" href="/style.css">
 <link rel="alternate" type="application/rss+xml" title="BareBoard &mdash; What&apos;s New" href="/feed.xml">
@@ -100,12 +106,99 @@
 </header>
 
 <main>
-  <h1><em>Quis custodiet ipsos custodes?</em></h1>
-  <p class="lede" style="font-size:1.1rem;">&ldquo;Who will guard the guards themselves?&rdquo; &mdash; Juvenal, <em>Satires</em> VI, ~100 AD</p>
+  <p class="kicker" style="font-size:2.5rem;font-weight:800;letter-spacing:0.05em;margin-bottom:0;">W&sup3;</p>
+  <h1><em>Who Watches the Watchmen?</em></h1>
+  <p class="lede" style="font-size:1.1rem;">&ldquo;Quis custodiet ipsos custodes?&rdquo; &mdash; Juvenal, <em>Satires</em> VI, ~100 AD</p>
 
-  <p class="lede">BareBoard exists to hold manufacturers accountable &mdash; to open the locked boxes, publish the hidden schematics, and document what they don&rsquo;t want you to know. That&rsquo;s real power. So it&rsquo;s fair to ask: <strong>who watches us?</strong></p>
+  <p class="lede">Every instrument on the BareBoard bench exists to answer one question: <strong>what is really inside this hardware?</strong> This page turns that question around. The logic analyzers, debug probes, and programmers we trust with our examinations &mdash; do we know what is inside <em>them</em>?</p>
+  <p>A tool that sits between you and a target can shape everything you observe. A closed chip, an unverifiable firmware blob, a driver you cannot inspect: each one is a place where trust replaces evidence. That is acceptable only when it is a conscious choice. Below, each tool on our bench is examined the same way we examine everything else &mdash; chip by chip, license by license. <strong>Trust, but verify &mdash; starting at home.</strong></p>
 
-  <section>
+<section>
+  <h2 id="examinations">The examinations</h2>
+  <p class="lede">For each tool: what is on the board, how open the design and firmware are, whether an independent person can verify its behavior, and anything worth watching.</p>
+
+  <article class="tool-exam">
+    <h3>Glasgow Interface Explorer</h3>
+    <p><strong>What it is:</strong> a reconfigurable USB multitool for communicating with digital hardware &mdash; UART, SPI, I&sup2;C, JTAG, and many other protocols, defined in software and synthesized onto an FPGA.</p>
+    <p><strong>What is on the board:</strong> a Lattice iCE40HX8K FPGA (supported by a fully open-source FPGA toolchain) and a Cypress FX2 high-speed USB interface, with 16 level-shifted GPIO channels.</p>
+    <p><strong>How open is it:</strong> the gateware is written in Amaranth (a Python-based hardware description language) and released under permissive terms (0BSD / Apache-2.0); the host software is Python. The board design is open. It is built with Project IceStorm, the community reverse-engineered open toolchain for iCE40 &mdash; no vendor license, no account, no closed synthesizer required.</p>
+    <p><strong>Can you verify it:</strong> yes, completely. Every layer from gateware source to bitstream can be rebuilt with open tools and compared.</p>
+    <p><strong>Anything to watch:</strong> very little. Glasgow is the reference example of a fully verifiable instrument. The main practical note is that the FPGA bitstream is generated on demand, so reproducing an exact historical bitstream requires the same toolchain versions.</p>
+  </article>
+
+  <article class="tool-exam">
+    <h3>Raspberry Pi Pico</h3>
+    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/ab/PXL_20220703_104511558.PORTRAIT_%28cropped%29.jpg/1280px-PXL_20220703_104511558.PORTRAIT_%28cropped%29.jpg" alt="Raspberry Pi Pico microcontroller board" loading="lazy" style="max-width:100%;height:auto;">
+    <p><strong>What it is:</strong> a $4 microcontroller board, widely used on this bench as a USB-to-serial adapter and as a debug probe (running Picoprobe firmware) for SWD targets.</p>
+    <p><strong>What is on the board:</strong> the RP2040 microcontroller (dual Arm Cortex-M0+, 264&nbsp;KB SRAM) plus 2&nbsp;MB of external flash. The RP2040 contains a mask-ROM bootloader that presents the board as a USB drive &mdash; firmware is installed by dragging a file onto it.</p>
+    <p><strong>How open is it:</strong> Raspberry Pi publishes the board design files, the RP2040 datasheet is unusually thorough for the industry, and the Picoprobe firmware is open source. The mask-ROM bootloader itself is fixed in silicon and cannot be independently rebuilt, but its behavior (USB mass storage + UF2 flashing) is documented and observable.</p>
+    <p><strong>Can you verify it:</strong> largely yes. The firmware you run is firmware you can build from source; the ROM bootloader&rsquo;s behavior is simple and well documented.</p>
+    <p><strong>Anything to watch:</strong> the ROM is the one closed corner &mdash; small, documented, and fixed, but closed. For a $4 probe, this is an acceptable and conscious trade.</p>
+  </article>
+
+  <article class="tool-exam">
+    <h3>Bus Pirate v3</h3>
+    <p><strong>What it is:</strong> a USB multitool for UART, SPI, I&sup2;C, 1-Wire, and more, controlled from a serial terminal. A long-standing community instrument.</p>
+    <p><strong>What is on the board:</strong> a Microchip PIC24FJ64GA002 microcontroller, an FTDI FT232RL USB-to-serial chip, and a 4066 analog switch array, with an ICSP header for programming the PIC directly.</p>
+    <p><strong>How open is it:</strong> the hardware design is released under CC-0 and the firmware under CC-0, with a GPL v3 bootloader. Schematics, part lists, and firmware source are published by Dangerous Prototypes.</p>
+    <p><strong>Can you verify it:</strong> yes. The firmware can be rebuilt and re-flashed over USB via the bootloader, or through the ICSP header with an external programmer.</p>
+    <p><strong>Anything to watch:</strong> the FTDI FT232RL is a closed chip (as with all FTDI parts) &mdash; it handles USB only, not protocol logic, so its closed nature has limited bearing on measurement integrity. Note that FTDI&rsquo;s drivers have a history of aggressive counterfeit-chip handling; genuine boards avoid the issue.</p>
+  </article>
+
+  <article class="tool-exam">
+    <h3>Tigard</h3>
+    <p><strong>What it is:</strong> an open-source FTDI FT2232H-based multi-protocol tool (UART, JTAG, SPI, I&sup2;C, SWD) with on-board level shifting from 1.8&nbsp;V to 5.5&nbsp;V, designed for attaching to low-speed interfaces on examined hardware.</p>
+    <p><strong>What is on the board:</strong> an FTDI FT2232HQ dual high-speed USB interface chip, bi-directional level shifters, and dedicated headers for UART, SWD, JTAG, SPI, and I&sup2;C, plus a logic-analyzer tap header.</p>
+    <p><strong>How open is it:</strong> the board design is released under Creative Commons Attribution-ShareAlike 4.0, with design files on GitHub. It works with standard open tools (OpenOCD, Flashrom, PyFtdi).</p>
+    <p><strong>Can you verify it:</strong> the board design, yes. The FTDI chip&rsquo;s internal firmware is closed, but the chip is used as a standard USB interface whose behavior is defined by FTDI&rsquo;s public drivers and the open host-side tools.</p>
+    <p><strong>Anything to watch:</strong> same FTDI note as the Bus Pirate: the closed USB interface chip is a transport, not the measurement logic. Verify the level-shifter voltage selection before connecting to a target &mdash; wrong voltage is a hardware risk, not a trust issue.</p>
+  </article>
+
+  <article class="tool-exam">
+    <h3>Shikra</h3>
+    <p><strong>What it is:</strong> an FTDI-based USB adapter for JTAG, SPI, I&sup2;C, UART, and GPIO, from Xipiter.</p>
+    <p><strong>What is on the board:</strong> an FTDI interface chip (USB to the low-level protocols listed above).</p>
+    <p><strong>How open is it:</strong> less documented than the others here. Public design files and firmware sources are limited, which is itself the finding.</p>
+    <p><strong>Can you verify it:</strong> partially. It works with standard FTDI-compatible host tools, so its observable behavior can be checked, but the board-level design is not as openly published as the tools above.</p>
+    <p><strong>Anything to watch:</strong> this is the weakest link on the bench from a verifiability standpoint. It remains useful, but it is used with that limitation in mind &mdash; and it is a candidate for replacement by a fully open equivalent.</p>
+  </article>
+
+  <article class="tool-exam">
+    <h3>Saleae-compatible logic analyzers (FX2-based)</h3>
+    <p><strong>What it is:</strong> inexpensive 8-channel, 24&nbsp;MHz USB logic analyzers, widely sold as low-cost alternatives to the original Saleae Logic.</p>
+    <p><strong>What is on the board:</strong> a Cypress CY7C68013A (FX2LP) USB controller, an NXP LVC245A transceiver, a 24C02N I&sup2;C EEPROM, and a 24&nbsp;MHz crystal. (Documented by the sigrok project&rsquo;s hardware notes.)</p>
+    <p><strong>How open is it:</strong> the hardware is an unlicensed copy of the original design &mdash; not open, and not authorized. The redeeming factor is the firmware: sigrok&rsquo;s <strong>fx2lafw</strong> is fully open-source firmware that these boards can run, replacing whatever they shipped with.</p>
+    <p><strong>Can you verify it:</strong> yes, when running fx2lafw under sigrok/PulseView. The firmware is built from source and loaded onto the FX2LP at each session.</p>
+    <p><strong>Anything to watch:</strong> two things. First, the hardware&rsquo;s provenance is a copy &mdash; buy it for the price, not the brand story. Second, always run the open firmware; the firmware a clone ships with is of unknown origin. With fx2lafw loaded, the instrument is verifiable.</p>
+  </article>
+
+  <article class="tool-exam">
+    <h3>CH341A programmers</h3>
+    <p><strong>What it is:</strong> ~$3 USB programmers for SPI flash and I&sup2;C EEPROM (25-series / 24-series), used with a SOIC-8 test clip to read chips without desoldering.</p>
+    <p><strong>What is on the board:</strong> the WCH (Nanjing Qinheng) CH341A USB interface chip, a voltage regulator, and a ZIF socket or pin header. The CH341A itself is closed silicon.</p>
+    <p><strong>How open is it:</strong> the chip is closed, and the bundled vendor software is of uncertain provenance. The community answer is open host software: <strong>AsProgrammer</strong> (MIT-licensed) and <strong>flashrom</strong> both support the CH341A.</p>
+    <p><strong>Can you verify it:</strong> behaviorally, yes &mdash; read-back verification (read the chip, compare against what was written) is standard practice and catches misbehavior. Use the open host tools, not the bundled software.</p>
+    <p><strong>Anything to watch:</strong> voltage. Some inexpensive boards have jumpers or design quirks around 3.3&nbsp;V vs 5&nbsp;V selection &mdash; always verify the output voltage with a multimeter before connecting to a 3.3&nbsp;V target. A wrong voltage damages the target; this is the most common real-world failure with these boards.</p>
+  </article>
+</section>
+
+<section>
+  <h2 id="verdict">The verdict, in one table</h2>
+  <div class="table-wrap"><table>
+    <thead><tr><th>Tool</th><th>Board design</th><th>Firmware</th><th>Independently verifiable?</th><th>Watch-outs</th></tr></thead>
+    <tbody>
+      <tr><td>Glasgow</td><td>Open</td><td>Open (Amaranth, 0BSD/Apache-2.0)</td><td>Fully</td><td>None significant</td></tr>
+      <tr><td>Raspberry Pi Pico</td><td>Open</td><td>Open (Picoprobe); mask-ROM bootloader documented</td><td>Largely</td><td>ROM is closed but fixed and documented</td></tr>
+      <tr><td>Bus Pirate v3</td><td>Open (CC-0)</td><td>Open (CC-0; bootloader GPL v3)</td><td>Yes</td><td>FTDI USB chip is closed (transport only)</td></tr>
+      <tr><td>Tigard</td><td>Open (CC BY-SA 4.0)</td><td>Open host tools; FTDI chip closed</td><td>Board: yes</td><td>Check level-shifter voltage before use</td></tr>
+      <tr><td>Shikra</td><td>Limited public docs</td><td>Standard FTDI-compatible behavior</td><td>Partially</td><td>Weakest verifiability; candidate for replacement</td></tr>
+      <tr><td>Saleae-compatible (FX2)</td><td>Unlicensed copy</td><td>Open (sigrok fx2lafw)</td><td>Yes, with fx2lafw</td><td>Always replace shipped firmware with fx2lafw</td></tr>
+      <tr><td>CH341A programmers</td><td>Varies by vendor</td><td>Use open tools (AsProgrammer, flashrom)</td><td>Behaviorally (read-back verify)</td><td>Verify 3.3V/5V selection before connecting</td></tr>
+    </tbody>
+  </table></div>
+  <p>The pattern is consistent: the most trustworthy tools are the ones whose designs and firmware can be rebuilt from source. Where a closed component exists, it should be isolated to transport (USB) rather than measurement &mdash; and its limitations should be stated plainly, as above.</p>
+</section>
+<section>
     <h2 id="who-watches">You do.</h2>
     <p>Every claim on this site is designed to be checked. We publish our methodology, our tools, our measurements, and our sources. We photograph the boards. We link the datasheets. We show our work &mdash; not because we&rsquo;re confident we&rsquo;re always right, but because we&rsquo;re confident the process is honest.</p>
     <p>We don&rsquo;t ask for your trust. We ask for your scrutiny.</p>
@@ -146,6 +239,7 @@
     <p>No tool makes a finding true. But the right tool makes it checkable &mdash; and everything above is something you can buy, borrow, or build yourself.</p>
   </section>
 
+  
   <section>
     <h2 id="corrections">When we&rsquo;re wrong</h2>
     <p>We will be wrong sometimes. Hardware is hard, markings lie, and manufacturers obfuscate. Here&rsquo;s what happens then:</p>
@@ -183,6 +277,7 @@
       <p class="legal-note"><em>BareBoard &mdash; open hardware allies, documented in alignment with the Open Source Hardware Association framework. Text and original photography published under open terms; nothing here is for sale.</em></p>
     </div>
   </footer>
+
 </main>
 
 <script src="/nav.js" defer></script>
