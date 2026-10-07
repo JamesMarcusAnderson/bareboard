@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self' data:; style-src 'self'; script-src 'self'; object-src 'none'; frame-src 'none'; base-uri 'self'; form-action 'none'">
+<meta name="referrer" content="no-referrer">
+<meta name="robots" content="noai, noimageai">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>PlayStation Family — BareBoard — Free Hardware Education</title>
+<meta name="description" content="PlayStation consoles PS1-PS5: chips, the 2011 PSN hack, and the OtherOS lawsuit.">
+<meta name="theme-color" content="#fbfbfc">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%231d1d1f'/%3E%3Ctext x='32' y='45' font-family='system-ui,-apple-system,sans-serif' font-size='36' font-weight='700' fill='white' text-anchor='middle'%3EB%3C/text%3E%3C/svg%3E">
+<link rel="stylesheet" href="/style.css">
+</head>
+<body>
+<header class="site-nav">
+  <div class="nav-inner">
+    <nav aria-label="Primary">
+      <ul>
+        <li><a href="/" class="brand-word">BareBoard</a></li>
+        <li><a href="/devices/">Devices</a></li>
+        <li class="has-children">
+          <a href="/about.html" aria-haspopup="true" aria-expanded="false">About</a>
+          <div class="col-panel">
+            <div class="dropdown-inner">
+              <ul class="dropdown-col">
+                <li><a href="/about.html#how-we-work">How we work</a></li>
+                <li><a href="/about.html#what-this-is-not">What this is not</a></li>
+                <li><a href="/datasheets.html">Datasheet Index</a></li>
+                <li><a href="/notes/">Bench Notes</a></li>
+              </ul>
+            </div>
+          </div></li>
+        <li class="has-children">
+          <a href="/hot-100.html" aria-haspopup="true" aria-expanded="false">Hot 100</a>
+          <div class="col-panel">
+            <div class="dropdown-inner">
+              <ul class="dropdown-col">
+                <li><a href="/hot-100.html">Cameras &amp; Drones</a></li>
+                <li><a href="/hot-100.html">E-Readers &amp; Tablets</a></li>
+                <li><a href="/hot-100.html">Game Consoles</a></li>
+                <li><a href="/hot-100.html">Media Streamers</a></li>
+                <li><a href="/hot-100.html">Networking Gear</a></li>
+                <li class="dropdown-sub"><a href="/autopsy/xfinity-xb3/">Xfinity XB3 (Arris TG1682G)</a></li>
+                <li><a href="/hot-100.html">Other</a></li>
+                <li><a href="/hot-100.html">PCs &amp; Single-Board</a></li>
+                <li><a href="/hot-100.html">Phones</a></li>
+                <li><a href="/hot-100.html">Printers</a></li>
+                <li><a href="/hot-100.html">Smart Home / IoT</a></li>
+                <li><a href="/hot-100.html">TVs &amp; Displays</a></li>
+                <li><a href="/hot-100.html">Wearables</a></li>
+              </ul>
+            </div>
+          </div></li>
+<li class="has-children">
+          <a href="/most-wanted.html" aria-haspopup="true" aria-expanded="false">Most Wanted</a>
+          <div class="col-panel">
+            <div class="dropdown-inner">
+              <ul class="dropdown-col">
+                <li><a href="/most-wanted.html#board">The board</a></li>
+              </ul>
+            </div>
+          </div></li>
+        <li class="has-children">
+          <a href="/support.html" aria-haspopup="true" aria-expanded="false">Support</a>
+          <div class="col-panel">
+            <div class="dropdown-inner">
+              <ul class="dropdown-col">
+                <li><a href="/support.html#mission">Mission</a></li>
+                <li><a href="/support.html#chip-in">Donate</a></li>
+                <li><a href="/support.html#allies">Allies</a></li>
+              </ul>
+            </div>
+          </div></li>
+        <li class="has-children">
+          <a href="/watchmen.html" aria-haspopup="true" aria-expanded="false">Watchmen</a>
+          <div class="col-panel">
+            <div class="dropdown-inner">
+              <ul class="dropdown-col">
+                <li><a href="/watchmen.html#who-watches">Who watches</a></li>
+                <li><a href="/watchmen.html#methodology">Methodology</a></li>
+                <li><a href="/watchmen.html#tools">The bench</a></li>
+                <li><a href="/watchmen.html#corrections">Corrections</a></li>
+              </ul>
+            </div>
+          </div></li>
+        <li class="nav-search-item">
+          <button type="button" class="search-toggle" aria-label="Search BareBoard" aria-expanded="false" aria-controls="search-panel"><svg width="15" height="15" viewBox="0 0 16 16" fill="none" aria-hidden="true"><circle cx="7" cy="7" r="5.2" stroke="currentColor" stroke-width="1.7"/><line x1="11.2" y1="11.2" x2="14.6" y2="14.6" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/></svg></button>
+        </li>
+      </ul>
+    </nav>
+  </div>
+  <div class="search-panel" id="search-panel" hidden>
+    <div class="search-inner">
+      <svg width="15" height="15" viewBox="0 0 16 16" fill="none" aria-hidden="true" class="search-icon"><circle cx="7" cy="7" r="5.2" stroke="currentColor" stroke-width="1.7"/><line x1="11.2" y1="11.2" x2="14.6" y2="14.6" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/></svg>
+      <input type="search" id="site-search" placeholder="Search BareBoard" aria-label="Search BareBoard" autocomplete="off" spellcheck="false">
+      <button type="button" class="search-close" aria-label="Close search">&times;</button>
+    </div>
+    <ul class="search-results" id="search-results" aria-live="polite"></ul>
+  </div>
+</header>
+
+<main>
+  <h1>PlayStation Family</h1>
+  <p class="lede">Five generations of Sony consoles &mdash; and some of the biggest security and consumer-rights battles in gaming history.</p>
+
+  <section>
+    <h2 id="fcc">FCC ID</h2>
+    <p><strong>FCC IDs vary by model and revision.</strong> Sony&rsquo;s grantee code is AK8. Check the label on your specific console and look it up at <a href="https://fccid.io">fccid.io</a> &mdash; the filings include internal photos that are invaluable for hardware research.</p>
+    <p><em>Specific model-to-FCC-ID mappings are being verified and will be listed here.</em></p>
+  </section>
+
+  <section>
+    <h2 id="fcc-revealed">What the FCC filing revealed</h2>
+    <p>The FCC filing for this device includes the documents manufacturers are required to submit: external photos, internal photos, test setup photos, RF test reports, and the user manual. These are public record at <a href="https://fccid.io/">fccid.io</a>.</p>
+    <p>What you can typically find:</p>
+    <ul>
+      <li><strong>Internal photos</strong> &mdash; board layout, chip placement, shielding, antenna design</li>
+      <li><strong>Block diagrams</strong> &mdash; sometimes included, showing the RF chain architecture</li>
+      <li><strong>Test reports</strong> &mdash; conducted and radiated emissions data, which can reveal operating frequencies and power levels</li>
+      <li><strong>Label placement</strong> &mdash; where the FCC ID lives on the device</li>
+    </ul>
+    <p>What the FCC filing does <em>not</em> include: schematics (usually withheld under confidentiality requests), firmware, bill of materials, or debug interface documentation.</p>
+  </section>
+
+  <section>
+    <h2 id="we-reveal">What we reveal</h2>
+    <p>The FCC tells you what a device emits. We tell you what&rsquo;s inside and how it works.</p>
+    <ul>
+      <li><strong>Chip-level identification</strong> &mdash; every major IC named, with datasheet links where public documentation exists</li>
+      <li><strong>Board mapping</strong> &mdash; what connects to what, which test pads matter, where the debug interfaces hide</li>
+      <li><strong>What the manufacturer won&rsquo;t tell you</strong> &mdash; undocumented features, hidden radios, silent telemetry, repair blockers</li>
+    </ul>
+    <p>Check our <a href="/autopsy/">teardowns</a> for full board-level analysis.</p>
+  </section>
+
+  <section>
+    <h2 id="variants">Consoles</h2>
+    <table>
+      <tr><th>Console</th><th>Released</th><th>CPU</th><th>GPU</th></tr>
+      <tr><td>PlayStation (PS1)</td><td>1994</td><td>MIPS R3000 @ 33.9 MHz</td><td>Custom</td></tr>
+      <tr><td>PlayStation 2</td><td>2000</td><td>Emotion Engine @ 294 MHz</td><td>Graphics Synthesizer</td></tr>
+      <tr><td>PlayStation 3 (fat)</td><td>2006</td><td>Cell Broadband Engine</td><td>RSX Reality Synthesizer</td></tr>
+      <tr><td>PlayStation 3 (slim / super slim)</td><td>2009 / 2012</td><td>Cell (die shrinks)</td><td>RSX</td></tr>
+      <tr><td>PlayStation 4 / Pro</td><td>2013 / 2016</td><td>AMD Jaguar x86-64</td><td>AMD GCN</td></tr>
+      <tr><td>PlayStation 5</td><td>2020</td><td>AMD Zen 2 x86-64</td><td>AMD RDNA 2</td></tr>
+    </table>
+  </section>
+
+  <section>
+    <h2 id="chips">Key Chips</h2>
+    <ul>
+      <li><strong>Cell Broadband Engine</strong> (PS3) &mdash; IBM/Sony/Toshiba co-design. 1 PPE + 8 SPEs. Exotic, powerful, notoriously hard to program.</li>
+      <li><strong>Emotion Engine</strong> (PS2) &mdash; MIPS-based, 294 MHz. Sony&rsquo;s custom silicon peak.</li>
+      <li><strong>AMD APUs</strong> (PS4/PS5) &mdash; semi-custom x86-64. The industry converged on PC architecture.</li>
+    </ul>
+    <p><em>FCC IDs vary by model and revision. Check the label on your specific unit and look it up at fccid.io &mdash; Sony&rsquo;s grantee code is AK8.</em></p>
+  </section>
+
+  <section>
+    <h2 id="controversies">Controversies &amp; Legal</h2>
+
+    <h3>The 2011 PlayStation Network hack</h3>
+    <p>Between April 17&ndash;19, 2011, attackers breached Sony&rsquo;s PlayStation Network and Qriocity services, compromising personal data from approximately 77 million accounts &mdash; names, addresses, emails, birth dates, passwords, and payment details. Sony shut down PSN on April 20; the outage lasted 24 days.</p>
+    <p>Government officials worldwide criticized Sony&rsquo;s week-long delay in notifying users. The UK Information Commissioner&rsquo;s Office fined Sony &pound;250,000 for breaching the Data Protection Act. Sony estimated the breach cost $171 million. A US class action settled with Sony offering up to $15M in compensation (free games, PS Plus time, and up to $2,500 for proven identity theft).</p>
+    <p>At the time, it was one of the largest data breaches in history.</p>
+    <p>Sources: <a href="http://en.wikipedia.org/wiki/PlayStation_Network_outage">Wikipedia</a>, <a href="https://www.silicon.co.uk/security/sony-compensation-160204/amp">Silicon UK</a></p>
+
+    <h3>OtherOS removal (2010&ndash;2017)</h3>
+    <p>The original &ldquo;fat&rdquo; PS3 shipped with OtherOS &mdash; the ability to install Linux alongside the PlayStation OS. The US Air Force famously built a 1,700-console supercomputer cluster from PS3s. On April 1, 2010, firmware update 3.21 removed the feature, citing security concerns (a hacker had demonstrated a fundamental exploit).</p>
+    <p>A class action (<em>In re Sony PS3 &ldquo;Other OS&rdquo; Litigation</em>) was filed in 2010, dismissed in 2011, revived on appeal in 2014, and settled in 2016: $55 for users who proved they ran Linux, $9 for those who bought the PS3 valuing the feature. The initial settlement was rejected by the judge over attorney fees; a revised $65-per-claimant offer followed in 2017.</p>
+    <p>Sources: <a href="https://en.wikipedia.org/wiki/OtherOS">Wikipedia</a>, <a href="https://www.gamesindustry.biz/sony-settles-ps3-other-os-suit">GamesIndustry.biz</a></p>
+
+    <h3>PS5 repair restrictions</h3>
+    <p>The PS5 uses software pairing for certain components &mdash; notably the optical drive, which is married to the motherboard. Replacing a failed drive requires Sony&rsquo;s proprietary calibration, limiting independent repair. This is part of a broader industry trend of parts pairing that right-to-repair advocates oppose.</p>
+    <p><em>Specific pairing mechanisms vary by revision; this reflects widely reported teardown findings.</em></p>
+  </section>
+
+  <section>
+    <h2 id="reading">Further Reading</h2>
+    <ul>
+      <li><a href="http://en.wikipedia.org/wiki/PlayStation_Network_outage">Wikipedia &mdash; 2011 PSN outage</a></li>
+      <li><a href="https://en.wikipedia.org/wiki/OtherOS">Wikipedia &mdash; OtherOS</a></li>
+      <li><a href="/datasheets.html">BareBoard datasheet index</a></li>
+    </ul>
+  </section>
+  <footer>
+    <a href="/tarpit/" class="hp-link" aria-hidden="true" tabindex="-1">device index</a>
+    <p>BareBoard &mdash; a free educational resource. Text and findings published under open terms; nothing here is for sale.</p>
+        <nav>
+      <a href="/">Home</a> &middot; <a href="/about.html">About</a> &middot; <a href="/colophon.html">Colophon</a>
+    </nav>
+
+    <div class="legal-framework">
+      <p><strong>BareBoard Legal Framework &amp; Declarations</strong></p>
+      <ul>
+      <li><strong>No AI training:</strong> All text, findings, and original photography on this site are copyrighted. Automated scraping for AI model training is prohibited. Crawlers that ignore robots.txt are trespassing.</li>
+        <li><strong>Educational nature:</strong> BareBoard operates exclusively as a non-commercial, open educational resource. All material is compiled for academic evaluation, hardware preservation, and technical literacy under 17 U.S.C. &sect; 107 (fair use).</li>
+        <li><strong>Zero-leak / no-binary clause:</strong> This site does not host, distribute, or mirror proprietary firmware binaries, encrypted operating system keys, or weaponizable exploits. Documentation covers only the public, physical realities of circuit hardware.</li>
+        <li><strong>Property verification:</strong> Every hardware autopsy is performed on personally owned, legally acquired equipment. No rented or third-party infrastructure is used.</li>
+        <li><strong>Public source sourcing:</strong> Comparative and regulatory data is aggregated from official public filings, including the U.S. Federal Communications Commission equipment authorization database.</li>
+      </ul>
+      <p class="legal-note"><em>BareBoard &mdash; open hardware allies, documented in alignment with the Open Source Hardware Association framework. Text and original photography published under open terms; nothing here is for sale.</em></p>
+    </div>
+  </footer>
+</main>
+
+<script src="/nav.js" defer></script>
+<script src="/search.js" defer></script>
+</body>
+</html>
