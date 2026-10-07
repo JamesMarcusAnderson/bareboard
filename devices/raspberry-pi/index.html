@@ -108,8 +108,11 @@
   <aside class="legal-notice" style="background:#fff8e1;border:1px solid #e6d690;border-radius:8px;padding:1em 1.2em;margin:0 0 1.5em;font-size:0.88rem;color:#5a4e1a;">
     <strong>Educational purpose.</strong> Everything on this page is published for education and research. Teardowns document hardware the author legally owns. Datasheets link to public sources. FCC filings are public record. Lawsuits and controversies cite public reporting. Nothing here is stolen, leaked, or confidential. If you use this information, you&rsquo;re responsible for complying with the laws where you live. This isn&rsquo;t legal advice &mdash; it&rsquo;s a workbench.
   </aside>
+  <aside class="purpose-note" style="background:#eef6ee;border:1px solid #b9d8b9;border-radius:8px;padding:1em 1.2em;margin:0 0 1.5em;font-size:0.92rem;color:#1e4620;">
+    <strong>Your device, your rules.</strong> You bought it &mdash; you have the right to update its firmware, patch its security issues, and remove software you don&rsquo;t want on it. Every method on this page is non-destructive: it uses the device&rsquo;s existing ports, buttons, or software features. Nothing here requires breaking the enclosure.
+  </aside>
   <h1>Raspberry Pi Family</h1>
-  <p class="lede">The single-board computer that put a Linux box in every hacker&rsquo;s drawer. Over 60 million units sold &mdash; and a supply chain saga that tested the community&rsquo;s loyalty.</p>
+  <p class="lede">The single-board computer that put a Linux box in every maker&rsquo;s drawer. Over 60 million units sold &mdash; and a supply chain saga that tested the community&rsquo;s loyalty.</p>
 
   <section>
     <h2 id="fcc">FCC ID</h2>
@@ -192,7 +195,26 @@
   </section>
 
   <section>
-    <h2 id="reading">Further Reading</h2>
+    
+  <section>
+    <h2 id="entry">Simple Entry Points</h2>
+    <p>Start here if you&rsquo;ve never opened a device before. These methods use only the ports, buttons, and software features the device already has &mdash; no special tools, no broken plastic.</p>
+
+    <h3>A fresh start with an SD card (no tools needed)</h3>
+    <p><strong>What do I need?</strong> A microSD card and a computer.</p>
+    <ol>
+      <li><strong>Firmware</strong> on a Pi lives on the SD card &mdash; the entire operating system. To update, patch, or remove unwanted software, you simply write a fresh card.</li>
+      <li>Use the free <strong>Raspberry Pi Imager</strong> app: pick your model, pick an operating system, pick the card, click write.</li>
+      <li>Swap the card, power on &mdash; the Pi boots the new system. The old card is untouched, so you can always go back.</li>
+    </ol>
+<pre class="term" style="background:#1d1d1f;color:#e8e8e8;padding:1em;border-radius:8px;overflow-x:auto;"><code>$ lsblk | grep disk
+sda      8:0    1  29.7G  0 disk   # &lt;- the SD card
+$ # Raspberry Pi Imager handles the rest graphically</code></pre>
+    <p><em>Because the whole system lives on a removable card, a Raspberry Pi can never be permanently broken by software &mdash; just rewrite the card.</em></p>
+    <p>Want the full technical picture? See our <a href="/protocols.html">Protocol Reverse Engineering</a> page for the complete firmware-access playbook.</p>
+  </section>
+
+<h2 id="reading">Further Reading</h2>
     <ul>
       <li><a href="https://datasheets.raspberrypi.com/">Raspberry Pi official datasheets</a> &mdash; exemplary open documentation</li>
       <li><a href="/datasheets.html">BareBoard datasheet index</a> &mdash; RP2040, Broadcom references</li>
