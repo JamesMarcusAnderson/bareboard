@@ -1,0 +1,799 @@
+{
+ "updated": "2026-10-07T08:45:00Z",
+ "methodology": "v0.2",
+ "live": true,
+ "devices": [
+  {
+   "rank": 1,
+   "name": "Casio calculator line (1964\u2013present)",
+   "category": "Other",
+   "units": "1.80B (Casio 60th-anniversary manufactur",
+   "confidence": "A",
+   "url": null
+  },
+  {
+   "rank": 2,
+   "name": "Apple iPod line (2001\u20132022)",
+   "category": "Other",
+   "units": "300M (Apple announcement (Tim Cook, via ",
+   "confidence": "A",
+   "url": null
+  },
+  {
+   "rank": 3,
+   "name": "Lenovo ThinkPad (entire line)",
+   "category": "PCs &amp; Single-Board",
+   "units": "200M (Lenovo StoryHub (30th anniversary ",
+   "confidence": "A",
+   "url": null
+  },
+  {
+   "rank": 4,
+   "name": "Nokia 1100",
+   "category": "Phones",
+   "units": "250M (Wikipedia citing Nokia-era press r",
+   "confidence": "B",
+   "url": null
+  },
+  {
+   "rank": 5,
+   "name": "Nokia 1110 / 1110i",
+   "category": "Phones",
+   "units": "250M (Wikipedia citing press reports, no",
+   "confidence": "B",
+   "url": null
+  },
+  {
+   "rank": 6,
+   "name": "HP DeskJet line (1988\u2013present)",
+   "category": "Printers",
+   "units": "240M (HP 20th-anniversary milestone repo",
+   "confidence": "B",
+   "url": null
+  },
+  {
+   "rank": 7,
+   "name": "iPhone 6 / 6 Plus",
+   "category": "Phones",
+   "units": "222.4M (AppleInsider/analyst estimates v",
+   "confidence": "B",
+   "url": null
+  },
+  {
+   "rank": 8,
+   "name": "PlayStation 2 (SCPH-30000 through 90000)",
+   "category": "Game Consoles",
+   "units": "160M (Sony official PlayStation history ",
+   "confidence": "A",
+   "url": null
+  },
+  {
+   "rank": 9,
+   "name": "Nintendo Switch (original, Lite, OLED)",
+   "category": "Game Consoles",
+   "units": "155.9M (Nintendo FY2026 financial result",
+   "confidence": "A",
+   "url": null
+  },
+  {
+   "rank": 10,
+   "name": "Nintendo DS / DS Lite",
+   "category": "Game Consoles",
+   "units": "154M (Nintendo IR lifetime hardware, 201",
+   "confidence": "A",
+   "url": null
+  },
+  {
+   "rank": 11,
+   "name": "Nokia 105 series (2013/2015 variants)",
+   "category": "Phones",
+   "units": "200M (Wikipedia (List of best-selling mo",
+   "confidence": "B",
+   "url": null
+  },
+  {
+   "rank": 12,
+   "name": "HP LaserJet line (1984\u2013present)",
+   "category": "Printers",
+   "units": "200M (HP milestone reported by IT-Sp (co",
+   "confidence": "B",
+   "url": null
+  },
+  {
+   "rank": 13,
+   "name": "iPhone 6S / 6S Plus",
+   "category": "Phones",
+   "units": "174.5M (analyst estimates via Wikipedia,",
+   "confidence": "B",
+   "url": null
+  },
+  {
+   "rank": 14,
+   "name": "iPhone 5s",
+   "category": "Phones",
+   "units": "165M (Omdia via Visual Capitalist, 2023)",
+   "confidence": "B",
+   "url": null
+  },
+  {
+   "rank": 15,
+   "name": "Nokia 3210",
+   "category": "Phones",
+   "units": "161M (Omdia via Visual Capitalist, 2023)",
+   "confidence": "B",
+   "url": null
+  },
+  {
+   "rank": 16,
+   "name": "iPhone 11 / 11 Pro / 11 Pro Max",
+   "category": "Phones",
+   "units": "159M (Omdia via Visual Capitalist, 2023)",
+   "confidence": "B",
+   "url": null
+  },
+  {
+   "rank": 17,
+   "name": "Game Boy / Game Boy Color",
+   "category": "Game Consoles",
+   "units": "118.7M (Nintendo IR lifetime hardware, 2",
+   "confidence": "A",
+   "url": null
+  },
+  {
+   "rank": 18,
+   "name": "iPhone 7 / 7 Plus",
+   "category": "Phones",
+   "units": "156.7M (Wikipedia (List of best-selling ",
+   "confidence": "B",
+   "url": null
+  },
+  {
+   "rank": 19,
+   "name": "PlayStation 4 (CUH-1000 through CUH-2200)",
+   "category": "Game Consoles",
+   "units": "117M (Sony official PlayStation history ",
+   "confidence": "A",
+   "url": null
+  },
+  {
+   "rank": 20,
+   "name": "iPhone XR / XS / XS Max",
+   "category": "Phones",
+   "units": "150.7M (Wikipedia (List of best-selling ",
+   "confidence": "B",
+   "url": null
+  },
+  {
+   "rank": 21,
+   "name": "Nokia 1200",
+   "category": "Phones",
+   "units": "150M (Omdia via Visual Capitalist, 2023)",
+   "confidence": "B",
+   "url": null
+  },
+  {
+   "rank": 22,
+   "name": "Nokia 5230",
+   "category": "Phones",
+   "units": "150M (Omdia via Visual Capitalist, 2023)",
+   "confidence": "B",
+   "url": null
+  },
+  {
+   "rank": 23,
+   "name": "PlayStation (PS1, SCPH-1000 through 9000)",
+   "category": "Game Consoles",
+   "units": "102M (Sony official PlayStation history ",
+   "confidence": "A",
+   "url": null
+  },
+  {
+   "rank": 24,
+   "name": "Nintendo Wii",
+   "category": "Game Consoles",
+   "units": "101.6M (Nintendo IR lifetime hardware, 2",
+   "confidence": "A",
+   "url": null
+  },
+  {
+   "rank": 25,
+   "name": "Google Chromecast 2nd gen (2015)",
+   "category": "Media Streamers",
+   "units": "100M (Google (official blog + hardware e",
+   "confidence": "A",
+   "url": null
+  },
+  {
+   "rank": 26,
+   "name": "Motorola RAZR V3",
+   "category": "Phones",
+   "units": "130M (Wikipedia (List of best-selling mo",
+   "confidence": "B",
+   "url": null
+  },
+  {
+   "rank": 27,
+   "name": "Nokia 3310 (3330)",
+   "category": "Phones",
+   "units": "126M (Wikipedia (List of best-selling mo",
+   "confidence": "B",
+   "url": null
+  },
+  {
+   "rank": 28,
+   "name": "PlayStation 3 (CECHA through CECH-4300)",
+   "category": "Game Consoles",
+   "units": "87M (Sony official PlayStation history p",
+   "confidence": "A",
+   "url": null
+  },
+  {
+   "rank": 29,
+   "name": "Xbox 360 (Xenon through Corona)",
+   "category": "Game Consoles",
+   "units": "84M (Microsoft E3 2014 announcement, 201",
+   "confidence": "A",
+   "url": null
+  },
+  {
+   "rank": 31,
+   "name": "Nintendo 3DS",
+   "category": "Game Consoles",
+   "units": "75.9M (Nintendo IR sales data, 2020-09)",
+   "confidence": "A",
+   "url": null
+  },
+  {
+   "rank": 32,
+   "name": "Raspberry Pi (all generations)",
+   "category": "PCs &amp; Single-Board",
+   "units": "75M (Raspberry Pi Holdings FY 2025 resul",
+   "confidence": "A",
+   "url": null
+  },
+  {
+   "rank": 33,
+   "name": "Nokia I-240G-A (Alcatel-Lucent GPON ONT)",
+   "category": "Networking Gear",
+   "units": "100M (Nokia (Feb 2021, via GlobeNewswire",
+   "confidence": "B",
+   "url": null
+  },
+  {
+   "rank": 34,
+   "name": "iPhone 12 / 12 mini / 12 Pro / 12 Pro Max",
+   "category": "Phones",
+   "units": "100M (Wikipedia (List of best-selling mo",
+   "confidence": "B",
+   "url": null
+  },
+  {
+   "rank": 35,
+   "name": "PlayStation 5 (CFI-1000 through CFI-2000)",
+   "category": "Game Consoles",
+   "units": "93.6M (Sony earnings disclosure (via Vid",
+   "confidence": "B",
+   "url": null
+  },
+  {
+   "rank": 36,
+   "name": "Family Computer / Nintendo Entertainment System (NES)",
+   "category": "Game Consoles",
+   "units": "61.9M (Nintendo IR sales data, 2016-03)",
+   "confidence": "A",
+   "url": null
+  },
+  {
+   "rank": 37,
+   "name": "Vizio TV line (2002\u2013present)",
+   "category": "TVs &amp; Displays",
+   "units": "82M (Vizio IPO coverage (Nasdaq, Mar 202",
+   "confidence": "B",
+   "url": null
+  },
+  {
+   "rank": 38,
+   "name": "Tamagotchi line (1996\u2013present)",
+   "category": "Other",
+   "units": "80M (Bandai licensing material (via Tota",
+   "confidence": "B",
+   "url": null
+  },
+  {
+   "rank": 39,
+   "name": "Super Famicom / Super Nintendo (SNES)",
+   "category": "Game Consoles",
+   "units": "49.1M (Nintendo IR sales data, 2016-03)",
+   "confidence": "A",
+   "url": null
+  },
+  {
+   "rank": 40,
+   "name": "Epson EcoTank line (2010\u2013present; e.g. ET-2850)",
+   "category": "Printers",
+   "units": "60M (Epson press release, 2021-11)",
+   "confidence": "B",
+   "url": null
+  },
+  {
+   "rank": 41,
+   "name": "iRobot home-robot line (2002\u2013present)",
+   "category": "Smart Home / IoT",
+   "units": "40M (iRobot company disclosure (via ZDNe",
+   "confidence": "A",
+   "url": null
+  },
+  {
+   "rank": 42,
+   "name": "Samsung Galaxy A12",
+   "category": "Phones",
+   "units": "51.8M (Omdia 4Q21 Smartphone Model Marke",
+   "confidence": "B",
+   "url": null
+  },
+  {
+   "rank": 43,
+   "name": "Nintendo 64",
+   "category": "Game Consoles",
+   "units": "32.9M (Nintendo IR sales data, 2016-03)",
+   "confidence": "A",
+   "url": null
+  },
+  {
+   "rank": 44,
+   "name": "Linksys WRT54G (all revisions, incl. WRT54GL)",
+   "category": "Networking Gear",
+   "units": "31M (Linksys Global Product Manager Vinc",
+   "confidence": "A",
+   "url": null
+  },
+  {
+   "rank": 45,
+   "name": "Sega Genesis / Mega Drive",
+   "category": "Game Consoles",
+   "units": "30.8M (Sega historical sales data, 2001)",
+   "confidence": "A",
+   "url": null
+  },
+  {
+   "rank": 46,
+   "name": "Samsung QLED TV line (2017\u2013present)",
+   "category": "TVs &amp; Displays",
+   "units": "40M (Samsung Newsroom, citing Omdia, 202",
+   "confidence": "B",
+   "url": null
+  },
+  {
+   "rank": 47,
+   "name": "Nintendo Switch 2",
+   "category": "Game Consoles",
+   "units": "23.7M (Nintendo FY2027 Q1 earnings, 2026",
+   "confidence": "A",
+   "url": null
+  },
+  {
+   "rank": 48,
+   "name": "Raspberry Pi 3 range (3B / 3A+ / 3B+)",
+   "category": "PCs &amp; Single-Board",
+   "units": "23M (Tom&#x27;s Hardware, citing CEO Ebe",
+   "confidence": "A",
+   "url": null
+  },
+  {
+   "rank": 49,
+   "name": "Hisense TV line (annual brand shipments)",
+   "category": "TVs &amp; Displays",
+   "units": "29.1M (Hisense company news (2024 global",
+   "confidence": "B",
+   "url": null
+  },
+  {
+   "rank": 50,
+   "name": "TCL TV line (incl. Roku TV models)",
+   "category": "TVs &amp; Displays",
+   "units": "29M (TCL Industries 2024 annual report (",
+   "confidence": "B",
+   "url": null
+  },
+  {
+   "rank": 51,
+   "name": "Nintendo GameCube",
+   "category": "Game Consoles",
+   "units": "21.7M (Nintendo IR sales data, 2016-03)",
+   "confidence": "A",
+   "url": null
+  },
+  {
+   "rank": 52,
+   "name": "Sonos connected-speaker line (Play:1 / One / Era)",
+   "category": "Smart Home / IoT",
+   "units": "19M (Sonos S-1 SEC filing (as of March 3",
+   "confidence": "A",
+   "url": null
+  },
+  {
+   "rank": 53,
+   "name": "ECOVACS DEEBOT line (2006\u2013present)",
+   "category": "Smart Home / IoT",
+   "units": "25M (ECOVACS company claim at launch eve",
+   "confidence": "B",
+   "url": null
+  },
+  {
+   "rank": 54,
+   "name": "iPhone SE (2nd generation)",
+   "category": "Phones",
+   "units": "24.2M (Wikipedia (List of best-selling m",
+   "confidence": "B",
+   "url": null
+  },
+  {
+   "rank": 55,
+   "name": "Xbox Series X / Series S",
+   "category": "Game Consoles",
+   "units": "35.2M (VGChartz estimate, 2026-07)",
+   "confidence": "C",
+   "url": null
+  },
+  {
+   "rank": 56,
+   "name": "Google Chromecast 1st gen (2013)",
+   "category": "Media Streamers",
+   "units": "17M (Google (I/O 2015 keynote, reported ",
+   "confidence": "A",
+   "url": null
+  },
+  {
+   "rank": 57,
+   "name": "Amazon eero (2nd gen, 2017)",
+   "category": "Networking Gear",
+   "units": "20M (eero CEO Nick Weaver, eero 7 launch",
+   "confidence": "B",
+   "url": null
+  },
+  {
+   "rank": 58,
+   "name": "Keurig brewer line (1998\u2013present)",
+   "category": "Other",
+   "units": "20M (Keurig sales history (Food Business",
+   "confidence": "B",
+   "url": null
+  },
+  {
+   "rank": 59,
+   "name": "Hatchimals line (2016\u2013present)",
+   "category": "Other",
+   "units": "14.2M (Spin Master press release (PR New",
+   "confidence": "A",
+   "url": null
+  },
+  {
+   "rank": 60,
+   "name": "Nintendo Wii U",
+   "category": "Game Consoles",
+   "units": "13.6M (Nintendo IR sales data, 2019-12)",
+   "confidence": "A",
+   "url": null
+  },
+  {
+   "rank": 61,
+   "name": "Canon SELPHY line (2004\u2013present)",
+   "category": "Printers",
+   "units": "17M (Canon 20th-anniversary announcement",
+   "confidence": "B",
+   "url": null
+  },
+  {
+   "rank": 62,
+   "name": "Samsung Galaxy S21 / S21+ / S21 Ultra",
+   "category": "Phones",
+   "units": "13.5M (Wikipedia (List of best-selling m",
+   "confidence": "B",
+   "url": null
+  },
+  {
+   "rank": 63,
+   "name": "Arris TG1682G / Xfinity XB3 (xFi Wireless Gateway)",
+   "category": "Networking Gear",
+   "units": "10M (Comcast via ibtimes.sg: &#x27;over ",
+   "confidence": "A",
+   "url": null
+  },
+  {
+   "rank": 64,
+   "name": "Arduino Uno (ATmega328P boards)",
+   "category": "PCs &amp; Single-Board",
+   "units": "10M (CNX Software reporting Arduino&#x27",
+   "confidence": "A",
+   "url": null
+  },
+  {
+   "rank": 65,
+   "name": "Samsung Galaxy S22 Ultra",
+   "category": "Phones",
+   "units": "10.9M (Wikipedia (List of best-selling m",
+   "confidence": "B",
+   "url": null
+  },
+  {
+   "rank": 66,
+   "name": "magicJack line (2008\u2013present)",
+   "category": "Other",
+   "units": "8M (magicJack company press release (Glo",
+   "confidence": "A",
+   "url": null
+  },
+  {
+   "rank": 67,
+   "name": "LG OLED TV line (2013\u2013present)",
+   "category": "TVs &amp; Displays",
+   "units": "10M (LG/Omdia milestone reported by Adva",
+   "confidence": "B",
+   "url": null
+  },
+  {
+   "rank": 68,
+   "name": "Sega Dreamcast",
+   "category": "Game Consoles",
+   "units": "9.1M (IT History Society / Sega-era repo",
+   "confidence": "B",
+   "url": null
+  },
+  {
+   "rank": 69,
+   "name": "Google Home Mini (2017)",
+   "category": "Smart Home / IoT",
+   "units": "6.4M (Google via Engadget, 2018-01-06)",
+   "confidence": "A",
+   "url": null
+  },
+  {
+   "rank": 70,
+   "name": "Tectoy Master System (Brazilian variants)",
+   "category": "Game Consoles",
+   "units": "8M (Tectoy reporting, 2015)",
+   "confidence": "B",
+   "url": null
+  },
+  {
+   "rank": 71,
+   "name": "SodaStream soda-maker line (1903\u2013present)",
+   "category": "Other",
+   "units": "8M (Company-derived sales history (Motle",
+   "confidence": "B",
+   "url": null
+  },
+  {
+   "rank": 72,
+   "name": "Super Nintendo Classic Edition",
+   "category": "Game Consoles",
+   "units": "5.3M (Nintendo IR sales data, 2019-03)",
+   "confidence": "A",
+   "url": null
+  },
+  {
+   "rank": 73,
+   "name": "PlayStation VR (2016)",
+   "category": "Game Consoles",
+   "units": "5M (Sony announcement (Jim Ryan, via Roa",
+   "confidence": "A",
+   "url": null
+  },
+  {
+   "rank": 74,
+   "name": "Ledger hardware-wallet line (2014\u2013present)",
+   "category": "Other",
+   "units": "6M (Ledger company disclosure (via TechC",
+   "confidence": "B",
+   "url": null
+  },
+  {
+   "rank": 75,
+   "name": "Chromebooks (global)",
+   "category": "PCs &amp; Single-Board",
+   "units": "5.8M (IDC via press reports, 2023)",
+   "confidence": "B",
+   "url": null
+  },
+  {
+   "rank": 76,
+   "name": "Raspberry Pi Pico",
+   "category": "PCs &amp; Single-Board",
+   "units": "4M (Tom&#x27;s Hardware (quoting Eben Up",
+   "confidence": "A",
+   "url": null
+  },
+  {
+   "rank": 77,
+   "name": "GoPro Hero 5 Black",
+   "category": "Cameras &amp; Drones",
+   "units": "4M (GoPro press release &#x27;HERO5 Blac",
+   "confidence": "A",
+   "url": null
+  },
+  {
+   "rank": 78,
+   "name": "Nintendo Classic Mini: NES",
+   "category": "Game Consoles",
+   "units": "3.6M (Nintendo IR sales data, 2019-03)",
+   "confidence": "A",
+   "url": null
+  },
+  {
+   "rank": 79,
+   "name": "Technics SL-1200 turntable line (1972\u2013present)",
+   "category": "Other",
+   "units": "3.5M (Panasonic/Technics 50th-anniversar",
+   "confidence": "A",
+   "url": null
+  },
+  {
+   "rank": 80,
+   "name": "Apple Pencil (1st generation, 2015)",
+   "category": "E-Readers &amp; Tablets",
+   "units": "4.5M (KGI/Ming-Chi Kuo via AppleInsider,",
+   "confidence": "B",
+   "url": null
+  },
+  {
+   "rank": 81,
+   "name": "Chipolo tracker line (2013\u2013present)",
+   "category": "Smart Home / IoT",
+   "units": "4.5M (Chipolo company disclosure (via Te",
+   "confidence": "B",
+   "url": null
+  },
+  {
+   "rank": 82,
+   "name": "Apple iPad 3rd generation (2012)",
+   "category": "E-Readers &amp; Tablets",
+   "units": "3M (Apple press release, 2012-03-19)",
+   "confidence": "A",
+   "url": null
+  },
+  {
+   "rank": 83,
+   "name": "Apple iPad 4th generation (2012)",
+   "category": "E-Readers &amp; Tablets",
+   "units": "3M (Apple press release, 2012-11-05)",
+   "confidence": "A",
+   "url": null
+  },
+  {
+   "rank": 84,
+   "name": "Parallax BASIC Stamp",
+   "category": "PCs &amp; Single-Board",
+   "units": "3M (Parallax (BASIC Stamp manual, 2nd ed",
+   "confidence": "A",
+   "url": null
+  },
+  {
+   "rank": 85,
+   "name": "Valve Steam Deck",
+   "category": "Game Consoles",
+   "units": "3.7M (IDC estimate (by end-2024; Valve h",
+   "confidence": "B",
+   "url": null
+  },
+  {
+   "rank": 86,
+   "name": "Tectoy Mega Drive (Brazilian variants)",
+   "category": "Game Consoles",
+   "units": "3M (Tectoy reporting, 2015)",
+   "confidence": "B",
+   "url": null
+  },
+  {
+   "rank": 87,
+   "name": "Ray-Ban Meta Smart Glasses",
+   "category": "Wearables",
+   "units": "2M (EssilorLuxottica (Q4 2024 earnings c",
+   "confidence": "A",
+   "url": null
+  },
+  {
+   "rank": 88,
+   "name": "Whisker Litter-Robot line (2000\u2013present)",
+   "category": "Smart Home / IoT",
+   "units": "2M (Whisker press release (Business Wire",
+   "confidence": "A",
+   "url": null
+  },
+  {
+   "rank": 89,
+   "name": "Wyze Cam v2 (2018)",
+   "category": "Smart Home / IoT",
+   "units": "1.5M (Wyze Labs via Pulse2 / GeekWire fu",
+   "confidence": "A",
+   "url": null
+  },
+  {
+   "rank": 90,
+   "name": "BBC micro:bit",
+   "category": "PCs &amp; Single-Board",
+   "units": "2M (Science Museum Group, 2026)",
+   "confidence": "B",
+   "url": null
+  },
+  {
+   "rank": 91,
+   "name": "Husqvarna Automower line (1995\u2013present)",
+   "category": "Smart Home / IoT",
+   "units": "2M (Husqvarna press coverage (Landscape ",
+   "confidence": "B",
+   "url": null
+  },
+  {
+   "rank": 92,
+   "name": "Meta Quest 3 / Quest 3S",
+   "category": "Game Consoles",
+   "units": "1.7M (industry reporting (over 1.7M), 20",
+   "confidence": "B",
+   "url": null
+  },
+  {
+   "rank": 93,
+   "name": "Sega Genesis Mini / Mega Drive Mini",
+   "category": "Game Consoles",
+   "units": "1.5M (Sega reporting (over 1.5M), 2023)",
+   "confidence": "B",
+   "url": null
+  },
+  {
+   "rank": 94,
+   "name": "reMarkable 2 (2020)",
+   "category": "E-Readers &amp; Tablets",
+   "units": "1M (reMarkable company announcement via ",
+   "confidence": "A",
+   "url": null
+  },
+  {
+   "rank": 95,
+   "name": "Xfinity xFi Pods (2nd gen)",
+   "category": "Networking Gear",
+   "units": "1M (Comcast 2021 WiFi Trends Report (via",
+   "confidence": "A",
+   "url": null
+  },
+  {
+   "rank": 96,
+   "name": "Flipper Zero (2020\u2013present)",
+   "category": "Other",
+   "units": "1M (Flipper Devices company statement (v",
+   "confidence": "A",
+   "url": null
+  },
+  {
+   "rank": 97,
+   "name": "Tractive GPS tracker line (2013\u2013present)",
+   "category": "Smart Home / IoT",
+   "units": "1M (Tractive company website (product pa",
+   "confidence": "A",
+   "url": null
+  },
+  {
+   "rank": 98,
+   "name": "Sky Q (2016)",
+   "category": "Media Streamers",
+   "units": "1M (Sky via AVForums/informitv, 2017-01/",
+   "confidence": "B",
+   "url": null
+  },
+  {
+   "rank": 99,
+   "name": "Nex Playground",
+   "category": "Game Consoles",
+   "units": "1M (Nex announcement, 2025)",
+   "confidence": "B",
+   "url": null
+  },
+  {
+   "rank": 100,
+   "name": "Ring Video Doorbell (2nd Gen, 2020)",
+   "category": "Smart Home / IoT",
+   "units": "359K (U.S. CPSC recall notice (Nov 2020)",
+   "confidence": "A",
+   "url": null
+  }
+ ]
+}
