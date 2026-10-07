@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self' data:; style-src 'self'; script-src 'self'; object-src 'none'; frame-src 'none'; base-uri 'self'; form-action 'none'">
+<meta name="referrer" content="no-referrer">
+<meta name="robots" content="noai, noimageai">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Xfinity XB3 (Arris TG1682G) — BareBoard — Free Hardware Education</title>
+<meta name="description" content="Xfinity XB3 gateway: specs, Puma 6 chipset, FCC ID, and controversies.">
+<meta name="theme-color" content="#fbfbfc">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%231d1d1f'/%3E%3Ctext x='32' y='45' font-family='system-ui,-apple-system,sans-serif' font-size='36' font-weight='700' fill='white' text-anchor='middle'%3EB%3C/text%3E%3C/svg%3E">
+<link rel="stylesheet" href="/style.css">
+</head>
+<body>
+<header class="site-nav">
+  <div class="nav-inner">
+    <nav aria-label="Primary">
+      <ul>
+        <li><a href="/" class="brand-word">BareBoard</a></li>
+        <li><a href="/devices/">Devices</a></li>
+        <li class="has-children">
+          <a href="/about.html" aria-haspopup="true" aria-expanded="false">About</a>
+          <div class="col-panel">
+            <div class="dropdown-inner">
+              <ul class="dropdown-col">
+                <li><a href="/about.html#how-we-work">How we work</a></li>
+                <li><a href="/about.html#what-this-is-not">What this is not</a></li>
+                <li><a href="/datasheets.html">Datasheet Index</a></li>
+                <li><a href="/notes/">Bench Notes</a></li>
+              </ul>
+            </div>
+          </div></li>
+        <li class="has-children">
+          <a href="/hot-100.html" aria-haspopup="true" aria-expanded="false">Hot 100</a>
+          <div class="col-panel">
+            <div class="dropdown-inner">
+              <ul class="dropdown-col">
+                <li><a href="/hot-100.html">Cameras &amp; Drones</a></li>
+                <li><a href="/hot-100.html">E-Readers &amp; Tablets</a></li>
+                <li><a href="/hot-100.html">Game Consoles</a></li>
+                <li><a href="/hot-100.html">Media Streamers</a></li>
+                <li><a href="/hot-100.html">Networking Gear</a></li>
+                <li class="dropdown-sub"><a href="/autopsy/xfinity-xb3/">Xfinity XB3 (Arris TG1682G)</a></li>
+                <li><a href="/hot-100.html">Other</a></li>
+                <li><a href="/hot-100.html">PCs &amp; Single-Board</a></li>
+                <li><a href="/hot-100.html">Phones</a></li>
+                <li><a href="/hot-100.html">Printers</a></li>
+                <li><a href="/hot-100.html">Smart Home / IoT</a></li>
+                <li><a href="/hot-100.html">TVs &amp; Displays</a></li>
+                <li><a href="/hot-100.html">Wearables</a></li>
+              </ul>
+            </div>
+          </div></li>
+<li class="has-children">
+          <a href="/most-wanted.html" aria-haspopup="true" aria-expanded="false">Most Wanted</a>
+          <div class="col-panel">
+            <div class="dropdown-inner">
+              <ul class="dropdown-col">
+                <li><a href="/most-wanted.html#board">The board</a></li>
+              </ul>
+            </div>
+          </div></li>
+        <li class="has-children">
+          <a href="/support.html" aria-haspopup="true" aria-expanded="false">Support</a>
+          <div class="col-panel">
+            <div class="dropdown-inner">
+              <ul class="dropdown-col">
+                <li><a href="/support.html#mission">Mission</a></li>
+                <li><a href="/support.html#chip-in">Donate</a></li>
+                <li><a href="/support.html#allies">Allies</a></li>
+              </ul>
+            </div>
+          </div></li>
+        <li class="has-children">
+          <a href="/watchmen.html" aria-haspopup="true" aria-expanded="false">Watchmen</a>
+          <div class="col-panel">
+            <div class="dropdown-inner">
+              <ul class="dropdown-col">
+                <li><a href="/watchmen.html#who-watches">Who watches</a></li>
+                <li><a href="/watchmen.html#methodology">Methodology</a></li>
+                <li><a href="/watchmen.html#tools">The bench</a></li>
+                <li><a href="/watchmen.html#corrections">Corrections</a></li>
+              </ul>
+            </div>
+          </div></li>
+        <li class="nav-search-item">
+          <button type="button" class="search-toggle" aria-label="Search BareBoard" aria-expanded="false" aria-controls="search-panel"><svg width="15" height="15" viewBox="0 0 16 16" fill="none" aria-hidden="true"><circle cx="7" cy="7" r="5.2" stroke="currentColor" stroke-width="1.7"/><line x1="11.2" y1="11.2" x2="14.6" y2="14.6" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/></svg></button>
+        </li>
+      </ul>
+    </nav>
+  </div>
+  <div class="search-panel" id="search-panel" hidden>
+    <div class="search-inner">
+      <svg width="15" height="15" viewBox="0 0 16 16" fill="none" aria-hidden="true" class="search-icon"><circle cx="7" cy="7" r="5.2" stroke="currentColor" stroke-width="1.7"/><line x1="11.2" y1="11.2" x2="14.6" y2="14.6" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/></svg>
+      <input type="search" id="site-search" placeholder="Search BareBoard" aria-label="Search BareBoard" autocomplete="off" spellcheck="false">
+      <button type="button" class="search-close" aria-label="Close search">&times;</button>
+    </div>
+    <ul class="search-results" id="search-results" aria-live="polite"></ul>
+  </div>
+</header>
+
+<main>
+  <h1>Xfinity XB3 (Arris TG1682G)</h1>
+  <p class="lede">Comcast&rsquo;s workhorse DOCSIS 3.0 gateway &mdash; a 24&times;8 cable modem, dual-band Wi-Fi router, and telephone adapter in one rented box. Powered by Intel&rsquo;s controversial Puma 6 chipset.</p>
+
+  <section>
+    <h2 id="fcc">FCC ID</h2>
+    <p><strong>FCC ID: <a href="https://fccid.io/UIDTG1682">UIDTG1682</a></strong> (Grantee: UID = Arris Group). This is the single most useful public document set for this device.</p>
+    <ul>
+      <li><strong>FCC approval date:</strong> May 19, 2014</li>
+      <li><strong>Available:</strong> Internal photos, external photos, test reports, user manual</li>
+      <li><strong>Withheld:</strong> Schematics, block diagrams, and theory of operation were filed under confidentiality request</li>
+    </ul>
+  </section>
+
+  <p><strong>BareBoard teardown:</strong> <a href="/autopsy/xfinity-xb3/">Full autopsy report</a> &mdash; chip-by-chip identification, board mapping, and UART analysis.</p>
+
+  <section>
+    <h2 id="fcc-revealed">What the FCC filing revealed</h2>
+    <p>The FCC filing for this device includes the documents manufacturers are required to submit: external photos, internal photos, test setup photos, RF test reports, and the user manual. These are public record at <a href="https://fccid.io/">fccid.io</a>.</p>
+    <p>What you can typically find:</p>
+    <ul>
+      <li><strong>Internal photos</strong> &mdash; board layout, chip placement, shielding, antenna design</li>
+      <li><strong>Block diagrams</strong> &mdash; sometimes included, showing the RF chain architecture</li>
+      <li><strong>Test reports</strong> &mdash; conducted and radiated emissions data, which can reveal operating frequencies and power levels</li>
+      <li><strong>Label placement</strong> &mdash; where the FCC ID lives on the device</li>
+    </ul>
+    <p>What the FCC filing does <em>not</em> include: schematics (usually withheld under confidentiality requests), firmware, bill of materials, or debug interface documentation.</p>
+  </section>
+
+  <section>
+    <h2 id="we-reveal">What we reveal</h2>
+    <p>The FCC tells you what a device emits. We tell you what&rsquo;s inside and how it works.</p>
+    <ul>
+      <li><strong>Chip-level identification</strong> &mdash; every major IC named, with datasheet links where public documentation exists</li>
+      <li><strong>Board mapping</strong> &mdash; what connects to what, which test pads matter, where the debug interfaces hide</li>
+      <li><strong>What the manufacturer won&rsquo;t tell you</strong> &mdash; undocumented features, hidden radios, silent telemetry, repair blockers</li>
+    </ul>
+    <p>Check our <a href="/autopsy/">teardowns</a> for full board-level analysis.</p>
+  </section>
+
+  <section>
+    <h2 id="specs">Specifications</h2>
+    <ul>
+      <li><strong>SoC:</strong> Intel DHCE2652 (Puma 6) &mdash; dual-core 1.2 GHz x86-64 + ARM Cortex-A9</li>
+      <li><strong>RAM:</strong> 512 MB (2&times; Samsung K4B2G1646B LPDDR3)</li>
+      <li><strong>Flash:</strong> 128 MB (Spansion S34ML01G200TFI00)</li>
+      <li><strong>DOCSIS:</strong> 3.0, 24 downstream &times; 8 upstream channels</li>
+      <li><strong>Wi-Fi:</strong> 2.4 GHz (Qualcomm Atheros AR9381) + 5 GHz (Qualcomm Atheros QCA9880), 802.11ac</li>
+      <li><strong>Ethernet:</strong> 4&times; Gigabit (Broadcom BCM53124S switch)</li>
+      <li><strong>Voice:</strong> 2&times; telephone ports (DSP Group DCX81 DECT/VoIP SoC)</li>
+      <li><strong>USB:</strong> 2&times; USB 2.0 ports</li>
+      <li><strong>Power:</strong> TI TPS54328 buck regulator</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2 id="controversies">Controversies &amp; Legal</h2>
+
+    <h3>The Puma 6 latency defect</h3>
+    <p>The Intel Puma 6 chipset at the heart of the XB3 has a documented hardware flaw: under certain traffic patterns (bursts of small TCP/UDP packets), an internal lookup table fills up, causing severe latency spikes and jitter. This ruins online gaming, VoIP calls, and other real-time applications.</p>
+    <p>In 2017, a class action lawsuit (<em>Reyna v. ARRIS International plc</em>, Case No. 3:17-cv-01834, N.D. Cal.) was filed over the Arris SURFboard SB6190 &mdash; a retail modem using the same Puma 6 chip. The suit alleged Arris knew about the defect but sold the modem as &ldquo;the fastest and most reliable&rdquo; anyway. Intel released firmware mitigations, but the underlying hardware limitation remained.</p>
+    <p><strong>Note:</strong> The class action specifically concerned the SB6190 retail modem, not the TG1682G gateway. However, the Puma 6 latency flaw is a property of the chipset itself and affects all devices built on it, including the XB3.</p>
+    <p>Sources: <a href="https://www.theregister.com/on-prem/2017/04/11/intels-buggy-puma-6-chipset-earns-arris-a-gigabit-modem-lawsuit/662674">The Register</a>, <a href="https://www.classaction.org/media/reyna-v-arris-international-plc.pdf">Class action complaint (PDF)</a></p>
+
+    <h3>Comcast rental fees</h3>
+    <p>The XB3 is a rented gateway &mdash; Comcast charges subscribers a monthly fee (historically around $14&ndash;15/month) for the device. Critics have long argued that the cumulative rental cost far exceeds the retail price of an equivalent modem, and that Comcast has made it difficult for customers to use their own equipment for voice service (which requires the telephony features of gateways like the XB3). <em>Specific fee amounts and policies change over time; check Comcast&rsquo;s current terms.</em></p>
+
+    <h3>Default credentials</h3>
+    <p>The TG1682G shipped with well-known default admin credentials (admin/password), documented in the FCC filing and widely published. While standard for ISP equipment of this era, default credentials on millions of deployed gateways represent a significant attack surface.</p>
+  </section>
+
+  <section>
+    <h2 id="reading">Further Reading</h2>
+    <ul>
+      <li><a href="/autopsy/xfinity-xb3/">BareBoard XB3 autopsy report</a> &mdash; full teardown</li>
+      <li><a href="https://techinfodepot.shoutwiki.com/wiki/Arris_TG1682G">TechInfoDepot &mdash; Arris TG1682G</a> &mdash; hardware specs</li>
+      <li><a href="https://fccid.io/UIDTG1682">FCC filing UIDTG1682</a> &mdash; internal photos, test reports</li>
+      <li><a href="/datasheets.html">BareBoard datasheet index</a> &mdash; Puma 6, AR9381, QCA9880, BCM53124S</li>
+    </ul>
+  </section>
+  <footer>
+    <a href="/tarpit/" class="hp-link" aria-hidden="true" tabindex="-1">device index</a>
+    <p>BareBoard &mdash; a free educational resource. Text and findings published under open terms; nothing here is for sale.</p>
+        <nav>
+      <a href="/">Home</a> &middot; <a href="/about.html">About</a> &middot; <a href="/colophon.html">Colophon</a>
+    </nav>
+
+    <div class="legal-framework">
+      <p><strong>BareBoard Legal Framework &amp; Declarations</strong></p>
+      <ul>
+      <li><strong>No AI training:</strong> All text, findings, and original photography on this site are copyrighted. Automated scraping for AI model training is prohibited. Crawlers that ignore robots.txt are trespassing.</li>
+        <li><strong>Educational nature:</strong> BareBoard operates exclusively as a non-commercial, open educational resource. All material is compiled for academic evaluation, hardware preservation, and technical literacy under 17 U.S.C. &sect; 107 (fair use).</li>
+        <li><strong>Zero-leak / no-binary clause:</strong> This site does not host, distribute, or mirror proprietary firmware binaries, encrypted operating system keys, or weaponizable exploits. Documentation covers only the public, physical realities of circuit hardware.</li>
+        <li><strong>Property verification:</strong> Every hardware autopsy is performed on personally owned, legally acquired equipment. No rented or third-party infrastructure is used.</li>
+        <li><strong>Public source sourcing:</strong> Comparative and regulatory data is aggregated from official public filings, including the U.S. Federal Communications Commission equipment authorization database.</li>
+      </ul>
+      <p class="legal-note"><em>BareBoard &mdash; open hardware allies, documented in alignment with the Open Source Hardware Association framework. Text and original photography published under open terms; nothing here is for sale.</em></p>
+    </div>
+  </footer>
+</main>
+
+<script src="/nav.js" defer></script>
+<script src="/search.js" defer></script>
+</body>
+</html>
