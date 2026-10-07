@@ -1,4 +1,4 @@
-/* BareBoard v2 — tasteful, quiet, confident. No frameworks, no build step. */
+/* BareBoard v2 â tasteful, quiet, confident. No frameworks, no build step. */
 
 :root {
   --bg: #fbfbfc;
@@ -35,7 +35,7 @@ a { color: var(--accent); text-decoration: none; }
 a:hover { text-decoration: underline; text-underline-offset: 3px; }
 a:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; border-radius: 4px; }
 
-/* ---------- navigation — Apple-style dropdown panels ---------- */
+/* ---------- navigation â Apple-style dropdown panels ---------- */
 
 .site-nav {
   position: sticky;
@@ -523,7 +523,7 @@ body { animation: page-in 0.35s ease; }
 @media (max-width: 560px) {
   main { padding: 2.5rem 1.25rem 4rem; }
   .nav-inner { padding: 0.55rem 1rem; justify-content: flex-start; }
-  /* single scrollable row instead of wrapping — keeps the bar slim */
+  /* single scrollable row instead of wrapping â keeps the bar slim */
   .site-nav nav > ul {
     flex-wrap: nowrap;
     justify-content: flex-start;
@@ -692,4 +692,22 @@ p.note { font-size: 0.95rem; color: var(--secondary); border-left: 3px solid var
   line-height: 1.5;
   text-align: left;
   padding: 0 0.5rem;
+}
+
+/* ---------- donate buttons (CSP-safe: no inline styles) ---------- */
+.donate-btn {
+  display: inline-block;
+  background: #0070ba;
+  color: #fff !important;
+  font-weight: 600;
+  padding: 12px 28px;
+  border-radius: 8px;
+  text-decoration: none;
+}
+.donate-btn:hover {
+  text-decoration: none;
+  opacity: 0.92;
+}
+.donate-btn.kofi {
+  background: #72a4f2;
 }
