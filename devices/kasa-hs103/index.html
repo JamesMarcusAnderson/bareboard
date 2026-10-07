@@ -107,6 +107,9 @@
   <aside class="legal-notice" style="background:#fff8e1;border:1px solid #e6d690;border-radius:8px;padding:1em 1.2em;margin:0 0 1.5em;font-size:0.88rem;color:#5a4e1a;">
     <strong>Educational purpose.</strong> Everything on this page is published for education and research. Teardowns document hardware the author legally owns. Datasheets link to public sources. FCC filings are public record. Lawsuits and controversies cite public reporting. Nothing here is stolen, leaked, or confidential. If you use this information, you&rsquo;re responsible for complying with the laws where you live. This isn&rsquo;t legal advice &mdash; it&rsquo;s a workbench.
   </aside>
+  <aside class="purpose-note" style="background:#eef6ee;border:1px solid #b9d8b9;border-radius:8px;padding:1em 1.2em;margin:0 0 1.5em;font-size:0.92rem;color:#1e4620;">
+    <strong>Your device, your rules.</strong> You bought it &mdash; you have the right to update its firmware, patch its security issues, and remove software you don&rsquo;t want on it. Every method on this page is non-destructive: it uses the device&rsquo;s existing ports, buttons, or software features. Nothing here requires breaking the enclosure.
+  </aside>
   <h1>TP-Link Kasa HS103</h1>
   <p class="lede">TP-Link&rsquo;s mini smart plug &mdash; 15 A switching in a package barely larger than the outlet it occupies. Inside: a Realtek RTL8710 running the whole show, and one of the more repairable plug designs in its class.</p>
 
@@ -161,18 +164,20 @@
 
   <section>
     <h2 id="entry">Simple Entry Points</h2>
-    <h3>RTL8710 serial and flash</h3>
-    <p><strong>You need:</strong> A 3.3 V USB-to-serial adapter (about $3). <strong>Mains-voltage warning:</strong> this device connects directly to wall power. Do all low-voltage probing with the plug connected only to a bench supply or with mains physically disconnected and verified.</p>
+    <h3>Control it locally with software (no tools needed)</h3>
+    <p><strong>What do I need?</strong> A computer on the same Wi-Fi network. That&rsquo;s it.</p>
     <ol>
-      <li>With mains disconnected, open the case via the gasket seam and locate the digital mini-PCB.</li>
-      <li>The RTL8710 exposes UART TX/RX; Realtek&rsquo;s Ameba SDK documents the serial boot protocol for this family.</li>
-      <li>Because the RTL8710 integrates its flash, firmware is read and written through the chip&rsquo;s own serial bootloader rather than a separate flash chip.</li>
+      <li>The HS103 speaks a documented local protocol. The open-source <em>python-kasa</em> library talks to it directly &mdash; no cloud account required.</li>
+      <li>This lets you update settings, monitor the plug, and verify what it&rsquo;s doing on your network, all without opening anything.</li>
     </ol>
-<pre class="term" style="background:#1d1d1f;color:#e8e8e8;padding:1em;border-radius:8px;overflow-x:auto;"><code>$ # Realtek Ameba-style serial upload (chip-family documented flow)
-$ screen /dev/ttyUSB0 115200
-# (bootloader banner appears on reset)</code></pre>
-    <p><em>Work on mains-connected devices demands proper isolation and safety practice; if you are unsure, do not open it while it can be plugged in.</em></p>
-  </section>
+<pre class="term" style="background:#1d1d1f;color:#e8e8e8;padding:1em;border-radius:8px;overflow-x:auto;"><code>$ pip install python-kasa
+$ kasa --host 192.168.1.60 state
+== Device state ==
+Is on: True
+Signal: -62 dBm</code></pre>
+    <h3>For advanced users: the serial interface</h3>
+    <p>The Realtek RTL8710 exposes a UART for its serial bootloader (documented in Realtek&rsquo;s Ameba SDK). Reaching it means opening the case &mdash; the teardown notes above describe the process. <strong>Mains-voltage warning:</strong> this device connects directly to wall power. Only attempt hardware access with mains physically disconnected and verified, or don&rsquo;t attempt it at all.</p>
+    <p><em>If you are unsure about mains safety, stick to the software method &mdash; it covers everything most owners need.</em></p>
 
   <section>
     <h2 id="reading">Further Reading</h2>
