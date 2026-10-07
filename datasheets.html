@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
-<meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self' data:; style-src 'self'; script-src 'self'; object-src 'none'; frame-src 'none'; base-uri 'self'; form-action 'none'">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self' data: upload.wikimedia.org thumb.wikimedia.org; style-src 'self'; script-src 'self'; object-src 'none'; frame-src 'none'; base-uri 'self'; form-action 'none'">
 <meta name="referrer" content="no-referrer">
 <meta name="robots" content="noai, noimageai">
 <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -106,8 +106,29 @@
   <p class="lede">Every datasheet, product page, and technical reference cited across BareBoard teardowns &mdash; in alphabetical order. When a manufacturer won&rsquo;t publish a datasheet, we link the closest public reference and say so.</p>
   <section id="full-index">
     <h2 id="all-datasheets" style="margin-top:2.5em;">Complete datasheet index (101)</h2>
-    <p>Every public manufacturer datasheet we've verified. Organized by category.</p>
-  <section id="microcontrollers">
+    <p class="ds-lede">A datasheet is the manufacturer's own technical reference for a component: pinouts, electrical limits, timing diagrams, and register maps. Reading them is the single most useful skill in hardware work. This index collects every public datasheet referenced across BareBoard's teardowns and guides — each link verified to point at the manufacturer's document (or a reputable distributor mirror where the manufacturer offers no direct link).</p>
+    <figure class="ds-hero">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/3/33/Espressif_ESP-WROOM-32_Wi-Fi_%26_Bluetooth_Module.jpg" alt="Espressif ESP-WROOM-32 Wi-Fi and Bluetooth module, a common subject of BareBoard teardowns" loading="lazy">
+      <figcaption>Espressif ESP-WROOM-32 Wi-Fi + Bluetooth module. Photo: Brian Krent, <a href="https://commons.wikimedia.org/wiki/File:Espressif_ESP-WROOM-32_Wi-Fi_%26_Bluetooth_Module.jpg" target="_blank" rel="noopener">Wikimedia Commons</a> (CC BY-SA 4.0).</figcaption>
+    </figure>
+    <div class="ds-photo-strip">
+      <figure>
+        <img src="https://thumb.wikimedia.org/wikipedia/commons/thumb/1/10/Core_Learning_Board_module_Arduino_STM32_F103_C8T6.jpg/1280px-Core_Learning_Board_module_Arduino_STM32_F103_C8T6.jpg" alt="STM32F103C8 &quot;Blue Pill&quot; development board" loading="lazy">
+        <figcaption>STM32F103C8 "Blue Pill" — photo: Popolon, Wikimedia Commons (CC BY-SA 4.0)</figcaption>
+      </figure>
+      <figure>
+        <img src="https://thumb.wikimedia.org/wikipedia/commons/thumb/2/2f/Arduino_Uno_Rev3_with_Atmega328P.jpg/1280px-Arduino_Uno_Rev3_with_Atmega328P.jpg" alt="Arduino Uno Rev3 with ATmega328P microcontroller" loading="lazy">
+        <figcaption>Arduino Uno Rev3 (ATmega328P) — photo: HonCode, Wikimedia Commons (CC0)</figcaption>
+      </figure>
+    </div>
+  <div class="ds-filters">
+      <input type="search" id="ds-search" placeholder='Search 101 datasheets — try "ESP32", "I2C", "STMicro", "regulator"…'
+             aria-label="Search datasheets by name, manufacturer, or description" autocomplete="off">
+      <div class="ds-cat-filter" id="ds-cat-filter" role="group" aria-label="Filter by category"></div>
+      <p class="ds-count" id="ds-count" aria-live="polite"></p>
+      <p class="ds-no-results" id="ds-no-results" hidden>No datasheets match your search. Try a part number, manufacturer, or function (for example, "ESP32", "Microchip", or "regulator").</p>
+    </div>
+    <section id="microcontrollers">
     <h2>Microcontrollers (16)</h2>
     <table class="datasheet-table">
       <thead><tr><th>Component</th><th>Manufacturer</th><th>Description</th></tr></thead>
@@ -956,6 +977,7 @@
 </main>
 
 <script src="/nav.js" defer></script>
+<script src="/datasheet-index.js" defer></script>
 <script src="/search.js" defer></script>
 </body>
 </html>
