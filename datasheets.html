@@ -95,619 +95,231 @@
 </header>
 
 <main>
-  <aside class="legal-notice" style="background:#fff8e1;border:1px solid #e6d690;border-radius:8px;padding:1em 1.2em;margin:0 0 1.5em;font-size:0.88rem;color:#5a4e1a;">
-    <strong>Educational purpose.</strong> Everything on this page is published for education and research. Teardowns document hardware the author legally owns. Datasheets link to public sources. FCC filings are public record. Lawsuits and controversies cite public reporting. Nothing here is stolen, leaked, or confidential. If you use this information, you&rsquo;re responsible for complying with the laws where you live. This isn&rsquo;t legal advice &mdash; it&rsquo;s a workbench.
-  </aside>
+<main>
   <h1>Datasheet Index</h1>
-  <p class="lede">Every datasheet, product page, and technical reference cited across BareBoard teardowns &mdash; in alphabetical order. When a manufacturer won&rsquo;t publish a datasheet, we link the closest public reference and say so.</p>
-  <p class="alpha-jump"><a href="#A">A</a> &middot; <a href="#B">B</a> &middot; <a href="#D">D</a> &middot; <a href="#I">I</a> &middot; <a href="#J">J</a> &middot; <a href="#K">K</a> &middot; <a href="#Q">Q</a> &middot; <a href="#T">T</a></p>
-<h3 id="A">A</h3>
-<ul class="ds-list">
-<li>
-<strong>AR9381-AL1A</strong> &mdash; Qualcomm Atheros<br>
-<span class="ds-func">2.4 GHz Wi-Fi radio (802.11b/g/n)</span><br>
-<span class="ds-links"><a href="https://boxmatrix.info/wiki/Property:AR9381-AL1A">BoxMatrix — AR9381-AL1A</a> &middot; <a href="https://www.veswin.com/product-AR9381-AL1A.html">Package specs</a></span><br>
-<span class="ds-device">Found in: <a href="/autopsy/xfinity-xb3/">Xfinity XB3 (Arris TG1682G)</a></span>
-</li>
-</ul>
-<h3 id="B">B</h3>
-<ul class="ds-list">
-<li>
-<strong>BCM2835</strong> &mdash; Broadcom<br>
-<span class="ds-func">SoC — powers Raspberry Pi 1, Zero, Zero W (ARM11 + VideoCore IV)</span><br>
-<span class="ds-links"><a href="https://web.archive.org/web/20211017004822/https://datasheets.raspberrypi.com/bcm2835/bcm2835-peripherals.pdf">Archive.org copy (PDF, ARM Peripherals)</a></span><br>
-<span class="ds-device">Found in: Raspberry Pi 1 / Zero / Zero W</span>
-</li>
-<li>
-<strong>BCM2836</strong> &mdash; Broadcom<br>
-<span class="ds-func">SoC — powers Raspberry Pi 2 (quad-core Cortex-A7). No public datasheet; register-compatible with BCM2835 peripherals.</span><br>
-<span class="ds-links"><em>No public datasheet released — use BCM2835 peripherals doc above</em></span><br>
-<span class="ds-device">Found in: Raspberry Pi 2</span>
-</li>
-<li>
-<strong>BCM2837</strong> &mdash; Broadcom<br>
-<span class="ds-func">SoC — powers Raspberry Pi 3, 3B+, Zero 2W (quad-core Cortex-A53). No public datasheet.</span><br>
-<span class="ds-links"><em>No public datasheet released</em></span><br>
-<span class="ds-device">Found in: Raspberry Pi 3 / 3B+ / Zero 2W</span>
-</li>
-<li>
-<strong>BCM53124S</strong> &mdash; Broadcom<br>
-<span class="ds-func">5-port gigabit Ethernet switch</span><br>
-<span class="ds-links"><a href="https://www.broadcom.com/products/ethernet-connectivity/switching/strataxgs/bcm53124">Broadcom product archive</a> &middot; <a href="https://web.archive.org/web/*/https://www.broadcom.com/products/ethernet-connectivity/switching/strataxgs/bcm53124">Archive.org copy</a></span><br>
-<span class="ds-device">Found in: <a href="/autopsy/xfinity-xb3/">Xfinity XB3 (Arris TG1682G)</a></span>
-</li>
-</ul>
-<h3 id="D">D</h3>
-<ul class="ds-list">
-<li>
-<strong>DCX81</strong> &mdash; DSP Group (now Synaptics)<br>
-<span class="ds-func">DECT/VoIP processor</span><br>
-<span class="ds-links"><a href="https://web.archive.org/web/2019*/http://www.dspg.com/products/home-gateway/dcx81/">Archive.org product brief</a> &middot; <a href="https://techinfodepot.shoutwiki.com/wiki/Arris_TG1682G">TechInfoDepot markings</a></span><br>
-<span class="ds-device">Found in: <a href="/autopsy/xfinity-xb3/">Xfinity XB3 (Arris TG1682G)</a></span>
-</li>
-<li>
-<strong>DHCE2652 (Puma 6)</strong> &mdash; Intel<br>
-<span class="ds-func">DOCSIS 3.0 gateway SoC — dual-core Atom + ARM Cortex-A9</span><br>
-<span class="ds-links"><a href="https://www.intel.com/content/www/us/en/content-details/707080/intel-puma-6-family-intel-atom-processors-ce5300-intel-chipsets-x99-c612-4732-mdds.html">Intel MDDS (public)</a> &middot; <a href="https://deviwiki.com/wiki/Intel/Intel_Puma">DevIWiki — Intel Puma</a> &middot; <a href="https://boxmatrix.info/wiki/Property:Puma6">BoxMatrix — Puma 6</a> &middot; <a href="https://happytrees.org/chips/Intel_-_DHCE2652">CPU Grave Yard — DHCE2652</a></span><br>
-<span class="ds-device">Found in: <a href="/autopsy/xfinity-xb3/">Xfinity XB3 (Arris TG1682G)</a></span>
-</li>
-</ul>
-<h3 id="I">I</h3>
-<ul class="ds-list">
-<li>
-<strong>IEEE 802.3</strong> &mdash; IEEE<br>
-<span class="ds-func">Ethernet physical layer — transformer isolation requirements</span><br>
-<span class="ds-links"><a href="https://standards.ieee.org/ieee/802.3/7071/">IEEE 802.3 standard</a></span><br>
-<span class="ds-device">Found in: <a href="/autopsy/xfinity-xb3/">Xfinity XB3 (Arris TG1682G)</a></span>
-</li>
-</ul>
-<h3 id="J">J</h3>
-<ul class="ds-list">
-<li>
-<strong>JESD84-B51</strong> &mdash; JEDEC<br>
-<span class="ds-func">eMMC 5.1 standard</span><br>
-<span class="ds-links"><a href="https://www.jedec.org/standards-documents/docs/jesd84-b51">JEDEC JESD84-B51</a></span><br>
-<span class="ds-device">Found in: <a href="/autopsy/xfinity-xb3/">Xfinity XB3 (Arris TG1682G)</a></span>
-</li>
-</ul>
-<h3 id="K">K</h3>
-<ul class="ds-list">
-<li>
-<strong>K4B2G1646B</strong> &mdash; Samsung<br>
-<span class="ds-func">LPDDR3 DRAM</span><br>
-<span class="ds-links"><a href="https://www.samsung.com/semiconductor/dram/lpddr3/">Samsung LPDDR3 family</a> &middot; <a href="https://web.archive.org/web/2018*/https://www.samsung.com/us/business/oem-solutions/pdfs/K4B2G1646B-HCH9.pdf">Archive.org datasheet copy</a></span><br>
-<span class="ds-device">Found in: <a href="/autopsy/xfinity-xb3/">Xfinity XB3 (Arris TG1682G)</a></span>
-</li>
-</ul>
-<h3 id="Q">Q</h3>
-<ul class="ds-list">
-<li>
-<strong>QCA9880</strong> &mdash; Qualcomm Atheros<br>
-<span class="ds-func">5 GHz Wi-Fi radio (802.11a/n/ac, 3×3 MIMO)</span><br>
-<span class="ds-links"><a href="https://wireless.kernel.org/en/users/Drivers/ath10k">Linux ath10k driver docs</a> &middot; <a href="https://fccid.io/PPD-AR5BHB116">FCC reference module filing</a></span><br>
-<span class="ds-device">Found in: <a href="/autopsy/xfinity-xb3/">Xfinity XB3 (Arris TG1682G)</a></span>
-</li>
-</ul>
-<h3 id="T">T</h3>
-<ul class="ds-list">
-<li>
-<strong>TPS54328</strong> &mdash; Texas Instruments<br>
-<span class="ds-func">Step-down (buck) voltage regulator</span><br>
-<span class="ds-links"><a href="https://www.ti.com/product/TPS54328">TI product page</a> &middot; <a href="https://www.ti.com/lit/ds/symlink/tps54328.pdf">Datasheet (PDF)</a></span><br>
-<span class="ds-device">Found in: <a href="/autopsy/xfinity-xb3/">Xfinity XB3 (Arris TG1682G)</a></span>
-</li>
-</ul>
-<h2 id="hacker-components" style="margin-top:2.5em;">Common hacker components</h2>
-<p class="lede">The parts that show up on every workbench &mdash; direct datasheet and product-page links for the chips hardware hackers actually encounter. Where no stable manufacturer page exists, we say so instead of linking a dead end.</p>
-<p class="alpha-jump"><a href="#hc-A">A</a> &middot; <a href="#hc-B">B</a> &middot; <a href="#hc-C">C</a> &middot; <a href="#hc-D">D</a> &middot; <a href="#hc-E">E</a> &middot; <a href="#hc-F">F</a> &middot; <a href="#hc-H">H</a> &middot; <a href="#hc-L">L</a> &middot; <a href="#hc-M">M</a> &middot; <a href="#hc-N">N</a> &middot; <a href="#hc-P">P</a> &middot; <a href="#hc-R">R</a> &middot; <a href="#hc-S">S</a> &middot; <a href="#hc-T">T</a> &middot; <a href="#hc-W">W</a> &middot; <a href="#hc-num">0–9</a></p>
-<h3 id="hc-A">A</h3>
-<ul class="ds-list">
-<li>
-<strong>A4988</strong> &mdash; Allegro MicroSystems<br>
-<span class="ds-func">DMOS stepper motor driver (the classic 3D-printer driver)</span><br>
-<span class="ds-links"><a href="https://www.allegromicro.com/">Allegro MicroSystems — search A4988</a></span><br>
-</li>
-<li>
-<strong>AMS1117</strong> &mdash; Advanced Monolithic Systems<br>
-<span class="ds-func">1 A low-dropout linear regulator (the ubiquitous cheap LDO)</span><br>
-<span class="ds-links"><a href="https://web.archive.org/web/20201219042429/http://www.advanced-monolithic.com/pdf/ds1117.pdf">Archive.org copy (PDF)</a></span><br>
-</li>
-<li>
-<strong>ATmega2560</strong> &mdash; Microchip<br>
-<span class="ds-func">8-bit AVR microcontroller (Arduino Mega)</span><br>
-<span class="ds-links"><a href="https://www.microchip.com/en-us/product/ATMEGA2560">Microchip product page</a></span><br>
-</li>
-<li>
-<strong>ATmega328P</strong> &mdash; Microchip<br>
-<span class="ds-func">8-bit AVR microcontroller (Arduino Uno/Nano)</span><br>
-<span class="ds-links"><a href="https://www.microchip.com/en-us/product/ATMEGA328P">Microchip product page</a></span><br>
-</li>
-</ul>
-<h3 id="hc-B">B</h3>
-<ul class="ds-list">
-<li>
-<strong>BMP280</strong> &mdash; Bosch Sensortec<br>
-<span class="ds-func">Barometric pressure + temperature sensor</span><br>
-<span class="ds-links"><a href="https://www.bosch-sensortec.com/">Bosch Sensortec — search BMP280</a></span><br>
-</li>
-</ul>
-<h3 id="hc-C">C</h3>
-<ul class="ds-list">
-<li>
-<strong>CD4050</strong> &mdash; Texas Instruments<br>
-<span class="ds-func">Hex non-inverting buffer — the classic 3.3 V → 5 V level shifter</span><br>
-<span class="ds-links"><a href="https://www.ti.com/product/CD4050B">TI product page</a> &middot; <a href="https://www.ti.com/lit/ds/symlink/cd4050b.pdf">Datasheet (PDF)</a></span><br>
-</li>
-<li>
-<strong>CH340G</strong> &mdash; WCH (Nanjing Qinheng)<br>
-<span class="ds-func">USB-to-serial UART bridge — the budget FTDI alternative</span><br>
-<span class="ds-links"><a href="http://www.wch.cn/downloads/file/79.html">WCH official datasheet (Chinese)</a></span><br>
-</li>
-<li>
-<strong>CP2102</strong> &mdash; Silicon Labs<br>
-<span class="ds-func">USB-to-UART bridge</span><br>
-<span class="ds-links"><a href="https://www.silabs.com/interface/usb-bridges/classic/device.cp2102">Silicon Labs product page</a></span><br>
-</li>
-</ul>
-<h3 id="hc-D">D</h3>
-<ul class="ds-list">
-<li>
-<strong>DHT22</strong> &mdash; Aosong (ASAIR)<br>
-<span class="ds-func">Capacitive humidity + temperature sensor</span><br>
-<span class="ds-links"><a href="https://web.archive.org/web/20201219025954/https://www.sparkfun.com/datasheets/Sensors/Temperature/DHT22.pdf">Archive.org copy (PDF)</a></span><br>
-</li>
-<li>
-<strong>DRV8825</strong> &mdash; Texas Instruments<br>
-<span class="ds-func">Stepper motor driver with built-in microstepping indexer</span><br>
-<span class="ds-links"><a href="https://www.ti.com/product/DRV8825">TI product page</a> &middot; <a href="https://www.ti.com/lit/ds/symlink/drv8825.pdf">Datasheet (PDF)</a></span><br>
-</li>
-<li>
-<strong>DS18B20</strong> &mdash; Analog Devices (Maxim)<br>
-<span class="ds-func">1-Wire digital temperature sensor</span><br>
-<span class="ds-links"><a href="https://www.analog.com/en/products/ds18b20.html">Analog Devices product page</a></span><br>
-</li>
-</ul>
-<h3 id="hc-E">E</h3>
-<ul class="ds-list">
-<li>
-<strong>ESP32</strong> &mdash; Espressif<br>
-<span class="ds-func">Wi-Fi + Bluetooth SoC, dual-core Xtensa</span><br>
-<span class="ds-links"><a href="https://www.espressif.com/en/products/socs/esp32">Espressif product page</a> &middot; <a href="https://www.espressif.com/sites/default/files/documentation/esp32_datasheet_en.pdf">Datasheet (PDF)</a></span><br>
-</li>
-<li>
-<strong>ESP8266</strong> &mdash; Espressif<br>
-<span class="ds-func">Wi-Fi SoC (ESP-01/NodeMCU)</span><br>
-<span class="ds-links"><a href="https://www.espressif.com/en/products/socs/esp8266">Espressif product page</a></span><br>
-</li>
-</ul>
-<h3 id="hc-F">F</h3>
-<ul class="ds-list">
-<li>
-<strong>FT232RL</strong> &mdash; FTDI<br>
-<span class="ds-func">USB-to-UART bridge — the classic hacker serial chip</span><br>
-<span class="ds-links"><a href="https://ftdichip.com/document/usb-ic-data-sheets/">FTDI USB IC datasheet index</a> &middot; <a href="https://web.archive.org/web/20201114001822/https://www.ftdichip.com/Support/Documents/DataSheets/ICs/DS_FT232R.pdf">Archive.org copy (PDF)</a></span><br>
-</li>
-<li>
-<strong>FT2232H</strong> &mdash; FTDI<br>
-<span class="ds-func">Dual-channel USB UART/FIFO/JTAG bridge</span><br>
-<span class="ds-links"><a href="https://ftdichip.com/document/usb-ic-data-sheets/">FTDI USB IC datasheet index</a> &middot; <a href="https://web.archive.org/web/20210506101807/http://www.ftdichip.com/Support/Documents/DataSheets/ICs/DS_FT2232H.pdf">Archive.org copy (PDF)</a></span><br>
-</li>
-<li>
-<strong>FT232RQ</strong> &mdash; FTDI<br>
-<span class="ds-func">USB-to-UART bridge — QFN package variant of the FT232R (same silicon as FT232RL)</span><br>
-<span class="ds-links"><a href="https://web.archive.org/web/20201114001822/https://www.ftdichip.com/Support/Documents/DataSheets/ICs/DS_FT232R.pdf">Archive.org copy (PDF, shared with FT232RL)</a></span><br>
-</li>
-<li>
-<strong>FT231X</strong> &mdash; FTDI<br>
-<span class="ds-func">USB-to-UART bridge — compact X-series, USB-C ready</span><br>
-<span class="ds-links"><a href="https://ftdichip.com/document/usb-ic-data-sheets/">FTDI USB IC datasheet index</a> &middot; <a href="https://web.archive.org/web/20220121060221/https://ftdichip.com/wp-content/uploads/2020/08/DS_FT231X.pdf">Archive.org copy (PDF)</a></span><br>
-</li>
-<li>
-<strong>FT230X</strong> &mdash; FTDI<br>
-<span class="ds-func">USB-to-UART bridge — smallest X-series package</span><br>
-<span class="ds-links"><a href="https://ftdichip.com/document/usb-ic-data-sheets/">FTDI USB IC datasheet index</a> &middot; <a href="https://web.archive.org/web/20220121062541/https://ftdichip.com/wp-content/uploads/2020/08/DS_FT230X.pdf">Archive.org copy (PDF)</a></span><br>
-</li>
-<li>
-<strong>FT4232H</strong> &mdash; FTDI<br>
-<span class="ds-func">Quad-channel USB UART/FIFO/JTAG bridge</span><br>
-<span class="ds-links"><a href="https://ftdichip.com/document/usb-ic-data-sheets/">FTDI USB IC datasheet index</a> &middot; <a href="https://web.archive.org/web/20201030200313/https://www.ftdichip.com/Support/Documents/DataSheets/ICs/DS_FT4232H.pdf">Archive.org copy (PDF)</a></span><br>
-</li>
-</ul>
-<h3 id="hc-H">H</h3>
-<ul class="ds-list">
-<li>
-<strong>HC-05</strong> &mdash; Generic (CSR BC417 inside)<br>
-<span class="ds-func">Bluetooth 2.0 SPP serial module</span><br>
-<span class="ds-links"><a href="https://web.archive.org/web/20210415044150/https://www.electronicoscaldas.com/datasheet/HC-Serial-Bluetooth-Products-User-Instructional-Manual_Wavesen.pdf">Archive.org copy (PDF, Wavesen manufacturer manual)</a></span><br>
-</li>
-<li>
-<strong>HC-SR04</strong> &mdash; Generic<br>
-<span class="ds-func">Ultrasonic distance sensor module</span><br>
-<span class="ds-links"><a href="https://web.archive.org/web/20201112023446/https://cdn.sparkfun.com/datasheets/Sensors/Proximity/HCSR04.pdf">Archive.org copy (PDF)</a></span><br>
-</li>
-</ul>
-<h3 id="hc-L">L</h3>
-<ul class="ds-list">
-<li>
-<strong>L298N</strong> &mdash; STMicroelectronics<br>
-<span class="ds-func">Dual full-bridge DC/stepper motor driver</span><br>
-<span class="ds-links"><a href="https://www.st.com/en/motor-drivers/l298.html">ST product page</a></span><br>
-</li>
-<li>
-<strong>LM1117</strong> &mdash; Texas Instruments<br>
-<span class="ds-func">800 mA low-dropout linear regulator</span><br>
-<span class="ds-links"><a href="https://www.ti.com/product/LM1117">TI product page</a> &middot; <a href="https://www.ti.com/lit/ds/symlink/lm1117.pdf">Datasheet (PDF)</a></span><br>
-</li>
-<li>
-<strong>LM7805</strong> &mdash; Texas Instruments<br>
-<span class="ds-func">5 V 1 A linear regulator — the workhorse</span><br>
-<span class="ds-links"><a href="https://www.ti.com/product/LM7805">TI product page (datasheet via page)</a></span><br>
-</li>
-</ul>
-<h3 id="hc-M">M</h3>
-<ul class="ds-list">
-<li>
-<strong>MAX232</strong> &mdash; Texas Instruments<br>
-<span class="ds-func">RS-232 line driver/receiver with charge pump</span><br>
-<span class="ds-links"><a href="https://www.ti.com/product/MAX232">TI product page</a> &middot; <a href="https://www.ti.com/lit/ds/symlink/max232.pdf">Datasheet (PDF)</a></span><br>
-</li>
-<li>
-<strong>MPU6050</strong> &mdash; TDK InvenSense<br>
-<span class="ds-func">6-axis accelerometer + gyroscope IMU</span><br>
-<span class="ds-links"><a href="https://invensense.tdk.com/">TDK InvenSense — search MPU6050</a></span><br>
-</li>
-<li>
-<strong>MT3608</strong> &mdash; Aerosemi<br>
-<span class="ds-func">2 A boost (step-up) converter</span><br>
-<span class="ds-links"><a href="https://web.archive.org/web/20220703000319/https://datasheet.lcsc.com/lcsc/2201121530_XI-AN-Aerosemi-Tech-MT3608L_C2932326.pdf">Archive.org copy (PDF)</a></span><br>
-</li>
-</ul>
-<h3 id="hc-N">N</h3>
-<ul class="ds-list">
-<li>
-<strong>nRF24L01</strong> &mdash; Nordic Semiconductor<br>
-<span class="ds-func">2.4 GHz ISM transceiver</span><br>
-<span class="ds-links"><a href="https://www.nordicsemi.com/Products/nRF24L01">Nordic product page</a></span><br>
-</li>
-<li>
-<strong>nRF52840</strong> &mdash; Nordic Semiconductor<br>
-<span class="ds-func">Bluetooth 5 / Thread / Zigbee SoC, Cortex-M4F</span><br>
-<span class="ds-links"><a href="https://www.nordicsemi.com/Products/nRF52840">Nordic product page</a></span><br>
-</li>
-</ul>
-<h3 id="hc-P">P</h3>
-<ul class="ds-list">
-<li>
-<strong>PCA9685</strong> &mdash; NXP<br>
-<span class="ds-func">16-channel 12-bit PWM / LED controller (I²C)</span><br>
-<span class="ds-links"><a href="https://www.nxp.com/">NXP — search PCA9685</a></span><br>
-</li>
-<li>
-<strong>PIC16F877A</strong> &mdash; Microchip<br>
-<span class="ds-func">8-bit PIC microcontroller</span><br>
-<span class="ds-links"><a href="https://www.microchip.com/en-us/product/PIC16F877A">Microchip product page</a></span><br>
-</li>
-</ul>
-<h3 id="hc-R">R</h3>
-<ul class="ds-list">
-<li>
-<strong>RP2040</strong> &mdash; Raspberry Pi<br>
-<span class="ds-func">Dual Cortex-M0+ microcontroller (Raspberry Pi Pico)</span><br>
-<span class="ds-links"><a href="https://datasheets.raspberrypi.com/rp2040/rp2040-datasheet.pdf">Datasheet (PDF)</a></span><br>
-</li>
-<li>
-<strong>RP2350</strong> &mdash; Raspberry Pi<br>
-<span class="ds-func">Dual Cortex-M33/RISC-V microcontroller (Pico 2)</span><br>
-<span class="ds-links"><a href="https://datasheets.raspberrypi.com/rp2350/rp2350-datasheet.pdf">Datasheet (PDF)</a></span><br>
-</li>
-</ul>
-<h3 id="hc-S">S</h3>
-<ul class="ds-list">
-<li>
-<strong>SAMD21</strong> &mdash; Microchip (ATSAMD21G18)<br>
-<span class="ds-func">Cortex-M0+ microcontroller (Arduino Zero)</span><br>
-<span class="ds-links"><a href="https://www.microchip.com/en-us/product/ATSAMD21G18">Microchip product page</a></span><br>
-</li>
-<li>
-<strong>STM32F103C8</strong> &mdash; STMicroelectronics<br>
-<span class="ds-func">Cortex-M3 microcontroller (Blue Pill)</span><br>
-<span class="ds-links"><a href="https://www.st.com/en/product/stm32f103c8.html">ST product page</a></span><br>
-</li>
-<li>
-<strong>STM32F407</strong> &mdash; STMicroelectronics<br>
-<span class="ds-func">Cortex-M4F microcontroller</span><br>
-<span class="ds-links"><a href="https://www.st.com/en/product/stm32f407vg.html">ST product page</a></span><br>
-</li>
-</ul>
-<h3 id="hc-T">T</h3>
-<ul class="ds-list">
-<li>
-<strong>TB6612FNG</strong> &mdash; Toshiba<br>
-<span class="ds-func">Dual H-bridge DC motor driver</span><br>
-<span class="ds-links"><a href="https://toshiba.semicon-storage.com/us/top.html">Toshiba Semi Storage — search TB6612FNG</a></span><br>
-</li>
-<li>
-<strong>TP4056</strong> &mdash; Top Power (Nanjing)<br>
-<span class="ds-func">1 A linear Li-ion battery charger IC</span><br>
-<span class="ds-links"><a href="https://web.archive.org/web/20240415014504/https://www.alldatasheet.com/datasheet-pdf/pdf/1132405/ASIC/TP4056.html">Archive.org copy (datasheet page)</a></span><br>
-</li>
-</ul>
-<h3 id="hc-W">W</h3>
-<ul class="ds-list">
-<li>
-<strong>W25Q128</strong> &mdash; Winbond<br>
-<span class="ds-func">128 Mbit SPI NOR flash</span><br>
-<span class="ds-links"><a href="https://www.winbond.com/">Winbond — search W25Q128</a></span><br>
-</li>
-</ul>
-<h3 id="hc-num">0–9</h3>
-<ul class="ds-list">
-<li>
-<strong>24LC256</strong> &mdash; Microchip<br>
-<span class="ds-func">256 Kbit I²C EEPROM (the generic “24C256”)</span><br>
-<span class="ds-links"><a href="https://www.microchip.com/en-us/product/24LC256">Microchip product page</a></span><br>
-</li>
-<li>
-<strong>74HC165</strong> &mdash; Texas Instruments (SN74HC165)<br>
-<span class="ds-func">8-bit parallel-in / serial-out shift register</span><br>
-<span class="ds-links"><a href="https://www.ti.com/product/SN74HC165">TI product page</a> &middot; <a href="https://www.ti.com/lit/ds/symlink/sn74hc165.pdf">Datasheet (PDF)</a></span><br>
-</li>
-<li>
-<strong>74HC595</strong> &mdash; Texas Instruments (SN74HC595)<br>
-<span class="ds-func">8-bit serial-in / parallel-out shift register with latch</span><br>
-<span class="ds-links"><a href="https://www.ti.com/product/SN74HC595">TI product page</a> &middot; <a href="https://www.ti.com/lit/ds/symlink/sn74hc595.pdf">Datasheet (PDF)</a></span><br>
-</li>
-</ul>
-<h3 id="hc-Z">Z</h3>
-<ul class="ds-list">
-<li>
-<strong>Z80</strong> &mdash; Zilog<br>
-<span class="ds-func">8-bit microprocessor — powers the TI-84 calculator family, ZX Spectrum, Game Boy (LR35902 variant)</span><br>
-<span class="ds-links"><a href="https://web.archive.org/web/20201231164021/http://www.zilog.com/docs/z80/UM0080.pdf">Archive.org copy (PDF, User Manual)</a></span><br>
-<span class="ds-device">Found in: TI-84 Plus / Plus CE, ZX Spectrum, Game Boy</span>
-</li>
-</ul>
-<h2 id="game-consoles" style="margin-top:2.5em;">Game console &amp; proprietary hardware</h2>
-<p class="lede">Nintendo, Sony, and TI guard their custom silicon closely. No public datasheets exist for the chips below — this is stated explicitly rather than leaving gaps. Where documentation exists (teardowns, community reverse-engineering), we link it.</p>
-<h3 id="gc-nintendo">Nintendo</h3>
-<ul class="ds-list">
-<li>
-<strong>Flipper / Hollywood</strong> &mdash; Nintendo / ATI (GameCube)<br>
-<span class="ds-func">GameCube GPU (Flipper) and Wii GPU (Hollywood, Flipper-derived). No public datasheet.</span><br>
-<span class="ds-links"><em>No public datasheet — see Dolphin emulator wiki for reverse-engineered docs</em></span><br>
-</li>
-<li>
-<strong>Tegra X1 (T210)</strong> &mdash; NVIDIA (Nintendo Switch)<br>
-<span class="ds-func">Switch SoC — custom Tegra X1. NVIDIA publishes Tegra X1 technical docs for the stock chip; Nintendo's customizations are undocumented.</span><br>
-<span class="ds-links"><em>No Nintendo-specific datasheet — NVIDIA Tegra X1 docs cover the base silicon</em></span><br>
-<span class="ds-device">Found in: Nintendo Switch (HAC-001), Switch Lite (HDH-001), Switch OLED (HEG-001)</span>
-</li>
-<li>
-<strong>3DS / Wii U SoCs</strong> &mdash; Nintendo<br>
-<span class="ds-func">Custom ARM SoCs. No public datasheets for any 3DS (original/XL/2DS/New) or Wii U variant.</span><br>
-<span class="ds-links"><em>No public datasheets — see 3DBrew and WiiUBrew wikis for community docs</em></span><br>
-</li>
-</ul>
-<h3 id="gc-sony">Sony</h3>
-<ul class="ds-list">
-<li>
-<strong>Emotion Engine</strong> &mdash; Sony / Toshiba (PlayStation 2)<br>
-<span class="ds-func">PS2 CPU. No public datasheet.</span><br>
-<span class="ds-links"><em>No public datasheet</em></span><br>
-<span class="ds-device">Found in: PlayStation 2 (fat SCPH-30000–50000, slim SCPH-70000–90000)</span>
-</li>
-<li>
-<strong>Cell Broadband Engine</strong> &mdash; Sony / IBM / Toshiba (PlayStation 3)<br>
-<span class="ds-func">PS3 CPU. IBM published architecture papers; no full datasheet.</span><br>
-<span class="ds-links"><em>No public datasheet — IBM Cell BE architecture docs are the closest public reference</em></span><br>
-<span class="ds-device">Found in: PlayStation 3 (fat CECHA–CECHG, slim CECH-2000–3000, super slim CECH-4000)</span>
-</li>
-<li>
-<strong>PS4 / PS5 APUs</strong> &mdash; AMD (Sony custom)<br>
-<span class="ds-func">Semi-custom AMD Jaguar (PS4) and Zen 2 + RDNA 2 (PS5). No public datasheets.</span><br>
-<span class="ds-links"><em>No public datasheets</em></span><br>
-<span class="ds-device">Found in: PS4 (CUH-1000/1200/2200), PS4 Slim (CUH-2000), PS4 Pro (CUH-7000), PS5 (CFI-1000/1100/1200 disc &amp; digital, CFI-2000 slim)</span>
-</li>
-<li>
-<strong>IMX219</strong> &mdash; Sony Semiconductor<br>
-<span class="ds-func">8 MP camera sensor — the Raspberry Pi Camera v2 sensor. Public docs available via Raspberry Pi.</span><br>
-<span class="ds-links"><a href="https://web.archive.org/web/20211006142446/https://www.raspberrypi.com/documentation/accessories/camera.html">Archive.org copy (Raspberry Pi camera docs)</a></span><br>
-</li>
-</ul>
-<h3 id="gc-ti">Texas Instruments (calculators)</h3>
-<ul class="ds-list">
-<li>
-<strong>TI-84 Plus series ASIC</strong> &mdash; TI<br>
-<span class="ds-func">Custom ASIC in TI-84 Plus, Plus Silver Edition, Plus C Silver Edition, Plus CE, Plus CE Python. No public datasheet.</span><br>
-<span class="ds-links"><em>No public datasheet — TI keeps calculator ASICs proprietary</em></span><br>
-<span class="ds-device">Found in: TI-84 Plus, Plus SE, Plus C SE, Plus CE, Plus CE Python</span>
-</li>
-<li>
-<strong>Z80</strong> &mdash; Zilog<br>
-<span class="ds-func">8-bit CPU — powers all TI-84 variants (see Z section above for datasheet)</span><br>
-<span class="ds-links"><a href="#hc-Z">See Z80 entry above</a></span><br>
-</li>
-</ul>
-<h2 id="fcc-ids" style="margin-top:2.5em;">FCC ID reference</h2>
-<p class="lede">Every wireless device sold in the US has an FCC ID. Look it up and you&rsquo;ll find internal photos, test reports, and sometimes schematics — all legally public. Variants that share an FCC ID are noted.</p>
-<h3 id="fcc-networking">Networking</h3>
-<ul class="ds-list">
-<li>
-<strong>Arris TG1682G / Xfinity XB3</strong> — FCC ID <a href="https://fccid.io/UIDTG1682">UIDTG1682</a><br>
-<span class="ds-func">Variants UIDTG1682-2 and UIDTG1682-3 share the base filing. Internal photos, test reports, and user manual on file.</span><br>
-<span class="ds-device">See our <a href="/autopsy/xfinity-xb3/">full teardown</a></span>
-</li>
-</ul>
-<h3 id="fcc-pi">Raspberry Pi</h3>
-<ul class="ds-list">
-<li>
-<strong>Raspberry Pi 4 Model B</strong> (1GB / 2GB / 4GB / 8GB) — FCC ID <a href="https://fccid.io/2ABCB-RPI4B">2ABCB-RPI4B</a><br>
-<span class="ds-func">All RAM variants share one FCC ID. Test reports and internal photos on file.</span><br>
-</li>
-<li>
-<strong>Raspberry Pi 5</strong> (8GB / 16GB) — FCC ID <a href="https://fccid.io/2ABCB-RPI5">2ABCB-RPI5</a><br>
-<span class="ds-func">All RAM variants share one FCC ID.</span><br>
-</li>
-</ul>
-<h3 id="fcc-esp32">ESP32 modules</h3>
-<ul class="ds-list">
-<li>
-<strong>ESP32-WROOM-32E</strong> — FCC ID <a href="https://fccid.io/2AC7Z-ESP32WROOM32E">2AC7Z-ESP32WROOM32E</a><br>
-<span class="ds-func">PCB antenna variant. Test reports and internal photos on file.</span><br>
-</li>
-<li>
-<strong>ESP32-WROOM-32U</strong> — FCC ID <a href="https://fccid.io/2AC7Z-ESP32WROOM32U">2AC7Z-ESP32WROOM32U</a><br>
-<span class="ds-func">U.FL external antenna variant.</span><br>
-</li>
-<li>
-<strong>ESP32-C3-WROOM-02U</strong> — FCC ID <a href="https://fccid.io/2AC7Z-ESPC3WROOMU">2AC7Z-ESPC3WROOMU</a><br>
-<span class="ds-func">RISC-V variant, U.FL antenna.</span><br>
-</li>
-</ul>
-<h3 id="fcc-nintendo">Nintendo</h3>
-<ul class="ds-list">
-<li>
-<strong>Nintendo Switch</strong> (HAC-001) — FCC ID <a href="https://fccid.io/BKEHAC001">BKEHAC001</a><br>
-<span class="ds-func">Original Switch. Test reports, internal photos on file. Switch Lite (HDH-001) and Switch OLED (HEG-001) have separate filings.</span><br>
-</li>
-</ul>
-<h2 id="manufacturers" style="margin-top:2.5em;">Manufacturer datasheet libraries</h2>
-<p class="lede">Can&rsquo;t find a specific part? Start at the source &mdash; every major chipmaker&rsquo;s public documentation library:</p>
-<h3 id="mfr-A">A</h3>
-<ul class="ds-list">
-<li><strong><a href="https://www.analog.com/en/search.html">Analog Devices</a></strong> &mdash; Data converters, amplifiers, RF, power — datasheets for every part</li>
-<li><strong><a href="https://developer.arm.com/documentation">ARM</a></strong> &mdash; Processor IP documentation and technical reference manuals</li>
-</ul>
-<h3 id="mfr-B">B</h3>
-<ul class="ds-list">
-<li><strong><a href="https://www.broadcom.com/support/download-search">Broadcom</a></strong> &mdash; Networking, storage, and wireless chips — legacy Avago/Broadcom docs</li>
-</ul>
-<h3 id="mfr-C">C</h3>
-<ul class="ds-list">
-<li><strong><a href="https://www.infineon.com/cms/en/product/">Cypress (now Infineon)</a></strong> &mdash; PSoC, USB controllers, memory — search Infineon’s product catalog</li>
-</ul>
-<h3 id="mfr-D">D</h3>
-<ul class="ds-list">
-<li><strong><a href="https://www.diodes.com/products/">Diodes Incorporated</a></strong> &mdash; Discretes, logic, power management — full datasheet library</li>
-<li><strong><a href="https://www.synaptics.com/">DSP Group (now Synaptics)</a></strong> &mdash; VoIP and voice processors — legacy DSPG docs via Synaptics</li>
-</ul>
-<h3 id="mfr-F">F</h3>
-<ul class="ds-list">
-<li><strong><a href="https://ftdichip.com/products/">FTDI</a></strong> &mdash; USB-to-serial bridges (FT232, FT2232) — the classic hacker UART chip</li>
-</ul>
-<h3 id="mfr-I">I</h3>
-<ul class="ds-list">
-<li><strong><a href="https://www.infineon.com/cms/en/product/">Infineon</a></strong> &mdash; Power, microcontrollers (AURIX, XMC), security chips</li>
-<li><strong><a href="https://www.intel.com/content/www/us/en/search.html">Intel</a></strong> &mdash; CPUs, chipsets, networking — ARK database and technical docs</li>
-</ul>
-<h3 id="mfr-L">L</h3>
-<ul class="ds-list">
-<li><strong><a href="https://www.lgdisplay.com/eng">LG Display</a></strong> &mdash; Display panels — specs via panel database sites</li>
-<li><strong><a href="https://www.lginnotek.com/en/main.dev">LG Innotek</a></strong> &mdash; Camera modules, wireless charging, automotive components</li>
-<li><strong><a href="https://www.analog.com/en/search.html">Linear Technology (now Analog Devices)</a></strong> &mdash; Power management — classic LT datasheets live on at ADI</li>
-</ul>
-<h3 id="mfr-M">M</h3>
-<ul class="ds-list">
-<li><strong><a href="https://www.marvell.com/search.html">Marvell</a></strong> &mdash; Networking, storage controllers, custom silicon</li>
-<li><strong><a href="https://www.maxlinear.com/products/">MaxLinear</a></strong> &mdash; Cable tuners and broadband front-ends</li>
-<li><strong><a href="https://www.mediatek.com/products">MediaTek</a></strong> &mdash; Mobile SoCs, Wi-Fi, Bluetooth — limited public docs</li>
-<li><strong><a href="https://www.microchip.com/en-us/product-search">Microchip</a></strong> &mdash; PIC, AVR, SAM microcontrollers — excellent public datasheets</li>
-<li><strong><a href="https://www.micron.com/products">Micron</a></strong> &mdash; DRAM and NAND flash — full datasheet library</li>
-<li><strong><a href="https://www.murata.com/en-us/products/">Murata</a></strong> &mdash; Passives, RF modules, sensors</li>
-</ul>
-<h3 id="mfr-N">N</h3>
-<ul class="ds-list">
-<li><strong><a href="https://www.nordicsemi.com/Products">Nordic Semiconductor</a></strong> &mdash; nRF Bluetooth/802.15.4 SoCs — superb public documentation</li>
-<li><strong><a href="https://www.nxp.com/products:COMPANY">NXP</a></strong> &mdash; i.MX, Kinetis, LPC microcontrollers — full public docs</li>
-</ul>
-<h3 id="mfr-Q">Q</h3>
-<ul class="ds-list">
-<li><strong><a href="https://www.qualcomm.com/products">Qualcomm</a></strong> &mdash; Snapdragon, Wi-Fi (Atheros), modems — mostly NDA-gated</li>
-<li><strong><a href="https://www.qorvo.com/products">Qorvo</a></strong> &mdash; RF front-ends, power amplifiers</li>
-</ul>
-<h3 id="mfr-R">R</h3>
-<ul class="ds-list">
-<li><strong><a href="https://datasheets.raspberrypi.com/">Raspberry Pi</a></strong> &mdash; Official RP2040/RP2350 datasheets and hardware docs — fully open</li>
-<li><strong><a href="https://www.realtek.com/">Realtek</a></strong> &mdash; Ethernet, Wi-Fi, audio codecs — sparse public docs</li>
-<li><strong><a href="https://www.renesas.com/us/en/products">Renesas</a></strong> &mdash; Microcontrollers, power, analog</li>
-<li><strong><a href="https://www.rohm.com/products/">ROHM</a></strong> &mdash; Power, discretes, LSI</li>
-</ul>
-<h3 id="mfr-S">S</h3>
-<ul class="ds-list">
-<li><strong><a href="https://www.samsung.com/semiconductor/">Samsung Semiconductor</a></strong> &mdash; DRAM, NAND, SoCs, displays — product specs and select datasheets</li>
-<li><strong><a href="https://www.silabs.com/products">Silicon Labs</a></strong> &mdash; Wireless MCUs, timing, isolation — good public docs</li>
-<li><strong><a href="https://www.skhynix.com/products/">SK hynix</a></strong> &mdash; DRAM and NAND flash</li>
-<li><strong><a href="https://www.sony-semicon.com/en/">Sony Semiconductor</a></strong> &mdash; Image sensors — the IMX series datasheets</li>
-<li><strong><a href="https://www.st.com/en/products.html">STMicroelectronics</a></strong> &mdash; STM32 MCUs, sensors, power — excellent public documentation</li>
-<li><strong><a href="https://www.synaptics.com/products">Synaptics</a></strong> &mdash; Touch, VoIP (ex-DSP Group), edge AI</li>
-</ul>
-<h3 id="mfr-T">T</h3>
-<ul class="ds-list">
-<li><strong><a href="https://www.ti.com/">Texas Instruments</a></strong> &mdash; The gold standard — every part has a public datasheet, app notes, and reference designs</li>
-<li><strong><a href="https://toshiba.semicon-storage.com/us/top.html">Toshiba</a></strong> &mdash; Memory, discretes, motor drivers</li>
-</ul>
+  <p class="lede">Every public datasheet we can find. Manufacturer-published PDFs only &mdash; no leaks, no NDA material. If a chip has no public datasheet, we say so.</p>
+  <p><strong>101 datasheets</strong> across 13 categories. Last updated October 2026.</p>
 
-  <h2 id="cables" style="margin-top:2.5em;">Cable &amp; connector reference</h2>
-  <p class="lede">Cables don&rsquo;t ship with datasheets, but they have standards, pinouts, and specs worth knowing. The essentials:</p>
+  <section id="microcontrollers">
+    <h2>Microcontrollers (16)</h2>
+    <table class="datasheet-table">
+      <thead><tr><th>Component</th><th>Manufacturer</th><th>Description</th></tr></thead>
+      <tbody>
+      <tr><td><a href="https://www.espressif.com/sites/default/files/documentation/esp32_datasheet_en.pdf" target="_blank" rel="noopener">ESP32</a></td><td>Espressif</td><td>2.4 GHz Wi-Fi + Bluetooth/BLE combo SoC, dual-core Xtensa LX6 up to 240 MHz.</td></tr>
+      <tr><td><a href="https://www.espressif.com/sites/default/files/documentation/0a-esp8266ex_datasheet_en.pdf" target="_blank" rel="noopener">ESP8266 (ESP8266EX)</a></td><td>Espressif</td><td>Wi-Fi SoC with Tensilica L106 32-bit MCU, 802.11 b/g/n.</td></tr>
+      <tr><td><a href="https://www.espressif.com/sites/default/files/documentation/esp32-s2_datasheet_en.pdf" target="_blank" rel="noopener">ESP32-S2</a></td><td>Espressif</td><td>Single-core Xtensa LX7 up to 240 MHz, 2.4 GHz Wi-Fi, USB OTG.</td></tr>
+      <tr><td><a href="https://www.espressif.com/sites/default/files/documentation/esp32-c3_datasheet_en.pdf" target="_blank" rel="noopener">ESP32-C3</a></td><td>Espressif</td><td>RISC-V single-core @160 MHz, 2.4 GHz Wi-Fi + Bluetooth 5 (LE).</td></tr>
+      <tr><td><a href="https://ecksteinimg.de/Datasheet/AI-Thinker/esp-12e_product_specification_v1.0.pdf" target="_blank" rel="noopener">ESP-12E module</a></td><td>Ai-Thinker</td><td>🪞 ESP-12E 802.11 b/g/n Wi-Fi module spec v1.0 (4 MB flash, PCB antenna); hosted on retailer mirror, Ai-Thinker's own portal has no direct PDF link.</td></tr>
+      <tr><td><a href="https://ww1.microchip.com/downloads/en/DeviceDoc/Atmel-7810-Automotive-Microcontrollers-ATmega328P_Datasheet.pdf" target="_blank" rel="noopener">ATmega328P</a></td><td>Microchip/Atmel</td><td>8-bit AVR, 32 KB Flash, 2 KB SRAM, 23 I/O — the Arduino Uno's MCU.</td></tr>
+      <tr><td><a href="https://ww1.microchip.com/downloads/en/devicedoc/atmel-2549-8-bit-avr-microcontroller-atmega640-1280-1281-2560-2561_datasheet.pdf" target="_blank" rel="noopener">ATmega2560</a></td><td>Microchip/Atmel</td><td>8-bit AVR family doc covering ATmega640/1280/1281/2560/2561 — up to 256 KB Flash (Arduino Mega's MCU).</td></tr>
+      <tr><td><a href="https://ww1.microchip.com/downloads/en/DeviceDoc/39582b.pdf" target="_blank" rel="noopener">PIC16F877A</a></td><td>Microchip</td><td>8-bit PIC, 14.3 KB Flash, 368 B RAM, 33 I/O lines.</td></tr>
+      <tr><td><a href="https://ww1.microchip.com/downloads/en/DeviceDoc/SAMD21-FamilyDataSheet-DS40001882D.pdf" target="_blank" rel="noopener">SAMD21</a></td><td>Microchip/Atmel</td><td>32-bit Cortex-M0+ MCU, up to 256 KB Flash (Arduino Zero/MKR's MCU).</td></tr>
+      <tr><td><a href="https://www.st.com/resource/en/datasheet/cd00161566.pdf" target="_blank" rel="noopener">STM32F103C8</a></td><td>STMicroelectronics</td><td>Cortex-M3 @72 MHz, 64 KB Flash, 20 KB SRAM — the "Blue Pill" MCU.</td></tr>
+      <tr><td><a href="http://www.stmicroelectronics.com/resource/en/datasheet/stm32f401ve.pdf" target="_blank" rel="noopener">STM32F401</a></td><td>STMicroelectronics</td><td>Arm Cortex-M4 + FPU @84 MHz, 512 KB Flash, 96 KB RAM.</td></tr>
+      <tr><td><a href="https://www.st.com/resource/en/datasheet/stm32f407vg.pdf" target="_blank" rel="noopener">STM32F407VG</a></td><td>STMicroelectronics</td><td>Cortex-M4F @168 MHz, up to 1 MB Flash, 192 KB RAM, USB OTG, Ethernet.</td></tr>
+      <tr><td><a href="https://datasheets.raspberrypi.com/rp2040/rp2040-datasheet.pdf" target="_blank" rel="noopener">RP2040</a></td><td>Raspberry Pi</td><td>Dual Cortex-M0+ @133 MHz, 264 KB SRAM, programmable I/O (PIO).</td></tr>
+      <tr><td><a href="https://datasheets.raspberrypi.com/rp2350/rp2350-datasheet.pdf" target="_blank" rel="noopener">RP2350</a></td><td>Raspberry Pi</td><td>Dual Cortex-M33 or dual Hazard3 RISC-V @150 MHz, 520 KB SRAM, PIO, USB 2.0.</td></tr>
+      <tr><td><a href="https://infocenter.nordicsemi.com/pdf/nRF52840_PS_v1.1.pdf" target="_blank" rel="noopener">nRF52840</a></td><td>Nordic Semiconductor</td><td>nRF52840 Product Specification v1.1 — 64 MHz Cortex-M4F, 1 MB Flash, 256 KB RAM, BLE 5/802.15.4/NFC-A, USB. Note: Nordic's infocenter is retired; current spec lives as HTML at docs.nordicsemi.com.</td></tr>
+      <tr><td><a href="https://www.ti.com/lit/ds/symlink/msp430g2553.pdf" target="_blank" rel="noopener">MSP430G2553</a></td><td>Texas Instruments</td><td>16-bit RISC mixed-signal MCU, 16 KB flash, 512 B RAM, ultra-low-power.</td></tr>
+      </tbody>
+    </table>
+  </section>
+  <section id="single-board-computers-dev-boards-schematics">
+    <h2>Single-board computers / dev boards (schematics) (4)</h2>
+    <table class="datasheet-table">
+      <thead><tr><th>Component</th><th>Manufacturer</th><th>Description</th></tr></thead>
+      <tbody>
+      <tr><td><a href="https://datasheets.raspberrypi.org/rpi4/raspberry-pi-4-reduced-schematics.pdf" target="_blank" rel="noopener">Raspberry Pi 4 Model B</a></td><td>Raspberry Pi</td><td>Official reduced schematics for the Pi 4B.</td></tr>
+      <tr><td><a href="https://content.arduino.cc/assets/UNO-TH_Rev3e_sch.pdf" target="_blank" rel="noopener">Arduino Uno R3</a></td><td>Arduino</td><td>Official Uno Rev3 schematic (ATmega328P + ATmega16U2).</td></tr>
+      <tr><td><a href="http://arduino.cc/en/uploads/Main/arduino-mega2560_R3-schematic.pdf" target="_blank" rel="noopener">Arduino Mega 2560 R3</a></td><td>Arduino</td><td>Official Mega 2560 R3 schematic (ATmega2560 + ATmega16U2).</td></tr>
+      <tr><td><a href="http://arduino.cc/en/uploads/Main/ArduinoNano30Schematic.pdf" target="_blank" rel="noopener">Arduino Nano 3.0</a></td><td>Arduino</td><td>Official Nano 3.0 schematic (ATmega328).</td></tr>
+      </tbody>
+    </table>
+  </section>
+  <section id="common-ics">
+    <h2>Common ICs (17)</h2>
+    <table class="datasheet-table">
+      <thead><tr><th>Component</th><th>Manufacturer</th><th>Description</th></tr></thead>
+      <tbody>
+      <tr><td><a href="https://www.ti.com/lit/ds/symlink/ne555.pdf" target="_blank" rel="noopener">NE555</a></td><td>Texas Instruments</td><td>Classic precision timer IC for oscillators, delays, and PWM generation.</td></tr>
+      <tr><td><a href="https://www.ti.com/lit/gpn/LM741" target="_blank" rel="noopener">LM741</a></td><td>Texas Instruments</td><td>General-purpose single op-amp (product folder; datasheet linked from page).</td></tr>
+      <tr><td><a href="https://www.ti.com/lit/ds/symlink/lm358a.pdf" target="_blank" rel="noopener">LM358</a></td><td>Texas Instruments</td><td>Dual industry-standard op-amp that runs on a single supply.</td></tr>
+      <tr><td><a href="https://www.ti.com/lit/ds/symlink/lm386.pdf" target="_blank" rel="noopener">LM386</a></td><td>Texas Instruments</td><td>Low-voltage audio power amplifier, gain 20–200.</td></tr>
+      <tr><td><a href="https://www.ti.com/lit/ds/symlink/ne5532.pdf" target="_blank" rel="noopener">NE5532</a></td><td>Texas Instruments</td><td>Dual low-noise audio op-amp.</td></tr>
+      <tr><td><a href="https://www.ti.com/lit/ds/symlink/tl072.pdf" target="_blank" rel="noopener">TL072</a></td><td>Texas Instruments</td><td>Dual low-noise JFET-input op-amp.</td></tr>
+      <tr><td><a href="https://www.ti.com/lit/ds/symlink/lm393-mil.pdf" target="_blank" rel="noopener">LM393</a></td><td>Texas Instruments</td><td>Dual differential voltage comparator (LM393-MIL family doc).</td></tr>
+      <tr><td><a href="http://www.ti.com/lit/ds/symlink/uln2003b.pdf" target="_blank" rel="noopener">ULN2003</a></td><td>Texas Instruments</td><td>7-channel Darlington array for driving relays and motors.</td></tr>
+      <tr><td><a href="https://www.ti.com/lit/ds/symlink/l293d.pdf" target="_blank" rel="noopener">L293D</a></td><td>Texas Instruments</td><td>Quad half-H driver (dual DC motor driver) with built-in clamp diodes.</td></tr>
+      <tr><td><a href="https://www.st.com/resource/en/datasheet/l298.pdf" target="_blank" rel="noopener">L298N</a></td><td>STMicroelectronics</td><td>High-voltage, high-current (up to 4A) dual full-bridge driver for DC/stepper motors.</td></tr>
+      <tr><td><a href="https://www.ti.com/lit/ds/symlink/sn74hc595b.pdf" target="_blank" rel="noopener">74HC595</a></td><td>Texas Instruments</td><td>8-bit serial-in/parallel-out shift register with 3-state outputs.</td></tr>
+      <tr><td><a href="https://www.ti.com/lit/ds/scls518a/scls518a.pdf" target="_blank" rel="noopener">74HC165</a></td><td>Texas Instruments</td><td>8-bit parallel-in/serial-out shift register (input expansion).</td></tr>
+      <tr><td><a href="http://www.ti.com/lit/ds/symlink/cd4017b.pdf" target="_blank" rel="noopener">CD4017</a></td><td>Texas Instruments</td><td>5-stage Johnson decade counter/divider for LED chasers and sequencers.</td></tr>
+      <tr><td><a href="http://www.ti.com/lit/ds/symlink/max232.pdf" target="_blank" rel="noopener">MAX232</a></td><td>Texas Instruments</td><td>Dual EIA-232 (RS-232) driver/receiver with charge-pump from a single 5V supply.</td></tr>
+      <tr><td><a href="https://www.analog.com/media/en/technical-documentation/data-sheets/DS1307.pdf" target="_blank" rel="noopener">DS1307</a></td><td>Analog Devices (Maxim)</td><td>64×8 I²C serial real-time clock with battery backup.</td></tr>
+      <tr><td><a href="https://www.ti.com/lit/ds/symlink/pcf8574.pdf" target="_blank" rel="noopener">PCF8574</a></td><td>Texas Instruments</td><td>Remote 8-bit I/O expander for the I²C bus.</td></tr>
+      <tr><td><a href="https://www.nxp.com/docs/en/data-sheet/PCF8591.pdf" target="_blank" rel="noopener">PCF8591</a></td><td>NXP Semiconductors</td><td>8-bit A/D + D/A converter with I²C interface (unverified — same NXP path pattern 404'd for PCF8574).</td></tr>
+      </tbody>
+    </table>
+  </section>
+  <section id="sensors">
+    <h2>Sensors (13)</h2>
+    <table class="datasheet-table">
+      <thead><tr><th>Component</th><th>Manufacturer</th><th>Description</th></tr></thead>
+      <tbody>
+      <tr><td><a href="https://www.sparkfun.com/datasheets/Sensors/Temperature/DHT22.pdf" target="_blank" rel="noopener">DHT22 / AM2302</a></td><td>Aosong</td><td>Digital temperature/humidity sensor, single-wire interface (distributor-hosted).</td></tr>
+      <tr><td><a href="https://www.sparkfun.com/datasheets/Sensors/Temperature/DHT11.pdf" target="_blank" rel="noopener">DHT11</a></td><td>Aosong</td><td>Low-cost digital temperature/humidity sensor, single-wire interface (distributor-hosted).</td></tr>
+      <tr><td><a href="https://cdn.sparkfun.com/datasheets/Sensors/Proximity/HCSR04.pdf" target="_blank" rel="noopener">HC-SR04</a></td><td>Generic module</td><td>Ultrasonic ranging module, 2 cm–400 cm (reputable distributor copy).</td></tr>
+      <tr><td><a href="http://uploads.envistiamall.com/repository/assets/Envistia_Mall_HC-SR501_PIR_IR_Motion_Detector_Sensor_Module_EM-SENSR-0004.pdf" target="_blank" rel="noopener">HC-SR501 PIR</a></td><td>Generic module</td><td>PIR motion-detector module with adjustable sensitivity/delay (distributor copy).</td></tr>
+      <tr><td><a href="https://www.mouser.ch/datasheet/2/783/BST-BMP280-DS001-1509562.pdf" target="_blank" rel="noopener">BMP280</a></td><td>Bosch Sensortec</td><td>Digital barometric pressure + temperature sensor, I²C/SPI (genuine Bosch doc via Mouser).</td></tr>
+      <tr><td><a href="https://www.mouser.com/datasheet/2/783/BST-BME280_DS001-11-844833.pdf" target="_blank" rel="noopener">BME280</a></td><td>Bosch Sensortec</td><td>Environmental sensor: humidity, pressure, temperature, I²C/SPI (genuine Bosch doc via Mouser).</td></tr>
+      <tr><td><a href="https://www.invensense.com/wp-content/uploads/2015/02/MPU-6000-Datasheet1.pdf" target="_blank" rel="noopener">MPU6050</a></td><td>TDK InvenSense</td><td>6-axis motion sensor: 3-axis gyro + 3-axis accelerometer (may redirect to tdk.com).</td></tr>
+      <tr><td><a href="https://www.farnell.com/datasheets/1683374.pdf" target="_blank" rel="noopener">HMC5883L</a></td><td>Honeywell</td><td>3-axis digital compass/magnetometer (genuine Honeywell doc via Farnell).</td></tr>
+      <tr><td><a href="https://www.analog.com/media/en/technical-documentation/data-sheets/ADXL345.pdf" target="_blank" rel="noopener">ADXL345</a></td><td>Analog Devices</td><td>Ultralow-power 3-axis accelerometer (±2g/±4g/±8g/±16g), SPI/I²C.</td></tr>
+      <tr><td><a href="https://cdn-shop.adafruit.com/datasheets/TCS34725.pdf" target="_blank" rel="noopener">TCS34725</a></td><td>ams (TAOS)</td><td>Color light-to-digital converter with IR filter, RGB + clear channels, I²C (via Adafruit).</td></tr>
+      <tr><td><a href="https://datasheets.maximintegrated.com/en/ds/DS18B20.pdf" target="_blank" rel="noopener">DS18B20</a></td><td>Analog Devices (Maxim)</td><td>Programmable-resolution 1-Wire digital temperature sensor.</td></tr>
+      <tr><td><a href="https://ky.winsen-sensor.com/d/files/manual/mq-2.pdf" target="_blank" rel="noopener">MQ-2</a></td><td>Winsen (Hanwei)</td><td>Semiconductor gas sensor for combustible gas and smoke (manufacturer's own site).</td></tr>
+      <tr><td><a href="https://www.winsen-sensor.com/d/files/semiconductor/mq135.pdf" target="_blank" rel="noopener">MQ-135</a></td><td>Winsen (Hanwei)</td><td>Semiconductor gas sensor for air-quality gases (NH₃, NOx, alcohol, benzene).</td></tr>
+      </tbody>
+    </table>
+  </section>
+  <section id="power">
+    <h2>Power (10)</h2>
+    <table class="datasheet-table">
+      <thead><tr><th>Component</th><th>Manufacturer</th><th>Description</th></tr></thead>
+      <tbody>
+      <tr><td><a href="https://pdf.datasheet.world/192988b3/advanced-monolithic.com/AMS1117-3.3.pdf" target="_blank" rel="noopener">AMS1117</a></td><td>Advanced Monolithic Systems</td><td>800mA/1A low-dropout regulator, adjustable + fixed 1.5–5V versions (original AMS site defunct; mirror of manufacturer doc).</td></tr>
+      <tr><td><a href="http://datasheet.octopart.com/LM340MPX-5.0-Texas-Instruments-datasheet-159115184.pdf" target="_blank" rel="noopener">LM7805</a></td><td>TI</td><td>1.5A 3-terminal fixed 5V regulator, from the LM340/LM7805 family datasheet (TI-published, via Octopart).</td></tr>
+      <tr><td><a href="https://datasheet.octopart.com/LM1117MP-5.0-NOPB-Texas-Instruments-datasheet-164414914.pdf" target="_blank" rel="noopener">LM1117</a></td><td>TI</td><td>800mA low-dropout regulator, 1.2V dropout at 800mA (TI-published, via Octopart).</td></tr>
+      <tr><td><a href="https://www.ti.com/lit/ds/symlink/lm317.pdf" target="_blank" rel="noopener">LM317</a></td><td>Texas Instruments</td><td>3-pin adjustable positive voltage regulator, 1.25–37V, up to 1.5A.</td></tr>
+      <tr><td><a href="http://datasheet.octopart.com/LM2596T-ADJ/NOPB-National-Semiconductor-datasheet-9696987.pdf" target="_blank" rel="noopener">LM2596</a></td><td>TI (National Semiconductor)</td><td>SIMPLE SWITCHER 150 kHz 3A step-down regulator, adjustable + 3.3/5/12V (National-published original, via Octopart).</td></tr>
+      <tr><td><a href="http://datasheet.octopart.com/MP2307DN-LF-Monolithic-Power-Systems-datasheet-163718840.pdf" target="_blank" rel="noopener">MP2307</a></td><td>Monolithic Power Systems</td><td>3A, 23V, 340 kHz synchronous step-down converter (MPS-published, via Octopart).</td></tr>
+      <tr><td><a href="https://assets.ebee.com/datasheet/MT3608/664082.pdf" target="_blank" rel="noopener">MT3608</a></td><td>Aerosemi</td><td>1.2 MHz step-up converter, 2–24V in, 4A switch, SOT-23-6 (Aerosemi Rev 1.1, via distributor).</td></tr>
+      <tr><td><a href="https://cdn.ozdisan.com/public/product/assets/XL6009.pdf" target="_blank" rel="noopener">XL6009</a></td><td>XLSEMI</td><td>400 kHz boost/buck-boost/inverting DC-DC converter, up to 60V switch / 4A (XLSEMI Rev 1.1, via distributor).</td></tr>
+      <tr><td><a href="https://datasheet4u.com/pdf/786208/XL4015.pdf" target="_blank" rel="noopener">XL4015</a></td><td>XLSEMI</td><td>5A, 180 kHz, 36V buck DC/DC converter, TO-263-5L (XLSEMI Rev 2.0).</td></tr>
+      <tr><td><a href="https://github.com/jharvey/ESP32_LORA_Chat/raw/refs/heads/master/docs/1809261820_TOPPOWER-Nanjing-Extension-Microelectronics-TP4056-42-ESOP8_C16581_Google_translated.pdf" target="_blank" rel="noopener">TP4056</a></td><td>NanJing Top Power</td><td>1A standalone linear Li-ion battery charger, CC/CV, SOP-8 (Google-translated manufacturer doc, via GitHub).</td></tr>
+      </tbody>
+    </table>
+  </section>
+  <section id="wireless">
+    <h2>Wireless (8)</h2>
+    <table class="datasheet-table">
+      <thead><tr><th>Component</th><th>Manufacturer</th><th>Description</th></tr></thead>
+      <tbody>
+      <tr><td><a href="https://www.datasheets.com/nordic-semiconductor/nrf24l01p-upgrade/datasheet.pdf" target="_blank" rel="noopener">nRF24L01+</a></td><td>Nordic Semiconductor</td><td>2.4 GHz ISM transceiver with Enhanced ShockBurst, 250 kbps–2 Mbps, SPI (Nordic Product Specification v1.0).</td></tr>
+      <tr><td><a href="https://www.datasheets.com/nordic-semiconductor/nrf24l01-reel7/datasheet.pdf" target="_blank" rel="noopener">nRF24L01 (non-plus)</a></td><td>Nordic Semiconductor</td><td>2.4 GHz transceiver, 1/2 Mbps predecessor of the "+" (Nordic Product Specification v2.0).</td></tr>
+      <tr><td><a href="https://cdck-file-uploads-europe1.s3.dualstack.eu-west-1.amazonaws.com/arduino/original/3X/b/9/b9b82680496d29a5c8b5154389ec437d82a76d3b.pdf" target="_blank" rel="noopener">HC-05 Bluetooth</a></td><td>Generic (CSR-based)</td><td>BT 2.0+EDR master/slave serial module with AT command set (reputable copy via Arduino forum CDN).</td></tr>
+      <tr><td><a href="https://au.mouser.com/datasheet/2/758/hc06-1142930.pdf" target="_blank" rel="noopener">HC-06 Bluetooth</a></td><td>Generic (Guangzhou HC)</td><td>BT 2.0+EDR slave-only serial module with AT command set (manufacturer doc via Mouser).</td></tr>
+      <tr><td><a href="https://www.fccpdf.com/2AB6Y/2AB6YHM-1011V1/2657650.pdf" target="_blank" rel="noopener">HM-10 BLE</a></td><td>Jinan Huamao</td><td>BLE 4.0 master/slave serial module, AT commands, 27×13 mm (manufacturer user guide via FCC filing archive).</td></tr>
+      <tr><td><a href="https://media.ic-find.com/datasheets/68e7f55e98fb2744c69a7cf6bfa64d78.pdf" target="_blank" rel="noopener">ESP32-CAM</a></td><td>Ai-Thinker</td><td>ESP32-S Wi-Fi+BT camera module, DIP-16, OV2640, TF card, pin map (Ai-Thinker V1.0 via distributor).</td></tr>
+      <tr><td><a href="https://datasheet.lcsc.com/datasheet/pdf/2077ba7cd5b91d1429cb441ce12d8ccb.pdf?productCode=C2654661" target="_blank" rel="noopener">SX1278 LoRa</a></td><td>Semtech</td><td>LoRa transceiver 137–525 MHz, +20 dBm PA, −148 dBm sensitivity, SPI (Semtech SX1276/77/78/79 Rev. 7, via LCSC).</td></tr>
+      <tr><td><a href="https://www.ti.com/lit/ds/symlink/cc2541-q1.pdf" target="_blank" rel="noopener">CC2541 BLE</a></td><td>Texas Instruments</td><td>2.4 GHz Bluetooth Low Energy + proprietary SoC, 8051-based, 256 KB flash (TI-direct; Q1 automotive variant — same die family).</td></tr>
+      </tbody>
+    </table>
+  </section>
+  <section id="memory">
+    <h2>Memory (5)</h2>
+    <table class="datasheet-table">
+      <thead><tr><th>Component</th><th>Manufacturer</th><th>Description</th></tr></thead>
+      <tbody>
+      <tr><td><a href="https://www.microchip.com/bin/mchp/product-ds.24C02C.pdf" target="_blank" rel="noopener">24C02 EEPROM</a></td><td>Microchip</td><td>2-Kbit (256×8) I²C serial EEPROM, 4.5–5.5V, 16-byte page writes (DS20001202K).</td></tr>
+      <tr><td><a href="https://www.datasheets.com/microchip/24aa256t-e-st/datasheet.pdf" target="_blank" rel="noopener">24C256 EEPROM</a></td><td>Microchip</td><td>256-Kbit (32K×8) I²C serial EEPROM, 1.7–5.5V, 64-byte page writes (24AA256/24LC256/24FC256 family doc).</td></tr>
+      <tr><td><a href="https://www.ocean-components.ro/pdf/88c5642847/AT24C128-10PC-1.8.pdf" target="_blank" rel="noopener">AT24C128 EEPROM</a></td><td>Microchip</td><td>128-Kbit (16K×8) I²C serial EEPROM, 1.8–5.5V, 400 kHz/1 MHz (via distributor).</td></tr>
+      <tr><td><a href="https://www.winbond.com/resource-files/W25Q32JW_DTR%20RevL%20DTR%2004282026%20Plus.pdf" target="_blank" rel="noopener">W25Q32 flash</a></td><td>Winbond</td><td>32-Mbit serial NOR flash, SPI/Dual/Quad/QPI/DTR, 4 KB sectors (Rev. L — note: DTR variant of the W25Q32 family; original URL contains a literal space, URL-encoded here).</td></tr>
+      <tr><td><a href="https://github.com/174high/SDIO/raw/0b74562e0e87847a372047230f31481f7fe96718/part1_410-Physical-Layer.pdf" target="_blank" rel="noopener">SD Physical Layer Simplified Spec v4.10</a></td><td>SD Association</td><td>SD Specifications Part 1, Physical Layer Simplified Specification (copy via GitHub; official source: SD Association portal).</td></tr>
+      </tbody>
+    </table>
+  </section>
+  <section id="displays">
+    <h2>Displays (5)</h2>
+    <table class="datasheet-table">
+      <thead><tr><th>Component</th><th>Manufacturer</th><th>Description</th></tr></thead>
+      <tbody>
+      <tr><td><a href="http://crystalfontz.com/controllers/uploaded/SSD1306B_1.1.pdf" target="_blank" rel="noopener">SSD1306 OLED controller</a></td><td>Solomon Systech</td><td>🪞 Single-chip CMOS OLED/PLED driver+controller for 128×64 dot-matrix displays (Rev 1.1, May 2014); no official solomon-systech.com copy exists.</td></tr>
+      <tr><td><a href="https://ia801607.us.archive.org/12/items/data-sheets/Data%20sheets/HD44780u%20LCD%20Controller.pdf" target="_blank" rel="noopener">HD44780 LCD controller</a></td><td>Hitachi/Renesas</td><td>🪞 Dot-matrix LCD controller/driver for alphanumeric character displays (Rev 0.0, Sept 1999; archive.org mirror — original no longer hosted).</td></tr>
+      <tr><td><a href="https://www.orientdisplay.com/wp-content/uploads/2022/08/ST7735_v2.1.pdf" target="_blank" rel="noopener">ST7735 TFT controller</a></td><td>Sitronix</td><td>🪞 262K-color single-chip TFT controller/driver (132×162), SPI + parallel (official v2.1 doc via Orient Display; Sitronix publishes nothing on its own site).</td></tr>
+      <tr><td><a href="https://www.crystalfontz.com/controllers/Sitronix/ST7789V/470/" target="_blank" rel="noopener">ST7789 TFT controller</a></td><td>Sitronix</td><td>🪞 240×320 262K-color single-chip TFT controller/driver with frame memory (official v1.6 doc text via CrystalFontz page).</td></tr>
+      <tr><td><a href="https://jyetech.com/wp-content/uploads/ILI9341_DS_V1.05_20101227.pdf" target="_blank" rel="noopener">ILI9341 TFT controller</a></td><td>Ilitek</td><td>🪞 240×320 262K-color a-Si TFT driver, 8080-series MCU / RGB / SPI (official V1.05 doc; Ilitek does not publish it on ilitek.com.tw).</td></tr>
+      </tbody>
+    </table>
+  </section>
+  <section id="motor-drivers">
+    <h2>Motor drivers (3)</h2>
+    <table class="datasheet-table">
+      <thead><tr><th>Component</th><th>Manufacturer</th><th>Description</th></tr></thead>
+      <tbody>
+      <tr><td><a href="https://nz.atosn.com/datasheet/1a/A4988SETTR-T.pdf" target="_blank" rel="noopener">A4988</a></td><td>Allegro MicroSystems</td><td>🪞 DMOS microstepping driver with built-in translator, up to 35V / ±2A, full-step to 1/16-step (official 4988-DS Rev. 6 via mirror).</td></tr>
+      <tr><td><a href="https://www.ti.com/lit/ds/symlink/drv8825.pdf" target="_blank" rel="noopener">DRV8825</a></td><td>Texas Instruments</td><td>PWM microstepping stepper motor driver, 8.2–45V, up to 2.5A, full-step to 1/32-step.</td></tr>
+      <tr><td><a href="https://toshiba.semicon-storage.com/eu/semiconductor/product/motor-driver-ics/stepping-motor-driver-ics/detail.TB6600HG.html" target="_blank" rel="noopener">TB6600 (TB6600HG)</a></td><td>Toshiba</td><td>2-phase bipolar stepping-motor driver IC, 8–42V, up to 4.5A, full-step to 1/16-step (official Toshiba product page; English datasheet PDF is one click away — no stable direct PDF URL found).</td></tr>
+      </tbody>
+    </table>
+  </section>
+  <section id="usb-serial">
+    <h2>USB / Serial (8)</h2>
+    <table class="datasheet-table">
+      <thead><tr><th>Component</th><th>Manufacturer</th><th>Description</th></tr></thead>
+      <tbody>
+      <tr><td><a href="https://robu-prod-media.s3.ap-south-1.amazonaws.com/uploads/2018/11/FT232RL-SSOP-28-USB-Interface-IC-1.pdf" target="_blank" rel="noopener">FT232RL</a></td><td>FTDI</td><td>🪞 Single-chip USB-to-UART bridge, USB 2.0 full-speed, up to 3 Mbaud, integrated EEPROM (official FTDI doc v2.14, FT_000053). Note: ftdichip.com returns HTTP 403 to automated fetches; legacy path was http://www.ftdichip.com/Documents/DataSheets/DS_FT232R.pdf.</td></tr>
+      <tr><td><a href="https://wmsc.lcsc.com/wmsc/upload/file/pdf/v2/C193662.pdf" target="_blank" rel="noopener">FT2232H</a></td><td>FTDI</td><td>🪞 Dual-channel USB 2.0 Hi-Speed (480 Mbps) to UART/FIFO/MPSSE IC (official FTDI doc v2.5, FT_000061).</td></tr>
+      <tr><td><a href="https://my.mouser.com/datasheet/3/35/1/DS_FT230X.pdf" target="_blank" rel="noopener">FT230X</a></td><td>FTDI</td><td>USB-to-basic-UART IC, up to 3 Mbaud, integrated MTP memory (official FTDI doc v1.7 via Mouser).</td></tr>
+      <tr><td><a href="https://pdf.findic.com/ft231xq-r-aOHz1qSd-poEgvmWbZ.pdf" target="_blank" rel="noopener">FT231X</a></td><td>FTDI</td><td>USB-to-full-handshake-UART IC with full modem signals and MTP memory (official FTDI doc v1.2).</td></tr>
+      <tr><td><a href="https://bitsavers.pdp-11.net/components/wch/_dataSheets/CH340DS1.PDF" target="_blank" rel="noopener">CH340G</a></td><td>WCH (Nanjing Qinheng)</td><td>🪞 USB-to-serial UART chip, 50 bps–2 Mbps (official WCH CH340DS1 v2G covering CH340G/C/T/R; also covers CH340C crystal-less variant).</td></tr>
+      <tr><td><a href="https://www.silabs.com/documents/public/data-sheets/cp2102.pdf" target="_blank" rel="noopener">CP2102</a></td><td>Silicon Labs</td><td>Single-chip USB-to-UART bridge with integrated transceiver, EEPROM, 3.3V regulator (silabs.com blocks bots — mirror: https://www.datasheets.com/silicon-labs/cp2102/datasheet.pdf).</td></tr>
+      <tr><td><a href="https://datasheet.octopart.com/CP2104-F03-GM-Silicon-Labs-datasheet-180781121.pdf" target="_blank" rel="noopener">CP2104</a></td><td>Silicon Labs</td><td>Single-chip USB-to-UART bridge, QFN-24, 5V-tolerant I/O (official Rev 1.2 via distributor).</td></tr>
+      <tr><td><a href="https://xonstorage.z8.web.core.windows.net/pdf/prolific_pl2303gt_apr22_xonlink.pdf" target="_blank" rel="noopener">PL2303</a></td><td>Prolific</td><td>USB-to-serial bridge controller family (official Prolific doc via mirror; Prolific publishes no stable public PDF URL on prolific.com.tw).</td></tr>
+      </tbody>
+    </table>
+  </section>
+  <section id="gpus-ai-accelerators-what-s-actually-public">
+    <h2>GPUs / AI accelerators (what's actually public) (6)</h2>
+    <table class="datasheet-table">
+      <thead><tr><th>Component</th><th>Manufacturer</th><th>Description</th></tr></thead>
+      <tbody>
+      <tr><td><a href="https://www.inhosted.ai/doc/nvidia-h100-gpu-datasheet.pdf" target="_blank" rel="noopener">NVIDIA H100</a></td><td>NVIDIA</td><td>Official NVIDIA "H100 Tensor Core GPU | Datasheet" — 2-page spec-table datasheet (H100 SXM / PCIe / NVL). Die-level docs are NDA-only.</td></tr>
+      <tr><td><a href="https://www--nvidia--com--0a07hml25436b.npsv6.com/content/dam/en-zz/Solutions/Data-Center/a100/pdf/nvidia-a100-datasheet-nvidia-us-2188504-web.pdf" target="_blank" rel="noopener">NVIDIA A100</a></td><td>NVIDIA</td><td>Official NVIDIA "A100 Tensor Core GPU | Datasheet" (© 2022, doc 2188504) — 2-page spec table for A100 80GB PCIe/SXM.</td></tr>
+      <tr><td><a href="https://www.serverdirect.com/assets/datasheets/H200%20141GB%20NVL%20datasheet.pdf" target="_blank" rel="noopener">NVIDIA H200</a></td><td>NVIDIA</td><td>Official NVIDIA "H200 Tensor Core GPU | Datasheet" — 141GB HBM3e, 4.8 TB/s, SXM.</td></tr>
+      <tr><td><a href="https://panchaea.com/wp-content/uploads/2024/08/amd-instinct-mi300x-data-sheet.pdf" target="_blank" rel="noopener">AMD Instinct MI300X</a></td><td>AMD</td><td>AMD-published "AMD Instinct MI300X Accelerator" data sheet (CDNA 3, 304 CUs, 192GB HBM3, OAM). Full architecture docs are partner/NDA-gated.</td></tr>
+      <tr><td><a href="https://cdrdv2-public.intel.com/817487/gaudi-3-ai-accelerator-hl-325l-oam-mezzanine-card-product-brief.pdf" target="_blank" rel="noopener">Intel Gaudi 3</a></td><td>Intel</td><td>Official Intel "Gaudi 3 AI Accelerator HL-325L OAM Mezzanine Card Product Brief" (64 TPCs, 8 MMEs, 128GB HBM2e).</td></tr>
+      <tr><td><a href="https://arxiv.org/pdf/2304.01433v1" target="_blank" rel="noopener">Google TPU v4</a></td><td>Google</td><td>Architecture paper: "TPU v4: An Optically Reconfigurable Supercomputer for Machine Learning" (Jouppi et al., ISCA 2023) — not a datasheet; describes pod architecture, SparseCore, 4096-chip 3D torus.</td></tr>
+      </tbody>
+    </table>
+  </section>
+  <section id="game-console-chips">
+    <h2>Game console chips (1)</h2>
+    <table class="datasheet-table">
+      <thead><tr><th>Component</th><th>Manufacturer</th><th>Description</th></tr></thead>
+      <tbody>
+      <tr><td><a href="https://international-download-nvidia-comproxy.boingomedia.com/pdf/tegra/Tegra-X1-whitepaper-v1.0.pdf" target="_blank" rel="noopener">NVIDIA Tegra X1</a></td><td>NVIDIA</td><td>🪞 Official NVIDIA whitepaper "Tegra X1: NVIDIA's New Mobile Superchip" (Jan 2015) with SoC specs appendix. The full Technical Reference Manual is registration-gated on developer.nvidia.com — not public.</td></tr>
+      </tbody>
+    </table>
+  </section>
+  <section id="connectors-standards">
+    <h2>Connectors / standards (5)</h2>
+    <table class="datasheet-table">
+      <thead><tr><th>Component</th><th>Manufacturer</th><th>Description</th></tr></thead>
+      <tbody>
+      <tr><td><a href="https://www.jst-connector.com/datasheet/jst-connector/B2B-XH-A.pdf" target="_blank" rel="noopener">JST-XH</a></td><td>JST</td><td>Official JST XH-series datasheet — 2.5mm pitch crimp connector, 3A/250V, housings/headers, mechanical drawings, PCB layouts.</td></tr>
+      <tr><td><a href="https://www.mouser.com/datasheet/2/670/pj-102ah-1312852.pdf" target="_blank" rel="noopener">DC barrel jack (example)</a></td><td>CUI Devices</td><td>CUI Devices PJ-102AH DC power jack — 2.0mm pin, 24V/5A, mechanical drawing, PCB layout (no single universal barrel-jack standard exists; vendor datasheets are canonical).</td></tr>
+      <tr><td><a href="https://datasheet.octopart.com/722RA-Switchcraft-datasheet-27849925.pdf" target="_blank" rel="noopener">DC barrel jack (example)</a></td><td>Switchcraft</td><td>Switchcraft 722RA right-angle locking DC power jack — 2.03mm pin, ratings, drawings.</td></tr>
+      <tr><td>USB Type-C specification</td><td>USB-IF</td><td>"Universal Serial Bus Type-C Cable and Connector Specification" — download from USB.org's document library, no membership required.</td></tr>
+      <tr><td>USB 2.0 specification</td><td>USB-IF</td><td>"Universal Serial Bus Specification Revision 2.0" — public via USB.org; also adopted as IEC 62680-2-1.</td></tr>
+      </tbody>
+    </table>
+  </section>
 
-  <h3 id="cable-usb">USB</h3>
-  <ul class="ds-list">
-    <li><strong>USB 2.0</strong> &mdash; 480 Mbps, 4-pin (VCC, D-, D+, GND). The universal hacker cable.<br>
-    <span class="ds-links"><a href="https://www.usb.org/document-library/usb-20-specification">USB-IF &mdash; USB 2.0 specification</a> &middot; <a href="https://pinoutguide.com/Slots/usb-pinout.shtml">Pinout guide</a></span></li>
-    <li><strong>USB 3.x</strong> &mdash; 5/10/20 Gbps, 9-pin (adds 5 SuperSpeed lines). Blue inserts.<br>
-    <span class="ds-links"><a href="https://www.usb.org/document-library/usb-32-specification-released">USB-IF &mdash; USB 3.2 specification</a></span></li>
-    <li><strong>USB-C</strong> &mdash; 24-pin reversible, up to 240W USB-PD. CC lines handle negotiation.<br>
-    <span class="ds-links"><a href="https://www.usb.org/document-library/usb-type-cr-cable-and-connector-specification-revision-23">USB-IF &mdash; Type-C specification</a> &middot; <a href="https://pinoutguide.com/Slots/usb-type-c-pinout.shtml">Pinout guide</a></span></li>
-    <li><strong>USB Power Delivery (USB-PD)</strong> &mdash; negotiates 5V/9V/15V/20V up to 240W over USB-C.<br>
-    <span class="ds-links"><a href="https://www.usb.org/document-library/usb-power-delivery">USB-IF &mdash; USB-PD specification</a></span></li>
-  </ul>
+  <section id="no-public-datasheet">
+    <h2>No public datasheet exists</h2>
+    <p>These chips have no manufacturer-published datasheet. We list them here so you know we looked:</p>
+    <ul>
+      <li><strong>NVIDIA H100/H200/B200/A100</strong> &mdash; die-level docs, pinouts, and programming manuals are NDA-only</li>
+      <li><strong>AMD MI300X</strong> &mdash; full architecture docs are partner/NDA-gated</li>
+      <li><strong>Google TPU v5</strong> &mdash; no public architecture paper</li>
+      <li><strong>Tegra X1 TRM</strong> &mdash; registration-required on developer.nvidia.com</li>
+      <li><strong>PlayStation 5 / Xbox Series X SoCs</strong> &mdash; no public datasheets</li>
+      <li><strong>Raspberry Pi 5 schematics</strong> &mdash; not publicly released</li>
+    </ul>
+  </section>
 
-  <h3 id="cable-ethernet">Ethernet</h3>
-  <ul class="ds-list">
-    <li><strong>Cat5e</strong> &mdash; 1 Gbps to 100m, 4 twisted pairs. The minimum you should buy.<br>
-    <span class="ds-links"><a href="https://standards.ieee.org/ieee/802.3/7071/">IEEE 802.3</a></span></li>
-    <li><strong>Cat6 / Cat6a</strong> &mdash; 10 Gbps (55m / 100m). Tighter twists, thicker jacket.<br>
-    <span class="ds-links"><a href="https://www.tiaonline.org/">TIA-568 standard</a></span></li>
-    <li><strong>T568A vs T568B wiring</strong> &mdash; the two pinout orders. Pick one, use it everywhere.<br>
-    <span class="ds-links"><a href="https://pinoutguide.com/Net/ethernet-1000BASE-T-pinout.shtml">Pinout guide</a></span></li>
-  </ul>
-
-  <h3 id="cable-serial">Serial &amp; debug</h3>
-  <ul class="ds-list">
-    <li><strong>RS-232 (DB9)</strong> &mdash; &plusmn;12V signaling, TX/RX/GND minimum. Still on industrial gear.<br>
-    <span class="ds-links"><a href="https://pinoutguide.com/SerialPorts/rs232-pinout.shtml">Pinout guide</a></span></li>
-    <li><strong>UART (3.3V/5V TTL)</strong> &mdash; TX, RX, GND. The hacker&rsquo;s best friend &mdash; see our <a href="/autopsy/xfinity-xb3/#communicate">XB3 UART guide</a>.<br>
-    <span class="ds-links"><a href="https://learn.sparkfun.com/tutorials/serial-communication/all">SparkFun &mdash; Serial communication tutorial</a></span></li>
-    <li><strong>JTAG (20-pin / 10-pin)</strong> &mdash; TCK, TMS, TDI, TDO, GND. Boundary scan and debug.<br>
-    <span class="ds-links"><a href="https://standards.ieee.org/ieee/1149.1/6534/">IEEE 1149.1</a></span></li>
-  </ul>
-
-  <h3 id="cable-video">Video</h3>
-  <ul class="ds-list">
-    <li><strong>HDMI</strong> &mdash; 19-pin, digital video + audio + CEC. Versions 1.4 through 2.1.<br>
-    <span class="ds-links"><a href="https://hdmi.org/spec">HDMI Forum &mdash; specifications</a> &middot; <a href="https://pinoutguide.com/Video/hdmi-pinout.shtml">Pinout guide</a></span></li>
-    <li><strong>DisplayPort</strong> &mdash; 20-pin, packetized video. Royalty-free alternative to HDMI.<br>
-    <span class="ds-links"><a href="https://www.displayport.org/">VESA &mdash; DisplayPort</a></span></li>
-  </ul>
-
-  <h3 id="cable-coax">Coaxial</h3>
-  <ul class="ds-list">
-    <li><strong>RG-6</strong> &mdash; 75&Omega;, cable TV/satellite/modem. F-type connectors.<br>
-    <span class="ds-links"><a href="https://en.wikipedia.org/wiki/RG-6">RG-6 reference</a></span></li>
-    <li><strong>RG-58</strong> &mdash; 50&Omega;, lab/test RF. BNC connectors.<br>
-    <span class="ds-links"><a href="https://en.wikipedia.org/wiki/RG-58">RG-58 reference</a></span></li>
-  </ul>
-
-  <h3 id="cable-power">Power</h3>
-  <ul class="ds-list">
-    <li><strong>Barrel jack</strong> &mdash; 5.5&times;2.1mm and 5.5&times;2.5mm are the common sizes. Center-positive is the convention, not the rule &mdash; check.<br>
-    <span class="ds-links"><a href="https://en.wikipedia.org/wiki/Coaxial_power_connector">Coaxial power connector reference</a></span></li>
-    <li><strong>JST connectors</strong> &mdash; JST-XH (2.5mm), JST-PH (2.0mm), JST-SH (1.0mm). Battery and board interconnects.<br>
-    <span class="ds-links"><a href="https://www.jst-mfg.com/">JST Manufacturing</a></span></li>
-  </ul>
-
-  <p class="lede" style="margin-top:2em;font-size:0.92rem;color:#555;">Missing a datasheet? If you can legally share one for a chip we&rsquo;ve documented, <a href="/about.html">let us know</a>.</p>
-  <footer>
+<footer>
     <a href="/tarpit/" class="hp-link" aria-hidden="true" tabindex="-1">device index</a>
     <p>BareBoard &mdash; a free educational resource. Text and findings published under open terms; nothing here is for sale.</p>
         <nav>
