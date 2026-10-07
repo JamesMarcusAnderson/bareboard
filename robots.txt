@@ -49,8 +49,10 @@ Disallow: /
 User-agent: Diffbot
 Disallow: /
 
+# Tarpit: /tarpit/ is a trap for scrapers. Compliant bots stay out (below);
+# rogue crawlers that ignore robots.txt follow the hidden footer links in.
 User-agent: *
-Disallow:
+Disallow: /tarpit/
 
 User-agent: meta-externalagent
 Disallow: /

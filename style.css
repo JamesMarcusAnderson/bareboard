@@ -682,3 +682,22 @@ p.note { font-size: 0.95rem; color: var(--secondary); border-left: 3px solid var
   margin-top: 0.8rem;
 }
 
+
+/* ---------- honeypot links: invisible to humans, visible to scrapers ----------
+ * These links point at /tarpit/. They are 1px, clipped, offscreen, removed
+ * from keyboard tab order (tabindex="-1") and hidden from assistive tech
+ * (aria-hidden="true"). No human will ever see or activate them. Scrapers
+ * that follow every href will walk straight into the tarpit. */
+.hp-link {
+  position: absolute !important;
+  width: 1px !important;
+  height: 1px !important;
+  padding: 0 !important;
+  margin: -1px !important;
+  overflow: hidden !important;
+  clip: rect(0, 0, 0, 0) !important;
+  clip-path: inset(50%) !important;
+  white-space: nowrap !important;
+  border: 0 !important;
+  pointer-events: none !important;
+}
