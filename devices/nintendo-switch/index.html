@@ -108,6 +108,9 @@
   <aside class="legal-notice" style="background:#fff8e1;border:1px solid #e6d690;border-radius:8px;padding:1em 1.2em;margin:0 0 1.5em;font-size:0.88rem;color:#5a4e1a;">
     <strong>Educational purpose.</strong> Everything on this page is published for education and research. Teardowns document hardware the author legally owns. Datasheets link to public sources. FCC filings are public record. Lawsuits and controversies cite public reporting. Nothing here is stolen, leaked, or confidential. If you use this information, you&rsquo;re responsible for complying with the laws where you live. This isn&rsquo;t legal advice &mdash; it&rsquo;s a workbench.
   </aside>
+  <aside class="purpose-note" style="background:#eef6ee;border:1px solid #b9d8b9;border-radius:8px;padding:1em 1.2em;margin:0 0 1.5em;font-size:0.92rem;color:#1e4620;">
+    <strong>Your device, your rules.</strong> You bought it &mdash; you have the right to update its firmware, patch its security issues, and remove software you don&rsquo;t want on it. Every method on this page is non-destructive: it uses the device&rsquo;s existing ports, buttons, or software features. Nothing here requires breaking the enclosure.
+  </aside>
   <h1>Nintendo Switch Family</h1>
   <p class="lede">Nintendo&rsquo;s hybrid handheld that sold 140+ million units &mdash; and shipped with controllers that drift.</p>
 
@@ -183,7 +186,26 @@
   </section>
 
   <section>
-    <h2 id="reading">Further Reading</h2>
+    
+  <section>
+    <h2 id="entry">Simple Entry Points</h2>
+    <p>Start here if you&rsquo;ve never opened a device before. These methods use only the ports, buttons, and software features the device already has &mdash; no special tools, no broken plastic.</p>
+
+    <h3>Recovery mode through the Joy-Con rail (no opening required)</h3>
+    <p><strong>What do I need?</strong> A small RCM jig (a few dollars, or 3D-printable) and a USB-C cable.</p>
+    <ol>
+      <li>Slide the jig into the right Joy-Con rail &mdash; it briefly connects one pin to ground. This is how the console&rsquo;s own repair process enters recovery mode.</li>
+      <li>Hold <strong>Volume Up</strong> and press <strong>Power</strong>. The screen stays black &mdash; that means it worked: the console is waiting for instructions over USB-C.</li>
+      <li>From a computer, you can now send a bootloader. Researchers use this to run Linux on hardware they own and study how the boot process works.</li>
+    </ol>
+<pre class="term" style="background:#1d1d1f;color:#e8e8e8;padding:1em;border-radius:8px;overflow-x:auto;"><code>$ lsusb | grep -i nintendo
+Bus 001 Device 042: ID 0955:7321 NVIDIA Corp. APX
+# (APX = the Tegra chip waiting in recovery mode)</code></pre>
+    <p><em>This only works on early (unpatched) units &mdash; later hardware fixed the boot-ROM behavior. It&rsquo;s documented here as an educational case study in how recovery modes work. See also the <a href="/protocols.html">Simple Entry Points</a> section on our protocols page.</em></p>
+    <p>Want the full technical picture? See our <a href="/protocols.html">Protocol Reverse Engineering</a> page for the complete firmware-access playbook.</p>
+  </section>
+
+<h2 id="reading">Further Reading</h2>
     <ul>
       <li><a href="https://fccid.io/BKEHAC001">FCC filing BKEHAC001</a> &mdash; Switch hardware details</li>
       <li><a href="/datasheets.html">BareBoard datasheet index</a></li>
