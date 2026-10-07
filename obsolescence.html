@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
-<meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self' data:; style-src 'self'; script-src 'self'; object-src 'none'; frame-src 'none'; base-uri 'self'; form-action 'none'">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self' data: upload.wikimedia.org www.espressif.com; style-src 'self'; script-src 'self'; object-src 'none'; frame-src 'none'; base-uri 'self'; form-action 'none'">
 <meta name="referrer" content="no-referrer">
 <meta name="robots" content="noai, noimageai">
 <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -298,7 +298,28 @@
 <p><strong>Evidence labels:</strong> <span class="badge b-confirmed">confirmed</span> = court filing, regulator ruling, or company admission. <span class="badge b-likely">likely</span> = reputable reporting with a documented mechanism, but no ruling on record.</p>
 </div>
 
+<figure>
+  <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/65/Electronic_waste.jpg/1280px-Electronic_waste.jpg" alt="Pile of electronic waste" loading="lazy">
+  <figcaption>Where &ldquo;obsolete&rdquo; devices end up. Every case below is hardware that was pushed into this pile early &mdash; on purpose. Photo: Wikimedia Commons.</figcaption>
+</figure>
+
 <div id="obs-cards"><p>Loading&hellip;</p></div>
+
+<section>
+<h2>Spot it on your own shelf</h2>
+<p>You don&rsquo;t need a lab to catch this happening. Warning signs:</p>
+<ul>
+<li><strong>Your phone gets slower right after an update</strong> &mdash; then speeds up again with a fresh battery. That&rsquo;s throttling, and it&rsquo;s exactly what Apple was fined for.</li>
+<li><strong>Your printer rejects third-party ink</strong> &mdash; a firmware &ldquo;security&rdquo; update that only blocks competitors&rsquo; cartridges isn&rsquo;t security. It&rsquo;s a subscription you never signed up for.</li>
+<li><strong>A trade-in program destroys your old device</strong> &mdash; if &ldquo;recycling&rdquo; requires bricking a working product, the program serves the manufacturer, not the planet.</li>
+<li><strong>Features disappear from something you own</strong> &mdash; check the changelog. If an update removed something you paid for, take screenshots and note the dates. That&rsquo;s evidence.</li>
+</ul>
+<p>On a Linux laptop, you can check whether your battery is genuinely worn out or just being managed aggressively:</p>
+<pre class="term"><code><span class="p">$</span> upower -i /org/freedesktop/UPower/devices/battery_BAT0 | grep -E 'percentage|capacity'
+    percentage:          82%
+    capacity:            91%</code></pre>
+<p><span class="mono">capacity</span> is the battery&rsquo;s health compared to new &mdash; 91% here is fine. If your system claims the battery is dead while capacity reads high, something else is going on.</p>
+</section>
 
   <footer>
     <a href="/tarpit/" class="hp-link" aria-hidden="true" tabindex="-1">device index</a>
