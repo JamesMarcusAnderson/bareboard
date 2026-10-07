@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self' data: upload.wikimedia.org www.espressif.com quartzcomponents.com cdn-shop.adafruit.com cart-products.cdn.ifixit.com; style-src 'self'; script-src 'self'; object-src 'none'; frame-src 'none'; base-uri 'self'; form-action 'none'">
+<meta name="referrer" content="no-referrer">
+<meta name="robots" content="noai, noimageai">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Start Here &mdash; BareBoard</title>
+<meta name="description" content="New to hardware? Start here. No experience needed: what to buy for under $15, a first project that opens nothing, and a plain-language glossary.">
+<meta name="theme-color" content="#fbfbfc">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%231d1d1f'/%3E%3Ctext x='32' y='45' font-family='system-ui,-apple-system,sans-serif' font-size='36' font-weight='700' fill='white' text-anchor='middle'%3EB%3C/text%3E%3C/svg%3E">
+<link rel="stylesheet" href="/style.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "@name": "BareBoard Start Here Guide",
+  "description": "A beginner's guide to understanding your own hardware: what to buy, a first project with no disassembly, and a plain-language glossary."
+}
+</script>
+</head>
+<body>
+<header class="site-nav">
+  <div class="nav-inner">
+    <nav aria-label="Primary">
+      <ul>
+        <li><a href="/" class="brand-word">BareBoard</a></li>
+        <li><a href="/start-here.html" aria-current="page"><strong>Start Here</strong></a></li>
+        <li class="has-children">
+          <a href="/devices/" aria-haspopup="true" aria-expanded="false">Devices</a>
+          <div class="col-panel">
+            <div class="dropdown-inner">
+              <ul class="dropdown-col">
+                <li><a href="/devices/nintendo-switch/">Nintendo Switch</a></li>
+                <li><a href="/devices/playstation/">PlayStation</a></li>
+                <li><a href="/devices/raspberry-pi/">Raspberry Pi</a></li>
+                <li><a href="/devices/esp32/">ESP32</a></li>
+                <li><a href="/devices/ti-84-plus/">TI-84 Plus</a></li>
+                <li><a href="/devices/xfinity-xb3/">Xfinity XB3</a></li>
+              </ul>
+            </div>
+          </div></li>
+        <li class="has-children">
+          <a href="/autopsy/" aria-haspopup="true" aria-expanded="false">Teardowns</a>
+          <div class="col-panel">
+            <div class="dropdown-inner">
+              <ul class="dropdown-col">
+                <li><a href="/autopsy/xfinity-xb3/">Xfinity XB3</a></li>
+              </ul>
+            </div>
+          </div></li>
+        <li class="has-children">
+          <a href="/datasheets.html" aria-haspopup="true" aria-expanded="false">Resources</a>
+          <div class="col-panel">
+            <div class="dropdown-inner">
+              <ul class="dropdown-col">
+                <li><a href="/datasheets.html">Datasheet Index</a></li>
+                <li><a href="/datasheets.html#cables">Cable Reference</a></li>
+                <li><a href="/notes/">Bench Notes</a></li>
+                <li><a href="/chips.html">Chip Database</a></li>
+                <li><a href="/obsolescence.html">Planned Obsolescence</a></li>
+                <li><a href="/repair.html">Repair Guides</a></li>
+                <li><a href="/protocols.html">Protocol RE</a></li>
+              </ul>
+            </div>
+          </div></li>
+        <li><a href="/datasheets.html">Datasheets</a></li>
+        <li><a href="/hot-100.html">Hot 100</a></li>
+        <li><a href="/most-wanted.html">Most Wanted</a></li>
+        <li class="has-children">
+          <a href="/watchmen.html" aria-haspopup="true" aria-expanded="false">Watchmen</a>
+          <div class="col-panel">
+            <div class="dropdown-inner">
+              <ul class="dropdown-col">
+                <li><a href="/watchmen.html#who-watches">Who watches</a></li>
+                <li><a href="/watchmen.html#methodology">Methodology</a></li>
+                <li><a href="/watchmen.html#tools">The bench</a></li>
+              </ul>
+            </div>
+          </div></li>
+        <li class="has-children">
+          <a href="/support.html" aria-haspopup="true" aria-expanded="false">Support</a>
+          <div class="col-panel">
+            <div class="dropdown-inner">
+              <ul class="dropdown-col">
+                <li><a href="/support.html#mission">Mission</a></li>
+                <li><a href="/support.html#chip-in">Donate</a></li>
+                <li><a href="/support.html#allies">Allies</a></li>
+              </ul>
+            </div>
+          </div></li>
+        <li class="nav-search-item">
+        </li>
+      </ul>
+    </nav>
+  </div>
+  <div class="search-panel" id="search-panel" hidden>
+    <div class="search-inner">
+      <input type="search" id="site-search" placeholder="Search BareBoard" aria-label="Search BareBoard" autocomplete="off" spellcheck="false">
+      <button type="button" class="search-close" aria-label="Close search">&times;</button>
+    </div>
+    <ul class="search-results" id="search-results" aria-live="polite"></ul>
+  </div>
+</header>
+
+<main>
+<section class="hero">
+<h1>Start Here</h1>
+<p class="lede">Never opened a device? Never typed a command? Perfect &mdash; this page was written for you. You will not open, break, or damage anything. By the end, you will have updated the software on a tiny computer with your own hands &mdash; and you will understand what is inside your gadgets.</p>
+<figure>
+<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/ab/PXL_20220703_104511558.PORTRAIT_%28cropped%29.jpg/1280px-PXL_20220703_104511558.PORTRAIT_%28cropped%29.jpg" alt="Raspberry Pi Pico microcontroller board" loading="lazy">
+<figcaption>The Raspberry Pi Pico &mdash; a $4 computer the size of a stick of gum, and the best first tool you can own.</figcaption>
+</figure>
+</section>
+
+<section>
+<h2>What is this site?</h2>
+<p>BareBoard is a free school for hardware. Every device you own &mdash; your phone, your smart plug, your game console &mdash; is a small computer. The companies that sold them to you would prefer you never look inside. We disagree.</p>
+<p>Here is the principle this site is built on: <strong>this is your device. You have the right to update it, fix it, and remove software you don&rsquo;t want on it.</strong> When a manufacturer stops updating your gadget, or bundles in software you never asked for, you should be able to do something about it &mdash; because it is yours.</p>
+<p>On this page, everything is <strong>non-destructive</strong>: no enclosures opened, nothing pried apart, nothing broken. You will learn what firmware is, how to replace it on hardware designed to let you, and how to talk to a device over a cable. Everything here is about <strong>hardware you own</strong>, documented for learning and repair. Nothing here is for sale, and nothing here is about anyone else&rsquo;s property.</p>
+<p>You do not need to be an engineer. You do not need to know how to code. You just need curiosity and about fifteen dollars.</p>
+</section>
+
+<section>
+<h2>What do I need to buy?</h2>
+<p>Everything on this list is cheap, and most of it you will use for years. Total cost to get started: <strong>under $15</strong>.</p>
+
+<div class="card">
+<p class="kicker">Item 1 &mdash; about $4</p>
+<h3>Raspberry Pi Pico</h3>
+<figure>
+<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/ab/PXL_20220703_104511558.PORTRAIT_%28cropped%29.jpg/1280px-PXL_20220703_104511558.PORTRAIT_%28cropped%29.jpg" alt="Raspberry Pi Pico microcontroller board" loading="lazy">
+<figcaption>A Raspberry Pi Pico. Photo: Wikimedia Commons.</figcaption>
+</figure>
+<p>A tiny computer on a circuit board &mdash; and your first project subject. It is designed to be reprogrammed over USB with no tools at all. Buy the plain Pico (not the Pico W) to start &mdash; it is the cheapest.</p>
+</div>
+
+<div class="card">
+<p class="kicker">Item 2 &mdash; about $3</p>
+<h3>USB-to-serial adapter</h3>
+<figure>
+<img src="https://quartzcomponents.com/cdn/shop/products/USB-to-TTL-Converter_785x.jpg?v=1652256300" alt="CH340 USB to TTL serial adapter board" loading="lazy">
+<figcaption>A CH340 USB-to-serial adapter. Photo: Quartz Components.</figcaption>
+</figure>
+<p>A translator between your computer and gadgets: one end plugs into USB, the other end speaks the simple serial language that device firmware understands. Search for <span class="mono">CH340 USB to TTL</span> or <span class="mono">CP2102 USB to TTL</span>. Either works. Make sure it has a <strong>3.3V / 5V switch</strong> and set it to <strong>3.3V</strong>.</p>
+</div>
+
+<div class="card">
+<p class="kicker">Item 3 &mdash; you probably own one</p>
+<h3>Micro USB cable</h3>
+<figure>
+<img src="https://cdn-shop.adafruit.com/970x728/3879-01.jpg" alt="Micro USB cable" loading="lazy">
+<figcaption>A micro USB cable. Photo: Adafruit.</figcaption>
+</figure>
+<p>The small, trapezoid-shaped plug &mdash; the kind older Android phones used. It carries both power and data. If you have a drawer of old cables, you already own this. Make sure it is a <strong>data</strong> cable, not a charge-only cable (charge-only cables have no data wires inside).</p>
+</div>
+
+<div class="card">
+<p class="kicker">Item 4 &mdash; about $5, for later</p>
+<h3>Small screwdriver set</h3>
+<figure>
+<img src="https://cart-products.cdn.ifixit.com/cart-products/CDEfZPcFPEOWRjBm.size1000" alt="Precision screwdriver bit set" loading="lazy">
+<figcaption>A precision bit set, like the iFixit Mako. Photo: iFixit.</figcaption>
+</figure>
+<p>You will not need this today &mdash; nothing on this page requires opening anything. But when you are ready for the <a href="/repair.html">Repair Guides</a>, gadgets use tiny screws, and a precision bit set (Phillips, Torx, pentalobe, tri-point) will last you years.</p>
+</div>
+
+<div class="card">
+<p class="kicker">Item 5 &mdash; about $6, your second patient</p>
+<h3>ESP32 development board</h3>
+<figure>
+<img src="https://www.espressif.com/sites/default/files/dev-board/ESP32-S2-DevKitC-1%20large.png" alt="ESP32-S2 DevKitC development board" loading="lazy">
+<figcaption>An ESP32 development board. Photo: Espressif.</figcaption>
+</figure>
+<p>The chip inside most smart plugs, bulbs, and sensors &mdash; on a board you can reprogram over USB, with no mains voltage and nothing to open. Once you finish the Pico project below, this is your next step: the same skills, applied to the chip that runs the smart home.</p>
+</div>
+</section>
+
+<section>
+<h2>Your first project: update the firmware on your Pico</h2>
+<p class="lede">Goal: replace the software on your Raspberry Pi Pico with MicroPython, then talk to it. No screwdriver. No opened enclosures. Nothing gets broken. About 30 minutes.</p>
+<p>Why this matters: manufacturers update &mdash; or abandon &mdash; the software on your devices all the time. Here you will do it yourself, on hardware you own, and see exactly what &ldquo;firmware&rdquo; means. If software you don&rsquo;t want ever ships on your device, this is the skill that lets you remove it.</p>
+
+<h3>Step 0 &mdash; What is a terminal?</h3>
+<p>A terminal is a window where you type text commands instead of clicking icons. It looks old-fashioned, but it is the most direct way to talk to hardware.</p>
+<ul>
+<li><strong>Windows:</strong> press the Windows key, type <span class="mono">PowerShell</span>, press Enter.</li>
+<li><strong>Mac:</strong> press <span class="mono">Cmd + Space</span>, type <span class="mono">Terminal</span>, press Enter.</li>
+<li><strong>Linux:</strong> press <span class="mono">Ctrl + Alt + T</span>.</li>
+</ul>
+<p>A window opens with a blinking cursor. That cursor is waiting for you. Everything in the gray boxes below is typed there &mdash; lines starting with <span class="mono">$</span> are what <em>you</em> type, and the lines after are what the computer prints back.</p>
+
+<h3>Step 1 &mdash; Put the Pico in bootloader mode</h3>
+<p>Hold down the small white <strong>BOOTSEL</strong> button on the Pico, and while holding it, plug the micro USB cable into the Pico and your computer. Then let go of the button.</p>
+<p>A new drive appears on your computer called <span class="mono">RPI-RP2</span> &mdash; the Pico is pretending to be a USB flash drive. That is the <strong>bootloader</strong>: a tiny built-in program whose only job is to accept new firmware. You have just met the first piece of software on the chip, and you didn&rsquo;t open anything to reach it.</p>
+
+<h3>Step 2 &mdash; Install MicroPython (this is a firmware update)</h3>
+<p>Go to <span class="mono">micropython.org/download/rp2-pico</span> in your browser and download the latest <span class="mono">.uf2</span> file. Drag it onto the <span class="mono">RPI-RP2</span> drive &mdash; the same way you&rsquo;d copy a photo onto a USB stick.</p>
+<p>The drive disappears and the Pico reboots. Congratulations: you just <strong>updated firmware</strong>. The old software is gone, replaced by MicroPython &mdash; your choice, on your hardware. If a manufacturer ever ships software you don&rsquo;t want, this is the same class of operation that removes it.</p>
+
+<h3>Step 3 &mdash; Find the Pico&rsquo;s serial port</h3>
+<p>MicroPython is now running, and the Pico is listening on a serial port. Ask your computer where it is:</p>
+<pre class="term"><code><span class="p">$</span> ls /dev/ttyACM*
+/dev/ttyACM0</code></pre>
+<p><span class="mono">/dev/ttyACM0</span> appearing means your computer sees the Pico. (On a Mac, look for <span class="mono">/dev/tty.usbmodem*</span>. On Windows, open Device Manager, look under &ldquo;Ports&rdquo; for a COM number like <span class="mono">COM4</span>, and use PuTTY instead of the next command.)</p>
+
+<h3>Step 4 &mdash; Talk to it</h3>
+<p>Open a serial window onto the Pico:</p>
+<pre class="term"><code><span class="p">$</span> screen /dev/ttyACM0 115200
+MicroPython v1.24.0 on 2024-10-25; Raspberry Pi Pico with RP2040
+Type "help()" for more information.
+&gt;&gt;&gt;</code></pre>
+<p><span class="mono">screen</span> opens the window; <span class="mono">115200</span> is the speed (baud rate). If you see gibberish, try unplugging and replugging the Pico. (To quit <span class="mono">screen</span> later: hold <span class="mono">Ctrl</span>, press <span class="mono">A</span>, then press <span class="mono">K</span>.)</p>
+<p>The <span class="mono">&gt;&gt;&gt;</span> prompt is MicroPython waiting for instructions. Type these lines one at a time and press Enter after each:</p>
+<pre class="term"><code>&gt;&gt;&gt; from machine import Pin
+&gt;&gt;&gt; led = Pin(25, Pin.OUT)
+&gt;&gt;&gt; led.on()</code></pre>
+<p>The tiny green LED on the Pico lights up. You just controlled hardware with three lines of typed text. Try <span class="mono">led.off()</span> to turn it off, and <span class="mono">led.toggle()</span> to flip it.</p>
+<p>Now ask the Pico what software it is running &mdash; this is how you check firmware on any device:</p>
+<pre class="term"><code>&gt;&gt;&gt; import sys
+&gt;&gt;&gt; sys.implementation
+(name='micropython', version=(1, 24, 0), mpy=6543)</code></pre>
+<p>That version string is the firmware identifying itself. When you want to know whether your devices are running current &mdash; or trustworthy &mdash; software, this is the question you ask.</p>
+
+<h3>Step 5 &mdash; What you just learned</h3>
+<ul>
+<li><strong>Bootloader:</strong> the BOOTSEL button woke a built-in program that accepts new firmware. Every smart device has one.</li>
+<li><strong>Firmware:</strong> the MicroPython file you dragged over is firmware &mdash; the device&rsquo;s entire operating personality in one file, replaceable by you.</li>
+<li><strong>Flashing:</strong> installing firmware is called flashing. You did it by drag-and-drop; professionals use cables, but it is the same operation.</li>
+<li><strong>Serial terminal:</strong> the <span class="mono">&gt;&gt;&gt;</span> prompt is a direct line to the chip. This skill works on routers, cameras, and thousands of other devices.</li>
+</ul>
+<p>You updated a device, verified what it runs, and controlled its hardware &mdash; with $4 of parts and no disassembly. That is the whole game. Everything else on this site is the same ideas, applied to bigger devices.</p>
+</section>
+
+<section>
+<h2>Glossary</h2>
+<p>Every field has jargon. Here is ours, in one sentence each.</p>
+<dl class="glossary">
+<div><dt>Firmware</dt><dd>The software stored inside a device that tells its chip what to do &mdash; replaceable, if you know how.</dd></div>
+<div><dt>Microcontroller</dt><dd>A tiny, complete computer on one chip &mdash; processor, memory, and inputs/outputs together. The Pico&rsquo;s RP2040 is one.</dd></div>
+<div><dt>SoC (System on a Chip)</dt><dd>A microcontroller&rsquo;s bigger sibling: a whole computer system &mdash; CPU, graphics, Wi-Fi &mdash; on a single chip, like in your phone.</dd></div>
+<div><dt>PCB (Printed Circuit Board)</dt><dd>The flat board that chips and components are soldered onto.</dd></div>
+<div><dt>Bootloader</dt><dd>The first program that runs when a device powers on &mdash; it can also accept new firmware, like the Pico&rsquo;s BOOTSEL mode.</dd></div>
+<div><dt>Flashing</dt><dd>Installing firmware onto a device &mdash; what you did by dragging the .uf2 file onto the Pico.</dd></div>
+<div><dt>Flash memory</dt><dd>The chip where firmware is stored. It keeps its contents when power is off, and it can be rewritten.</dd></div>
+<div><dt>UART / serial</dt><dd>A simple two-wire conversation between chips &mdash; one wire talks, one listens. The &ldquo;direct line&rdquo; to a device&rsquo;s firmware.</dd></div>
+<div><dt>TX / RX</dt><dd>Transmit and Receive &mdash; the two wires of a serial conversation. TX on one side connects to RX on the other.</dd></div>
+<div><dt>GND (Ground)</dt><dd>The shared electrical reference point. Both sides of a serial connection must share ground, or nothing makes sense.</dd></div>
+<div><dt>Baud rate</dt><dd>How fast the serial conversation goes, in bits per second. 115200 is the most common speed.</dd></div>
+<div><dt>Terminal</dt><dd>A text window where you type commands directly to your computer instead of clicking icons.</dd></div>
+<div><dt>REPL</dt><dd>&ldquo;Read, Evaluate, Print, Loop&rdquo; &mdash; the <span class="mono">&gt;&gt;&gt;</span> prompt that runs each line you type immediately. A conversation with the chip.</dd></div>
+<div><dt>Datasheet</dt><dd>The manufacturer&rsquo;s official manual for a chip &mdash; what every pin does, how to power it, how to talk to it.</dd></div>
+<div><dt>Teardown</dt><dd>Opening a device to document what is inside: which chips, how it is built, how hard it is to repair.</dd></div>
+<div><dt>FCC ID</dt><dd>A code the U.S. government requires on wireless devices. You can look it up to find official test photos of a device&rsquo;s insides &mdash; without opening it yourself.</dd></div>
+</dl>
+</section>
+
+<section>
+<h2>What can I do next?</h2>
+<p class="lede">You have the basics &mdash; and you did it without opening a single enclosure. Here is where each part of BareBoard takes you:</p>
+
+<div class="card">
+<h3><a href="/protocols.html">Protocol Reverse Engineering</a></h3>
+<p class="status">Fourteen documented, non-destructive ways to read a device&rsquo;s firmware &mdash; simple entry points using everyday ports, and community tools that work with the cheap parts you just bought.</p>
+</div>
+
+<div class="card">
+<h3><a href="/chips.html">Chip Database</a></h3>
+<p class="status">Look up exactly which chips are inside 47 popular devices &mdash; phones, consoles, smart home gear. When you wonder &ldquo;what is that square?&rdquo;, start here.</p>
+</div>
+
+<div class="card">
+<h3><a href="/repair.html">Repair Guides</a></h3>
+<p class="status">Nineteen devices ranked by real repair scores, worst first &mdash; now that you own the screwdriver set. Learn which gadgets are built to be fixed and which are built to be replaced.</p>
+</div>
+
+<div class="card">
+<h3><a href="/obsolescence.html">Planned Obsolescence Archive</a></h3>
+<p class="status">Seven documented cases &mdash; with sources &mdash; of companies retiring hardware early. Now you know how firmware updates work, you can spot when they&rsquo;re used against you.</p>
+</div>
+
+<div class="card">
+<h3><a href="/datasheets.html">Datasheet Index</a></h3>
+<p class="status">101 manufacturer manuals for common chips, searchable. Reading a datasheet is the core hardware skill; this is where you practice.</p>
+</div>
+
+<div class="card">
+<h3><a href="/devices/">Device Pages</a></h3>
+<p class="status">Teardowns and reference pages for consoles, single-board computers, calculators, and more &mdash; each with its FCC ID so you can look up the official filings yourself.</p>
+</div>
+</section>
+
+<section>
+<h2>A note on staying safe and legal</h2>
+<p>Everything on this page is <strong>non-destructive</strong> and for <strong>hardware you own</strong>: updating it, fixing it, and removing software you don&rsquo;t want on it. That is your right as the owner. Nothing here bypasses copy protection or anyone else&rsquo;s security, and nothing here is intended to. Work on devices unplugged from mains power whenever an enclosure is open, and treat other people&rsquo;s property with the same respect you want for yours.</p>
+</section>
+
+  <footer>
+    <a href="/tarpit/" class="hp-link" aria-hidden="true" tabindex="-1">device index</a>
+    <p>BareBoard &mdash; a free educational resource. Text and findings published under open terms; nothing here is for sale.</p>
+        <nav>
+      <a href="/">Home</a> &middot; <a href="/about.html">About</a> &middot; <a href="/colophon.html">Colophon</a>
+    </nav>
+
+    <div class="legal-framework">
+      <p><strong>BareBoard Legal Framework &amp; Declarations</strong></p>
+      <ul>
+      <li><strong>No AI training:</strong> All text, findings, and original photography on this site are copyrighted. Automated scraping for AI model training is prohibited. Crawlers that ignore robots.txt are trespassing.</li>
+        <li><strong>Educational nature:</strong> BareBoard operates exclusively as a non-commercial, open educational resource. All material is compiled for academic evaluation, hardware preservation, and technical literacy under 17 U.S.C. &sect; 107 (fair use).</li>
+        <li><strong>Zero-leak / no-binary clause:</strong> This site does not host, distribute, or mirror proprietary firmware binaries, encrypted operating system keys, or weaponizable exploits. Documentation covers only the public, physical realities of circuit hardware.</li>
+        <li><strong>Property verification:</strong> Every hardware autopsy is performed on personally owned, legally acquired equipment. No rented or third-party infrastructure is used.</li>
+        <li><strong>Public source sourcing:</strong> Comparative and regulatory data is aggregated from official public filings, including the U.S. Federal Communications Commission equipment authorization database.</li>
+      </ul>
+      <p class="legal-note"><em>BareBoard &mdash; open hardware allies, documented in alignment with the Open Source Hardware Association framework. Text and original photography published under open terms; nothing here is for sale.</em></p>
+    </div>
+  </footer>
+</main>
+
+<script src="/nav.js" defer></script>
+<script src="/search.js" defer></script>
+</body>
+</html>
