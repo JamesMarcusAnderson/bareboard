@@ -1,66 +1,71 @@
-// Hot 100 Live Renderer - The Pulse
+// Hot 100 Renderer - BareBoard curated hardware ranking (v1.0)
+// Static, sourced, editorial. No fake movement, no live pulse.
 (function() {
-  const container = document.getElementById('hot100-table-body');
-  const updatedEl = document.getElementById('hot100-updated');
-  const liveDot = document.getElementById('hot100-live-dot');
-  const pulseEl = document.getElementById('hot100-pulse');
+  var container = document.getElementById('hot100-table-body');
+  var updatedEl = document.getElementById('hot100-updated');
+  var methodEl = document.getElementById('hot100-methodology');
   if (!container) return;
 
-  function timeAgo(iso) {
-    const diff = Date.now() - new Date(iso).getTime();
-    const secs = Math.floor(diff / 1000);
-    if (secs < 60) return secs + 's ago';
-    const mins = Math.floor(secs / 60);
-    if (mins < 60) return mins + 'm ago';
-    const hrs = Math.floor(mins / 60);
-    if (hrs < 24) return hrs + 'h ago';
-    return Math.floor(hrs / 24) + 'd ago';
+  function esc(s) {
+    return String(s == null ? '' : s)
+      .replace(/&/g, '&amp;')
+      .replace(/</g, '&lt;')
+      .replace(/>/g, '&gt;')
+      .replace(/"/g, '&quot;');
   }
 
-  function trendIcon(d) {
-    if (d.trend === 'up') return `<span style="color:#0a0;" title="Up ${d.trend_amount}">&#9650;${d.trend_amount}</span>`;
-    if (d.trend === 'down') return `<span style="color:#c00;" title="Down ${d.trend_amount}">&#9660;${d.trend_amount}</span>`;
-    return `<span style="color:#888;">&mdash;</span>`;
+  function evidenceBadge(ev) {
+    var colors = { confirmed: '#0a0', likely: '#a80', unconfirmed: '#888' };
+    var c = colors[ev] || '#888';
+    return '<span style="color:' + c + ';font-weight:bold;">' + esc(ev) + '</span>';
+  }
+
+  function sourceLinks(sources) {
+    if (!sources || !sources.length) return '';
+    return sources.map(function(s, i) {
+      var label = s.type ? esc(s.type) : ('source ' + (i + 1));
+      var title = s.note ? ' title="' + esc(s.note) + '"' : '';
+      return '<a href="' + esc(s.url) + '"' + title + ' target="_blank" rel="noopener">[' + label + ']</a>';
+    }).join(' ');
   }
 
   function render(data) {
-    container.innerHTML = data.devices.map(d => {
-      const name = d.url ? `<a href="${d.url}">${d.name}</a>` : d.name;
-      const confColor = d.confidence === 'A' ? '#0a0' : d.confidence === 'B' ? '#a80' : '#888';
-      const hot = d.trend === 'up' && d.trend_amount >= 3 ? ' <span style="background:#ff6b35;color:#fff;font-size:0.7em;padding:2px 6px;border-radius:3px;">HOT</span>' : '';
-      return `<tr>
-        <td><strong>${d.rank}</strong></td>
-        <td>${name}${hot}</td>
-        <td>${d.category}</td>
-        <td>${d.units}</td>
-        <td><span style="color:${confColor};font-weight:bold;">${d.confidence}</span></td>
-        <td>${trendIcon(d)}</td>
-      </tr>`;
+    var devices = (data.devices || []).slice().sort(function(a, b) { return a.rank - b.rank; });
+    container.innerHTML = devices.map(function(d) {
+      var firstUrl = (d.sources && d.sources[0] && d.sources[0].url) ? d.sources[0].url : null;
+      var name = firstUrl
+        ? '<a href="' + esc(firstUrl) + '" target="_blank" rel="noopener">' + esc(d.name) + '</a>'
+        : esc(d.name);
+      return '<tr>' +
+        '<td><strong>' + esc(d.rank) + '</strong></td>' +
+        '<td>' + name + '<br><span style="font-size:0.8em;color:#555;">' + sourceLinks(d.sources) + '</span></td>' +
+        '<td>' + esc(d.manufacturer) + '</td>' +
+        '<td>' + esc(d.category) + '</td>' +
+        '<td>' + evidenceBadge(d.evidence) + '</td>' +
+        '<td>' + esc(d.why) + '</td>' +
+        '</tr>';
     }).join('');
-    if (updatedEl) updatedEl.textContent = 'Updated ' + timeAgo(data.updated);
-    if (liveDot) {
-      liveDot.style.background = '#0a0';
-      liveDot.style.animation = 'pulse 2s infinite';
+    if (updatedEl && data.updated) {
+      updatedEl.textContent = 'Updated ' + esc(data.updated);
     }
-    if (pulseEl && data.pulse) {
-      pulseEl.innerHTML = `<strong>${data.pulse.movers_up}</strong> climbing &middot; <strong>${data.pulse.movers_down}</strong> falling`;
+    if (methodEl) {
+      var parts = [];
+      if (data.methodology) parts.push('<p>' + esc(data.methodology) + '</p>');
+      if (data.ranking_basis) parts.push('<p><em>' + esc(data.ranking_basis) + '</em></p>');
+      if (data.evidence_labels) {
+        parts.push('<p>Evidence labels: ' +
+          Object.keys(data.evidence_labels).map(function(k) {
+            return '<strong>' + esc(k) + '</strong> — ' + esc(data.evidence_labels[k]);
+          }).join(' ') + '</p>');
+      }
+      methodEl.innerHTML = parts.join('');
     }
   }
 
-  // Add pulse animation CSS
-  const style = document.createElement('style');
-  style.textContent = '@keyframes pulse { 0%,100% { opacity: 1; } 50% { opacity: 0.4; } }';
-  document.head.appendChild(style);
-
   fetch('/hot100-live.json')
-    .then(r => r.json())
+    .then(function(r) { return r.json(); })
     .then(render)
-    .catch(() => { if (liveDot) liveDot.style.background = '#c00'; });
-
-  setInterval(() => {
-    fetch('/hot100-live.json?t=' + Date.now())
-      .then(r => r.json())
-      .then(render)
-      .catch(() => {});
-  }, 60000); // Refresh every minute
+    .catch(function() {
+      container.innerHTML = '<tr><td colspan="6">Could not load rankings.</td></tr>';
+    });
 })();
