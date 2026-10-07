@@ -9,6 +9,7 @@
   --line: #e8e8ea;
   --accent: #0066cc;
   --accent-ink: #004a99;
+  --mono: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
   color-scheme: light;
 }
 
@@ -34,24 +35,24 @@ a { color: var(--accent); text-decoration: none; }
 a:hover { text-decoration: underline; text-underline-offset: 3px; }
 a:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; border-radius: 4px; }
 
-/* ---------- navigation ---------- */
+/* ---------- navigation — Finder column browser ---------- */
 
 .site-nav {
   position: sticky;
   top: 0;
   z-index: 50;
-  background: rgba(251, 251, 252, 0.82);
-  -webkit-backdrop-filter: blur(20px) saturate(180%);
-  backdrop-filter: blur(20px) saturate(180%);
+  background: rgba(251, 251, 252, 0.72);
+  -webkit-backdrop-filter: blur(24px) saturate(180%);
+  backdrop-filter: blur(24px) saturate(180%);
   border-bottom: 1px solid var(--line);
 }
 
 .nav-inner {
   max-width: 46rem;
   margin: 0 auto;
-  padding: 0.85rem 1.5rem;
+  padding: 0.6rem 1.5rem;
   display: flex;
-  align-items: baseline;
+  align-items: center;
   justify-content: center;
   gap: 1rem;
 }
@@ -59,116 +60,287 @@ a:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; border-
   font-weight: 700;
   letter-spacing: -0.005em;
   color: var(--text);
-  font-size: 1rem;
+  font-size: 0.95rem;
 }
 .site-nav .brand-word:hover { text-decoration: none; color: var(--accent); }
 
-.site-nav nav { display: flex; gap: 1.4rem; flex-wrap: wrap; }
-.site-nav nav a {
-  color: var(--secondary);
-  font-size: 1rem;
-  letter-spacing: -0.005em;
-}
-.site-nav nav a:hover { color: var(--text); text-decoration: none; }
-/* ---------- column-view nav (Finder "as Columns" transposed to rows) ---------- */
-.site-nav nav ul {
+/* top-level row = Finder column zero */
+.site-nav nav > ul {
   list-style: none;
   margin: 0;
   padding: 0;
-}
-.site-nav nav > ul {
   display: flex;
-  gap: 2rem;
-  flex-wrap: wrap;
+  gap: 0.25rem;
+  align-items: center;
   justify-content: center;
 }
 .site-nav nav > ul > li {
   position: static;
 }
-.site-nav .col-panel {
-  display: none;
+.site-nav nav > ul > li > a {
+  display: inline-block;
+  padding: 0.35rem 0.7rem;
+  border-radius: 7px;
+  color: var(--secondary);
+  font-size: 0.9rem;
+  letter-spacing: -0.005em;
+  transition: color 0.18s ease, background-color 0.18s ease;
+}
+.site-nav nav > ul > li > a:hover { color: var(--text); text-decoration: none; }
+/* single active selection per column, Finder-style */
+.site-nav nav > ul > li.selected > a {
+  background: rgba(0, 102, 204, 0.1);
+  color: var(--text);
+}
+
+/* search toggle */
+.nav-search-item { margin-left: 0.5rem; }
+.search-toggle {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 2rem;
+  height: 2rem;
+  padding: 0;
+  border: none;
+  border-radius: 50%;
+  background: transparent;
+  color: var(--secondary);
+  cursor: pointer;
+  transition: color 0.18s ease, background-color 0.18s ease;
+}
+.search-toggle:hover { color: var(--text); background: rgba(0, 0, 0, 0.05); }
+.search-toggle[aria-expanded="true"] { color: var(--text); background: rgba(0, 102, 204, 0.1); }
+
+/* full-width frosted panel shared by Finder columns and search */
+.site-nav .col-panel,
+.site-nav .search-panel {
   position: absolute;
   top: 100%;
   left: 0;
   right: 0;
-  background: rgba(251, 251, 252, 0.97);
-  -webkit-backdrop-filter: blur(20px) saturate(180%);
-  backdrop-filter: blur(20px) saturate(180%);
+  background: rgba(251, 251, 252, 0.72);
+  -webkit-backdrop-filter: blur(24px) saturate(180%);
+  backdrop-filter: blur(24px) saturate(180%);
   border-bottom: 1px solid var(--line);
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.08);
   z-index: 100;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(-8px);
+  pointer-events: none;
+  transition:
+    opacity 0.24s ease,
+    transform 0.24s ease,
+    visibility 0s linear 0.24s;
 }
-.site-nav .has-children:hover > .col-panel,
-.site-nav .has-children:focus-within > .col-panel {
-  display: block;
+.site-nav .has-children.open > .col-panel,
+.site-nav .search-panel.open {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+  pointer-events: auto;
+  transition:
+    opacity 0.24s ease,
+    transform 0.24s ease,
+    visibility 0s;
 }
-.site-nav .col-row {
+/* no-JS fallback: hover/focus still reveals panels */
+html:not(.js) .site-nav .has-children:hover > .col-panel,
+html:not(.js) .site-nav .has-children:focus-within > .col-panel {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+  pointer-events: auto;
+  transition:
+    opacity 0.24s ease,
+    transform 0.24s ease,
+    visibility 0s;
+}
+
+/* Finder column strip */
+.finder {
   display: flex;
-  gap: 1.6rem;
-  flex-wrap: wrap;
+  align-items: stretch;
   max-width: 46rem;
   margin: 0 auto;
-  padding: 0.9rem 1.5rem;
+  padding: 0 1.5rem;
+  overflow-x: auto;
+  min-height: 4rem;
+}
+.finder-col {
   list-style: none;
+  margin: 0;
+  padding: 0.7rem 0;
+  min-width: 13rem;
+  max-width: 16rem;
+  flex: 0 0 auto;
+  overflow-y: auto;
+  max-height: 21rem;
 }
-.site-nav .col-row + .col-row {
-  border-top: 1px solid var(--line);
-  padding-top: 0.9rem;
+.finder-col + .finder-col {
+  border-left: 1px solid var(--line);
 }
-.site-nav .col-row {
-  position: relative;
-}
-.site-nav .col-row li {
-  position: static;
-}
-.site-nav .col-row a {
-  font-size: 0.92rem;
+.finder-col-head {
+  font-family: var(--mono);
+  font-size: 0.68rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.09em;
+  color: var(--tertiary);
+  padding: 0.35rem 1.1rem 0.5rem;
   white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
-
-
-/* ---------- devices folder: mega reveal, everything visible at once ---------- */
-.site-nav .nav-label {
-  color: var(--secondary);
-  font-size: 1rem;
+.finder-col > li > a,
+.finder-col > li > .finder-note {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.75rem;
+  padding: 0.42rem 1.1rem;
+  font-size: 0.92rem;
   letter-spacing: -0.005em;
+  color: var(--text);
+  white-space: nowrap;
+  border-radius: 6px;
+  margin: 0 0.4rem;
+  transition: background-color 0.12s ease;
+}
+.finder-col > li > a:hover { text-decoration: none; background: rgba(0, 0, 0, 0.045); }
+.finder-col > li.selected > a {
+  background: rgba(0, 102, 204, 0.12);
+  color: var(--text);
+}
+.finder-col > li.has-kids > a::after {
+  content: "\203a";
+  color: var(--tertiary);
+  font-size: 1.05rem;
+  line-height: 1;
+}
+.finder-col > li > .finder-note {
+  color: var(--secondary);
+  font-size: 0.85rem;
   cursor: default;
 }
-.site-nav .nav-label:hover { color: var(--text); }
-.site-nav .mega-wrap {
+/* no-JS fallback: nested lists render as an indented tree */
+html:not(.js) .finder ul ul {
+  list-style: none;
+  margin: 0.15rem 0 0.5rem 1.1rem;
+  padding-left: 0.7rem;
+  border-left: 1px solid var(--line);
+}
+html:not(.js) .finder ul ul a { font-size: 0.86rem; color: var(--secondary); }
+
+/* ---------- search panel ---------- */
+
+.search-inner {
   max-width: 46rem;
   margin: 0 auto;
-  padding: 1rem 1.5rem 1.2rem;
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(9rem, 1fr));
-  gap: 1rem 1.5rem;
-}
-.site-nav .mega-col {
+  padding: 1.1rem 1.5rem 0.4rem;
   display: flex;
-  flex-direction: column;
-  gap: 0.25rem;
+  align-items: center;
+  gap: 0.8rem;
 }
-.site-nav .mega-cat {
-  font-size: 0.92rem;
-  color: var(--text);
-  font-weight: 600;
-  white-space: nowrap;
-}
-.site-nav .mega-col .soon {
-  font-size: 0.85rem;
+.search-inner .search-icon {
+  flex: 0 0 auto;
   color: var(--secondary);
-  white-space: nowrap;
 }
-
-/* hover bridges: keep the menu alive while the pointer travels down */
-.site-nav .col-panel::before {
-  content: "";
-  position: absolute;
-  top: -40px;
-  left: 0;
-  right: 0;
-  height: 40px;
+#site-search {
+  flex: 1 1 auto;
+  min-width: 0;
+  font: inherit;
+  font-size: 1.35rem;
+  font-weight: 600;
+  letter-spacing: -0.02em;
+  color: var(--text);
+  background: transparent;
+  border: none;
+  border-bottom: 2px solid var(--line);
+  border-radius: 0;
+  padding: 0.5rem 0.1rem;
+  outline: none;
+  transition: border-color 0.18s ease;
 }
-
+#site-search::placeholder { color: var(--tertiary); font-weight: 500; }
+#site-search:focus { border-bottom-color: var(--accent); }
+.search-close {
+  flex: 0 0 auto;
+  width: 2rem;
+  height: 2rem;
+  border: 1px solid var(--line);
+  border-radius: 50%;
+  background: transparent;
+  color: var(--secondary);
+  font-size: 1rem;
+  line-height: 1;
+  cursor: pointer;
+  transition: color 0.15s ease, border-color 0.15s ease;
+}
+.search-close:hover { color: var(--text); border-color: var(--secondary); }
+.search-hint {
+  max-width: 46rem;
+  margin: 0 auto;
+  padding: 0 1.5rem 0.6rem;
+  font-family: var(--mono);
+  font-size: 0.72rem;
+  color: var(--tertiary);
+  letter-spacing: 0.02em;
+}
+.search-hint kbd {
+  font-family: inherit;
+  border: 1px solid var(--line);
+  border-bottom-width: 2px;
+  border-radius: 4px;
+  padding: 0.05rem 0.35rem;
+  background: var(--surface);
+}
+.search-results {
+  max-width: 46rem;
+  margin: 0 auto;
+  padding: 0.4rem 1.5rem 1.5rem;
+  list-style: none;
+  max-height: 46vh;
+  overflow-y: auto;
+}
+.search-results li + li { border-top: 1px solid var(--line); }
+.search-results a {
+  display: block;
+  padding: 0.75rem 0.2rem;
+  border-radius: 6px;
+  transition: background-color 0.12s ease;
+}
+.search-results a:hover { text-decoration: none; background: rgba(0, 0, 0, 0.03); }
+.search-results .res-title {
+  display: block;
+  font-weight: 600;
+  font-size: 0.98rem;
+  letter-spacing: -0.01em;
+  color: var(--text);
+}
+.search-results .res-url {
+  display: block;
+  font-family: var(--mono);
+  font-size: 0.72rem;
+  color: var(--tertiary);
+  margin-top: 0.15rem;
+}
+.search-results .res-snippet {
+  display: block;
+  font-size: 0.86rem;
+  color: var(--secondary);
+  margin-top: 0.25rem;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+.search-empty {
+  padding: 1rem 0.2rem;
+  color: var(--secondary);
+  font-size: 0.92rem;
+}
 /* ---------- layout ---------- */
 
 main {
@@ -384,9 +556,35 @@ body { animation: page-in 0.35s ease; }
 
 @media (max-width: 560px) {
   main { padding: 2.5rem 1.25rem 4rem; }
-  .nav-inner { padding: 0.8rem 1.25rem; }
-  .site-nav nav { gap: 1rem; }
-  .site-nav nav a { font-size: 0.86rem; }
+  .nav-inner { padding: 0.55rem 1rem; justify-content: flex-start; }
+  /* single scrollable row instead of wrapping — keeps the bar slim */
+  .site-nav nav > ul {
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    gap: 1.4rem;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+    max-width: 100%;
+  }
+  .site-nav nav > ul::-webkit-scrollbar { display: none; }
+  .site-nav nav > ul > li { flex: 0 0 auto; }
+  .site-nav nav > ul > li > a { font-size: 0.86rem; white-space: nowrap; }
+  /* Finder panel on small screens: columns scroll horizontally with snap */
+  .finder {
+    padding: 0 1rem;
+    scroll-snap-type: x proximity;
+  }
+  .finder-col {
+    min-width: 11.5rem;
+    max-width: 78vw;
+    scroll-snap-align: start;
+  }
+  .finder-col > li > a { font-size: 0.95rem; }
+  /* search panel stays comfortable */
+  .search-inner { padding: 1rem 1.25rem 0.4rem; }
+  #site-search { font-size: 1.15rem; }
+  .search-hint, .search-results { padding-left: 1.25rem; padding-right: 1.25rem; }
   table.hot100 th, table.hot100 td { padding: 0.55rem 0.6rem; }
 }
 
@@ -484,31 +682,3 @@ p.note { font-size: 0.95rem; color: var(--secondary); border-left: 3px solid var
   margin-top: 0.8rem;
 }
 
-/* Devices mega menu: macOS Finder column illusion */
-.site-nav li.has-children.mega { position: relative; }
-.site-nav .has-children.mega > .col-panel {
-  left: 0;
-  right: auto;
-  width: max-content;
-  max-width: 92vw;
-}
-.site-nav .mega-wrap.mega-two-col {
-  display: grid;
-  grid-template-columns: auto auto;
-  gap: 0;
-  max-width: none;
-  margin: 0;
-  padding: 0.6rem 0;
-  justify-content: start;
-  align-content: start;
-}
-.site-nav .mega-two-col .mega-cat {
-  padding: 0.42rem 1.5rem;
-  font-weight: 600;
-  white-space: nowrap;
-}
-.site-nav .mega-two-col .soon {
-  padding: 0.42rem 1.5rem;
-  border-left: 1px solid var(--line);
-  white-space: nowrap;
-}
