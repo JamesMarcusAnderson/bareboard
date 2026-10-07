@@ -1,1558 +1,1725 @@
 {
- "updated": "2026-10-07T08:53:32.690711+00:00",
- "methodology": "v0.2",
- "live": true,
- "devices": [
-  {
-   "rank": 1,
-   "name": "Casio calculator line (1964\u2013present)",
-   "category": "Other",
-   "units": "1.80B (Casio 60th-anniversary manufactur",
-   "confidence": "A",
-   "url": null,
-   "previous_rank": 3,
-   "trend": "up",
-   "trend_amount": 2
-  },
-  {
-   "rank": 2,
-   "name": "Apple iPod line (2001\u20132022)",
-   "category": "Other",
-   "units": "300M (Apple announcement (Tim Cook, via ",
-   "confidence": "A",
-   "url": null,
-   "previous_rank": 1,
-   "trend": "down",
-   "trend_amount": 1
-  },
-  {
-   "rank": 3,
-   "name": "Lenovo ThinkPad (entire line)",
-   "category": "PCs &amp; Single-Board",
-   "units": "200M (Lenovo StoryHub (30th anniversary ",
-   "confidence": "A",
-   "url": null,
-   "previous_rank": 1,
-   "trend": "down",
-   "trend_amount": 2
-  },
-  {
-   "rank": 4,
-   "name": "Nokia 1100",
-   "category": "Phones",
-   "units": "250M (Wikipedia citing Nokia-era press r",
-   "confidence": "B",
-   "url": null,
-   "previous_rank": 6,
-   "trend": "up",
-   "trend_amount": 2
-  },
-  {
-   "rank": 5,
-   "name": "Nokia 1110 / 1110i",
-   "category": "Phones",
-   "units": "250M (Wikipedia citing press reports, no",
-   "confidence": "B",
-   "url": null,
-   "previous_rank": 4,
-   "trend": "down",
-   "trend_amount": 1
-  },
-  {
-   "rank": 6,
-   "name": "HP DeskJet line (1988\u2013present)",
-   "category": "Printers",
-   "units": "240M (HP 20th-anniversary milestone repo",
-   "confidence": "B",
-   "url": null,
-   "previous_rank": 4,
-   "trend": "down",
-   "trend_amount": 2
-  },
-  {
-   "rank": 7,
-   "name": "iPhone 6 / 6 Plus",
-   "category": "Phones",
-   "units": "222.4M (AppleInsider/analyst estimates v",
-   "confidence": "B",
-   "url": null,
-   "previous_rank": 5,
-   "trend": "down",
-   "trend_amount": 2
-  },
-  {
-   "rank": 8,
-   "name": "PlayStation 2 (SCPH-30000 through 90000)",
-   "category": "Game Consoles",
-   "units": "160M (Sony official PlayStation history ",
-   "confidence": "A",
-   "url": null,
-   "previous_rank": 6,
-   "trend": "down",
-   "trend_amount": 2
-  },
-  {
-   "rank": 9,
-   "name": "Nintendo Switch (original, Lite, OLED)",
-   "category": "Game Consoles",
-   "units": "155.9M (Nintendo FY2026 financial result",
-   "confidence": "A",
-   "url": null,
-   "previous_rank": 11,
-   "trend": "up",
-   "trend_amount": 2
-  },
-  {
-   "rank": 10,
-   "name": "Nintendo DS / DS Lite",
-   "category": "Game Consoles",
-   "units": "154M (Nintendo IR lifetime hardware, 201",
-   "confidence": "A",
-   "url": null,
-   "previous_rank": 7,
-   "trend": "down",
-   "trend_amount": 3
-  },
-  {
-   "rank": 11,
-   "name": "Nokia 105 series (2013/2015 variants)",
-   "category": "Phones",
-   "units": "200M (Wikipedia (List of best-selling mo",
-   "confidence": "B",
-   "url": null,
-   "previous_rank": 13,
-   "trend": "up",
-   "trend_amount": 2
-  },
-  {
-   "rank": 12,
-   "name": "HP LaserJet line (1984\u2013present)",
-   "category": "Printers",
-   "units": "200M (HP milestone reported by IT-Sp (co",
-   "confidence": "B",
-   "url": null,
-   "previous_rank": 14,
-   "trend": "up",
-   "trend_amount": 2
-  },
-  {
-   "rank": 13,
-   "name": "iPhone 6S / 6S Plus",
-   "category": "Phones",
-   "units": "174.5M (analyst estimates via Wikipedia,",
-   "confidence": "B",
-   "url": null,
-   "previous_rank": 14,
-   "trend": "up",
-   "trend_amount": 1
-  },
-  {
-   "rank": 14,
-   "name": "iPhone 5s",
-   "category": "Phones",
-   "units": "165M (Omdia via Visual Capitalist, 2023)",
-   "confidence": "B",
-   "url": null,
-   "previous_rank": 11,
-   "trend": "down",
-   "trend_amount": 3
-  },
-  {
-   "rank": 15,
-   "name": "Nokia 3210",
-   "category": "Phones",
-   "units": "161M (Omdia via Visual Capitalist, 2023)",
-   "confidence": "B",
-   "url": null,
-   "previous_rank": 16,
-   "trend": "up",
-   "trend_amount": 1
-  },
-  {
-   "rank": 16,
-   "name": "iPhone 11 / 11 Pro / 11 Pro Max",
-   "category": "Phones",
-   "units": "159M (Omdia via Visual Capitalist, 2023)",
-   "confidence": "B",
-   "url": null,
-   "previous_rank": 16,
-   "trend": "same",
-   "trend_amount": 0
-  },
-  {
-   "rank": 17,
-   "name": "Game Boy / Game Boy Color",
-   "category": "Game Consoles",
-   "units": "118.7M (Nintendo IR lifetime hardware, 2",
-   "confidence": "A",
-   "url": null,
-   "previous_rank": 14,
-   "trend": "down",
-   "trend_amount": 3
-  },
-  {
-   "rank": 18,
-   "name": "iPhone 7 / 7 Plus",
-   "category": "Phones",
-   "units": "156.7M (Wikipedia (List of best-selling ",
-   "confidence": "B",
-   "url": null,
-   "previous_rank": 15,
-   "trend": "down",
-   "trend_amount": 3
-  },
-  {
-   "rank": 19,
-   "name": "PlayStation 4 (CUH-1000 through CUH-2200)",
-   "category": "Game Consoles",
-   "units": "117M (Sony official PlayStation history ",
-   "confidence": "A",
-   "url": null,
-   "previous_rank": 16,
-   "trend": "down",
-   "trend_amount": 3
-  },
-  {
-   "rank": 20,
-   "name": "iPhone XR / XS / XS Max",
-   "category": "Phones",
-   "units": "150.7M (Wikipedia (List of best-selling ",
-   "confidence": "B",
-   "url": null,
-   "previous_rank": 18,
-   "trend": "down",
-   "trend_amount": 2
-  },
-  {
-   "rank": 21,
-   "name": "Nokia 1200",
-   "category": "Phones",
-   "units": "150M (Omdia via Visual Capitalist, 2023)",
-   "confidence": "B",
-   "url": null,
-   "previous_rank": 19,
-   "trend": "down",
-   "trend_amount": 2
-  },
-  {
-   "rank": 22,
-   "name": "Nokia 5230",
-   "category": "Phones",
-   "units": "150M (Omdia via Visual Capitalist, 2023)",
-   "confidence": "B",
-   "url": null,
-   "previous_rank": 23,
-   "trend": "up",
-   "trend_amount": 1
-  },
-  {
-   "rank": 23,
-   "name": "PlayStation (PS1, SCPH-1000 through 9000)",
-   "category": "Game Consoles",
-   "units": "102M (Sony official PlayStation history ",
-   "confidence": "A",
-   "url": null,
-   "previous_rank": 24,
-   "trend": "up",
-   "trend_amount": 1
-  },
-  {
-   "rank": 24,
-   "name": "Nintendo Wii",
-   "category": "Game Consoles",
-   "units": "101.6M (Nintendo IR lifetime hardware, 2",
-   "confidence": "A",
-   "url": null,
-   "previous_rank": 21,
-   "trend": "down",
-   "trend_amount": 3
-  },
-  {
-   "rank": 25,
-   "name": "Google Chromecast 2nd gen (2015)",
-   "category": "Media Streamers",
-   "units": "100M (Google (official blog + hardware e",
-   "confidence": "A",
-   "url": null,
-   "previous_rank": 26,
-   "trend": "up",
-   "trend_amount": 1
-  },
-  {
-   "rank": 26,
-   "name": "Motorola RAZR V3",
-   "category": "Phones",
-   "units": "130M (Wikipedia (List of best-selling mo",
-   "confidence": "B",
-   "url": null,
-   "previous_rank": 24,
-   "trend": "down",
-   "trend_amount": 2
-  },
-  {
-   "rank": 27,
-   "name": "Nokia 3310 (3330)",
-   "category": "Phones",
-   "units": "126M (Wikipedia (List of best-selling mo",
-   "confidence": "B",
-   "url": null,
-   "previous_rank": 29,
-   "trend": "up",
-   "trend_amount": 2
-  },
-  {
-   "rank": 28,
-   "name": "PlayStation 3 (CECHA through CECH-4300)",
-   "category": "Game Consoles",
-   "units": "87M (Sony official PlayStation history p",
-   "confidence": "A",
-   "url": null,
-   "previous_rank": 30,
-   "trend": "up",
-   "trend_amount": 2
-  },
-  {
-   "rank": 29,
-   "name": "Xbox 360 (Xenon through Corona)",
-   "category": "Game Consoles",
-   "units": "84M (Microsoft E3 2014 announcement, 201",
-   "confidence": "A",
-   "url": null,
-   "previous_rank": 31,
-   "trend": "up",
-   "trend_amount": 2
-  },
-  {
-   "rank": 30,
-   "name": "Nintendo 3DS",
-   "category": "Game Consoles",
-   "units": "75.9M (Nintendo IR sales data, 2020-09)",
-   "confidence": "A",
-   "url": null,
-   "previous_rank": 32,
-   "trend": "up",
-   "trend_amount": 1
-  },
-  {
-   "rank": 31,
-   "name": "Raspberry Pi (all generations)",
-   "category": "PCs &amp; Single-Board",
-   "units": "75M (Raspberry Pi Holdings FY 2025 resul",
-   "confidence": "A",
-   "url": null,
-   "previous_rank": 32,
-   "trend": "same",
-   "trend_amount": 0
-  },
-  {
-   "rank": 32,
-   "name": "Nokia I-240G-A (Alcatel-Lucent GPON ONT)",
-   "category": "Networking Gear",
-   "units": "100M (Nokia (Feb 2021, via GlobeNewswire",
-   "confidence": "B",
-   "url": null,
-   "previous_rank": 31,
-   "trend": "down",
-   "trend_amount": 2
-  },
-  {
-   "rank": 33,
-   "name": "iPhone 12 / 12 mini / 12 Pro / 12 Pro Max",
-   "category": "Phones",
-   "units": "100M (Wikipedia (List of best-selling mo",
-   "confidence": "B",
-   "url": null,
-   "previous_rank": 34,
-   "trend": "same",
-   "trend_amount": 0
-  },
-  {
-   "rank": 34,
-   "name": "PlayStation 5 (CFI-1000 through CFI-2000)",
-   "category": "Game Consoles",
-   "units": "93.6M (Sony earnings disclosure (via Vid",
-   "confidence": "B",
-   "url": null,
-   "previous_rank": 36,
-   "trend": "up",
-   "trend_amount": 1
-  },
-  {
-   "rank": 35,
-   "name": "Family Computer / Nintendo Entertainment System (NES)",
-   "category": "Game Consoles",
-   "units": "61.9M (Nintendo IR sales data, 2016-03)",
-   "confidence": "A",
-   "url": null,
-   "previous_rank": 35,
-   "trend": "down",
-   "trend_amount": 1
-  },
-  {
-   "rank": 36,
-   "name": "Vizio TV line (2002\u2013present)",
-   "category": "TVs &amp; Displays",
-   "units": "82M (Vizio IPO coverage (Nasdaq, Mar 202",
-   "confidence": "B",
-   "url": null,
-   "previous_rank": 40,
-   "trend": "up",
-   "trend_amount": 3
-  },
-  {
-   "rank": 37,
-   "name": "Tamagotchi line (1996\u2013present)",
-   "category": "Other",
-   "units": "80M (Bandai licensing material (via Tota",
-   "confidence": "B",
-   "url": null,
-   "previous_rank": 41,
-   "trend": "up",
-   "trend_amount": 3
-  },
-  {
-   "rank": 38,
-   "name": "Super Famicom / Super Nintendo (SNES)",
-   "category": "Game Consoles",
-   "units": "49.1M (Nintendo IR sales data, 2016-03)",
-   "confidence": "A",
-   "url": null,
-   "previous_rank": 36,
-   "trend": "down",
-   "trend_amount": 3
-  },
-  {
-   "rank": 39,
-   "name": "Epson EcoTank line (2010\u2013present; e.g. ET-2850)",
-   "category": "Printers",
-   "units": "60M (Epson press release, 2021-11)",
-   "confidence": "B",
-   "url": null,
-   "previous_rank": 43,
-   "trend": "up",
-   "trend_amount": 3
-  },
-  {
-   "rank": 40,
-   "name": "iRobot home-robot line (2002\u2013present)",
-   "category": "Smart Home / IoT",
-   "units": "40M (iRobot company disclosure (via ZDNe",
-   "confidence": "A",
-   "url": null,
-   "previous_rank": 44,
-   "trend": "up",
-   "trend_amount": 3
-  },
-  {
-   "rank": 41,
-   "name": "Samsung Galaxy A12",
-   "category": "Phones",
-   "units": "51.8M (Omdia 4Q21 Smartphone Model Marke",
-   "confidence": "B",
-   "url": null,
-   "previous_rank": 40,
-   "trend": "down",
-   "trend_amount": 2
-  },
-  {
-   "rank": 42,
-   "name": "Nintendo 64",
-   "category": "Game Consoles",
-   "units": "32.9M (Nintendo IR sales data, 2016-03)",
-   "confidence": "A",
-   "url": null,
-   "previous_rank": 45,
-   "trend": "up",
-   "trend_amount": 2
-  },
-  {
-   "rank": 43,
-   "name": "Linksys WRT54G (all revisions, incl. WRT54GL)",
-   "category": "Networking Gear",
-   "units": "31M (Linksys Global Product Manager Vinc",
-   "confidence": "A",
-   "url": null,
-   "previous_rank": 44,
-   "trend": "same",
-   "trend_amount": 0
-  },
-  {
-   "rank": 44,
-   "name": "Sega Genesis / Mega Drive",
-   "category": "Game Consoles",
-   "units": "30.8M (Sega historical sales data, 2001)",
-   "confidence": "A",
-   "url": null,
-   "previous_rank": 44,
-   "trend": "down",
-   "trend_amount": 1
-  },
-  {
-   "rank": 45,
-   "name": "Samsung QLED TV line (2017\u2013present)",
-   "category": "TVs &amp; Displays",
-   "units": "40M (Samsung Newsroom, citing Omdia, 202",
-   "confidence": "B",
-   "url": null,
-   "previous_rank": 45,
-   "trend": "down",
-   "trend_amount": 1
-  },
-  {
-   "rank": 46,
-   "name": "Nintendo Switch 2",
-   "category": "Game Consoles",
-   "units": "23.7M (Nintendo FY2027 Q1 earnings, 2026",
-   "confidence": "A",
-   "url": null,
-   "previous_rank": 45,
-   "trend": "down",
-   "trend_amount": 2
-  },
-  {
-   "rank": 47,
-   "name": "Raspberry Pi 3 range (3B / 3A+ / 3B+)",
-   "category": "PCs &amp; Single-Board",
-   "units": "23M (Tom&#x27;s Hardware, citing CEO Ebe",
-   "confidence": "A",
-   "url": null,
-   "previous_rank": 46,
-   "trend": "down",
-   "trend_amount": 2
-  },
-  {
-   "rank": 48,
-   "name": "Hisense TV line (annual brand shipments)",
-   "category": "TVs &amp; Displays",
-   "units": "29.1M (Hisense company news (2024 global",
-   "confidence": "B",
-   "url": null,
-   "previous_rank": 52,
-   "trend": "up",
-   "trend_amount": 3
-  },
-  {
-   "rank": 49,
-   "name": "TCL TV line (incl. Roku TV models)",
-   "category": "TVs &amp; Displays",
-   "units": "29M (TCL Industries 2024 annual report (",
-   "confidence": "B",
-   "url": null,
-   "previous_rank": 49,
-   "trend": "down",
-   "trend_amount": 1
-  },
-  {
-   "rank": 50,
-   "name": "Nintendo GameCube",
-   "category": "Game Consoles",
-   "units": "21.7M (Nintendo IR sales data, 2016-03)",
-   "confidence": "A",
-   "url": null,
-   "previous_rank": 48,
-   "trend": "down",
-   "trend_amount": 3
-  },
-  {
-   "rank": 51,
-   "name": "Sonos connected-speaker line (Play:1 / One / Era)",
-   "category": "Smart Home / IoT",
-   "units": "19M (Sonos S-1 SEC filing (as of March 3",
-   "confidence": "A",
-   "url": null,
-   "previous_rank": 49,
-   "trend": "down",
-   "trend_amount": 3
-  },
-  {
-   "rank": 52,
-   "name": "ECOVACS DEEBOT line (2006\u2013present)",
-   "category": "Smart Home / IoT",
-   "units": "25M (ECOVACS company claim at launch eve",
-   "confidence": "B",
-   "url": null,
-   "previous_rank": 53,
-   "trend": "same",
-   "trend_amount": 0
-  },
-  {
-   "rank": 53,
-   "name": "iPhone SE (2nd generation)",
-   "category": "Phones",
-   "units": "24.2M (Wikipedia (List of best-selling m",
-   "confidence": "B",
-   "url": null,
-   "previous_rank": 51,
-   "trend": "down",
-   "trend_amount": 3
-  },
-  {
-   "rank": 54,
-   "name": "Xbox Series X / Series S",
-   "category": "Game Consoles",
-   "units": "35.2M (VGChartz estimate, 2026-07)",
-   "confidence": "C",
-   "url": null,
-   "previous_rank": 54,
-   "trend": "down",
-   "trend_amount": 1
-  },
-  {
-   "rank": 55,
-   "name": "Google Chromecast 1st gen (2013)",
-   "category": "Media Streamers",
-   "units": "17M (Google (I/O 2015 keynote, reported ",
-   "confidence": "A",
-   "url": null,
-   "previous_rank": 59,
-   "trend": "up",
-   "trend_amount": 3
-  },
-  {
-   "rank": 56,
-   "name": "Amazon eero (2nd gen, 2017)",
-   "category": "Networking Gear",
-   "units": "20M (eero CEO Nick Weaver, eero 7 launch",
-   "confidence": "B",
-   "url": null,
-   "previous_rank": 56,
-   "trend": "down",
-   "trend_amount": 1
-  },
-  {
-   "rank": 57,
-   "name": "Keurig brewer line (1998\u2013present)",
-   "category": "Other",
-   "units": "20M (Keurig sales history (Food Business",
-   "confidence": "B",
-   "url": null,
-   "previous_rank": 59,
-   "trend": "up",
-   "trend_amount": 1
-  },
-  {
-   "rank": 58,
-   "name": "Hatchimals line (2016\u2013present)",
-   "category": "Other",
-   "units": "14.2M (Spin Master press release (PR New",
-   "confidence": "A",
-   "url": null,
-   "previous_rank": 58,
-   "trend": "down",
-   "trend_amount": 1
-  },
-  {
-   "rank": 59,
-   "name": "Nintendo Wii U",
-   "category": "Game Consoles",
-   "units": "13.6M (Nintendo IR sales data, 2019-12)",
-   "confidence": "A",
-   "url": null,
-   "previous_rank": 63,
-   "trend": "up",
-   "trend_amount": 3
-  },
-  {
-   "rank": 60,
-   "name": "Canon SELPHY line (2004\u2013present)",
-   "category": "Printers",
-   "units": "17M (Canon 20th-anniversary announcement",
-   "confidence": "B",
-   "url": null,
-   "previous_rank": 58,
-   "trend": "down",
-   "trend_amount": 3
-  },
-  {
-   "rank": 61,
-   "name": "Samsung Galaxy S21 / S21+ / S21 Ultra",
-   "category": "Phones",
-   "units": "13.5M (Wikipedia (List of best-selling m",
-   "confidence": "B",
-   "url": null,
-   "previous_rank": 64,
-   "trend": "up",
-   "trend_amount": 2
-  },
-  {
-   "rank": 62,
-   "name": "Arris TG1682G / Xfinity XB3 (xFi Wireless Gateway)",
-   "category": "Networking Gear",
-   "units": "10M (Comcast via ibtimes.sg: &#x27;over ",
-   "confidence": "A",
-   "url": null,
-   "previous_rank": 63,
-   "trend": "same",
-   "trend_amount": 0
-  },
-  {
-   "rank": 63,
-   "name": "Arduino Uno (ATmega328P boards)",
-   "category": "PCs &amp; Single-Board",
-   "units": "10M (CNX Software reporting Arduino&#x27",
-   "confidence": "A",
-   "url": null,
-   "previous_rank": 65,
-   "trend": "up",
-   "trend_amount": 1
-  },
-  {
-   "rank": 64,
-   "name": "Samsung Galaxy S22 Ultra",
-   "category": "Phones",
-   "units": "10.9M (Wikipedia (List of best-selling m",
-   "confidence": "B",
-   "url": null,
-   "previous_rank": 62,
-   "trend": "down",
-   "trend_amount": 3
-  },
-  {
-   "rank": 65,
-   "name": "magicJack line (2008\u2013present)",
-   "category": "Other",
-   "units": "8M (magicJack company press release (Glo",
-   "confidence": "A",
-   "url": null,
-   "previous_rank": 66,
-   "trend": "same",
-   "trend_amount": 0
-  },
-  {
-   "rank": 66,
-   "name": "LG OLED TV line (2013\u2013present)",
-   "category": "TVs &amp; Displays",
-   "units": "10M (LG/Omdia milestone reported by Adva",
-   "confidence": "B",
-   "url": null,
-   "previous_rank": 64,
-   "trend": "down",
-   "trend_amount": 3
-  },
-  {
-   "rank": 67,
-   "name": "Sega Dreamcast",
-   "category": "Game Consoles",
-   "units": "9.1M (IT History Society / Sega-era repo",
-   "confidence": "B",
-   "url": null,
-   "previous_rank": 69,
-   "trend": "up",
-   "trend_amount": 1
-  },
-  {
-   "rank": 68,
-   "name": "Google Home Mini (2017)",
-   "category": "Smart Home / IoT",
-   "units": "6.4M (Google via Engadget, 2018-01-06)",
-   "confidence": "A",
-   "url": null,
-   "previous_rank": 68,
-   "trend": "down",
-   "trend_amount": 1
-  },
-  {
-   "rank": 69,
-   "name": "Tectoy Master System (Brazilian variants)",
-   "category": "Game Consoles",
-   "units": "8M (Tectoy reporting, 2015)",
-   "confidence": "B",
-   "url": null,
-   "previous_rank": 73,
-   "trend": "up",
-   "trend_amount": 3
-  },
-  {
-   "rank": 70,
-   "name": "SodaStream soda-maker line (1903\u2013present)",
-   "category": "Other",
-   "units": "8M (Company-derived sales history (Motle",
-   "confidence": "B",
-   "url": null,
-   "previous_rank": 73,
-   "trend": "up",
-   "trend_amount": 2
-  },
-  {
-   "rank": 71,
-   "name": "Super Nintendo Classic Edition",
-   "category": "Game Consoles",
-   "units": "5.3M (Nintendo IR sales data, 2019-03)",
-   "confidence": "A",
-   "url": null,
-   "previous_rank": 73,
-   "trend": "up",
-   "trend_amount": 1
-  },
-  {
-   "rank": 72,
-   "name": "PlayStation VR (2016)",
-   "category": "Game Consoles",
-   "units": "5M (Sony announcement (Jim Ryan, via Roa",
-   "confidence": "A",
-   "url": null,
-   "previous_rank": 76,
-   "trend": "up",
-   "trend_amount": 3
-  },
-  {
-   "rank": 73,
-   "name": "Ledger hardware-wallet line (2014\u2013present)",
-   "category": "Other",
-   "units": "6M (Ledger company disclosure (via TechC",
-   "confidence": "B",
-   "url": null,
-   "previous_rank": 73,
-   "trend": "down",
-   "trend_amount": 1
-  },
-  {
-   "rank": 74,
-   "name": "Chromebooks (global)",
-   "category": "PCs &amp; Single-Board",
-   "units": "5.8M (IDC via press reports, 2023)",
-   "confidence": "B",
-   "url": null,
-   "previous_rank": 76,
-   "trend": "up",
-   "trend_amount": 1
-  },
-  {
-   "rank": 75,
-   "name": "Raspberry Pi Pico",
-   "category": "PCs &amp; Single-Board",
-   "units": "4M (Tom&#x27;s Hardware (quoting Eben Up",
-   "confidence": "A",
-   "url": null,
-   "previous_rank": 74,
-   "trend": "down",
-   "trend_amount": 2
-  },
-  {
-   "rank": 76,
-   "name": "GoPro Hero 5 Black",
-   "category": "Cameras &amp; Drones",
-   "units": "4M (GoPro press release &#x27;HERO5 Blac",
-   "confidence": "A",
-   "url": null,
-   "previous_rank": 79,
-   "trend": "up",
-   "trend_amount": 2
-  },
-  {
-   "rank": 77,
-   "name": "Nintendo Classic Mini: NES",
-   "category": "Game Consoles",
-   "units": "3.6M (Nintendo IR sales data, 2019-03)",
-   "confidence": "A",
-   "url": null,
-   "previous_rank": 75,
-   "trend": "down",
-   "trend_amount": 3
-  },
-  {
-   "rank": 78,
-   "name": "Technics SL-1200 turntable line (1972\u2013present)",
-   "category": "Other",
-   "units": "3.5M (Panasonic/Technics 50th-anniversar",
-   "confidence": "A",
-   "url": null,
-   "previous_rank": 76,
-   "trend": "down",
-   "trend_amount": 3
-  },
-  {
-   "rank": 79,
-   "name": "Apple Pencil (1st generation, 2015)",
-   "category": "E-Readers &amp; Tablets",
-   "units": "4.5M (KGI/Ming-Chi Kuo via AppleInsider,",
-   "confidence": "B",
-   "url": null,
-   "previous_rank": 82,
-   "trend": "up",
-   "trend_amount": 2
-  },
-  {
-   "rank": 80,
-   "name": "Chipolo tracker line (2013\u2013present)",
-   "category": "Smart Home / IoT",
-   "units": "4.5M (Chipolo company disclosure (via Te",
-   "confidence": "B",
-   "url": null,
-   "previous_rank": 79,
-   "trend": "down",
-   "trend_amount": 2
-  },
-  {
-   "rank": 81,
-   "name": "Apple iPad 3rd generation (2012)",
-   "category": "E-Readers &amp; Tablets",
-   "units": "3M (Apple press release, 2012-03-19)",
-   "confidence": "A",
-   "url": null,
-   "previous_rank": 85,
-   "trend": "up",
-   "trend_amount": 3
-  },
-  {
-   "rank": 82,
-   "name": "Apple iPad 4th generation (2012)",
-   "category": "E-Readers &amp; Tablets",
-   "units": "3M (Apple press release, 2012-11-05)",
-   "confidence": "A",
-   "url": null,
-   "previous_rank": 82,
-   "trend": "down",
-   "trend_amount": 1
-  },
-  {
-   "rank": 83,
-   "name": "Parallax BASIC Stamp",
-   "category": "PCs &amp; Single-Board",
-   "units": "3M (Parallax (BASIC Stamp manual, 2nd ed",
-   "confidence": "A",
-   "url": null,
-   "previous_rank": 81,
-   "trend": "down",
-   "trend_amount": 3
-  },
-  {
-   "rank": 84,
-   "name": "Valve Steam Deck",
-   "category": "Game Consoles",
-   "units": "3.7M (IDC estimate (by end-2024; Valve h",
-   "confidence": "B",
-   "url": null,
-   "previous_rank": 88,
-   "trend": "up",
-   "trend_amount": 3
-  },
-  {
-   "rank": 85,
-   "name": "Tectoy Mega Drive (Brazilian variants)",
-   "category": "Game Consoles",
-   "units": "3M (Tectoy reporting, 2015)",
-   "confidence": "B",
-   "url": null,
-   "previous_rank": 84,
-   "trend": "down",
-   "trend_amount": 2
-  },
-  {
-   "rank": 86,
-   "name": "Ray-Ban Meta Smart Glasses",
-   "category": "Wearables",
-   "units": "2M (EssilorLuxottica (Q4 2024 earnings c",
-   "confidence": "A",
-   "url": null,
-   "previous_rank": 90,
-   "trend": "up",
-   "trend_amount": 3
-  },
-  {
-   "rank": 87,
-   "name": "Whisker Litter-Robot line (2000\u2013present)",
-   "category": "Smart Home / IoT",
-   "units": "2M (Whisker press release (Business Wire",
-   "confidence": "A",
-   "url": null,
-   "previous_rank": 85,
-   "trend": "down",
-   "trend_amount": 3
-  },
-  {
-   "rank": 88,
-   "name": "Wyze Cam v2 (2018)",
-   "category": "Smart Home / IoT",
-   "units": "1.5M (Wyze Labs via Pulse2 / GeekWire fu",
-   "confidence": "A",
-   "url": null,
-   "previous_rank": 89,
-   "trend": "same",
-   "trend_amount": 0
-  },
-  {
-   "rank": 89,
-   "name": "BBC micro:bit",
-   "category": "PCs &amp; Single-Board",
-   "units": "2M (Science Museum Group, 2026)",
-   "confidence": "B",
-   "url": null,
-   "previous_rank": 89,
-   "trend": "down",
-   "trend_amount": 1
-  },
-  {
-   "rank": 90,
-   "name": "Husqvarna Automower line (1995\u2013present)",
-   "category": "Smart Home / IoT",
-   "units": "2M (Husqvarna press coverage (Landscape ",
-   "confidence": "B",
-   "url": null,
-   "previous_rank": 91,
-   "trend": "same",
-   "trend_amount": 0
-  },
-  {
-   "rank": 91,
-   "name": "Meta Quest 3 / Quest 3S",
-   "category": "Game Consoles",
-   "units": "1.7M (industry reporting (over 1.7M), 20",
-   "confidence": "B",
-   "url": null,
-   "previous_rank": 94,
-   "trend": "up",
-   "trend_amount": 2
-  },
-  {
-   "rank": 92,
-   "name": "Sega Genesis Mini / Mega Drive Mini",
-   "category": "Game Consoles",
-   "units": "1.5M (Sega reporting (over 1.5M), 2023)",
-   "confidence": "B",
-   "url": null,
-   "previous_rank": 96,
-   "trend": "up",
-   "trend_amount": 3
-  },
-  {
-   "rank": 93,
-   "name": "reMarkable 2 (2020)",
-   "category": "E-Readers &amp; Tablets",
-   "units": "1M (reMarkable company announcement via ",
-   "confidence": "A",
-   "url": null,
-   "previous_rank": 93,
-   "trend": "down",
-   "trend_amount": 1
-  },
-  {
-   "rank": 94,
-   "name": "Xfinity xFi Pods (2nd gen)",
-   "category": "Networking Gear",
-   "units": "1M (Comcast 2021 WiFi Trends Report (via",
-   "confidence": "A",
-   "url": null,
-   "previous_rank": 93,
-   "trend": "down",
-   "trend_amount": 2
-  },
-  {
-   "rank": 95,
-   "name": "Flipper Zero (2020\u2013present)",
-   "category": "Other",
-   "units": "1M (Flipper Devices company statement (v",
-   "confidence": "A",
-   "url": null,
-   "previous_rank": 95,
-   "trend": "down",
-   "trend_amount": 1
-  },
-  {
-   "rank": 96,
-   "name": "Tractive GPS tracker line (2013\u2013present)",
-   "category": "Smart Home / IoT",
-   "units": "1M (Tractive company website (product pa",
-   "confidence": "A",
-   "url": null,
-   "previous_rank": 96,
-   "trend": "down",
-   "trend_amount": 1
-  },
-  {
-   "rank": 97,
-   "name": "Sky Q (2016)",
-   "category": "Media Streamers",
-   "units": "1M (Sky via AVForums/informitv, 2017-01/",
-   "confidence": "B",
-   "url": null,
-   "previous_rank": 96,
-   "trend": "down",
-   "trend_amount": 2
-  },
-  {
-   "rank": 98,
-   "name": "Nex Playground",
-   "category": "Game Consoles",
-   "units": "1M (Nex announcement, 2025)",
-   "confidence": "B",
-   "url": null,
-   "previous_rank": 100,
-   "trend": "up",
-   "trend_amount": 1
-  },
-  {
-   "rank": 99,
-   "name": "Ring Video Doorbell (2nd Gen, 2020)",
-   "category": "Smart Home / IoT",
-   "units": "359K (U.S. CPSC recall notice (Nov 2020)",
-   "confidence": "A",
-   "url": null,
-   "previous_rank": 99,
-   "trend": "down",
-   "trend_amount": 1
-  },
-  {
-   "name": "NVIDIA GeForce RTX 4090",
-   "category": "GPUs",
-   "units": "~3M+ sold",
-   "confidence": "B",
-   "rank": 100,
-   "previous_rank": 101,
-   "trend": "same",
-   "trend_amount": 0,
-   "url": null,
-   "trending_score": 0.0
-  },
-  {
-   "name": "NVIDIA GeForce RTX 4080 Super",
-   "category": "GPUs",
-   "units": "~2M+ sold",
-   "confidence": "C",
-   "rank": 101,
-   "previous_rank": 102,
-   "trend": "same",
-   "trend_amount": 0,
-   "url": null,
-   "trending_score": 0.0
-  },
-  {
-   "name": "NVIDIA GeForce RTX 4070 Ti Super",
-   "category": "GPUs",
-   "units": "~2M+ sold",
-   "confidence": "C",
-   "rank": 102,
-   "previous_rank": 103,
-   "trend": "same",
-   "trend_amount": 0,
-   "url": null,
-   "trending_score": 0.0
-  },
-  {
-   "name": "NVIDIA GeForce RTX 4070 Super",
-   "category": "GPUs",
-   "units": "~3M+ sold",
-   "confidence": "B",
-   "rank": 103,
-   "previous_rank": 104,
-   "trend": "same",
-   "trend_amount": 0,
-   "url": null,
-   "trending_score": 0.0
-  },
-  {
-   "name": "NVIDIA GeForce RTX 4070",
-   "category": "GPUs",
-   "units": "~4M+ sold",
-   "confidence": "B",
-   "rank": 104,
-   "previous_rank": 105,
-   "trend": "same",
-   "trend_amount": 0,
-   "url": null,
-   "trending_score": 0.0
-  },
-  {
-   "name": "NVIDIA GeForce RTX 4060 Ti",
-   "category": "GPUs",
-   "units": "~3M+ sold",
-   "confidence": "C",
-   "rank": 105,
-   "previous_rank": 106,
-   "trend": "same",
-   "trend_amount": 0,
-   "url": null,
-   "trending_score": 0.0
-  },
-  {
-   "name": "NVIDIA GeForce RTX 4060",
-   "category": "GPUs",
-   "units": "~5M+ sold",
-   "confidence": "B",
-   "rank": 106,
-   "previous_rank": 107,
-   "trend": "same",
-   "trend_amount": 0,
-   "url": null,
-   "trending_score": 0.0
-  },
-  {
-   "name": "NVIDIA GeForce RTX 3090",
-   "category": "GPUs",
-   "units": "~2M+ sold",
-   "confidence": "C",
-   "rank": 107,
-   "previous_rank": 108,
-   "trend": "same",
-   "trend_amount": 0,
-   "url": null,
-   "trending_score": 0.0
-  },
-  {
-   "name": "NVIDIA GeForce RTX 3080",
-   "category": "GPUs",
-   "units": "~6M+ sold",
-   "confidence": "B",
-   "rank": 108,
-   "previous_rank": 109,
-   "trend": "same",
-   "trend_amount": 0,
-   "url": null,
-   "trending_score": 0.0
-  },
-  {
-   "name": "NVIDIA GeForce RTX 3070",
-   "category": "GPUs",
-   "units": "~8M+ sold",
-   "confidence": "B",
-   "rank": 109,
-   "previous_rank": 110,
-   "trend": "same",
-   "trend_amount": 0,
-   "url": null,
-   "trending_score": 0.0
-  },
-  {
-   "name": "NVIDIA GeForce RTX 3060",
-   "category": "GPUs",
-   "units": "~15M+ sold",
-   "confidence": "A",
-   "rank": 110,
-   "previous_rank": 111,
-   "trend": "same",
-   "trend_amount": 0,
-   "url": null,
-   "trending_score": 0.0
-  },
-  {
-   "name": "NVIDIA GeForce RTX 3060 Ti",
-   "category": "GPUs",
-   "units": "~6M+ sold",
-   "confidence": "C",
-   "rank": 111,
-   "previous_rank": 112,
-   "trend": "same",
-   "trend_amount": 0,
-   "url": null,
-   "trending_score": 0.0
-  },
-  {
-   "name": "NVIDIA GeForce RTX 2080 Ti",
-   "category": "GPUs",
-   "units": "~3M+ sold",
-   "confidence": "C",
-   "rank": 112,
-   "previous_rank": 113,
-   "trend": "same",
-   "trend_amount": 0,
-   "url": null,
-   "trending_score": 0.0
-  },
-  {
-   "name": "NVIDIA GeForce GTX 1660 Super",
-   "category": "GPUs",
-   "units": "~10M+ sold",
-   "confidence": "B",
-   "rank": 113,
-   "previous_rank": 114,
-   "trend": "same",
-   "trend_amount": 0,
-   "url": null,
-   "trending_score": 0.0
-  },
-  {
-   "name": "NVIDIA GeForce GTX 1060",
-   "category": "GPUs",
-   "units": "~30M+ sold",
-   "confidence": "A",
-   "rank": 114,
-   "previous_rank": 115,
-   "trend": "same",
-   "trend_amount": 0,
-   "url": null,
-   "trending_score": 0.0
-  },
-  {
-   "name": "AMD Radeon RX 7900 XTX",
-   "category": "GPUs",
-   "units": "~1.5M+ sold",
-   "confidence": "C",
-   "rank": 115,
-   "previous_rank": 116,
-   "trend": "same",
-   "trend_amount": 0,
-   "url": null,
-   "trending_score": 0.0
-  },
-  {
-   "name": "AMD Radeon RX 7800 XT",
-   "category": "GPUs",
-   "units": "~2M+ sold",
-   "confidence": "C",
-   "rank": 116,
-   "previous_rank": 117,
-   "trend": "same",
-   "trend_amount": 0,
-   "url": null,
-   "trending_score": 0.0
-  },
-  {
-   "name": "AMD Radeon RX 6700 XT",
-   "category": "GPUs",
-   "units": "~4M+ sold",
-   "confidence": "C",
-   "rank": 117,
-   "previous_rank": 118,
-   "trend": "same",
-   "trend_amount": 0,
-   "url": null,
-   "trending_score": 0.0
-  },
-  {
-   "name": "AMD Radeon RX 6600",
-   "category": "GPUs",
-   "units": "~5M+ sold",
-   "confidence": "C",
-   "rank": 118,
-   "previous_rank": 119,
-   "trend": "same",
-   "trend_amount": 0,
-   "url": null,
-   "trending_score": 0.0
-  },
-  {
-   "name": "AMD Radeon RX 580",
-   "category": "GPUs",
-   "units": "~15M+ sold",
-   "confidence": "B",
-   "rank": 119,
-   "previous_rank": 120,
-   "trend": "same",
-   "trend_amount": 0,
-   "url": null,
-   "trending_score": 0.0
-  },
-  {
-   "name": "Intel Arc A770",
-   "category": "GPUs",
-   "units": "~500K+ sold",
-   "confidence": "C",
-   "rank": 120,
-   "previous_rank": 121,
-   "trend": "same",
-   "trend_amount": 0,
-   "url": null,
-   "trending_score": 0.0
-  },
-  {
-   "name": "Intel Arc A750",
-   "category": "GPUs",
-   "units": "~500K+ sold",
-   "confidence": "C",
-   "rank": 121,
-   "previous_rank": 122,
-   "trend": "same",
-   "trend_amount": 0,
-   "url": null,
-   "trending_score": 0.0
-  },
-  {
-   "name": "NVIDIA H100 Tensor Core GPU",
-   "category": "AI Accelerators",
-   "units": "~3M+ shipped",
-   "confidence": "B",
-   "rank": 122,
-   "previous_rank": 122,
-   "trend": "same",
-   "trend_amount": 0,
-   "url": null,
-   "trending_score": 0.0
-  },
-  {
-   "name": "NVIDIA H200 Tensor Core GPU",
-   "category": "AI Accelerators",
-   "units": "~1M+ shipped",
-   "confidence": "C",
-   "rank": 123,
-   "previous_rank": 123,
-   "trend": "same",
-   "trend_amount": 0,
-   "url": null,
-   "trending_score": 0.0
-  },
-  {
-   "name": "NVIDIA B200 Blackwell GPU",
-   "category": "AI Accelerators",
-   "units": "~500K+ shipped",
-   "confidence": "C",
-   "rank": 124,
-   "previous_rank": 124,
-   "trend": "same",
-   "trend_amount": 0,
-   "url": null,
-   "trending_score": 0.0
-  },
-  {
-   "name": "NVIDIA A100 Tensor Core GPU",
-   "category": "AI Accelerators",
-   "units": "~5M+ shipped",
-   "confidence": "B",
-   "rank": 125,
-   "previous_rank": 125,
-   "trend": "same",
-   "trend_amount": 0,
-   "url": null,
-   "trending_score": 0.0
-  },
-  {
-   "name": "NVIDIA L40S GPU",
-   "category": "AI Accelerators",
-   "units": "~500K+ shipped",
-   "confidence": "C",
-   "rank": 126,
-   "previous_rank": 126,
-   "trend": "same",
-   "trend_amount": 0,
-   "url": null,
-   "trending_score": 0.0
-  },
-  {
-   "name": "AMD Instinct MI300X",
-   "category": "AI Accelerators",
-   "units": "~500K+ shipped",
-   "confidence": "C",
-   "rank": 127,
-   "previous_rank": 127,
-   "trend": "same",
-   "trend_amount": 0,
-   "url": null,
-   "trending_score": 0.0
-  },
-  {
-   "name": "AMD Instinct MI250X",
-   "category": "AI Accelerators",
-   "units": "~200K+ shipped",
-   "confidence": "C",
-   "rank": 128,
-   "previous_rank": 128,
-   "trend": "same",
-   "trend_amount": 0,
-   "url": null,
-   "trending_score": 0.0
-  },
-  {
-   "name": "Google TPU v5p",
-   "category": "AI Accelerators",
-   "units": "Google internal",
-   "confidence": "C",
-   "rank": 129,
-   "previous_rank": 129,
-   "trend": "same",
-   "trend_amount": 0,
-   "url": null,
-   "trending_score": 0.0
-  },
-  {
-   "name": "Google TPU v4",
-   "category": "AI Accelerators",
-   "units": "Google internal",
-   "confidence": "C",
-   "rank": 130,
-   "previous_rank": 130,
-   "trend": "same",
-   "trend_amount": 0,
-   "url": null,
-   "trending_score": 0.0
-  },
-  {
-   "name": "Intel Gaudi 3",
-   "category": "AI Accelerators",
-   "units": "~100K+ shipped",
-   "confidence": "C",
-   "rank": 131,
-   "previous_rank": 131,
-   "trend": "same",
-   "trend_amount": 0,
-   "url": null,
-   "trending_score": 0.0
-  },
-  {
-   "name": "Cerebras WSE-3",
-   "category": "AI Accelerators",
-   "units": "Low volume",
-   "confidence": "C",
-   "rank": 132,
-   "previous_rank": 132,
-   "trend": "same",
-   "trend_amount": 0,
-   "url": null,
-   "trending_score": 0.0
-  },
-  {
-   "name": "Groq LPU",
-   "category": "AI Accelerators",
-   "units": "Low volume",
-   "confidence": "C",
-   "rank": 133,
-   "previous_rank": 133,
-   "trend": "same",
-   "trend_amount": 0,
-   "url": null,
-   "trending_score": 0.0
-  },
-  {
-   "name": "Apple M4 (Neural Engine)",
-   "category": "AI Accelerators",
-   "units": "~20M+ shipped",
-   "confidence": "B",
-   "rank": 134,
-   "previous_rank": 134,
-   "trend": "same",
-   "trend_amount": 0,
-   "url": null,
-   "trending_score": 0.0
-  },
-  {
-   "name": "Qualcomm Snapdragon X Elite (NPU)",
-   "category": "AI Accelerators",
-   "units": "~2M+ shipped",
-   "confidence": "C",
-   "rank": 135,
-   "previous_rank": 135,
-   "trend": "same",
-   "trend_amount": 0,
-   "url": null,
-   "trending_score": 0.0
-  },
-  {
-   "name": "Intel Core Ultra (NPU)",
-   "category": "AI Accelerators",
-   "units": "~10M+ shipped",
-   "confidence": "C",
-   "rank": 136,
-   "previous_rank": 136,
-   "trend": "same",
-   "trend_amount": 0,
-   "url": null,
-   "trending_score": 0.0
-  },
-  {
-   "name": "AMD Ryzen AI 300 (NPU)",
-   "category": "AI Accelerators",
-   "units": "~3M+ shipped",
-   "confidence": "C",
-   "rank": 137,
-   "previous_rank": 137,
-   "trend": "same",
-   "trend_amount": 0,
-   "url": null,
-   "trending_score": 0.0
-  }
- ],
- "pulse": {
-  "status": "live",
-  "movers_up": 40,
-  "movers_down": 50,
-  "new_entries": 0
- }
+  "version": "v1.0",
+  "updated": "2026-10-07",
+  "methodology": "The BareBoard Hot 100 ranks devices by estimated interest to the hardware-hacking community. Ordering reflects editorial judgment weighing: (1) repairability and design openness (modular, documented, open-hardware devices rank higher); (2) chip-level curiosity (novel, custom, or first-of-kind silicon); (3) documented teardown activity (iFixit or community teardowns); and (4) hackability (unlockable bootloaders, custom firmware scenes, modding communities). This is a curated list, not a sales chart: no units-sold figures, no trend data, and no popularity metrics are claimed. Every entry carries at least one verifiable source URL (teardown, manufacturer page, or reference article) and an evidence label. Entries that could not be sourced were excluded or replaced.",
+  "ranking_basis": "Editorial ranking for hardware hackers. Not based on sales, shipments, revenue, search volume, or any measured popularity metric. Higher rank means the editors judge the device more relevant to teardown culture, chip curiosity, repairability, and hands-on hacking.",
+  "evidence_labels": {
+    "confirmed": "Multiple corroborating sources, including a published teardown.",
+    "likely": "At least one solid verifiable source (reference article or official product page).",
+    "unconfirmed": "Limited sourcing; official page unverified or thin corroboration."
+  },
+  "selection_criteria": [
+    "Device must have genuine hardware-hacker relevance (teardown interest, chip curiosity, repairability, or modding scene).",
+    "Device must have at least one verifiable public source URL.",
+    "No invented specifications, sales figures, or rankings.",
+    "Preference for devices with published teardowns or open hardware documentation.",
+    "Categories cover phones, SBCs, consoles, laptops, IoT, drones, VR, wearables, audio, tablets, networking, and hacker tools."
+  ],
+  "devices": [
+    {
+      "rank": 1,
+      "name": "Fairphone 5",
+      "category": "Smartphones",
+      "manufacturer": "Fairphone",
+      "sources": [
+        {
+          "type": "teardown",
+          "url": "https://www.ifixit.com/Device/Fairphone_5",
+          "note": "iFixit device page with teardown and guides"
+        },
+        {
+          "type": "reference",
+          "url": "https://en.wikipedia.org/wiki/Fairphone_5",
+          "note": "Secondary reference"
+        }
+      ],
+      "evidence": "confirmed",
+      "why": "Modular phone with 10/10 iFixit repairability; user-replaceable everything."
+    },
+    {
+      "rank": 2,
+      "name": "Framework Laptop 13",
+      "category": "Laptops & Computers",
+      "manufacturer": "Framework",
+      "sources": [
+        {
+          "type": "reference",
+          "url": "https://en.wikipedia.org/wiki/Framework_Laptop",
+          "note": "Wikipedia device overview"
+        },
+        {
+          "type": "manufacturer",
+          "url": "https://frame.work",
+          "note": "Secondary reference"
+        }
+      ],
+      "evidence": "likely",
+      "why": "Modular, repairable laptop with replaceable mainboard and expansion cards."
+    },
+    {
+      "rank": 3,
+      "name": "Raspberry Pi 5",
+      "category": "SBCs & Dev Boards",
+      "manufacturer": "Raspberry Pi",
+      "sources": [
+        {
+          "type": "reference",
+          "url": "https://en.wikipedia.org/wiki/Raspberry_Pi_5",
+          "note": "Wikipedia device overview"
+        },
+        {
+          "type": "manufacturer",
+          "url": "https://www.raspberrypi.com/products/raspberry-pi-5/",
+          "note": "Secondary reference"
+        }
+      ],
+      "evidence": "likely",
+      "why": "The default hacker SBC; Broadcom BCM2712, PCIe, active community."
+    },
+    {
+      "rank": 4,
+      "name": "Steam Deck",
+      "category": "Game Consoles & Handhelds",
+      "manufacturer": "Valve",
+      "sources": [
+        {
+          "type": "teardown",
+          "url": "https://www.ifixit.com/News/57101/steam-deck-teardown",
+          "note": "iFixit teardown with chip ID"
+        },
+        {
+          "type": "reference",
+          "url": "https://en.wikipedia.org/wiki/Steam_Deck",
+          "note": "Secondary reference"
+        }
+      ],
+      "evidence": "confirmed",
+      "why": "Open handheld with iFixit parts partnership; custom AMD APU, replaceable SSD."
+    },
+    {
+      "rank": 5,
+      "name": "Flipper Zero",
+      "category": "Hacker Tools",
+      "manufacturer": "Flipper Devices",
+      "sources": [
+        {
+          "type": "manufacturer",
+          "url": "https://flipper.net/products/flipper-zero",
+          "note": "Official product page"
+        },
+        {
+          "type": "reference",
+          "url": "https://en.wikipedia.org/wiki/Flipper_Zero",
+          "note": "Secondary reference"
+        }
+      ],
+      "evidence": "likely",
+      "why": "Sub-GHz/IR/NFC/RFID multi-tool; the iconic hacker pocket device."
+    },
+    {
+      "rank": 6,
+      "name": "ESP32",
+      "category": "SBCs & Dev Boards",
+      "manufacturer": "Espressif",
+      "sources": [
+        {
+          "type": "reference",
+          "url": "https://en.wikipedia.org/wiki/ESP32",
+          "note": "Wikipedia chip overview"
+        },
+        {
+          "type": "manufacturer",
+          "url": "https://www.espressif.com/en/products/socs/esp32",
+          "note": "Secondary reference"
+        }
+      ],
+      "evidence": "likely",
+      "why": "Dual-core Wi-Fi/BT SoC powering most DIY IoT; huge firmware ecosystem."
+    },
+    {
+      "rank": 7,
+      "name": "Arduino Uno R4",
+      "category": "SBCs & Dev Boards",
+      "manufacturer": "Arduino",
+      "sources": [
+        {
+          "type": "reference",
+          "url": "https://en.wikipedia.org/wiki/Arduino_Uno",
+          "note": "Wikipedia board overview"
+        },
+        {
+          "type": "manufacturer",
+          "url": "https://www.arduino.cc",
+          "note": "Secondary reference"
+        }
+      ],
+      "evidence": "likely",
+      "why": "The classic entry dev board; Renesas RA4M1 on the R4."
+    },
+    {
+      "rank": 8,
+      "name": "MNT Reform",
+      "category": "Laptops & Computers",
+      "manufacturer": "MNT Research",
+      "sources": [
+        {
+          "type": "manufacturer",
+          "url": "https://mnt.re/reform",
+          "note": "Official open-hardware laptop page"
+        },
+        {
+          "type": "manufacturer",
+          "url": "https://www.crowdsupply.com/mnt/reform",
+          "note": "Secondary reference"
+        }
+      ],
+      "evidence": "likely",
+      "why": "Fully open-hardware laptop; schematics published, no binary blobs required."
+    },
+    {
+      "rank": 9,
+      "name": "PinePhone Pro",
+      "category": "Smartphones",
+      "manufacturer": "Pine64",
+      "sources": [
+        {
+          "type": "reference",
+          "url": "https://en.wikipedia.org/wiki/PinePhone",
+          "note": "Wikipedia device overview"
+        },
+        {
+          "type": "manufacturer",
+          "url": "https://www.pine64.org/pinephone-pro/",
+          "note": "Secondary reference"
+        }
+      ],
+      "evidence": "likely",
+      "why": "Open Linux phone with kill switches; Rockchip RK3399S."
+    },
+    {
+      "rank": 10,
+      "name": "Framework Laptop 16",
+      "category": "Laptops & Computers",
+      "manufacturer": "Framework",
+      "sources": [
+        {
+          "type": "reference",
+          "url": "https://en.wikipedia.org/wiki/Framework_Laptop",
+          "note": "Wikipedia device overview"
+        },
+        {
+          "type": "manufacturer",
+          "url": "https://frame.work/products/laptop16-diy-amd-7040",
+          "note": "Secondary reference"
+        }
+      ],
+      "evidence": "likely",
+      "why": "16-inch modular laptop with swappable GPU expansion bay."
+    },
+    {
+      "rank": 11,
+      "name": "iPhone 15 Pro",
+      "category": "Smartphones",
+      "manufacturer": "Apple",
+      "sources": [
+        {
+          "type": "teardown",
+          "url": "https://www.ifixit.com/Device/iPhone_15_Pro",
+          "note": "iFixit device page with teardown"
+        },
+        {
+          "type": "manufacturer",
+          "url": "https://www.ifixit.com/News/82867/iphone-15-teardown-reveals-software-lockdown",
+          "note": "Secondary reference"
+        }
+      ],
+      "evidence": "confirmed",
+      "why": "A17 Pro, titanium frame; notable for parts-pairing software locks."
+    },
+    {
+      "rank": 12,
+      "name": "Raspberry Pi 4 Model B",
+      "category": "SBCs & Dev Boards",
+      "manufacturer": "Raspberry Pi",
+      "sources": [
+        {
+          "type": "reference",
+          "url": "https://en.wikipedia.org/wiki/Raspberry_Pi_4",
+          "note": "Wikipedia device overview"
+        }
+      ],
+      "evidence": "likely",
+      "why": "BCM2711 workhorse; still the most-deployed Pi in projects."
+    },
+    {
+      "rank": 13,
+      "name": "Nintendo Switch",
+      "category": "Game Consoles & Handhelds",
+      "manufacturer": "Nintendo",
+      "sources": [
+        {
+          "type": "teardown",
+          "url": "https://www.ifixit.com/Device/Nintendo_Switch",
+          "note": "iFixit device page with teardown"
+        },
+        {
+          "type": "reference",
+          "url": "https://en.wikipedia.org/wiki/Nintendo_Switch",
+          "note": "Secondary reference"
+        }
+      ],
+      "evidence": "confirmed",
+      "why": "Tegra X1 handheld; huge modding and homebrew scene."
+    },
+    {
+      "rank": 14,
+      "name": "PlayStation 5",
+      "category": "Game Consoles & Handhelds",
+      "manufacturer": "Sony",
+      "sources": [
+        {
+          "type": "teardown",
+          "url": "https://www.ifixit.com/Device/PlayStation_5",
+          "note": "iFixit device page with teardown"
+        },
+        {
+          "type": "reference",
+          "url": "https://en.wikipedia.org/wiki/PlayStation_5",
+          "note": "Secondary reference"
+        }
+      ],
+      "evidence": "confirmed",
+      "why": "Custom AMD Zen 2 + RDNA 2 APU; liquid-metal cooling teardown interest."
+    },
+    {
+      "rank": 15,
+      "name": "Xbox Series X",
+      "category": "Game Consoles & Handhelds",
+      "manufacturer": "Microsoft",
+      "sources": [
+        {
+          "type": "teardown",
+          "url": "https://www.ifixit.com/Device/Xbox_Series_X",
+          "note": "iFixit device page with teardown"
+        },
+        {
+          "type": "reference",
+          "url": "https://en.wikipedia.org/wiki/Xbox_Series_X_and_Series_S",
+          "note": "Secondary reference"
+        }
+      ],
+      "evidence": "confirmed",
+      "why": "Custom AMD APU; vapor-chamber cooling and split motherboard design."
+    },
+    {
+      "rank": 16,
+      "name": "Apple Watch Ultra 2",
+      "category": "Wearables",
+      "manufacturer": "Apple",
+      "sources": [
+        {
+          "type": "teardown",
+          "url": "https://www.ifixit.com/Device/Apple_Watch_Ultra_2",
+          "note": "iFixit device page with teardown"
+        },
+        {
+          "type": "reference",
+          "url": "https://en.wikipedia.org/wiki/Apple_Watch_Ultra",
+          "note": "Secondary reference"
+        }
+      ],
+      "evidence": "confirmed",
+      "why": "S9 SiP in a tiny sealed package; extreme miniaturization teardown."
+    },
+    {
+      "rank": 17,
+      "name": "iPhone 14",
+      "category": "Smartphones",
+      "manufacturer": "Apple",
+      "sources": [
+        {
+          "type": "teardown",
+          "url": "https://www.ifixit.com/Device/iPhone_14",
+          "note": "iFixit device page with teardown"
+        },
+        {
+          "type": "reference",
+          "url": "https://en.wikipedia.org/wiki/IPhone_14",
+          "note": "Secondary reference"
+        }
+      ],
+      "evidence": "confirmed",
+      "why": "First iPhone openable from front and back; repairability milestone."
+    },
+    {
+      "rank": 18,
+      "name": "iPhone 12",
+      "category": "Smartphones",
+      "manufacturer": "Apple",
+      "sources": [
+        {
+          "type": "teardown",
+          "url": "https://www.ifixit.com/Device/iPhone_12",
+          "note": "iFixit device page with teardown"
+        },
+        {
+          "type": "reference",
+          "url": "https://en.wikipedia.org/wiki/IPhone_12",
+          "note": "Secondary reference"
+        }
+      ],
+      "evidence": "confirmed",
+      "why": "A14 + MagSafe; widely repaired, parts abundant."
+    },
+    {
+      "rank": 19,
+      "name": "HackRF One",
+      "category": "Hacker Tools",
+      "manufacturer": "Great Scott Gadgets",
+      "sources": [
+        {
+          "type": "manufacturer",
+          "url": "https://greatscottgadgets.com/hackrf/",
+          "note": "Official product page"
+        }
+      ],
+      "evidence": "likely",
+      "why": "Open-source SDR transceiver; the RF hacker's essential tool."
+    },
+    {
+      "rank": 20,
+      "name": "Teensy 4.1",
+      "category": "SBCs & Dev Boards",
+      "manufacturer": "PJRC",
+      "sources": [
+        {
+          "type": "reference",
+          "url": "https://en.wikipedia.org/wiki/Teensy",
+          "note": "Wikipedia board overview"
+        },
+        {
+          "type": "manufacturer",
+          "url": "https://www.pjrc.com/store/teensy41.html",
+          "note": "Secondary reference"
+        }
+      ],
+      "evidence": "likely",
+      "why": "600 MHz Cortex-M7; the performance microcontroller for serious embedded work."
+    },
+    {
+      "rank": 21,
+      "name": "Valve Index",
+      "category": "VR/AR",
+      "manufacturer": "Valve",
+      "sources": [
+        {
+          "type": "reference",
+          "url": "https://en.wikipedia.org/wiki/Valve_Index",
+          "note": "Wikipedia device overview"
+        }
+      ],
+      "evidence": "likely",
+      "why": "Lighthouse tracking, 144 Hz panels; VR hardware of choice for tinkerers."
+    },
+    {
+      "rank": 22,
+      "name": "Analogue Pocket",
+      "category": "Game Consoles & Handhelds",
+      "manufacturer": "Analogue",
+      "sources": [
+        {
+          "type": "reference",
+          "url": "https://en.wikipedia.org/wiki/Analogue_Pocket",
+          "note": "Wikipedia device overview"
+        },
+        {
+          "type": "manufacturer",
+          "url": "https://www.analogue.co/pocket",
+          "note": "Secondary reference"
+        }
+      ],
+      "evidence": "likely",
+      "why": "FPGA handheld (dual Cyclone V); cycle-accurate retro hardware."
+    },
+    {
+      "rank": 23,
+      "name": "PineTime",
+      "category": "Wearables",
+      "manufacturer": "Pine64",
+      "sources": [
+        {
+          "type": "reference",
+          "url": "https://en.wikipedia.org/wiki/PineTime",
+          "note": "Wikipedia device overview"
+        },
+        {
+          "type": "manufacturer",
+          "url": "https://www.pine64.org/pinetime/",
+          "note": "Secondary reference"
+        }
+      ],
+      "evidence": "likely",
+      "why": "Open-source smartwatch; nRF52832, InfiniTime firmware, $30."
+    },
+    {
+      "rank": 24,
+      "name": "BBC micro:bit v2",
+      "category": "SBCs & Dev Boards",
+      "manufacturer": "Micro:bit Educational Foundation",
+      "sources": [
+        {
+          "type": "reference",
+          "url": "https://en.wikipedia.org/wiki/Micro_Bit",
+          "note": "Wikipedia board overview"
+        },
+        {
+          "type": "manufacturer",
+          "url": "https://microbit.org",
+          "note": "Secondary reference"
+        }
+      ],
+      "evidence": "likely",
+      "why": "nRF52833 education board; millions deployed, great BLE hacking target."
+    },
+    {
+      "rank": 25,
+      "name": "Home Assistant Yellow",
+      "category": "IoT & Smart Home",
+      "manufacturer": "Nabu Casa",
+      "sources": [
+        {
+          "type": "reference",
+          "url": "https://en.wikipedia.org/wiki/Home_Assistant",
+          "note": "Wikipedia platform overview"
+        },
+        {
+          "type": "manufacturer",
+          "url": "https://www.home-assistant.io/yellow/",
+          "note": "Secondary reference"
+        }
+      ],
+      "evidence": "likely",
+      "why": "CM4-powered home automation hub with Zigbee/Thread radios."
+    },
+    {
+      "rank": 26,
+      "name": "GL.iNet GL-MT6000",
+      "category": "Networking",
+      "manufacturer": "GL.iNet",
+      "sources": [
+        {
+          "type": "manufacturer",
+          "url": "https://www.gl-inet.com/products/gl-mt6000/",
+          "note": "Official product page"
+        }
+      ],
+      "evidence": "unconfirmed",
+      "why": "Filogic 830 Wi-Fi 6 router shipping with OpenWrt; page blocked bots during verification."
+    },
+    {
+      "rank": 27,
+      "name": "Steam Deck OLED",
+      "category": "Game Consoles & Handhelds",
+      "manufacturer": "Valve",
+      "sources": [
+        {
+          "type": "teardown",
+          "url": "https://www.ifixit.com/Guide/Steam+Deck+OLED+Chip+ID/167632",
+          "note": "iFixit OLED chip ID guide"
+        },
+        {
+          "type": "reference",
+          "url": "https://en.wikipedia.org/wiki/Steam_Deck",
+          "note": "Secondary reference"
+        }
+      ],
+      "evidence": "confirmed",
+      "why": "6 nm AMD APU refresh; iFixit chip-level identification."
+    },
+    {
+      "rank": 28,
+      "name": "Nintendo Switch OLED",
+      "category": "Game Consoles & Handhelds",
+      "manufacturer": "Nintendo",
+      "sources": [
+        {
+          "type": "reference",
+          "url": "https://en.wikipedia.org/wiki/Nintendo_Switch",
+          "note": "Wikipedia device overview (OLED model)"
+        }
+      ],
+      "evidence": "likely",
+      "why": "Samsung OLED panel swap; same Tegra X1, new display supply chain."
+    },
+    {
+      "rank": 29,
+      "name": "Nintendo Switch Lite",
+      "category": "Game Consoles & Handhelds",
+      "manufacturer": "Nintendo",
+      "sources": [
+        {
+          "type": "reference",
+          "url": "https://en.wikipedia.org/wiki/Nintendo_Switch_Lite",
+          "note": "Wikipedia device overview"
+        }
+      ],
+      "evidence": "likely",
+      "why": "Handheld-only Tegra X1+; drift-prone sticks make it a repair staple."
+    },
+    {
+      "rank": 30,
+      "name": "Apple Vision Pro",
+      "category": "VR/AR",
+      "manufacturer": "Apple",
+      "sources": [
+        {
+          "type": "reference",
+          "url": "https://en.wikipedia.org/wiki/Apple_Vision_Pro",
+          "note": "Wikipedia device overview"
+        }
+      ],
+      "evidence": "likely",
+      "why": "M2 + R1 dual-chip; micro-OLED displays, most complex Apple teardown ever."
+    },
+    {
+      "rank": 31,
+      "name": "Meta Quest 3",
+      "category": "VR/AR",
+      "manufacturer": "Meta",
+      "sources": [
+        {
+          "type": "reference",
+          "url": "https://en.wikipedia.org/wiki/Meta_Quest_3",
+          "note": "Wikipedia device overview"
+        }
+      ],
+      "evidence": "likely",
+      "why": "Snapdragon XR2 Gen 2; pancake lenses, depth sensor teardown interest."
+    },
+    {
+      "rank": 32,
+      "name": "Meta Quest 2",
+      "category": "VR/AR",
+      "manufacturer": "Meta",
+      "sources": [
+        {
+          "type": "reference",
+          "url": "https://en.wikipedia.org/wiki/Meta_Quest_2",
+          "note": "Wikipedia device overview"
+        }
+      ],
+      "evidence": "likely",
+      "why": "XR2 headset that defined standalone VR; huge used market for mods."
+    },
+    {
+      "rank": 33,
+      "name": "Fairphone 4",
+      "category": "Smartphones",
+      "manufacturer": "Fairphone",
+      "sources": [
+        {
+          "type": "reference",
+          "url": "https://en.wikipedia.org/wiki/Fairphone_4",
+          "note": "Wikipedia device overview"
+        },
+        {
+          "type": "manufacturer",
+          "url": "https://www.fairphone.com",
+          "note": "Secondary reference"
+        }
+      ],
+      "evidence": "likely",
+      "why": "Predecessor modular phone; 5-year warranty, iFixit 10/10."
+    },
+    {
+      "rank": 34,
+      "name": "Nothing Phone (2)",
+      "category": "Smartphones",
+      "manufacturer": "Nothing",
+      "sources": [
+        {
+          "type": "reference",
+          "url": "https://en.wikipedia.org/wiki/Nothing_Phone_2",
+          "note": "Wikipedia device overview"
+        },
+        {
+          "type": "manufacturer",
+          "url": "https://www.nothing.tech/pages/phone-2",
+          "note": "Secondary reference"
+        }
+      ],
+      "evidence": "likely",
+      "why": "Glyph interface LEDs; transparent design invites teardowns."
+    },
+    {
+      "rank": 35,
+      "name": "Google Pixel 8 Pro",
+      "category": "Smartphones",
+      "manufacturer": "Google",
+      "sources": [
+        {
+          "type": "reference",
+          "url": "https://en.wikipedia.org/wiki/Pixel_8",
+          "note": "Wikipedia device overview"
+        }
+      ],
+      "evidence": "likely",
+      "why": "Tensor G3; 7-year update pledge changed the repairability conversation."
+    },
+    {
+      "rank": 36,
+      "name": "Google Pixel 7",
+      "category": "Smartphones",
+      "manufacturer": "Google",
+      "sources": [
+        {
+          "type": "reference",
+          "url": "https://en.wikipedia.org/wiki/Pixel_7",
+          "note": "Wikipedia device overview"
+        }
+      ],
+      "evidence": "likely",
+      "why": "Tensor G2; iFixit partnered with Google on parts."
+    },
+    {
+      "rank": 37,
+      "name": "Samsung Galaxy S24",
+      "category": "Smartphones",
+      "manufacturer": "Samsung",
+      "sources": [
+        {
+          "type": "reference",
+          "url": "https://en.wikipedia.org/wiki/Samsung_Galaxy_S24",
+          "note": "Wikipedia device overview"
+        }
+      ],
+      "evidence": "likely",
+      "why": "Snapdragon 8 Gen 3 / Exynos 2400 split; 7-year updates."
+    },
+    {
+      "rank": 38,
+      "name": "OnePlus 11",
+      "category": "Smartphones",
+      "manufacturer": "OnePlus",
+      "sources": [
+        {
+          "type": "reference",
+          "url": "https://en.wikipedia.org/wiki/OnePlus_11",
+          "note": "Wikipedia device overview"
+        }
+      ],
+      "evidence": "likely",
+      "why": "Snapdragon 8 Gen 2 flagship; enthusiast-friendly unlockable bootloader."
+    },
+    {
+      "rank": 39,
+      "name": "iPhone SE (2022)",
+      "category": "Smartphones",
+      "manufacturer": "Apple",
+      "sources": [
+        {
+          "type": "reference",
+          "url": "https://en.wikipedia.org/wiki/IPhone_SE_(3rd_generation)",
+          "note": "Wikipedia device overview"
+        }
+      ],
+      "evidence": "likely",
+      "why": "A15 in iPhone 8 chassis; cheapest entry to Apple silicon teardowns."
+    },
+    {
+      "rank": 40,
+      "name": "Raspberry Pi Zero 2 W",
+      "category": "SBCs & Dev Boards",
+      "manufacturer": "Raspberry Pi",
+      "sources": [
+        {
+          "type": "reference",
+          "url": "https://en.wikipedia.org/wiki/Raspberry_Pi_Zero",
+          "note": "Wikipedia device overview"
+        }
+      ],
+      "evidence": "likely",
+      "why": "RP3A0 quad-core in $15; the tiny Pi for embedded projects."
+    },
+    {
+      "rank": 41,
+      "name": "Raspberry Pi Pico",
+      "category": "SBCs & Dev Boards",
+      "manufacturer": "Raspberry Pi",
+      "sources": [
+        {
+          "type": "reference",
+          "url": "https://en.wikipedia.org/wiki/Raspberry_Pi_Pico",
+          "note": "Wikipedia board overview"
+        }
+      ],
+      "evidence": "likely",
+      "why": "RP2040 dual Cortex-M0+; Raspberry Pi's own silicon, PIO state machines."
+    },
+    {
+      "rank": 42,
+      "name": "Raspberry Pi Pico W",
+      "category": "SBCs & Dev Boards",
+      "manufacturer": "Raspberry Pi",
+      "sources": [
+        {
+          "type": "reference",
+          "url": "https://en.wikipedia.org/wiki/Raspberry_Pi_Pico",
+          "note": "Wikipedia board overview (W variant)"
+        }
+      ],
+      "evidence": "likely",
+      "why": "RP2040 + Infineon CYW43439 Wi-Fi; the $6 wireless workhorse."
+    },
+    {
+      "rank": 43,
+      "name": "ESP8266",
+      "category": "SBCs & Dev Boards",
+      "manufacturer": "Espressif",
+      "sources": [
+        {
+          "type": "reference",
+          "url": "https://en.wikipedia.org/wiki/ESP8266",
+          "note": "Wikipedia chip overview"
+        }
+      ],
+      "evidence": "likely",
+      "why": "The chip that started the cheap Wi-Fi revolution; still everywhere."
+    },
+    {
+      "rank": 44,
+      "name": "BeagleBone Black",
+      "category": "SBCs & Dev Boards",
+      "manufacturer": "BeagleBoard.org",
+      "sources": [
+        {
+          "type": "reference",
+          "url": "https://en.wikipedia.org/wiki/BeagleBone",
+          "note": "Wikipedia board overview"
+        },
+        {
+          "type": "manufacturer",
+          "url": "https://www.beagleboard.org/boards/beaglebone-black",
+          "note": "Secondary reference"
+        }
+      ],
+      "evidence": "likely",
+      "why": "AM3358 with PRUs; the industrial maker's SBC."
+    },
+    {
+      "rank": 45,
+      "name": "NVIDIA Jetson Orin Nano",
+      "category": "SBCs & Dev Boards",
+      "manufacturer": "NVIDIA",
+      "sources": [
+        {
+          "type": "reference",
+          "url": "https://en.wikipedia.org/wiki/Jetson",
+          "note": "Wikipedia platform overview"
+        },
+        {
+          "type": "manufacturer",
+          "url": "https://www.nvidia.com/en-us/autonomous-machines/embedded-systems/jetson-orin/",
+          "note": "Secondary reference"
+        }
+      ],
+      "evidence": "likely",
+      "why": "Ampere GPU edge-AI module; 40 TOPS in a tiny form factor."
+    },
+    {
+      "rank": 46,
+      "name": "Orange Pi 5",
+      "category": "SBCs & Dev Boards",
+      "manufacturer": "Orange Pi",
+      "sources": [
+        {
+          "type": "reference",
+          "url": "https://en.wikipedia.org/wiki/Orange_Pi",
+          "note": "Wikipedia brand overview"
+        },
+        {
+          "type": "manufacturer",
+          "url": "http://www.orangepi.org/html/hardWare/computerAndMicrocontrollers/details/Orange-Pi-5.html",
+          "note": "Secondary reference"
+        }
+      ],
+      "evidence": "likely",
+      "why": "RK3588S 8-core; the Pi alternative with real PCIe and 8K."
+    },
+    {
+      "rank": 47,
+      "name": "ODROID-N2+",
+      "category": "SBCs & Dev Boards",
+      "manufacturer": "Hardkernel",
+      "sources": [
+        {
+          "type": "reference",
+          "url": "https://en.wikipedia.org/wiki/ODROID",
+          "note": "Wikipedia brand overview"
+        },
+        {
+          "type": "manufacturer",
+          "url": "https://www.hardkernel.com/shop/odroid-n2plus/",
+          "note": "Secondary reference"
+        }
+      ],
+      "evidence": "likely",
+      "why": "S922X SBC with passive cooling; emulation favorite."
+    },
+    {
+      "rank": 48,
+      "name": "STM32 Nucleo-64",
+      "category": "SBCs & Dev Boards",
+      "manufacturer": "STMicroelectronics",
+      "sources": [
+        {
+          "type": "reference",
+          "url": "https://en.wikipedia.org/wiki/STM32",
+          "note": "Wikipedia MCU family overview"
+        },
+        {
+          "type": "manufacturer",
+          "url": "https://www.st.com/en/evaluation-tools/nucleo-f401re.html",
+          "note": "Secondary reference"
+        }
+      ],
+      "evidence": "likely",
+      "why": "The professional Cortex-M dev platform; ST-Link debugger onboard."
+    },
+    {
+      "rank": 49,
+      "name": "Adafruit Feather M4 Express",
+      "category": "SBCs & Dev Boards",
+      "manufacturer": "Adafruit",
+      "sources": [
+        {
+          "type": "reference",
+          "url": "https://en.wikipedia.org/wiki/Adafruit_Industries",
+          "note": "Wikipedia company overview"
+        },
+        {
+          "type": "manufacturer",
+          "url": "https://www.adafruit.com/product/3857",
+          "note": "Secondary reference"
+        }
+      ],
+      "evidence": "likely",
+      "why": "SAMD51 Feather; CircuitPython-native prototyping."
+    },
+    {
+      "rank": 50,
+      "name": "Banana Pi BPI-M5",
+      "category": "SBCs & Dev Boards",
+      "manufacturer": "Banana Pi",
+      "sources": [
+        {
+          "type": "reference",
+          "url": "https://en.wikipedia.org/wiki/Banana_Pi",
+          "note": "Wikipedia brand overview"
+        }
+      ],
+      "evidence": "likely",
+      "why": "S922X SBC; eMMC onboard, popular media-center board."
+    },
+    {
+      "rank": 51,
+      "name": "Radxa Rock 5B",
+      "category": "SBCs & Dev Boards",
+      "manufacturer": "Radxa",
+      "sources": [
+        {
+          "type": "reference",
+          "url": "https://en.wikipedia.org/wiki/Rockchip",
+          "note": "Wikipedia SoC vendor overview"
+        },
+        {
+          "type": "manufacturer",
+          "url": "https://radxa.com/products/rock5/5b/",
+          "note": "Secondary reference"
+        }
+      ],
+      "evidence": "likely",
+      "why": "RK3588 flagship SBC; M.2 NVMe, 2.5 GbE, 8K output."
+    },
+    {
+      "rank": 52,
+      "name": "Pine64 Ox64",
+      "category": "SBCs & Dev Boards",
+      "manufacturer": "Pine64",
+      "sources": [
+        {
+          "type": "reference",
+          "url": "https://en.wikipedia.org/wiki/Pine64",
+          "note": "Wikipedia company overview"
+        },
+        {
+          "type": "manufacturer",
+          "url": "https://www.pine64.org/ox64/",
+          "note": "Secondary reference"
+        }
+      ],
+      "evidence": "likely",
+      "why": "BL808 RISC-V + Wi-Fi/BLE; $8 RISC-V board."
+    },
+    {
+      "rank": 53,
+      "name": "SiFive HiFive Unmatched",
+      "category": "SBCs & Dev Boards",
+      "manufacturer": "SiFive",
+      "sources": [
+        {
+          "type": "reference",
+          "url": "https://en.wikipedia.org/wiki/SiFive",
+          "note": "Wikipedia company overview"
+        }
+      ],
+      "evidence": "likely",
+      "why": "FU740 RISC-V mini-ITX; the first serious RISC-V dev board."
+    },
+    {
+      "rank": 54,
+      "name": "Milk-V Duo",
+      "category": "SBCs & Dev Boards",
+      "manufacturer": "Milk-V",
+      "sources": [
+        {
+          "type": "manufacturer",
+          "url": "https://milkv.io/duo",
+          "note": "Official product page"
+        }
+      ],
+      "evidence": "likely",
+      "why": "CV1800B RISC-V + TPU for $9; tiniest Linux AI board."
+    },
+    {
+      "rank": 55,
+      "name": "ASUS ROG Ally",
+      "category": "Game Consoles & Handhelds",
+      "manufacturer": "ASUS",
+      "sources": [
+        {
+          "type": "reference",
+          "url": "https://en.wikipedia.org/wiki/Asus_ROG_Ally",
+          "note": "Wikipedia device overview"
+        }
+      ],
+      "evidence": "likely",
+      "why": "Ryzen Z1 Extreme handheld; Windows gaming in Steam Deck form."
+    },
+    {
+      "rank": 56,
+      "name": "Lenovo Legion Go",
+      "category": "Game Consoles & Handhelds",
+      "manufacturer": "Lenovo",
+      "sources": [
+        {
+          "type": "reference",
+          "url": "https://en.wikipedia.org/wiki/Lenovo_Legion_Go",
+          "note": "Wikipedia device overview"
+        }
+      ],
+      "evidence": "likely",
+      "why": "Detachable controllers, 8.8-inch display; iFixit compared it to Deck OLED."
+    },
+    {
+      "rank": 57,
+      "name": "Playdate",
+      "category": "Game Consoles & Handhelds",
+      "manufacturer": "Panic",
+      "sources": [
+        {
+          "type": "reference",
+          "url": "https://en.wikipedia.org/wiki/Playdate_(console)",
+          "note": "Wikipedia device overview"
+        },
+        {
+          "type": "manufacturer",
+          "url": "https://play.date",
+          "note": "Secondary reference"
+        }
+      ],
+      "evidence": "likely",
+      "why": "Crank-controlled handheld; open SDK, beloved by indie devs."
+    },
+    {
+      "rank": 58,
+      "name": "Nintendo Game Boy",
+      "category": "Game Consoles & Handhelds",
+      "manufacturer": "Nintendo",
+      "sources": [
+        {
+          "type": "reference",
+          "url": "https://en.wikipedia.org/wiki/Game_Boy",
+          "note": "Wikipedia device overview"
+        }
+      ],
+      "evidence": "likely",
+      "why": "Sharp LR35902 legend; the retro modding scene's foundation."
+    },
+    {
+      "rank": 59,
+      "name": "Nintendo Game Boy Advance",
+      "category": "Game Consoles & Handhelds",
+      "manufacturer": "Nintendo",
+      "sources": [
+        {
+          "type": "reference",
+          "url": "https://en.wikipedia.org/wiki/Game_Boy_Advance",
+          "note": "Wikipedia device overview"
+        }
+      ],
+      "evidence": "likely",
+      "why": "32-bit ARM7TDMI handheld; IPS screen mods and flash carts keep it alive."
+    },
+    {
+      "rank": 60,
+      "name": "Xbox Series S",
+      "category": "Game Consoles & Handhelds",
+      "manufacturer": "Microsoft",
+      "sources": [
+        {
+          "type": "reference",
+          "url": "https://en.wikipedia.org/wiki/Xbox_Series_X_and_Series_S",
+          "note": "Wikipedia device overview"
+        }
+      ],
+      "evidence": "likely",
+      "why": "Cut-down AMD APU console; cheapest current-gen teardown."
+    },
+    {
+      "rank": 61,
+      "name": "MacBook Air (M2, 2022)",
+      "category": "Laptops & Computers",
+      "manufacturer": "Apple",
+      "sources": [
+        {
+          "type": "reference",
+          "url": "https://en.wikipedia.org/wiki/MacBook_Air_(Apple_silicon)",
+          "note": "Wikipedia device overview"
+        }
+      ],
+      "evidence": "likely",
+      "why": "M2 in fanless wedge; unified memory teardown interest."
+    },
+    {
+      "rank": 62,
+      "name": "MacBook Pro 14 (M3, 2023)",
+      "category": "Laptops & Computers",
+      "manufacturer": "Apple",
+      "sources": [
+        {
+          "type": "reference",
+          "url": "https://en.wikipedia.org/wiki/MacBook_Pro_(Apple_silicon)",
+          "note": "Wikipedia device overview"
+        }
+      ],
+      "evidence": "likely",
+      "why": "M3 Pro/Max; mini-LED, dense logic board."
+    },
+    {
+      "rank": 63,
+      "name": "ThinkPad X1 Carbon Gen 11",
+      "category": "Laptops & Computers",
+      "manufacturer": "Lenovo",
+      "sources": [
+        {
+          "type": "reference",
+          "url": "https://en.wikipedia.org/wiki/ThinkPad_X1",
+          "note": "Wikipedia line overview"
+        }
+      ],
+      "evidence": "likely",
+      "why": "Business ultrabook; still serviceable RAM/SSD on some configs."
+    },
+    {
+      "rank": 64,
+      "name": "Pinebook Pro",
+      "category": "Laptops & Computers",
+      "manufacturer": "Pine64",
+      "sources": [
+        {
+          "type": "reference",
+          "url": "https://en.wikipedia.org/wiki/Pinebook_Pro",
+          "note": "Wikipedia device overview"
+        },
+        {
+          "type": "manufacturer",
+          "url": "https://www.pine64.org/pinebook-pro/",
+          "note": "Secondary reference"
+        }
+      ],
+      "evidence": "likely",
+      "why": "RK3399 Linux laptop for $220; open firmware efforts."
+    },
+    {
+      "rank": 65,
+      "name": "ClockworkPi DevTerm",
+      "category": "Laptops & Computers",
+      "manufacturer": "ClockworkPi",
+      "sources": [
+        {
+          "type": "manufacturer",
+          "url": "https://www.clockworkpi.com/devterm",
+          "note": "Official product page"
+        }
+      ],
+      "evidence": "likely",
+      "why": "Modular retro terminal with thermal printer; CM3/CM4/R-01 cores."
+    },
+    {
+      "rank": 66,
+      "name": "Amazon Echo Dot (5th gen)",
+      "category": "IoT & Smart Home",
+      "manufacturer": "Amazon",
+      "sources": [
+        {
+          "type": "reference",
+          "url": "https://en.wikipedia.org/wiki/Amazon_Echo",
+          "note": "Wikipedia device overview"
+        }
+      ],
+      "evidence": "likely",
+      "why": "AZ2 Neural Edge chip; the most-torn-down smart speaker."
+    },
+    {
+      "rank": 67,
+      "name": "Amazon Echo Show 15",
+      "category": "IoT & Smart Home",
+      "manufacturer": "Amazon",
+      "sources": [
+        {
+          "type": "reference",
+          "url": "https://en.wikipedia.org/wiki/Amazon_Echo_Show",
+          "note": "Wikipedia device overview"
+        }
+      ],
+      "evidence": "likely",
+      "why": "15-inch smart display; AZ2 + wall-mount teardown curiosity."
+    },
+    {
+      "rank": 68,
+      "name": "Google Nest Mini (2nd gen)",
+      "category": "IoT & Smart Home",
+      "manufacturer": "Google",
+      "sources": [
+        {
+          "type": "reference",
+          "url": "https://en.wikipedia.org/wiki/Google_Nest_(smart_speakers)",
+          "note": "Wikipedia device overview"
+        }
+      ],
+      "evidence": "likely",
+      "why": "Low-cost smart speaker; common UART-debug target."
+    },
+    {
+      "rank": 69,
+      "name": "Google Nest Thermostat",
+      "category": "IoT & Smart Home",
+      "manufacturer": "Google",
+      "sources": [
+        {
+          "type": "reference",
+          "url": "https://en.wikipedia.org/wiki/Google_Nest",
+          "note": "Wikipedia brand overview"
+        }
+      ],
+      "evidence": "likely",
+      "why": "Learning thermostat; early IoT teardown classic."
+    },
+    {
+      "rank": 70,
+      "name": "Philips Hue Bridge v2",
+      "category": "IoT & Smart Home",
+      "manufacturer": "Philips Hue",
+      "sources": [
+        {
+          "type": "reference",
+          "url": "https://en.wikipedia.org/wiki/Philips_Hue",
+          "note": "Wikipedia system overview"
+        }
+      ],
+      "evidence": "likely",
+      "why": "Zigbee coordinator; the hub every smart-home hacker has opened."
+    },
+    {
+      "rank": 71,
+      "name": "Ring Video Doorbell",
+      "category": "IoT & Smart Home",
+      "manufacturer": "Ring",
+      "sources": [
+        {
+          "type": "reference",
+          "url": "https://en.wikipedia.org/wiki/Ring_(company)",
+          "note": "Wikipedia company overview"
+        }
+      ],
+      "evidence": "likely",
+      "why": "Battery doorbell cam; privacy debates drive teardown interest."
+    },
+    {
+      "rank": 72,
+      "name": "Wyze Cam v3",
+      "category": "IoT & Smart Home",
+      "manufacturer": "Wyze",
+      "sources": [
+        {
+          "type": "reference",
+          "url": "https://en.wikipedia.org/wiki/Wyze",
+          "note": "Wikipedia company overview"
+        }
+      ],
+      "evidence": "likely",
+      "why": "$35 cam with Ingenic T31; huge custom-firmware scene."
+    },
+    {
+      "rank": 73,
+      "name": "Shelly 1",
+      "category": "IoT & Smart Home",
+      "manufacturer": "Shelly",
+      "sources": [
+        {
+          "type": "manufacturer",
+          "url": "https://www.shelly.com/products/shelly-1-smart-home-automation-relay",
+          "note": "Official product page (rate-limited during verification)"
+        }
+      ],
+      "evidence": "unconfirmed",
+      "why": "ESP8266 relay; the open-firmware smart-home staple."
+    },
+    {
+      "rank": 74,
+      "name": "Sonoff Basic R4",
+      "category": "IoT & Smart Home",
+      "manufacturer": "ITEAD",
+      "sources": [
+        {
+          "type": "manufacturer",
+          "url": "https://sonoff.tech/product/diy-smart-switch/basicr4/",
+          "note": "Official product page (path unverified)"
+        }
+      ],
+      "evidence": "unconfirmed",
+      "why": "ESP32-C3 smart switch; Tasmota/ESPHome favorite."
+    },
+    {
+      "rank": 75,
+      "name": "IKEA Dirigera",
+      "category": "IoT & Smart Home",
+      "manufacturer": "IKEA",
+      "sources": [
+        {
+          "type": "reference",
+          "url": "https://en.wikipedia.org/wiki/IKEA",
+          "note": "Wikipedia company overview"
+        }
+      ],
+      "evidence": "unconfirmed",
+      "why": "Matter/Thread/Zigbee hub; IKEA's smart-home play."
+    },
+    {
+      "rank": 76,
+      "name": "DJI Mini 4 Pro",
+      "category": "Drones",
+      "manufacturer": "DJI",
+      "sources": [
+        {
+          "type": "reference",
+          "url": "https://en.wikipedia.org/wiki/DJI_Mini",
+          "note": "Wikipedia line overview"
+        }
+      ],
+      "evidence": "likely",
+      "why": "Sub-249 g with omnidirectional sensing; the drone hackers actually fly."
+    },
+    {
+      "rank": 77,
+      "name": "DJI Mavic 3",
+      "category": "Drones",
+      "manufacturer": "DJI",
+      "sources": [
+        {
+          "type": "reference",
+          "url": "https://en.wikipedia.org/wiki/DJI_Mavic",
+          "note": "Wikipedia line overview"
+        }
+      ],
+      "evidence": "likely",
+      "why": "Hasselblad 4/3 camera drone; Ocusync teardown interest."
+    },
+    {
+      "rank": 78,
+      "name": "DJI Avata 2",
+      "category": "Drones",
+      "manufacturer": "DJI",
+      "sources": [
+        {
+          "type": "reference",
+          "url": "https://en.wikipedia.org/wiki/DJI",
+          "note": "Wikipedia company overview"
+        }
+      ],
+      "evidence": "likely",
+      "why": "FPV cinewhoop; 1-inch sensor in a tiny frame."
+    },
+    {
+      "rank": 79,
+      "name": "Parrot Anafi",
+      "category": "Drones",
+      "manufacturer": "Parrot",
+      "sources": [
+        {
+          "type": "reference",
+          "url": "https://en.wikipedia.org/wiki/Parrot_Anafi",
+          "note": "Wikipedia device overview"
+        }
+      ],
+      "evidence": "likely",
+      "why": "Open-ish SDK drone; USB-C, 4K HDR, hacker-friendly."
+    },
+    {
+      "rank": 80,
+      "name": "BetaFPV Cetus X",
+      "category": "Drones",
+      "manufacturer": "BetaFPV",
+      "sources": [
+        {
+          "type": "reference",
+          "url": "https://en.wikipedia.org/wiki/First-person_view_(radio_control)",
+          "note": "Wikipedia FPV overview"
+        },
+        {
+          "type": "manufacturer",
+          "url": "https://betafpv.com",
+          "note": "Secondary reference"
+        }
+      ],
+      "evidence": "unconfirmed",
+      "why": "Brushless FPV starter kit; ELRS radio link."
+    },
+    {
+      "rank": 81,
+      "name": "PlayStation VR2",
+      "category": "VR/AR",
+      "manufacturer": "Sony",
+      "sources": [
+        {
+          "type": "reference",
+          "url": "https://en.wikipedia.org/wiki/PlayStation_VR2",
+          "note": "Wikipedia device overview"
+        }
+      ],
+      "evidence": "likely",
+      "why": "4K HDR OLED VR; inside-out tracking, haptic controllers."
+    },
+    {
+      "rank": 82,
+      "name": "Fitbit Charge 6",
+      "category": "Wearables",
+      "manufacturer": "Fitbit",
+      "sources": [
+        {
+          "type": "reference",
+          "url": "https://en.wikipedia.org/wiki/Fitbit",
+          "note": "Wikipedia company overview"
+        }
+      ],
+      "evidence": "likely",
+      "why": "Google-owned tracker; tiny sealed health sensors."
+    },
+    {
+      "rank": 83,
+      "name": "Garmin Fenix 7",
+      "category": "Wearables",
+      "manufacturer": "Garmin",
+      "sources": [
+        {
+          "type": "reference",
+          "url": "https://en.wikipedia.org/wiki/Garmin",
+          "note": "Wikipedia company overview"
+        }
+      ],
+      "evidence": "likely",
+      "why": "Solar multisport watch; the anti-throwaway wearable."
+    },
+    {
+      "rank": 84,
+      "name": "Samsung Galaxy Watch 6",
+      "category": "Wearables",
+      "manufacturer": "Samsung",
+      "sources": [
+        {
+          "type": "reference",
+          "url": "https://en.wikipedia.org/wiki/Samsung_Galaxy_Watch_series",
+          "note": "Wikipedia line overview"
+        }
+      ],
+      "evidence": "likely",
+      "why": "Exynos W930 Wear OS watch; BioActive sensor array."
+    },
+    {
+      "rank": 85,
+      "name": "AirPods Pro (2nd gen)",
+      "category": "Audio",
+      "manufacturer": "Apple",
+      "sources": [
+        {
+          "type": "reference",
+          "url": "https://en.wikipedia.org/wiki/AirPods_Pro",
+          "note": "Wikipedia device overview"
+        }
+      ],
+      "evidence": "likely",
+      "why": "H2 chip + U1; famously unrepairable, iFixit 0/10."
+    },
+    {
+      "rank": 86,
+      "name": "Sony WH-1000X series",
+      "category": "Audio",
+      "manufacturer": "Sony",
+      "sources": [
+        {
+          "type": "reference",
+          "url": "https://en.wikipedia.org/wiki/Sony",
+          "note": "Wikipedia company overview"
+        }
+      ],
+      "evidence": "unconfirmed",
+      "why": "Flagship ANC headphones; QN1 processor teardown interest."
+    },
+    {
+      "rank": 87,
+      "name": "HomePod mini",
+      "category": "Audio",
+      "manufacturer": "Apple",
+      "sources": [
+        {
+          "type": "reference",
+          "url": "https://en.wikipedia.org/wiki/HomePod_Mini",
+          "note": "Wikipedia device overview"
+        }
+      ],
+      "evidence": "likely",
+      "why": "S5 chip in a tennis ball; UWB + Thread radio."
+    },
+    {
+      "rank": 88,
+      "name": "Sonos Era 100",
+      "category": "Audio",
+      "manufacturer": "Sonos",
+      "sources": [
+        {
+          "type": "reference",
+          "url": "https://en.wikipedia.org/wiki/Sonos",
+          "note": "Wikipedia company overview"
+        }
+      ],
+      "evidence": "likely",
+      "why": "Wi-Fi 6 smart speaker; Trueplay tuning mics."
+    },
+    {
+      "rank": 89,
+      "name": "JBL Flip 6",
+      "category": "Audio",
+      "manufacturer": "JBL",
+      "sources": [
+        {
+          "type": "reference",
+          "url": "https://en.wikipedia.org/wiki/JBL",
+          "note": "Wikipedia company overview"
+        }
+      ],
+      "evidence": "likely",
+      "why": "PartyBoost Bluetooth speaker; IP67, common battery-swap repair."
+    },
+    {
+      "rank": 90,
+      "name": "iPad Pro (M4, 2024)",
+      "category": "Tablets & E-Readers",
+      "manufacturer": "Apple",
+      "sources": [
+        {
+          "type": "reference",
+          "url": "https://en.wikipedia.org/wiki/IPad_Pro_(7th_generation)",
+          "note": "Wikipedia device overview"
+        }
+      ],
+      "evidence": "likely",
+      "why": "M4 + tandem OLED; thinnest Apple device ever at 5.1 mm."
+    },
+    {
+      "rank": 91,
+      "name": "reMarkable 2",
+      "category": "Tablets & E-Readers",
+      "manufacturer": "reMarkable",
+      "sources": [
+        {
+          "type": "reference",
+          "url": "https://en.wikipedia.org/wiki/ReMarkable",
+          "note": "Wikipedia device overview"
+        },
+        {
+          "type": "manufacturer",
+          "url": "https://remarkable.com",
+          "note": "Secondary reference"
+        }
+      ],
+      "evidence": "likely",
+      "why": "E-ink writing tablet; i.MX6ULL, beloved by note-taking hackers."
+    },
+    {
+      "rank": 92,
+      "name": "Kindle Paperwhite (5th gen)",
+      "category": "Tablets & E-Readers",
+      "manufacturer": "Amazon",
+      "sources": [
+        {
+          "type": "reference",
+          "url": "https://en.wikipedia.org/wiki/Amazon_Kindle",
+          "note": "Wikipedia device overview"
+        }
+      ],
+      "evidence": "likely",
+      "why": "6.8-inch e-ink; jailbreaking scene keeps it interesting."
+    },
+    {
+      "rank": 93,
+      "name": "Samsung Galaxy Tab S9",
+      "category": "Tablets & E-Readers",
+      "manufacturer": "Samsung",
+      "sources": [
+        {
+          "type": "reference",
+          "url": "https://en.wikipedia.org/wiki/Samsung_Galaxy_Tab_S9",
+          "note": "Wikipedia device overview"
+        }
+      ],
+      "evidence": "likely",
+      "why": "Snapdragon 8 Gen 2 tablet with IP68; DeX teardown curiosity."
+    },
+    {
+      "rank": 94,
+      "name": "PineTab 2",
+      "category": "Tablets & E-Readers",
+      "manufacturer": "Pine64",
+      "sources": [
+        {
+          "type": "reference",
+          "url": "https://en.wikipedia.org/wiki/PineTab",
+          "note": "Wikipedia device overview"
+        },
+        {
+          "type": "manufacturer",
+          "url": "https://www.pine64.org/pinetab2/",
+          "note": "Secondary reference"
+        }
+      ],
+      "evidence": "likely",
+      "why": "RK3566 Linux tablet with detachable keyboard."
+    },
+    {
+      "rank": 95,
+      "name": "Ubiquiti UniFi Dream Machine",
+      "category": "Networking",
+      "manufacturer": "Ubiquiti",
+      "sources": [
+        {
+          "type": "reference",
+          "url": "https://en.wikipedia.org/wiki/Ubiquiti",
+          "note": "Wikipedia company overview"
+        },
+        {
+          "type": "manufacturer",
+          "url": "https://ui.com",
+          "note": "Secondary reference"
+        }
+      ],
+      "evidence": "likely",
+      "why": "All-in-one gateway/AP/controller; homelab staple."
+    },
+    {
+      "rank": 96,
+      "name": "Linksys WRT3200ACM",
+      "category": "Networking",
+      "manufacturer": "Linksys",
+      "sources": [
+        {
+          "type": "reference",
+          "url": "https://en.wikipedia.org/wiki/Linksys",
+          "note": "Wikipedia company overview"
+        }
+      ],
+      "evidence": "likely",
+      "why": "Marvell Armada router; the OpenWrt community's reference platform."
+    },
+    {
+      "rank": 97,
+      "name": "Netgear Nighthawk RAX50",
+      "category": "Networking",
+      "manufacturer": "Netgear",
+      "sources": [
+        {
+          "type": "reference",
+          "url": "https://en.wikipedia.org/wiki/Netgear",
+          "note": "Wikipedia company overview"
+        }
+      ],
+      "evidence": "likely",
+      "why": "AX5400 Wi-Fi 6 router; Broadcom BCM6755 teardown."
+    },
+    {
+      "rank": 98,
+      "name": "RTL-SDR Blog V3",
+      "category": "Hacker Tools",
+      "manufacturer": "RTL-SDR Blog",
+      "sources": [
+        {
+          "type": "manufacturer",
+          "url": "https://www.rtl-sdr.com/",
+          "note": "Official community site and store"
+        }
+      ],
+      "evidence": "likely",
+      "why": "$30 software-defined radio; RTL2832U, the RF gateway drug."
+    },
+    {
+      "rank": 99,
+      "name": "ClockworkPi uConsole",
+      "category": "Hacker Tools",
+      "manufacturer": "ClockworkPi",
+      "sources": [
+        {
+          "type": "reference",
+          "url": "https://en.wikipedia.org/wiki/UConsole",
+          "note": "Wikipedia device overview"
+        },
+        {
+          "type": "manufacturer",
+          "url": "https://www.clockworkpi.com/uconsole",
+          "note": "Secondary reference"
+        }
+      ],
+      "evidence": "confirmed",
+      "why": "Modular cyberdeck handheld; CM4/A-06/R-01 swappable cores."
+    },
+    {
+      "rank": 100,
+      "name": "Bus Pirate 5",
+      "category": "Hacker Tools",
+      "manufacturer": "Dangerous Prototypes",
+      "sources": [
+        {
+          "type": "reference",
+          "url": "https://en.wikipedia.org/wiki/Bus_Pirate",
+          "note": "Wikipedia device overview"
+        },
+        {
+          "type": "manufacturer",
+          "url": "https://buspirate.com",
+          "note": "Secondary reference"
+        }
+      ],
+      "evidence": "likely",
+      "why": "RP2040 universal serial multi-tool; I2C/SPI/UART/SWD in one."
+    }
+  ]
 }
