@@ -5,13 +5,13 @@
 <meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self' data:; style-src 'self'; script-src 'self'; object-src 'none'; frame-src 'none'; base-uri 'self'; form-action 'none'">
 <meta name="referrer" content="no-referrer">
 <meta name="robots" content="noai, noimageai">
-<meta name="tdm-reservation" content="1">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Colophon — BareBoard</title>
-<meta name="description" content="How BareBoard is built: hand-written pages, no trackers, no frameworks.">
+<title>The BareBoard Atlas &mdash; Free Hardware Education</title>
+<meta name="description" content="The BareBoard Atlas: all 100 Hot 100 devices mapped by footprint (units sold) and openness (how learnable the hardware is). An interactive guide to what to learn on next.">
 <meta name="theme-color" content="#fbfbfc">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%231d1d1f'/%3E%3Ctext x='32' y='45' font-family='system-ui,-apple-system,sans-serif' font-size='36' font-weight='700' fill='white' text-anchor='middle'%3EB%3C/text%3E%3C/svg%3E">
 <link rel="stylesheet" href="/style.css">
+<link rel="stylesheet" href="/atlas.css">
 </head>
 <body>
 <header class="site-nav">
@@ -113,8 +113,7 @@
             </div>
           </div>
         </li>
-                <li><a href="/atlas.html">Atlas</a></li>
-<li class="has-children">
+        <li class="has-children">
           <a href="/most-wanted.html" aria-haspopup="true" aria-expanded="false">Most Wanted</a>
           <div class="col-panel">
             <div class="finder" data-finder>
@@ -151,40 +150,64 @@
     <ul class="search-results" id="search-results" aria-live="polite"></ul>
   </div>
 </header>
+<main>
+  <section class="atlas-hero">
+    <h1>The BareBoard Atlas</h1>
+    <p class="lede">Every device in the Hot 100, mapped on two axes: how many are out there, and how open the hardware is to learning. Find your next teardown.</p>
+    <p class="method-note">100 devices &middot; units from the <a href="/hot-100.html">Hot 100</a> dataset &middot; openness is a BareBoard editorial rating (v1)</p>
+  </section>
 
-<main class="content">
-<h1>Colophon</h1>
-<p class="lede">How this site is made &mdash; and why it&rsquo;s made this way.</p>
+  <section class="atlas-controls" aria-label="Atlas controls">
+    <div class="atlas-searchrow">
+      <input type="search" id="atlas-search" class="atlas-search" placeholder="Filter devices by name&hellip;" aria-label="Filter devices by name" autocomplete="off" spellcheck="false">
+      <button type="button" id="atlas-reset" class="atlas-reset">Reset view</button>
+    </div>
+    <div class="atlas-chips" id="atlas-chips" role="group" aria-label="Filter by category"></div>
+    <p class="atlas-count" id="atlas-count" aria-live="polite">100 of 100 devices shown</p>
+  </section>
 
-<h2>Hand-built</h2>
-<p>Every page on BareBoard is written by hand as plain HTML, styled by a single
-shared stylesheet, with a little vanilla JavaScript only where a page needs it.
-There is no framework, no build step, no content management system, and no
-third-party scripts, fonts, or trackers. Outbound links go to cited sources
-(datasheets, filings, reference material) &mdash; nothing phones home.</p>
+  <section class="atlas-chartwrap" id="atlas-chartwrap" aria-label="Device map">
+    <div id="atlas-chartsection">
+      <div id="atlas-chart"></div>
+    </div>
+    <div class="atlas-tip" id="atlas-tip" role="dialog" aria-label="Device details">
+      <button type="button" class="tip-close" aria-label="Close device details">&times;</button>
+      <h3></h3>
+      <p class="tip-cat"></p>
+      <dl>
+        <dt>Ranking</dt><dd data-f="rank"></dd>
+        <dt>Units</dt><dd data-f="units"></dd>
+        <dt>Openness</dt><dd><span data-f="open"></span><span class="open-meter"><span></span></span></dd>
+      </dl>
+      <p class="src"></p>
+      <a class="tip-link" href="/hot-100.html">See it in the Hot 100 &rarr;</a>
+    </div>
+  </section>
 
-<h2>Defensive by default</h2>
-<p>Each page carries a strict Content Security Policy, a no-referrer policy,
-<code>noai, noimageai</code> crawler directives, and a TDM (text-and-data-mining)
-reservation, backed by a <code>robots.txt</code> and a
-<code>/.well-known/tdmrep.json</code> declaration. Automated scraping for AI
-model training is prohibited &mdash; the findings here are published for
-humans learning hardware.</p>
+  <section class="atlas-legend" aria-label="How to read the Atlas">
+    <h2>How to read this map</h2>
+    <ul>
+      <li><strong>Horizontal axis</strong> &mdash; units sold, log scale. Right means more of them in the world.</li>
+      <li><strong>Vertical axis</strong> &mdash; the BareBoard openness rating (0&ndash;100): documentation quality, debug-interface availability, community support, repairability.</li>
+      <li><strong>Bubble size</strong> &mdash; teardown depth on BareBoard. Large means a full published autopsy (currently the <a href="/autopsy/xb3-tg1682g/">Xfinity XB3</a>); small means not yet documented.</li>
+      <li><strong>Color</strong> &mdash; device category. Toggle categories with the chips above; scroll or pinch to zoom, drag to pan.</li>
+    </ul>
+  </section>
 
-<h2>Free forever</h2>
-<p>BareBoard is a non-commercial, open educational resource. It is hosted on
-GitHub Pages at no cost, which is exactly why it can afford to be free:
-there is nothing to sell and no one to sell it to. Text and original findings
-are published under open terms.</p>
+  <aside class="atlas-editorial">
+    <strong>On the openness rating.</strong> This score is editorial and subjective by design &mdash; our judgment of how learnable each device is, version 1. It is a starting point for exploration, not a measurement. If you disagree with a rating, that disagreement is the point: the map is an argument about hardware, and arguments can be answered.
+  </aside>
 
-<h2>How it&rsquo;s built</h2>
-<p>This site was assembled and published on September 30, 2026. Every claim is
-checked against hardware on the bench, and every page is written to be read by
-humans first. The division of labor is the point of the place:
-<em>we can&rsquo;t open their hardware, so we open our findings.</em></p>
+  <div class="atlas-list-toggle">
+    <button type="button" id="atlas-list-toggle" class="atlas-reset">View as list</button>
+    <div class="atlas-tablewrap" id="atlas-tablewrap"></div>
+  </div>
 
-<p class="signoff">BareBoard &mdash; free hardware education.</p>
+  <section class="atlas-outro">
+    <p>The Atlas is built from the <a href="/hot-100.html">Hot 100</a> dataset. Rankings recompute as the data updates; the map follows.</p>
+  </section>
 </main>
+
 <footer>
     <p>BareBoard &mdash; a free educational resource. Text and findings published under open terms; nothing here is for sale.</p>
         <nav>
@@ -203,8 +226,8 @@ humans first. The division of labor is the point of the place:
       <p class="legal-note"><em>BareBoard &mdash; open hardware allies, documented in alignment with the Open Source Hardware Association framework. Text and original photography published under open terms; nothing here is for sale.</em></p>
     </div>
   </footer>
-
 <script src="/nav.js" defer></script>
 <script src="/search.js" defer></script>
+<script src="/atlas.js" defer></script>
 </body>
 </html>
