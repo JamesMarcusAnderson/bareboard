@@ -355,6 +355,44 @@ Hard resetting via RTS pin...</code></pre>
 </section>
 
 <section>
+<h2>Simple entry points: everyday ports that open the door</h2>
+<p>Sometimes the case never needs to open at all. Many devices respond to the ports and buttons you already use every day &mdash; if you know the right signal to send. The methods below use ordinary connectors: a Joy-Con rail, a charging port, an Ethernet jack, a headphone socket, a USB cable. No soldering, no clips, and usually no extra hardware beyond a cable or a paperclip.</p>
+<p><strong>A note on scope:</strong> everything here is for hardware you own, for educational and repair purposes &mdash; understanding how your own devices boot, recovering a device that will not start, or installing community firmware that you choose. None of these methods bypass copy protection or digital rights management, and nothing here is intended to enable that. If a method does not apply to a device you own, treat it as a case study in how embedded hardware is designed.</p>
+
+<h3>Nintendo Switch &mdash; RCM through the Joy-Con rail</h3>
+<p>The Switch&rsquo;s processor has a built-in recovery mode called RCM. To reach it, pin 10 inside the right Joy-Con rail must be connected to ground while the console powers on &mdash; this tells the console to behave as though the Home button is being held. A small jig that slides into the rail bridges pin 10 to a ground pin (pins 1, 2, or 7). Community guides recommend a proper jig (~$5, or 3D-printed) and warn that paperclips or tinfoil can damage the rail&rsquo;s pads.</p>
+<p><strong>You need:</strong> an RCM jig; a USB-C cable; a computer running free payload software.</p>
+<p><strong>Steps:</strong> power the console fully off, slide the jig into the right Joy-Con rail, hold Volume Up and tap Power. A black screen means RCM is active &mdash; the screen stays dark because the console is waiting for instructions over USB.</p>
+<pre class="term"><code><span class="p">$</span> # connect the Switch by USB-C, then send a bootloader payload\n<span class="p">$</span> python3 fusee-launcher.py hekate.bin\nTegra X1 detected in RCM mode (0955:7321)\nUploading payload... complete.\n<span class="p">$</span> # the Switch wakes into the Hekate bootloader</code></pre>
+<p>The Switch entry point is a case study in how recovery modes work at the hardware level: a boot ROM &mdash; code burned into the processor that cannot be changed &mdash; listens on USB for instructions whenever a specific pin is grounded at power-on. Researchers use this to study the Tegra X1&rsquo;s boot process and to run alternative operating systems such as Linux on hardware they own. Note: payload delivery only works on unpatched launch-era consoles; later units can still enter RCM but will not accept payloads.</p>
+
+<h3>Samsung phones &mdash; a resistor in the charging port</h3>
+<p>Classic Samsung phones with micro-USB ports check the resistance between the port&rsquo;s ID pin (pin 4) and ground (pin 5) at power-on. A 301&nbsp;k&Omega; resistor across those two pins tells the phone to start directly in Download Mode &mdash; the firmware installation mode &mdash; with no buttons pressed. A few cents of resistor soldered into a spare micro-USB plug is the entire tool.</p>
+<p><strong>You need:</strong> a spare micro-USB plug, one 301&nbsp;k&Omega; resistor (three 100&nbsp;k&Omega; in series works the same), basic soldering.</p>
+<p><strong>Steps:</strong> solder the resistor between pins 4 and 5 of the plug, power the phone off, insert the jig. The phone enters Download Mode on its own &mdash; then swap in a normal USB cable and communicate with it over USB.</p>
+<pre class="term"><code><span class="p">$</span> # the phone now shows the Download Mode screen\n<span class="p">$</span> lsusb | grep -i samsung\nBus 001 Device 017: ID 04e8:685d Samsung Electronics Co., Ltd\n<span class="p">$</span> # the bootloader is communicating over USB</code></pre>
+
+<h3>TP-Link routers &mdash; the reset button is a recovery button</h3>
+<p>Most TP-Link routers include a built-in recovery routine: if the reset button is held while the router powers on, the bootloader pauses and tries to download a firmware file over the network (TFTP) from a fixed address &mdash; 192.168.0.66. All you need is an Ethernet cable, a paperclip for the recessed button, and free TFTP software on your computer.</p>
+<p><strong>You need:</strong> Ethernet cable, paperclip, free TFTP server software (tftpd64 on Windows; tftpd-hpa or dnsmasq on Linux).</p>
+<p><strong>Steps:</strong> set your computer&rsquo;s wired address to 192.168.0.66, place the correctly named firmware file for your exact model (for example <span class="mono">ArcherC7v2_tp_recovery.bin</span> &mdash; check your model&rsquo;s documentation for the right name) in the TFTP folder, connect to a LAN port, hold reset, power on, and release after about five seconds. The router fetches the file and flashes it by itself.</p>
+<pre class="term"><code><span class="p">$</span> sudo ip addr add 192.168.0.66/24 dev eth0\n<span class="p">$</span> sudo dnsmasq --enable-tftp --tftp-root=/tftpboot --port=0\n<span class="p">$</span> cp ArcherC7v2_tp_recovery.bin /tftpboot/\n<span class="p">$</span> # hold reset, power on the router, watch the server log:\ndnsmasq-tftp: sent /tftpboot/ArcherC7v2_tp_recovery.bin to 192.168.0.1\n<span class="p">$</span> # the router flashes the file and reboots on its own</code></pre>
+
+<h3>3.5mm headphone jack &mdash; a serial port in disguise</h3>
+<p>On some Android phones and media players, the 3.5&nbsp;mm headphone jack doubles as a serial console. Community documentation describes the arrangement: the sleeve carries power while the tip and ring carry the transmit and receive lines. A simple adapter cable plus a USB-to-serial converter turns the headphone jack into the same boot-log window described in the playbook&rsquo;s first technique &mdash; with zero disassembly.</p>
+<p><strong>You need:</strong> a 4-pole 3.5&nbsp;mm plug wired to a USB-to-serial breakout, and the pinout for your specific device &mdash; the postmarketOS serial debugging wiki and device forums track which models support this.</p>
+<p><strong>Steps:</strong> connect the cable, open a terminal at 115200 baud, and power the device on.</p>
+<pre class="term"><code><span class="p">$</span> screen /dev/ttyUSB0 115200\n[BL] Bootloader starting...\n[BL] serial console active\nAndroid boot log follows...</code></pre>
+<p>This is device-specific &mdash; it only works where the manufacturer wired the jack this way &mdash; so verify against your model&rsquo;s documentation first.</p>
+
+<h3>ESP8266/ESP32 devices &mdash; one button, one cable</h3>
+<p>Espressif chips enter flash mode when GPIO0 is held low during power-on. Manufacturers wire this to an onboard button (often labeled BOOT or FLASH). Hold the button, connect the USB cable, release the button &mdash; the chip is now waiting for firmware over the same cable it charges from. No probe, no clips, nothing beyond the charging cable.</p>
+<p><strong>You need:</strong> the device&rsquo;s own USB cable. That is all.</p>
+<p><strong>Steps:</strong> hold the button while plugging in USB, then talk to the chip with the free esptool utility. Save a backup of the original firmware first &mdash; it is your only way back.</p>
+<pre class="term"><code><span class="p">$</span> # hold BOOT, plug in USB, release BOOT\n<span class="p">$</span> esptool.py --port /dev/ttyUSB0 chip_id\nDetecting chip type... ESP32\nChip ID: 0x240ac0\n<span class="p">$</span> esptool.py --port /dev/ttyUSB0 read_flash 0x0 0x400000 backup.bin\n4194304 bytes read successfully.\n<span class="p">$</span> # original firmware safely backed up, using only the charging cable</code></pre>
+</section>
+
+<section>
 <h2>Every way in: the firmware access playbook</h2>
 <p>If a device runs code, that code is stored on a chip inside it &mdash; and there is always a method to read it. The techniques below are ordered from simplest to most involved. Each one names a specific device and the exact steps for it. Total equipment cost for the full set is under $25; most techniques need under $10.</p>
 <h3>1. Serial console &mdash; Sonoff Basic smart switch</h3>
