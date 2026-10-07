@@ -79,7 +79,7 @@
     "text": "The Autopsy Report We can\u2019t open their hardware, so we open our findings. Hardware analysis, published free \u2014 verified findings only, uncertainty dated and marked. Reports land here as they come off the bench. All Reports Airpods 2nd Generation \u2014 on the bench Airpods Pro 1st Generation \u2014 on the bench Amazon Echo 2nd Gen 2017 \u2014 on the bench Amazon Echo Dot 3rd Gen 2018 \u2014 on the bench Amazon Echo Show Line 2017 Present \u2014 on the bench Amazon Fire TV Stick 2nd Gen 2016 \u2014 on the bench Amazon Fire TV Stick 4k 2018 \u2014 on the bench Amazon Kindle Fire 1st Generation 2011 \u2014 on the bench Amazon Kindle Fire Hd 7 Inch 2012 \u2014 on the bench Amazon Kindle Paperwhite 11th Gen 2021 \u2014 on the bench Amazon Kindle Paperwhite 1st Generation 2012 \u2014 on the bench Apple Airtag 1st Gen 2021 \u2014 on the bench Apple Ii All Models \u2014 on the bench Apple Ipad 1st Generation 2010 \u2014 on the bench Apple Ipad 2 2011 \u2014 on the bench Apple Ipad 6th Generation 2018 \u2014 on the bench Apple Ipad Mini 1st Generation 2012 \u2014 on the bench Apple Macbook All Laptop Lines \u2014 on the bench Apple Tv 4k 1st Gen 2017 \u2014 on the bench Apple Tv Hd 4th Gen 2015 \u2014 on the bench Apple Watch Series 3 \u2014 on the bench Arduino Uno Atmega328p Boards \u2014 on the bench Arlo Pro 2 2017 \u2014 on the bench Asus Rt Ac68u Ac1900 \u2014 on the bench Barnes & Noble Nook Tablet 2011 \u2014 on the bench Comcast Xfinity X1 Dvr Xg1v1 2012 \u2014 on the bench Commodore 64 \u2014 on the bench D-Link Dir 615 All Hardware Revisions \u2014 on the bench Dell Inspiron Consumer Line \u2014 on the bench Dji Mavi"
   },
   {
-    "url": "/autopsy/xb3-tg1682g/",
+    "url": "/autopsy/xfinity-xb3/",
     "title": "Xfinity XB3 (Arris TG1682G) \u2014 BareBoard",
     "headings": [
       "Xfinity XB3 (Arris TG1682G)",
@@ -120,5 +120,15 @@
     "title": "Datasheet Index",
     "url": "/datasheets.html",
     "description": "Every datasheet referenced across BareBoard teardowns, in alphabetical order."
+  },
+  {
+    "title": "Quis Custodiet Ipsos Custodes? (Watchmen)",
+    "url": "/watchmen.html",
+    "description": "Who watches BareBoard? Our accountability, methodology, and corrections policy."
+  },
+  {
+    "title": "Bench Notes",
+    "url": "/notes/",
+    "description": "Short technical observations from the BareBoard workbench."
   }
 ]
