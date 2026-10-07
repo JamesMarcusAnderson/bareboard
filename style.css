@@ -783,3 +783,19 @@ p.note { font-size: 0.95rem; color: var(--secondary); border-left: 3px solid var
 .filters input[type="search"], .filters select { font: inherit; padding: 0.45rem 0.6rem; border: 1px solid var(--line, #d9d9de); border-radius: 8px; max-width: 16rem; }
 #obs-cards .card h2, #repair-cards .card h2, #proto-cards .card h2 { font-size: 1.25rem; margin: 0.4rem 0 0.6rem; }
 #obs-cards .card h3, #repair-cards .card h3, #proto-cards .card h3 { font-size: 1rem; margin: 1rem 0 0.4rem; }
+
+/* Terminal blocks */
+pre.term {
+  background: #1d1d1f;
+  color: #e9e9ec;
+  border-radius: 10px;
+  padding: 1rem 1.25rem;
+  overflow-x: auto;
+  font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+  font-size: 0.88rem;
+  line-height: 1.6;
+  margin: 1.25rem 0;
+}
+pre.term code { font-size: 1em; background: none; padding: 0; }
+pre.term .p { color: #7fb069; font-weight: 700; }
+pre.term a { color: #8ab4f8; }
