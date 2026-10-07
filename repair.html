@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
-<meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self' data:; style-src 'self'; script-src 'self'; object-src 'none'; frame-src 'none'; base-uri 'self'; form-action 'none'">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self' data: upload.wikimedia.org www.espressif.com; style-src 'self'; script-src 'self'; object-src 'none'; frame-src 'none'; base-uri 'self'; form-action 'none'">
 <meta name="referrer" content="no-referrer">
 <meta name="robots" content="noai, noimageai">
 <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -298,7 +298,28 @@
 <p><strong>Score bands:</strong> <span class="badge score-bad">0&ndash;3</span> effectively destructive to open &middot; <span class="badge score-mid">4&ndash;6</span> repairable in theory, blocked by locks or design &middot; <span class="badge score-ok">7+</span> doable with care and the right tools. &ldquo;Parts pairing&rdquo; means replacement parts are cryptographically locked to the original logic board and rejected after swapping.</p>
 </div>
 
+<figure>
+  <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/7f/IPhone_6s_-_opened-92987.jpg/500px-IPhone_6s_-_opened-92987.jpg" alt="iPhone 6s opened showing battery and logic board" loading="lazy">
+  <figcaption>An iPhone 6s opened up &mdash; battery, logic board, and cameras laid bare. Newer phones glue all of this down far more aggressively. Photo: Wikimedia Commons.</figcaption>
+</figure>
+
 <div id="repair-cards"><p>Loading&hellip;</p></div>
+
+
+<section>
+<h2>Open it without destroying it</h2>
+<p>Most &ldquo;unrepairable&rdquo; devices are just glued shut. Adhesive softens with heat &mdash; a hair dryer on medium works if you don&rsquo;t own a heat gun. Warm the edges for a minute or two, then work a thin plastic pick (an old guitar pick does the job) around the seam. Never use a metal screwdriver as a pry tool: it scratches boards and can puncture batteries.</p>
+<p>The basic kit costs less than a takeaway dinner:</p>
+<ul>
+<li><strong>Plastic spudger and picks</strong> &mdash; for prying without scratching (a few dollars, or cut up an old credit card)</li>
+<li><strong>Suction cup</strong> &mdash; lifts screens and back glass once the adhesive is warm</li>
+<li><strong>Precision screwdrivers</strong> &mdash; phones use tiny pentalobe and tri-point screws; one $8 driver set covers all of them</li>
+<li><strong>Tweezers</strong> &mdash; for the tiny ribbon-cable connectors inside</li>
+</ul>
+<p>Golden rule: if something won&rsquo;t budge, add more heat &mdash; not more force. Cracked screens happen when people pry cold adhesive.</p>
+<h3>A note on smart-home gear</h3>
+<p>Smart bulbs and plugs are usually sonic-welded shut &mdash; opening them destroys the shell. For IoT, the software route is the better first move: many of these devices expose a serial console you can talk to without opening the case at all. See <a href="/protocols.html">Protocol Reverse Engineering</a> for how to do it with under $10 in parts.</p>
+</section>
 
   <footer>
     <a href="/tarpit/" class="hp-link" aria-hidden="true" tabindex="-1">device index</a>
