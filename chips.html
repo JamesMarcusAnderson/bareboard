@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
-<meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self' data:; style-src 'self'; script-src 'self'; object-src 'none'; frame-src 'none'; base-uri 'self'; form-action 'none'">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self' data: upload.wikimedia.org www.espressif.com; style-src 'self'; script-src 'self'; object-src 'none'; frame-src 'none'; base-uri 'self'; form-action 'none'">
 <meta name="referrer" content="no-referrer">
 <meta name="robots" content="noai, noimageai">
 <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -298,6 +298,11 @@
 <p><strong>Evidence labels:</strong> <span class="badge b-confirmed">confirmed</span> = identified in a public teardown <em>and</em> a public datasheet exists in the archive. <span class="badge b-likely">likely</span> = identified in a public teardown or reputable community reference, but no public datasheet (common for Qualcomm, Apple, and Samsung custom silicon).</p>
 </div>
 
+<figure>
+  <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/84/Raspberry_Pi_Model_B_Rev._2_%28rotated_cropped%29.jpg/1280px-Raspberry_Pi_Model_B_Rev._2_%28rotated_cropped%29.jpg" alt="Raspberry Pi Model B circuit board with chips visible" loading="lazy">
+  <figcaption>A Raspberry Pi Model B &mdash; every major chip visible on one board. This is what a teardown starts with. Photo: Wikimedia Commons.</figcaption>
+</figure>
+
 <div class="filters">
 <label>Search <input type="search" id="chip-search" placeholder="chip, device, or manufacturer&hellip;" aria-label="Search chips"></label>
 <label>Chip manufacturer <select id="chip-mfr" aria-label="Filter by chip manufacturer"><option value="">All</option></select></label>
@@ -312,6 +317,34 @@
 <tbody id="chip-rows"><tr><td colspan="6">Loading&hellip;</td></tr></tbody>
 </table>
 </div>
+
+
+<section>
+<h2>Start with your own hardware</h2>
+<figure>
+  <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/57/80486dx2-v2.jpg/1280px-80486dx2-v2.jpg" alt="Intel 80486DX2 processor close-up" loading="lazy">
+  <figcaption>Intel 80486DX2, up close. Every chip in the table is a little city like this one. Photo: Wikimedia Commons.</figcaption>
+</figure>
+
+<p>You don&rsquo;t need to open anything to start identifying chips. If you have a Linux computer or a Raspberry Pi, the system will tell you what&rsquo;s inside &mdash; no screwdriver required:</p>
+<pre class="term"><code><span class="p">$</span> lspci | grep -i wireless
+03:00.0 Network controller: Intel Corporation Wi-Fi 6 AX200
+<span class="p">$</span> lsusb
+Bus 001 Device 003: ID 8087:0026 Intel Corp. AX201 Bluetooth
+<span class="p">$</span> cat /proc/cpuinfo | grep "model name" | head -1
+model name	: Intel(R) Core(TM) i5-8250U CPU @ 1.60GHz</code></pre>
+
+<p><span class="mono">lspci</span> lists everything on the PCI bus (Wi-Fi cards, graphics). <span class="mono">lsusb</span> lists USB devices. <span class="mono">/proc/cpuinfo</span> describes the processor. The names you see here are the same ones in the table above.</p>
+</section>
+<section>
+<h2>IoT spotlight: the ESP32</h2>
+<figure>
+  <img src="https://www.espressif.com/sites/default/files/dev-board/ESP32-S2-DevKitC-1%20large.png" alt="ESP32-S2 DevKitC development board" loading="lazy">
+  <figcaption>ESP32-S2 DevKitC. Chips like this power millions of smart bulbs, plugs, and sensors &mdash; and they&rsquo;re fully documented. Photo: Espressif.</figcaption>
+</figure>
+
+<p>The most common chip in cheap smart-home gear is the <strong>ESP32</strong> (or its little brother, the ESP8266), made by Espressif. Unlike phone chips, Espressif publishes full documentation &mdash; datasheets, register maps, everything. That&rsquo;s why a $5 smart plug can run open-source firmware like Tasmota or ESPHome instead of the vendor&rsquo;s cloud app, and why ESP chips show up all over the table above. See <a href="/protocols.html">Protocol Reverse Engineering</a> to learn how to take control of one.</p>
+</section>
 
   <footer>
     <a href="/tarpit/" class="hp-link" aria-hidden="true" tabindex="-1">device index</a>
