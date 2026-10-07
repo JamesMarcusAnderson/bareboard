@@ -245,6 +245,65 @@
 <li><strong><a href="https://toshiba.semicon-storage.com/us/top.html">Toshiba</a></strong> &mdash; Memory, discretes, motor drivers</li>
 </ul>
 
+  <h2 id="cables" style="margin-top:2.5em;">Cable &amp; connector reference</h2>
+  <p class="lede">Cables don&rsquo;t ship with datasheets, but they have standards, pinouts, and specs worth knowing. The essentials:</p>
+
+  <h3 id="cable-usb">USB</h3>
+  <ul class="ds-list">
+    <li><strong>USB 2.0</strong> &mdash; 480 Mbps, 4-pin (VCC, D-, D+, GND). The universal hacker cable.<br>
+    <span class="ds-links"><a href="https://www.usb.org/document-library/usb-20-specification">USB-IF &mdash; USB 2.0 specification</a> &middot; <a href="https://pinoutguide.com/Slots/usb-pinout.shtml">Pinout guide</a></span></li>
+    <li><strong>USB 3.x</strong> &mdash; 5/10/20 Gbps, 9-pin (adds 5 SuperSpeed lines). Blue inserts.<br>
+    <span class="ds-links"><a href="https://www.usb.org/document-library/usb-32-specification-released">USB-IF &mdash; USB 3.2 specification</a></span></li>
+    <li><strong>USB-C</strong> &mdash; 24-pin reversible, up to 240W USB-PD. CC lines handle negotiation.<br>
+    <span class="ds-links"><a href="https://www.usb.org/document-library/usb-type-cr-cable-and-connector-specification-revision-23">USB-IF &mdash; Type-C specification</a> &middot; <a href="https://pinoutguide.com/Slots/usb-type-c-pinout.shtml">Pinout guide</a></span></li>
+    <li><strong>USB Power Delivery (USB-PD)</strong> &mdash; negotiates 5V/9V/15V/20V up to 240W over USB-C.<br>
+    <span class="ds-links"><a href="https://www.usb.org/document-library/usb-power-delivery">USB-IF &mdash; USB-PD specification</a></span></li>
+  </ul>
+
+  <h3 id="cable-ethernet">Ethernet</h3>
+  <ul class="ds-list">
+    <li><strong>Cat5e</strong> &mdash; 1 Gbps to 100m, 4 twisted pairs. The minimum you should buy.<br>
+    <span class="ds-links"><a href="https://standards.ieee.org/ieee/802.3/7071/">IEEE 802.3</a></span></li>
+    <li><strong>Cat6 / Cat6a</strong> &mdash; 10 Gbps (55m / 100m). Tighter twists, thicker jacket.<br>
+    <span class="ds-links"><a href="https://www.tiaonline.org/">TIA-568 standard</a></span></li>
+    <li><strong>T568A vs T568B wiring</strong> &mdash; the two pinout orders. Pick one, use it everywhere.<br>
+    <span class="ds-links"><a href="https://pinoutguide.com/Net/ethernet-1000BASE-T-pinout.shtml">Pinout guide</a></span></li>
+  </ul>
+
+  <h3 id="cable-serial">Serial &amp; debug</h3>
+  <ul class="ds-list">
+    <li><strong>RS-232 (DB9)</strong> &mdash; &plusmn;12V signaling, TX/RX/GND minimum. Still on industrial gear.<br>
+    <span class="ds-links"><a href="https://pinoutguide.com/SerialPorts/rs232-pinout.shtml">Pinout guide</a></span></li>
+    <li><strong>UART (3.3V/5V TTL)</strong> &mdash; TX, RX, GND. The hacker&rsquo;s best friend &mdash; see our <a href="/autopsy/xb3-tg1682g/#communicate">XB3 UART guide</a>.<br>
+    <span class="ds-links"><a href="https://learn.sparkfun.com/tutorials/serial-communication/all">SparkFun &mdash; Serial communication tutorial</a></span></li>
+    <li><strong>JTAG (20-pin / 10-pin)</strong> &mdash; TCK, TMS, TDI, TDO, GND. Boundary scan and debug.<br>
+    <span class="ds-links"><a href="https://standards.ieee.org/ieee/1149.1/6534/">IEEE 1149.1</a></span></li>
+  </ul>
+
+  <h3 id="cable-video">Video</h3>
+  <ul class="ds-list">
+    <li><strong>HDMI</strong> &mdash; 19-pin, digital video + audio + CEC. Versions 1.4 through 2.1.<br>
+    <span class="ds-links"><a href="https://hdmi.org/spec">HDMI Forum &mdash; specifications</a> &middot; <a href="https://pinoutguide.com/Video/hdmi-pinout.shtml">Pinout guide</a></span></li>
+    <li><strong>DisplayPort</strong> &mdash; 20-pin, packetized video. Royalty-free alternative to HDMI.<br>
+    <span class="ds-links"><a href="https://www.displayport.org/">VESA &mdash; DisplayPort</a></span></li>
+  </ul>
+
+  <h3 id="cable-coax">Coaxial</h3>
+  <ul class="ds-list">
+    <li><strong>RG-6</strong> &mdash; 75&Omega;, cable TV/satellite/modem. F-type connectors.<br>
+    <span class="ds-links"><a href="https://en.wikipedia.org/wiki/RG-6">RG-6 reference</a></span></li>
+    <li><strong>RG-58</strong> &mdash; 50&Omega;, lab/test RF. BNC connectors.<br>
+    <span class="ds-links"><a href="https://en.wikipedia.org/wiki/RG-58">RG-58 reference</a></span></li>
+  </ul>
+
+  <h3 id="cable-power">Power</h3>
+  <ul class="ds-list">
+    <li><strong>Barrel jack</strong> &mdash; 5.5&times;2.1mm and 5.5&times;2.5mm are the common sizes. Center-positive is the convention, not the rule &mdash; check.<br>
+    <span class="ds-links"><a href="https://en.wikipedia.org/wiki/Coaxial_power_connector">Coaxial power connector reference</a></span></li>
+    <li><strong>JST connectors</strong> &mdash; JST-XH (2.5mm), JST-PH (2.0mm), JST-SH (1.0mm). Battery and board interconnects.<br>
+    <span class="ds-links"><a href="https://www.jst-mfg.com/">JST Manufacturing</a></span></li>
+  </ul>
+
   <p class="lede" style="margin-top:2em;font-size:0.92rem;color:#555;">Missing a datasheet? If you can legally share one for a chip we&rsquo;ve documented, <a href="/about.html">let us know</a>.</p>
   <footer>
     <a href="/tarpit/" class="hp-link" aria-hidden="true" tabindex="-1">device index</a>
