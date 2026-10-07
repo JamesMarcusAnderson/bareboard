@@ -9,8 +9,16 @@
 <title>Raspberry Pi Pico W &mdash; BareBoard &mdash; Free Hardware Education</title>
 <meta name="description" content="Raspberry Pi Pico W: RP2040, Infineon CYW43439 Wi-Fi, FCC ID 2ABCB-PICOW, and getting started.">
 <meta name="theme-color" content="#fbfbfc">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="BareBoard">
+<meta property="og:title" content="Raspberry Pi Pico W">
+<meta property="og:description" content="Raspberry Pi Pico W: RP2040, Infineon CYW43439 Wi-Fi, FCC ID, and getting started.">
+<meta property="og:url" content="https://bareboard.org/devices/pico-w/">
+<meta property="og:image" content="https://bareboard.org/img/frank-clean.jpg">
+<meta name="twitter:card" content="summary_large_image">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%231d1d1f'/%3E%3Ctext x='32' y='45' font-family='system-ui,-apple-system,sans-serif' font-size='36' fill='white' text-anchor='middle'%3EB%3C/text%3E%3C/svg%3E">
 <link rel="stylesheet" href="/style.css">
+<link rel="alternate" type="application/rss+xml" title="BareBoard &mdash; What&apos;s New" href="/feed.xml">
 </head>
 <body>
 <header class="site-nav">
@@ -107,9 +115,6 @@
   <aside class="legal-notice" style="background:#fff8e1;border:1px solid #e6d690;border-radius:8px;padding:1em 1.2em;margin:0 0 1.5em;font-size:0.88rem;color:#5a4e1a;">
     <strong>Educational purpose.</strong> Everything on this page is published for education and research. Teardowns document hardware the author legally owns. Datasheets link to public sources. FCC filings are public record. Lawsuits and controversies cite public reporting. Nothing here is stolen, leaked, or confidential. If you use this information, you&rsquo;re responsible for complying with the laws where you live. This isn&rsquo;t legal advice &mdash; it&rsquo;s a workbench.
   </aside>
-  <aside class="purpose-note" style="background:#eef6ee;border:1px solid #b9d8b9;border-radius:8px;padding:1em 1.2em;margin:0 0 1.5em;font-size:0.92rem;color:#1e4620;">
-    <strong>Your device, your rules.</strong> You bought it &mdash; you have the right to update its firmware, patch its security issues, and remove software you don&rsquo;t want on it. Every method on this page is non-destructive: it uses the device&rsquo;s existing ports, buttons, or software features. Nothing here requires breaking the enclosure.
-  </aside>
   <h1>Raspberry Pi Pico W</h1>
   <p class="lede">Raspberry Pi&rsquo;s $6 microcontroller board: a dual-core Cortex-M0+ RP2040 with Infineon Wi-Fi, castellated edges for soldering, and the friendliest firmware workflow in the industry &mdash; hold a button, plug in USB, drag a file.</p>
 
@@ -164,7 +169,7 @@
   <section>
     <h2 id="entry">Simple Entry Points</h2>
     <h3>BOOTSEL: firmware in ten seconds</h3>
-    <p><strong>What do I need?</strong> A micro-USB cable. That&rsquo;s it.</p>
+    <p><strong>You need:</strong> A micro-USB cable. That&rsquo;s it.</p>
     <ol>
       <li>Hold the BOOTSEL button, plug the Pico W into your computer, release the button. It appears as a USB mass-storage drive.</li>
       <li>Drag a .uf2 firmware file onto the drive. The board reboots running your code.</li>
