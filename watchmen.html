@@ -124,6 +124,25 @@
   </section>
 
   <section>
+    <h2 id="tools">The bench</h2>
+    <p class="lede">Claims are only as good as the instruments behind them. These are the most widely used tools in hardware hacking &mdash; the ones you&rsquo;ll find on benches everywhere, including ours:</p>
+    <ul>
+      <li><strong>Saleae Logic Pro 8 / Logic 8</strong> &mdash; the logic analyzer. Captures UART, SPI, I2C, and unknown digital protocols straight off the board. If a pin toggles, Saleae sees it.</li>
+      <li><strong>Rigol DS1054Z</strong> &mdash; the people&rsquo;s oscilloscope. Four channels, 50 MHz (hackable to 100), under $400. The scope that launched a thousand benches.</li>
+      <li><strong>Fluke 87V / 117</strong> &mdash; the multimeter. When you need to trust a reading, you reach for the yellow one.</li>
+      <li><strong>Hakko FX-888D</strong> &mdash; the soldering iron. Blue and yellow, indestructible, on every serious bench on earth.</li>
+      <li><strong>Pinecil</strong> &mdash; the open-source iron. USB-C powered, $25, community firmware. Proof that open hardware can win.</li>
+      <li><strong>Quick 861DW</strong> &mdash; the hot-air station for lifting shields and QFN packages without destroying the board.</li>
+      <li><strong>Bus Pirate</strong> &mdash; the classic hacker multitool. Talks UART, SPI, I2C, 1-Wire, and more from a single board. Dangerous Prototypes&rsquo; gift to the community.</li>
+      <li><strong>Glasgow</strong> &mdash; the open-source USB interface explorer. The new standard for talking to weird hardware.</li>
+      <li><strong>Segger J-Link</strong> &mdash; the JTAG/SWD debugger. When the debug headers are populated and the silicon will talk.</li>
+      <li><strong>ST-Link V2</strong> &mdash; the cheap ST debugger. Clones are everywhere; it just works.</li>
+      <li><strong>FTDI FT232 / CH340 breakouts</strong> &mdash; USB-to-serial adapters. The first thing you reach for when a board has a UART header.</li>
+    </ul>
+    <p>No tool makes a finding true. But the right tool makes it checkable &mdash; and everything above is something you can buy, borrow, or build yourself.</p>
+  </section>
+
+  <section>
     <h2 id="corrections">When we&rsquo;re wrong</h2>
     <p>We will be wrong sometimes. Hardware is hard, markings lie, and manufacturers obfuscate. Here&rsquo;s what happens then:</p>
     <ul>
