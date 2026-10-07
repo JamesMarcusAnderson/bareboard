@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self' data:; style-src 'self'; script-src 'self'; object-src 'none'; frame-src 'none'; base-uri 'self'; form-action 'none'">
+<meta name="referrer" content="no-referrer">
+<meta name="robots" content="noai, noimageai">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Quis Custodiet Ipsos Custodes? — BareBoard — Free Hardware Education</title>
+<meta name="description" content="BareBoard: a free educational and beneficial resource. We can't open their hardware, so we open our findings.">
+<meta name="theme-color" content="#fbfbfc">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%231d1d1f'/%3E%3Ctext x='32' y='45' font-family='system-ui,-apple-system,sans-serif' font-size='36' font-weight='700' fill='white' text-anchor='middle'%3EB%3C/text%3E%3C/svg%3E">
+<link rel="stylesheet" href="/style.css">
+</head>
+<body>
+<header class="site-nav">
+  <div class="nav-inner">
+    <nav aria-label="Primary">
+      <ul>
+        <li><a href="/" class="brand-word">BareBoard</a></li>
+        <li><a href="/devices/">Devices</a></li>
+        <li class="has-children">
+          <a href="/about.html" aria-haspopup="true" aria-expanded="false">About</a>
+          <div class="col-panel">
+            <div class="dropdown-inner">
+              <ul class="dropdown-col">
+                <li><a href="/about.html#how-we-work">How we work</a></li>
+                <li><a href="/about.html#what-this-is-not">What this is not</a></li>
+                <li><a href="/datasheets.html">Datasheet Index</a></li>
+              </ul>
+            </div>
+          </div></li>
+        <li class="has-children">
+          <a href="/hot-100.html" aria-haspopup="true" aria-expanded="false">Hot 100</a>
+          <div class="col-panel">
+            <div class="dropdown-inner">
+              <ul class="dropdown-col">
+                <li><a href="/hot-100.html">Cameras &amp; Drones</a></li>
+                <li><a href="/hot-100.html">E-Readers &amp; Tablets</a></li>
+                <li><a href="/hot-100.html">Game Consoles</a></li>
+                <li><a href="/hot-100.html">Media Streamers</a></li>
+                <li><a href="/hot-100.html">Networking Gear</a></li>
+                <li class="dropdown-sub"><a href="/autopsy/xfinity-xb3/">Xfinity XB3 (Arris TG1682G)</a></li>
+                <li><a href="/hot-100.html">Other</a></li>
+                <li><a href="/hot-100.html">PCs &amp; Single-Board</a></li>
+                <li><a href="/hot-100.html">Phones</a></li>
+                <li><a href="/hot-100.html">Printers</a></li>
+                <li><a href="/hot-100.html">Smart Home / IoT</a></li>
+                <li><a href="/hot-100.html">TVs &amp; Displays</a></li>
+                <li><a href="/hot-100.html">Wearables</a></li>
+              </ul>
+            </div>
+          </div></li>
+<li class="has-children">
+          <a href="/most-wanted.html" aria-haspopup="true" aria-expanded="false">Most Wanted</a>
+          <div class="col-panel">
+            <div class="dropdown-inner">
+              <ul class="dropdown-col">
+                <li><a href="/most-wanted.html#board">The board</a></li>
+              </ul>
+            </div>
+          </div></li>
+        <li class="has-children">
+          <a href="/support.html" aria-haspopup="true" aria-expanded="false">Support</a>
+          <div class="col-panel">
+            <div class="dropdown-inner">
+              <ul class="dropdown-col">
+                <li><a href="/support.html#mission">Mission</a></li>
+                <li><a href="/support.html#chip-in">Donate</a></li>
+                <li><a href="/support.html#allies">Allies</a></li>
+              </ul>
+            </div>
+          </div></li>
+        <li class="has-children">
+          <a href="/watchmen.html" aria-haspopup="true" aria-expanded="false">Watchmen</a>
+          <div class="col-panel">
+            <div class="dropdown-inner">
+              <ul class="dropdown-col">
+                <li><a href="/watchmen.html#who-watches">Who watches</a></li>
+                <li><a href="/watchmen.html#methodology">Methodology</a></li>
+                <li><a href="/watchmen.html#tools">The bench</a></li>
+                <li><a href="/watchmen.html#corrections">Corrections</a></li>
+              </ul>
+            </div>
+          </div></li>
+        <li class="nav-search-item">
+          <button type="button" class="search-toggle" aria-label="Search BareBoard" aria-expanded="false" aria-controls="search-panel"><svg width="15" height="15" viewBox="0 0 16 16" fill="none" aria-hidden="true"><circle cx="7" cy="7" r="5.2" stroke="currentColor" stroke-width="1.7"/><line x1="11.2" y1="11.2" x2="14.6" y2="14.6" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/></svg></button>
+        </li>
+      </ul>
+    </nav>
+  </div>
+  <div class="search-panel" id="search-panel" hidden>
+    <div class="search-inner">
+      <svg width="15" height="15" viewBox="0 0 16 16" fill="none" aria-hidden="true" class="search-icon"><circle cx="7" cy="7" r="5.2" stroke="currentColor" stroke-width="1.7"/><line x1="11.2" y1="11.2" x2="14.6" y2="14.6" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/></svg>
+      <input type="search" id="site-search" placeholder="Search BareBoard" aria-label="Search BareBoard" autocomplete="off" spellcheck="false">
+      <button type="button" class="search-close" aria-label="Close search">&times;</button>
+    </div>
+    <ul class="search-results" id="search-results" aria-live="polite"></ul>
+  </div>
+</header>
+
+<main>
+  <h1><em>Quis custodiet ipsos custodes?</em></h1>
+  <p class="lede" style="font-size:1.1rem;">&ldquo;Who will guard the guards themselves?&rdquo; &mdash; Juvenal, <em>Satires</em> VI, ~100 AD</p>
+
+  <p class="lede">BareBoard exists to hold manufacturers accountable &mdash; to open the locked boxes, publish the hidden schematics, and document what they don&rsquo;t want you to know. That&rsquo;s real power. So it&rsquo;s fair to ask: <strong>who watches us?</strong></p>
+
+  <section>
+    <h2 id="who-watches">You do.</h2>
+    <p>Every claim on this site is designed to be checked. We publish our methodology, our tools, our measurements, and our sources. We photograph the boards. We link the datasheets. We show our work &mdash; not because we&rsquo;re confident we&rsquo;re always right, but because we&rsquo;re confident the process is honest.</p>
+    <p>We don&rsquo;t ask for your trust. We ask for your scrutiny.</p>
+  </section>
+
+  <section>
+    <h2 id="methodology">How we stay honest</h2>
+    <ul>
+      <li><strong>Show the board.</strong> Every teardown includes photographs of the actual hardware. If we say a chip is there, you can see it.</li>
+      <li><strong>Name the chip.</strong> Part numbers, manufacturers, and markings &mdash; not &ldquo;a mysterious black square.&rdquo;</li>
+      <li><strong>Link the datasheet.</strong> Every identified component links to its public documentation. See our <a href="/datasheets.html">datasheet index</a>.</li>
+      <li><strong>Label confidence.</strong> Confirmed, likely, unconfirmed &mdash; we tell you exactly how sure we are and why.</li>
+      <li><strong>Cite sources.</strong> FCC filings, boot logs, manufacturer docs, community references. Nothing appears from nowhere.</li>
+      <li><strong>No sponsored findings.</strong> No advertiser, no vendor, no affiliate deal influences what gets published or what it says.</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2 id="corrections">When we&rsquo;re wrong</h2>
+    <p>We will be wrong sometimes. Hardware is hard, markings lie, and manufacturers obfuscate. Here&rsquo;s what happens then:</p>
+    <ul>
+      <li><strong>Tell us.</strong> Found an error? <a href="/about.html">Contact us</a>. The more specific, the better &mdash; photos and measurements help.</li>
+      <li><strong>We verify.</strong> Every correction gets checked against the hardware, not just taken on faith.</li>
+      <li><strong>We fix it publicly.</strong> Corrections are made in the open, on the page, where everyone can see what changed and why.</li>
+      <li><strong>No stealth edits.</strong> If a finding changes materially, we say so. The record matters.</li>
+    </ul>
+    <p>Accuracy isn&rsquo;t a claim we make about ourselves. It&rsquo;s a process you can watch.</p>
+  </section>
+
+  <section>
+    <h2 id="no-trust-required">No trust required</h2>
+    <p class="lede">The tech press runs on access and relationships. We run on evidence. You don&rsquo;t need to believe us &mdash; you need a multimeter and the datasheet. That&rsquo;s the whole point.</p>
+    <p><em>Quis custodiet ipsos custodes?</em> You do. That&rsquo;s why everything is published.</p>
+  </section>
+
+  <footer>
+    <a href="/tarpit/" class="hp-link" aria-hidden="true" tabindex="-1">device index</a>
+    <p>BareBoard &mdash; a free educational resource. Text and findings published under open terms; nothing here is for sale.</p>
+        <nav>
+      <a href="/">Home</a> &middot; <a href="/about.html">About</a> &middot; <a href="/colophon.html">Colophon</a>
+    </nav>
+
+    <div class="legal-framework">
+      <p><strong>BareBoard Legal Framework &amp; Declarations</strong></p>
+      <ul>
+      <li><strong>No AI training:</strong> All text, findings, and original photography on this site are copyrighted. Automated scraping for AI model training is prohibited. Crawlers that ignore robots.txt are trespassing.</li>
+        <li><strong>Educational nature:</strong> BareBoard operates exclusively as a non-commercial, open educational resource. All material is compiled for academic evaluation, hardware preservation, and technical literacy under 17 U.S.C. &sect; 107 (fair use).</li>
+        <li><strong>Zero-leak / no-binary clause:</strong> This site does not host, distribute, or mirror proprietary firmware binaries, encrypted operating system keys, or weaponizable exploits. Documentation covers only the public, physical realities of circuit hardware.</li>
+        <li><strong>Property verification:</strong> Every hardware autopsy is performed on personally owned, legally acquired equipment. No rented or third-party infrastructure is used.</li>
+        <li><strong>Public source sourcing:</strong> Comparative and regulatory data is aggregated from official public filings, including the U.S. Federal Communications Commission equipment authorization database.</li>
+      </ul>
+      <p class="legal-note"><em>BareBoard &mdash; open hardware allies, documented in alignment with the Open Source Hardware Association framework. Text and original photography published under open terms; nothing here is for sale.</em></p>
+    </div>
+  </footer>
+</main>
+
+<script src="/nav.js" defer></script>
+<script src="/search.js" defer></script>
+</body>
+</html>
