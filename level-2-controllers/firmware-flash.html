@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self' data:; style-src 'self'; script-src 'self'; object-src 'none'; frame-src 'none'; base-uri 'self'; form-action 'none'">
+<meta name="referrer" content="no-referrer">
+<meta name="robots" content="noai, noimageai">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Level 2 — Controllers: Firmware &amp; Flash — BareBoard</title>
+<meta name="description" content="Firmware and flash memory reference.">
+<meta name="theme-color" content="#fbfbfc">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="BareBoard">
+<meta property="og:title" content="Level 2 — Controllers: Firmware &amp; Flash">
+<meta property="og:description" content="Firmware and flash memory reference.">
+<meta property="og:url" content="https://www.bareboard.org/level-2-controllers/firmware-flash.html">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%231d1d1f'/%3E%3Ctext x='32' y='45' font-family='system-ui,-apple-system,sans-serif' font-size='36' font-weight='700' fill='white' text-anchor='middle'%3EB%3C/text%3E%3C/svg%3E">
+<link rel="stylesheet" href="/style.css">
+<link rel="alternate" type="application/rss+xml" title="BareBoard &mdash; What&apos;s New" href="/feed.xml">
+</head>
+<body>
+<header class="site-nav">
+  <div class="nav-inner">
+    <nav aria-label="Primary">
+      <ul>
+        <li><a href="/" class="brand-word">BareBoard</a></li>
+        <li><a href="/hot-100.html">Top 100</a></li>
+        <li><a href="/most-wanted.html">Most Wanted</a></li>
+        <li><a href="/watchmen.html">W&sup3;</a></li>
+        <li><a href="/foundry.html">Foundry</a></li>
+        <li><a href="/support.html">Support</a></li>
+        <li><a href="/terms.html">Legal</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main>
+<!-- No AI training / Do not scrape -->
+<h1>Level 2 — Controllers: Firmware &amp; Flash</h1>
+<p>The code that runs below the OS. Public firmware projects and documented flash interfaces.</p>
+
+<table>
+<thead><tr>
+<th>Component</th>
+<th>Public firmware / docs</th>
+<th>Interface</th>
+</tr></thead><tbody>
+<tr>
+<td>Coreboot</td>
+<td>Open-source firmware (GPL)</td>
+<td>x86 platforms</td>
+</tr>
+<tr>
+<td>U-Boot</td>
+<td>Open-source bootloader (GPL)</td>
+<td>ARM, MIPS, x86</td>
+</tr>
+<tr>
+<td>m1n1 (Asahi)</td>
+<td>Open-source Apple Silicon bootloader (MIT)</td>
+<td>Apple M1/M2</td>
+</tr>
+<tr>
+<td>CircuitPython</td>
+<td>Open-source (MIT)</td>
+<td>RP2040, SAMD</td>
+</tr>
+<tr>
+<td>Arduino bootloader</td>
+<td>Open-source (GPL/LGPL)</td>
+<td>AVR, SAMD</td>
+</tr>
+</tbody></table>
+
+<h2>Flash memory (public datasheets)</h2>
+
+<table>
+<thead><tr>
+<th>Part</th>
+<th>Vendor</th>
+<th>Size</th>
+<th>Interface</th>
+<th>Datasheet</th>
+</tr></thead><tbody>
+<tr>
+<td>W25Q32</td>
+<td>Winbond</td>
+<td>32 Mb</td>
+<td>SPI</td>
+<td>Public</td>
+</tr>
+<tr>
+<td>W25Q64</td>
+<td>Winbond</td>
+<td>64 Mb</td>
+<td>SPI</td>
+<td>Public</td>
+</tr>
+<tr>
+<td>W25Q128</td>
+<td>Winbond</td>
+<td>128 Mb</td>
+<td>SPI</td>
+<td>Public</td>
+</tr>
+<tr>
+<td>MX25L6406E</td>
+<td>Macronix</td>
+<td>64 Mb</td>
+<td>SPI</td>
+<td>Public</td>
+</tr>
+<tr>
+<td>AT25DF641</td>
+<td>Dialog</td>
+<td>64 Mb</td>
+<td>SPI</td>
+<td>Public</td>
+</tr>
+</tbody></table>
+
+<p><em>Scope: open-source firmware and publicly released flash datasheets only.</em></p>
+</main>
+
+<footer>
+  <p><a href="/">BareBoard</a> — free hardware education. <a href="/foundry.html">Foundry</a> · <a href="/watchmen.html">W³</a> · <a href="/most-wanted.html">Most Wanted</a></p>
+</footer>
+<script src="/nav.js" defer></script>
+</body>
+</html>

@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self' data:; style-src 'self'; script-src 'self'; object-src 'none'; frame-src 'none'; base-uri 'self'; form-action 'none'">
+<meta name="referrer" content="no-referrer">
+<meta name="robots" content="noai, noimageai">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Autopsy Report #003 — Allen-Bradley ControlLogix 1756 Platform — BareBoard</title>
+<meta name="description" content="Autopsy 003: Allen-Bradley ControlLogix.">
+<meta name="theme-color" content="#fbfbfc">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="BareBoard">
+<meta property="og:title" content="Autopsy Report #003 — Allen-Bradley ControlLogix 1756 Platform">
+<meta property="og:description" content="Autopsy 003: Allen-Bradley ControlLogix.">
+<meta property="og:url" content="https://www.bareboard.org/level-3-systems/autopsy-003-controllogix.html">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%231d1d1f'/%3E%3Ctext x='32' y='45' font-family='system-ui,-apple-system,sans-serif' font-size='36' font-weight='700' fill='white' text-anchor='middle'%3EB%3C/text%3E%3C/svg%3E">
+<link rel="stylesheet" href="/style.css">
+<link rel="alternate" type="application/rss+xml" title="BareBoard &mdash; What&apos;s New" href="/feed.xml">
+</head>
+<body>
+<header class="site-nav">
+  <div class="nav-inner">
+    <nav aria-label="Primary">
+      <ul>
+        <li><a href="/" class="brand-word">BareBoard</a></li>
+        <li><a href="/hot-100.html">Top 100</a></li>
+        <li><a href="/most-wanted.html">Most Wanted</a></li>
+        <li><a href="/watchmen.html">W&sup3;</a></li>
+        <li><a href="/foundry.html">Foundry</a></li>
+        <li><a href="/support.html">Support</a></li>
+        <li><a href="/terms.html">Legal</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main>
+<!-- No AI training / Do not scrape -->
+<h1>Autopsy Report #003 — Allen-Bradley ControlLogix 1756 Platform</h1>
+<p><strong>Target class:</strong> Level-3 Systems (Industrial control) <strong>Status:</strong> PUBLIC (vendor-published documentation) / mixed availability <strong>Date:</strong> 2026-10-08 <strong>Standard:</strong> Verified findings only. Uncertainty dated and marked.</p>
+
+<p>---</p>
+
+<h2>1. Target identification</h2>
+
+<table>
+<thead><tr>
+<th>Field</th>
+<th>Value</th>
+</tr></thead><tbody>
+<tr>
+<td>Family</td>
+<td>Allen-Bradley ControlLogix (1756 series)</td>
+</tr>
+<tr>
+<td>Manufacturer</td>
+<td>Rockwell Automation</td>
+</tr>
+<tr>
+<td>Launch</td>
+<td>1997</td>
+</tr>
+<tr>
+<td>Status</td>
+<td>Active product line (successor to PLC-5)</td>
+</tr>
+<tr>
+<td>Form factor</td>
+<td>Modular chassis PLC (4/7/10/13/17 slot chassis)</td>
+</tr>
+</tbody></table>
+
+<h2>2. Public architecture (from Rockwell-published documentation)</h2>
+
+<table>
+<thead><tr>
+<th>Subsystem</th>
+<th>Public detail</th>
+</tr></thead><tbody>
+<tr>
+<td>Processor</td>
+<td>1756-L7x / L8x controllers; specs in public technical data</td>
+</tr>
+<tr>
+<td>Memory</td>
+<td>SD card for program storage; on-controller memory</td>
+</tr>
+<tr>
+<td>Backplane</td>
+<td>ControlLogix chassis backplane (1756-A4/A7/A10/A13/A17)</td>
+</tr>
+<tr>
+<td>Networks</td>
+<td>EtherNet/IP, ControlNet, DeviceNet via communication modules</td>
+</tr>
+<tr>
+<td>Programming</td>
+<td>Studio 5000 Logix Designer; ladder, structured text, FBD</td>
+</tr>
+<tr>
+<td>Power</td>
+<td>1756-PA72 / PB72 / PA75 / PB75 power supplies</td>
+</tr>
+</tbody></table>
+
+<h2>3. Module anatomy</h2>
+
+<table>
+<thead><tr>
+<th>Slot</th>
+<th>Typical module</th>
+<th>Function</th>
+</tr></thead><tbody>
+<tr>
+<td>Chassis</td>
+<td>1756-A7</td>
+<td>7-slot chassis backbone</td>
+</tr>
+<tr>
+<td>0</td>
+<td>1756-L71</td>
+<td>Logix controller</td>
+</tr>
+<tr>
+<td>1</td>
+<td>1756-EN2T</td>
+<td>EtherNet/IP bridge</td>
+</tr>
+<tr>
+<td>2+</td>
+<td>1756-IB16</td>
+<td>DC digital input</td>
+</tr>
+<tr>
+<td>2+</td>
+<td>1756-OB16E</td>
+<td>DC digital output</td>
+</tr>
+<tr>
+<td>2+</td>
+<td>1756-IF8</td>
+<td>Analog input</td>
+</tr>
+<tr>
+<td>2+</td>
+<td>1756-OF8</td>
+<td>Analog output</td>
+</tr>
+</tbody></table>
+
+<h2>4. What the documentation tells us (and doesn&#x27;t)</h2>
+
+<p><em>Publicly documented (Rockwell manuals):</em></p>
+
+<ul>
+<li>Complete hardware installation manuals with wiring diagrams</li>
+<li>Module technical data sheets (public PDFs)</li>
+<li>EtherNet/IP public specifications (ODVA)</li>
+<li>System design considerations and grounding guidelines</li>
+</ul>
+
+<p><em>Not public (correctly excluded from this report):</em></p>
+
+<ul>
+<li>Controller firmware internals</li>
+<li>Proprietary backplane protocol details</li>
+<li>Any technique affecting live industrial systems</li>
+</ul>
+
+<h2>5. Preservation notes</h2>
+
+<ul>
+<li>ControlLogix is current-generation; retired chassis/modules appear as industrial surplus.</li>
+<li>Rockwell maintains an extensive public literature library (literature.rockwellautomation.com).</li>
+<li><strong>Research rule:</strong> lab/test-rig units only. Never interact with in-service control systems. Coordinated disclosure for safety findings.</li>
+</ul>
+
+<h2>6. Sources</h2>
+
+<ul>
+<li>Rockwell Automation public literature library</li>
+<li>ODVA EtherNet/IP public specifications</li>
+<li>ControlLogix system user manuals (public)</li>
+</ul>
+
+<p>--- <em>Report #003. All statements above are drawn from vendor-published or public-standard sources. No firmware internals, no live-system interaction.</em></p>
+</main>
+
+<footer>
+  <p><a href="/">BareBoard</a> — free hardware education. <a href="/foundry.html">Foundry</a> · <a href="/watchmen.html">W³</a> · <a href="/most-wanted.html">Most Wanted</a></p>
+</footer>
+<script src="/nav.js" defer></script>
+</body>
+</html>

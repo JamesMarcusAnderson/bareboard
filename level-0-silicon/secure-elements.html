@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self' data:; style-src 'self'; script-src 'self'; object-src 'none'; frame-src 'none'; base-uri 'self'; form-action 'none'">
+<meta name="referrer" content="no-referrer">
+<meta name="robots" content="noai, noimageai">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Level 0 — Silicon: Secure Elements &amp; Root of Trust — BareBoard</title>
+<meta name="description" content="Secure elements and roots of trust in silicon.">
+<meta name="theme-color" content="#fbfbfc">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="BareBoard">
+<meta property="og:title" content="Level 0 — Silicon: Secure Elements &amp; Root of Trust">
+<meta property="og:description" content="Secure elements and roots of trust in silicon.">
+<meta property="og:url" content="https://www.bareboard.org/level-0-silicon/secure-elements.html">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%231d1d1f'/%3E%3Ctext x='32' y='45' font-family='system-ui,-apple-system,sans-serif' font-size='36' font-weight='700' fill='white' text-anchor='middle'%3EB%3C/text%3E%3C/svg%3E">
+<link rel="stylesheet" href="/style.css">
+<link rel="alternate" type="application/rss+xml" title="BareBoard &mdash; What&apos;s New" href="/feed.xml">
+</head>
+<body>
+<header class="site-nav">
+  <div class="nav-inner">
+    <nav aria-label="Primary">
+      <ul>
+        <li><a href="/" class="brand-word">BareBoard</a></li>
+        <li><a href="/hot-100.html">Top 100</a></li>
+        <li><a href="/most-wanted.html">Most Wanted</a></li>
+        <li><a href="/watchmen.html">W&sup3;</a></li>
+        <li><a href="/foundry.html">Foundry</a></li>
+        <li><a href="/support.html">Support</a></li>
+        <li><a href="/terms.html">Legal</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main>
+<!-- No AI training / Do not scrape -->
+<h1>Level 0 — Silicon: Secure Elements &amp; Root of Trust</h1>
+<p>The secure enclaves and trust anchors baked into silicon. Public knowledge only — no register maps, no internal documentation.</p>
+
+<table>
+<thead><tr>
+<th>Element</th>
+<th>Vendor</th>
+<th>Public interface</th>
+<th>What&#x27;s public</th>
+</tr></thead><tbody>
+<tr>
+<td>Secure Enclave (SEP)</td>
+<td>Apple</td>
+<td>No public interface</td>
+<td>Research talks (BH2016, MOSEC2020)</td>
+</tr>
+<tr>
+<td>Platform Security Proc.</td>
+<td>AMD</td>
+<td>No public interface</td>
+<td>coreboot docs, BH2020 research</td>
+</tr>
+<tr>
+<td>CSME / Management Eng.</td>
+<td>Intel</td>
+<td>No public interface</td>
+<td>REcon2014 research, coreboot tools</td>
+</tr>
+<tr>
+<td>Titan M2</td>
+<td>Google</td>
+<td>No public interface</td>
+<td>Public security whitepapers</td>
+</tr>
+<tr>
+<td>Pluton</td>
+<td>Microsoft</td>
+<td>No public interface</td>
+<td>Public architecture overviews</td>
+</tr>
+<tr>
+<td>Secure Element SE050</td>
+<td>NXP</td>
+<td>I2C, public datasheet</td>
+<td>Full public datasheet</td>
+</tr>
+<tr>
+<td>OPTIGA Trust M</td>
+<td>Infineon</td>
+<td>I2C, public datasheet</td>
+<td>Full public datasheet</td>
+</tr>
+<tr>
+<td>ATECC608</td>
+<td>Microchip</td>
+<td>I2C, public datasheet</td>
+<td>Full public datasheet + app notes</td>
+</tr>
+</tbody></table>
+
+<h2>The pattern</h2>
+
+<p>Consumer secure elements fall into two camps: <strong>documented</strong> (NXP, Infineon, Microchip publish full datasheets) and <strong>sealed</strong> (Apple, AMD, Intel, Google, Microsoft publish nothing). The sealed ones are where public research — conference talks, open-source firmware projects — becomes the documentation of last resort.</p>
+
+<p><em>Scope: public product briefs, research talks, and open-source project documentation only.</em></p>
+</main>
+
+<footer>
+  <p><a href="/">BareBoard</a> — free hardware education. <a href="/foundry.html">Foundry</a> · <a href="/watchmen.html">W³</a> · <a href="/most-wanted.html">Most Wanted</a></p>
+</footer>
+<script src="/nav.js" defer></script>
+</body>
+</html>

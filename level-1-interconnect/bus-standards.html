@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self' data:; style-src 'self'; script-src 'self'; object-src 'none'; frame-src 'none'; base-uri 'self'; form-action 'none'">
+<meta name="referrer" content="no-referrer">
+<meta name="robots" content="noai, noimageai">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Level 1 — Interconnect: Bus Standards &amp; Protocols — BareBoard</title>
+<meta name="description" content="Bus standards and protocols reference.">
+<meta name="theme-color" content="#fbfbfc">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="BareBoard">
+<meta property="og:title" content="Level 1 — Interconnect: Bus Standards &amp; Protocols">
+<meta property="og:description" content="Bus standards and protocols reference.">
+<meta property="og:url" content="https://www.bareboard.org/level-1-interconnect/bus-standards.html">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%231d1d1f'/%3E%3Ctext x='32' y='45' font-family='system-ui,-apple-system,sans-serif' font-size='36' font-weight='700' fill='white' text-anchor='middle'%3EB%3C/text%3E%3C/svg%3E">
+<link rel="stylesheet" href="/style.css">
+<link rel="alternate" type="application/rss+xml" title="BareBoard &mdash; What&apos;s New" href="/feed.xml">
+</head>
+<body>
+<header class="site-nav">
+  <div class="nav-inner">
+    <nav aria-label="Primary">
+      <ul>
+        <li><a href="/" class="brand-word">BareBoard</a></li>
+        <li><a href="/hot-100.html">Top 100</a></li>
+        <li><a href="/most-wanted.html">Most Wanted</a></li>
+        <li><a href="/watchmen.html">W&sup3;</a></li>
+        <li><a href="/foundry.html">Foundry</a></li>
+        <li><a href="/support.html">Support</a></li>
+        <li><a href="/terms.html">Legal</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main>
+<!-- No AI training / Do not scrape -->
+<h1>Level 1 — Interconnect: Bus Standards &amp; Protocols</h1>
+<p>The wires between chips. Public specifications and open standards.</p>
+
+<table>
+<thead><tr>
+<th>Bus / Protocol</th>
+<th>Type</th>
+<th>Speed</th>
+<th>Spec availability</th>
+</tr></thead><tbody>
+<tr>
+<td>I2C</td>
+<td>Serial</td>
+<td>100k–3.4M</td>
+<td>Public (NXP UM10204)</td>
+</tr>
+<tr>
+<td>SPI</td>
+<td>Serial</td>
+<td>10M+</td>
+<td>De facto public standard</td>
+</tr>
+<tr>
+<td>UART</td>
+<td>Serial</td>
+<td>115k–3M</td>
+<td>Public</td>
+</tr>
+<tr>
+<td>USB 2.0 / 3.x</td>
+<td>Serial</td>
+<td>480M–20G</td>
+<td>USB-IF (membership/fee)</td>
+</tr>
+<tr>
+<td>PCIe</td>
+<td>Serial</td>
+<td>2.5–64 GT/s</td>
+<td>PCI-SIG (membership)</td>
+</tr>
+<tr>
+<td>I2S</td>
+<td>Audio serial</td>
+<td>varies</td>
+<td>Public (Philips legacy)</td>
+</tr>
+<tr>
+<td>CAN bus</td>
+<td>Multi-master</td>
+<td>1M</td>
+<td>ISO 11898 (public standard)</td>
+</tr>
+<tr>
+<td>Ethernet</td>
+<td>Network</td>
+<td>10M–400G</td>
+<td>IEEE 802.3 (public)</td>
+</tr>
+<tr>
+<td>JTAG</td>
+<td>Debug</td>
+<td>varies</td>
+<td>IEEE 1149.1 (public)</td>
+</tr>
+<tr>
+<td>SWD</td>
+<td>Debug</td>
+<td>varies</td>
+<td>ARM public documentation</td>
+</tr>
+</tbody></table>
+
+<h2>Board-level notes</h2>
+
+<ul>
+<li><strong>Power rails:</strong> documented in public schematics (Framework, Raspberry Pi, Arduino)</li>
+<li><strong>Impedance control:</strong> IPC-2221 (public standard) for high-speed layout</li>
+<li><strong>Connector standards:</strong> public (USB-IF, PCIe, JEDEC for memory)</li>
+</ul>
+
+<p><em>Scope: public bus specifications and open board documentation only.</em></p>
+</main>
+
+<footer>
+  <p><a href="/">BareBoard</a> — free hardware education. <a href="/foundry.html">Foundry</a> · <a href="/watchmen.html">W³</a> · <a href="/most-wanted.html">Most Wanted</a></p>
+</footer>
+<script src="/nav.js" defer></script>
+</body>
+</html>

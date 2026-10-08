@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self' data:; style-src 'self'; script-src 'self'; object-src 'none'; frame-src 'none'; base-uri 'self'; form-action 'none'">
+<meta name="referrer" content="no-referrer">
+<meta name="robots" content="noai, noimageai">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Level 3 — Systems: Critical Infrastructure, Medical &amp; Avionics — BareBoard</title>
+<meta name="description" content="Level 3 — Systems: critical infrastructure, medical, and avionics.">
+<meta name="theme-color" content="#fbfbfc">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="BareBoard">
+<meta property="og:title" content="Level 3 — Systems: Critical Infrastructure, Medical &amp; Avionics">
+<meta property="og:description" content="Level 3 — Systems: critical infrastructure, medical, and avionics.">
+<meta property="og:url" content="https://www.bareboard.org/level-3-systems/">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%231d1d1f'/%3E%3Ctext x='32' y='45' font-family='system-ui,-apple-system,sans-serif' font-size='36' font-weight='700' fill='white' text-anchor='middle'%3EB%3C/text%3E%3C/svg%3E">
+<link rel="stylesheet" href="/style.css">
+<link rel="alternate" type="application/rss+xml" title="BareBoard &mdash; What&apos;s New" href="/feed.xml">
+</head>
+<body>
+<header class="site-nav">
+  <div class="nav-inner">
+    <nav aria-label="Primary">
+      <ul>
+        <li><a href="/" class="brand-word">BareBoard</a></li>
+        <li><a href="/hot-100.html">Top 100</a></li>
+        <li><a href="/most-wanted.html">Most Wanted</a></li>
+        <li><a href="/watchmen.html">W&sup3;</a></li>
+        <li><a href="/foundry.html">Foundry</a></li>
+        <li><a href="/support.html">Support</a></li>
+        <li><a href="/terms.html">Legal</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main>
+<!-- No AI training / Do not scrape -->
+<h1>Level 3 — Systems: Critical Infrastructure, Medical &amp; Avionics</h1>
+<p>Complete systems where hardware failure has human consequences. Listed for awareness and lawful research on retired/surplus units only — never in-service equipment.</p>
+
+<h2>Medical devices</h2>
+
+<table>
+<thead><tr>
+<th>Device</th>
+<th>Examples</th>
+<th>Why it matters</th>
+<th>Research rule</th>
+</tr></thead><tbody>
+<tr>
+<td>Infusion pump</td>
+<td>Baxter Plum 360, B. Braun Infusomat</td>
+<td>Drug dosing is life-critical</td>
+<td>Retired units only; air-gap networked</td>
+</tr>
+<tr>
+<td>Pacemaker / ICD</td>
+<td>Medtronic, Abbott, Boston Scientific</td>
+<td>Implanted; wireless telemetry</td>
+<td>Explanted/retired only; no RF attacks</td>
+</tr>
+<tr>
+<td>Insulin pump / CGM</td>
+<td>Medtronic MiniMed, Dexcom G6/G7</td>
+<td>Closed-loop dosing</td>
+<td>Retired units only</td>
+</tr>
+<tr>
+<td>Patient monitor</td>
+<td>Philips IntelliVue, GE CARESCAPE</td>
+<td>Vital-signs aggregation</td>
+<td>Decommissioned units only</td>
+</tr>
+</tbody></table>
+
+<h2>Industrial / infrastructure PLCs</h2>
+
+<table>
+<thead><tr>
+<th>Device</th>
+<th>Examples</th>
+<th>Why it matters</th>
+<th>Research rule</th>
+</tr></thead><tbody>
+<tr>
+<td>Water-treatment PLC</td>
+<td>Allen-Bradley ControlLogix, Siemens S7</td>
+<td>Public water supply</td>
+<td>Lab/test rigs only; coordinated disclosure</td>
+</tr>
+<tr>
+<td>Power-grid RTU / relay</td>
+<td>SEL, ABB, Schneider Electric</td>
+<td>Grid stability</td>
+<td>Never touch live grid assets</td>
+</tr>
+<tr>
+<td>Traffic-signal controller</td>
+<td>Econolite, Siemens M50</td>
+<td>Road safety</td>
+<td>Decommissioned cabinets only</td>
+</tr>
+<tr>
+<td>Smart meter</td>
+<td>Itron, Landis+Gyr</td>
+<td>Billing + grid telemetry</td>
+<td>Own meter / lab units only</td>
+</tr>
+</tbody></table>
+
+<h2>Avionics</h2>
+
+<table>
+<thead><tr>
+<th>Device</th>
+<th>Examples</th>
+<th>Why it matters</th>
+<th>Research rule</th>
+</tr></thead><tbody>
+<tr>
+<td>GPS / FMS unit</td>
+<td>Garmin G1000, Honeywell Primus</td>
+<td>Navigation integrity</td>
+<td>Bench units only; no RF spoofing</td>
+</tr>
+<tr>
+<td>Transponder / ADS-B</td>
+<td>Garmin GTX, uAvionix</td>
+<td>Air-traffic visibility</td>
+<td>Receive-only research</td>
+</tr>
+<tr>
+<td>Engine controller (FADEC)</td>
+<td>Woodward, BAE Systems</td>
+<td>Engine control authority</td>
+<td>Surplus/bench units only</td>
+</tr>
+</tbody></table>
+
+<h2>Responsible-research rules</h2>
+
+<ol>
+<li><strong>Retired/surplus units only.</strong> Never probe in-service life-critical or infrastructure equipment.</li>
+<li><strong>Air-gap networked gear.</strong> Anything with a network interface gets isolated before power-on.</li>
+<li><strong>Coordinated disclosure.</strong> Findings affecting safety go to the vendor and ICS-CERT/CISA before any publication.</li>
+<li><strong>No weaponization.</strong> Research is defensive: understanding failure modes, not creating them.</li>
+</ol>
+
+<p><em>Scope: public device identification and research safety rules. No firmware internals, no bypass techniques.</em></p>
+</main>
+
+<footer>
+  <p><a href="/">BareBoard</a> — free hardware education. <a href="/foundry.html">Foundry</a> · <a href="/watchmen.html">W³</a> · <a href="/most-wanted.html">Most Wanted</a></p>
+</footer>
+<script src="/nav.js" defer></script>
+</body>
+</html>

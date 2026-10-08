@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self' data:; style-src 'self'; script-src 'self'; object-src 'none'; frame-src 'none'; base-uri 'self'; form-action 'none'">
+<meta name="referrer" content="no-referrer">
+<meta name="robots" content="noai, noimageai">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Autopsy Report #002 — Philips IntelliVue Patient Monitor Family — BareBoard</title>
+<meta name="description" content="Autopsy 002: Philips IntelliVue patient monitor.">
+<meta name="theme-color" content="#fbfbfc">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="BareBoard">
+<meta property="og:title" content="Autopsy Report #002 — Philips IntelliVue Patient Monitor Family">
+<meta property="og:description" content="Autopsy 002: Philips IntelliVue patient monitor.">
+<meta property="og:url" content="https://www.bareboard.org/level-3-systems/autopsy-002-intellivue.html">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%231d1d1f'/%3E%3Ctext x='32' y='45' font-family='system-ui,-apple-system,sans-serif' font-size='36' font-weight='700' fill='white' text-anchor='middle'%3EB%3C/text%3E%3C/svg%3E">
+<link rel="stylesheet" href="/style.css">
+<link rel="alternate" type="application/rss+xml" title="BareBoard &mdash; What&apos;s New" href="/feed.xml">
+</head>
+<body>
+<header class="site-nav">
+  <div class="nav-inner">
+    <nav aria-label="Primary">
+      <ul>
+        <li><a href="/" class="brand-word">BareBoard</a></li>
+        <li><a href="/hot-100.html">Top 100</a></li>
+        <li><a href="/most-wanted.html">Most Wanted</a></li>
+        <li><a href="/watchmen.html">W&sup3;</a></li>
+        <li><a href="/foundry.html">Foundry</a></li>
+        <li><a href="/support.html">Support</a></li>
+        <li><a href="/terms.html">Legal</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main>
+<!-- No AI training / Do not scrape -->
+<h1>Autopsy Report #002 — Philips IntelliVue Patient Monitor Family</h1>
+<p><strong>Target class:</strong> Level-3 Systems (Medical) <strong>Status:</strong> PUBLIC (vendor-published documentation) / retired hardware <strong>Date:</strong> 2026-10-08 <strong>Standard:</strong> Verified findings only. Uncertainty dated and marked.</p>
+
+<p>---</p>
+
+<h2>1. Target identification</h2>
+
+<table>
+<thead><tr>
+<th>Field</th>
+<th>Value</th>
+</tr></thead><tbody>
+<tr>
+<td>Family</td>
+<td>Philips IntelliVue (MP20/MP30/MP40/MP50/MP60/MP70)</td>
+</tr>
+<tr>
+<td>Launch</td>
+<td>Early 2000s</td>
+</tr>
+<tr>
+<td>Status</td>
+<td>Legacy; superseded by IntelliVue MX series</td>
+</tr>
+<tr>
+<td>Form factor</td>
+<td>Bedside monitor with modular measurement slots</td>
+</tr>
+</tbody></table>
+
+<h2>2. Public architecture (from Philips-published documentation)</h2>
+
+<table>
+<thead><tr>
+<th>Subsystem</th>
+<th>Public detail</th>
+</tr></thead><tbody>
+<tr>
+<td>Display</td>
+<td>Integrated color TFT; touchscreen on later models</td>
+</tr>
+<tr>
+<td>Measurements</td>
+<td>Plug-in modules: ECG, SpO2, NIBP, invasive pressure, CO2</td>
+</tr>
+<tr>
+<td>Networking</td>
+<td>Philips clinical network (wired); HL7 output to EMR systems</td>
+</tr>
+<tr>
+<td>Power</td>
+<td>AC mains + internal battery backup</td>
+</tr>
+<tr>
+<td>Alarms</td>
+<td>Tiered audible/visual alarm system per IEC 60601-1-8</td>
+</tr>
+</tbody></table>
+
+<h2>3. Module anatomy (retired unit)</h2>
+
+<table>
+<thead><tr>
+<th>Component</th>
+<th>Function</th>
+</tr></thead><tbody>
+<tr>
+<td>Mainframe</td>
+<td>Display, processing, user interface, alarm management</td>
+</tr>
+<tr>
+<td>M3001A MMS module</td>
+<td>Multi-measurement server: ECG, SpO2, NIBP in one module</td>
+</tr>
+<tr>
+<td>Recorder module</td>
+<td>Thermal strip-chart recorder (optional)</td>
+</tr>
+<tr>
+<td>Battery module</td>
+<td>Hot-swappable backup power</td>
+</tr>
+</tbody></table>
+
+<h2>4. What the documentation tells us (and doesn&#x27;t)</h2>
+
+<p><em>Publicly documented (Philips manuals):</em></p>
+
+<ul>
+<li>Full operator and service manuals with block diagrams</li>
+<li>Measurement module specifications and accuracy claims</li>
+<li>Network configuration guides for clinical LAN integration</li>
+<li>Alarm configuration and clinical workflow documentation</li>
+<li>Decommissioning and data-sanitization procedures</li>
+</ul>
+
+<p><em>Not public (correctly excluded from this report):</em></p>
+
+<ul>
+<li>Firmware internals and real-time OS details</li>
+<li>Network protocol specifics beyond published integration guides</li>
+<li>Any technique affecting live clinical devices</li>
+</ul>
+
+<h2>5. Preservation notes</h2>
+
+<ul>
+<li>Retired IntelliVue units are common as hospital surplus; excellent for biomedical-engineering education.</li>
+<li>Philips publishes operator manuals publicly; service manuals via authorized channels.</li>
+<li><strong>Research rule:</strong> decommissioned units only. Any networked medical device gets air-gapped before power-on. Patient data sanitization verified before any bench work.</li>
+</ul>
+
+<h2>6. Sources</h2>
+
+<ul>
+<li>Philips IntelliVue public operator documentation</li>
+<li>IEC 60601-1-8 (alarm systems standard, public)</li>
+<li>HL7 integration guides (public)</li>
+</ul>
+
+<p>--- <em>Report #002. All statements above are drawn from vendor-published or public-standard sources. No firmware internals, no live-device interaction.</em></p>
+</main>
+
+<footer>
+  <p><a href="/">BareBoard</a> — free hardware education. <a href="/foundry.html">Foundry</a> · <a href="/watchmen.html">W³</a> · <a href="/most-wanted.html">Most Wanted</a></p>
+</footer>
+<script src="/nav.js" defer></script>
+</body>
+</html>

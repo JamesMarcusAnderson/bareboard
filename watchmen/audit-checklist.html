@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self' data:; style-src 'self'; script-src 'self'; object-src 'none'; frame-src 'none'; base-uri 'self'; form-action 'none'">
+<meta name="referrer" content="no-referrer">
+<meta name="robots" content="noai, noimageai">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Watchmen — Audit Checklist — BareBoard</title>
+<meta name="description" content="Watchmen audit checklist.">
+<meta name="theme-color" content="#fbfbfc">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="BareBoard">
+<meta property="og:title" content="Watchmen — Audit Checklist">
+<meta property="og:description" content="Watchmen audit checklist.">
+<meta property="og:url" content="https://www.bareboard.org/watchmen/audit-checklist.html">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%231d1d1f'/%3E%3Ctext x='32' y='45' font-family='system-ui,-apple-system,sans-serif' font-size='36' font-weight='700' fill='white' text-anchor='middle'%3EB%3C/text%3E%3C/svg%3E">
+<link rel="stylesheet" href="/style.css">
+<link rel="alternate" type="application/rss+xml" title="BareBoard &mdash; What&apos;s New" href="/feed.xml">
+</head>
+<body>
+<header class="site-nav">
+  <div class="nav-inner">
+    <nav aria-label="Primary">
+      <ul>
+        <li><a href="/" class="brand-word">BareBoard</a></li>
+        <li><a href="/hot-100.html">Top 100</a></li>
+        <li><a href="/most-wanted.html">Most Wanted</a></li>
+        <li><a href="/watchmen.html">W&sup3;</a></li>
+        <li><a href="/foundry.html">Foundry</a></li>
+        <li><a href="/support.html">Support</a></li>
+        <li><a href="/terms.html">Legal</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main>
+<!-- No AI training / Do not scrape -->
+<h1>Watchmen — Audit Checklist</h1>
+<p>Seven steps to audit any lab tool before trusting it with a sensitive target.</p>
+
+<h2>The checklist</h2>
+
+<ol>
+<li><strong>Design openness</strong> — Are schematics and PCB layout public? (Glasgow: yes. Saleae: no.)</li>
+<li><strong>Firmware openness</strong> — Is the firmware source available and buildable? (Pico: yes. J-Link: no.)</li>
+<li><strong>Host software</strong> — Is the host-side code open? Can you read what it sends?</li>
+<li><strong>Nmap the tool</strong> — If it has a network interface, scan it. If it phones home, air-gap it.</li>
+<li><strong>USB descriptors</strong> — Dump them. Unexpected interfaces are a red flag.</li>
+<li><strong>Supply chain</strong> — Who makes it? What&#x27;s their history? (FTDI&#x27;s driver-bricking incident is instructive.)</li>
+<li><strong>Operational hygiene</strong> — Dedicated bench machine, no cloud sync, hashed firmware.</li>
+</ol>
+
+<h2>Quick reference</h2>
+
+<table>
+<thead><tr>
+<th>Check</th>
+<th>Open tool (Glasgow)</th>
+<th>Closed tool (Saleae)</th>
+</tr></thead><tbody>
+<tr>
+<td>Schematics public</td>
+<td>Yes</td>
+<td>No</td>
+</tr>
+<tr>
+<td>Firmware rebuild</td>
+<td>Yes</td>
+<td>No</td>
+</tr>
+<tr>
+<td>Host code readable</td>
+<td>Yes</td>
+<td>Partial</td>
+</tr>
+<tr>
+<td>Phone-home risk</td>
+<td>None</td>
+<td>Low (check)</td>
+</tr>
+<tr>
+<td>Verdict</td>
+<td>Trusted</td>
+<td>Sandboxed</td>
+</tr>
+</tbody></table>
+
+<p><em>If you can&#x27;t complete steps 1–3, treat the tool as untrusted and sandbox it.</em></p>
+</main>
+
+<footer>
+  <p><a href="/">BareBoard</a> — free hardware education. <a href="/foundry.html">Foundry</a> · <a href="/watchmen.html">W³</a> · <a href="/most-wanted.html">Most Wanted</a></p>
+</footer>
+<script src="/nav.js" defer></script>
+</body>
+</html>

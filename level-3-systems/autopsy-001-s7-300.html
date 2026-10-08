@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self' data:; style-src 'self'; script-src 'self'; object-src 'none'; frame-src 'none'; base-uri 'self'; form-action 'none'">
+<meta name="referrer" content="no-referrer">
+<meta name="robots" content="noai, noimageai">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Autopsy Report #001 — Siemens SIMATIC S7-300 PLC Family — BareBoard</title>
+<meta name="description" content="Autopsy 001: Siemens S7-300 PLC.">
+<meta name="theme-color" content="#fbfbfc">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="BareBoard">
+<meta property="og:title" content="Autopsy Report #001 — Siemens SIMATIC S7-300 PLC Family">
+<meta property="og:description" content="Autopsy 001: Siemens S7-300 PLC.">
+<meta property="og:url" content="https://www.bareboard.org/level-3-systems/autopsy-001-s7-300.html">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%231d1d1f'/%3E%3Ctext x='32' y='45' font-family='system-ui,-apple-system,sans-serif' font-size='36' font-weight='700' fill='white' text-anchor='middle'%3EB%3C/text%3E%3C/svg%3E">
+<link rel="stylesheet" href="/style.css">
+<link rel="alternate" type="application/rss+xml" title="BareBoard &mdash; What&apos;s New" href="/feed.xml">
+</head>
+<body>
+<header class="site-nav">
+  <div class="nav-inner">
+    <nav aria-label="Primary">
+      <ul>
+        <li><a href="/" class="brand-word">BareBoard</a></li>
+        <li><a href="/hot-100.html">Top 100</a></li>
+        <li><a href="/most-wanted.html">Most Wanted</a></li>
+        <li><a href="/watchmen.html">W&sup3;</a></li>
+        <li><a href="/foundry.html">Foundry</a></li>
+        <li><a href="/support.html">Support</a></li>
+        <li><a href="/terms.html">Legal</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main>
+<!-- No AI training / Do not scrape -->
+<h1>Autopsy Report #001 — Siemens SIMATIC S7-300 PLC Family</h1>
+<p><strong>Target class:</strong> Level-3 Systems (Industrial control) <strong>Status:</strong> PUBLIC (vendor-published documentation) / retired hardware <strong>Date:</strong> 2026-10-08 <strong>Standard:</strong> Verified findings only. Uncertainty dated and marked.</p>
+
+<p>---</p>
+
+<h2>1. Target identification</h2>
+
+<table>
+<thead><tr>
+<th>Field</th>
+<th>Value</th>
+</tr></thead><tbody>
+<tr>
+<td>Family</td>
+<td>Siemens SIMATIC S7-300</td>
+</tr>
+<tr>
+<td>Launch</td>
+<td>1994</td>
+</tr>
+<tr>
+<td>Status</td>
+<td>Discontinued — Siemens announced phase-out; S7-1500 successor</td>
+</tr>
+<tr>
+<td>Form factor</td>
+<td>Modular rack PLC (DIN-rail mounting rail)</td>
+</tr>
+<tr>
+<td>CPU range</td>
+<td>CPU 312 → 319 (increasing memory, speed, interfaces)</td>
+</tr>
+</tbody></table>
+
+<h2>2. Public architecture (from Siemens-published manuals)</h2>
+
+<table>
+<thead><tr>
+<th>Subsystem</th>
+<th>Public detail</th>
+</tr></thead><tbody>
+<tr>
+<td>Processor</td>
+<td>Siemens-proprietary ASIC per CPU variant; specs in public system manual</td>
+</tr>
+<tr>
+<td>Memory</td>
+<td>Load memory via SIMATIC Micro Memory Card (MMC); work memory on-CPU</td>
+</tr>
+<tr>
+<td>Backplane bus</td>
+<td>Proprietary S7-300 backplane; modules daisy-chain via bus connectors</td>
+</tr>
+<tr>
+<td>Fieldbus</td>
+<td>MPI (Multi-Point Interface), PROFIBUS-DP, PROFINET (later CPUs)</td>
+</tr>
+<tr>
+<td>Programming</td>
+<td>STEP 7 (TIA Portal for later); STL/LAD/FBD languages</td>
+</tr>
+<tr>
+<td>Power</td>
+<td>24 V DC via PS 305/307 power supply modules</td>
+</tr>
+</tbody></table>
+
+<h2>3. Module anatomy (retired unit)</h2>
+
+<table>
+<thead><tr>
+<th>Slot position</th>
+<th>Typical module</th>
+<th>Function</th>
+</tr></thead><tbody>
+<tr>
+<td>1</td>
+<td>PS 307</td>
+<td>24 V DC power supply</td>
+</tr>
+<tr>
+<td>2</td>
+<td>CPU 314</td>
+<td>Central processor</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Interface/dummy</td>
+<td>Reserved slot</td>
+</tr>
+<tr>
+<td>4+</td>
+<td>SM 321 / SM 322</td>
+<td>Digital input / digital output</td>
+</tr>
+<tr>
+<td>4+</td>
+<td>SM 331 / SM 332</td>
+<td>Analog input / analog output</td>
+</tr>
+<tr>
+<td>4+</td>
+<td>CP 342-5</td>
+<td>PROFIBUS communication processor</td>
+</tr>
+<tr>
+<td>4+</td>
+<td>FM 350-1</td>
+<td>Counter / function module</td>
+</tr>
+</tbody></table>
+
+<h2>4. What the documentation tells us (and doesn&#x27;t)</h2>
+
+<p><em>Publicly documented (Siemens manuals):</em></p>
+
+<ul>
+<li>Full module catalog with ordering numbers, pin assignments, wiring diagrams</li>
+<li>Backplane addressing rules and slot constraints</li>
+<li>MMC memory-card file system behavior</li>
+<li>PROFIBUS-DP slave configuration via public GSD files</li>
+<li>Diagnostic buffer structure and error codes</li>
+</ul>
+
+<p><em>Not public (correctly excluded from this report):</em></p>
+
+<ul>
+<li>CPU ASIC internals and firmware structure</li>
+<li>Proprietary backplane protocol timing</li>
+<li>Any technique for bypassing access protection on live systems</li>
+</ul>
+
+<h2>5. Preservation notes</h2>
+
+<ul>
+<li>S7-300 hardware is widely available as retired/surplus; an ideal bench PLC for education.</li>
+<li>Siemens maintains public manuals for discontinued modules at support.industry.siemens.com.</li>
+<li>GSD files for PROFIBUS configuration remain publicly distributed.</li>
+<li><strong>Research rule:</strong> lab/test-rig units only. Never probe or interact with in-service industrial control systems. Safety findings go through coordinated disclosure (vendor + CISA/ICS-CERT).</li>
+</ul>
+
+<h2>6. Sources</h2>
+
+<ul>
+<li>Siemens SIMATIC S7-300 public system manuals (support.industry.siemens.com)</li>
+<li>Siemens S7-300 discontinuation notices (Siemens Industry Online Support)</li>
+<li>PROFIBUS GSD file repository (public)</li>
+</ul>
+
+<p>--- <em>Report #001. All statements above are drawn from vendor-published or community-public sources. No firmware internals, no bypass techniques, no in-service system interaction.</em></p>
+</main>
+
+<footer>
+  <p><a href="/">BareBoard</a> — free hardware education. <a href="/foundry.html">Foundry</a> · <a href="/watchmen.html">W³</a> · <a href="/most-wanted.html">Most Wanted</a></p>
+</footer>
+<script src="/nav.js" defer></script>
+</body>
+</html>
