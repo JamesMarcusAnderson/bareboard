@@ -154,3 +154,38 @@ Disallow: /
 # Webz.io data-for-training crawler (successor in the omgili family)
 User-agent: webzio-extended
 Disallow: /
+
+# --- Added 2026-10-07: AI crawler hardening pass ---
+# Google R&D crawlers used for internal research and development
+# (docs: developers.google.com/search/docs/crawling-indexing/overview-google-crawlers)
+User-agent: GoogleOther
+Disallow: /
+
+User-agent: GoogleOther-Image
+Disallow: /
+
+User-agent: GoogleOther-Video
+Disallow: /
+
+# Firecrawl scraping service (docs: firecrawl.dev — honors robots.txt)
+User-agent: FirecrawlAgent
+Disallow: /
+
+# DataForSEO AI/data crawlers (docs: dataforseo.com)
+User-agent: dataForSeoBot
+Disallow: /
+
+# Bright Data scraping infrastructure (docs: brightdata.com)
+User-agent: Brightbot
+Disallow: /
+
+# Timpi decentralized search crawler (docs: timpi.io)
+User-agent: Timpibot
+Disallow: /
+
+# img2dataset — open-source tool used to build LAION-style AI training datasets
+User-agent: img2dataset
+Disallow: /
+
+# Point legitimate search engines at the sitemap
+Sitemap: https://bareboard.org/sitemap.xml
