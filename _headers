@@ -1,0 +1,11 @@
+# Cloudflare Pages custom headers for bareboard.org
+# NOTE: Do NOT add a global Content-Security-Policy here — individual pages
+# already carry per-page CSP <meta> tags (some allow upload.wikimedia.org for
+# device photos). A global CSP would break those pages.
+
+/*
+  X-Content-Type-Options: nosniff
+  X-Frame-Options: DENY
+  Referrer-Policy: no-referrer
+  Permissions-Policy: camera=(), microphone=(), geolocation=(), payment=(), usb=()
+  X-Robots-Tag: noai, noimageai
