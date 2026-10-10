@@ -6,13 +6,13 @@
 <meta name="referrer" content="no-referrer">
 <meta name="robots" content="noai, noimageai">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>The BareBoard Hot 100&trade; &mdash; Free Hardware Education</title>
-<meta name="description" content="The BareBoard Hot 100: the devices that matter most to hardware researchers, ranked by editorial judgment. Every entry sourced. Methodology v2.0.">
+<title>The BareBoard Hot 150&trade; &mdash; Free Hardware Education</title>
+<meta name="description" content="The BareBoard Hot 150: the devices that matter most to hardware researchers, ranked by editorial judgment. Every entry sourced. Methodology v2.0.">
 <meta name="theme-color" content="#fbfbfc">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="BareBoard">
-<meta property="og:title" content="The BareBoard Hot 100">
-<meta property="og:description" content="The 100 devices that matter most to hardware education, ranked by editorial judgment. Every entry sourced.">
+<meta property="og:title" content="The BareBoard Hot 150">
+<meta property="og:description" content="The 150 devices that matter most to hardware education, ranked by editorial judgment. Every entry sourced.">
 <meta property="og:url" content="https://www.bareboard.org/hot-100.html">
 <meta property="og:image" content="https://www.bareboard.org/img/frank-clean.jpg">
 <meta name="twitter:card" content="summary_large_image">
@@ -23,18 +23,21 @@
 {
   "@context": "https://schema.org",
   "@type": "ItemList",
-  "name": "The BareBoard Hot 100",
+  "name": "The BareBoard Hot 150",
   "description": "The devices that matter most to hardware researchers, ranked by editorial judgment. Every entry sourced. Methodology v2.0."
 }
 </script>
 </head>
 <body>
+<!-- NOTE: URL stays /hot-100.html so existing links keep working; only the
+     visible name changes. The nav label "Top 100" must become "Top 150"
+     site-wide (see crosslink-spec.md). -->
 <header class="site-nav">
   <div class="nav-inner">
     <nav aria-label="Primary">
       <ul>
         <li><a href="/" class="brand-word">BareBoard</a></li>
-        <li><a href="/hot-100.html">Top 100</a></li>
+        <li><a href="/hot-100.html">Top 150</a></li>
         <li><a href="/most-wanted.html">Most Wanted</a></li>
         <li><a href="/watchmen.html">W&sup3;</a></li>
         <li><a href="/foundry.html">Foundry</a></li>
@@ -47,18 +50,15 @@
 </header>
 
 <main>
-<span class="badge-prelim" id="methodology">Methodology v2.0</span>
-<h1>The BareBoard Hot 100&trade;</h1>
-  <blockquote class="epigraph" style="margin:1.5em 0;padding:0 0 0 1em;border-left:3px solid #c00;font-style:italic;color:#555;">
-    <p>&ldquo;From now on, nothing ships unless I&rsquo;ve opened it. No locked bootloaders, no glued-in batteries, no nothing. A chip gets fabbed, I want to know what&rsquo;s on it. You guys got fat selling devices people can&rsquo;t repair. Now it&rsquo;s the people&rsquo;s turn.&rdquo;</p>
-    <cite style="font-style:normal;font-size:0.85em;">&mdash; after Frank White (Christopher Walken), <em>King of New York</em> (1990)</cite>
-  </blockquote>
-  <p class="tagline" style="font-size:1.1rem;font-weight:bold;margin:0.5em 0 1.5em;">The hundred devices that matter most to hardware researchers.</p>
-  <p><span id="hot100-updated">Loading...</span></p>
-<div id="hot100-methodology"></div>
-<p class="lede">The devices that matter most to hardware researchers &mdash; ranked by editorial judgment. Not sales, not shipments, not search volume: just the devices most
-worth opening up.</p>
+<span class="badge-prelim">Methodology v2.0</span>
+<h1>The BareBoard Hot 150&trade;</h1>
+<p class="tagline" style="font-size:1.1rem;font-weight:bold;margin:0.5em 0 1.5em;">The hundred and fifty devices that matter most to hardware researchers.</p>
+<p><span id="hot100-updated">Loading...</span></p>
+<p class="lede">The devices most worth opening up &mdash; ranked by editorial judgment. Not sales, not shipments: just the hardware that matters.</p>
 
+<!-- DATA FIRST: filters and the ranking grid come before any methodology prose.
+     The JS (hot100-live.js) is untouched; it still renders into #hot100-grid,
+     #hot100-filters, #hot100-count, #hot100-updated, and #hot100-methodology. -->
 <div class="filters">
   <label>Search devices <input type="search" id="hot100-search" placeholder="Name, maker, or keyword..." aria-label="Search devices" autocomplete="off" spellcheck="false"></label>
 </div>
@@ -66,11 +66,34 @@ worth opening up.</p>
 <p id="hot100-count" aria-live="polite"></p>
 <div id="hot100-grid"><p class="lede">Loading rankings...</p></div>
 <p class="lede">Every entry carries its sources and an evidence label. Corrections welcome, verified corrections only.</p>
+
+<details class="method" style="margin-top:2.5rem;">
+  <summary style="cursor:pointer;font-weight:600;color:var(--text);">How the ranking works</summary>
+  <div style="margin-top:1rem;">
+    <blockquote class="epigraph" style="margin:1.5em 0;padding:0 0 0 1em;border-left:3px solid #c00;font-style:italic;color:#555;">
+      <p>&ldquo;From now on, nothing ships unless I&rsquo;ve opened it. No locked bootloaders, no glued-in batteries, no nothing. A chip gets fabbed, I want to know what&rsquo;s on it. You guys got fat selling devices people can&rsquo;t repair. Now it&rsquo;s the people&rsquo;s turn.&rdquo;</p>
+      <cite style="font-style:normal;font-size:0.85em;">&mdash; after Frank White (Christopher Walken), <em>King of New York</em> (1990)</cite>
+    </blockquote>
+    <div id="hot100-methodology"></div>
+  </div>
+</details>
+
+<div class="card" style="margin-top:2.5rem;">
+  <span class="kicker">Keep exploring</span>
+  <p style="margin-bottom:0.6rem;">See how these findings get verified, or hunt the devices nobody has opened yet.</p>
+  <p class="cta" style="margin-top:0.4rem;"><a href="/foundry.html">How we verify &rarr;</a></p>
+  <p class="cta" style="margin-top:0.4rem;"><a href="/most-wanted.html">The Most Wanted board &rarr;</a></p>
+  <p class="cta" style="margin-top:0.4rem;"><a href="/level-3-systems/">Teardown reports &rarr;</a></p>
+</div>
+
   <footer>
     <a href="/tarpit/" class="hp-link" aria-hidden="true" tabindex="-1">device index</a>
     <p>BareBoard &mdash; a free educational resource. Text and findings published under open terms; nothing here is for sale.</p>
-        <nav>
-      <a href="/">Home</a> &middot; <a href="/about.html">About</a> &middot; <a href="/colophon.html">Colophon</a>
+    <nav aria-label="Primary">
+      <a href="/">Home</a> &middot; <a href="/hot-100.html">Top 150</a> &middot; <a href="/most-wanted.html">Most Wanted</a> &middot; <a href="/watchmen.html">W&sup3;</a> &middot; <a href="/foundry.html">Foundry</a> &middot; <a href="/rare-manuals.html">Rare Manuals</a> &middot; <a href="/support.html">Support</a> &middot; <a href="/terms.html">Legal</a>
+    </nav>
+    <nav aria-label="Reference">
+      <a href="/about.html">About</a> &middot; <a href="/colophon.html">Colophon</a> &middot; <a href="/chips.html">Chip Database</a> &middot; <a href="/repair.html">Repair Guides</a> &middot; <a href="/protocols.html">Protocol RE</a> &middot; <a href="/obsolescence.html">Planned Obsolescence</a> &middot; <a href="/dmca.html">DMCA</a> &middot; <a href="/copyright.html">Copyright</a> &middot; <a href="/privacy.html">Privacy</a>
     </nav>
 
     <div class="legal-framework">
